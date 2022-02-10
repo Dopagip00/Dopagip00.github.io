@@ -20,20 +20,21 @@
     var CONFIG = {"hostname":"dopagip00.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="方法的调用只和左边有关，即A a&#x2F;B b  方法的重写不要用static，  因为b是A new出来的对象，因此调用了A的方法 因为静态方法是类的方法，而非静态是对象的方法 有static时，b调用了B类的方法，因为b是用b类定义的 没有static时，b调用的是对象的方法，而b是用A类new的 简单来说就是有static调用后面，没有static调用前面。">
+  <meta name="description" content="方法的调用只和左边有关，即A a&#x2F;B b">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JAVA--方法重写">
 <meta property="og:url" content="https://dopagip00.github.io/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/index.html">
 <meta property="og:site_name" content="Dopagip&#39;s blog">
-<meta property="og:description" content="方法的调用只和左边有关，即A a&#x2F;B b  方法的重写不要用static，  因为b是A new出来的对象，因此调用了A的方法 因为静态方法是类的方法，而非静态是对象的方法 有static时，b调用了B类的方法，因为b是用b类定义的 没有static时，b调用的是对象的方法，而b是用A类new的 简单来说就是有static调用后面，没有static调用前面。">
+<meta property="og:description" content="方法的调用只和左边有关，即A a&#x2F;B b">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/e3ae7194364e47b2b5dd489751a7ae95.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16">
 <meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/74ba5f5219e542c88cbe7cfa66795b61.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_13,color_FFFFFF,t_70,g_se,x_16">
 <meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
 <meta property="article:published_time" content="2022-02-09T08:33:13.000Z">
-<meta property="article:modified_time" content="2022-02-09T09:19:20.174Z">
+<meta property="article:modified_time" content="2022-02-10T14:16:24.634Z">
 <meta property="article:author" content="邓高正">
+<meta property="article:tag" content="JAVA">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/e3ae7194364e47b2b5dd489751a7ae95.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16">
 
@@ -219,9 +220,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-09 16:33:13 / 修改时间：17:19:20" itemprop="dateCreated datePublished" datetime="2022-02-09T16:33:13+08:00">2022-02-09</time>
+              <time title="创建时间：2022-02-09 16:33:13" itemprop="dateCreated datePublished" datetime="2022-02-09T16:33:13+08:00">2022-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-10 22:16:24" itemprop="dateModified" datetime="2022-02-10T22:16:24+08:00">2022-02-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+                </span>
             </span>
 
           
@@ -264,6 +280,8 @@
 
       
         <p>方法的调用只和左边有关，即A a/B b</p>
+<span id="more"></span>
+
 <p><img src="https://img-blog.csdnimg.cn/e3ae7194364e47b2b5dd489751a7ae95.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p>方法的重写不要用static，</p>
 <p><img src="https://img-blog.csdnimg.cn/74ba5f5219e542c88cbe7cfa66795b61.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_13,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
@@ -280,6 +298,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/JAVA/"# JAVA</a>
+          </div>
 
         
 
@@ -372,6 +393,16 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
@@ -425,12 +456,18 @@
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     <span title="站点阅读时长">17 分钟</span>
-</div>
+    <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_pv">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    访问量：<span id="busuanzi_value_site_pv"></span> 次数
+  </span>
 
-<div class="powered-by">
-<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_pv"></span>
-</span>
+  <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_uv">
+    访客数：<span id="busuanzi_value_site_pv"></span> 人次
+  </span>
 </div>
 
 <!--
@@ -463,9 +500,12 @@ setInterval("createtime()",250);
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10.3k字</span>
+  <span class="post-count">博客全站共10.4k字</span>
 </div>
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</div>
 
 
 

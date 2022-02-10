@@ -210,9 +210,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-09 16:36:35 / 修改时间：17:23:28" itemprop="dateCreated datePublished" datetime="2022-02-09T16:36:35+08:00">2022-02-09</time>
+              <time title="创建时间：2022-02-09 16:36:35" itemprop="dateCreated datePublished" datetime="2022-02-09T16:36:35+08:00">2022-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-10 21:55:56" itemprop="dateModified" datetime="2022-02-10T21:55:56+08:00">2022-02-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+                </span>
             </span>
 
           
@@ -256,20 +271,14 @@
       
           <p>数据类型（int，float等等）存放在栈里面。</p>
 <p>引用类型（Integer，Float等等）存放在堆里面 。</p>
-<p>装箱就是 Java 将基本类型转换成对应的包装类型，比如将 int 转换成 Integer 对象。反之将 Integer 转换成 int 值，则称为拆箱。</p>
-<p><strong>装箱:</strong></p>
-<p>int num = 20;</p>
-<p>Integer integer1 = num;</p>
-<p>如上这样就可以实现装箱使int成为integer了。</p>
-<p><strong>拆箱：</strong></p>
-<p>int num2=integer;</p>
-<p>这样就可以拆箱。</p>
-<p>integer的范围是-128——127之间，超过这个范围会溢出</p>
-<p><strong>字符串和数字之间的转换：</strong></p>
-<p>int num = 20;</p>
-<p>Integer integer = num;</p>
-<p>String s = integer.tostring(num，10)//这里解释一下，tostring括号里面的num是要转换为字符串的数字，后面的10是转换为10进制的，当然也可以变成8/16转换成八进制十六进制。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/%E2%80%9DJAVA-%E6%8B%86%E7%AE%B1%E5%92%8C%E8%A3%85%E7%AE%B1%EF%BC%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E2%80%9C/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -311,9 +320,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-09 16:36:09 / 修改时间：17:23:01" itemprop="dateCreated datePublished" datetime="2022-02-09T16:36:09+08:00">2022-02-09</time>
+              <time title="创建时间：2022-02-09 16:36:09" itemprop="dateCreated datePublished" datetime="2022-02-09T16:36:09+08:00">2022-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-10 21:59:20" itemprop="dateModified" datetime="2022-02-10T21:59:20+08:00">2022-02-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+                </span>
             </span>
 
           
@@ -336,7 +360,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>300</span>
+              <span>306</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -355,20 +379,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p> <strong>getCalss()方法：</strong></p>
-<p>1.使用方法:<strong>对象.getClass()</strong>;</p>
-<p>2.有什么用：返回对象的内容，比如这个对象是A类的，那就返回A类给getClass()，返回的值是Class类型的。</p>
-<p><strong>hashcode()方法：</strong></p>
-<p>1.使用方法:<strong>对象.hashcode()</strong>;</p>
-<p>2.返回一个值，哈希码的值实际上是对象的地址或者字符串之类的，所以相同对象返回相同哈希码。</p>
-<p><strong>toString()方法</strong>：</p>
-<p>1.其实也就是返回getclass和hashcode的合体，但是哈希值是十六进制的。</p>
-<p>qeual方法：</p>
-<p>return(this == 一个类对象)</p>
-<p>System.out.println(s1.equal(s2)) #判断s1和s2对象是否相等。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/017447037a9afaba91fed9ca66807b05.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-
+          <p>介绍四个方法</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/%E2%80%9DJAVA-%E6%96%B9%E6%B3%95%E7%9B%98%E7%82%B9%E2%80%9C/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -410,9 +429,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-09 16:35:35 / 修改时间：17:22:39" itemprop="dateCreated datePublished" datetime="2022-02-09T16:35:35+08:00">2022-02-09</time>
+              <time title="创建时间：2022-02-09 16:35:35" itemprop="dateCreated datePublished" datetime="2022-02-09T16:35:35+08:00">2022-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-10 21:55:32" itemprop="dateModified" datetime="2022-02-10T21:55:32+08:00">2022-02-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+                </span>
             </span>
 
           
@@ -435,7 +469,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>123</span>
+              <span>131</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -454,14 +488,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
-<p>假设要捕获多个异常，从大到小。</p>
-<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-
+          <p> 捕获异常的知识点</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/%E2%80%9DJAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8%E2%80%9C/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -503,9 +538,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-09 16:35:14 / 修改时间：17:21:50" itemprop="dateCreated datePublished" datetime="2022-02-09T16:35:14+08:00">2022-02-09</time>
+              <time title="创建时间：2022-02-09 16:35:14" itemprop="dateCreated datePublished" datetime="2022-02-09T16:35:14+08:00">2022-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-10 22:04:06" itemprop="dateModified" datetime="2022-02-10T22:04:06+08:00">2022-02-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+                </span>
             </span>
 
           
@@ -547,28 +597,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">package bilibili;</span><br><span class="line"></span><br><span class="line">class Oouter &#123;</span><br><span class="line">    class Inter &#123;</span><br><span class="line">        Inter() &#123;</span><br><span class="line">            System.out.println(&quot;这是内部类&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Outer&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Oouter oouter = new Oouter();</span><br><span class="line">        Oouter.Inter inter = oouter.new Inter();//这里最最重要</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-----------------------------------------------------------------------------</span><br><span class="line">内部类的概念：在一个类的内部再定义一个完整的类，内部类也会生成class文件。但是有$符号。</span><br></pre></td></tr></table></figure>
-
-<p>1.声明内部类的对象的方法是：</p>
-<p><strong>外部类名(点)内部类名(空格)内部类对象 = 外部类对象(点)new(空格)内部类名（）；</strong></p>
-<p>比如现在<strong>外部类名Outer，内部类名Inter，外部类对象outer，内部类对象inter</strong>，则：</p>
-<p>Outer.Inter inter = outer.new Inter();</p>
-<p>内部类可以调用外部类的私有属性，当然也可以调用外部私有方法，但是当内部类加上了static后就不能调用外部类的private属性了。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">private int a()&#123;</span><br><span class="line">    int a = 20;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br><span class="line">class Inter &#123;</span><br><span class="line">    public void print() &#123;</span><br><span class="line">        System.out.println(a());</span><br><span class="line">        System.out.println(&quot;这是内部类&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">2.局部内部类：在方法里面定义类；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3.匿名内部类：没有名字的类：</span><br><span class="line">假设我们有一个类Apple，Apple里面有一个a方法，我们可以先不对Apple进行实例化，直接使用new Apple().a()来调用a方法.</span><br><span class="line">匿名内部类一般用在接口或者父类当中。</span><br><span class="line">匿名内部类必须在声明对象之后，然后在后面可以调用该匿名内部类的方法，该内部类是匿名的，然后要用声明的对象的名字。</span><br><span class="line">匿名内部类必须继承父类或者实现一个接口。</span><br></pre></td></tr></table></figure>
-
-<p>4.静态内部类：不依赖外部类，可直接创建或通过类名访问，可声明静态成员。</p>
-<p><strong>特点：</strong></p>
-<p>1.在内部类中可以调用内部类的私有方法，但是调用外部类的私有方法用（外部类的对象）.私有名字。</p>
-<p>2.只有外部类可以是静态的，内部类不行。</p>
-<p>3.内部类想要访问局部变量，需要局部变量是final修饰的（局部变量即方法里面定义的变量）</p>
-<p>4.内部类也可以继承接口用implements</p>
-
+          <p> 介绍外部类和内部类</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/%E2%80%9DJAVA-%E5%A4%96%E9%83%A8%E7%B1%BB%E5%92%8C%E5%86%85%E9%83%A8%E7%B1%BB%E2%80%9C/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -610,9 +647,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-09 16:34:44 / 修改时间：17:21:24" itemprop="dateCreated datePublished" datetime="2022-02-09T16:34:44+08:00">2022-02-09</time>
+              <time title="创建时间：2022-02-09 16:34:44" itemprop="dateCreated datePublished" datetime="2022-02-09T16:34:44+08:00">2022-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-10 22:00:21" itemprop="dateModified" datetime="2022-02-10T22:00:21+08:00">2022-02-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+                </span>
             </span>
 
           
@@ -655,17 +707,14 @@
 
       
           <p> 1.接口只有规范，无法写方法，是专业的抽象。实现约束和实现分离，面向接口编程。</p>
-<p>2.接口就是规范，约束了编程的行为</p>
-<p>写一个接口：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public interface jiekou &#123;//这是一个接口，下面实行增删改查</span><br><span class="line">    void insert();</span><br><span class="line">    void delete();</span><br><span class="line">    void update();</span><br><span class="line">    void select();</span><br><span class="line">    //上面的四个方法都是在接口里面的方法，固定为抽象方法，抽象的abstract可以省略，直接用返回值+方法名来定义方法即可；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（抽象）类只能单继承，但是接口可以多继承，这就是接口的好处；</p>
-<p>继承接口用关键字implement，格式为：class+类名+implement+接口名{}</p>
-<p>实现了接口中的类就要重写接口中的方法，接口的多继承用逗号连接实现。</p>
-<p>接口的作用</p>
-<p><img src="https://img-blog.csdnimg.cn/9ec1434941764960bada7de63fcf34be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/%E2%80%9DJAVA-%E6%8E%A5%E5%8F%A3interface%E2%80%9C/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -707,9 +756,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-09 16:34:22 / 修改时间：17:20:57" itemprop="dateCreated datePublished" datetime="2022-02-09T16:34:22+08:00">2022-02-09</time>
+              <time title="创建时间：2022-02-09 16:34:22" itemprop="dateCreated datePublished" datetime="2022-02-09T16:34:22+08:00">2022-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-10 21:57:24" itemprop="dateModified" datetime="2022-02-10T21:57:24+08:00">2022-02-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+                </span>
             </span>
 
           
@@ -752,11 +816,14 @@
 
       
           <p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
-<p>1.当子类继承的父类当中有抽象的方法时，子类必须要重写抽象方法</p>
-<p>2.java里面的类是单继承的，但是接口时多继承的</p>
-<p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
-<p>4.抽象方法必须在抽象类里面</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/%E2%80%9DJAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E2%80%9C/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -798,9 +865,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-09 16:34:00 / 修改时间：17:20:13" itemprop="dateCreated datePublished" datetime="2022-02-09T16:34:00+08:00">2022-02-09</time>
+              <time title="创建时间：2022-02-09 16:34:00" itemprop="dateCreated datePublished" datetime="2022-02-09T16:34:00+08:00">2022-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-10 22:15:29" itemprop="dateModified" datetime="2022-02-10T22:15:29+08:00">2022-02-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+                </span>
             </span>
 
           
@@ -843,22 +925,14 @@
 
       
           <p>1.有static修饰的属性就不用声明对象了，直接用类名去.属性</p>
-<p>2.非静态方法能直接调用静态方法，但是静态方法不能调用非静态方法</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class GG&#123;</span><br><span class="line">    public void  A()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public static void B()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">public class 静态 &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        GG.A();//不可行，因为A方法是非静态的</span><br><span class="line">        GG.B();//可行，因为B是静态的</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>介绍一些奇葩的代码块：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class QIPA &#123;</span><br><span class="line">    &#123;//作用：赋初值；</span><br><span class="line">        System.out.println(&quot;匿名代码块&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static &#123;//作用：只能执行一次</span><br><span class="line">        System.out.println(&quot;static代码块&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public QIPA()&#123;</span><br><span class="line">        System.out.println(&quot;普通的代码块&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        QIPA qipa = new QIPA();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/2a0caa983f3c4678bad9caf60fa4296e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> 先执行static代码块，再执行匿名的代码块，在执行普通的代码块。（static代码块即使不定义对象也可以执行）</p>
-<p>天秀操作：静态导入包（如我们想生成随机数）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import java.lang.math;//正常来说到这一步就不能往下了</span><br><span class="line">import static java.lang.math.random;//加个static就可以到下一步了，这叫静态调用包</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>子类不能继承被final继承的父类！</strong></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/JAVA-static%E5%85%B3%E9%94%AE%E5%AD%97%E7%9F%A5%E8%AF%86%E7%82%B9/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -900,9 +974,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-09 16:33:32 / 修改时间：17:19:49" itemprop="dateCreated datePublished" datetime="2022-02-09T16:33:32+08:00">2022-02-09</time>
+              <time title="创建时间：2022-02-09 16:33:32" itemprop="dateCreated datePublished" datetime="2022-02-09T16:33:32+08:00">2022-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-10 22:16:10" itemprop="dateModified" datetime="2022-02-10T22:16:10+08:00">2022-02-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+                </span>
             </span>
 
           
@@ -947,18 +1036,14 @@
           <p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
 <p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
 <p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
-<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>多态的注意事项：</p>
-<p>1.多态是方法的多态，属性没有多态；</p>
-<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
-<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
-<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
-<p>##但是有些方法是不能重写的：</p>
-<p>1.static方法：属于类，不属于实例</p>
-<p>2.final属性</p>
-<p>3.private方法是私有的，当然重写了也没用</p>
-<p>instanceof （类型转换） 引用类型</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1000,9 +1085,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-09 16:33:13 / 修改时间：17:19:20" itemprop="dateCreated datePublished" datetime="2022-02-09T16:33:13+08:00">2022-02-09</time>
+              <time title="创建时间：2022-02-09 16:33:13" itemprop="dateCreated datePublished" datetime="2022-02-09T16:33:13+08:00">2022-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-10 22:16:24" itemprop="dateModified" datetime="2022-02-10T22:16:24+08:00">2022-02-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+                </span>
             </span>
 
           
@@ -1045,15 +1145,14 @@
 
       
           <p>方法的调用只和左边有关，即A a/B b</p>
-<p><img src="https://img-blog.csdnimg.cn/e3ae7194364e47b2b5dd489751a7ae95.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>方法的重写不要用static，</p>
-<p><img src="https://img-blog.csdnimg.cn/74ba5f5219e542c88cbe7cfa66795b61.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_13,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>因为b是A new出来的对象，因此调用了A的方法</strong></p>
-<p><strong>因为静态方法是类的方法，而非静态是对象的方法</strong></p>
-<p><strong>有static时，b调用了B类的方法，因为b是用b类定义的</strong></p>
-<p><strong>没有static时，b调用的是对象的方法，而b是用A类new的</strong></p>
-<p><strong>简单来说就是有static调用后面，没有static调用前面。</strong></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1095,9 +1194,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-09 16:32:53 / 修改时间：17:18:54" itemprop="dateCreated datePublished" datetime="2022-02-09T16:32:53+08:00">2022-02-09</time>
+              <time title="创建时间：2022-02-09 16:32:53" itemprop="dateCreated datePublished" datetime="2022-02-09T16:32:53+08:00">2022-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-10 22:15:51" itemprop="dateModified" datetime="2022-02-10T22:15:51+08:00">2022-02-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+                </span>
             </span>
 
           
@@ -1120,7 +1234,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>158</span>
+              <span>159</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -1140,12 +1254,15 @@
 
       
           <p>1.Super指向父类的构造方法，必须在构造方法的第一个；</p>
-<p>2.Super只能出现在子类的构造方法中</p>
-<p>3.this和super不能同时调用构造方法</p>
-<p>与this的对比：<br>this：本类的构造；super：父类的构造</p>
-<p>this：没有继承也可以使用；super：必须要有继承才可以使用</p>
-<p>this：调用本身对象；super：调用父类对象</p>
-
+<p>2.Super只能出现在子类的构造方法中.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/09/JAVA-super%E7%9F%A5%E8%AF%86%E7%82%B9/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1235,6 +1352,16 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
@@ -1288,12 +1415,18 @@
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     <span title="站点阅读时长">17 分钟</span>
-</div>
+    <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_pv">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    访问量：<span id="busuanzi_value_site_pv"></span> 次数
+  </span>
 
-<div class="powered-by">
-<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_pv"></span>
-</span>
+  <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_uv">
+    访客数：<span id="busuanzi_value_site_pv"></span> 人次
+  </span>
 </div>
 
 <!--
@@ -1326,9 +1459,12 @@ setInterval("createtime()",250);
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10.3k字</span>
+  <span class="post-count">博客全站共10.4k字</span>
 </div>
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</div>
 
 
 

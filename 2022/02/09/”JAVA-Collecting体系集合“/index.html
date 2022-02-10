@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"dopagip00.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="rt Collect父接口特点：（有些）对象，无序，无下标，不能重复–&gt;对应着Set接口。 方法：   常用方法 iteration迭代器   使用next()来用指针不断指向下一行 iteration要定义对象的：   三个常用方法 遍历元素的方法：   注意：在iteration里面不能使用collection.remove();来删除元素，要使用iteration(这是对象)来删除">
+  <meta name="description" content="Collect接口知识点总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="”JAVA--Collec体系集合“">
 <meta property="og:url" content="https://dopagip00.github.io/2022/02/09/%E2%80%9DJAVA-Collecting%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88%E2%80%9C/index.html">
 <meta property="og:site_name" content="Dopagip&#39;s blog">
-<meta property="og:description" content="rt Collect父接口特点：（有些）对象，无序，无下标，不能重复–&gt;对应着Set接口。 方法：   常用方法 iteration迭代器   使用next()来用指针不断指向下一行 iteration要定义对象的：   三个常用方法 遍历元素的方法：   注意：在iteration里面不能使用collection.remove();来删除元素，要使用iteration(这是对象)来删除">
+<meta property="og:description" content="Collect接口知识点总结">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/5888cfe5738f77ca7a81306dbae10536.png">
 <meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
@@ -40,8 +40,9 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/80ec081de26e2bccf885c09c38fe3aba.png">
 <meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
 <meta property="article:published_time" content="2022-02-09T08:40:04.000Z">
-<meta property="article:modified_time" content="2022-02-10T13:28:01.963Z">
+<meta property="article:modified_time" content="2022-02-10T13:49:38.063Z">
 <meta property="article:author" content="邓高正">
+<meta property="article:tag" content="JAVA">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/img_convert/5888cfe5738f77ca7a81306dbae10536.png">
 
@@ -235,8 +236,17 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-02-10 21:28:01" itemprop="dateModified" datetime="2022-02-10T21:28:01+08:00">2022-02-10</time>
+                <time title="修改时间：2022-02-10 21:49:38" itemprop="dateModified" datetime="2022-02-10T21:49:38+08:00">2022-02-10</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+                </span>
+            </span>
 
           
   
@@ -258,7 +268,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>242</span>
+              <span>256</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -277,7 +287,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="https://img-blog.csdnimg.cn/img_convert/5888cfe5738f77ca7a81306dbae10536.png" alt="img"></p>
+        <p> Collect接口知识点总结</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5888cfe5738f77ca7a81306dbae10536.png" alt="img"></p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p>rt</p>
 <h2 id="Collect父接口"><a href="#Collect父接口" class="headerlink" title="Collect父接口"></a>Collect父接口</h2><p>特点：（有些）对象，无序，无下标，不能重复–&gt;对应着Set接口。</p>
@@ -309,6 +322,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/JAVA/"# JAVA</a>
+          </div>
 
         
 
@@ -402,6 +418,16 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
@@ -455,12 +481,18 @@
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     <span title="站点阅读时长">17 分钟</span>
-</div>
+    <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_pv">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    访问量：<span id="busuanzi_value_site_pv"></span> 次数
+  </span>
 
-<div class="powered-by">
-<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_pv"></span>
-</span>
+  <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_uv">
+    访客数：<span id="busuanzi_value_site_pv"></span> 人次
+  </span>
 </div>
 
 <!--
@@ -493,9 +525,12 @@ setInterval("createtime()",250);
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10.3k字</span>
+  <span class="post-count">博客全站共10.4k字</span>
 </div>
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</div>
 
 
 

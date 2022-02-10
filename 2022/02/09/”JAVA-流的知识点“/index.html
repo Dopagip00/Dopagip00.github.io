@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"dopagip00.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="概念：存储和内存之间的传输数据的通道.(硬盘和内存之间) 一、流的分类： *1.按方向：* 输入流(input)：将“存储设备”中的数据留到“内存(程序)”中。 输出流(output)：将“内存(程序)”中的数据流到“存储设备”中去。 2.按单位： 字节流：以字节为单位，可以读写所有数据。 字符流：以字符为单位，只能读写文本数据。 *3.按功能：* 节点流：具有实际传输数据的读写功能。 过滤流：在">
+  <meta name="description" content="概念：存储和内存之间的传输数据的通道.(硬盘和内存之间)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="”JAVA--流的知识点“">
 <meta property="og:url" content="https://dopagip00.github.io/2022/02/09/%E2%80%9DJAVA-%E6%B5%81%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/index.html">
 <meta property="og:site_name" content="Dopagip&#39;s blog">
-<meta property="og:description" content="概念：存储和内存之间的传输数据的通道.(硬盘和内存之间) 一、流的分类： *1.按方向：* 输入流(input)：将“存储设备”中的数据留到“内存(程序)”中。 输出流(output)：将“内存(程序)”中的数据流到“存储设备”中去。 2.按单位： 字节流：以字节为单位，可以读写所有数据。 字符流：以字符为单位，只能读写文本数据。 *3.按功能：* 节点流：具有实际传输数据的读写功能。 过滤流：在">
+<meta property="og:description" content="概念：存储和内存之间的传输数据的通道.(硬盘和内存之间)">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/edc9beae38a7bf6cb7bf5991f8efc529.png">
 <meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
@@ -36,8 +36,9 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/bfbd81e69a080dcf34d278cac160001c.png">
 <meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
 <meta property="article:published_time" content="2022-02-09T08:38:00.000Z">
-<meta property="article:modified_time" content="2022-02-09T09:26:04.009Z">
+<meta property="article:modified_time" content="2022-02-10T14:01:03.347Z">
 <meta property="article:author" content="邓高正">
+<meta property="article:tag" content="JAVA">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/img_convert/edc9beae38a7bf6cb7bf5991f8efc529.png">
 
@@ -223,9 +224,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-09 16:38:00 / 修改时间：17:26:04" itemprop="dateCreated datePublished" datetime="2022-02-09T16:38:00+08:00">2022-02-09</time>
+              <time title="创建时间：2022-02-09 16:38:00" itemprop="dateCreated datePublished" datetime="2022-02-09T16:38:00+08:00">2022-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-10 22:01:03" itemprop="dateModified" datetime="2022-02-10T22:01:03+08:00">2022-02-10</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+                </span>
             </span>
 
           
@@ -268,6 +284,8 @@
 
       
         <p><strong>概念：存储和内存之间的传输数据的通道.(硬盘和内存之间)</strong></p>
+<span id="more"></span>
+
 <p>一、<strong>流的分类：</strong></p>
 <p>*<strong>1.按方向：*</strong></p>
 <p>输入流(input)：将“存储设备”中的数据留到“内存(程序)”中。</p>
@@ -331,6 +349,9 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/JAVA/"# JAVA</a>
+          </div>
 
         
 
@@ -423,6 +444,16 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
@@ -476,12 +507,18 @@
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     <span title="站点阅读时长">17 分钟</span>
-</div>
+    <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_pv">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    访问量：<span id="busuanzi_value_site_pv"></span> 次数
+  </span>
 
-<div class="powered-by">
-<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_pv"></span>
-</span>
+  <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_uv">
+    访客数：<span id="busuanzi_value_site_pv"></span> 人次
+  </span>
 </div>
 
 <!--
@@ -514,9 +551,12 @@ setInterval("createtime()",250);
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10.3k字</span>
+  <span class="post-count">博客全站共10.4k字</span>
 </div>
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</div>
 
 
 
