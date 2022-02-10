@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>”Linux--vi和vim“ | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="vim具有编程的能力，是vi的增强版本，代码补全，颜色都有（有点像IDEA）   注意： 1.按下“i”进入输入模式；先输入esc再按下“：”进入命令行模式。不进入编辑模式是没办法写代码的。 2.vim和vi的命令是区分大小写的。 -——————————————————————————————————————————– 下面用Xshell和vim写一个Hello.java程序：1.先输入这个指令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="”Linux--vi和vim“">
+<meta property="og:url" content="http://example.com/2022/02/09/%E2%80%9DLinux-vi%E5%92%8Cvim%E2%80%9C/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="vim具有编程的能力，是vi的增强版本，代码补全，颜色都有（有点像IDEA）   注意： 1.按下“i”进入输入模式；先输入esc再按下“：”进入命令行模式。不进入编辑模式是没办法写代码的。 2.vim和vi的命令是区分大小写的。 -——————————————————————————————————————————– 下面用Xshell和vim写一个Hello.java程序：1.先输入这个指令">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/7f41fab8a28c46cc877a41e40ddc1957.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/6e6abde8af21487191742eadbff7d350.png">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/a4df0727a4e446f79efd224933f30871.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_12,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/ab0f994ac7ec4d73aeb50f516514790f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/a081d79f164048a8a0b204e1e2237e82.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="article:published_time" content="2022-02-09T08:40:55.000Z">
+<meta property="article:modified_time" content="2022-02-09T09:31:07.450Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/7f41fab8a28c46cc877a41e40ddc1957.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-”Linux-vi和vim“" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/02/09/%E2%80%9DLinux-vi%E5%92%8Cvim%E2%80%9C/" class="article-date">
+  <time datetime="2022-02-09T08:40:55.000Z" itemprop="datePublished">2022-02-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ”Linux--vi和vim“
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> vim具有编程的能力，是vi的增强版本，代码补全，颜色都有（有点像IDEA） </p>
+<p><img src="https://img-blog.csdnimg.cn/7f41fab8a28c46cc877a41e40ddc1957.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>注意：</p>
+<p>1.按下“i”进入输入模式；先输入esc再按下“：”进入命令行模式。不进入编辑模式是没办法写代码的。</p>
+<p>2.vim和vi的命令是区分大小写的。</p>
+<p>-——————————————————————————————————————————–</p>
+<h2 id="下面用Xshell和vim写一个Hello-java程序："><a href="#下面用Xshell和vim写一个Hello-java程序：" class="headerlink" title="下面用Xshell和vim写一个Hello.java程序："></a><strong>下面用Xshell和vim写一个Hello.java程序：</strong></h2><p>1.先输入这个指令：vim Hello.java</p>
+<p><img src="https://img-blog.csdnimg.cn/6e6abde8af21487191742eadbff7d350.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>2.在生成的界面中按下“i”键进入编辑模式，看到最下面变成“–插入–” 即可</p>
+<p><img src="https://img-blog.csdnimg.cn/a4df0727a4e446f79efd224933f30871.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_12,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>3.在空白的地方写java代码，输出一个Helloworld</p>
+<p><img src="https://img-blog.csdnimg.cn/ab0f994ac7ec4d73aeb50f516514790f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>4.最后按下esc再按下“：wq”（其中wq表示write和quit）即可完成Hello.java程序的编写。</p>
+<p>-——————————————————————————————————————————–</p>
+<h1 id="重点：在vim中各种模式的切换"><a href="#重点：在vim中各种模式的切换" class="headerlink" title="重点：在vim中各种模式的切换"></a><strong>重点：在vim中各种模式的切换</strong></h1><p> <img src="https://img-blog.csdnimg.cn/a081d79f164048a8a0b204e1e2237e82.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>wq（保存退出），q（退出），q！（强制退出，并且不保存）</p>
+<p>快捷键：</p>
+<p>1.“yy”用于拷贝当前行，“5yy”用于拷贝从光标那行往下的5行。</p>
+<p>2.“dd”用于删除当前行，“5dd”用于删除光标往下的那5行。</p>
+<p>3.寻找文件中对应的关键字或者字符，在一般模式下点“/” 然后输入你想找的关键字。输入“n”寻找下一个。</p>
+<p>4.按下“G”到达文件的最底端，按下“gg”到达文件的最顶端。</p>
+<p>5.撤销动作：在一般模式下按“u”。</p>
+<p>6.想要定位到对应的行：比如你想对应到20行，在一般模式下输入20，然后shift+g。</p>
+<p>7.一般模式下“：”输入set nu表示打开行号，输入“set nonu”表示关闭行号。</p>
+<h1 id="Linux下的开机，重启，关机"><a href="#Linux下的开机，重启，关机" class="headerlink" title="Linux下的开机，重启，关机"></a><strong>Linux下的开机，重启，关机</strong></h1><p>1.shutdown -h now 现在马上关机</p>
+<p>2.shutdown -h 1 一分钟后关机</p>
+<p>3.shutdown -r now 现在马上重启</p>
+<p>4.halt 关机</p>
+<p>5.reboot 现在重启</p>
+<p>6.sync 将内存的内容同步到磁盘(相当于保存)</p>
+<h1 id="用户登录"><a href="#用户登录" class="headerlink" title="用户登录"></a><strong>用户登录</strong></h1><p>尽量不要使用root登录，避免失误。</p>
+<p>若是普通用户登录后需要获得管理员权限，使用su-用户名 即可。</p>
+<p>使用logout来注销用户登录（在运行级别三上面有用）</p>
+<p>在root情况下logout退到你原来的用户，再使用一次logout退出系统！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/09/%E2%80%9DLinux-vi%E5%92%8Cvim%E2%80%9C/" data-id="ckzgedfqs000z6gvs4jn2afua" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/02/09/%E2%80%9DLinux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E2%80%9C/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ”Linux--用户管理“
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/02/09/%E2%80%9DLinux-Xshell%E5%92%8CXftp%E2%80%9C/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">”Linux--Xshell和Xftp“</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">hexo d出错时的解决办法</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/09/%E2%80%9Dpython-%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D%E2%80%9C/">”python--深拷贝和浅拷贝“</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/09/%E2%80%9Dpython-%E5%88%97%E8%A1%A8%E9%87%8C%E7%9A%84%E5%87%BD%E6%95%B0%E2%80%9C/">”python--列表里的函数“</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/09/%E2%80%9Dpython-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0%E2%80%9C/">”python--一些函数“</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/09/%E2%80%9Dpython-%E9%99%A4%E5%92%8C%E5%9C%B0%E6%9D%BF%E9%99%A4%E2%80%9C/">”python--除和地板除“</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
