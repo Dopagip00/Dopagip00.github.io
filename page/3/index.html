@@ -187,6 +187,134 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dopagip00.github.io/2022/02/09/%E2%80%9DJAVA-%E6%96%87%E4%BB%B6file%E7%B1%BB%E2%80%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/images.jfif">
+      <meta itemprop="name" content="邓高正">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dopagip's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/09/%E2%80%9DJAVA-%E6%96%87%E4%BB%B6file%E7%B1%BB%E2%80%9C/" class="post-title-link" itemprop="url">”JAVA--文件file类“</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-09 16:38:54 / 修改时间：17:27:39" itemprop="dateCreated datePublished" datetime="2022-02-09T16:38:54+08:00">2022-02-09</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/02/09/%E2%80%9DJAVA-%E6%96%87%E4%BB%B6file%E7%B1%BB%E2%80%9C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/02/09/%E2%80%9DJAVA-%E6%96%87%E4%BB%B6file%E7%B1%BB%E2%80%9C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>254</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>java.io.File是文件名的抽象表示。</p>
+<p><strong>你的文件表示必须在创建对象时候体现。</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/fb6fdb58d06f307e95bb0d2ef094c34d.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>常用的方法</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/750b65bb2dac31431da0c1b5fd888c62.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>File中的Separator是\ ，Separator是;</p>
+<p><strong>最好是用一个布尔类型的变量来表示createNewFile</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/528a9bda160f3d0530d1dc86aad54817.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>用布尔类型表示</p>
+<p>删除文件：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9af1fd354a5574fcaab8bd8ebe206a6b.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>有这两种方法</p>
+<p>获取文件创建日期：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b26e5fed45d628eebec7235cb9350a2a.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>判断文件是否可写可读；</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/3f790142d2c2d99e836e65e2346e57d7.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>当只读的时候就不能写了</p>
+<p>判断是不是文件，是否是隐藏的：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/dce4fd3d48c2ccd0dc1fba07e62d8da5.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>判断是不是隐藏的，是不是文件：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ce447e9b190e99c3e310830dfc5b3daa.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这里可以选择</p>
+<h2 id="文件夹"><a href="#文件夹" class="headerlink" title="文件夹"></a>文件夹</h2><p><img src="https://img-blog.csdnimg.cn/img_convert/ac863ec6df97a50a337f82ec314ebcbc.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>mkdirs创建多级目录文件夹，mkdir创建单级文件夹。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9541a40c8b7423f37eb5e810b1bb34db.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>获取绝对路径，路径，文件名</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9a2e173622aa85c9f576a72996639cc0.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>判断是否是文件夹是否隐藏</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/de6bca422bb73bab89a0181d5a3a2381.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>用了增强for循环</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://dopagip00.github.io/2022/02/09/%E2%80%9DJAVA-%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -215,7 +343,21 @@
               <time title="创建时间：2022-02-09 16:38:36 / 修改时间：17:27:17" itemprop="dateCreated datePublished" datetime="2022-02-09T16:38:36+08:00">2022-02-09</time>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/02/09/%E2%80%9DJAVA-%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/02/09/%E2%80%9DJAVA-%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -293,7 +435,21 @@
               <time title="创建时间：2022-02-09 16:38:29 / 修改时间：17:27:01" itemprop="dateCreated datePublished" datetime="2022-02-09T16:38:29+08:00">2022-02-09</time>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/02/09/%E2%80%9DJAVA-%E5%AD%97%E7%AC%A6%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/02/09/%E2%80%9DJAVA-%E5%AD%97%E7%AC%A6%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -405,7 +561,21 @@
               <time title="创建时间：2022-02-09 16:38:22 / 修改时间：17:26:43" itemprop="dateCreated datePublished" datetime="2022-02-09T16:38:22+08:00">2022-02-09</time>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/02/09/%E2%80%9DJAVA-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/02/09/%E2%80%9DJAVA-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -482,7 +652,21 @@
               <time title="创建时间：2022-02-09 16:38:00 / 修改时间：17:26:04" itemprop="dateCreated datePublished" datetime="2022-02-09T16:38:00+08:00">2022-02-09</time>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/02/09/%E2%80%9DJAVA-%E6%B5%81%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/02/09/%E2%80%9DJAVA-%E6%B5%81%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -610,7 +794,21 @@
               <time title="创建时间：2022-02-09 16:37:43 / 修改时间：17:25:45" itemprop="dateCreated datePublished" datetime="2022-02-09T16:37:43+08:00">2022-02-09</time>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/02/09/%E2%80%9DJAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9%E2%80%9C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/02/09/%E2%80%9DJAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9%E2%80%9C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -690,7 +888,21 @@
               <time title="创建时间：2022-02-09 16:37:36 / 修改时间：17:25:08" itemprop="dateCreated datePublished" datetime="2022-02-09T16:37:36+08:00">2022-02-09</time>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/02/09/%E2%80%9DJAVA-%E5%B8%B8%E7%94%A8%E7%B1%BB%E2%80%9C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/02/09/%E2%80%9DJAVA-%E5%B8%B8%E7%94%A8%E7%B1%BB%E2%80%9C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -795,7 +1007,21 @@
               <time title="创建时间：2022-02-09 16:37:27 / 修改时间：17:24:34" itemprop="dateCreated datePublished" datetime="2022-02-09T16:37:27+08:00">2022-02-09</time>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/02/09/%E2%80%9DJAVA-Sring%E5%A3%B0%E6%98%8E%E2%80%9C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/02/09/%E2%80%9DJAVA-Sring%E5%A3%B0%E6%98%8E%E2%80%9C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -873,7 +1099,21 @@
               <time title="创建时间：2022-02-09 16:37:20 / 修改时间：17:24:05" itemprop="dateCreated datePublished" datetime="2022-02-09T16:37:20+08:00">2022-02-09</time>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/02/09/%E2%80%9DJAVA-Sring%E6%96%B9%E6%B3%95%E2%80%9C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/02/09/%E2%80%9DJAVA-Sring%E6%96%B9%E6%B3%95%E2%80%9C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -958,7 +1198,21 @@
               <time title="创建时间：2022-02-09 16:37:11 / 修改时间：17:23:48" itemprop="dateCreated datePublished" datetime="2022-02-09T16:37:11+08:00">2022-02-09</time>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/02/09/%E2%80%9DJAVA-SringBuffer%E5%92%8CStringBudilder%E2%80%9C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/02/09/%E2%80%9DJAVA-SringBuffer%E5%92%8CStringBudilder%E2%80%9C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -992,93 +1246,6 @@
 <p>replace(“0”，“5”，str)把0-5之间的字符替换为str。</p>
 <p>用<strong>delete删除指定位置的字符：</strong></p>
 <p>delete（“0”，“5”）删除0-5之间的字符串。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://dopagip00.github.io/2022/02/09/%E2%80%9DJAVA-%E6%8B%86%E7%AE%B1%E5%92%8C%E8%A3%85%E7%AE%B1%EF%BC%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E2%80%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/images.jfif">
-      <meta itemprop="name" content="邓高正">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dopagip's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/09/%E2%80%9DJAVA-%E6%8B%86%E7%AE%B1%E5%92%8C%E8%A3%85%E7%AE%B1%EF%BC%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E2%80%9C/" class="post-title-link" itemprop="url">”JAVA--拆箱和装箱，字符串数字转换“</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-02-09 16:36:35 / 修改时间：17:23:28" itemprop="dateCreated datePublished" datetime="2022-02-09T16:36:35+08:00">2022-02-09</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>384</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>数据类型（int，float等等）存放在栈里面。</p>
-<p>引用类型（Integer，Float等等）存放在堆里面 。</p>
-<p>装箱就是 Java 将基本类型转换成对应的包装类型，比如将 int 转换成 Integer 对象。反之将 Integer 转换成 int 值，则称为拆箱。</p>
-<p><strong>装箱:</strong></p>
-<p>int num = 20;</p>
-<p>Integer integer1 = num;</p>
-<p>如上这样就可以实现装箱使int成为integer了。</p>
-<p><strong>拆箱：</strong></p>
-<p>int num2=integer;</p>
-<p>这样就可以拆箱。</p>
-<p>integer的范围是-128——127之间，超过这个范围会溢出</p>
-<p><strong>字符串和数字之间的转换：</strong></p>
-<p>int num = 20;</p>
-<p>Integer integer = num;</p>
-<p>String s = integer.tostring(num，10)//这里解释一下，tostring括号里面的num是要转换为字符串的数字，后面的10是转换为10进制的，当然也可以变成8/16转换成八进制十六进制。</p>
 
       
     </div>
@@ -1165,7 +1332,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1177,6 +1344,9 @@
       </span>
       <span class="links-of-author-item">
         <a href="mailto:1937677785@qq.com" title="E-Mail → mailto:1937677785@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/qq_52599870?spm=1010.2135.3001.5343" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_52599870?spm&#x3D;1010.2135.3001.5343" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>CSDN</a>
       </span>
   </div>
 
@@ -1257,7 +1427,7 @@ setInterval("createtime()",250);
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10.2k字</span>
+  <span class="post-count">博客全站共10.3k字</span>
 </div>
         
 
@@ -1317,6 +1487,35 @@ setInterval("createtime()",250);
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = '评论';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'jmRJUyp1UPoHHO40wRd6euOq-gzGzoHsz',
+      appKey     : '9LgdzkTr3DnLb1TUi4Pl8b3F',
+      placeholder: "欢迎评论^0^",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
 </html>
