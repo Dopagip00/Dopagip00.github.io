@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JAVA--多态</title>
-    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
-    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
-<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
-<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
-<span id="more"></span>
-
-<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>多态的注意事项：</p>
-<p>1.多态是方法的多态，属性没有多态；</p>
-<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
-<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
-<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
-<p>##但是有些方法是不能重写的：</p>
-<p>1.static方法：属于类，不属于实例</p>
-<p>2.final属性</p>
-<p>3.private方法是私有的，当然重写了也没用</p>
-<p>instanceof （类型转换） 引用类型</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JAVA--static关键字知识点</title>
     <url>/2022/02/09/JAVA-static%E5%85%B3%E9%94%AE%E5%AD%97%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<p>1.有static修饰的属性就不用声明对象了，直接用类名去.属性</p>
@@ -76,6 +49,33 @@
       </tags>
   </entry>
   <entry>
+    <title>JAVA--多态</title>
+    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
+    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
+<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
+<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
+<span id="more"></span>
+
+<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>多态的注意事项：</p>
+<p>1.多态是方法的多态，属性没有多态；</p>
+<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
+<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
+<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
+<p>##但是有些方法是不能重写的：</p>
+<p>1.static方法：属于类，不属于实例</p>
+<p>2.final属性</p>
+<p>3.private方法是私有的，当然重写了也没用</p>
+<p>instanceof （类型转换） 引用类型</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA--封装</title>
     <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
     <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
@@ -90,38 +90,6 @@
 <p>2.统一接口（唯一接口只有get/set）</p>
 <p>3.隐藏代码实现细节</p>
 <p>4.系统的可维护性增加</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA--构造器</title>
-    <url>/2022/02/09/JAVA-%E6%9E%84%E9%80%A0%E5%99%A8/</url>
-    <content><![CDATA[<p> 定义一个构造器：（构造方法必须没有返回值）</p>
-<span id="more"></span>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">    public Person()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class void main(String[] args)&#123;</span><br><span class="line">    Person person = new Person();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>1.在类里面即使你什么都不写，都会存在一个构造器.</p>
-<p>2.当我们在用new关键字创建一个新对象的时候，<strong>对象调用的一定是方法，而不是调用类！！这就是为什么即使什么都不写依然会存在一个构造器的原因，因为要定义一个对象就一定需要构造器！简单理解为使用new创建对象的本质就是在调用构造器。</strong></p>
-<p><strong>举个例子：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">//还是刚才那个构造器</span><br><span class="line">class Person&#123;</span><br><span class="line">    String st;</span><br><span class="line">    public Person()&#123;</span><br><span class="line">        this.st = &quot;OK!&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class void main(String[] args)&#123;</span><br><span class="line">    Person person = new Person();</span><br><span class="line">    System.out.println(person.st);</span><br><span class="line">    //这里会输出OK！而不是NULL了，因为对象调用的是方法person而person已经定义了st为&quot;OK!&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>上面我们说的是无参数的构造器，下面我们来介绍有参数的构造器。</p>
-<p>有参构造，一旦有了有参构造，无参构造就必须显式定义，什么意思呢，下面来解释：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">//还是刚才那个构造器</span><br><span class="line">class Person&#123;</span><br><span class="line">    String st;</span><br><span class="line">    public Person()&#123;</span><br><span class="line">        this.st = &quot;不OK!&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    public Person(int a)&#123;</span><br><span class="line">        this.st = &quot;OK!&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class void main(String[] args)&#123;</span><br><span class="line">    Person person1 = new Person();//这里调用的是无参构造。</span><br><span class="line">    Person person2 = new Person(20);//这里调用的是有参构造。</span><br><span class="line">    //当然，你的对象名也不能相同，否则会报错。</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>无参构造是什么意思：就是在构造器中不加参数的。</p>
-<p>显式定义是什么意思：就是即使方法里面什么东西都没有你也要把该方法写出来。</p>
-<p><strong>其实构造器最大的作用就是初始化值！</strong></p>
-<p><strong>快捷键：在IDEA里面Alt+Insert 快速建立构造器！</strong></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -189,6 +157,38 @@
       </tags>
   </entry>
   <entry>
+    <title>JAVA--构造器</title>
+    <url>/2022/02/09/JAVA-%E6%9E%84%E9%80%A0%E5%99%A8/</url>
+    <content><![CDATA[<p> 定义一个构造器：（构造方法必须没有返回值）</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">    public Person()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class void main(String[] args)&#123;</span><br><span class="line">    Person person = new Person();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>1.在类里面即使你什么都不写，都会存在一个构造器.</p>
+<p>2.当我们在用new关键字创建一个新对象的时候，<strong>对象调用的一定是方法，而不是调用类！！这就是为什么即使什么都不写依然会存在一个构造器的原因，因为要定义一个对象就一定需要构造器！简单理解为使用new创建对象的本质就是在调用构造器。</strong></p>
+<p><strong>举个例子：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">//还是刚才那个构造器</span><br><span class="line">class Person&#123;</span><br><span class="line">    String st;</span><br><span class="line">    public Person()&#123;</span><br><span class="line">        this.st = &quot;OK!&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class void main(String[] args)&#123;</span><br><span class="line">    Person person = new Person();</span><br><span class="line">    System.out.println(person.st);</span><br><span class="line">    //这里会输出OK！而不是NULL了，因为对象调用的是方法person而person已经定义了st为&quot;OK!&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>上面我们说的是无参数的构造器，下面我们来介绍有参数的构造器。</p>
+<p>有参构造，一旦有了有参构造，无参构造就必须显式定义，什么意思呢，下面来解释：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">//还是刚才那个构造器</span><br><span class="line">class Person&#123;</span><br><span class="line">    String st;</span><br><span class="line">    public Person()&#123;</span><br><span class="line">        this.st = &quot;不OK!&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    public Person(int a)&#123;</span><br><span class="line">        this.st = &quot;OK!&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class void main(String[] args)&#123;</span><br><span class="line">    Person person1 = new Person();//这里调用的是无参构造。</span><br><span class="line">    Person person2 = new Person(20);//这里调用的是有参构造。</span><br><span class="line">    //当然，你的对象名也不能相同，否则会报错。</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>无参构造是什么意思：就是在构造器中不加参数的。</p>
+<p>显式定义是什么意思：就是即使方法里面什么东西都没有你也要把该方法写出来。</p>
+<p><strong>其实构造器最大的作用就是初始化值！</strong></p>
+<p><strong>快捷键：在IDEA里面Alt+Insert 快速建立构造器！</strong></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA--面向对象知识点总结</title>
     <url>/2022/02/09/JAVA-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<p>有关面向对象知识点的总结</p>
@@ -225,6 +225,27 @@
       </categories>
       <tags>
         <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客的基本操作</title>
+    <url>/2022/02/09/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p>hexo clean 清除缓存</p>
+<p>hexo n “…” 生成博客文章，标题是…</p>
+<span id="more"></span>
+
+<p>hexo s   start博客，默认启动在localhost:4000端口</p>
+<p>hexo d   部署到远端</p>
+<p>当写完博客之后通常使用这三个：（依次输入）</p>
+<p>hexo clean </p>
+<p>hexo g</p>
+<p>hexo d</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -288,24 +309,32 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo博客的基本操作</title>
-    <url>/2022/02/09/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<p>hexo clean 清除缓存</p>
-<p>hexo n “…” 生成博客文章，标题是…</p>
+    <title>”JAVA--JDBC知识点“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-JDBC%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
+    <content><![CDATA[<p>JDBC相当于一个驱动，让数据库和java打交道。</p>
 <span id="more"></span>
 
-<p>hexo s   start博客，默认启动在localhost:4000端口</p>
-<p>hexo d   部署到远端</p>
-<p>当写完博客之后通常使用这三个：（依次输入）</p>
-<p>hexo clean </p>
-<p>hexo g</p>
-<p>hexo d</p>
+<p>对于开发人员来说，只需要掌握JDBC接口的操作即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6cb5c95aa1fa076e8db6cc3bbedaf3e6.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>结构图，我们只需要学JDBC</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/1f734dc4920ffa0e272fe890bfcf6492.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>记得先要导入jar包</p>
+<h2 id="mysql-—-基本的操作"><a href="#mysql-—-基本的操作" class="headerlink" title="mysql — 基本的操作"></a><a href="https://dopagip.wordpress.com/2021/12/12/mysql-%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">mysql — 基本的操作</a></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--在sql里面所有的注释都用“--”,school是我们创建的数据库。</span><br><span class="line">show databases; --显示所有的数据库</span><br><span class="line"></span><br><span class="line">use school; --使用数据库</span><br><span class="line">change database</span><br><span class="line"></span><br><span class="line">use tables;  --显示所有的数据表</span><br><span class="line"></span><br><span class="line">desc tables; --显示数据库中所有表的信息</span><br><span class="line"></span><br><span class="line">create database &quot;school&quot;; --创建数据库</span><br><span class="line"></span><br><span class="line">exit; --退出mysql</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>数据库XX语言：</strong></p>
+<p>DDL 定义</p>
+<p>DML 操作</p>
+<p>DQL 查询</p>
+<p>DCL 控制</p>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>JAVA</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>JAVA</tag>
       </tags>
   </entry>
   <entry>
@@ -349,26 +378,16 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--JDBC知识点“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-JDBC%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
-    <content><![CDATA[<p>JDBC相当于一个驱动，让数据库和java打交道。</p>
+    <title>”JAVA--Sring声明“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-Sring%E5%A3%B0%E6%98%8E%E2%80%9C/</url>
+    <content><![CDATA[<p>引用类型的引用在栈里面，对象在堆里面。</p>
 <span id="more"></span>
 
-<p>对于开发人员来说，只需要掌握JDBC接口的操作即可。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/6cb5c95aa1fa076e8db6cc3bbedaf3e6.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>结构图，我们只需要学JDBC</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/1f734dc4920ffa0e272fe890bfcf6492.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>记得先要导入jar包</p>
-<h2 id="mysql-—-基本的操作"><a href="#mysql-—-基本的操作" class="headerlink" title="mysql — 基本的操作"></a><a href="https://dopagip.wordpress.com/2021/12/12/mysql-%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">mysql — 基本的操作</a></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--在sql里面所有的注释都用“--”,school是我们创建的数据库。</span><br><span class="line">show databases; --显示所有的数据库</span><br><span class="line"></span><br><span class="line">use school; --使用数据库</span><br><span class="line">change database</span><br><span class="line"></span><br><span class="line">use tables;  --显示所有的数据表</span><br><span class="line"></span><br><span class="line">desc tables; --显示数据库中所有表的信息</span><br><span class="line"></span><br><span class="line">create database &quot;school&quot;; --创建数据库</span><br><span class="line"></span><br><span class="line">exit; --退出mysql</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>数据库XX语言：</strong></p>
-<p>DDL 定义</p>
-<p>DML 操作</p>
-<p>DQL 查询</p>
-<p>DCL 控制</p>
+<p>字符串的字面值存储在字符串池中，可以实现共享。</p>
+<p>String name = 20;//这里name存储在堆里面，20存储在方法池里面。</p>
+<p>声明string字符串有两种方式：</p>
+<p>1.String name = “Hellp”//产生一个对象，存储在字符串池中</p>
+<p>2.String name = new String(“Hello”)//产生两个对象，在字符串池和堆中各存放一个</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -400,45 +419,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--properties类“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-properties%E7%B1%BB%E2%80%9C/</url>
-    <content><![CDATA[<p> properties相当于一个集合</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/img_convert/d91d50beb656346ba65a174526fc43f6.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>setproperties在集合里面增加变量。</p>
-<p>1.list方法适用于PrintWriter</p>
-<p>2.store方法适用于FileOutputStream</p>
-<p>3.load方法适用于FileInputStream</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--Sring声明“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-Sring%E5%A3%B0%E6%98%8E%E2%80%9C/</url>
-    <content><![CDATA[<p>引用类型的引用在栈里面，对象在堆里面。</p>
-<span id="more"></span>
-
-<p>字符串的字面值存储在字符串池中，可以实现共享。</p>
-<p>String name = 20;//这里name存储在堆里面，20存储在方法池里面。</p>
-<p>声明string字符串有两种方式：</p>
-<p>1.String name = “Hellp”//产生一个对象，存储在字符串池中</p>
-<p>2.String name = new String(“Hello”)//产生两个对象，在字符串池和堆中各存放一个</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--Sring方法“</title>
     <url>/2022/02/09/%E2%80%9DJAVA-Sring%E6%96%B9%E6%B3%95%E2%80%9C/</url>
     <content><![CDATA[<p>一共十三点</p>
@@ -455,6 +435,26 @@
 <p>11.equal：比较两个字符串是否相等，如果内容相同但是大小写不同用字符串1.equalIgnoreCase(字符串2).</p>
 <p>12.s3.compareTo(s4)：实现s3减s4，如果是字符串就用第一个字符的ASCII码相减，如果第一个字符相等就比较第二个。<code>String s1 = &quot;abc&quot;;</code>String s2 = “abcxyz”;前三个abc都相同，但是s1后面没有了，就用长度相减3-6 = -3；</p>
 <p>13.replace(“a1”，“a2”)：用a2替换a1。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--properties类“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-properties%E7%B1%BB%E2%80%9C/</url>
+    <content><![CDATA[<p> properties相当于一个集合</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d91d50beb656346ba65a174526fc43f6.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>setproperties在集合里面增加变量。</p>
+<p>1.list方法适用于PrintWriter</p>
+<p>2.store方法适用于FileOutputStream</p>
+<p>3.load方法适用于FileInputStream</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -490,6 +490,70 @@
 <p>2.只有外部类可以是静态的，内部类不行。</p>
 <p>3.内部类想要访问局部变量，需要局部变量是final修饰的（局部变量即方法里面定义的变量）</p>
 <p>4.内部类也可以继承接口用implements</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--字符编码知识点“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
+    <content><![CDATA[<p>介绍五种常用编码方式</p>
+<span id="more"></span>
+
+<p>ISO-8859-1 ：ASCII编码+西欧希腊等国的字符编码。</p>
+<p>UTF-8：针对Unicode码的字符编码。</p>
+<p>GBK ：简体中文。</p>
+<p>GB312：简体中文。</p>
+<p>BIG5：台湾，繁体中文。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--常用类“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E5%B8%B8%E7%94%A8%E7%B1%BB%E2%80%9C/</url>
+    <content><![CDATA[<p>介绍两个类：Date和Calendar</p>
+<p><strong>一、Date表示特定的瞬间，精确到毫秒。</strong></p>
+<p>1.创建date对象：</p>
+<p>Date date=new Date();</p>
+<p>2.一些方法：直接打印date：输出当前的时间。</p>
+<p>打印date.getTime输出从1970.1.1到现在所有的毫秒数。</p>
+<p>方法after和before:直接加一天。</p>
+<p>compareTo方法，date1.toString(date2)，是date1-date2.</p>
+<p>当然也可以用equal方法。</p>
+<p><strong>二、Calendar类提供了获取各类日历字段的方法：(就是你代替了date类当中的许多方法)</strong></p>
+<p>因为Calendar的构造方法是protected的，所以不能直接创建对象。要通过</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Calendar calendar = Calendar.getInstance();来设置Calendar对象。</span><br><span class="line">Calendar的方法很多，get最常见，int year = calendar.get(calendar.YEAR);这样输出的就是今年的年份了。</span><br><span class="line">int year = calendar.get(calendar.YEAR);</span><br><span class="line">int month = calendar.get(calendar.MONTH);</span><br><span class="line">int day = calendar.get(calendar.DAY_OF_WEEK);</span><br><span class="line">int hour = calendar.get(calendar.HOUR);</span><br><span class="line">int minute = calendar.get(calendar.MINUTE);</span><br><span class="line">int second = calendar.get(calendar.SECOND);</span><br><span class="line">这样分别定义了年，月，日，小时，分钟，秒。用get()方法!</span><br><span class="line">calendar.getActualMaximum()可以输出括号内的最大值，如calendar.getActualMaximum(Calendar.DAY_OF_MOUTH),可以输出月份的最大值30.</span><br><span class="line">同理calendar.getActualMinimum()</span><br></pre></td></tr></table></figure>
+
+<p><strong>三、SimpleDateFormat类用于格式化解析日期：（import java.text.SimpleDateFormat）</strong></p>
+<p>1.创建SimpleDateFormat对象：(Y：年，M:月，d：日，H：小时，m:分钟，s：秒)</p>
+<p>SimpleDateFormat sim = new SimpleDateFormat(“YYYY年MM月dd日 HH:mm:ss”)</p>
+<p>2.//创建date：</p>
+<p>Date date = new Date();</p>
+<p>//格式化date</p>
+<p>String str = sim.format(date);</p>
+<p>这时候再把str打印出来就可以得到—–2021年11月08日 10:27:08</p>
+<p><strong>四、System类（很重要！）</strong></p>
+<p>私有类，不需要创建对象，并且方法是静态的。</p>
+<p>方法：</p>
+<p><strong>1.arraycopy：用于复制数组</strong></p>
+<p>arraycopy(src,srcPos,dest,destPos,length)有五个参数</p>
+<p>//src:原数组，srcPos：从什么位置开始复制，dest：目标数组，destPos:目标数组的位置</p>
+<p>要注意目标数组长度要大于等于原数组长度。</p>
+<p><strong>2.currentTimeMillis：获取当前系统时间，返回毫秒值。</strong></p>
+<p>可以用来计算程序执行的时间，在程序前面加个start在程序后面加个end。</p>
+<p><strong>3.gc()：建议JVM使用垃圾回收器回收垃圾。</strong></p>
+<p>用来回收不用的对象。</p>
+<p>4.exit(int status)：退出JVM，参数是0表示正常退出，参数是-1表示异常退出。</p>
+<p>在exit后面的语句当然就不执行了！</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -552,61 +616,25 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--常用类“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E5%B8%B8%E7%94%A8%E7%B1%BB%E2%80%9C/</url>
-    <content><![CDATA[<p>介绍两个类：Date和Calendar</p>
-<p><strong>一、Date表示特定的瞬间，精确到毫秒。</strong></p>
-<p>1.创建date对象：</p>
-<p>Date date=new Date();</p>
-<p>2.一些方法：直接打印date：输出当前的时间。</p>
-<p>打印date.getTime输出从1970.1.1到现在所有的毫秒数。</p>
-<p>方法after和before:直接加一天。</p>
-<p>compareTo方法，date1.toString(date2)，是date1-date2.</p>
-<p>当然也可以用equal方法。</p>
-<p><strong>二、Calendar类提供了获取各类日历字段的方法：(就是你代替了date类当中的许多方法)</strong></p>
-<p>因为Calendar的构造方法是protected的，所以不能直接创建对象。要通过</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Calendar calendar = Calendar.getInstance();来设置Calendar对象。</span><br><span class="line">Calendar的方法很多，get最常见，int year = calendar.get(calendar.YEAR);这样输出的就是今年的年份了。</span><br><span class="line">int year = calendar.get(calendar.YEAR);</span><br><span class="line">int month = calendar.get(calendar.MONTH);</span><br><span class="line">int day = calendar.get(calendar.DAY_OF_WEEK);</span><br><span class="line">int hour = calendar.get(calendar.HOUR);</span><br><span class="line">int minute = calendar.get(calendar.MINUTE);</span><br><span class="line">int second = calendar.get(calendar.SECOND);</span><br><span class="line">这样分别定义了年，月，日，小时，分钟，秒。用get()方法!</span><br><span class="line">calendar.getActualMaximum()可以输出括号内的最大值，如calendar.getActualMaximum(Calendar.DAY_OF_MOUTH),可以输出月份的最大值30.</span><br><span class="line">同理calendar.getActualMinimum()</span><br></pre></td></tr></table></figure>
-
-<p><strong>三、SimpleDateFormat类用于格式化解析日期：（import java.text.SimpleDateFormat）</strong></p>
-<p>1.创建SimpleDateFormat对象：(Y：年，M:月，d：日，H：小时，m:分钟，s：秒)</p>
-<p>SimpleDateFormat sim = new SimpleDateFormat(“YYYY年MM月dd日 HH:mm:ss”)</p>
-<p>2.//创建date：</p>
-<p>Date date = new Date();</p>
-<p>//格式化date</p>
-<p>String str = sim.format(date);</p>
-<p>这时候再把str打印出来就可以得到—–2021年11月08日 10:27:08</p>
-<p><strong>四、System类（很重要！）</strong></p>
-<p>私有类，不需要创建对象，并且方法是静态的。</p>
-<p>方法：</p>
-<p><strong>1.arraycopy：用于复制数组</strong></p>
-<p>arraycopy(src,srcPos,dest,destPos,length)有五个参数</p>
-<p>//src:原数组，srcPos：从什么位置开始复制，dest：目标数组，destPos:目标数组的位置</p>
-<p>要注意目标数组长度要大于等于原数组长度。</p>
-<p><strong>2.currentTimeMillis：获取当前系统时间，返回毫秒值。</strong></p>
-<p>可以用来计算程序执行的时间，在程序前面加个start在程序后面加个end。</p>
-<p><strong>3.gc()：建议JVM使用垃圾回收器回收垃圾。</strong></p>
-<p>用来回收不用的对象。</p>
-<p>4.exit(int status)：退出JVM，参数是0表示正常退出，参数是-1表示异常退出。</p>
-<p>在exit后面的语句当然就不执行了！</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--字符编码知识点“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
-    <content><![CDATA[<p>介绍五种常用编码方式</p>
+    <title>”JAVA--拆箱和装箱，字符串数字转换“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8B%86%E7%AE%B1%E5%92%8C%E8%A3%85%E7%AE%B1%EF%BC%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E2%80%9C/</url>
+    <content><![CDATA[<p>数据类型（int，float等等）存放在栈里面。</p>
+<p>引用类型（Integer，Float等等）存放在堆里面 。</p>
 <span id="more"></span>
 
-<p>ISO-8859-1 ：ASCII编码+西欧希腊等国的字符编码。</p>
-<p>UTF-8：针对Unicode码的字符编码。</p>
-<p>GBK ：简体中文。</p>
-<p>GB312：简体中文。</p>
-<p>BIG5：台湾，繁体中文。</p>
+<p>装箱就是 Java 将基本类型转换成对应的包装类型，比如将 int 转换成 Integer 对象。反之将 Integer 转换成 int 值，则称为拆箱。</p>
+<p><strong>装箱:</strong></p>
+<p>int num = 20;</p>
+<p>Integer integer1 = num;</p>
+<p>如上这样就可以实现装箱使int成为integer了。</p>
+<p><strong>拆箱：</strong></p>
+<p>int num2=integer;</p>
+<p>这样就可以拆箱。</p>
+<p>integer的范围是-128——127之间，超过这个范围会溢出</p>
+<p><strong>字符串和数字之间的转换：</strong></p>
+<p>int num = 20;</p>
+<p>Integer integer = num;</p>
+<p>String s = integer.tostring(num，10)//这里解释一下，tostring括号里面的num是要转换为字符串的数字，后面的10是转换为10进制的，当然也可以变成8/16转换成八进制十六进制。</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -634,25 +662,69 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--拆箱和装箱，字符串数字转换“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8B%86%E7%AE%B1%E5%92%8C%E8%A3%85%E7%AE%B1%EF%BC%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E2%80%9C/</url>
-    <content><![CDATA[<p>数据类型（int，float等等）存放在栈里面。</p>
-<p>引用类型（Integer，Float等等）存放在堆里面 。</p>
+    <title>”JAVA--捕获异常“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8%E2%80%9C/</url>
+    <content><![CDATA[<p> 捕获异常的知识点</p>
 <span id="more"></span>
 
-<p>装箱就是 Java 将基本类型转换成对应的包装类型，比如将 int 转换成 Integer 对象。反之将 Integer 转换成 int 值，则称为拆箱。</p>
-<p><strong>装箱:</strong></p>
-<p>int num = 20;</p>
-<p>Integer integer1 = num;</p>
-<p>如上这样就可以实现装箱使int成为integer了。</p>
-<p><strong>拆箱：</strong></p>
-<p>int num2=integer;</p>
-<p>这样就可以拆箱。</p>
-<p>integer的范围是-128——127之间，超过这个范围会溢出</p>
-<p><strong>字符串和数字之间的转换：</strong></p>
-<p>int num = 20;</p>
-<p>Integer integer = num;</p>
-<p>String s = integer.tostring(num，10)//这里解释一下，tostring括号里面的num是要转换为字符串的数字，后面的10是转换为10进制的，当然也可以变成8/16转换成八进制十六进制。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
+<p>假设要捕获多个异常，从大到小。</p>
+<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--接口interface“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8E%A5%E5%8F%A3interface%E2%80%9C/</url>
+    <content><![CDATA[<p> 1.接口只有规范，无法写方法，是专业的抽象。实现约束和实现分离，面向接口编程。</p>
+<span id="more"></span>
+
+<p>2.接口就是规范，约束了编程的行为</p>
+<p>写一个接口：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public interface jiekou &#123;//这是一个接口，下面实行增删改查</span><br><span class="line">    void insert();</span><br><span class="line">    void delete();</span><br><span class="line">    void update();</span><br><span class="line">    void select();</span><br><span class="line">    //上面的四个方法都是在接口里面的方法，固定为抽象方法，抽象的abstract可以省略，直接用返回值+方法名来定义方法即可；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（抽象）类只能单继承，但是接口可以多继承，这就是接口的好处；</p>
+<p>继承接口用关键字implement，格式为：class+类名+implement+接口名{}</p>
+<p>实现了接口中的类就要重写接口中的方法，接口的多继承用逗号连接实现。</p>
+<p>接口的作用</p>
+<p><img src="https://img-blog.csdnimg.cn/9ec1434941764960bada7de63fcf34be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--方法盘点“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E6%96%B9%E6%B3%95%E7%9B%98%E7%82%B9%E2%80%9C/</url>
+    <content><![CDATA[<p>介绍四个方法</p>
+<span id="more"></span>
+
+<p><strong>getCalss()方法：</strong></p>
+<p>1.使用方法:<strong>对象.getClass()</strong>;</p>
+<p>2.有什么用：返回对象的内容，比如这个对象是A类的，那就返回A类给getClass()，返回的值是Class类型的。</p>
+<p><strong>hashcode()方法：</strong></p>
+<p>1.使用方法:<strong>对象.hashcode()</strong>;</p>
+<p>2.返回一个值，哈希码的值实际上是对象的地址或者字符串之类的，所以相同对象返回相同哈希码。</p>
+<p><strong>toString()方法</strong>：</p>
+<p>1.其实也就是返回getclass和hashcode的合体，但是哈希值是十六进制的。</p>
+<p>qeual方法：</p>
+<p>return(this == 一个类对象)</p>
+<p>System.out.println(s1.equal(s2)) #判断s1和s2对象是否相等。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/017447037a9afaba91fed9ca66807b05.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -699,42 +771,14 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--捕获异常“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8%E2%80%9C/</url>
-    <content><![CDATA[<p> 捕获异常的知识点</p>
+    <title>”JAVA--泛型“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E6%B3%9B%E5%9E%8B%E2%80%9C/</url>
+    <content><![CDATA[<p>介绍泛型的基本概念</p>
 <span id="more"></span>
 
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
+<p><strong>基本概念：</strong>（传递类型参数的东西）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/446e9973ebc5dab7b15dbedca430ed4c.png" alt="img"></p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
-<p>假设要捕获多个异常，从大到小。</p>
-<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--接口interface“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8E%A5%E5%8F%A3interface%E2%80%9C/</url>
-    <content><![CDATA[<p> 1.接口只有规范，无法写方法，是专业的抽象。实现约束和实现分离，面向接口编程。</p>
-<span id="more"></span>
-
-<p>2.接口就是规范，约束了编程的行为</p>
-<p>写一个接口：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public interface jiekou &#123;//这是一个接口，下面实行增删改查</span><br><span class="line">    void insert();</span><br><span class="line">    void delete();</span><br><span class="line">    void update();</span><br><span class="line">    void select();</span><br><span class="line">    //上面的四个方法都是在接口里面的方法，固定为抽象方法，抽象的abstract可以省略，直接用返回值+方法名来定义方法即可；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（抽象）类只能单继承，但是接口可以多继承，这就是接口的好处；</p>
-<p>继承接口用关键字implement，格式为：class+类名+implement+接口名{}</p>
-<p>实现了接口中的类就要重写接口中的方法，接口的多继承用逗号连接实现。</p>
-<p>接口的作用</p>
-<p><img src="https://img-blog.csdnimg.cn/9ec1434941764960bada7de63fcf34be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -868,41 +912,17 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--泛型“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E6%B3%9B%E5%9E%8B%E2%80%9C/</url>
-    <content><![CDATA[<p>介绍泛型的基本概念</p>
+    <title>”JAVA--转换流知识点“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
+    <content><![CDATA[<p>InputStreamReader和OutputStreamWriter:</p>
 <span id="more"></span>
 
-<p><strong>基本概念：</strong>（传递类型参数的东西）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/446e9973ebc5dab7b15dbedca430ed4c.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--方法盘点“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E6%96%B9%E6%B3%95%E7%9B%98%E7%82%B9%E2%80%9C/</url>
-    <content><![CDATA[<p>介绍四个方法</p>
-<span id="more"></span>
 
-<p><strong>getCalss()方法：</strong></p>
-<p>1.使用方法:<strong>对象.getClass()</strong>;</p>
-<p>2.有什么用：返回对象的内容，比如这个对象是A类的，那就返回A类给getClass()，返回的值是Class类型的。</p>
-<p><strong>hashcode()方法：</strong></p>
-<p>1.使用方法:<strong>对象.hashcode()</strong>;</p>
-<p>2.返回一个值，哈希码的值实际上是对象的地址或者字符串之类的，所以相同对象返回相同哈希码。</p>
-<p><strong>toString()方法</strong>：</p>
-<p>1.其实也就是返回getclass和hashcode的合体，但是哈希值是十六进制的。</p>
-<p>qeual方法：</p>
-<p>return(this == 一个类对象)</p>
-<p>System.out.println(s1.equal(s2)) #判断s1和s2对象是否相等。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/017447037a9afaba91fed9ca66807b05.png" alt="img"></p>
+<p> <strong>InputStreamReader</strong>:</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/f0b6cfe4735777363bc8e2eeafde2a2b.png" alt="img"></p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这样接下来直接用isr即可</p>
+<p>OutputStreamWriter同理。</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -933,26 +953,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--转换流知识点“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
-    <content><![CDATA[<p>InputStreamReader和OutputStreamWriter:</p>
-<span id="more"></span>
-
-
-<p> <strong>InputStreamReader</strong>:</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/f0b6cfe4735777363bc8e2eeafde2a2b.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这样接下来直接用isr即可</p>
-<p>OutputStreamWriter同理。</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--集合知识点“</title>
     <url>/2022/02/09/%E2%80%9DJAVA-%E9%9B%86%E5%90%88%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
     <content><![CDATA[<p>1.集合的概念：存放对象的容器，类似数组的概念，同样集合也有对多个对象进行批量操作的功能。</p>
@@ -970,11 +970,43 @@
       </tags>
   </entry>
   <entry>
-    <title>”Linux--Xshell和Xftp“</title>
-    <url>/2022/02/09/%E2%80%9DLinux-Xshell%E5%92%8CXftp%E2%80%9C/</url>
-    <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
-<p>不同点：Xftp用于发送文件。</p>
-<p>Xshell可以使用windows来访问Linux，实现远程操控。</p>
+    <title>”Linux--实用指令“</title>
+    <url>/2022/02/09/%E2%80%9DLinux-%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4%E2%80%9C/</url>
+    <content><![CDATA[<p>介绍Linux的运行级别和找回root密码的方式</p>
+<span id="more"></span>
+
+<p> <strong>1.运行级别：</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/cfe449dfc95f4cc1869792e4e53bf39c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_11,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>常用的运行级别是3和5</p>
+<p>使用init来切换运行级别（init 运行级别）</p>
+<p>查看当前运行级别：systemctl get-default</p>
+<p><strong>2.找回root密码</strong></p>
+<p>(1)在登录前的界面按下“e”编辑，如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/24c29cb043ac4d2f91a731ff9b6121ae.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（2）找到linux16所在的那一行的下面一行：（如果没找到linux16就按着键盘向下的箭头就能看见了）</p>
+<p><img src="https://img-blog.csdnimg.cn/2f7d063b6b994865a19935d18958e2de.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> （3）在UTF-8后面按下空格后加上这句话：init=/bin/sh</p>
+<p><img src="https://img-blog.csdnimg.cn/8b229a66f7534503bcf5298f85aa9fcf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>(4)输入完之后按下快捷键Ctrl+x进入单用户模式（如果左边的Ctrl不行就试试右边的） </p>
+<p>（5）在光标闪烁的位置输入这句话：mount -o remount,rw/  输入完之后回车。</p>
+<p><img src="https://img-blog.csdnimg.cn/2f62ded86e884e48b6b27fa8e15eb14d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/3db9328c5fb742acbf74ccdcc4698f29.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> （6）然后在新界面光标闪烁位置输入passwd然后回车，输入新密码，然后确认密码</p>
+<p>（7）输入完之后当我们看到passwd=****就说明成功修改了密码。</p>
+<p><img src="https://img-blog.csdnimg.cn/5f29832e73d74f2dad243c54a44b6f6e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（8）紧接着在下面的一行输入这句话：touch /.autorelabel（注意：touch和/之间有一个空格）</p>
+<p><img src="https://img-blog.csdnimg.cn/8df0b14725b648ec9f51e7b974ae8f33.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（9）继续在光标闪烁的位置输入exec /sbin/init（同样在exec和/之间有一个空格），完成后按回车，耐心等待系统修改密码（时间会稍长）完成后linux会自动重启。</p>
+<p><img src="https://img-blog.csdnimg.cn/4b5f47ea34064e89a594099f73e1c200.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（10）登录时使用新密码即可 .</p>
+<p>如果在登录的状态下修改密码那就容易得多了，在终端使用passwd 用户名 即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/8d46bf1dc8f4486f80463a0ad95c030b.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h1 id="Linux里的帮助指令"><a href="#Linux里的帮助指令" class="headerlink" title="Linux里的帮助指令"></a><strong>Linux里的帮助指令</strong></h1><p><img src="https://img-blog.csdnimg.cn/4735254542224f94a3e8ba707bc2c2dc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> 基本命令：</p>
+<p>ls 显示当前目录下所有文件但是没有隐藏文件</p>
+<p>ls -a 显示当前目录下所有文件包括隐藏文件</p>
+<p>ls -l（等效于ll）表示目录以单行的方式输出<img src="https://img-blog.csdnimg.cn/c8efefc5fb2144dc9fab281847b94cb6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> ls -la或者ls -al 表示单行输出文件包括隐藏文件</p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -1031,43 +1063,11 @@
       </tags>
   </entry>
   <entry>
-    <title>”Linux--实用指令“</title>
-    <url>/2022/02/09/%E2%80%9DLinux-%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4%E2%80%9C/</url>
-    <content><![CDATA[<p>介绍Linux的运行级别和找回root密码的方式</p>
-<span id="more"></span>
-
-<p> <strong>1.运行级别：</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/cfe449dfc95f4cc1869792e4e53bf39c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_11,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>常用的运行级别是3和5</p>
-<p>使用init来切换运行级别（init 运行级别）</p>
-<p>查看当前运行级别：systemctl get-default</p>
-<p><strong>2.找回root密码</strong></p>
-<p>(1)在登录前的界面按下“e”编辑，如图：</p>
-<p><img src="https://img-blog.csdnimg.cn/24c29cb043ac4d2f91a731ff9b6121ae.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（2）找到linux16所在的那一行的下面一行：（如果没找到linux16就按着键盘向下的箭头就能看见了）</p>
-<p><img src="https://img-blog.csdnimg.cn/2f7d063b6b994865a19935d18958e2de.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> （3）在UTF-8后面按下空格后加上这句话：init=/bin/sh</p>
-<p><img src="https://img-blog.csdnimg.cn/8b229a66f7534503bcf5298f85aa9fcf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>(4)输入完之后按下快捷键Ctrl+x进入单用户模式（如果左边的Ctrl不行就试试右边的） </p>
-<p>（5）在光标闪烁的位置输入这句话：mount -o remount,rw/  输入完之后回车。</p>
-<p><img src="https://img-blog.csdnimg.cn/2f62ded86e884e48b6b27fa8e15eb14d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/3db9328c5fb742acbf74ccdcc4698f29.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> （6）然后在新界面光标闪烁位置输入passwd然后回车，输入新密码，然后确认密码</p>
-<p>（7）输入完之后当我们看到passwd=****就说明成功修改了密码。</p>
-<p><img src="https://img-blog.csdnimg.cn/5f29832e73d74f2dad243c54a44b6f6e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（8）紧接着在下面的一行输入这句话：touch /.autorelabel（注意：touch和/之间有一个空格）</p>
-<p><img src="https://img-blog.csdnimg.cn/8df0b14725b648ec9f51e7b974ae8f33.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（9）继续在光标闪烁的位置输入exec /sbin/init（同样在exec和/之间有一个空格），完成后按回车，耐心等待系统修改密码（时间会稍长）完成后linux会自动重启。</p>
-<p><img src="https://img-blog.csdnimg.cn/4b5f47ea34064e89a594099f73e1c200.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（10）登录时使用新密码即可 .</p>
-<p>如果在登录的状态下修改密码那就容易得多了，在终端使用passwd 用户名 即可。</p>
-<p><img src="https://img-blog.csdnimg.cn/8d46bf1dc8f4486f80463a0ad95c030b.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<h1 id="Linux里的帮助指令"><a href="#Linux里的帮助指令" class="headerlink" title="Linux里的帮助指令"></a><strong>Linux里的帮助指令</strong></h1><p><img src="https://img-blog.csdnimg.cn/4735254542224f94a3e8ba707bc2c2dc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> 基本命令：</p>
-<p>ls 显示当前目录下所有文件但是没有隐藏文件</p>
-<p>ls -a 显示当前目录下所有文件包括隐藏文件</p>
-<p>ls -l（等效于ll）表示目录以单行的方式输出<img src="https://img-blog.csdnimg.cn/c8efefc5fb2144dc9fab281847b94cb6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> ls -la或者ls -al 表示单行输出文件包括隐藏文件</p>
+    <title>”Linux--Xshell和Xftp“</title>
+    <url>/2022/02/09/%E2%80%9DLinux-Xshell%E5%92%8CXftp%E2%80%9C/</url>
+    <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
+<p>不同点：Xftp用于发送文件。</p>
+<p>Xshell可以使用windows来访问Linux，实现远程操控。</p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -1100,37 +1100,6 @@
 <p>（9）继续在光标闪烁的位置输入exec /sbin/init（同样在exec和/之间有一个空格），完成后按回车，耐心等待系统修改密码（时间会稍长）完成后linux会自动重启。</p>
 <p><img src="https://img-blog.csdnimg.cn/4b5f47ea34064e89a594099f73e1c200.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p>（10）登录时使用新密码即可 .</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”Linux--用户管理“</title>
-    <url>/2022/02/09/%E2%80%9DLinux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E2%80%9C/</url>
-    <content><![CDATA[<p> 一、基本操作：</p>
-<p>添加用户：useradd 用户名</p>
-<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
-<span id="more"></span>
-
-<p>删除用户(不保留家目录)：userdel -r 用户名</p>
-<p>更改用户密码：passwd 用户名</p>
-<p>查询用户信息：id 用户名</p>
-<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
-<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
-<p>想要查看现在的用户是谁：who am i（离谱）</p>
-<p>pwd：查看现在在哪个目录下面</p>
-<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
-<p>添加组：groupadd 组名</p>
-<p>删除组：groupdel 组名</p>
-<p>创建用户的同时分组：useradd -g 组名 用户名</p>
-<p>用户换组：usermod -g 新组名 用户名</p>
-<p><strong>用户和组的相关文件：</strong></p>
-<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -1213,6 +1182,55 @@
       </tags>
   </entry>
   <entry>
+    <title>”Linux--用户管理“</title>
+    <url>/2022/02/09/%E2%80%9DLinux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E2%80%9C/</url>
+    <content><![CDATA[<p> 一、基本操作：</p>
+<p>添加用户：useradd 用户名</p>
+<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
+<span id="more"></span>
+
+<p>删除用户(不保留家目录)：userdel -r 用户名</p>
+<p>更改用户密码：passwd 用户名</p>
+<p>查询用户信息：id 用户名</p>
+<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
+<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
+<p>想要查看现在的用户是谁：who am i（离谱）</p>
+<p>pwd：查看现在在哪个目录下面</p>
+<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
+<p>添加组：groupadd 组名</p>
+<p>删除组：groupdel 组名</p>
+<p>创建用户的同时分组：useradd -g 组名 用户名</p>
+<p>用户换组：usermod -g 新组名 用户名</p>
+<p><strong>用户和组的相关文件：</strong></p>
+<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--一些函数“</title>
+    <url>/2022/02/09/%E2%80%9Dpython-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0%E2%80%9C/</url>
+    <content><![CDATA[<p> bool()：判断括号里面的结果是真还是假。</p>
+<p>真的情况：在括号里面加引号，引号里面有任何值的结果都是真以及直接输入true（不加引号）</p>
+<p>假的情况：在引号里面有引号但是引号里面什么都没有以及直接输入false</p>
+<span id="more"></span>
+
+<p>以下是定义为false的情况：</p>
+<p><img src="https://img-blog.csdnimg.cn/91c7d524a1064e67a99244784f03bcc4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”python--列表里的函数“</title>
     <url>/2022/02/09/%E2%80%9Dpython-%E5%88%97%E8%A1%A8%E9%87%8C%E7%9A%84%E5%87%BD%E6%95%B0%E2%80%9C/</url>
     <content><![CDATA[<p> sort()将数组从小到大排序。</p>
@@ -1267,24 +1285,6 @@
 <p>2.加上r的时候: print(<strong>r</strong>“D:\three\two\one\now”)</p>
 <p>​     显示的结果是：<img src="https://img-blog.csdnimg.cn/f7f5f4fca14d45db930067db3de40836.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p><strong>加上r代表这后面的字符串显示原始字符！</strong></p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--一些函数“</title>
-    <url>/2022/02/09/%E2%80%9Dpython-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0%E2%80%9C/</url>
-    <content><![CDATA[<p> bool()：判断括号里面的结果是真还是假。</p>
-<p>真的情况：在括号里面加引号，引号里面有任何值的结果都是真以及直接输入true（不加引号）</p>
-<p>假的情况：在引号里面有引号但是引号里面什么都没有以及直接输入false</p>
-<span id="more"></span>
-
-<p>以下是定义为false的情况：</p>
-<p><img src="https://img-blog.csdnimg.cn/91c7d524a1064e67a99244784f03bcc4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>python</category>
