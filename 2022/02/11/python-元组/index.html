@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"dopagip00.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="1.元组类似于数组，但是元组可以不带括号表示，如：数组：（1，2，3），元组：1，2，3。 2.不可以改变元组里面的数，如：a[1] &#x3D; 9 是不可取的。 3.切片的翻转操作：a[::-1] 会把元组里面的所有的数进行翻转。 4.大部分的函数操作是和数组操作一样的，index">
+  <meta name="description" content="包含了元组中的大部分操作">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python--元组">
 <meta property="og:url" content="https://dopagip00.github.io/2022/02/11/python-%E5%85%83%E7%BB%84/index.html">
 <meta property="og:site_name" content="Dopagip&#39;s blog">
-<meta property="og:description" content="1.元组类似于数组，但是元组可以不带括号表示，如：数组：（1，2，3），元组：1，2，3。 2.不可以改变元组里面的数，如：a[1] &#x3D; 9 是不可取的。 3.切片的翻转操作：a[::-1] 会把元组里面的所有的数进行翻转。 4.大部分的函数操作是和数组操作一样的，index">
+<meta property="og:description" content="包含了元组中的大部分操作">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-11T09:43:25.000Z">
-<meta property="article:modified_time" content="2022-02-11T12:28:38.759Z">
+<meta property="article:modified_time" content="2022-02-13T01:56:06.308Z">
 <meta property="article:author" content="邓高正">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -210,10 +210,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-11 17:43:25 / 修改时间：20:28:38" itemprop="dateCreated datePublished" datetime="2022-02-11T17:43:25+08:00">2022-02-11</time>
+              <time title="创建时间：2022-02-11 17:43:25" itemprop="dateCreated datePublished" datetime="2022-02-11T17:43:25+08:00">2022-02-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-13 09:56:06" itemprop="dateModified" datetime="2022-02-13T09:56:06+08:00">2022-02-13</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -249,10 +255,30 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>1.元组类似于数组，但是元组可以不带括号表示，如：数组：（1，2，3），元组：1，2，3。</p>
-<p>2.不可以改变元组里面的数，如：a[1] = 9 是不可取的。</p>
+        <h3 id="包含了元组中的大部分操作"><a href="#包含了元组中的大部分操作" class="headerlink" title="包含了元组中的大部分操作"></a>包含了元组中的大部分操作</h3><span id="more"></span>
+
+<p>1.元组类似于数组，但是元组<strong>可以</strong>不带括号表示，如：数组：（1，2，3），元组：1，2，3。但是建议最好一直加上，增加代码的可读性。</p>
+<p>2.不可以改变元组里面的数，如：a[1] = 9 是不可取的。正是因为元组不能修改，所以相对于数组来说安全性更高。</p>
 <p>3.切片的翻转操作：a[::-1] 会把元组里面的所有的数进行翻转。</p>
-<p>4.大部分的函数操作是和数组操作一样的，index</p>
+<p>4.大部分的函数操作是和数组操作一样的：index操作，count操作等等都和数组是一样的</p>
+<p>5.元组的嵌套：</p>
+<p>s=(1,2,3)</p>
+<p>t=(4,5,6)</p>
+<p>w=s , t</p>
+<p>print(w)</p>
+<p>输出w的结果是((1,2,3),(4,5,6))</p>
+<p>6.元组的迭代：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">s=(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">t=(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">w=s,t</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> w:</span><br><span class="line">	<span class="keyword">for</span> each <span class="keyword">in</span> i:</span><br><span class="line">		<span class="built_in">print</span>(each,end=<span class="string">&quot; &quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>7.在元组中如何生成只有一个元素的元组：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = (<span class="number">12</span>,)</span><br><span class="line"><span class="built_in">type</span>(x)</span><br></pre></td></tr></table></figure>
+
+<p>使用type函数查看即可得出x是tuple元组类型，重要的是12后面的逗号！！</p>
+<p>8.打包和解包：</p>
+<p><strong>打包：即生成一个元组</strong></p>
+<p>解包：如下图这样，生成的t有三个元素，分别赋值给x,y,z称之为解包，解包需要注意的是：左侧变量名的数量必须跟右侧元素的数量一致。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">t = (<span class="number">123</span>,<span class="number">12</span>,<span class="number">1</span>)</span><br><span class="line">x,y,z = t</span><br><span class="line"><span class="built_in">print</span>(x,y,z)</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -305,7 +331,10 @@
     <a href="/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" rel="prev" title="hexo d出错时的解决办法">
       <i class="fa fa-chevron-left"></i> hexo d出错时的解决办法
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/02/12/Linux%E5%91%BD%E4%BB%A4%E6%89%8B%E5%86%8C/" rel="next" title="Linux命令手册">
+      Linux命令手册 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -365,6 +394,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%85%E5%90%AB%E4%BA%86%E5%85%83%E7%BB%84%E4%B8%AD%E7%9A%84%E5%A4%A7%E9%83%A8%E5%88%86%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">包含了元组中的大部分操作</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -379,7 +409,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">47</span>
+          <span class="site-state-item-count">49</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -478,7 +508,7 @@ setInterval("createtime()",250);
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10.5k字</span>
+  <span class="post-count">博客全站共15.4k字</span>
 </div>
         
 
@@ -511,8 +541,6 @@ setInterval("createtime()",250);
 <script src="/js/bookmark.js"></script>
 
 
-  <script defer src="/lib/three/three.min.js"></script>
-    <script defer src="/lib/three/canvas_lines.min.js"></script>
 
 
   
