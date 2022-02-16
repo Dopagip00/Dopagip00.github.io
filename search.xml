@@ -49,6 +49,56 @@
       </tags>
   </entry>
   <entry>
+    <title>JAVA--多态</title>
+    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
+    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
+<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
+<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
+<span id="more"></span>
+
+<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>多态的注意事项：</p>
+<p>1.多态是方法的多态，属性没有多态；</p>
+<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
+<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
+<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
+<p>##但是有些方法是不能重写的：</p>
+<p>1.static方法：属于类，不属于实例</p>
+<p>2.final属性</p>
+<p>3.private方法是私有的，当然重写了也没用</p>
+<p>instanceof （类型转换） 引用类型</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA--封装</title>
+    <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
+    <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
+<span id="more"></span>
+
+<p>2.get/set 方法最重要：用get方法获得该值，用set方法给该值赋予数值,因为你的属性被private限制住了，只能通过其他方法输出。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class AA&#123;</span><br><span class="line">    private int a=20;</span><br><span class="line">    public int geta()&#123;</span><br><span class="line">        return this.a;</span><br><span class="line">    &#125;</span><br><span class="line">    public void seta(int a)&#123;</span><br><span class="line">        this.a=a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class getset &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        AA aa = new AA();</span><br><span class="line">        //System.out.println(aa.a);这样写是错的，因为属性a被private限制了，只能在AA类中使用</span><br><span class="line">        //这时候就要使用set和get函数了</span><br><span class="line">        aa.seta(50);//这一步用来设置a的值</span><br><span class="line">        System.out.println(aa.geta());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>封装的作用：</p>
+<p>1.提高程序的安全性，保护程序</p>
+<p>2.统一接口（唯一接口只有get/set）</p>
+<p>3.隐藏代码实现细节</p>
+<p>4.系统的可维护性增加</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA--数组（基础）</title>
     <url>/2022/02/09/JAVA-%E6%95%B0%E7%BB%84%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/</url>
     <content><![CDATA[<p> <strong>有关数组的基础知识</strong></p>
@@ -85,33 +135,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--多态</title>
-    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
-    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
-<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
-<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
-<span id="more"></span>
-
-<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>多态的注意事项：</p>
-<p>1.多态是方法的多态，属性没有多态；</p>
-<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
-<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
-<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
-<p>##但是有些方法是不能重写的：</p>
-<p>1.static方法：属于类，不属于实例</p>
-<p>2.final属性</p>
-<p>3.private方法是私有的，当然重写了也没用</p>
-<p>instanceof （类型转换） 引用类型</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JAVA--方法重写</title>
     <url>/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/</url>
     <content><![CDATA[<p>方法的调用只和左边有关，即A a/B b</p>
@@ -125,29 +148,6 @@
 <p><strong>有static时，b调用了B类的方法，因为b是用b类定义的</strong></p>
 <p><strong>没有static时，b调用的是对象的方法，而b是用A类new的</strong></p>
 <p><strong>简单来说就是有static调用后面，没有static调用前面。</strong></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA--封装</title>
-    <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
-    <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
-<span id="more"></span>
-
-<p>2.get/set 方法最重要：用get方法获得该值，用set方法给该值赋予数值,因为你的属性被private限制住了，只能通过其他方法输出。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class AA&#123;</span><br><span class="line">    private int a=20;</span><br><span class="line">    public int geta()&#123;</span><br><span class="line">        return this.a;</span><br><span class="line">    &#125;</span><br><span class="line">    public void seta(int a)&#123;</span><br><span class="line">        this.a=a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class getset &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        AA aa = new AA();</span><br><span class="line">        //System.out.println(aa.a);这样写是错的，因为属性a被private限制了，只能在AA类中使用</span><br><span class="line">        //这时候就要使用set和get函数了</span><br><span class="line">        aa.seta(50);//这一步用来设置a的值</span><br><span class="line">        System.out.println(aa.geta());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>封装的作用：</p>
-<p>1.提高程序的安全性，保护程序</p>
-<p>2.统一接口（唯一接口只有get/set）</p>
-<p>3.隐藏代码实现细节</p>
-<p>4.系统的可维护性增加</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -189,24 +189,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--面向对象知识点总结</title>
-    <url>/2022/02/09/JAVA-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p>有关面向对象知识点的总结</p>
-<span id="more"></span>
-
-<p>1.类与对象：</p>
-<p>类是一个模板（抽象），对象是一个具体的实例（具体化）<br>2.方法：<br>定义、调用<br>3.对应的引用<br>引用类型:基本类型 (8)<br>对象是通过引用来操作的:栈—&gt;堆<br>4.属性:字段Field 成员变量<br><strong>默认初始化:</strong><br>数字: 0 和 0.0<br>char : u0000<br>boolean: false<br>引用: null<br>修饰符属性类型 属性名。属性值!<br>5.对象的创建和使用(属性就是变量的意思)<br>必须使用new关键字创造对象，构造器 Person my = new Person();<br>-对象的属性my. name<br>-对象的方法my. sleep()</p>
-<p>6.类：<br>静态的定义：属性</p>
-<p>动态的定义：方法</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JAVA--继承</title>
     <url>/2022/02/09/JAVA-%E7%BB%A7%E6%89%BF/</url>
     <content><![CDATA[<p>1.extend的意思是’’拓展，扩大’’,子类是对父类的拓展。</p>
@@ -225,6 +207,45 @@
       </categories>
       <tags>
         <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA--面向对象知识点总结</title>
+    <url>/2022/02/09/JAVA-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>有关面向对象知识点的总结</p>
+<span id="more"></span>
+
+<p>1.类与对象：</p>
+<p>类是一个模板（抽象），对象是一个具体的实例（具体化）<br>2.方法：<br>定义、调用<br>3.对应的引用<br>引用类型:基本类型 (8)<br>对象是通过引用来操作的:栈—&gt;堆<br>4.属性:字段Field 成员变量<br><strong>默认初始化:</strong><br>数字: 0 和 0.0<br>char : u0000<br>boolean: false<br>引用: null<br>修饰符属性类型 属性名。属性值!<br>5.对象的创建和使用(属性就是变量的意思)<br>必须使用new关键字创造对象，构造器 Person my = new Person();<br>-对象的属性my. name<br>-对象的方法my. sleep()</p>
+<p>6.类：<br>静态的定义：属性</p>
+<p>动态的定义：方法</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客的基本操作</title>
+    <url>/2022/02/09/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p>hexo clean 清除缓存</p>
+<p>hexo n “…” 生成博客文章，标题是…</p>
+<span id="more"></span>
+
+<p>hexo s   start博客，默认启动在localhost:4000端口</p>
+<p>hexo d   部署到远端</p>
+<p>当写完博客之后通常使用这三个：（依次输入）</p>
+<p>hexo clean </p>
+<p>hexo g</p>
+<p>hexo d</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1317,27 +1338,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo博客的基本操作</title>
-    <url>/2022/02/09/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<p>hexo clean 清除缓存</p>
-<p>hexo n “…” 生成博客文章，标题是…</p>
-<span id="more"></span>
-
-<p>hexo s   start博客，默认启动在localhost:4000端口</p>
-<p>hexo d   部署到远端</p>
-<p>当写完博客之后通常使用这三个：（依次输入）</p>
-<p>hexo clean </p>
-<p>hexo g</p>
-<p>hexo d</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo d出错时的解决办法</title>
     <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
@@ -1435,6 +1435,44 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--Collec体系集合“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-Collecting%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88%E2%80%9C/</url>
+    <content><![CDATA[<p> Collect接口知识点总结</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5888cfe5738f77ca7a81306dbae10536.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>rt</p>
+<h2 id="Collect父接口"><a href="#Collect父接口" class="headerlink" title="Collect父接口"></a>Collect父接口</h2><p>特点：（有些）对象，无序，无下标，不能重复–&gt;对应着Set接口。</p>
+<p>方法：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/3bf59b036ab708cfc76b85554f643deb.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>常用方法</p>
+<p>iteration迭代器</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/58df797c645cb5fe3e3f7dbd39a89bc0.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>使用next()来用指针不断指向下一行</p>
+<p>iteration要定义对象的：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/79b7331b81bc69966635494f587bc2a0.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>三个常用方法</p>
+<p>遍历元素的方法：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5a9858fdff8876de3732ae53f9c65917.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>注意：</strong>在iteration里面不能使用collection.remove();来删除元素，要使用iteration(这是对象)来删除元素，iteration.remove()。</p>
+<p>collection判断：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/80ec081de26e2bccf885c09c38fe3aba.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>使用contains方法进行判断，返回值是布朗类型的</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--JDBC知识点“</title>
     <url>/2022/02/09/%E2%80%9DJAVA-JDBC%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
     <content><![CDATA[<p>JDBC相当于一个驱动，让数据库和java打交道。</p>
@@ -1461,41 +1499,6 @@
       </categories>
       <tags>
         <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python--序列</title>
-    <url>/2022/02/15/python-%E5%BA%8F%E5%88%97/</url>
-    <content><![CDATA[<h2 id="包含了大部分的序列的操作和函数"><a href="#包含了大部分的序列的操作和函数" class="headerlink" title="包含了大部分的序列的操作和函数"></a>包含了大部分的序列的操作和函数</h2><span id="more"></span>
-
-<h3 id="序列中-和-的操作和is，in函数"><a href="#序列中-和-的操作和is，in函数" class="headerlink" title="序列中+和*的操作和is，in函数"></a>序列中+和*的操作和is，in函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># +的操作</span></span><br><span class="line">i = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">i = i + i <span class="comment"># (1,2,3,1,2,3)</span></span><br><span class="line">a = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">id</span>(a) <span class="comment">#1440589908416</span></span><br><span class="line">a += a </span><br><span class="line"><span class="built_in">id</span>(a) <span class="comment">#1440589908416</span></span><br><span class="line"><span class="comment">#发现两次的id是一模一样的，说明变量（对象）的id是固定的，不管对它进行什么样的加法运算！</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># *的操作</span></span><br><span class="line">i = i * <span class="number">2</span> <span class="comment"># (1,2,3,1,2,3)</span></span><br><span class="line">a = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">id</span>(a) <span class="comment">#1440589908416</span></span><br><span class="line">a *= a </span><br><span class="line"><span class="built_in">id</span>(a) <span class="comment">#1440512989913</span></span><br><span class="line"><span class="comment">#发现这两次的id并不相同。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#加法和乘法结果的id值并不相似，为此，python推出了is和is not 函数来判断两个对象是否是相同的</span></span><br><span class="line">x = <span class="string">&quot;dgz&quot;</span></span><br><span class="line">y = <span class="string">&quot;dgz&quot;</span></span><br><span class="line">x <span class="keyword">is</span> y <span class="comment">#true,说明x和y是相同的对象</span></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">a <span class="keyword">is</span> b <span class="comment">#false,说明a和b不是相同的对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#in和not in函数，比如我们想知道字符串&quot;dgz&quot;里面是否含有&quot;d&quot;字符，我们可以使用：</span></span><br><span class="line"><span class="string">&quot;d&quot;</span> <span class="keyword">in</span> <span class="string">&quot;dgz&quot;</span> <span class="comment">#true</span></span><br><span class="line"><span class="string">&quot;d&quot;</span> <span class="keyword">not</span> <span class="keyword">in</span> <span class="string">&quot;dgz&quot;</span> <span class="comment">#false</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="删除对象"><a href="#删除对象" class="headerlink" title="删除对象"></a>删除对象</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#删除全部对象</span></span><br><span class="line">x = <span class="number">12</span></span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="keyword">del</span> x,y <span class="comment">#我们会发现对象x和y全部不见了！</span></span><br><span class="line"><span class="built_in">print</span>(x) <span class="comment">#error,此时会报错</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除数组里面的部分对象</span></span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="keyword">del</span> x[<span class="number">1</span>:<span class="number">4</span>] <span class="comment">#x = [1,5]最后一个是能取到的，左闭右开</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除数组所有内容，但是保留着数组的变量对象</span></span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="keyword">del</span> x[:] 或 <span class="keyword">del</span> x[::] 或 <span class="keyword">del</span> x[::<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="函数：list-、tuple-、str"><a href="#函数：list-、tuple-、str" class="headerlink" title="函数：list()、tuple()、str()"></a>函数：list()、tuple()、str()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#list() 将可迭代对象或者元组，数组等等变成列表</span></span><br><span class="line">x = <span class="string">&quot;denggaozheng&quot;</span></span><br><span class="line">x.<span class="built_in">list</span>() <span class="comment">#[&#x27;d&#x27;,&#x27;g&#x27;,...,&#x27;g&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#tuple() 将可迭代对象或者数组变成元组</span></span><br><span class="line">x = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)</span><br><span class="line">x.<span class="built_in">tuple</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment">#str() 将可迭代对象等转换成字符串</span></span><br><span class="line">x = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">x.__<span class="built_in">str</span>()__ <span class="comment">#[1,2,3,4]字符串类型的</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="函数：max-和min"><a href="#函数：max-和min" class="headerlink" title="函数：max()和min()"></a>函数：max()和min()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#都知道min找最小值，max找最大值，那就举一些极端的例子</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#如果传入的数组是空的，那么找最小最大的时候会报错的</span></span><br><span class="line">s = []</span><br><span class="line"><span class="built_in">min</span>(s) <span class="comment">#error</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#min max函数都可以传入默认值default</span></span><br><span class="line">s = []</span><br><span class="line"><span class="built_in">min</span>(s,default = <span class="string">&quot;啥都没有！&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="函数：sum-、len"><a href="#函数：sum-、len" class="headerlink" title="函数：sum()、len()"></a>函数：sum()、len()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sum() 用于求和,可以设定求和开始的位置，比如我从一百开始加s这个数组</span></span><br><span class="line">s = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="built_in">sum</span>(s,start = <span class="number">100</span>) <span class="comment">#100+1+2+3+1+2=109</span></span><br><span class="line"><span class="comment">#如果start=100报错，那就直接sum(s,100)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#len() 方法返回对象（字符、列表、元组等）长度或项目个数</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">&quot;runoob&quot;</span></span><br><span class="line"><span class="built_in">len</span>(<span class="built_in">str</span>) <span class="comment">#6</span></span><br><span class="line"> </span><br><span class="line">l = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="built_in">len</span>(l) <span class="comment">#5</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="函数：sorted-和reversed"><a href="#函数：sorted-和reversed" class="headerlink" title="函数：sorted()和reversed()"></a>函数：sorted()和reversed()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#传什么参数给sorted()他都可以操作!</span></span><br><span class="line"><span class="comment">#sorted()返回的是一个全新的列表(对参数列表进行排序之后得到的新列表),而原列表不会发生改变。</span></span><br><span class="line">s = [<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">5</span>]</span><br><span class="line"><span class="built_in">sorted</span>(s) <span class="comment">#[1,2,3,4]</span></span><br><span class="line"><span class="built_in">print</span>(s) <span class="comment">#[1,4,2,5]</span></span><br><span class="line"><span class="comment">#sort会对原先的列表进行修改</span></span><br><span class="line">s.sort() <span class="comment">#[1,2,4,5]</span></span><br><span class="line"><span class="comment">#sorted还可以进行翻转操作</span></span><br><span class="line"><span class="built_in">sorted</span>(s,reverse = true)</span><br><span class="line"></span><br><span class="line"><span class="comment">#reversed返回的是迭代器，参数里面可以放数组元组等等</span></span><br><span class="line">a = <span class="built_in">range</span>(<span class="number">5</span>, <span class="number">9</span>)</span><br><span class="line"><span class="built_in">list</span>(<span class="built_in">reversed</span>(a)) <span class="comment">#[5,6,7,8,9]</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -1539,41 +1542,58 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--Collec体系集合“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-Collecting%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88%E2%80%9C/</url>
-    <content><![CDATA[<p> Collect接口知识点总结</p>
-<span id="more"></span>
+    <title>python--序列</title>
+    <url>/2022/02/15/python-%E5%BA%8F%E5%88%97/</url>
+    <content><![CDATA[<h2 id="包含了大部分的序列的操作和函数"><a href="#包含了大部分的序列的操作和函数" class="headerlink" title="包含了大部分的序列的操作和函数"></a>包含了大部分的序列的操作和函数</h2><span id="more"></span>
 
-<p><img src="https://img-blog.csdnimg.cn/img_convert/5888cfe5738f77ca7a81306dbae10536.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>rt</p>
-<h2 id="Collect父接口"><a href="#Collect父接口" class="headerlink" title="Collect父接口"></a>Collect父接口</h2><p>特点：（有些）对象，无序，无下标，不能重复–&gt;对应着Set接口。</p>
-<p>方法：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/3bf59b036ab708cfc76b85554f643deb.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>常用方法</p>
-<p>iteration迭代器</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/58df797c645cb5fe3e3f7dbd39a89bc0.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>使用next()来用指针不断指向下一行</p>
-<p>iteration要定义对象的：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/79b7331b81bc69966635494f587bc2a0.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>三个常用方法</p>
-<p>遍历元素的方法：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/5a9858fdff8876de3732ae53f9c65917.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>注意：</strong>在iteration里面不能使用collection.remove();来删除元素，要使用iteration(这是对象)来删除元素，iteration.remove()。</p>
-<p>collection判断：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/80ec081de26e2bccf885c09c38fe3aba.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>使用contains方法进行判断，返回值是布朗类型的</p>
+<h3 id="序列中-和-的操作和is，in函数"><a href="#序列中-和-的操作和is，in函数" class="headerlink" title="序列中+和*的操作和is，in函数"></a>序列中+和*的操作和is，in函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># +的操作</span></span><br><span class="line">i = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">i = i + i <span class="comment"># (1,2,3,1,2,3)</span></span><br><span class="line">a = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">id</span>(a) <span class="comment">#1440589908416</span></span><br><span class="line">a += a </span><br><span class="line"><span class="built_in">id</span>(a) <span class="comment">#1440589908416</span></span><br><span class="line"><span class="comment">#发现两次的id是一模一样的，说明变量（对象）的id是固定的，不管对它进行什么样的加法运算！</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># *的操作</span></span><br><span class="line">i = i * <span class="number">2</span> <span class="comment"># (1,2,3,1,2,3)</span></span><br><span class="line">a = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">id</span>(a) <span class="comment">#1440589908416</span></span><br><span class="line">a *= a </span><br><span class="line"><span class="built_in">id</span>(a) <span class="comment">#1440512989913</span></span><br><span class="line"><span class="comment">#发现这两次的id并不相同。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#加法和乘法结果的id值并不相似，为此，python推出了is和is not 函数来判断两个对象是否是相同的</span></span><br><span class="line">x = <span class="string">&quot;dgz&quot;</span></span><br><span class="line">y = <span class="string">&quot;dgz&quot;</span></span><br><span class="line">x <span class="keyword">is</span> y <span class="comment">#true,说明x和y是相同的对象</span></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">a <span class="keyword">is</span> b <span class="comment">#false,说明a和b不是相同的对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#in和not in函数，比如我们想知道字符串&quot;dgz&quot;里面是否含有&quot;d&quot;字符，我们可以使用：</span></span><br><span class="line"><span class="string">&quot;d&quot;</span> <span class="keyword">in</span> <span class="string">&quot;dgz&quot;</span> <span class="comment">#true</span></span><br><span class="line"><span class="string">&quot;d&quot;</span> <span class="keyword">not</span> <span class="keyword">in</span> <span class="string">&quot;dgz&quot;</span> <span class="comment">#false</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="删除对象"><a href="#删除对象" class="headerlink" title="删除对象"></a>删除对象</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#删除全部对象</span></span><br><span class="line">x = <span class="number">12</span></span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="keyword">del</span> x,y <span class="comment">#我们会发现对象x和y全部不见了！</span></span><br><span class="line"><span class="built_in">print</span>(x) <span class="comment">#error,此时会报错</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除数组里面的部分对象</span></span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="keyword">del</span> x[<span class="number">1</span>:<span class="number">4</span>] <span class="comment">#x = [1,5]最后一个是能取到的，左闭右开</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除数组所有内容，但是保留着数组的变量对象</span></span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="keyword">del</span> x[:] 或 <span class="keyword">del</span> x[::] 或 <span class="keyword">del</span> x[::<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="函数：list-、tuple-、str"><a href="#函数：list-、tuple-、str" class="headerlink" title="函数：list()、tuple()、str()"></a>函数：list()、tuple()、str()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#list() 将可迭代对象或者元组，数组等等变成列表</span></span><br><span class="line">x = <span class="string">&quot;denggaozheng&quot;</span></span><br><span class="line">x.<span class="built_in">list</span>() <span class="comment">#[&#x27;d&#x27;,&#x27;g&#x27;,...,&#x27;g&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#tuple() 将可迭代对象或者数组变成元组</span></span><br><span class="line">x = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)</span><br><span class="line">x.<span class="built_in">tuple</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment">#str() 将可迭代对象等转换成字符串</span></span><br><span class="line">x = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">x.__<span class="built_in">str</span>()__ <span class="comment">#[1,2,3,4]字符串类型的</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="函数：max-和min"><a href="#函数：max-和min" class="headerlink" title="函数：max()和min()"></a>函数：max()和min()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#都知道min找最小值，max找最大值，那就举一些极端的例子</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#如果传入的数组是空的，那么找最小最大的时候会报错的</span></span><br><span class="line">s = []</span><br><span class="line"><span class="built_in">min</span>(s) <span class="comment">#error</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#min max函数都可以传入默认值default</span></span><br><span class="line">s = []</span><br><span class="line"><span class="built_in">min</span>(s,default = <span class="string">&quot;啥都没有！&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="函数：sum-、len"><a href="#函数：sum-、len" class="headerlink" title="函数：sum()、len()"></a>函数：sum()、len()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#sum() 用于求和,可以设定求和开始的位置，比如我从一百开始加s这个数组</span></span><br><span class="line">s = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="built_in">sum</span>(s,start = <span class="number">100</span>) <span class="comment">#100+1+2+3+1+2=109</span></span><br><span class="line"><span class="comment">#如果start=100报错，那就直接sum(s,100)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#len() 方法返回对象（字符、列表、元组等）长度或项目个数</span></span><br><span class="line"><span class="built_in">str</span> = <span class="string">&quot;runoob&quot;</span></span><br><span class="line"><span class="built_in">len</span>(<span class="built_in">str</span>) <span class="comment">#6</span></span><br><span class="line"> </span><br><span class="line">l = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="built_in">len</span>(l) <span class="comment">#5</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="函数：sorted-和reversed"><a href="#函数：sorted-和reversed" class="headerlink" title="函数：sorted()和reversed()"></a>函数：sorted()和reversed()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#传什么参数给sorted()他都可以操作!</span></span><br><span class="line"><span class="comment">#sorted()返回的是一个全新的列表(对参数列表进行排序之后得到的新列表),而原列表不会发生改变。</span></span><br><span class="line">s = [<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">5</span>]</span><br><span class="line"><span class="built_in">sorted</span>(s) <span class="comment">#[1,2,3,4]</span></span><br><span class="line"><span class="built_in">print</span>(s) <span class="comment">#[1,4,2,5]</span></span><br><span class="line"><span class="comment">#sort会对原先的列表进行修改</span></span><br><span class="line">s.sort() <span class="comment">#[1,2,4,5]</span></span><br><span class="line"><span class="comment">#sorted还可以进行翻转操作</span></span><br><span class="line"><span class="built_in">sorted</span>(s,reverse = true)</span><br><span class="line"></span><br><span class="line"><span class="comment">#reversed返回的是迭代器，参数里面可以放数组元组等等</span></span><br><span class="line">a = <span class="built_in">range</span>(<span class="number">5</span>, <span class="number">9</span>)</span><br><span class="line"><span class="built_in">list</span>(<span class="built_in">reversed</span>(a)) <span class="comment">#[5,6,7,8,9]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="函数：all-和any"><a href="#函数：all-和any" class="headerlink" title="函数：all()和any()"></a>函数：all()和any()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#all函数判断可迭代对象中是否所有元素的值都为真，其中0是假</span></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">0</span>]</span><br><span class="line"><span class="built_in">all</span>(a) <span class="comment">#false</span></span><br><span class="line"><span class="comment">#any函数判断可迭代对象中是否存在为真的值，其中0是假</span></span><br><span class="line">a = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>]</span><br><span class="line"><span class="built_in">any</span>(a) <span class="comment">#true</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="函数：enumerate"><a href="#函数：enumerate" class="headerlink" title="函数：enumerate()"></a>函数：enumerate()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#enumerate函数用于将一个可遍历的数据对象(列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，加入start表示下标开始的位置。一般用在 for 循环当中，通常与list函数搭配使用。</span></span><br><span class="line">seasons = [<span class="string">&#x27;Spring&#x27;</span>, <span class="string">&#x27;Summer&#x27;</span>, <span class="string">&#x27;Fall&#x27;</span>, <span class="string">&#x27;Winter&#x27;</span>]</span><br><span class="line"><span class="built_in">list</span>(<span class="built_in">enumerate</span>(seasons, start=<span class="number">1</span>)) <span class="comment">#[(1, &#x27;Spring&#x27;), (2, &#x27;Summer&#x27;), (3, &#x27;Fall&#x27;), (4, &#x27;Winter&#x27;)]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="函数：zip-常用！！"><a href="#函数：zip-常用！！" class="headerlink" title="函数：zip()常用！！"></a>函数：zip()常用！！</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#zip函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组</span></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">c = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]</span><br><span class="line">zipped = <span class="built_in">zip</span>(a,b)     <span class="comment"># 打包为元组的列表 [(1, 4), (2, 5), (3, 6)]</span></span><br><span class="line"><span class="built_in">zip</span>(a,c)              <span class="comment"># 元素个数与最短的列表一致 [(1, 4), (2, 5), (3, 6)]</span></span><br><span class="line"><span class="built_in">zip</span>(*zipped)          <span class="comment"># 与 zip 相反，*zipped 可理解为解压，返回二维矩阵式 [(1, 2, 3), (4, 5, 6)]</span></span><br><span class="line"><span class="comment">#拓展：如果长的数组和短的数组进行zip，而我们不想按最短的来匹配，可以导入itertools</span></span><br><span class="line"><span class="keyword">import</span> itertools</span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]</span><br><span class="line">b = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">it = itertools.zip_longest(a,b)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(it)) <span class="comment">#[(1, 1), (2, 2), (3, 3), (4, 4), (5, None), (6, None), (7, None)]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="函数：map-常用！-和filter函数、iter函数"><a href="#函数：map-常用！-和filter函数、iter函数" class="headerlink" title="函数：map()常用！!和filter函数、iter函数"></a>函数：map()常用！!和filter函数、iter函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#map函数会根据提供的函数对指定序列做映射。第一个参数 function 以参数序列中的每一个元素调用 function 函数，返回包含每次function 函数返回值的新列表。默认返回的是迭代器：&lt;map object at 0x000001289EC93490&gt;，但是使用list函数可以让他变成数组。</span></span><br><span class="line"><span class="comment">#先定义一个函数fun</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">x</span>):</span><br><span class="line">    x = x + <span class="number">1</span></span><br><span class="line">s = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"><span class="built_in">list</span>(<span class="built_in">map</span>(fun,s)) <span class="comment">#[2,3,4,5,6]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#map函数传递的是包含计算结果的数，而filter函数传递的是计算结果为真的数（就没有0了）。</span></span><br><span class="line"><span class="comment">#例如我现在想要找到下面字符串中的大写字符</span></span><br><span class="line">strn = <span class="string">&quot;DengGaoZheng&quot;</span></span><br><span class="line"><span class="built_in">filter</span>(<span class="built_in">str</span>.isupper,strn) <span class="comment">#[&#x27;D&#x27;,&quot;G&quot;,&#x27;Z&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#iter函数：把一个可迭代对象变成迭代器</span></span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">y = <span class="built_in">iter</span>(x) <span class="comment">#这时候y就是一个迭代器啦！</span></span><br><span class="line"><span class="comment">#使用next函数可以将迭代器y中的元素逐一取出来！</span></span><br><span class="line"><span class="built_in">next</span>(y) <span class="comment">#1</span></span><br><span class="line"><span class="built_in">next</span>(y) <span class="comment">#2</span></span><br><span class="line"><span class="built_in">next</span>(y) <span class="comment">#3</span></span><br><span class="line"><span class="built_in">next</span>(y) <span class="comment">#当我们拿完了迭代器里面的元素，再使用next的时候就会报异常！我们还可以自定义报异常的值，在next的第二个参数</span></span><br><span class="line"><span class="built_in">next</span>(y,<span class="string">&quot;已经没了!&quot;</span>) <span class="comment">#已经没了！</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="迭代器，迭代对象"><a href="#迭代器，迭代对象" class="headerlink" title="迭代器，迭代对象"></a>迭代器，迭代对象</h3><p>首先要知道一个迭代器一定是一个迭代对象！</p>
+<p>区别是：迭代对象是可以反复使用的，而迭代器是一次性的。</p>
 ]]></content>
       <categories>
-        <category>JAVA</category>
+        <category>python</category>
       </categories>
       <tags>
-        <tag>JAVA</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -1596,26 +1616,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--properties类“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-properties%E7%B1%BB%E2%80%9C/</url>
-    <content><![CDATA[<p> properties相当于一个集合</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/img_convert/d91d50beb656346ba65a174526fc43f6.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>setproperties在集合里面增加变量。</p>
-<p>1.list方法适用于PrintWriter</p>
-<p>2.store方法适用于FileOutputStream</p>
-<p>3.load方法适用于FileInputStream</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--SringBuffer和StringBudilder“</title>
     <url>/2022/02/09/%E2%80%9DJAVA-SringBuffer%E5%92%8CStringBudilder%E2%80%9C/</url>
     <content><![CDATA[<p>这两个都是可变字符串.</p>
@@ -1629,6 +1629,26 @@
 <p>replace(“0”，“5”，str)把0-5之间的字符替换为str。</p>
 <p>用<strong>delete删除指定位置的字符：</strong></p>
 <p>delete（“0”，“5”）删除0-5之间的字符串。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--properties类“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-properties%E7%B1%BB%E2%80%9C/</url>
+    <content><![CDATA[<p> properties相当于一个集合</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d91d50beb656346ba65a174526fc43f6.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>setproperties在集合里面增加变量。</p>
+<p>1.list方法适用于PrintWriter</p>
+<p>2.store方法适用于FileOutputStream</p>
+<p>3.load方法适用于FileInputStream</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -1689,51 +1709,6 @@
 <p>2.只有外部类可以是静态的，内部类不行。</p>
 <p>3.内部类想要访问局部变量，需要局部变量是final修饰的（局部变量即方法里面定义的变量）</p>
 <p>4.内部类也可以继承接口用implements</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--常用类“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E5%B8%B8%E7%94%A8%E7%B1%BB%E2%80%9C/</url>
-    <content><![CDATA[<p>介绍两个类：Date和Calendar</p>
-<p><strong>一、Date表示特定的瞬间，精确到毫秒。</strong></p>
-<p>1.创建date对象：</p>
-<p>Date date=new Date();</p>
-<p>2.一些方法：直接打印date：输出当前的时间。</p>
-<p>打印date.getTime输出从1970.1.1到现在所有的毫秒数。</p>
-<p>方法after和before:直接加一天。</p>
-<p>compareTo方法，date1.toString(date2)，是date1-date2.</p>
-<p>当然也可以用equal方法。</p>
-<p><strong>二、Calendar类提供了获取各类日历字段的方法：(就是你代替了date类当中的许多方法)</strong></p>
-<p>因为Calendar的构造方法是protected的，所以不能直接创建对象。要通过</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Calendar calendar = Calendar.getInstance();来设置Calendar对象。</span><br><span class="line">Calendar的方法很多，get最常见，int year = calendar.get(calendar.YEAR);这样输出的就是今年的年份了。</span><br><span class="line">int year = calendar.get(calendar.YEAR);</span><br><span class="line">int month = calendar.get(calendar.MONTH);</span><br><span class="line">int day = calendar.get(calendar.DAY_OF_WEEK);</span><br><span class="line">int hour = calendar.get(calendar.HOUR);</span><br><span class="line">int minute = calendar.get(calendar.MINUTE);</span><br><span class="line">int second = calendar.get(calendar.SECOND);</span><br><span class="line">这样分别定义了年，月，日，小时，分钟，秒。用get()方法!</span><br><span class="line">calendar.getActualMaximum()可以输出括号内的最大值，如calendar.getActualMaximum(Calendar.DAY_OF_MOUTH),可以输出月份的最大值30.</span><br><span class="line">同理calendar.getActualMinimum()</span><br></pre></td></tr></table></figure>
-
-<p><strong>三、SimpleDateFormat类用于格式化解析日期：（import java.text.SimpleDateFormat）</strong></p>
-<p>1.创建SimpleDateFormat对象：(Y：年，M:月，d：日，H：小时，m:分钟，s：秒)</p>
-<p>SimpleDateFormat sim = new SimpleDateFormat(“YYYY年MM月dd日 HH:mm:ss”)</p>
-<p>2.//创建date：</p>
-<p>Date date = new Date();</p>
-<p>//格式化date</p>
-<p>String str = sim.format(date);</p>
-<p>这时候再把str打印出来就可以得到—–2021年11月08日 10:27:08</p>
-<p><strong>四、System类（很重要！）</strong></p>
-<p>私有类，不需要创建对象，并且方法是静态的。</p>
-<p>方法：</p>
-<p><strong>1.arraycopy：用于复制数组</strong></p>
-<p>arraycopy(src,srcPos,dest,destPos,length)有五个参数</p>
-<p>//src:原数组，srcPos：从什么位置开始复制，dest：目标数组，destPos:目标数组的位置</p>
-<p>要注意目标数组长度要大于等于原数组长度。</p>
-<p><strong>2.currentTimeMillis：获取当前系统时间，返回毫秒值。</strong></p>
-<p>可以用来计算程序执行的时间，在程序前面加个start在程序后面加个end。</p>
-<p><strong>3.gc()：建议JVM使用垃圾回收器回收垃圾。</strong></p>
-<p>用来回收不用的对象。</p>
-<p>4.exit(int status)：退出JVM，参数是0表示正常退出，参数是-1表示异常退出。</p>
-<p>在exit后面的语句当然就不执行了！</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -1815,6 +1790,51 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--常用类“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E5%B8%B8%E7%94%A8%E7%B1%BB%E2%80%9C/</url>
+    <content><![CDATA[<p>介绍两个类：Date和Calendar</p>
+<p><strong>一、Date表示特定的瞬间，精确到毫秒。</strong></p>
+<p>1.创建date对象：</p>
+<p>Date date=new Date();</p>
+<p>2.一些方法：直接打印date：输出当前的时间。</p>
+<p>打印date.getTime输出从1970.1.1到现在所有的毫秒数。</p>
+<p>方法after和before:直接加一天。</p>
+<p>compareTo方法，date1.toString(date2)，是date1-date2.</p>
+<p>当然也可以用equal方法。</p>
+<p><strong>二、Calendar类提供了获取各类日历字段的方法：(就是你代替了date类当中的许多方法)</strong></p>
+<p>因为Calendar的构造方法是protected的，所以不能直接创建对象。要通过</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Calendar calendar = Calendar.getInstance();来设置Calendar对象。</span><br><span class="line">Calendar的方法很多，get最常见，int year = calendar.get(calendar.YEAR);这样输出的就是今年的年份了。</span><br><span class="line">int year = calendar.get(calendar.YEAR);</span><br><span class="line">int month = calendar.get(calendar.MONTH);</span><br><span class="line">int day = calendar.get(calendar.DAY_OF_WEEK);</span><br><span class="line">int hour = calendar.get(calendar.HOUR);</span><br><span class="line">int minute = calendar.get(calendar.MINUTE);</span><br><span class="line">int second = calendar.get(calendar.SECOND);</span><br><span class="line">这样分别定义了年，月，日，小时，分钟，秒。用get()方法!</span><br><span class="line">calendar.getActualMaximum()可以输出括号内的最大值，如calendar.getActualMaximum(Calendar.DAY_OF_MOUTH),可以输出月份的最大值30.</span><br><span class="line">同理calendar.getActualMinimum()</span><br></pre></td></tr></table></figure>
+
+<p><strong>三、SimpleDateFormat类用于格式化解析日期：（import java.text.SimpleDateFormat）</strong></p>
+<p>1.创建SimpleDateFormat对象：(Y：年，M:月，d：日，H：小时，m:分钟，s：秒)</p>
+<p>SimpleDateFormat sim = new SimpleDateFormat(“YYYY年MM月dd日 HH:mm:ss”)</p>
+<p>2.//创建date：</p>
+<p>Date date = new Date();</p>
+<p>//格式化date</p>
+<p>String str = sim.format(date);</p>
+<p>这时候再把str打印出来就可以得到—–2021年11月08日 10:27:08</p>
+<p><strong>四、System类（很重要！）</strong></p>
+<p>私有类，不需要创建对象，并且方法是静态的。</p>
+<p>方法：</p>
+<p><strong>1.arraycopy：用于复制数组</strong></p>
+<p>arraycopy(src,srcPos,dest,destPos,length)有五个参数</p>
+<p>//src:原数组，srcPos：从什么位置开始复制，dest：目标数组，destPos:目标数组的位置</p>
+<p>要注意目标数组长度要大于等于原数组长度。</p>
+<p><strong>2.currentTimeMillis：获取当前系统时间，返回毫秒值。</strong></p>
+<p>可以用来计算程序执行的时间，在程序前面加个start在程序后面加个end。</p>
+<p><strong>3.gc()：建议JVM使用垃圾回收器回收垃圾。</strong></p>
+<p>用来回收不用的对象。</p>
+<p>4.exit(int status)：退出JVM，参数是0表示正常退出，参数是-1表示异常退出。</p>
+<p>在exit后面的语句当然就不执行了！</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--抽象类“</title>
     <url>/2022/02/09/%E2%80%9DJAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E2%80%9C/</url>
     <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
@@ -1861,6 +1881,27 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--捕获异常“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8%E2%80%9C/</url>
+    <content><![CDATA[<p> 捕获异常的知识点</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
+<p>假设要捕获多个异常，从大到小。</p>
+<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--接口interface“</title>
     <url>/2022/02/09/%E2%80%9DJAVA-%E6%8E%A5%E5%8F%A3interface%E2%80%9C/</url>
     <content><![CDATA[<p> 1.接口只有规范，无法写方法，是专业的抽象。实现约束和实现分离，面向接口编程。</p>
@@ -1876,27 +1917,6 @@
 <p>实现了接口中的类就要重写接口中的方法，接口的多继承用逗号连接实现。</p>
 <p>接口的作用</p>
 <p><img src="https://img-blog.csdnimg.cn/9ec1434941764960bada7de63fcf34be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--捕获异常“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8%E2%80%9C/</url>
-    <content><![CDATA[<p> 捕获异常的知识点</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
-<p>假设要捕获多个异常，从大到小。</p>
-<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -2276,6 +2296,87 @@
       </tags>
   </entry>
   <entry>
+    <title>”Linux--忘记密码的找回方法“</title>
+    <url>/2022/02/09/%E2%80%9DLinux-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E6%89%BE%E5%9B%9E%E6%96%B9%E6%B3%95%E2%80%9C/</url>
+    <content><![CDATA[<p>非常详细！保姆级教程！</p>
+<span id="more"></span>
+
+<p> (1)在登录前的界面按下“e”编辑，如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/24c29cb043ac4d2f91a731ff9b6121ae.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（2）找到linux16所在的那一行的下面一行：（如果没找到linux16就按着键盘向下的箭头就能看见了）</p>
+<p><img src="https://img-blog.csdnimg.cn/2f7d063b6b994865a19935d18958e2de.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> （3）在UTF-8后面按下空格后加上这句话：init=/bin/sh</p>
+<p><img src="https://img-blog.csdnimg.cn/8b229a66f7534503bcf5298f85aa9fcf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>(4)输入完之后按下快捷键Ctrl+x进入单用户模式（如果左边的Ctrl不行就试试右边的） </p>
+<p>（5）在光标闪烁的位置输入这句话：mount -o remount,rw/  输入完之后回车。</p>
+<p><img src="https://img-blog.csdnimg.cn/2f62ded86e884e48b6b27fa8e15eb14d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/3db9328c5fb742acbf74ccdcc4698f29.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> （6）然后在新界面光标闪烁位置输入passwd然后回车，输入新密码，然后确认密码</p>
+<p>（7）输入完之后当我们看到passwd=****就说明成功修改了密码。</p>
+<p><img src="https://img-blog.csdnimg.cn/5f29832e73d74f2dad243c54a44b6f6e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（8）紧接着在下面的一行输入这句话：touch /.autorelabel（注意：touch和/之间有一个空格）</p>
+<p><img src="https://img-blog.csdnimg.cn/8df0b14725b648ec9f51e7b974ae8f33.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（9）继续在光标闪烁的位置输入exec /sbin/init（同样在exec和/之间有一个空格），完成后按回车，耐心等待系统修改密码（时间会稍长）完成后linux会自动重启。</p>
+<p><img src="https://img-blog.csdnimg.cn/4b5f47ea34064e89a594099f73e1c200.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（10）登录时使用新密码即可 .</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--一些函数“</title>
+    <url>/2022/02/09/%E2%80%9Dpython-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0%E2%80%9C/</url>
+    <content><![CDATA[<p> bool()：判断括号里面的结果是真还是假。</p>
+<p>真的情况：在括号里面加引号，引号里面有任何值的结果都是真以及直接输入true（不加引号）</p>
+<p>假的情况：在引号里面有引号但是引号里面什么都没有以及直接输入false</p>
+<span id="more"></span>
+
+<p>以下是定义为false的情况：</p>
+<p><img src="https://img-blog.csdnimg.cn/91c7d524a1064e67a99244784f03bcc4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”Linux--用户管理“</title>
+    <url>/2022/02/09/%E2%80%9DLinux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E2%80%9C/</url>
+    <content><![CDATA[<p> 一、基本操作：</p>
+<p>添加用户：useradd 用户名</p>
+<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
+<span id="more"></span>
+
+<p>删除用户(不保留家目录)：userdel -r 用户名</p>
+<p>更改用户密码：passwd 用户名</p>
+<p>查询用户信息：id 用户名</p>
+<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
+<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
+<p>想要查看现在的用户是谁：who am i（离谱）</p>
+<p>pwd：查看现在在哪个目录下面</p>
+<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
+<p>添加组：groupadd 组名</p>
+<p>删除组：groupdel 组名</p>
+<p>创建用户的同时分组：useradd -g 组名 用户名</p>
+<p>用户换组：usermod -g 新组名 用户名</p>
+<p><strong>用户和组的相关文件：</strong></p>
+<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”Linux--文件目录指令“</title>
     <url>/2022/02/09/%E2%80%9DLinux-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E6%8C%87%E4%BB%A4%E2%80%9C/</url>
     <content><![CDATA[<p>介绍Linux用于文件的常用指令</p>
@@ -2327,69 +2428,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”Linux--忘记密码的找回方法“</title>
-    <url>/2022/02/09/%E2%80%9DLinux-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E6%89%BE%E5%9B%9E%E6%96%B9%E6%B3%95%E2%80%9C/</url>
-    <content><![CDATA[<p>非常详细！保姆级教程！</p>
-<span id="more"></span>
-
-<p> (1)在登录前的界面按下“e”编辑，如图：</p>
-<p><img src="https://img-blog.csdnimg.cn/24c29cb043ac4d2f91a731ff9b6121ae.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（2）找到linux16所在的那一行的下面一行：（如果没找到linux16就按着键盘向下的箭头就能看见了）</p>
-<p><img src="https://img-blog.csdnimg.cn/2f7d063b6b994865a19935d18958e2de.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> （3）在UTF-8后面按下空格后加上这句话：init=/bin/sh</p>
-<p><img src="https://img-blog.csdnimg.cn/8b229a66f7534503bcf5298f85aa9fcf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>(4)输入完之后按下快捷键Ctrl+x进入单用户模式（如果左边的Ctrl不行就试试右边的） </p>
-<p>（5）在光标闪烁的位置输入这句话：mount -o remount,rw/  输入完之后回车。</p>
-<p><img src="https://img-blog.csdnimg.cn/2f62ded86e884e48b6b27fa8e15eb14d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/3db9328c5fb742acbf74ccdcc4698f29.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> （6）然后在新界面光标闪烁位置输入passwd然后回车，输入新密码，然后确认密码</p>
-<p>（7）输入完之后当我们看到passwd=****就说明成功修改了密码。</p>
-<p><img src="https://img-blog.csdnimg.cn/5f29832e73d74f2dad243c54a44b6f6e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（8）紧接着在下面的一行输入这句话：touch /.autorelabel（注意：touch和/之间有一个空格）</p>
-<p><img src="https://img-blog.csdnimg.cn/8df0b14725b648ec9f51e7b974ae8f33.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（9）继续在光标闪烁的位置输入exec /sbin/init（同样在exec和/之间有一个空格），完成后按回车，耐心等待系统修改密码（时间会稍长）完成后linux会自动重启。</p>
-<p><img src="https://img-blog.csdnimg.cn/4b5f47ea34064e89a594099f73e1c200.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（10）登录时使用新密码即可 .</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”Linux--用户管理“</title>
-    <url>/2022/02/09/%E2%80%9DLinux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E2%80%9C/</url>
-    <content><![CDATA[<p> 一、基本操作：</p>
-<p>添加用户：useradd 用户名</p>
-<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
-<span id="more"></span>
-
-<p>删除用户(不保留家目录)：userdel -r 用户名</p>
-<p>更改用户密码：passwd 用户名</p>
-<p>查询用户信息：id 用户名</p>
-<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
-<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
-<p>想要查看现在的用户是谁：who am i（离谱）</p>
-<p>pwd：查看现在在哪个目录下面</p>
-<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
-<p>添加组：groupadd 组名</p>
-<p>删除组：groupdel 组名</p>
-<p>创建用户的同时分组：useradd -g 组名 用户名</p>
-<p>用户换组：usermod -g 新组名 用户名</p>
-<p><strong>用户和组的相关文件：</strong></p>
-<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”python--random“</title>
     <url>/2022/02/09/%E2%80%9Dpython-random%E2%80%9C/</url>
     <content><![CDATA[<p>随机生产一个取值范围在10~100的整数：random.randint(10,100)</p>
@@ -2403,45 +2441,6 @@
 <p>在后面我们再使用三次</p>
 <p>random.randint(1~10）</p>
 <p>三次生成的数分别是1，3，6，所以可以推断出setstate的作用是把前三次生成的随机数变成一个固定的状态再后面再生成！</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--一些函数“</title>
-    <url>/2022/02/09/%E2%80%9Dpython-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0%E2%80%9C/</url>
-    <content><![CDATA[<p> bool()：判断括号里面的结果是真还是假。</p>
-<p>真的情况：在括号里面加引号，引号里面有任何值的结果都是真以及直接输入true（不加引号）</p>
-<p>假的情况：在引号里面有引号但是引号里面什么都没有以及直接输入false</p>
-<span id="more"></span>
-
-<p>以下是定义为false的情况：</p>
-<p><img src="https://img-blog.csdnimg.cn/91c7d524a1064e67a99244784f03bcc4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--列表里的函数“</title>
-    <url>/2022/02/09/%E2%80%9Dpython-%E5%88%97%E8%A1%A8%E9%87%8C%E7%9A%84%E5%87%BD%E6%95%B0%E2%80%9C/</url>
-    <content><![CDATA[<p> sort()将数组从小到大排序。</p>
-<p>reverse（）将数组此时的位置进行倒转</p>
-<span id="more"></span>
-
-<p>count（？）问号的内容是数组里面的数据元素，这个函数用于数出这个数据元素在这个数组里面出现了几次</p>
-<p>index（？），问号的内容是数组里面的数据元素，这个函数用于显示这个元素在数组里面出现的位置（如果有多个元素相同，那么显示第一个元素的位置）。<strong>可以在后面再加两个参数分别显示查找开始和结束的位置，index(？，start，end)</strong></p>
-<p>一个数组赋值给另外一个列表，比如nums数组赋值给nums_two数组：nums_two = nums.copy()</p>
-<p><strong>注意：nums这个数组和nums[:]这个数组是表示的同一个</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/9ee34faef1d743f089ab46f13fbc0e56.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/1918e8c5870c4dcba8d4b42608cde2ad.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_5,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -2508,6 +2507,27 @@
 <p>int（x）的结果就是2，向下取整！</p>
 <p>pow(2,3)代表2的三次方，和2**3的效果一样。</p>
 <p>pow（2,3,4）代表着2**3%4即2的三次方结果除四的余数！</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--列表里的函数“</title>
+    <url>/2022/02/09/%E2%80%9Dpython-%E5%88%97%E8%A1%A8%E9%87%8C%E7%9A%84%E5%87%BD%E6%95%B0%E2%80%9C/</url>
+    <content><![CDATA[<p> sort()将数组从小到大排序。</p>
+<p>reverse（）将数组此时的位置进行倒转</p>
+<span id="more"></span>
+
+<p>count（？）问号的内容是数组里面的数据元素，这个函数用于数出这个数据元素在这个数组里面出现了几次</p>
+<p>index（？），问号的内容是数组里面的数据元素，这个函数用于显示这个元素在数组里面出现的位置（如果有多个元素相同，那么显示第一个元素的位置）。<strong>可以在后面再加两个参数分别显示查找开始和结束的位置，index(？，start，end)</strong></p>
+<p>一个数组赋值给另外一个列表，比如nums数组赋值给nums_two数组：nums_two = nums.copy()</p>
+<p><strong>注意：nums这个数组和nums[:]这个数组是表示的同一个</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/9ee34faef1d743f089ab46f13fbc0e56.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/1918e8c5870c4dcba8d4b42608cde2ad.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_5,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>python</category>
