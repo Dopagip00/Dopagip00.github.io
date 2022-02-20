@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JAVA--多态</title>
-    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
-    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
-<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
-<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
-<span id="more"></span>
-
-<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>多态的注意事项：</p>
-<p>1.多态是方法的多态，属性没有多态；</p>
-<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
-<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
-<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
-<p>##但是有些方法是不能重写的：</p>
-<p>1.static方法：属于类，不属于实例</p>
-<p>2.final属性</p>
-<p>3.private方法是私有的，当然重写了也没用</p>
-<p>instanceof （类型转换） 引用类型</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JAVA--static关键字知识点</title>
     <url>/2022/02/09/JAVA-static%E5%85%B3%E9%94%AE%E5%AD%97%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<p>1.有static修饰的属性就不用声明对象了，直接用类名去.属性</p>
@@ -57,6 +30,52 @@
       </tags>
   </entry>
   <entry>
+    <title>JAVA--super知识点</title>
+    <url>/2022/02/09/JAVA-super%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>1.Super指向父类的构造方法，必须在构造方法的第一个；</p>
+<p>2.Super只能出现在子类的构造方法中.</p>
+<span id="more"></span>
+
+<p>3.this和super不能同时调用构造方法</p>
+<p>与this的对比：<br>this：本类的构造；super：父类的构造</p>
+<p>this：没有继承也可以使用；super：必须要有继承才可以使用</p>
+<p>this：调用本身对象；super：调用父类对象</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA--多态</title>
+    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
+    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
+<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
+<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
+<span id="more"></span>
+
+<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>多态的注意事项：</p>
+<p>1.多态是方法的多态，属性没有多态；</p>
+<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
+<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
+<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
+<p>##但是有些方法是不能重写的：</p>
+<p>1.static方法：属于类，不属于实例</p>
+<p>2.final属性</p>
+<p>3.private方法是私有的，当然重写了也没用</p>
+<p>instanceof （类型转换） 引用类型</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA--封装</title>
     <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
     <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
@@ -71,25 +90,6 @@
 <p>2.统一接口（唯一接口只有get/set）</p>
 <p>3.隐藏代码实现细节</p>
 <p>4.系统的可维护性增加</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA--super知识点</title>
-    <url>/2022/02/09/JAVA-super%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>1.Super指向父类的构造方法，必须在构造方法的第一个；</p>
-<p>2.Super只能出现在子类的构造方法中.</p>
-<span id="more"></span>
-
-<p>3.this和super不能同时调用构造方法</p>
-<p>与this的对比：<br>this：本类的构造；super：父类的构造</p>
-<p>this：没有继承也可以使用；super：必须要有继承才可以使用</p>
-<p>this：调用本身对象；super：调用父类对象</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -135,28 +135,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--方法重写</title>
-    <url>/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/</url>
-    <content><![CDATA[<p>方法的调用只和左边有关，即A a/B b</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/e3ae7194364e47b2b5dd489751a7ae95.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>方法的重写不要用static，</p>
-<p><img src="https://img-blog.csdnimg.cn/74ba5f5219e542c88cbe7cfa66795b61.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_13,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>因为b是A new出来的对象，因此调用了A的方法</strong></p>
-<p><strong>因为静态方法是类的方法，而非静态是对象的方法</strong></p>
-<p><strong>有static时，b调用了B类的方法，因为b是用b类定义的</strong></p>
-<p><strong>没有static时，b调用的是对象的方法，而b是用A类new的</strong></p>
-<p><strong>简单来说就是有static调用后面，没有static调用前面。</strong></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JAVA--构造器</title>
     <url>/2022/02/09/JAVA-%E6%9E%84%E9%80%A0%E5%99%A8/</url>
     <content><![CDATA[<p> 定义一个构造器：（构造方法必须没有返回值）</p>
@@ -189,6 +167,49 @@
       </tags>
   </entry>
   <entry>
+    <title>JAVA--继承</title>
+    <url>/2022/02/09/JAVA-%E7%BB%A7%E6%89%BF/</url>
+    <content><![CDATA[<p>1.extend的意思是’’拓展，扩大’’,子类是对父类的拓展。</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/5d39b5ad4d0c474a818fe81179381fc9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>如teacher is a person.</p>
+<p><strong>子类不能继承父类的private属性或者方法！</strong></p>
+<p>ctrl+H可以打开继承面板</p>
+<p>2.Object！</p>
+<p>在Java中所有的类都默认继承Object类！！！</p>
+<p>例：public class AA /<em>entend Object</em>/{}</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA--方法重写</title>
+    <url>/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/</url>
+    <content><![CDATA[<p>方法的调用只和左边有关，即A a/B b</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/e3ae7194364e47b2b5dd489751a7ae95.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>方法的重写不要用static，</p>
+<p><img src="https://img-blog.csdnimg.cn/74ba5f5219e542c88cbe7cfa66795b61.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_13,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>因为b是A new出来的对象，因此调用了A的方法</strong></p>
+<p><strong>因为静态方法是类的方法，而非静态是对象的方法</strong></p>
+<p><strong>有static时，b调用了B类的方法，因为b是用b类定义的</strong></p>
+<p><strong>没有static时，b调用的是对象的方法，而b是用A类new的</strong></p>
+<p><strong>简单来说就是有static调用后面，没有static调用前面。</strong></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA--面向对象知识点总结</title>
     <url>/2022/02/09/JAVA-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<p>有关面向对象知识点的总结</p>
@@ -204,6 +225,84 @@
       </categories>
       <tags>
         <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo d出错时的解决办法</title>
+    <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
+<span id="more"></span>
+
+<p>删除blog/.deploy_git文件</p>
+<p>然后输入</p>
+<p>git config –gloabl core.autocrlf false`</p>
+<p>重新</p>
+<p>hexo clean</p>
+<p>hexo g</p>
+<p>hexo d</p>
+<p>部署</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客的基本操作</title>
+    <url>/2022/02/09/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p>hexo clean 清除缓存</p>
+<p>hexo n “…” 生成博客文章，标题是…</p>
+<span id="more"></span>
+
+<p>hexo s   start博客，默认启动在localhost:4000端口</p>
+<p>hexo d   部署到远端</p>
+<p>当写完博客之后通常使用这三个：（依次输入）</p>
+<p>hexo clean </p>
+<p>hexo g</p>
+<p>hexo d</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python--元组</title>
+    <url>/2022/02/11/python-%E5%85%83%E7%BB%84/</url>
+    <content><![CDATA[<h3 id="包含了元组中的大部分操作"><a href="#包含了元组中的大部分操作" class="headerlink" title="包含了元组中的大部分操作"></a>包含了元组中的大部分操作</h3><span id="more"></span>
+
+<p>1.元组类似于数组，但是元组<strong>可以</strong>不带括号表示，如：数组：（1，2，3），元组：1，2，3。但是建议最好一直加上，增加代码的可读性。</p>
+<p>2.不可以改变元组里面的数，如：a[1] = 9 是不可取的。正是因为元组不能修改，所以相对于数组来说安全性更高。</p>
+<p>3.切片的翻转操作：a[::-1] 会把元组里面的所有的数进行翻转。</p>
+<p>4.大部分的函数操作是和数组操作一样的：index操作，count操作等等都和数组是一样的</p>
+<p>5.元组的嵌套：</p>
+<p>s=(1,2,3)</p>
+<p>t=(4,5,6)</p>
+<p>w=s , t</p>
+<p>print(w)</p>
+<p>输出w的结果是((1,2,3),(4,5,6))</p>
+<p>6.元组的迭代：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s=(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">t=(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">w=s,t</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> w:</span><br><span class="line">	<span class="keyword">for</span> each <span class="keyword">in</span> i:</span><br><span class="line">		<span class="built_in">print</span>(each,end=<span class="string">&quot; &quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>7.在元组中如何生成只有一个元素的元组：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = (<span class="number">12</span>,)</span><br><span class="line"><span class="built_in">type</span>(x)</span><br></pre></td></tr></table></figure>
+
+<p>使用type函数查看即可得出x是tuple元组类型，重要的是12后面的逗号！！</p>
+<p>8.打包和解包：</p>
+<p><strong>打包：即生成一个元组</strong></p>
+<p>解包：如下图这样，生成的t有三个元素，分别赋值给x,y,z称之为解包，解包需要注意的是：左侧变量名的数量必须跟右侧元素的数量一致。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">t = (<span class="number">123</span>,<span class="number">12</span>,<span class="number">1</span>)</span><br><span class="line">x,y,z = t</span><br><span class="line"><span class="built_in">print</span>(x,y,z)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -1296,46 +1395,66 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo d出错时的解决办法</title>
-    <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
-<span id="more"></span>
+    <title>python--函数</title>
+    <url>/2022/02/19/python-%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="函数的基本操作"><a href="#函数的基本操作" class="headerlink" title="函数的基本操作"></a><strong>函数的基本操作</strong></h1><h2 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用def来定义一个函数myfun,来实现x的累加</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfunadd</span>(<span class="params">x</span>):</span><br><span class="line">	x = x + <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<p>删除blog/.deploy_git文件</p>
-<p>然后输入</p>
-<p>git config –gloabl core.autocrlf false`</p>
-<p>重新</p>
-<p>hexo clean</p>
-<p>hexo g</p>
-<p>hexo d</p>
-<p>部署</p>
+
+
+<h2 id="一些常用参数"><a href="#一些常用参数" class="headerlink" title="一些常用参数"></a>一些常用参数</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#位置参数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">a,b,c</span>):</span><br><span class="line">    <span class="keyword">return</span><span class="string">&quot;&quot;</span>.join((c,b,a)) <span class="comment">#使用join表示在后面添加字符串</span></span><br><span class="line"><span class="built_in">print</span>(func(<span class="string">&quot;我&quot;</span>, <span class="string">&quot;是&quot;</span>, <span class="string">&quot;你&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="帮助函数中的"><a href="#帮助函数中的" class="headerlink" title="帮助函数中的/"></a>帮助函数中的/</h2><p>代表着/的左边不能指定参数的名字，只能指定其值，但是/的右边就无所谓了。</p>
+<p>我们还可以用*来代替/ *的左边不能用参数的名字，但是右边要用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def fun(a,*,b,c):</span><br><span class="line">	print(a,b,c)</span><br><span class="line">fun(&quot;d&quot;,&quot;e&quot;,&quot;g&quot;) #error,第二第三个参数要加参数名字</span><br><span class="line">fun(&quot;d&quot;,b=&quot;e&quot;,c=&quot;g&quot;) #d e g</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>python</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
-    <title>hexo博客的基本操作</title>
-    <url>/2022/02/09/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<p>hexo clean 清除缓存</p>
-<p>hexo n “…” 生成博客文章，标题是…</p>
-<span id="more"></span>
+    <title>python--字符串</title>
+    <url>/2022/02/13/python-%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    <content><![CDATA[<h2 id="涵盖了python中大部分的字符串操作"><a href="#涵盖了python中大部分的字符串操作" class="headerlink" title="涵盖了python中大部分的字符串操作"></a>涵盖了python中大部分的字符串操作</h2><span id="more"></span>
 
-<p>hexo s   start博客，默认启动在localhost:4000端口</p>
-<p>hexo d   部署到远端</p>
-<p>当写完博客之后通常使用这三个：（依次输入）</p>
-<p>hexo clean </p>
-<p>hexo g</p>
-<p>hexo d</p>
-]]></content>
+<h3 id="大小写字母转换："><a href="#大小写字母转换：" class="headerlink" title="大小写字母转换："></a>大小写字母转换：</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#capitalize 将首字母变成大写，其他不变</span></span><br><span class="line">x = <span class="string">&quot;abcde&quot;</span></span><br><span class="line">x.capitalize() <span class="comment">#Abcde</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#casefold 返回一个全部是小写的新字符串</span></span><br><span class="line">x = <span class="string">&quot;AbCdE&quot;</span></span><br><span class="line">x.casefold() <span class="comment">#abcde</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#title 将字符串首字母变成大写，其他的全变成小写</span></span><br><span class="line">x = <span class="string">&quot;aBCDe&quot;</span></span><br><span class="line">x.title() <span class="comment">#Abcde</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#swapcase 将字符串中大小写字母翻转，大写变小写，小写变大写</span></span><br><span class="line">x = <span class="string">&quot;AbCdE&quot;</span></span><br><span class="line">x.swapcase() <span class="comment">#aBcDe</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#upper 将所有字母变大写</span></span><br><span class="line">x = <span class="string">&quot;abcde&quot;</span></span><br><span class="line">x.upper() <span class="comment">#ABCDE</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#lower 将所有字母变小写</span></span><br><span class="line">x = <span class="string">&quot;ABCDE&quot;</span></span><br><span class="line">x.lower() <span class="comment">#abcde</span></span><br><span class="line"><span class="comment">#关于casefold和lower：casefold比lower更加强大。casefold可以处理包括英文字符在内的诸多字符类型，但是lower只能处理英文字符。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="左中右对齐"><a href="#左中右对齐" class="headerlink" title="左中右对齐"></a>左中右对齐</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用对齐有一个条件：在center等的括号内的数字要大于字符串的长度才能实现此功能！</span></span><br><span class="line">x = <span class="string">&quot;你真厉害！&quot;</span> <span class="comment">#这里一共有五个字符长度，在center括号内的数字需要大于五个字符</span></span><br><span class="line">x.center(<span class="number">7</span>) <span class="comment">#&quot; 你真厉害！ &quot;</span></span><br><span class="line">x.ljust(<span class="number">7</span>)  <span class="comment">#&quot;你真厉害！  &quot;</span></span><br><span class="line">x.rjust(<span class="number">7</span>)  <span class="comment">#&quot;  你真厉害！&quot;</span></span><br><span class="line">x.zfill(<span class="number">9</span>)  <span class="comment">#&quot;0000你真厉害d！&quot;右对齐，并且用0填充左侧</span></span><br><span class="line"><span class="comment">#在后面可以自定义空格中填充的字符串</span></span><br><span class="line">x.center(<span class="number">11</span>,<span class="string">&quot;噢&quot;</span>) <span class="comment">#&quot;噢噢噢你真厉害！噢噢噢&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="寻找字符串"><a href="#寻找字符串" class="headerlink" title="寻找字符串"></a>寻找字符串</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#count统计字符在字符串中出现的次数</span></span><br><span class="line">x = <span class="string">&quot;上海的自来水来自海上&quot;</span></span><br><span class="line">x.count(<span class="string">&quot;自&quot;</span>) <span class="comment">#出现了两次，所以是2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#find查找字符在字符串中第一次出现的位置，rfind则是相反方向的查找（从右往左查找）</span></span><br><span class="line">x = <span class="string">&quot;上海的自来水来自海上&quot;</span></span><br><span class="line">x.find(<span class="string">&quot;海&quot;</span>)  <span class="comment">#1</span></span><br><span class="line">x.rfind(<span class="string">&quot;海&quot;</span>) <span class="comment">#8</span></span><br><span class="line">x.find(<span class="string">&quot;去&quot;</span>)  <span class="comment">#如果在字符串中找不到字符则返回-1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#index和find类似，但是如果找不到会抛出异常</span></span><br><span class="line">x.index(<span class="string">&quot;去&quot;</span>) <span class="comment">#error:...</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="字符串替换和表格转换"><a href="#字符串替换和表格转换" class="headerlink" title="字符串替换和表格转换"></a>字符串替换和表格转换</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#replace方法用于将前后的字符串进行对调</span></span><br><span class="line">x = <span class="string">&quot;上海自来水来自海上&quot;</span></span><br><span class="line">x.replace(<span class="string">&quot;上海&quot;</span>,<span class="string">&quot;北京&quot;</span>) <span class="comment">#北京自来水来自海上</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#创建表格maketrans,注意：在maketrans中字符串的长度一定要匹配，否则会报如下错误：ValueError: the first two maketrans arguments must have equal length</span></span><br><span class="line">table = <span class="built_in">str</span>.maketrans(<span class="string">&quot;abc&quot;</span>,<span class="string">&quot;def&quot;</span>)</span><br><span class="line"><span class="string">&quot;ghi&quot;</span>.translate(table)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="字符串的判断（全部返回bool类型）"><a href="#字符串的判断（全部返回bool类型）" class="headerlink" title="字符串的判断（全部返回bool类型）"></a>字符串的判断（全部返回bool类型）</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#startwith判断字符是否出现在字符串的开始位置</span></span><br><span class="line">x = <span class="string">&quot;我爱python&quot;</span></span><br><span class="line">x.startwith(<span class="string">&quot;我&quot;</span>) <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#同理endswith判断字符是否出现在字符串的结束位置</span></span><br><span class="line">x = <span class="string">&quot;我爱python&quot;</span></span><br><span class="line">x.endswith(<span class="string">&quot;o&quot;</span>) <span class="comment">#false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#startswith和endswith的进阶，可以自定义起始和结束位置</span></span><br><span class="line">startswith(<span class="string">&quot;我&quot;</span>,<span class="number">1</span>) <span class="comment">#表示从“1”的位置开始，此时字符串变成了“爱python”</span></span><br><span class="line">endswith(<span class="string">&quot;on&quot;</span>,<span class="number">0</span>,<span class="number">4</span>) <span class="comment">#表示从“0”的地方开始，在“4”的位置结束，此时字符串变成了“我爱pyt”</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#istitle判断字符串中是否都是以大写字母开头，其余的都是小写</span></span><br><span class="line">x = <span class="string">&quot;Abc&quot;</span></span><br><span class="line">x.istitle() <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isupper判断字符串里面是否都是大写字母</span></span><br><span class="line"><span class="comment">#islower判断字符串里面是否都是小写字母</span></span><br><span class="line">x = <span class="string">&quot;ABC&quot;</span></span><br><span class="line">x.isupper() <span class="comment">#true</span></span><br><span class="line">x.islower() <span class="comment">#false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isalpha判断字符串是否全部由字母构成（存在空格也不算！）</span></span><br><span class="line">x=<span class="string">&quot;ABCDE &quot;</span></span><br><span class="line">x.isalpha() <span class="comment">#false,因为我有空格的存在</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isspace判断是否全部由空白字符构成，转义字符，tab，space全部都算是空白字符</span></span><br><span class="line"><span class="string">&quot;	\n \t &quot;</span>.space() <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isprintable判断字符串所有元素是否都是可打印字符，注意细节：转义字符不是可打印字符！！</span></span><br><span class="line"><span class="string">&quot;我爱python \n&quot;</span>.isprintable() <span class="comment">#false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isdecimal(),isdigit(),isnumeric()都是判断字符串中是否都是数字的方法。但是我们通常使用isalnum()方法，它是一个集大成者，只要上面三个方法中任意一个返回true，那么isalnum就返回true</span></span><br><span class="line">x = <span class="string">&quot;123456&quot;</span></span><br><span class="line">x.isalum() <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isidentifier判断是否是python承认的变量命名</span></span><br><span class="line"><span class="string">&quot;I love python&quot;</span>.isidentifier() <span class="comment">#false</span></span><br><span class="line"><span class="string">&quot;I_love_python&quot;</span>.isidentifier() <span class="comment">#true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#lstrip去除左侧的空白</span></span><br><span class="line"><span class="comment">#rstrip去除右侧的空白</span></span><br><span class="line"><span class="comment">#strip左右的空白都不要</span></span><br><span class="line"><span class="string">&quot;	左侧不要留白&quot;</span>.lstrip() <span class="comment">#&quot;左侧不要留白&quot;</span></span><br><span class="line"><span class="string">&quot;右侧不要留白		&quot;</span>.rstrip() <span class="comment">#&quot;右侧不要留白&quot;</span></span><br><span class="line"><span class="comment">#也可以自定义去除，但是其实是从左或者从右去除到与传入字符没有相同才停止，即匹配来去除，而不是只是删除对应的字符！</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.lstrip(abcd) <span class="comment">#&quot;dopagip00.com&quot;</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.rstrip(abcd) <span class="comment">#&quot;www.dopagip00&quot;</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.strip(abcd) <span class="comment">#&quot;dopagip00&quot;</span></span><br><span class="line"><span class="comment">#对应上面的代码实际上去除的不是abcd（根本不存在abcd）去除的是abcd对应的左右分别四个字符。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#使用removeprefix(prefix)--&gt;前缀和removesuffix(suffix)--&gt;后缀去除一个特定的子字符串</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.removeprefix(www.) <span class="comment">#&quot;dopagip00.com&quot;</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.removesuffix(.com) <span class="comment">#&quot;www.dopagip00&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#只切分一次：切割字符串,partition表示以.进行切割从右往左寻找分隔符,只找一个！！找到一个就不找了！rpartition表示从右往左寻找分隔符，同样只寻找一个。</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.partition(<span class="string">&quot;.&quot;</span>) <span class="comment">#(&#x27;www&#x27;,&#x27;.&#x27;,&#x27;dopagip00.com&#x27;)</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.rpartition(<span class="string">&quot;.&quot;</span>) <span class="comment">#(&#x27;www.dopagip00&#x27;,&#x27;.&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#切分到没有为止：split按照给定的字符进行切分，默认切分空格。在指定字符的后面一个参数还可以指定分割的次数。</span></span><br><span class="line"><span class="string">&quot;www dopagip com&quot;</span>.split() <span class="comment">#(&#x27;www&#x27;,&#x27;dopagip&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"><span class="string">&quot;www.dopagip.com&quot;</span>.split(<span class="string">&quot;.&quot;</span>) <span class="comment">#(&#x27;www&#x27;,&#x27;dopagip&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"><span class="string">&quot;www.dopagip.com&quot;</span>.rsplit(<span class="string">&quot;.&quot;</span>,<span class="number">1</span>) <span class="comment">#我这里指定切割一次，而且是从右往左切，结果：										 (&quot;www.dopagip&quot;,&quot;com&quot;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#splitlines是以&#x27;行&#x27;进行分割。</span></span><br><span class="line"><span class="string">&quot;www\ndopagip00\ncom&quot;</span>.splitlines() <span class="comment">#(&#x27;www&#x27;,&#x27;dopagip00&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">#join是把列表的数组组合起来成字符串。</span></span><br><span class="line"><span class="string">&quot;.&quot;</span>.join([<span class="string">&#x27;www&#x27;</span>,<span class="string">&#x27;dopagip00&#x27;</span>,<span class="string">&#x27;com&#x27;</span>]) <span class="comment">#www.dopagip00.com</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="格式化字符串（占位）"><a href="#格式化字符串（占位）" class="headerlink" title="格式化字符串（占位）"></a>格式化字符串（占位）</h3><p>其实和c语言的%d,%s占位符类似，只不过python是用{}来占位 </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#format方法format里面的参数就是占位的字符，format里面的参数与&#123;&#125;对应，有几个参数就有几个&#123;&#125;</span></span><br><span class="line">a = <span class="string">&quot;python&quot;</span></span><br><span class="line">b = <span class="string">&quot;C&quot;</span></span><br><span class="line">c = <span class="string">&quot;PHP&quot;</span></span><br><span class="line">d = <span class="string">&quot;JAVA&quot;</span></span><br><span class="line"><span class="string">&quot;我爱 &#123;&#125; &quot;</span>.<span class="built_in">format</span>(a) <span class="comment">#我爱python</span></span><br><span class="line"><span class="string">&quot;我爱&#123;&#125;,&#123;&#125;,&#123;&#125;,&#123;&#125;&quot;</span>.<span class="built_in">format</span>(a,b,c,d) <span class="comment">#我爱python,C,PHP,JAVA</span></span><br><span class="line"><span class="comment">#可以在花括号中间加入数字表示占位的顺序,甚至可以在括号内加变量名，然后在format里面给变量赋值</span></span><br><span class="line">a = <span class="string">&quot;python&quot;</span></span><br><span class="line">b = <span class="string">&quot;C&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;1&#125;,&#123;0&#125;&quot;</span>.<span class="built_in">format</span>(a, b)) <span class="comment">#我爱python，C</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;0&#125;,&#123;1&#125;&quot;</span>.<span class="built_in">format</span>(a, b)) <span class="comment">#我爱C，python</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;py&#125;,&#123;ja&#125;&quot;</span>.<span class="built_in">format</span>(py=<span class="string">&quot;python&quot;</span>,ja=<span class="string">&quot;java&quot;</span>)) <span class="comment">#我爱python,java</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#千分符</span></span><br><span class="line"><span class="string">&quot;&#123;:,&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">1234</span>) <span class="comment">#1,234</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保留小数点后x位即.xf，类别c语言%.xf</span></span><br><span class="line"><span class="string">&quot;&#123;.2f&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">3.14159</span>) <span class="comment">#3.14</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保留x位数,即.xg</span></span><br><span class="line"><span class="string">&quot;&#123;.2g&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">3.14159</span>) <span class="comment">#3.1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#截取x位字符，不能用于数字，会报错！！</span></span><br><span class="line"><span class="string">&quot;&#123;:.2&#125;&quot;</span>.<span class="built_in">format</span>(<span class="string">&quot;我爱py&quot;</span>)  <span class="comment">#我爱</span></span><br><span class="line"><span class="string">&quot;&#123;:.2&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">1234</span>)     <span class="comment">#error</span></span><br></pre></td></tr></table></figure>
+
+<p>：后面可以加很多值，如下表：（参数即format里面的参数）</p>
+<p><img src="C:\Users\me\AppData\Roaming\Typora\typora-user-images\image-20220213212943323.png" alt="image-20220213212943323"></p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
       <categories>
-        <category>hexo</category>
+        <category>python</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -1365,62 +1484,6 @@
 
 
 <h3 id="修改字典和删除字典"><a href="#修改字典和删除字典" class="headerlink" title="修改字典和删除字典"></a>修改字典和删除字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#修改字典</span></span><br><span class="line">di = &#123;<span class="string">&#x27;name&#x27;</span> = <span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;num&#x27;</span> = <span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;class&#x27;</span> = <span class="number">3</span>&#125;</span><br><span class="line">di[<span class="string">&#x27;name&#x27;</span> = <span class="string">&#x27;10&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(di[<span class="string">&#x27;name&#x27;</span>])  <span class="comment">#10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除字典</span></span><br><span class="line"><span class="keyword">del</span> di[<span class="string">&#x27;name&#x27;</span>] <span class="comment"># 删除键 &#x27;Name&#x27;</span></span><br><span class="line">di.clear()     <span class="comment"># 清空字典，但是字典还是保留着的</span></span><br><span class="line"><span class="keyword">del</span> di         <span class="comment"># 删除字典</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA--继承</title>
-    <url>/2022/02/09/JAVA-%E7%BB%A7%E6%89%BF/</url>
-    <content><![CDATA[<p>1.extend的意思是’’拓展，扩大’’,子类是对父类的拓展。</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/5d39b5ad4d0c474a818fe81179381fc9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>如teacher is a person.</p>
-<p><strong>子类不能继承父类的private属性或者方法！</strong></p>
-<p>ctrl+H可以打开继承面板</p>
-<p>2.Object！</p>
-<p>在Java中所有的类都默认继承Object类！！！</p>
-<p>例：public class AA /<em>entend Object</em>/{}</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python--元组</title>
-    <url>/2022/02/11/python-%E5%85%83%E7%BB%84/</url>
-    <content><![CDATA[<h3 id="包含了元组中的大部分操作"><a href="#包含了元组中的大部分操作" class="headerlink" title="包含了元组中的大部分操作"></a>包含了元组中的大部分操作</h3><span id="more"></span>
-
-<p>1.元组类似于数组，但是元组<strong>可以</strong>不带括号表示，如：数组：（1，2，3），元组：1，2，3。但是建议最好一直加上，增加代码的可读性。</p>
-<p>2.不可以改变元组里面的数，如：a[1] = 9 是不可取的。正是因为元组不能修改，所以相对于数组来说安全性更高。</p>
-<p>3.切片的翻转操作：a[::-1] 会把元组里面的所有的数进行翻转。</p>
-<p>4.大部分的函数操作是和数组操作一样的：index操作，count操作等等都和数组是一样的</p>
-<p>5.元组的嵌套：</p>
-<p>s=(1,2,3)</p>
-<p>t=(4,5,6)</p>
-<p>w=s , t</p>
-<p>print(w)</p>
-<p>输出w的结果是((1,2,3),(4,5,6))</p>
-<p>6.元组的迭代：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s=(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">t=(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">w=s,t</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> w:</span><br><span class="line">	<span class="keyword">for</span> each <span class="keyword">in</span> i:</span><br><span class="line">		<span class="built_in">print</span>(each,end=<span class="string">&quot; &quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>7.在元组中如何生成只有一个元素的元组：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = (<span class="number">12</span>,)</span><br><span class="line"><span class="built_in">type</span>(x)</span><br></pre></td></tr></table></figure>
-
-<p>使用type函数查看即可得出x是tuple元组类型，重要的是12后面的逗号！！</p>
-<p>8.打包和解包：</p>
-<p><strong>打包：即生成一个元组</strong></p>
-<p>解包：如下图这样，生成的t有三个元素，分别赋值给x,y,z称之为解包，解包需要注意的是：左侧变量名的数量必须跟右侧元素的数量一致。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">t = (<span class="number">123</span>,<span class="number">12</span>,<span class="number">1</span>)</span><br><span class="line">x,y,z = t</span><br><span class="line"><span class="built_in">print</span>(x,y,z)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1543,46 +1606,6 @@
 
 ]]></content>
       <categories>
-        <category>pythony</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python--字符串</title>
-    <url>/2022/02/13/python-%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
-    <content><![CDATA[<h2 id="涵盖了python中大部分的字符串操作"><a href="#涵盖了python中大部分的字符串操作" class="headerlink" title="涵盖了python中大部分的字符串操作"></a>涵盖了python中大部分的字符串操作</h2><span id="more"></span>
-
-<h3 id="大小写字母转换："><a href="#大小写字母转换：" class="headerlink" title="大小写字母转换："></a>大小写字母转换：</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#capitalize 将首字母变成大写，其他不变</span></span><br><span class="line">x = <span class="string">&quot;abcde&quot;</span></span><br><span class="line">x.capitalize() <span class="comment">#Abcde</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#casefold 返回一个全部是小写的新字符串</span></span><br><span class="line">x = <span class="string">&quot;AbCdE&quot;</span></span><br><span class="line">x.casefold() <span class="comment">#abcde</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#title 将字符串首字母变成大写，其他的全变成小写</span></span><br><span class="line">x = <span class="string">&quot;aBCDe&quot;</span></span><br><span class="line">x.title() <span class="comment">#Abcde</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#swapcase 将字符串中大小写字母翻转，大写变小写，小写变大写</span></span><br><span class="line">x = <span class="string">&quot;AbCdE&quot;</span></span><br><span class="line">x.swapcase() <span class="comment">#aBcDe</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#upper 将所有字母变大写</span></span><br><span class="line">x = <span class="string">&quot;abcde&quot;</span></span><br><span class="line">x.upper() <span class="comment">#ABCDE</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#lower 将所有字母变小写</span></span><br><span class="line">x = <span class="string">&quot;ABCDE&quot;</span></span><br><span class="line">x.lower() <span class="comment">#abcde</span></span><br><span class="line"><span class="comment">#关于casefold和lower：casefold比lower更加强大。casefold可以处理包括英文字符在内的诸多字符类型，但是lower只能处理英文字符。</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="左中右对齐"><a href="#左中右对齐" class="headerlink" title="左中右对齐"></a>左中右对齐</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用对齐有一个条件：在center等的括号内的数字要大于字符串的长度才能实现此功能！</span></span><br><span class="line">x = <span class="string">&quot;你真厉害！&quot;</span> <span class="comment">#这里一共有五个字符长度，在center括号内的数字需要大于五个字符</span></span><br><span class="line">x.center(<span class="number">7</span>) <span class="comment">#&quot; 你真厉害！ &quot;</span></span><br><span class="line">x.ljust(<span class="number">7</span>)  <span class="comment">#&quot;你真厉害！  &quot;</span></span><br><span class="line">x.rjust(<span class="number">7</span>)  <span class="comment">#&quot;  你真厉害！&quot;</span></span><br><span class="line">x.zfill(<span class="number">9</span>)  <span class="comment">#&quot;0000你真厉害d！&quot;右对齐，并且用0填充左侧</span></span><br><span class="line"><span class="comment">#在后面可以自定义空格中填充的字符串</span></span><br><span class="line">x.center(<span class="number">11</span>,<span class="string">&quot;噢&quot;</span>) <span class="comment">#&quot;噢噢噢你真厉害！噢噢噢&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="寻找字符串"><a href="#寻找字符串" class="headerlink" title="寻找字符串"></a>寻找字符串</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#count统计字符在字符串中出现的次数</span></span><br><span class="line">x = <span class="string">&quot;上海的自来水来自海上&quot;</span></span><br><span class="line">x.count(<span class="string">&quot;自&quot;</span>) <span class="comment">#出现了两次，所以是2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#find查找字符在字符串中第一次出现的位置，rfind则是相反方向的查找（从右往左查找）</span></span><br><span class="line">x = <span class="string">&quot;上海的自来水来自海上&quot;</span></span><br><span class="line">x.find(<span class="string">&quot;海&quot;</span>)  <span class="comment">#1</span></span><br><span class="line">x.rfind(<span class="string">&quot;海&quot;</span>) <span class="comment">#8</span></span><br><span class="line">x.find(<span class="string">&quot;去&quot;</span>)  <span class="comment">#如果在字符串中找不到字符则返回-1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#index和find类似，但是如果找不到会抛出异常</span></span><br><span class="line">x.index(<span class="string">&quot;去&quot;</span>) <span class="comment">#error:...</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="字符串替换和表格转换"><a href="#字符串替换和表格转换" class="headerlink" title="字符串替换和表格转换"></a>字符串替换和表格转换</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#replace方法用于将前后的字符串进行对调</span></span><br><span class="line">x = <span class="string">&quot;上海自来水来自海上&quot;</span></span><br><span class="line">x.replace(<span class="string">&quot;上海&quot;</span>,<span class="string">&quot;北京&quot;</span>) <span class="comment">#北京自来水来自海上</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#创建表格maketrans,注意：在maketrans中字符串的长度一定要匹配，否则会报如下错误：ValueError: the first two maketrans arguments must have equal length</span></span><br><span class="line">table = <span class="built_in">str</span>.maketrans(<span class="string">&quot;abc&quot;</span>,<span class="string">&quot;def&quot;</span>)</span><br><span class="line"><span class="string">&quot;ghi&quot;</span>.translate(table)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="字符串的判断（全部返回bool类型）"><a href="#字符串的判断（全部返回bool类型）" class="headerlink" title="字符串的判断（全部返回bool类型）"></a>字符串的判断（全部返回bool类型）</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#startwith判断字符是否出现在字符串的开始位置</span></span><br><span class="line">x = <span class="string">&quot;我爱python&quot;</span></span><br><span class="line">x.startwith(<span class="string">&quot;我&quot;</span>) <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#同理endswith判断字符是否出现在字符串的结束位置</span></span><br><span class="line">x = <span class="string">&quot;我爱python&quot;</span></span><br><span class="line">x.endswith(<span class="string">&quot;o&quot;</span>) <span class="comment">#false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#startswith和endswith的进阶，可以自定义起始和结束位置</span></span><br><span class="line">startswith(<span class="string">&quot;我&quot;</span>,<span class="number">1</span>) <span class="comment">#表示从“1”的位置开始，此时字符串变成了“爱python”</span></span><br><span class="line">endswith(<span class="string">&quot;on&quot;</span>,<span class="number">0</span>,<span class="number">4</span>) <span class="comment">#表示从“0”的地方开始，在“4”的位置结束，此时字符串变成了“我爱pyt”</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#istitle判断字符串中是否都是以大写字母开头，其余的都是小写</span></span><br><span class="line">x = <span class="string">&quot;Abc&quot;</span></span><br><span class="line">x.istitle() <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isupper判断字符串里面是否都是大写字母</span></span><br><span class="line"><span class="comment">#islower判断字符串里面是否都是小写字母</span></span><br><span class="line">x = <span class="string">&quot;ABC&quot;</span></span><br><span class="line">x.isupper() <span class="comment">#true</span></span><br><span class="line">x.islower() <span class="comment">#false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isalpha判断字符串是否全部由字母构成（存在空格也不算！）</span></span><br><span class="line">x=<span class="string">&quot;ABCDE &quot;</span></span><br><span class="line">x.isalpha() <span class="comment">#false,因为我有空格的存在</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isspace判断是否全部由空白字符构成，转义字符，tab，space全部都算是空白字符</span></span><br><span class="line"><span class="string">&quot;	\n \t &quot;</span>.space() <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isprintable判断字符串所有元素是否都是可打印字符，注意细节：转义字符不是可打印字符！！</span></span><br><span class="line"><span class="string">&quot;我爱python \n&quot;</span>.isprintable() <span class="comment">#false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isdecimal(),isdigit(),isnumeric()都是判断字符串中是否都是数字的方法。但是我们通常使用isalnum()方法，它是一个集大成者，只要上面三个方法中任意一个返回true，那么isalnum就返回true</span></span><br><span class="line">x = <span class="string">&quot;123456&quot;</span></span><br><span class="line">x.isalum() <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isidentifier判断是否是python承认的变量命名</span></span><br><span class="line"><span class="string">&quot;I love python&quot;</span>.isidentifier() <span class="comment">#false</span></span><br><span class="line"><span class="string">&quot;I_love_python&quot;</span>.isidentifier() <span class="comment">#true</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#lstrip去除左侧的空白</span></span><br><span class="line"><span class="comment">#rstrip去除右侧的空白</span></span><br><span class="line"><span class="comment">#strip左右的空白都不要</span></span><br><span class="line"><span class="string">&quot;	左侧不要留白&quot;</span>.lstrip() <span class="comment">#&quot;左侧不要留白&quot;</span></span><br><span class="line"><span class="string">&quot;右侧不要留白		&quot;</span>.rstrip() <span class="comment">#&quot;右侧不要留白&quot;</span></span><br><span class="line"><span class="comment">#也可以自定义去除，但是其实是从左或者从右去除到与传入字符没有相同才停止，即匹配来去除，而不是只是删除对应的字符！</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.lstrip(abcd) <span class="comment">#&quot;dopagip00.com&quot;</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.rstrip(abcd) <span class="comment">#&quot;www.dopagip00&quot;</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.strip(abcd) <span class="comment">#&quot;dopagip00&quot;</span></span><br><span class="line"><span class="comment">#对应上面的代码实际上去除的不是abcd（根本不存在abcd）去除的是abcd对应的左右分别四个字符。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#使用removeprefix(prefix)--&gt;前缀和removesuffix(suffix)--&gt;后缀去除一个特定的子字符串</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.removeprefix(www.) <span class="comment">#&quot;dopagip00.com&quot;</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.removesuffix(.com) <span class="comment">#&quot;www.dopagip00&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#只切分一次：切割字符串,partition表示以.进行切割从右往左寻找分隔符,只找一个！！找到一个就不找了！rpartition表示从右往左寻找分隔符，同样只寻找一个。</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.partition(<span class="string">&quot;.&quot;</span>) <span class="comment">#(&#x27;www&#x27;,&#x27;.&#x27;,&#x27;dopagip00.com&#x27;)</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.rpartition(<span class="string">&quot;.&quot;</span>) <span class="comment">#(&#x27;www.dopagip00&#x27;,&#x27;.&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#切分到没有为止：split按照给定的字符进行切分，默认切分空格。在指定字符的后面一个参数还可以指定分割的次数。</span></span><br><span class="line"><span class="string">&quot;www dopagip com&quot;</span>.split() <span class="comment">#(&#x27;www&#x27;,&#x27;dopagip&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"><span class="string">&quot;www.dopagip.com&quot;</span>.split(<span class="string">&quot;.&quot;</span>) <span class="comment">#(&#x27;www&#x27;,&#x27;dopagip&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"><span class="string">&quot;www.dopagip.com&quot;</span>.rsplit(<span class="string">&quot;.&quot;</span>,<span class="number">1</span>) <span class="comment">#我这里指定切割一次，而且是从右往左切，结果：										 (&quot;www.dopagip&quot;,&quot;com&quot;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#splitlines是以&#x27;行&#x27;进行分割。</span></span><br><span class="line"><span class="string">&quot;www\ndopagip00\ncom&quot;</span>.splitlines() <span class="comment">#(&#x27;www&#x27;,&#x27;dopagip00&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">#join是把列表的数组组合起来成字符串。</span></span><br><span class="line"><span class="string">&quot;.&quot;</span>.join([<span class="string">&#x27;www&#x27;</span>,<span class="string">&#x27;dopagip00&#x27;</span>,<span class="string">&#x27;com&#x27;</span>]) <span class="comment">#www.dopagip00.com</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="格式化字符串（占位）"><a href="#格式化字符串（占位）" class="headerlink" title="格式化字符串（占位）"></a>格式化字符串（占位）</h3><p>其实和c语言的%d,%s占位符类似，只不过python是用{}来占位 </p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#format方法format里面的参数就是占位的字符，format里面的参数与&#123;&#125;对应，有几个参数就有几个&#123;&#125;</span></span><br><span class="line">a = <span class="string">&quot;python&quot;</span></span><br><span class="line">b = <span class="string">&quot;C&quot;</span></span><br><span class="line">c = <span class="string">&quot;PHP&quot;</span></span><br><span class="line">d = <span class="string">&quot;JAVA&quot;</span></span><br><span class="line"><span class="string">&quot;我爱 &#123;&#125; &quot;</span>.<span class="built_in">format</span>(a) <span class="comment">#我爱python</span></span><br><span class="line"><span class="string">&quot;我爱&#123;&#125;,&#123;&#125;,&#123;&#125;,&#123;&#125;&quot;</span>.<span class="built_in">format</span>(a,b,c,d) <span class="comment">#我爱python,C,PHP,JAVA</span></span><br><span class="line"><span class="comment">#可以在花括号中间加入数字表示占位的顺序,甚至可以在括号内加变量名，然后在format里面给变量赋值</span></span><br><span class="line">a = <span class="string">&quot;python&quot;</span></span><br><span class="line">b = <span class="string">&quot;C&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;1&#125;,&#123;0&#125;&quot;</span>.<span class="built_in">format</span>(a, b)) <span class="comment">#我爱python，C</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;0&#125;,&#123;1&#125;&quot;</span>.<span class="built_in">format</span>(a, b)) <span class="comment">#我爱C，python</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;py&#125;,&#123;ja&#125;&quot;</span>.<span class="built_in">format</span>(py=<span class="string">&quot;python&quot;</span>,ja=<span class="string">&quot;java&quot;</span>)) <span class="comment">#我爱python,java</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#千分符</span></span><br><span class="line"><span class="string">&quot;&#123;:,&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">1234</span>) <span class="comment">#1,234</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保留小数点后x位即.xf，类别c语言%.xf</span></span><br><span class="line"><span class="string">&quot;&#123;.2f&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">3.14159</span>) <span class="comment">#3.14</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保留x位数,即.xg</span></span><br><span class="line"><span class="string">&quot;&#123;.2g&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">3.14159</span>) <span class="comment">#3.1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#截取x位字符，不能用于数字，会报错！！</span></span><br><span class="line"><span class="string">&quot;&#123;:.2&#125;&quot;</span>.<span class="built_in">format</span>(<span class="string">&quot;我爱py&quot;</span>)  <span class="comment">#我爱</span></span><br><span class="line"><span class="string">&quot;&#123;:.2&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">1234</span>)     <span class="comment">#error</span></span><br></pre></td></tr></table></figure>
-
-<p>：后面可以加很多值，如下表：（参数即format里面的参数）</p>
-<p><img src="C:\Users\me\AppData\Roaming\Typora\typora-user-images\image-20220213212943323.png" alt="image-20220213212943323"></p>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
-      <categories>
         <category>python</category>
       </categories>
       <tags>
@@ -1610,44 +1633,6 @@
 <p>DML 操作</p>
 <p>DQL 查询</p>
 <p>DCL 控制</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--Collec体系集合“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-Collecting%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88%E2%80%9C/</url>
-    <content><![CDATA[<p> Collect接口知识点总结</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/img_convert/5888cfe5738f77ca7a81306dbae10536.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>rt</p>
-<h2 id="Collect父接口"><a href="#Collect父接口" class="headerlink" title="Collect父接口"></a>Collect父接口</h2><p>特点：（有些）对象，无序，无下标，不能重复–&gt;对应着Set接口。</p>
-<p>方法：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/3bf59b036ab708cfc76b85554f643deb.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>常用方法</p>
-<p>iteration迭代器</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/58df797c645cb5fe3e3f7dbd39a89bc0.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>使用next()来用指针不断指向下一行</p>
-<p>iteration要定义对象的：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/79b7331b81bc69966635494f587bc2a0.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>三个常用方法</p>
-<p>遍历元素的方法：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/5a9858fdff8876de3732ae53f9c65917.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>注意：</strong>在iteration里面不能使用collection.remove();来删除元素，要使用iteration(这是对象)来删除元素，iteration.remove()。</p>
-<p>collection判断：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/80ec081de26e2bccf885c09c38fe3aba.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>使用contains方法进行判断，返回值是布朗类型的</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -1688,6 +1673,44 @@
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p>Vector现在少用了，ArrayList用的多</p>
 <p>ArrayList默认长度是0。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--Collec体系集合“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-Collecting%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88%E2%80%9C/</url>
+    <content><![CDATA[<p> Collect接口知识点总结</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5888cfe5738f77ca7a81306dbae10536.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>rt</p>
+<h2 id="Collect父接口"><a href="#Collect父接口" class="headerlink" title="Collect父接口"></a>Collect父接口</h2><p>特点：（有些）对象，无序，无下标，不能重复–&gt;对应着Set接口。</p>
+<p>方法：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/3bf59b036ab708cfc76b85554f643deb.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>常用方法</p>
+<p>iteration迭代器</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/58df797c645cb5fe3e3f7dbd39a89bc0.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>使用next()来用指针不断指向下一行</p>
+<p>iteration要定义对象的：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/79b7331b81bc69966635494f587bc2a0.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>三个常用方法</p>
+<p>遍历元素的方法：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5a9858fdff8876de3732ae53f9c65917.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>注意：</strong>在iteration里面不能使用collection.remove();来删除元素，要使用iteration(这是对象)来删除元素，iteration.remove()。</p>
+<p>collection判断：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/80ec081de26e2bccf885c09c38fe3aba.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>使用contains方法进行判断，返回值是布朗类型的</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -1783,16 +1806,32 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--字符编码知识点“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
-    <content><![CDATA[<p>介绍五种常用编码方式</p>
+    <title>”JAVA--外部类和内部类“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E5%A4%96%E9%83%A8%E7%B1%BB%E5%92%8C%E5%86%85%E9%83%A8%E7%B1%BB%E2%80%9C/</url>
+    <content><![CDATA[<p> 介绍外部类和内部类</p>
 <span id="more"></span>
 
-<p>ISO-8859-1 ：ASCII编码+西欧希腊等国的字符编码。</p>
-<p>UTF-8：针对Unicode码的字符编码。</p>
-<p>GBK ：简体中文。</p>
-<p>GB312：简体中文。</p>
-<p>BIG5：台湾，繁体中文。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package bilibili;</span><br><span class="line"></span><br><span class="line">class Oouter &#123;</span><br><span class="line">    class Inter &#123;</span><br><span class="line">        Inter() &#123;</span><br><span class="line">            System.out.println(&quot;这是内部类&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Outer&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Oouter oouter = new Oouter();</span><br><span class="line">        Oouter.Inter inter = oouter.new Inter();//这里最最重要</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-----------------------------------------------------------------------------</span><br><span class="line">内部类的概念：在一个类的内部再定义一个完整的类，内部类也会生成class文件。但是有$符号。</span><br></pre></td></tr></table></figure>
+
+<p>1.声明内部类的对象的方法是：</p>
+<p><strong>外部类名(点)内部类名(空格)内部类对象 = 外部类对象(点)new(空格)内部类名（）；</strong></p>
+<p>比如现在<strong>外部类名Outer，内部类名Inter，外部类对象outer，内部类对象inter</strong>，则：</p>
+<p>Outer.Inter inter = outer.new Inter();</p>
+<p>内部类可以调用外部类的私有属性，当然也可以调用外部私有方法，但是当内部类加上了static后就不能调用外部类的private属性了。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">private int a()&#123;</span><br><span class="line">    int a = 20;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br><span class="line">class Inter &#123;</span><br><span class="line">    public void print() &#123;</span><br><span class="line">        System.out.println(a());</span><br><span class="line">        System.out.println(&quot;这是内部类&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2.局部内部类：在方法里面定义类；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3.匿名内部类：没有名字的类：</span><br><span class="line">假设我们有一个类Apple，Apple里面有一个a方法，我们可以先不对Apple进行实例化，直接使用new Apple().a()来调用a方法.</span><br><span class="line">匿名内部类一般用在接口或者父类当中。</span><br><span class="line">匿名内部类必须在声明对象之后，然后在后面可以调用该匿名内部类的方法，该内部类是匿名的，然后要用声明的对象的名字。</span><br><span class="line">匿名内部类必须继承父类或者实现一个接口。</span><br></pre></td></tr></table></figure>
+
+<p>4.静态内部类：不依赖外部类，可直接创建或通过类名访问，可声明静态成员。</p>
+<p><strong>特点：</strong></p>
+<p>1.在内部类中可以调用内部类的私有方法，但是调用外部类的私有方法用（外部类的对象）.私有名字。</p>
+<p>2.只有外部类可以是静态的，内部类不行。</p>
+<p>3.内部类想要访问局部变量，需要局部变量是final修饰的（局部变量即方法里面定义的变量）</p>
+<p>4.内部类也可以继承接口用implements</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -1855,6 +1894,25 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--字符编码知识点“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
+    <content><![CDATA[<p>介绍五种常用编码方式</p>
+<span id="more"></span>
+
+<p>ISO-8859-1 ：ASCII编码+西欧希腊等国的字符编码。</p>
+<p>UTF-8：针对Unicode码的字符编码。</p>
+<p>GBK ：简体中文。</p>
+<p>GB312：简体中文。</p>
+<p>BIG5：台湾，繁体中文。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--常用类“</title>
     <url>/2022/02/09/%E2%80%9DJAVA-%E5%B8%B8%E7%94%A8%E7%B1%BB%E2%80%9C/</url>
     <content><![CDATA[<p>介绍两个类：Date和Calendar</p>
@@ -1900,41 +1958,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--外部类和内部类“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E5%A4%96%E9%83%A8%E7%B1%BB%E5%92%8C%E5%86%85%E9%83%A8%E7%B1%BB%E2%80%9C/</url>
-    <content><![CDATA[<p> 介绍外部类和内部类</p>
-<span id="more"></span>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package bilibili;</span><br><span class="line"></span><br><span class="line">class Oouter &#123;</span><br><span class="line">    class Inter &#123;</span><br><span class="line">        Inter() &#123;</span><br><span class="line">            System.out.println(&quot;这是内部类&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Outer&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Oouter oouter = new Oouter();</span><br><span class="line">        Oouter.Inter inter = oouter.new Inter();//这里最最重要</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-----------------------------------------------------------------------------</span><br><span class="line">内部类的概念：在一个类的内部再定义一个完整的类，内部类也会生成class文件。但是有$符号。</span><br></pre></td></tr></table></figure>
-
-<p>1.声明内部类的对象的方法是：</p>
-<p><strong>外部类名(点)内部类名(空格)内部类对象 = 外部类对象(点)new(空格)内部类名（）；</strong></p>
-<p>比如现在<strong>外部类名Outer，内部类名Inter，外部类对象outer，内部类对象inter</strong>，则：</p>
-<p>Outer.Inter inter = outer.new Inter();</p>
-<p>内部类可以调用外部类的私有属性，当然也可以调用外部私有方法，但是当内部类加上了static后就不能调用外部类的private属性了。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">private int a()&#123;</span><br><span class="line">    int a = 20;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br><span class="line">class Inter &#123;</span><br><span class="line">    public void print() &#123;</span><br><span class="line">        System.out.println(a());</span><br><span class="line">        System.out.println(&quot;这是内部类&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2.局部内部类：在方法里面定义类；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3.匿名内部类：没有名字的类：</span><br><span class="line">假设我们有一个类Apple，Apple里面有一个a方法，我们可以先不对Apple进行实例化，直接使用new Apple().a()来调用a方法.</span><br><span class="line">匿名内部类一般用在接口或者父类当中。</span><br><span class="line">匿名内部类必须在声明对象之后，然后在后面可以调用该匿名内部类的方法，该内部类是匿名的，然后要用声明的对象的名字。</span><br><span class="line">匿名内部类必须继承父类或者实现一个接口。</span><br></pre></td></tr></table></figure>
-
-<p>4.静态内部类：不依赖外部类，可直接创建或通过类名访问，可声明静态成员。</p>
-<p><strong>特点：</strong></p>
-<p>1.在内部类中可以调用内部类的私有方法，但是调用外部类的私有方法用（外部类的对象）.私有名字。</p>
-<p>2.只有外部类可以是静态的，内部类不行。</p>
-<p>3.内部类想要访问局部变量，需要局部变量是final修饰的（局部变量即方法里面定义的变量）</p>
-<p>4.内部类也可以继承接口用implements</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--抽象类“</title>
     <url>/2022/02/09/%E2%80%9DJAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E2%80%9C/</url>
     <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
@@ -1944,51 +1967,6 @@
 <p>2.java里面的类是单继承的，但是接口时多继承的</p>
 <p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
 <p>4.抽象方法必须在抽象类里面</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--捕获异常“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8%E2%80%9C/</url>
-    <content><![CDATA[<p> 捕获异常的知识点</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
-<p>假设要捕获多个异常，从大到小。</p>
-<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--接口interface“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8E%A5%E5%8F%A3interface%E2%80%9C/</url>
-    <content><![CDATA[<p> 1.接口只有规范，无法写方法，是专业的抽象。实现约束和实现分离，面向接口编程。</p>
-<span id="more"></span>
-
-<p>2.接口就是规范，约束了编程的行为</p>
-<p>写一个接口：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public interface jiekou &#123;//这是一个接口，下面实行增删改查</span><br><span class="line">    void insert();</span><br><span class="line">    void delete();</span><br><span class="line">    void update();</span><br><span class="line">    void select();</span><br><span class="line">    //上面的四个方法都是在接口里面的方法，固定为抽象方法，抽象的abstract可以省略，直接用返回值+方法名来定义方法即可；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（抽象）类只能单继承，但是接口可以多继承，这就是接口的好处；</p>
-<p>继承接口用关键字implement，格式为：class+类名+implement+接口名{}</p>
-<p>实现了接口中的类就要重写接口中的方法，接口的多继承用逗号连接实现。</p>
-<p>接口的作用</p>
-<p><img src="https://img-blog.csdnimg.cn/9ec1434941764960bada7de63fcf34be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -2026,6 +2004,51 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--接口interface“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8E%A5%E5%8F%A3interface%E2%80%9C/</url>
+    <content><![CDATA[<p> 1.接口只有规范，无法写方法，是专业的抽象。实现约束和实现分离，面向接口编程。</p>
+<span id="more"></span>
+
+<p>2.接口就是规范，约束了编程的行为</p>
+<p>写一个接口：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public interface jiekou &#123;//这是一个接口，下面实行增删改查</span><br><span class="line">    void insert();</span><br><span class="line">    void delete();</span><br><span class="line">    void update();</span><br><span class="line">    void select();</span><br><span class="line">    //上面的四个方法都是在接口里面的方法，固定为抽象方法，抽象的abstract可以省略，直接用返回值+方法名来定义方法即可；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（抽象）类只能单继承，但是接口可以多继承，这就是接口的好处；</p>
+<p>继承接口用关键字implement，格式为：class+类名+implement+接口名{}</p>
+<p>实现了接口中的类就要重写接口中的方法，接口的多继承用逗号连接实现。</p>
+<p>接口的作用</p>
+<p><img src="https://img-blog.csdnimg.cn/9ec1434941764960bada7de63fcf34be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--捕获异常“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8%E2%80%9C/</url>
+    <content><![CDATA[<p> 捕获异常的知识点</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
+<p>假设要捕获多个异常，从大到小。</p>
+<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--数据库操作“</title>
     <url>/2022/02/09/%E2%80%9DJAVA-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C%E2%80%9C/</url>
     <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.创建数据库</span><br><span class="line">CREATE DATABASE [IF NOT EXISTS] school;</span><br><span class="line"></span><br><span class="line">2.使用数据库</span><br><span class="line">USE `school` --如果你的数据库是一个字段名称，则需要用到``</span><br><span class="line">USE school</span><br><span class="line"></span><br><span class="line">3.删除数据库</span><br><span class="line">DROP school</span><br><span class="line"></span><br><span class="line">4.查看数据库</span><br><span class="line">show school</span><br></pre></td></tr></table></figure>
@@ -2054,6 +2077,50 @@
 <p><img src="https://img-blog.csdnimg.cn/img_convert/d8784fef04c69c151654bbe73747730f.png" alt="img"></p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p>删除表的话用：DROP TABLE student;</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--泛型“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E6%B3%9B%E5%9E%8B%E2%80%9C/</url>
+    <content><![CDATA[<p>介绍泛型的基本概念</p>
+<span id="more"></span>
+
+<p><strong>基本概念：</strong>（传递类型参数的东西）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/446e9973ebc5dab7b15dbedca430ed4c.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--方法盘点“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E6%96%B9%E6%B3%95%E7%9B%98%E7%82%B9%E2%80%9C/</url>
+    <content><![CDATA[<p>介绍四个方法</p>
+<span id="more"></span>
+
+<p><strong>getCalss()方法：</strong></p>
+<p>1.使用方法:<strong>对象.getClass()</strong>;</p>
+<p>2.有什么用：返回对象的内容，比如这个对象是A类的，那就返回A类给getClass()，返回的值是Class类型的。</p>
+<p><strong>hashcode()方法：</strong></p>
+<p>1.使用方法:<strong>对象.hashcode()</strong>;</p>
+<p>2.返回一个值，哈希码的值实际上是对象的地址或者字符串之类的，所以相同对象返回相同哈希码。</p>
+<p><strong>toString()方法</strong>：</p>
+<p>1.其实也就是返回getclass和hashcode的合体，但是哈希值是十六进制的。</p>
+<p>qeual方法：</p>
+<p>return(this == 一个类对象)</p>
+<p>System.out.println(s1.equal(s2)) #判断s1和s2对象是否相等。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/017447037a9afaba91fed9ca66807b05.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -2109,50 +2176,6 @@
 <p><img src="https://img-blog.csdnimg.cn/img_convert/de6bca422bb73bab89a0181d5a3a2381.png" alt="img"></p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p>用了增强for循环</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--方法盘点“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E6%96%B9%E6%B3%95%E7%9B%98%E7%82%B9%E2%80%9C/</url>
-    <content><![CDATA[<p>介绍四个方法</p>
-<span id="more"></span>
-
-<p><strong>getCalss()方法：</strong></p>
-<p>1.使用方法:<strong>对象.getClass()</strong>;</p>
-<p>2.有什么用：返回对象的内容，比如这个对象是A类的，那就返回A类给getClass()，返回的值是Class类型的。</p>
-<p><strong>hashcode()方法：</strong></p>
-<p>1.使用方法:<strong>对象.hashcode()</strong>;</p>
-<p>2.返回一个值，哈希码的值实际上是对象的地址或者字符串之类的，所以相同对象返回相同哈希码。</p>
-<p><strong>toString()方法</strong>：</p>
-<p>1.其实也就是返回getclass和hashcode的合体，但是哈希值是十六进制的。</p>
-<p>qeual方法：</p>
-<p>return(this == 一个类对象)</p>
-<p>System.out.println(s1.equal(s2)) #判断s1和s2对象是否相等。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/017447037a9afaba91fed9ca66807b05.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--泛型“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E6%B3%9B%E5%9E%8B%E2%80%9C/</url>
-    <content><![CDATA[<p>介绍泛型的基本概念</p>
-<span id="more"></span>
-
-<p><strong>基本概念：</strong>（传递类型参数的东西）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/446e9973ebc5dab7b15dbedca430ed4c.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -2231,17 +2254,18 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--转换流知识点“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
-    <content><![CDATA[<p>InputStreamReader和OutputStreamWriter:</p>
+    <title>”JAVA--类的盘点“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9%E2%80%9C/</url>
+    <content><![CDATA[<p>先来一个特殊的：</p>
+<p>double res = 1.4-0.5/0.9;</p>
 <span id="more"></span>
 
-
-<p> <strong>InputStreamReader</strong>:</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/f0b6cfe4735777363bc8e2eeafde2a2b.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这样接下来直接用isr即可</p>
-<p>OutputStreamWriter同理。</p>
+<p>System.out.println(res);//这时候输出的会是0.999999999</p>
+<p>这时候就要用到BigDecimal来精确输出double类型的数据了。</p>
+<p>BigDecimal num = new BigDecimal(“0.9”);//这样就可以声明一个BigDecimal数据了。</p>
+<p>当然要在前面加上import java.math.BigDecimal来引入BigDecimal</p>
+<hr>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).</span><br><span class="line">divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>)))<span class="comment">//这样就可以输出1而不是0.9999999了。</span></span><br><span class="line">同样也可以:</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">num</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>))</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -2268,70 +2292,23 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--类的盘点“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9%E2%80%9C/</url>
-    <content><![CDATA[<p>先来一个特殊的：</p>
-<p>double res = 1.4-0.5/0.9;</p>
+    <title>”JAVA--转换流知识点“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
+    <content><![CDATA[<p>InputStreamReader和OutputStreamWriter:</p>
 <span id="more"></span>
 
-<p>System.out.println(res);//这时候输出的会是0.999999999</p>
-<p>这时候就要用到BigDecimal来精确输出double类型的数据了。</p>
-<p>BigDecimal num = new BigDecimal(“0.9”);//这样就可以声明一个BigDecimal数据了。</p>
-<p>当然要在前面加上import java.math.BigDecimal来引入BigDecimal</p>
-<hr>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).</span><br><span class="line">divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>)))<span class="comment">//这样就可以输出1而不是0.9999999了。</span></span><br><span class="line">同样也可以:</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">num</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>))</span><br></pre></td></tr></table></figure>
+
+<p> <strong>InputStreamReader</strong>:</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/f0b6cfe4735777363bc8e2eeafde2a2b.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这样接下来直接用isr即可</p>
+<p>OutputStreamWriter同理。</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
       </categories>
       <tags>
         <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”Linux--实用指令“</title>
-    <url>/2022/02/09/%E2%80%9DLinux-%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4%E2%80%9C/</url>
-    <content><![CDATA[<p>介绍Linux的运行级别和找回root密码的方式</p>
-<span id="more"></span>
-
-<p> <strong>1.运行级别：</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/cfe449dfc95f4cc1869792e4e53bf39c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_11,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>常用的运行级别是3和5</p>
-<p>使用init来切换运行级别（init 运行级别）</p>
-<p>查看当前运行级别：systemctl get-default</p>
-<p><strong>2.找回root密码</strong></p>
-<p>(1)在登录前的界面按下“e”编辑，如图：</p>
-<p><img src="https://img-blog.csdnimg.cn/24c29cb043ac4d2f91a731ff9b6121ae.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（2）找到linux16所在的那一行的下面一行：（如果没找到linux16就按着键盘向下的箭头就能看见了）</p>
-<p><img src="https://img-blog.csdnimg.cn/2f7d063b6b994865a19935d18958e2de.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> （3）在UTF-8后面按下空格后加上这句话：init=/bin/sh</p>
-<p><img src="https://img-blog.csdnimg.cn/8b229a66f7534503bcf5298f85aa9fcf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>(4)输入完之后按下快捷键Ctrl+x进入单用户模式（如果左边的Ctrl不行就试试右边的） </p>
-<p>（5）在光标闪烁的位置输入这句话：mount -o remount,rw/  输入完之后回车。</p>
-<p><img src="https://img-blog.csdnimg.cn/2f62ded86e884e48b6b27fa8e15eb14d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/3db9328c5fb742acbf74ccdcc4698f29.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> （6）然后在新界面光标闪烁位置输入passwd然后回车，输入新密码，然后确认密码</p>
-<p>（7）输入完之后当我们看到passwd=****就说明成功修改了密码。</p>
-<p><img src="https://img-blog.csdnimg.cn/5f29832e73d74f2dad243c54a44b6f6e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（8）紧接着在下面的一行输入这句话：touch /.autorelabel（注意：touch和/之间有一个空格）</p>
-<p><img src="https://img-blog.csdnimg.cn/8df0b14725b648ec9f51e7b974ae8f33.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（9）继续在光标闪烁的位置输入exec /sbin/init（同样在exec和/之间有一个空格），完成后按回车，耐心等待系统修改密码（时间会稍长）完成后linux会自动重启。</p>
-<p><img src="https://img-blog.csdnimg.cn/4b5f47ea34064e89a594099f73e1c200.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（10）登录时使用新密码即可 .</p>
-<p>如果在登录的状态下修改密码那就容易得多了，在终端使用passwd 用户名 即可。</p>
-<p><img src="https://img-blog.csdnimg.cn/8d46bf1dc8f4486f80463a0ad95c030b.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<h1 id="Linux里的帮助指令"><a href="#Linux里的帮助指令" class="headerlink" title="Linux里的帮助指令"></a><strong>Linux里的帮助指令</strong></h1><p><img src="https://img-blog.csdnimg.cn/4735254542224f94a3e8ba707bc2c2dc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> 基本命令：</p>
-<p>ls 显示当前目录下所有文件但是没有隐藏文件</p>
-<p>ls -a 显示当前目录下所有文件包括隐藏文件</p>
-<p>ls -l（等效于ll）表示目录以单行的方式输出<img src="https://img-blog.csdnimg.cn/c8efefc5fb2144dc9fab281847b94cb6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> ls -la或者ls -al 表示单行输出文件包括隐藏文件</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -2382,6 +2359,66 @@
       </tags>
   </entry>
   <entry>
+    <title>”Linux--Xshell和Xftp“</title>
+    <url>/2022/02/09/%E2%80%9DLinux-Xshell%E5%92%8CXftp%E2%80%9C/</url>
+    <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
+<p>不同点：Xftp用于发送文件。</p>
+<p>Xshell可以使用windows来访问Linux，实现远程操控。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”Linux--实用指令“</title>
+    <url>/2022/02/09/%E2%80%9DLinux-%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4%E2%80%9C/</url>
+    <content><![CDATA[<p>介绍Linux的运行级别和找回root密码的方式</p>
+<span id="more"></span>
+
+<p> <strong>1.运行级别：</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/cfe449dfc95f4cc1869792e4e53bf39c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_11,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>常用的运行级别是3和5</p>
+<p>使用init来切换运行级别（init 运行级别）</p>
+<p>查看当前运行级别：systemctl get-default</p>
+<p><strong>2.找回root密码</strong></p>
+<p>(1)在登录前的界面按下“e”编辑，如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/24c29cb043ac4d2f91a731ff9b6121ae.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（2）找到linux16所在的那一行的下面一行：（如果没找到linux16就按着键盘向下的箭头就能看见了）</p>
+<p><img src="https://img-blog.csdnimg.cn/2f7d063b6b994865a19935d18958e2de.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> （3）在UTF-8后面按下空格后加上这句话：init=/bin/sh</p>
+<p><img src="https://img-blog.csdnimg.cn/8b229a66f7534503bcf5298f85aa9fcf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>(4)输入完之后按下快捷键Ctrl+x进入单用户模式（如果左边的Ctrl不行就试试右边的） </p>
+<p>（5）在光标闪烁的位置输入这句话：mount -o remount,rw/  输入完之后回车。</p>
+<p><img src="https://img-blog.csdnimg.cn/2f62ded86e884e48b6b27fa8e15eb14d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/3db9328c5fb742acbf74ccdcc4698f29.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> （6）然后在新界面光标闪烁位置输入passwd然后回车，输入新密码，然后确认密码</p>
+<p>（7）输入完之后当我们看到passwd=****就说明成功修改了密码。</p>
+<p><img src="https://img-blog.csdnimg.cn/5f29832e73d74f2dad243c54a44b6f6e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（8）紧接着在下面的一行输入这句话：touch /.autorelabel（注意：touch和/之间有一个空格）</p>
+<p><img src="https://img-blog.csdnimg.cn/8df0b14725b648ec9f51e7b974ae8f33.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（9）继续在光标闪烁的位置输入exec /sbin/init（同样在exec和/之间有一个空格），完成后按回车，耐心等待系统修改密码（时间会稍长）完成后linux会自动重启。</p>
+<p><img src="https://img-blog.csdnimg.cn/4b5f47ea34064e89a594099f73e1c200.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（10）登录时使用新密码即可 .</p>
+<p>如果在登录的状态下修改密码那就容易得多了，在终端使用passwd 用户名 即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/8d46bf1dc8f4486f80463a0ad95c030b.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h1 id="Linux里的帮助指令"><a href="#Linux里的帮助指令" class="headerlink" title="Linux里的帮助指令"></a><strong>Linux里的帮助指令</strong></h1><p><img src="https://img-blog.csdnimg.cn/4735254542224f94a3e8ba707bc2c2dc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> 基本命令：</p>
+<p>ls 显示当前目录下所有文件但是没有隐藏文件</p>
+<p>ls -a 显示当前目录下所有文件包括隐藏文件</p>
+<p>ls -l（等效于ll）表示目录以单行的方式输出<img src="https://img-blog.csdnimg.cn/c8efefc5fb2144dc9fab281847b94cb6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> ls -la或者ls -al 表示单行输出文件包括隐藏文件</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”Linux--忘记密码的找回方法“</title>
     <url>/2022/02/09/%E2%80%9DLinux-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E6%89%BE%E5%9B%9E%E6%96%B9%E6%B3%95%E2%80%9C/</url>
     <content><![CDATA[<p>非常详细！保姆级教程！</p>
@@ -2405,51 +2442,6 @@
 <p>（9）继续在光标闪烁的位置输入exec /sbin/init（同样在exec和/之间有一个空格），完成后按回车，耐心等待系统修改密码（时间会稍长）完成后linux会自动重启。</p>
 <p><img src="https://img-blog.csdnimg.cn/4b5f47ea34064e89a594099f73e1c200.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p>（10）登录时使用新密码即可 .</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”Linux--用户管理“</title>
-    <url>/2022/02/09/%E2%80%9DLinux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E2%80%9C/</url>
-    <content><![CDATA[<p> 一、基本操作：</p>
-<p>添加用户：useradd 用户名</p>
-<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
-<span id="more"></span>
-
-<p>删除用户(不保留家目录)：userdel -r 用户名</p>
-<p>更改用户密码：passwd 用户名</p>
-<p>查询用户信息：id 用户名</p>
-<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
-<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
-<p>想要查看现在的用户是谁：who am i（离谱）</p>
-<p>pwd：查看现在在哪个目录下面</p>
-<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
-<p>添加组：groupadd 组名</p>
-<p>删除组：groupdel 组名</p>
-<p>创建用户的同时分组：useradd -g 组名 用户名</p>
-<p>用户换组：usermod -g 新组名 用户名</p>
-<p><strong>用户和组的相关文件：</strong></p>
-<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”Linux--Xshell和Xftp“</title>
-    <url>/2022/02/09/%E2%80%9DLinux-Xshell%E5%92%8CXftp%E2%80%9C/</url>
-    <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
-<p>不同点：Xftp用于发送文件。</p>
-<p>Xshell可以使用windows来访问Linux，实现远程操控。</p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -2510,21 +2502,34 @@
       </tags>
   </entry>
   <entry>
-    <title>”python--一些函数“</title>
-    <url>/2022/02/09/%E2%80%9Dpython-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0%E2%80%9C/</url>
-    <content><![CDATA[<p> bool()：判断括号里面的结果是真还是假。</p>
-<p>真的情况：在括号里面加引号，引号里面有任何值的结果都是真以及直接输入true（不加引号）</p>
-<p>假的情况：在引号里面有引号但是引号里面什么都没有以及直接输入false</p>
+    <title>”Linux--用户管理“</title>
+    <url>/2022/02/09/%E2%80%9DLinux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E2%80%9C/</url>
+    <content><![CDATA[<p> 一、基本操作：</p>
+<p>添加用户：useradd 用户名</p>
+<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
 <span id="more"></span>
 
-<p>以下是定义为false的情况：</p>
-<p><img src="https://img-blog.csdnimg.cn/91c7d524a1064e67a99244784f03bcc4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>删除用户(不保留家目录)：userdel -r 用户名</p>
+<p>更改用户密码：passwd 用户名</p>
+<p>查询用户信息：id 用户名</p>
+<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
+<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
+<p>想要查看现在的用户是谁：who am i（离谱）</p>
+<p>pwd：查看现在在哪个目录下面</p>
+<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
+<p>添加组：groupadd 组名</p>
+<p>删除组：groupdel 组名</p>
+<p>创建用户的同时分组：useradd -g 组名 用户名</p>
+<p>用户换组：usermod -g 新组名 用户名</p>
+<p><strong>用户和组的相关文件：</strong></p>
+<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>python</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -2541,6 +2546,24 @@
 <p>在后面我们再使用三次</p>
 <p>random.randint(1~10）</p>
 <p>三次生成的数分别是1，3，6，所以可以推断出setstate的作用是把前三次生成的随机数变成一个固定的状态再后面再生成！</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--一些函数“</title>
+    <url>/2022/02/09/%E2%80%9Dpython-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0%E2%80%9C/</url>
+    <content><![CDATA[<p> bool()：判断括号里面的结果是真还是假。</p>
+<p>真的情况：在括号里面加引号，引号里面有任何值的结果都是真以及直接输入true（不加引号）</p>
+<p>假的情况：在引号里面有引号但是引号里面什么都没有以及直接输入false</p>
+<span id="more"></span>
+
+<p>以下是定义为false的情况：</p>
+<p><img src="https://img-blog.csdnimg.cn/91c7d524a1064e67a99244784f03bcc4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -2590,29 +2613,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”python--深拷贝和浅拷贝“</title>
-    <url>/2022/02/09/%E2%80%9Dpython-%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D%E2%80%9C/</url>
-    <content><![CDATA[<p><strong>假设B复制了A，当修改A时，看B是否会发生变化，如果B也跟着变了，说明这是浅拷贝，拿人手短，如果B没变，那就是深拷贝，自食其力。</strong></p>
-<span id="more"></span>
-
-<p>浅拷贝的实现方法：</p>
-<p>x=…..</p>
-<p>y=copy.copy(x)</p>
-<p>深拷贝的实现方法：</p>
-<p>x=…</p>
-<p>y=copy.deepcopy(x)</p>
-<p>其中第一个copy是copy模块</p>
-<p><img src="https://img-blog.csdnimg.cn/550469b3a1764d3d9357df29840651d2.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这样的copy是浅拷贝</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”python--除和地板除“</title>
     <url>/2022/02/09/%E2%80%9Dpython-%E9%99%A4%E5%92%8C%E5%9C%B0%E6%9D%BF%E9%99%A4%E2%80%9C/</url>
     <content><![CDATA[<p>3/2=1.5这个谁都懂</p>
@@ -2628,6 +2628,29 @@
 <p>int（x）的结果就是2，向下取整！</p>
 <p>pow(2,3)代表2的三次方，和2**3的效果一样。</p>
 <p>pow（2,3,4）代表着2**3%4即2的三次方结果除四的余数！</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--深拷贝和浅拷贝“</title>
+    <url>/2022/02/09/%E2%80%9Dpython-%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D%E2%80%9C/</url>
+    <content><![CDATA[<p><strong>假设B复制了A，当修改A时，看B是否会发生变化，如果B也跟着变了，说明这是浅拷贝，拿人手短，如果B没变，那就是深拷贝，自食其力。</strong></p>
+<span id="more"></span>
+
+<p>浅拷贝的实现方法：</p>
+<p>x=…..</p>
+<p>y=copy.copy(x)</p>
+<p>深拷贝的实现方法：</p>
+<p>x=…</p>
+<p>y=copy.deepcopy(x)</p>
+<p>其中第一个copy是copy模块</p>
+<p><img src="https://img-blog.csdnimg.cn/550469b3a1764d3d9357df29840651d2.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这样的copy是浅拷贝</p>
 ]]></content>
       <categories>
         <category>python</category>
