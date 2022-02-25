@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JAVA--super知识点</title>
-    <url>/2022/02/09/JAVA-super%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>1.Super指向父类的构造方法，必须在构造方法的第一个；</p>
-<p>2.Super只能出现在子类的构造方法中.</p>
-<span id="more"></span>
-
-<p>3.this和super不能同时调用构造方法</p>
-<p>与this的对比：<br>this：本类的构造；super：父类的构造</p>
-<p>this：没有继承也可以使用；super：必须要有继承才可以使用</p>
-<p>this：调用本身对象；super：调用父类对象</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JAVA--static关键字知识点</title>
     <url>/2022/02/09/JAVA-static%E5%85%B3%E9%94%AE%E5%AD%97%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<p>1.有static修饰的属性就不用声明对象了，直接用类名去.属性</p>
@@ -49,47 +30,16 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--封装</title>
-    <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
-    <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
+    <title>JAVA--super知识点</title>
+    <url>/2022/02/09/JAVA-super%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>1.Super指向父类的构造方法，必须在构造方法的第一个；</p>
+<p>2.Super只能出现在子类的构造方法中.</p>
 <span id="more"></span>
 
-<p>2.get/set 方法最重要：用get方法获得该值，用set方法给该值赋予数值,因为你的属性被private限制住了，只能通过其他方法输出。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class AA&#123;</span><br><span class="line">    private int a=20;</span><br><span class="line">    public int geta()&#123;</span><br><span class="line">        return this.a;</span><br><span class="line">    &#125;</span><br><span class="line">    public void seta(int a)&#123;</span><br><span class="line">        this.a=a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class getset &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        AA aa = new AA();</span><br><span class="line">        //System.out.println(aa.a);这样写是错的，因为属性a被private限制了，只能在AA类中使用</span><br><span class="line">        //这时候就要使用set和get函数了</span><br><span class="line">        aa.seta(50);//这一步用来设置a的值</span><br><span class="line">        System.out.println(aa.geta());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>封装的作用：</p>
-<p>1.提高程序的安全性，保护程序</p>
-<p>2.统一接口（唯一接口只有get/set）</p>
-<p>3.隐藏代码实现细节</p>
-<p>4.系统的可维护性增加</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA--多态</title>
-    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
-    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
-<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
-<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
-<span id="more"></span>
-
-<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>多态的注意事项：</p>
-<p>1.多态是方法的多态，属性没有多态；</p>
-<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
-<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
-<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
-<p>##但是有些方法是不能重写的：</p>
-<p>1.static方法：属于类，不属于实例</p>
-<p>2.final属性</p>
-<p>3.private方法是私有的，当然重写了也没用</p>
-<p>instanceof （类型转换） 引用类型</p>
+<p>3.this和super不能同时调用构造方法</p>
+<p>与this的对比：<br>this：本类的构造；super：父类的构造</p>
+<p>this：没有继承也可以使用；super：必须要有继承才可以使用</p>
+<p>this：调用本身对象；super：调用父类对象</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -135,6 +85,99 @@
       </tags>
   </entry>
   <entry>
+    <title>JAVA--多态</title>
+    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
+    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
+<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
+<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
+<span id="more"></span>
+
+<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>多态的注意事项：</p>
+<p>1.多态是方法的多态，属性没有多态；</p>
+<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
+<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
+<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
+<p>##但是有些方法是不能重写的：</p>
+<p>1.static方法：属于类，不属于实例</p>
+<p>2.final属性</p>
+<p>3.private方法是私有的，当然重写了也没用</p>
+<p>instanceof （类型转换） 引用类型</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA--封装</title>
+    <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
+    <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
+<span id="more"></span>
+
+<p>2.get/set 方法最重要：用get方法获得该值，用set方法给该值赋予数值,因为你的属性被private限制住了，只能通过其他方法输出。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class AA&#123;</span><br><span class="line">    private int a=20;</span><br><span class="line">    public int geta()&#123;</span><br><span class="line">        return this.a;</span><br><span class="line">    &#125;</span><br><span class="line">    public void seta(int a)&#123;</span><br><span class="line">        this.a=a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class getset &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        AA aa = new AA();</span><br><span class="line">        //System.out.println(aa.a);这样写是错的，因为属性a被private限制了，只能在AA类中使用</span><br><span class="line">        //这时候就要使用set和get函数了</span><br><span class="line">        aa.seta(50);//这一步用来设置a的值</span><br><span class="line">        System.out.println(aa.geta());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>封装的作用：</p>
+<p>1.提高程序的安全性，保护程序</p>
+<p>2.统一接口（唯一接口只有get/set）</p>
+<p>3.隐藏代码实现细节</p>
+<p>4.系统的可维护性增加</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA--方法重写</title>
+    <url>/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/</url>
+    <content><![CDATA[<p>方法的调用只和左边有关，即A a/B b</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/e3ae7194364e47b2b5dd489751a7ae95.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>方法的重写不要用static，</p>
+<p><img src="https://img-blog.csdnimg.cn/74ba5f5219e542c88cbe7cfa66795b61.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_13,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>因为b是A new出来的对象，因此调用了A的方法</strong></p>
+<p><strong>因为静态方法是类的方法，而非静态是对象的方法</strong></p>
+<p><strong>有static时，b调用了B类的方法，因为b是用b类定义的</strong></p>
+<p><strong>没有static时，b调用的是对象的方法，而b是用A类new的</strong></p>
+<p><strong>简单来说就是有static调用后面，没有static调用前面。</strong></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA--继承</title>
+    <url>/2022/02/09/JAVA-%E7%BB%A7%E6%89%BF/</url>
+    <content><![CDATA[<p>1.extend的意思是’’拓展，扩大’’,子类是对父类的拓展。</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/5d39b5ad4d0c474a818fe81179381fc9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>如teacher is a person.</p>
+<p><strong>子类不能继承父类的private属性或者方法！</strong></p>
+<p>ctrl+H可以打开继承面板</p>
+<p>2.Object！</p>
+<p>在Java中所有的类都默认继承Object类！！！</p>
+<p>例：public class AA /<em>entend Object</em>/{}</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA--构造器</title>
     <url>/2022/02/09/JAVA-%E6%9E%84%E9%80%A0%E5%99%A8/</url>
     <content><![CDATA[<p> 定义一个构造器：（构造方法必须没有返回值）</p>
@@ -167,49 +210,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--继承</title>
-    <url>/2022/02/09/JAVA-%E7%BB%A7%E6%89%BF/</url>
-    <content><![CDATA[<p>1.extend的意思是’’拓展，扩大’’,子类是对父类的拓展。</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/5d39b5ad4d0c474a818fe81179381fc9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>如teacher is a person.</p>
-<p><strong>子类不能继承父类的private属性或者方法！</strong></p>
-<p>ctrl+H可以打开继承面板</p>
-<p>2.Object！</p>
-<p>在Java中所有的类都默认继承Object类！！！</p>
-<p>例：public class AA /<em>entend Object</em>/{}</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA--方法重写</title>
-    <url>/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/</url>
-    <content><![CDATA[<p>方法的调用只和左边有关，即A a/B b</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/e3ae7194364e47b2b5dd489751a7ae95.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>方法的重写不要用static，</p>
-<p><img src="https://img-blog.csdnimg.cn/74ba5f5219e542c88cbe7cfa66795b61.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_13,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>因为b是A new出来的对象，因此调用了A的方法</strong></p>
-<p><strong>因为静态方法是类的方法，而非静态是对象的方法</strong></p>
-<p><strong>有static时，b调用了B类的方法，因为b是用b类定义的</strong></p>
-<p><strong>没有static时，b调用的是对象的方法，而b是用A类new的</strong></p>
-<p><strong>简单来说就是有static调用后面，没有static调用前面。</strong></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JAVA--面向对象知识点总结</title>
     <url>/2022/02/09/JAVA-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<p>有关面向对象知识点的总结</p>
@@ -225,6 +225,28 @@
       </categories>
       <tags>
         <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo d出错时的解决办法</title>
+    <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
+<span id="more"></span>
+
+<p>删除blog/.deploy_git文件</p>
+<p>然后输入</p>
+<p>git config –gloabl core.autocrlf false`</p>
+<p>重新</p>
+<p>hexo clean</p>
+<p>hexo g</p>
+<p>hexo d</p>
+<p>部署</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1373,25 +1395,38 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo d出错时的解决办法</title>
-    <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
-<span id="more"></span>
+    <title>python--函数</title>
+    <url>/2022/02/19/python-%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="函数的基本操作"><a href="#函数的基本操作" class="headerlink" title="函数的基本操作"></a><strong>函数的基本操作</strong></h2><span id="more"></span>
 
-<p>删除blog/.deploy_git文件</p>
-<p>然后输入</p>
-<p>git config –gloabl core.autocrlf false`</p>
-<p>重新</p>
-<p>hexo clean</p>
-<p>hexo g</p>
-<p>hexo d</p>
-<p>部署</p>
+<h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用def来定义一个函数myfun,来实现x的累加</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfunadd</span>(<span class="params">x</span>):</span><br><span class="line">	x = x + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="位置参数"><a href="#位置参数" class="headerlink" title="位置参数"></a>位置参数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#位置参数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">a,b,c</span>):</span><br><span class="line">    <span class="keyword">return</span><span class="string">&quot;&quot;</span>.join((c,b,a)) <span class="comment">#使用join表示在后面添加字符串</span></span><br><span class="line"><span class="built_in">print</span>(func(<span class="string">&quot;我&quot;</span>, <span class="string">&quot;是&quot;</span>, <span class="string">&quot;你&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#帮助函数中的/:代表着/的左边不能指定参数的名字，只能指定其值，但是/的右边就无所谓了。</span></span><br><span class="line"><span class="comment">#我们还可以用*来代替/ *的左边不能用参数的名字，但是右边要用</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">a,*,b,c</span>):</span><br><span class="line">	<span class="built_in">print</span>(a,b,c)</span><br><span class="line">fun(<span class="string">&quot;d&quot;</span>,<span class="string">&quot;e&quot;</span>,<span class="string">&quot;g&quot;</span>) <span class="comment">#error,第二第三个参数要加参数名字</span></span><br><span class="line">fun(<span class="string">&quot;d&quot;</span>,b=<span class="string">&quot;e&quot;</span>,c=<span class="string">&quot;g&quot;</span>) <span class="comment">#d e g</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="收集参数"><a href="#收集参数" class="headerlink" title="收集参数"></a><strong>收集参数</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#收集函数即只指定一个参数，然后允许调用函数时传入任意数量的参数。在函数的形式参数之前加上*号即可</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfun</span>(<span class="params">*var</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;一共传入了&#123;&#125;个参数&quot;</span>.<span class="built_in">format</span>(<span class="built_in">len</span>(var)))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;第二个参数是&#123;&#125;&quot;</span>.<span class="built_in">format</span>(var[<span class="number">1</span>]))</span><br><span class="line"></span><br><span class="line"><span class="comment">#注意只能指定一个带*号的参数，要是需要其他的形式参数，那么需要用到关键字参数。</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfun2</span>(<span class="params">*var,a,b</span>):</span><br><span class="line">    <span class="built_in">print</span>(var,a,b)</span><br><span class="line">myfun2(<span class="string">&quot;Deng&quot;</span>,a=<span class="string">&quot;Gao&quot;</span>,b=<span class="string">&quot;zheng&quot;</span>) <span class="comment">#像这样a和b使用了关键字参数即可</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#在形式参数之前加上两个*代表着传入的参数可以自动转换成为字典</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfun</span>(<span class="params">**var</span>):</span><br><span class="line">    <span class="built_in">print</span>(var) <span class="comment">#</span></span><br><span class="line">myfun(a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span>) <span class="comment">#(&#x27;a&#x27;:&#x27;1&#x27;,&#x27;b&#x27;:&#x27;2&#x27;,&#x27;c&#x27;:&#x27;3&#x27;)即为字典形式</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#综合</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">xing</span>(<span class="params">a,*b,**c</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;a=&quot;</span>,a,<span class="string">&quot;b=&quot;</span>,b,<span class="string">&quot;c=&quot;</span>,c)</span><br><span class="line">xing(<span class="string">&quot;deng&quot;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,c=<span class="string">&quot;zheng&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>#！！！个人总结：1.对于没有星的参数来说，在传入参数时只要出现“，”，那么就会自动跳到下一个参数！2.对于有一个星的参数来说，不能使用关键字参数来传递参数给它！！！否则会报错，它会自动收集剩下的数，即捡破烂。3.对于有两个*的参数来说，你必须要使用关键字参数来传递，因为它会让你的数变成字典！</p>
+<p>综上：没有星无所谓使不使用关键字参数，有一个星不能使用关键字参数，两个星必须使用关键字参数。</p>
+<h3 id="解包参数"><a href="#解包参数" class="headerlink" title="解包参数"></a>解包参数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#先定义参数的值，然后再传递参数</span></span><br><span class="line">var = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">a,b,c</span>):</span><br><span class="line">    <span class="built_in">print</span>(a,b,c)</span><br><span class="line">fun(*var)  <span class="comment">#1,2,3 这样就是解包啦！</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#字典的解包</span></span><br><span class="line">var = (<span class="string">&#x27;a&#x27;</span> = <span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;b&#x27;</span> = <span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;c&#x27;</span> = <span class="string">&#x27;3&#x27;</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">a,b,c</span>):</span><br><span class="line">    <span class="built_in">print</span>(a,b,c)</span><br><span class="line">fun(**var)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#在函数中定义函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">funA</span>():</span><br><span class="line">    x = <span class="number">888</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">funB</span>(): <span class="comment">#这个funB函数的作用域就在funA中，外部调用funB会报错的。</span></span><br><span class="line">    	<span class="built_in">print</span>(x)</span><br><span class="line">    funB() </span><br><span class="line">    </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">outer</span>():</span><br><span class="line">    x=<span class="number">0</span></span><br><span class="line">    y=<span class="number">0</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner</span>(<span class="params">x1,y1</span>):</span><br><span class="line">        <span class="built_in">print</span>(x,y)</span><br><span class="line"><span class="comment">#使用下列语句可以调用inner函数！</span></span><br><span class="line">outer()() <span class="comment">#第一个括号表示调用outer函数，第二个括号表示inner函数</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#函数中函数的名称可以做参数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">avg</span>(<span class="params">x,y</span>):</span><br><span class="line">    <span class="keyword">return</span> (x+y)/<span class="number">2</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">函数名,x,y</span>):</span><br><span class="line">    函数名(x,y)  <span class="comment">#我们这里把参数的名字当中函数名</span></span><br><span class="line">f(avg,<span class="number">2</span>,<span class="number">4</span>) <span class="comment">#这里实现的就是avg(2,4) = 3</span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>python</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -1421,41 +1456,6 @@
 
 
 <h3 id="修改字典和删除字典"><a href="#修改字典和删除字典" class="headerlink" title="修改字典和删除字典"></a>修改字典和删除字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#修改字典</span></span><br><span class="line">di = &#123;<span class="string">&#x27;name&#x27;</span> = <span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;num&#x27;</span> = <span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;class&#x27;</span> = <span class="number">3</span>&#125;</span><br><span class="line">di[<span class="string">&#x27;name&#x27;</span> = <span class="string">&#x27;10&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(di[<span class="string">&#x27;name&#x27;</span>])  <span class="comment">#10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除字典</span></span><br><span class="line"><span class="keyword">del</span> di[<span class="string">&#x27;name&#x27;</span>] <span class="comment"># 删除键 &#x27;Name&#x27;</span></span><br><span class="line">di.clear()     <span class="comment"># 清空字典，但是字典还是保留着的</span></span><br><span class="line"><span class="keyword">del</span> di         <span class="comment"># 删除字典</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python--函数</title>
-    <url>/2022/02/19/python-%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h2 id="函数的基本操作"><a href="#函数的基本操作" class="headerlink" title="函数的基本操作"></a><strong>函数的基本操作</strong></h2><span id="more"></span>
-
-<h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用def来定义一个函数myfun,来实现x的累加</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfunadd</span>(<span class="params">x</span>):</span><br><span class="line">	x = x + <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="位置参数"><a href="#位置参数" class="headerlink" title="位置参数"></a>位置参数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#位置参数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">a,b,c</span>):</span><br><span class="line">    <span class="keyword">return</span><span class="string">&quot;&quot;</span>.join((c,b,a)) <span class="comment">#使用join表示在后面添加字符串</span></span><br><span class="line"><span class="built_in">print</span>(func(<span class="string">&quot;我&quot;</span>, <span class="string">&quot;是&quot;</span>, <span class="string">&quot;你&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#帮助函数中的/:代表着/的左边不能指定参数的名字，只能指定其值，但是/的右边就无所谓了。</span></span><br><span class="line"><span class="comment">#我们还可以用*来代替/ *的左边不能用参数的名字，但是右边要用</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">a,*,b,c</span>):</span><br><span class="line">	<span class="built_in">print</span>(a,b,c)</span><br><span class="line">fun(<span class="string">&quot;d&quot;</span>,<span class="string">&quot;e&quot;</span>,<span class="string">&quot;g&quot;</span>) <span class="comment">#error,第二第三个参数要加参数名字</span></span><br><span class="line">fun(<span class="string">&quot;d&quot;</span>,b=<span class="string">&quot;e&quot;</span>,c=<span class="string">&quot;g&quot;</span>) <span class="comment">#d e g</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="收集参数"><a href="#收集参数" class="headerlink" title="收集参数"></a><strong>收集参数</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#收集函数即只指定一个参数，然后允许调用函数时传入任意数量的参数。在函数的形式参数之前加上*号即可</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfun</span>(<span class="params">*var</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;一共传入了&#123;&#125;个参数&quot;</span>.<span class="built_in">format</span>(<span class="built_in">len</span>(var)))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;第二个参数是&#123;&#125;&quot;</span>.<span class="built_in">format</span>(var[<span class="number">1</span>]))</span><br><span class="line"></span><br><span class="line"><span class="comment">#注意只能指定一个带*号的参数，要是需要其他的形式参数，那么需要用到关键字参数。</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfun2</span>(<span class="params">*var,a,b</span>):</span><br><span class="line">    <span class="built_in">print</span>(var,a,b)</span><br><span class="line">myfun2(<span class="string">&quot;Deng&quot;</span>,a=<span class="string">&quot;Gao&quot;</span>,b=<span class="string">&quot;zheng&quot;</span>) <span class="comment">#像这样a和b使用了关键字参数即可</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#在形式参数之前加上两个*代表着传入的参数可以自动转换成为字典</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfun</span>(<span class="params">**var</span>):</span><br><span class="line">    <span class="built_in">print</span>(var) <span class="comment">#</span></span><br><span class="line">myfun(a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span>) <span class="comment">#(&#x27;a&#x27;:&#x27;1&#x27;,&#x27;b&#x27;:&#x27;2&#x27;,&#x27;c&#x27;:&#x27;3&#x27;)即为字典形式</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#综合</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">xing</span>(<span class="params">a,*b,**c</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;a=&quot;</span>,a,<span class="string">&quot;b=&quot;</span>,b,<span class="string">&quot;c=&quot;</span>,c)</span><br><span class="line">xing(<span class="string">&quot;deng&quot;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,c=<span class="string">&quot;zheng&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>#！！！个人总结：1.对于没有星的参数来说，在传入参数时只要出现“，”，那么就会自动跳到下一个参数！2.对于有一个星的参数来说，不能使用关键字参数来传递参数给它！！！否则会报错，它会自动收集剩下的数，即捡破烂。3.对于有两个*的参数来说，你必须要使用关键字参数来传递，因为它会让你的数变成字典！</p>
-<p>综上：没有星无所谓使不使用关键字参数，有一个星不能使用关键字参数，两个星必须使用关键字参数。</p>
-<h3 id="解包参数"><a href="#解包参数" class="headerlink" title="解包参数"></a>解包参数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#先定义参数的值，然后再传递参数</span></span><br><span class="line">var = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">a,b,c</span>):</span><br><span class="line">    <span class="built_in">print</span>(a,b,c)</span><br><span class="line">fun(*var)  <span class="comment">#1,2,3 这样就是解包啦！</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#字典的解包</span></span><br><span class="line">var = (<span class="string">&#x27;a&#x27;</span> = <span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;b&#x27;</span> = <span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;c&#x27;</span> = <span class="string">&#x27;3&#x27;</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">a,b,c</span>):</span><br><span class="line">    <span class="built_in">print</span>(a,b,c)</span><br><span class="line">fun(**var)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#在函数中定义函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">funA</span>():</span><br><span class="line">    x = <span class="number">888</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">funB</span>(): <span class="comment">#这个funB函数的作用域就在funA中，外部调用funB会报错的。</span></span><br><span class="line">    	<span class="built_in">print</span>(x)</span><br><span class="line">    funB() </span><br><span class="line">    </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">outer</span>():</span><br><span class="line">    x=<span class="number">0</span></span><br><span class="line">    y=<span class="number">0</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner</span>(<span class="params">x1,y1</span>):</span><br><span class="line">        <span class="built_in">print</span>(x,y)</span><br><span class="line"><span class="comment">#使用下列语句可以调用inner函数！</span></span><br><span class="line">outer()() <span class="comment">#第一个括号表示调用outer函数，第二个括号表示inner函数</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#函数中函数的名称可以做参数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">avg</span>(<span class="params">x,y</span>):</span><br><span class="line">    <span class="keyword">return</span> (x+y)/<span class="number">2</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">函数名,x,y</span>):</span><br><span class="line">    函数名(x,y)  <span class="comment">#我们这里把参数的名字当中函数名</span></span><br><span class="line">f(avg,<span class="number">2</span>,<span class="number">4</span>) <span class="comment">#这里实现的就是avg(2,4) = 3</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1503,73 +1503,6 @@
       </categories>
       <tags>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--Collec体系集合“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-Collecting%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88%E2%80%9C/</url>
-    <content><![CDATA[<p> Collect接口知识点总结</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/img_convert/5888cfe5738f77ca7a81306dbae10536.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>rt</p>
-<h2 id="Collect父接口"><a href="#Collect父接口" class="headerlink" title="Collect父接口"></a>Collect父接口</h2><p>特点：（有些）对象，无序，无下标，不能重复–&gt;对应着Set接口。</p>
-<p>方法：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/3bf59b036ab708cfc76b85554f643deb.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>常用方法</p>
-<p>iteration迭代器</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/58df797c645cb5fe3e3f7dbd39a89bc0.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>使用next()来用指针不断指向下一行</p>
-<p>iteration要定义对象的：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/79b7331b81bc69966635494f587bc2a0.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>三个常用方法</p>
-<p>遍历元素的方法：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/5a9858fdff8876de3732ae53f9c65917.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>注意：</strong>在iteration里面不能使用collection.remove();来删除元素，要使用iteration(这是对象)来删除元素，iteration.remove()。</p>
-<p>collection判断：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/80ec081de26e2bccf885c09c38fe3aba.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>使用contains方法进行判断，返回值是布朗类型的</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--JDBC知识点“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-JDBC%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
-    <content><![CDATA[<p>JDBC相当于一个驱动，让数据库和java打交道。</p>
-<span id="more"></span>
-
-<p>对于开发人员来说，只需要掌握JDBC接口的操作即可。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/6cb5c95aa1fa076e8db6cc3bbedaf3e6.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>结构图，我们只需要学JDBC</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/1f734dc4920ffa0e272fe890bfcf6492.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>记得先要导入jar包</p>
-<h2 id="mysql-—-基本的操作"><a href="#mysql-—-基本的操作" class="headerlink" title="mysql — 基本的操作"></a><a href="https://dopagip.wordpress.com/2021/12/12/mysql-%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">mysql — 基本的操作</a></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--在sql里面所有的注释都用“--”,school是我们创建的数据库。</span><br><span class="line">show databases; --显示所有的数据库</span><br><span class="line"></span><br><span class="line">use school; --使用数据库</span><br><span class="line">change database</span><br><span class="line"></span><br><span class="line">use tables;  --显示所有的数据表</span><br><span class="line"></span><br><span class="line">desc tables; --显示数据库中所有表的信息</span><br><span class="line"></span><br><span class="line">create database &quot;school&quot;; --创建数据库</span><br><span class="line"></span><br><span class="line">exit; --退出mysql</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>数据库XX语言：</strong></p>
-<p>DDL 定义</p>
-<p>DML 操作</p>
-<p>DQL 查询</p>
-<p>DCL 控制</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
       </tags>
   </entry>
   <entry>
@@ -1692,6 +1625,113 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--Collec体系集合“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-Collecting%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88%E2%80%9C/</url>
+    <content><![CDATA[<p> Collect接口知识点总结</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5888cfe5738f77ca7a81306dbae10536.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>rt</p>
+<h2 id="Collect父接口"><a href="#Collect父接口" class="headerlink" title="Collect父接口"></a>Collect父接口</h2><p>特点：（有些）对象，无序，无下标，不能重复–&gt;对应着Set接口。</p>
+<p>方法：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/3bf59b036ab708cfc76b85554f643deb.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>常用方法</p>
+<p>iteration迭代器</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/58df797c645cb5fe3e3f7dbd39a89bc0.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>使用next()来用指针不断指向下一行</p>
+<p>iteration要定义对象的：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/79b7331b81bc69966635494f587bc2a0.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>三个常用方法</p>
+<p>遍历元素的方法：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5a9858fdff8876de3732ae53f9c65917.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>注意：</strong>在iteration里面不能使用collection.remove();来删除元素，要使用iteration(这是对象)来删除元素，iteration.remove()。</p>
+<p>collection判断：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/80ec081de26e2bccf885c09c38fe3aba.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>使用contains方法进行判断，返回值是布朗类型的</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--List接口“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-List%E6%8E%A5%E5%8F%A3%E2%80%9C/</url>
+    <content><![CDATA[<p>List接口的特点：有序，有下标，元素可以重复</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c9cdc1cdd6f5c40143f331e073b1e6d5.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>方法</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0bedf789e0a4cd33aaa07ae2168acd44.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>添加和删除元素</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/19185e0b9483bfe1b38c34162844d34f.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>get方法用于获取对应下标的元素</p>
+<p>使用迭代器的时候一定要创建对象：Iteration it = new Iteration();</p>
+<p>列表迭代器ListIteration:</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/dcbd1ce79c18634b6492f4448bf5b888.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>ListIteration</p>
+<p>判断和获取位置：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ca6817f90e6db3a22f8091e3658e58ab.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>List对象使用List.remove();括号里面填的是对应删除位置的下标，要删除对应元素要使用“”</p>
+<p>subList方法：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6f314a747cf1a833d4c6d71055ca2ac7.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>subList</p>
+<p>用来返回一个子集合，括号里面有两个数，逗号前面是集合开始的位置，后面是集合结束的位置。注意是含头不含尾的，左闭右开。</p>
+<p><strong>List的类</strong>：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/de3ed4574c6a50d128b9bd4d3f3cdacb.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>Vector现在少用了，ArrayList用的多</p>
+<p>ArrayList默认长度是0。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--JDBC知识点“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-JDBC%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
+    <content><![CDATA[<p>JDBC相当于一个驱动，让数据库和java打交道。</p>
+<span id="more"></span>
+
+<p>对于开发人员来说，只需要掌握JDBC接口的操作即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6cb5c95aa1fa076e8db6cc3bbedaf3e6.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>结构图，我们只需要学JDBC</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/1f734dc4920ffa0e272fe890bfcf6492.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>记得先要导入jar包</p>
+<h2 id="mysql-—-基本的操作"><a href="#mysql-—-基本的操作" class="headerlink" title="mysql — 基本的操作"></a><a href="https://dopagip.wordpress.com/2021/12/12/mysql-%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">mysql — 基本的操作</a></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--在sql里面所有的注释都用“--”,school是我们创建的数据库。</span><br><span class="line">show databases; --显示所有的数据库</span><br><span class="line"></span><br><span class="line">use school; --使用数据库</span><br><span class="line">change database</span><br><span class="line"></span><br><span class="line">use tables;  --显示所有的数据表</span><br><span class="line"></span><br><span class="line">desc tables; --显示数据库中所有表的信息</span><br><span class="line"></span><br><span class="line">create database &quot;school&quot;; --创建数据库</span><br><span class="line"></span><br><span class="line">exit; --退出mysql</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>数据库XX语言：</strong></p>
+<p>DDL 定义</p>
+<p>DML 操作</p>
+<p>DQL 查询</p>
+<p>DCL 控制</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--SringBuffer和StringBudilder“</title>
     <url>/2022/02/09/%E2%80%9DJAVA-SringBuffer%E5%92%8CStringBudilder%E2%80%9C/</url>
     <content><![CDATA[<p>这两个都是可变字符串.</p>
@@ -1705,6 +1745,25 @@
 <p>replace(“0”，“5”，str)把0-5之间的字符替换为str。</p>
 <p>用<strong>delete删除指定位置的字符：</strong></p>
 <p>delete（“0”，“5”）删除0-5之间的字符串。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--Sring声明“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-Sring%E5%A3%B0%E6%98%8E%E2%80%9C/</url>
+    <content><![CDATA[<p>引用类型的引用在栈里面，对象在堆里面。</p>
+<span id="more"></span>
+
+<p>字符串的字面值存储在字符串池中，可以实现共享。</p>
+<p>String name = 20;//这里name存储在堆里面，20存储在方法池里面。</p>
+<p>声明string字符串有两种方式：</p>
+<p>1.String name = “Hellp”//产生一个对象，存储在字符串池中</p>
+<p>2.String name = new String(“Hello”)//产生两个对象，在字符串池和堆中各存放一个</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -1759,56 +1818,50 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--List接口“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-List%E6%8E%A5%E5%8F%A3%E2%80%9C/</url>
-    <content><![CDATA[<p>List接口的特点：有序，有下标，元素可以重复</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/c9cdc1cdd6f5c40143f331e073b1e6d5.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>方法</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/0bedf789e0a4cd33aaa07ae2168acd44.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>添加和删除元素</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/19185e0b9483bfe1b38c34162844d34f.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>get方法用于获取对应下标的元素</p>
-<p>使用迭代器的时候一定要创建对象：Iteration it = new Iteration();</p>
-<p>列表迭代器ListIteration:</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/dcbd1ce79c18634b6492f4448bf5b888.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>ListIteration</p>
-<p>判断和获取位置：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/ca6817f90e6db3a22f8091e3658e58ab.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>List对象使用List.remove();括号里面填的是对应删除位置的下标，要删除对应元素要使用“”</p>
-<p>subList方法：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/6f314a747cf1a833d4c6d71055ca2ac7.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>subList</p>
-<p>用来返回一个子集合，括号里面有两个数，逗号前面是集合开始的位置，后面是集合结束的位置。注意是含头不含尾的，左闭右开。</p>
-<p><strong>List的类</strong>：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/de3ed4574c6a50d128b9bd4d3f3cdacb.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>Vector现在少用了，ArrayList用的多</p>
-<p>ArrayList默认长度是0。</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--Sring声明“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-Sring%E5%A3%B0%E6%98%8E%E2%80%9C/</url>
-    <content><![CDATA[<p>引用类型的引用在栈里面，对象在堆里面。</p>
+    <title>”JAVA--字符流知识点“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E5%AD%97%E7%AC%A6%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
+    <content><![CDATA[<p>在使用read读取字符流的时候，一点要在硬盘里面先创建要读取的文件，否则会报错。</p>
 <span id="more"></span>
 
-<p>字符串的字面值存储在字符串池中，可以实现共享。</p>
-<p>String name = 20;//这里name存储在堆里面，20存储在方法池里面。</p>
-<p>声明string字符串有两种方式：</p>
-<p>1.String name = “Hellp”//产生一个对象，存储在字符串池中</p>
-<p>2.String name = new String(“Hello”)//产生两个对象，在字符串池和堆中各存放一个</p>
+<p><strong>字符流和字节流的区别：字节流可以复制所有包括图片的文件，但是字符流只能复制文本文件，图片等文件都不能复制。</strong></p>
+<p><strong>输入流（FileReader）：</strong></p>
+<p>public int read(char[] c);从流中读取多个字符，将读到的内容存进c数组，返回读取到的字符数，如果到达文件的结尾，返回-1。</p>
+<p>一种方法：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5a90bcd8900c6c6b86f4918742c563c0.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>另一种方法：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b26f776ef1dc56a1cd10c2f50b73c6d3.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>输出流（FileWriter）：</strong></p>
+<p>public void write(String str):一次写入多个字符，将str中的所有字符全部写入输出流中。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/7624a06874a9e5560ec895e884896a18.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>只能用for循环表示，while循环无法转换类型。</p>
+<p>用FileWriter和FileReader复制文件：（只能复制文本文件，不能复制图片和声音视频等）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ca3c56e7bb5938b65c0e17d26fe500d8.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>把read的内容复制粘贴到read1当中，利用了字符数组by</p>
+<p><strong>复制图片文件？</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9b0880f0888663e401ee1f5c7a0bfcde.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>文件名字不一样，其他和上面一样。</p>
+<p>结果会报错：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/99730c60bdecf8a9c918b73c61618110.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>WriterBuffered缓冲区和ReaderBuffered缓冲区:</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0c932e4142daa263933523eea841c51a.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>br.read()一次读取一个字符</p>
+<p>没什么难度，和前面一样。</p>
+<p>缓冲流的特点：</p>
+<p>1.高效读写；2.支持输入换行符(bw.newline;)；3.可以一次写一行读一行。（用readline一次读取一行而不是一个字符。）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/2f6b2103d1048aa0da0f0683df50fba7.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>读取一行字符，以换行符为结尾。</p>
+<p><strong>PrintWriter的使用：</strong>调用java.io.PrintWriter.</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ac542505b12931975133b1314d0ac37a.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>相当于直接用System.out来打印，可以使用print和println等等，记得close关闭.</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -1872,59 +1925,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--字符流知识点“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E5%AD%97%E7%AC%A6%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
-    <content><![CDATA[<p>在使用read读取字符流的时候，一点要在硬盘里面先创建要读取的文件，否则会报错。</p>
-<span id="more"></span>
-
-<p><strong>字符流和字节流的区别：字节流可以复制所有包括图片的文件，但是字符流只能复制文本文件，图片等文件都不能复制。</strong></p>
-<p><strong>输入流（FileReader）：</strong></p>
-<p>public int read(char[] c);从流中读取多个字符，将读到的内容存进c数组，返回读取到的字符数，如果到达文件的结尾，返回-1。</p>
-<p>一种方法：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/5a90bcd8900c6c6b86f4918742c563c0.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>另一种方法：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/b26f776ef1dc56a1cd10c2f50b73c6d3.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>输出流（FileWriter）：</strong></p>
-<p>public void write(String str):一次写入多个字符，将str中的所有字符全部写入输出流中。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/7624a06874a9e5560ec895e884896a18.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>只能用for循环表示，while循环无法转换类型。</p>
-<p>用FileWriter和FileReader复制文件：（只能复制文本文件，不能复制图片和声音视频等）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/ca3c56e7bb5938b65c0e17d26fe500d8.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>把read的内容复制粘贴到read1当中，利用了字符数组by</p>
-<p><strong>复制图片文件？</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9b0880f0888663e401ee1f5c7a0bfcde.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>文件名字不一样，其他和上面一样。</p>
-<p>结果会报错：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/99730c60bdecf8a9c918b73c61618110.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>WriterBuffered缓冲区和ReaderBuffered缓冲区:</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/0c932e4142daa263933523eea841c51a.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>br.read()一次读取一个字符</p>
-<p>没什么难度，和前面一样。</p>
-<p>缓冲流的特点：</p>
-<p>1.高效读写；2.支持输入换行符(bw.newline;)；3.可以一次写一行读一行。（用readline一次读取一行而不是一个字符。）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/2f6b2103d1048aa0da0f0683df50fba7.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>读取一行字符，以换行符为结尾。</p>
-<p><strong>PrintWriter的使用：</strong>调用java.io.PrintWriter.</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/ac542505b12931975133b1314d0ac37a.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>相当于直接用System.out来打印，可以使用print和println等等，记得close关闭.</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--拆箱和装箱，字符串数字转换“</title>
     <url>/2022/02/09/%E2%80%9DJAVA-%E6%8B%86%E7%AE%B1%E5%92%8C%E8%A3%85%E7%AE%B1%EF%BC%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E2%80%9C/</url>
     <content><![CDATA[<p>数据类型（int，float等等）存放在栈里面。</p>
@@ -1944,24 +1944,6 @@
 <p>int num = 20;</p>
 <p>Integer integer = num;</p>
 <p>String s = integer.tostring(num，10)//这里解释一下，tostring括号里面的num是要转换为字符串的数字，后面的10是转换为10进制的，当然也可以变成8/16转换成八进制十六进制。</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--抽象类“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E2%80%9C/</url>
-    <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
-<span id="more"></span>
-
-<p>1.当子类继承的父类当中有抽象的方法时，子类必须要重写抽象方法</p>
-<p>2.java里面的类是单继承的，但是接口时多继承的</p>
-<p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
-<p>4.抽象方法必须在抽象类里面</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -2016,6 +1998,45 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--捕获异常“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8%E2%80%9C/</url>
+    <content><![CDATA[<p> 捕获异常的知识点</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
+<p>假设要捕获多个异常，从大到小。</p>
+<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--抽象类“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E2%80%9C/</url>
+    <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
+<span id="more"></span>
+
+<p>1.当子类继承的父类当中有抽象的方法时，子类必须要重写抽象方法</p>
+<p>2.java里面的类是单继承的，但是接口时多继承的</p>
+<p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
+<p>4.抽象方法必须在抽象类里面</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--接口interface“</title>
     <url>/2022/02/09/%E2%80%9DJAVA-%E6%8E%A5%E5%8F%A3interface%E2%80%9C/</url>
     <content><![CDATA[<p> 1.接口只有规范，无法写方法，是专业的抽象。实现约束和实现分离，面向接口编程。</p>
@@ -2031,27 +2052,6 @@
 <p>实现了接口中的类就要重写接口中的方法，接口的多继承用逗号连接实现。</p>
 <p>接口的作用</p>
 <p><img src="https://img-blog.csdnimg.cn/9ec1434941764960bada7de63fcf34be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--捕获异常“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8%E2%80%9C/</url>
-    <content><![CDATA[<p> 捕获异常的知识点</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
-<p>假设要捕获多个异常，从大到小。</p>
-<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -2144,23 +2144,6 @@
 <p><img src="https://img-blog.csdnimg.cn/img_convert/de6bca422bb73bab89a0181d5a3a2381.png" alt="img"></p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p>用了增强for循环</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--泛型“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E6%B3%9B%E5%9E%8B%E2%80%9C/</url>
-    <content><![CDATA[<p>介绍泛型的基本概念</p>
-<span id="more"></span>
-
-<p><strong>基本概念：</strong>（传递类型参数的东西）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/446e9973ebc5dab7b15dbedca430ed4c.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -2266,20 +2249,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”Linux--Xshell和Xftp“</title>
-    <url>/2022/02/09/%E2%80%9DLinux-Xshell%E5%92%8CXftp%E2%80%9C/</url>
-    <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
-<p>不同点：Xftp用于发送文件。</p>
-<p>Xshell可以使用windows来访问Linux，实现远程操控。</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--类的盘点“</title>
     <url>/2022/02/09/%E2%80%9DJAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9%E2%80%9C/</url>
     <content><![CDATA[<p>先来一个特殊的：</p>
@@ -2301,14 +2270,14 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--集合知识点“</title>
-    <url>/2022/02/09/%E2%80%9DJAVA-%E9%9B%86%E5%90%88%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
-    <content><![CDATA[<p>1.集合的概念：存放对象的容器，类似数组的概念，同样集合也有对多个对象进行批量操作的功能。</p>
+    <title>”JAVA--泛型“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E6%B3%9B%E5%9E%8B%E2%80%9C/</url>
+    <content><![CDATA[<p>介绍泛型的基本概念</p>
 <span id="more"></span>
 
-<p>2.集合与数组的区别：<br>（1）数组的长度是固定的，但是集合的长度是不固定的。</p>
-<p>（2）数组可以存放引用类型（如Integer Float等）和基本数据类型（int float 等），集合只能存放引用类型。</p>
-<p>3.集合用到的所有类都在java.util.*这个包里面。</p>
+<p><strong>基本概念：</strong>（传递类型参数的东西）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/446e9973ebc5dab7b15dbedca430ed4c.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -2335,6 +2304,84 @@
       </categories>
       <tags>
         <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--集合知识点“</title>
+    <url>/2022/02/09/%E2%80%9DJAVA-%E9%9B%86%E5%90%88%E7%9F%A5%E8%AF%86%E7%82%B9%E2%80%9C/</url>
+    <content><![CDATA[<p>1.集合的概念：存放对象的容器，类似数组的概念，同样集合也有对多个对象进行批量操作的功能。</p>
+<span id="more"></span>
+
+<p>2.集合与数组的区别：<br>（1）数组的长度是固定的，但是集合的长度是不固定的。</p>
+<p>（2）数组可以存放引用类型（如Integer Float等）和基本数据类型（int float 等），集合只能存放引用类型。</p>
+<p>3.集合用到的所有类都在java.util.*这个包里面。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”Linux--Xshell和Xftp“</title>
+    <url>/2022/02/09/%E2%80%9DLinux-Xshell%E5%92%8CXftp%E2%80%9C/</url>
+    <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
+<p>不同点：Xftp用于发送文件。</p>
+<p>Xshell可以使用windows来访问Linux，实现远程操控。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”Linux--vi和vim“</title>
+    <url>/2022/02/09/%E2%80%9DLinux-vi%E5%92%8Cvim%E2%80%9C/</url>
+    <content><![CDATA[<p> vim具有编程的能力，是vi的增强版本，代码补全，颜色都有（有点像IDEA） </p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/7f41fab8a28c46cc877a41e40ddc1957.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>注意：</p>
+<p>1.按下“i”进入输入模式；先输入esc再按下“：”进入命令行模式。不进入编辑模式是没办法写代码的。</p>
+<p>2.vim和vi的命令是区分大小写的。</p>
+<p>-——————————————————————————————————————————–</p>
+<h2 id="下面用Xshell和vim写一个Hello-java程序："><a href="#下面用Xshell和vim写一个Hello-java程序：" class="headerlink" title="下面用Xshell和vim写一个Hello.java程序："></a><strong>下面用Xshell和vim写一个Hello.java程序：</strong></h2><p>1.先输入这个指令：vim Hello.java</p>
+<p><img src="https://img-blog.csdnimg.cn/6e6abde8af21487191742eadbff7d350.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>2.在生成的界面中按下“i”键进入编辑模式，看到最下面变成“–插入–” 即可</p>
+<p><img src="https://img-blog.csdnimg.cn/a4df0727a4e446f79efd224933f30871.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_12,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>3.在空白的地方写java代码，输出一个Helloworld</p>
+<p><img src="https://img-blog.csdnimg.cn/ab0f994ac7ec4d73aeb50f516514790f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>4.最后按下esc再按下“：wq”（其中wq表示write和quit）即可完成Hello.java程序的编写。</p>
+<p>-——————————————————————————————————————————–</p>
+<h1 id="重点：在vim中各种模式的切换"><a href="#重点：在vim中各种模式的切换" class="headerlink" title="重点：在vim中各种模式的切换"></a><strong>重点：在vim中各种模式的切换</strong></h1><p> <img src="https://img-blog.csdnimg.cn/a081d79f164048a8a0b204e1e2237e82.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>wq（保存退出），q（退出），q！（强制退出，并且不保存）</p>
+<p>快捷键：</p>
+<p>1.“yy”用于拷贝当前行，“5yy”用于拷贝从光标那行往下的5行。</p>
+<p>2.“dd”用于删除当前行，“5dd”用于删除光标往下的那5行。</p>
+<p>3.寻找文件中对应的关键字或者字符，在一般模式下点“/” 然后输入你想找的关键字。输入“n”寻找下一个。</p>
+<p>4.按下“G”到达文件的最底端，按下“gg”到达文件的最顶端。</p>
+<p>5.撤销动作：在一般模式下按“u”。</p>
+<p>6.想要定位到对应的行：比如你想对应到20行，在一般模式下输入20，然后shift+g。</p>
+<p>7.一般模式下“：”输入set nu表示打开行号，输入“set nonu”表示关闭行号。</p>
+<h1 id="Linux下的开机，重启，关机"><a href="#Linux下的开机，重启，关机" class="headerlink" title="Linux下的开机，重启，关机"></a><strong>Linux下的开机，重启，关机</strong></h1><p>1.shutdown -h now 现在马上关机</p>
+<p>2.shutdown -h 1 一分钟后关机</p>
+<p>3.shutdown -r now 现在马上重启</p>
+<p>4.halt 关机</p>
+<p>5.reboot 现在重启</p>
+<p>6.sync 将内存的内容同步到磁盘(相当于保存)</p>
+<h1 id="用户登录"><a href="#用户登录" class="headerlink" title="用户登录"></a><strong>用户登录</strong></h1><p>尽量不要使用root登录，避免失误。</p>
+<p>若是普通用户登录后需要获得管理员权限，使用su-用户名 即可。</p>
+<p>使用logout来注销用户登录（在运行级别三上面有用）</p>
+<p>在root情况下logout退到你原来的用户，再使用一次logout退出系统！</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -2416,75 +2463,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”Linux--vi和vim“</title>
-    <url>/2022/02/09/%E2%80%9DLinux-vi%E5%92%8Cvim%E2%80%9C/</url>
-    <content><![CDATA[<p> vim具有编程的能力，是vi的增强版本，代码补全，颜色都有（有点像IDEA） </p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/7f41fab8a28c46cc877a41e40ddc1957.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>注意：</p>
-<p>1.按下“i”进入输入模式；先输入esc再按下“：”进入命令行模式。不进入编辑模式是没办法写代码的。</p>
-<p>2.vim和vi的命令是区分大小写的。</p>
-<p>-——————————————————————————————————————————–</p>
-<h2 id="下面用Xshell和vim写一个Hello-java程序："><a href="#下面用Xshell和vim写一个Hello-java程序：" class="headerlink" title="下面用Xshell和vim写一个Hello.java程序："></a><strong>下面用Xshell和vim写一个Hello.java程序：</strong></h2><p>1.先输入这个指令：vim Hello.java</p>
-<p><img src="https://img-blog.csdnimg.cn/6e6abde8af21487191742eadbff7d350.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>2.在生成的界面中按下“i”键进入编辑模式，看到最下面变成“–插入–” 即可</p>
-<p><img src="https://img-blog.csdnimg.cn/a4df0727a4e446f79efd224933f30871.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_12,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>3.在空白的地方写java代码，输出一个Helloworld</p>
-<p><img src="https://img-blog.csdnimg.cn/ab0f994ac7ec4d73aeb50f516514790f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>4.最后按下esc再按下“：wq”（其中wq表示write和quit）即可完成Hello.java程序的编写。</p>
-<p>-——————————————————————————————————————————–</p>
-<h1 id="重点：在vim中各种模式的切换"><a href="#重点：在vim中各种模式的切换" class="headerlink" title="重点：在vim中各种模式的切换"></a><strong>重点：在vim中各种模式的切换</strong></h1><p> <img src="https://img-blog.csdnimg.cn/a081d79f164048a8a0b204e1e2237e82.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>wq（保存退出），q（退出），q！（强制退出，并且不保存）</p>
-<p>快捷键：</p>
-<p>1.“yy”用于拷贝当前行，“5yy”用于拷贝从光标那行往下的5行。</p>
-<p>2.“dd”用于删除当前行，“5dd”用于删除光标往下的那5行。</p>
-<p>3.寻找文件中对应的关键字或者字符，在一般模式下点“/” 然后输入你想找的关键字。输入“n”寻找下一个。</p>
-<p>4.按下“G”到达文件的最底端，按下“gg”到达文件的最顶端。</p>
-<p>5.撤销动作：在一般模式下按“u”。</p>
-<p>6.想要定位到对应的行：比如你想对应到20行，在一般模式下输入20，然后shift+g。</p>
-<p>7.一般模式下“：”输入set nu表示打开行号，输入“set nonu”表示关闭行号。</p>
-<h1 id="Linux下的开机，重启，关机"><a href="#Linux下的开机，重启，关机" class="headerlink" title="Linux下的开机，重启，关机"></a><strong>Linux下的开机，重启，关机</strong></h1><p>1.shutdown -h now 现在马上关机</p>
-<p>2.shutdown -h 1 一分钟后关机</p>
-<p>3.shutdown -r now 现在马上重启</p>
-<p>4.halt 关机</p>
-<p>5.reboot 现在重启</p>
-<p>6.sync 将内存的内容同步到磁盘(相当于保存)</p>
-<h1 id="用户登录"><a href="#用户登录" class="headerlink" title="用户登录"></a><strong>用户登录</strong></h1><p>尽量不要使用root登录，避免失误。</p>
-<p>若是普通用户登录后需要获得管理员权限，使用su-用户名 即可。</p>
-<p>使用logout来注销用户登录（在运行级别三上面有用）</p>
-<p>在root情况下logout退到你原来的用户，再使用一次logout退出系统！</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--random“</title>
-    <url>/2022/02/09/%E2%80%9Dpython-random%E2%80%9C/</url>
-    <content><![CDATA[<p>随机生产一个取值范围在10~100的整数：random.randint(10,100)</p>
-<span id="more"></span>
-
-<p>一个比较重要的语法：</p>
-<p>random.randint(1~10)假设生成的随机数是1</p>
-<p>random.randint(1~10)假设生成的随机数是3</p>
-<p>random.randint(1~10)假设生成的随机数是6</p>
-<p>我们使用random.setstate(x)</p>
-<p>在后面我们再使用三次</p>
-<p>random.randint(1~10）</p>
-<p>三次生成的数分别是1，3，6，所以可以推断出setstate的作用是把前三次生成的随机数变成一个固定的状态再后面再生成！</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”Linux--用户管理“</title>
     <url>/2022/02/09/%E2%80%9DLinux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E2%80%9C/</url>
     <content><![CDATA[<p> 一、基本操作：</p>
@@ -2513,27 +2491,6 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--列表里的函数“</title>
-    <url>/2022/02/09/%E2%80%9Dpython-%E5%88%97%E8%A1%A8%E9%87%8C%E7%9A%84%E5%87%BD%E6%95%B0%E2%80%9C/</url>
-    <content><![CDATA[<p> sort()将数组从小到大排序。</p>
-<p>reverse（）将数组此时的位置进行倒转</p>
-<span id="more"></span>
-
-<p>count（？）问号的内容是数组里面的数据元素，这个函数用于数出这个数据元素在这个数组里面出现了几次</p>
-<p>index（？），问号的内容是数组里面的数据元素，这个函数用于显示这个元素在数组里面出现的位置（如果有多个元素相同，那么显示第一个元素的位置）。<strong>可以在后面再加两个参数分别显示查找开始和结束的位置，index(？，start，end)</strong></p>
-<p>一个数组赋值给另外一个列表，比如nums数组赋值给nums_two数组：nums_two = nums.copy()</p>
-<p><strong>注意：nums这个数组和nums[:]这个数组是表示的同一个</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/9ee34faef1d743f089ab46f13fbc0e56.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/1918e8c5870c4dcba8d4b42608cde2ad.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_5,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -2588,6 +2545,49 @@
       </tags>
   </entry>
   <entry>
+    <title>”python--random“</title>
+    <url>/2022/02/09/%E2%80%9Dpython-random%E2%80%9C/</url>
+    <content><![CDATA[<p>随机生产一个取值范围在10~100的整数：random.randint(10,100)</p>
+<span id="more"></span>
+
+<p>一个比较重要的语法：</p>
+<p>random.randint(1~10)假设生成的随机数是1</p>
+<p>random.randint(1~10)假设生成的随机数是3</p>
+<p>random.randint(1~10)假设生成的随机数是6</p>
+<p>我们使用random.setstate(x)</p>
+<p>在后面我们再使用三次</p>
+<p>random.randint(1~10）</p>
+<p>三次生成的数分别是1，3，6，所以可以推断出setstate的作用是把前三次生成的随机数变成一个固定的状态再后面再生成！</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--列表里的函数“</title>
+    <url>/2022/02/09/%E2%80%9Dpython-%E5%88%97%E8%A1%A8%E9%87%8C%E7%9A%84%E5%87%BD%E6%95%B0%E2%80%9C/</url>
+    <content><![CDATA[<p> sort()将数组从小到大排序。</p>
+<p>reverse（）将数组此时的位置进行倒转</p>
+<span id="more"></span>
+
+<p>count（？）问号的内容是数组里面的数据元素，这个函数用于数出这个数据元素在这个数组里面出现了几次</p>
+<p>index（？），问号的内容是数组里面的数据元素，这个函数用于显示这个元素在数组里面出现的位置（如果有多个元素相同，那么显示第一个元素的位置）。<strong>可以在后面再加两个参数分别显示查找开始和结束的位置，index(？，start，end)</strong></p>
+<p>一个数组赋值给另外一个列表，比如nums数组赋值给nums_two数组：nums_two = nums.copy()</p>
+<p><strong>注意：nums这个数组和nums[:]这个数组是表示的同一个</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/9ee34faef1d743f089ab46f13fbc0e56.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/1918e8c5870c4dcba8d4b42608cde2ad.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_5,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”python--一些函数“</title>
     <url>/2022/02/09/%E2%80%9Dpython-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0%E2%80%9C/</url>
     <content><![CDATA[<p> bool()：判断括号里面的结果是真还是假。</p>
@@ -2622,47 +2622,6 @@
       </categories>
       <tags>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构--基本概念</title>
-    <url>/2022/02/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
-    <content><![CDATA[<h1 id="本章主要讲解数据结构和算法的基本概念，在文中标有-的是重点内容一定要熟记！"><a href="#本章主要讲解数据结构和算法的基本概念，在文中标有-的是重点内容一定要熟记！" class="headerlink" title="本章主要讲解数据结构和算法的基本概念，在文中标有*的是重点内容一定要熟记！"></a>本章主要讲解数据结构和算法的基本概念，在文中标有*的是重点内容一定要熟记！</h1><h2 id="数据结构考纲"><a href="#数据结构考纲" class="headerlink" title="数据结构考纲"></a>数据结构考纲</h2><h3 id="数据结构的三要素（考点）"><a href="#数据结构的三要素（考点）" class="headerlink" title="数据结构的三要素（考点）"></a>数据结构的三要素（考点）</h3><p>1.<em>逻辑结构：分为线性结构和非线性结构。*<em>线性结构：线性表，栈，队列；非线性结构：树，图，集合</em></em></p>
-<p>2.*存储结构（物理结构）</p>
-<p>3.数据的运算</p>
-<h3 id="数据结构的五个特征"><a href="#数据结构的五个特征" class="headerlink" title="数据结构的五个特征"></a>数据结构的五个特征</h3><p>有穷性，确定性，可行性，输入，输出</p>
-<h3 id="效率的度量（重点-考点）"><a href="#效率的度量（重点-考点）" class="headerlink" title="效率的度量（重点+考点）"></a>效率的度量（重点+考点）</h3><p><strong>时间复杂度</strong>*和空间复杂度（<strong>时间复杂度是重中之重，选择题大题都会出现</strong>）</p>
-<h2 id="数据结构知识点"><a href="#数据结构知识点" class="headerlink" title="数据结构知识点"></a>数据结构知识点</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>1.数据：数据是<strong>信息的载体</strong>，是描述客观事物属性的数，字符及所有<strong>能输入到计算机中并被计算机程序识别</strong>和处理的符号集合。数据是计算机程序加工的原料。</p>
-<p>（1）数值型数据：整数，实数等</p>
-<p>（2）非数值型数据：文字，图像，图形，声音等</p>
-<p>2.数据元素：<strong>数据元素</strong>是数据的基本单位，通常作为一个整体考虑。也称为<strong>记录</strong>、<strong>顶点</strong>、<strong>结点</strong>。</p>
-<p>3.数据项：一个数据元素由若干个数据项组成，<strong>数据项</strong>是数据元素中不可分割的<strong>最小单位</strong>。</p>
-<p>4.数据结构：<strong>数据结构</strong>是数据相互之间存在<strong>一种或多种特定关系</strong>的数据元素的集合。 </p>
-<p>（1）<strong>逻辑结构</strong>：数据元素之间的逻辑关系</p>
-<p>​    <strong>a.线性结构</strong>：有且仅有一个开始和一个终端结点，并且所有节点最多只有一个之间前趋和一个直接后继。</p>
-<p>​                            例如：<strong>线性表、栈、队列、串</strong></p>
-<p>​    <strong>b.非线性结构</strong>：一个结点可能有多个直接前趋和直接后继</p>
-<p>​                            例如：<strong>树、图</strong></p>
-<p>（2）<strong>物理结构</strong>（存储结构）：数据元素及其关系在计算机内存中的表示。</p>
-<p>​    <strong>a.顺序存储结构</strong>：用一组<strong>连续</strong>的存储单元<strong>依次</strong>存储数据元素，数据元素之间的逻辑关系由元素的<strong>存储位置</strong>来表示，C中用数组来实现顺序存储关系。<strong>方便查找。</strong></p>
-<p>​    <strong>b.链式存储结构</strong>：用任意的存储单元存储数据元素，数据元素之间的逻辑关系用<strong>指针</strong>表示，C用<strong>指针</strong>来实现链式存储结构。<strong>方便插入和删除。</strong></p>
-<p>​    <strong>c.索引存储结构</strong>：需建立附加的索引表，索引表中每一项称为索引项，一般形式为（关键字，地址）</p>
-<p>​    <strong>d.散列存储</strong>：根据关键字计算出结点的存储地址</p>
-<p>5.数据对象：<strong>数据对象</strong>是具有<strong>相同性质</strong>的<strong>数据元素</strong>的集合，是数据的一个子集。如整数的数据对象是集合N={1,2,3,…}</p>
-<p> 6.数据类型：是指一组性质相同的值的集合和定义在此集合上的一组操作的总称。</p>
-<p>（1）原子类型：是不可以再分解的基本类型，包括整型（int），实型，字符型（char）等</p>
-<p>（2）结构类型：由若干个类型组合而成，是可以再分解的。如整型数组是由若干个整型数据组成的</p>
-<p>7.抽象数据类型（ADT）：抽象数据类型可用三元组（D，S，P）表示，D是数据对象，S是D上的关系集，P是对D的基本操作集。</p>
-<p><img src="C:\Users\me\AppData\Roaming\Typora\typora-user-images\image-20220223211435472.png" alt="image-20220223211435472"></p>
-<p><img src="C:\Users\me\AppData\Roaming\Typora\typora-user-images\image-20220223212446639.png" alt="image-20220223212446639"></p>
-<p><strong>综上：数据&gt;数据对象&gt;数据元素&gt;数据项</strong></p>
-<p><img src="C:\Users\me\AppData\Roaming\Typora\typora-user-images\image-20220223223441656.png" alt="image-20220223223441656"></p>
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -2710,6 +2669,95 @@
       </categories>
       <tags>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构--基本概念</title>
+    <url>/2022/02/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<h1 id="本章主要讲解数据结构和算法的基本概念，在文中标有-的是重点内容一定要熟记！"><a href="#本章主要讲解数据结构和算法的基本概念，在文中标有-的是重点内容一定要熟记！" class="headerlink" title="本章主要讲解数据结构和算法的基本概念，在文中标有*的是重点内容一定要熟记！"></a>本章主要讲解数据结构和算法的基本概念，在文中标有*的是重点内容一定要熟记！</h1><h2 id="数据结构考纲"><a href="#数据结构考纲" class="headerlink" title="数据结构考纲"></a>数据结构考纲</h2><h3 id="数据结构的三要素（考点）"><a href="#数据结构的三要素（考点）" class="headerlink" title="数据结构的三要素（考点）"></a>数据结构的三要素（考点）</h3><p>1.<em>逻辑结构：分为线性结构和非线性结构。*<em>线性结构：线性表，栈，队列；非线性结构：树，图，集合</em></em></p>
+<p>2.*存储结构（物理结构）</p>
+<p>3.数据的运算</p>
+<h3 id="数据结构的五个特征"><a href="#数据结构的五个特征" class="headerlink" title="数据结构的五个特征"></a>数据结构的五个特征</h3><p>有穷性，确定性，可行性，输入，输出</p>
+<h3 id="效率的度量（重点-考点）"><a href="#效率的度量（重点-考点）" class="headerlink" title="效率的度量（重点+考点）"></a>效率的度量（重点+考点）</h3><p><strong>时间复杂度</strong>*和空间复杂度（<strong>时间复杂度是重中之重，选择题大题都会出现</strong>）</p>
+<h2 id="数据结构知识点"><a href="#数据结构知识点" class="headerlink" title="数据结构知识点"></a>数据结构知识点</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>1.数据：数据是<strong>信息的载体</strong>，是描述客观事物属性的数，字符及所有<strong>能输入到计算机中并被计算机程序识别</strong>和处理的符号集合。数据是计算机程序加工的原料。</p>
+<p>（1）数值型数据：整数，实数等</p>
+<p>（2）非数值型数据：文字，图像，图形，声音等</p>
+<p>2.数据元素：<strong>数据元素</strong>是数据的基本单位，通常作为一个整体考虑。也称为<strong>记录</strong>、<strong>顶点</strong>、<strong>结点</strong>。</p>
+<p>3.数据项：一个数据元素由若干个数据项组成，<strong>数据项</strong>是数据元素中不可分割的<strong>最小单位</strong>。</p>
+<p>4.数据结构：<strong>数据结构</strong>是数据相互之间存在<strong>一种或多种特定关系</strong>的数据元素的集合。 </p>
+<p>（1）<strong>逻辑结构</strong>：数据元素之间的逻辑关系</p>
+<p>​    <strong>a.线性结构</strong>：有且仅有一个开始和一个终端结点，并且所有节点最多只有一个之间前趋和一个直接后继。</p>
+<p>​                            例如：<strong>线性表、栈、队列、串</strong></p>
+<p>​    <strong>b.非线性结构</strong>：一个结点可能有多个直接前趋和直接后继</p>
+<p>​                            例如：<strong>树、图</strong></p>
+<p>（2）<strong>物理结构</strong>（存储结构）：数据元素及其关系在计算机内存中的表示。</p>
+<p>​    <strong>a.顺序存储结构</strong>：用一组<strong>连续</strong>的存储单元<strong>依次</strong>存储数据元素，数据元素之间的逻辑关系由元素的<strong>存储位置</strong>来表示，C中用数组来实现顺序存储关系。<strong>方便查找。</strong></p>
+<p>​    <strong>b.链式存储结构</strong>：用任意的存储单元存储数据元素，数据元素之间的逻辑关系用<strong>指针</strong>表示，C用<strong>指针</strong>来实现链式存储结构。<strong>方便插入和删除。</strong></p>
+<p>​    <strong>c.索引存储结构</strong>：需建立附加的索引表，索引表中每一项称为索引项，一般形式为（关键字，地址）</p>
+<p>​    <strong>d.散列存储</strong>：根据关键字计算出结点的存储地址</p>
+<p>5.数据对象：<strong>数据对象</strong>是具有<strong>相同性质</strong>的<strong>数据元素</strong>的集合，是数据的一个子集。如整数的数据对象是集合N={1,2,3,…}</p>
+<p> 6.数据类型：是指一组性质相同的值的集合和定义在此集合上的一组操作的总称。</p>
+<p>（1）原子类型：是不可以再分解的基本类型，包括整型（int），实型，字符型（char）等</p>
+<p>（2）结构类型：由若干个类型组合而成，是可以再分解的。如整型数组是由若干个整型数据组成的</p>
+<p>7.抽象数据类型（ADT）：抽象数据类型可用三元组（D，S，P）表示，D是数据对象，S是D上的关系集，P是对D的基本操作集。</p>
+<p><img src="C:\Users\me\AppData\Roaming\Typora\typora-user-images\image-20220223211435472.png" alt="image-20220223211435472"></p>
+<p><img src="C:\Users\me\AppData\Roaming\Typora\typora-user-images\image-20220223212446639.png" alt="image-20220223212446639"></p>
+<p><strong>综上：数据&gt;数据对象&gt;数据元素&gt;数据项</strong></p>
+<p><img src="C:\Users\me\AppData\Roaming\Typora\typora-user-images\image-20220223223441656.png" alt="image-20220223223441656"></p>
+<h2 id="算法知识点"><a href="#算法知识点" class="headerlink" title="算法知识点"></a>算法知识点</h2><h3 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h3><p>1.<strong>算法的定义：</strong>算法是解决特定问题求解步骤的描述，在计算机中表现为指令的有限序列，并且，每条指令表示一个或多个操作。</p>
+<p>2.<strong>算法的特性：</strong>算法具有五个基本特性：<strong>输入</strong>，<strong>输出</strong>，<strong>有穷性</strong>，<strong>确定性</strong>，<strong>可行性</strong>。</p>
+<p>​    （1）输入和输出：算法具有<strong>零个或多个</strong>输入，尽管大部分的函数都需要有输入。算法至少需要<strong>一个或多个</strong>输出，输出的形式可以是打印输出也可以是返回一个或多个值。</p>
+<p>​    （2）有穷性：指算法在执行<strong>有限步骤</strong>之后，自动结束循环而不会出现无限循环，并且每个步骤在一个<strong>可接受的时间</strong>内。</p>
+<p>​    （3）确定性：算法的每一个步骤都有确定的含义，<strong>不会出现二义性</strong>。即相同的输入只能出现相同的输出。</p>
+<p>​    （4）可行性：算法的每一步都必须是<strong>可行</strong>的，即每一步都能够通过执行<strong>有限步骤</strong>完成。</p>
+<h3 id="算法设计的要求"><a href="#算法设计的要求" class="headerlink" title="算法设计的要求"></a>算法设计的要求</h3><p>1.<strong>正确性</strong>：算法的正确性是指算法至少应该具有输入，输出和加工处理无歧义性，能正确反映问题的需求、得到问题的正确答案。</p>
+<p>正确性的要求分为以下四点，按照难度依次递增：    </p>
+<p>（1）算法程序没有语法错误。</p>
+<p>（2）算法程序对于合法的输入能够产生符合其要求的结果。</p>
+<p>（3）算法程序对于非法的输入数据能得出满足规格说明的结果。</p>
+<p>（4）算法程序对于精心选择的，甚至刁难的程序都有满足要求的输出结果。</p>
+<p>2.<strong>可读性</strong>：算法设计的另一目的是为了便于阅读、理解和交流。为了让别人看得懂啊。</p>
+<p>3.<strong>健壮性</strong>（处理异常问题的能力）：当输入数据不合法时，算法也能做出相关的处理，而不是产生异常或莫名其妙的结果。</p>
+<p>4.<strong>时间效率高和存储量低</strong>：设计算法应该尽量满足时间效率和存储量低的需求。</p>
+<h3 id="算法效率的度量方法"><a href="#算法效率的度量方法" class="headerlink" title="算法效率的度量方法"></a>算法效率的度量方法</h3><p>1.事后统计方法：利用计算机的计时器功能，对算法的运行时间进行对比，从而得出算法效率的高低。</p>
+<p>2.事前分析估计方法：在计算机程序编制之前，依据统计方法对算法进行估算。</p>
+<p>​    下面我们来对比1+2+3+…+100的两种算法：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//算法一</span></span><br><span class="line"><span class="type">int</span> i,sum=<span class="number">0</span>,n=<span class="number">100</span>;			<span class="comment">//执行1次</span></span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)&#123;			<span class="comment">//执行n+1次</span></span><br><span class="line">    sum = sum + i;			<span class="comment">//执行n次</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,sum)			<span class="comment">//执行一次</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//一共执行了1+(n+1)+n+1 = 2n+3次，即n次</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//算法二</span></span><br><span class="line"><span class="type">int</span> sum = <span class="number">0</span>,n = <span class="number">100</span>;		<span class="comment">//执行一次</span></span><br><span class="line">sum = (<span class="number">1</span>+n)*n/<span class="number">2</span>;			<span class="comment">//执行一次</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,sum);			<span class="comment">//执行一次</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//执行了三次，即1次</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="算法中函数的渐近增长（重点！）"><a href="#算法中函数的渐近增长（重点！）" class="headerlink" title="算法中函数的渐近增长（重点！）"></a>算法中函数的渐近增长（重点！）</h3><p>定义：给定两个函数f(n)和g(n)，如果存在一共整数N，是的队员所有的n&gt;N，f(n)总是比g(n)大，那么我们说f(n)的增长渐近快于g(n).</p>
+<p>对于算法A：2n^2+n 和 算法B：n^3+n^2 我们只需要看最高次幂的幂数，连与最高次项相乘的常数都不重要！</p>
+<p><strong>综上可知：判断一个算法的效率时，我们只需观察最高阶项，而函数中的常数和其他次要项往往可以忽略不计！</strong></p>
+<h3 id="算法的时间复杂度"><a href="#算法的时间复杂度" class="headerlink" title="算法的时间复杂度"></a>算法的时间复杂度</h3><p>使用O（）来体现算法时间复杂度的记法。</p>
+<p>推导大O阶：</p>
+<p>1.用常数1取代运行时间中的所有加法常数。</p>
+<p>2.在修改后的运行次数函数中，只保留最高阶项。</p>
+<p>3.如果最高阶项存在且不是1，则去除与这个项相乘的常数。</p>
+<p><strong>得到的结果就是大O阶！</strong></p>
+<h4 id="常数阶"><a href="#常数阶" class="headerlink" title="常数阶"></a>常数阶</h4><p>常数阶不论运行了10次20次100次都只能记作O(1)不能记作O(3)O(10)，初学者常常犯这样的错误</p>
+<p><strong>对于分支结构而言，无论是真是假，时间复杂度都是O(1)</strong></p>
+<h4 id="线性阶"><a href="#线性阶" class="headerlink" title="线性阶"></a>线性阶</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//线性阶的时间复杂度时O(n)</span></span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="对数阶"><a href="#对数阶" class="headerlink" title="对数阶"></a>对数阶</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> count = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(count&lt;n)&#123;</span><br><span class="line">	count = count * <span class="number">2</span>;			<span class="comment">//因为2^x=n，所以x=log2(n),即O(logn)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="平方阶"><a href="#平方阶" class="headerlink" title="平方阶"></a>平方阶</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">#平方阶的时间复杂度是O(n^<span class="number">2</span>)</span><br><span class="line"><span class="type">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++)&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//一个比较常见的时间复杂度判断</span></span><br><span class="line"><span class="type">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(j=i;j&lt;n;j++)&#123;		<span class="comment">//当i=0，执行n次，当i=1，执行n-1次...总执行次数是等差数列求和问题，n(n+1)/2=n^2/2 + n/2,所以O(n^2).</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="数列知识点（做题的基础）"><a href="#数列知识点（做题的基础）" class="headerlink" title="数列知识点（做题的基础）"></a>数列知识点（做题的基础）</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//等差数列的计算：前n项和等于n(n+1)/2</span></span><br><span class="line"><span class="comment">//等比数列的前n项和：(a1-an*q)/(1-q)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="时间复杂度所耗费的时间"><a href="#时间复杂度所耗费的时间" class="headerlink" title="时间复杂度所耗费的时间"></a>时间复杂度所耗费的时间</h4><p>O(1)&lt;O(logn)&lt;O(n)&lt;O(nlogn)&lt;O(n^2)&lt;O(n^3)&lt;O(2^n)&lt;O(n!)&lt;O(n^n)</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>要做好大O阶时间复杂度的题目，要学好数列的相关知识</p>
+<h3 id="算法的空间复杂度"><a href="#算法的空间复杂度" class="headerlink" title="算法的空间复杂度"></a>算法的空间复杂度</h3><p>算法空间复杂度的计算公式为S(n) = O(f(n))，其中n为问题的规模，f(n)是n所占存储空间的函数。</p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
       </tags>
   </entry>
 </search>
