@@ -213,7 +213,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-02-25 15:42:01" itemprop="dateModified" datetime="2022-02-25T15:42:01+08:00">2022-02-25</time>
+                <time title="修改时间：2022-02-25 15:54:10" itemprop="dateModified" datetime="2022-02-25T15:54:10+08:00">2022-02-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -264,85 +264,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="本章主要讲解数据结构和算法的基本概念，在文中标有-的是重点内容一定要熟记！"><a href="#本章主要讲解数据结构和算法的基本概念，在文中标有-的是重点内容一定要熟记！" class="headerlink" title="本章主要讲解数据结构和算法的基本概念，在文中标有*的是重点内容一定要熟记！"></a>本章主要讲解数据结构和算法的基本概念，在文中标有*的是重点内容一定要熟记！</h1><h2 id="数据结构考纲"><a href="#数据结构考纲" class="headerlink" title="数据结构考纲"></a>数据结构考纲</h2><h3 id="数据结构的三要素（考点）"><a href="#数据结构的三要素（考点）" class="headerlink" title="数据结构的三要素（考点）"></a>数据结构的三要素（考点）</h3><p>1.<em>逻辑结构：分为线性结构和非线性结构。*<em>线性结构：线性表，栈，队列；非线性结构：树，图，集合</em></em></p>
-<p>2.*存储结构（物理结构）</p>
-<p>3.数据的运算</p>
-<h3 id="数据结构的五个特征"><a href="#数据结构的五个特征" class="headerlink" title="数据结构的五个特征"></a>数据结构的五个特征</h3><p>有穷性，确定性，可行性，输入，输出</p>
-<h3 id="效率的度量（重点-考点）"><a href="#效率的度量（重点-考点）" class="headerlink" title="效率的度量（重点+考点）"></a>效率的度量（重点+考点）</h3><p><strong>时间复杂度</strong>*和空间复杂度（<strong>时间复杂度是重中之重，选择题大题都会出现</strong>）</p>
-<h2 id="数据结构知识点"><a href="#数据结构知识点" class="headerlink" title="数据结构知识点"></a>数据结构知识点</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>1.数据：数据是<strong>信息的载体</strong>，是描述客观事物属性的数，字符及所有<strong>能输入到计算机中并被计算机程序识别</strong>和处理的符号集合。数据是计算机程序加工的原料。</p>
-<p>（1）数值型数据：整数，实数等</p>
-<p>（2）非数值型数据：文字，图像，图形，声音等</p>
-<p>2.数据元素：<strong>数据元素</strong>是数据的基本单位，通常作为一个整体考虑。也称为<strong>记录</strong>、<strong>顶点</strong>、<strong>结点</strong>。</p>
-<p>3.数据项：一个数据元素由若干个数据项组成，<strong>数据项</strong>是数据元素中不可分割的<strong>最小单位</strong>。</p>
-<p>4.数据结构：<strong>数据结构</strong>是数据相互之间存在<strong>一种或多种特定关系</strong>的数据元素的集合。 </p>
-<p>（1）<strong>逻辑结构</strong>：数据元素之间的逻辑关系</p>
-<p>​    <strong>a.线性结构</strong>：有且仅有一个开始和一个终端结点，并且所有节点最多只有一个之间前趋和一个直接后继。</p>
-<p>​                            例如：<strong>线性表、栈、队列、串</strong></p>
-<p>​    <strong>b.非线性结构</strong>：一个结点可能有多个直接前趋和直接后继</p>
-<p>​                            例如：<strong>树、图</strong></p>
-<p>（2）<strong>物理结构</strong>（存储结构）：数据元素及其关系在计算机内存中的表示。</p>
-<p>​    <strong>a.顺序存储结构</strong>：用一组<strong>连续</strong>的存储单元<strong>依次</strong>存储数据元素，数据元素之间的逻辑关系由元素的<strong>存储位置</strong>来表示，C中用数组来实现顺序存储关系。<strong>方便查找。</strong></p>
-<p>​    <strong>b.链式存储结构</strong>：用任意的存储单元存储数据元素，数据元素之间的逻辑关系用<strong>指针</strong>表示，C用<strong>指针</strong>来实现链式存储结构。<strong>方便插入和删除。</strong></p>
-<p>​    <strong>c.索引存储结构</strong>：需建立附加的索引表，索引表中每一项称为索引项，一般形式为（关键字，地址）</p>
-<p>​    <strong>d.散列存储</strong>：根据关键字计算出结点的存储地址</p>
-<p>5.数据对象：<strong>数据对象</strong>是具有<strong>相同性质</strong>的<strong>数据元素</strong>的集合，是数据的一个子集。如整数的数据对象是集合N={1,2,3,…}</p>
-<p> 6.数据类型：是指一组性质相同的值的集合和定义在此集合上的一组操作的总称。</p>
-<p>（1）原子类型：是不可以再分解的基本类型，包括整型（int），实型，字符型（char）等</p>
-<p>（2）结构类型：由若干个类型组合而成，是可以再分解的。如整型数组是由若干个整型数据组成的</p>
-<p>7.抽象数据类型（ADT）：抽象数据类型可用三元组（D，S，P）表示，D是数据对象，S是D上的关系集，P是对D的基本操作集。</p>
-<p><img src="C:\Users\me\AppData\Roaming\Typora\typora-user-images\image-20220223211435472.png" alt="image-20220223211435472"></p>
-<p><img src="C:\Users\me\AppData\Roaming\Typora\typora-user-images\image-20220223212446639.png" alt="image-20220223212446639"></p>
-<p><strong>综上：数据&gt;数据对象&gt;数据元素&gt;数据项</strong></p>
-<p><img src="C:\Users\me\AppData\Roaming\Typora\typora-user-images\image-20220223223441656.png" alt="image-20220223223441656"></p>
-<h2 id="算法知识点"><a href="#算法知识点" class="headerlink" title="算法知识点"></a>算法知识点</h2><h3 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h3><p>1.<strong>算法的定义：</strong>算法是解决特定问题求解步骤的描述，在计算机中表现为指令的有限序列，并且，每条指令表示一个或多个操作。</p>
-<p>2.<strong>算法的特性：</strong>算法具有五个基本特性：<strong>输入</strong>，<strong>输出</strong>，<strong>有穷性</strong>，<strong>确定性</strong>，<strong>可行性</strong>。</p>
-<p>​    （1）输入和输出：算法具有<strong>零个或多个</strong>输入，尽管大部分的函数都需要有输入。算法至少需要<strong>一个或多个</strong>输出，输出的形式可以是打印输出也可以是返回一个或多个值。</p>
-<p>​    （2）有穷性：指算法在执行<strong>有限步骤</strong>之后，自动结束循环而不会出现无限循环，并且每个步骤在一个<strong>可接受的时间</strong>内。</p>
-<p>​    （3）确定性：算法的每一个步骤都有确定的含义，<strong>不会出现二义性</strong>。即相同的输入只能出现相同的输出。</p>
-<p>​    （4）可行性：算法的每一步都必须是<strong>可行</strong>的，即每一步都能够通过执行<strong>有限步骤</strong>完成。</p>
-<h3 id="算法设计的要求"><a href="#算法设计的要求" class="headerlink" title="算法设计的要求"></a>算法设计的要求</h3><p>1.<strong>正确性</strong>：算法的正确性是指算法至少应该具有输入，输出和加工处理无歧义性，能正确反映问题的需求、得到问题的正确答案。</p>
-<p>正确性的要求分为以下四点，按照难度依次递增：    </p>
-<p>（1）算法程序没有语法错误。</p>
-<p>（2）算法程序对于合法的输入能够产生符合其要求的结果。</p>
-<p>（3）算法程序对于非法的输入数据能得出满足规格说明的结果。</p>
-<p>（4）算法程序对于精心选择的，甚至刁难的程序都有满足要求的输出结果。</p>
-<p>2.<strong>可读性</strong>：算法设计的另一目的是为了便于阅读、理解和交流。为了让别人看得懂啊。</p>
-<p>3.<strong>健壮性</strong>（处理异常问题的能力）：当输入数据不合法时，算法也能做出相关的处理，而不是产生异常或莫名其妙的结果。</p>
-<p>4.<strong>时间效率高和存储量低</strong>：设计算法应该尽量满足时间效率和存储量低的需求。</p>
-<h3 id="算法效率的度量方法"><a href="#算法效率的度量方法" class="headerlink" title="算法效率的度量方法"></a>算法效率的度量方法</h3><p>1.事后统计方法：利用计算机的计时器功能，对算法的运行时间进行对比，从而得出算法效率的高低。</p>
-<p>2.事前分析估计方法：在计算机程序编制之前，依据统计方法对算法进行估算。</p>
-<p>​    下面我们来对比1+2+3+…+100的两种算法：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法一</span></span><br><span class="line"><span class="type">int</span> i,sum=<span class="number">0</span>,n=<span class="number">100</span>;			<span class="comment">//执行1次</span></span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)&#123;			<span class="comment">//执行n+1次</span></span><br><span class="line">    sum = sum + i;			<span class="comment">//执行n次</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,sum)			<span class="comment">//执行一次</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//一共执行了1+(n+1)+n+1 = 2n+3次，即n次</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法二</span></span><br><span class="line"><span class="type">int</span> sum = <span class="number">0</span>,n = <span class="number">100</span>;		<span class="comment">//执行一次</span></span><br><span class="line">sum = (<span class="number">1</span>+n)*n/<span class="number">2</span>;			<span class="comment">//执行一次</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,sum);			<span class="comment">//执行一次</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//执行了三次，即1次</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="算法中函数的渐近增长（重点！）"><a href="#算法中函数的渐近增长（重点！）" class="headerlink" title="算法中函数的渐近增长（重点！）"></a>算法中函数的渐近增长（重点！）</h3><p>定义：给定两个函数f(n)和g(n)，如果存在一共整数N，是的队员所有的n&gt;N，f(n)总是比g(n)大，那么我们说f(n)的增长渐近快于g(n).</p>
-<p>对于算法A：2n^2+n 和 算法B：n^3+n^2 我们只需要看最高次幂的幂数，连与最高次项相乘的常数都不重要！</p>
-<p><strong>综上可知：判断一个算法的效率时，我们只需观察最高阶项，而函数中的常数和其他次要项往往可以忽略不计！</strong></p>
-<h3 id="算法的时间复杂度"><a href="#算法的时间复杂度" class="headerlink" title="算法的时间复杂度"></a>算法的时间复杂度</h3><p>使用O（）来体现算法时间复杂度的记法。</p>
-<p>推导大O阶：</p>
-<p>1.用常数1取代运行时间中的所有加法常数。</p>
-<p>2.在修改后的运行次数函数中，只保留最高阶项。</p>
-<p>3.如果最高阶项存在且不是1，则去除与这个项相乘的常数。</p>
-<p><strong>得到的结果就是大O阶！</strong></p>
-<h4 id="常数阶"><a href="#常数阶" class="headerlink" title="常数阶"></a>常数阶</h4><p>常数阶不论运行了10次20次100次都只能记作O(1)不能记作O(3)O(10)，初学者常常犯这样的错误</p>
-<p><strong>对于分支结构而言，无论是真是假，时间复杂度都是O(1)</strong></p>
-<h4 id="线性阶"><a href="#线性阶" class="headerlink" title="线性阶"></a>线性阶</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//线性阶的时间复杂度时O(n)</span></span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="对数阶"><a href="#对数阶" class="headerlink" title="对数阶"></a>对数阶</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> count = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(count&lt;n)&#123;</span><br><span class="line">	count = count * <span class="number">2</span>;			<span class="comment">//因为2^x=n，所以x=log2(n),即O(logn)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="平方阶"><a href="#平方阶" class="headerlink" title="平方阶"></a>平方阶</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#平方阶的时间复杂度是O(n^<span class="number">2</span>)</span><br><span class="line"><span class="type">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++)&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//一个比较常见的时间复杂度判断</span></span><br><span class="line"><span class="type">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(j=i;j&lt;n;j++)&#123;		<span class="comment">//当i=0，执行n次，当i=1，执行n-1次...总执行次数是等差数列求和问题，n(n+1)/2=n^2/2 + n/2,所以O(n^2).</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="数列知识点（做题的基础）"><a href="#数列知识点（做题的基础）" class="headerlink" title="数列知识点（做题的基础）"></a>数列知识点（做题的基础）</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//等差数列的计算：前n项和等于n(n+1)/2</span></span><br><span class="line"><span class="comment">//等比数列的前n项和：(a1-an*q)/(1-q)</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="时间复杂度所耗费的时间"><a href="#时间复杂度所耗费的时间" class="headerlink" title="时间复杂度所耗费的时间"></a>时间复杂度所耗费的时间</h4><p>O(1)&lt;O(logn)&lt;O(n)&lt;O(nlogn)&lt;O(n^2)&lt;O(n^3)&lt;O(2^n)&lt;O(n!)&lt;O(n^n)</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>要做好大O阶时间复杂度的题目，要学好数列的相关知识</p>
-<h3 id="算法的空间复杂度"><a href="#算法的空间复杂度" class="headerlink" title="算法的空间复杂度"></a>算法的空间复杂度</h3><p>算法空间复杂度的计算公式为S(n) = O(f(n))，其中n为问题的规模，f(n)是n所占存储空间的函数。</p>
-
+          <h1 id="本章主要讲解数据结构和算法的基本概念，在文中标有-的是重点内容一定要熟记！"><a href="#本章主要讲解数据结构和算法的基本概念，在文中标有-的是重点内容一定要熟记！" class="headerlink" title="本章主要讲解数据结构和算法的基本概念，在文中标有*的是重点内容一定要熟记！"></a>本章主要讲解数据结构和算法的基本概念，在文中标有*的是重点内容一定要熟记！</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/02/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
