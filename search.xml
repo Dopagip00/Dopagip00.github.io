@@ -1,75 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>”JAVA--JDBC知识点“</title>
-    <url>/2022/02/09/JAVA-JDBC%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>JDBC相当于一个驱动，让数据库和java打交道。</p>
-<span id="more"></span>
-
-<p>对于开发人员来说，只需要掌握JDBC接口的操作即可。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/6cb5c95aa1fa076e8db6cc3bbedaf3e6.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>结构图，我们只需要学JDBC</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/1f734dc4920ffa0e272fe890bfcf6492.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>记得先要导入jar包</p>
-<h2 id="mysql-—-基本的操作"><a href="#mysql-—-基本的操作" class="headerlink" title="mysql — 基本的操作"></a><a href="https://dopagip.wordpress.com/2021/12/12/mysql-%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">mysql — 基本的操作</a></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--在sql里面所有的注释都用“--”,school是我们创建的数据库。</span><br><span class="line">show databases; --显示所有的数据库</span><br><span class="line"></span><br><span class="line">use school; --使用数据库</span><br><span class="line">change database</span><br><span class="line"></span><br><span class="line">use tables;  --显示所有的数据表</span><br><span class="line"></span><br><span class="line">desc tables; --显示数据库中所有表的信息</span><br><span class="line"></span><br><span class="line">create database &quot;school&quot;; --创建数据库</span><br><span class="line"></span><br><span class="line">exit; --退出mysql</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>数据库XX语言：</strong></p>
-<p>DDL 定义</p>
-<p>DML 操作</p>
-<p>DQL 查询</p>
-<p>DCL 控制</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--List接口“</title>
-    <url>/2022/02/09/JAVA-List%E6%8E%A5%E5%8F%A3/</url>
-    <content><![CDATA[<p>List接口的特点：有序，有下标，元素可以重复</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/c9cdc1cdd6f5c40143f331e073b1e6d5.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>方法</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/0bedf789e0a4cd33aaa07ae2168acd44.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>添加和删除元素</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/19185e0b9483bfe1b38c34162844d34f.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>get方法用于获取对应下标的元素</p>
-<p>使用迭代器的时候一定要创建对象：Iteration it = new Iteration();</p>
-<p>列表迭代器ListIteration:</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/dcbd1ce79c18634b6492f4448bf5b888.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>ListIteration</p>
-<p>判断和获取位置：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/ca6817f90e6db3a22f8091e3658e58ab.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>List对象使用List.remove();括号里面填的是对应删除位置的下标，要删除对应元素要使用“”</p>
-<p>subList方法：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/6f314a747cf1a833d4c6d71055ca2ac7.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>subList</p>
-<p>用来返回一个子集合，括号里面有两个数，逗号前面是集合开始的位置，后面是集合结束的位置。注意是含头不含尾的，左闭右开。</p>
-<p><strong>List的类</strong>：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/de3ed4574c6a50d128b9bd4d3f3cdacb.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>Vector现在少用了，ArrayList用的多</p>
-<p>ArrayList默认长度是0。</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--Collec体系集合“</title>
     <url>/2022/02/09/JAVA-Collecting%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88/</url>
     <content><![CDATA[<p> Collect接口知识点总结</p>
@@ -108,17 +39,26 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--properties类“</title>
-    <url>/2022/02/09/JAVA-properties%E7%B1%BB/</url>
-    <content><![CDATA[<p> properties相当于一个集合</p>
+    <title>”JAVA--JDBC知识点“</title>
+    <url>/2022/02/09/JAVA-JDBC%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>JDBC相当于一个驱动，让数据库和java打交道。</p>
 <span id="more"></span>
 
-<p><img src="https://img-blog.csdnimg.cn/img_convert/d91d50beb656346ba65a174526fc43f6.png" alt="img"></p>
+<p>对于开发人员来说，只需要掌握JDBC接口的操作即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6cb5c95aa1fa076e8db6cc3bbedaf3e6.png" alt="img"></p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>setproperties在集合里面增加变量。</p>
-<p>1.list方法适用于PrintWriter</p>
-<p>2.store方法适用于FileOutputStream</p>
-<p>3.load方法适用于FileInputStream</p>
+<p>结构图，我们只需要学JDBC</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/1f734dc4920ffa0e272fe890bfcf6492.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>记得先要导入jar包</p>
+<h2 id="mysql-—-基本的操作"><a href="#mysql-—-基本的操作" class="headerlink" title="mysql — 基本的操作"></a><a href="https://dopagip.wordpress.com/2021/12/12/mysql-%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">mysql — 基本的操作</a></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--在sql里面所有的注释都用“--”,school是我们创建的数据库。</span><br><span class="line">show databases; --显示所有的数据库</span><br><span class="line"></span><br><span class="line">use school; --使用数据库</span><br><span class="line">change database</span><br><span class="line"></span><br><span class="line">use tables;  --显示所有的数据表</span><br><span class="line"></span><br><span class="line">desc tables; --显示数据库中所有表的信息</span><br><span class="line"></span><br><span class="line">create database &quot;school&quot;; --创建数据库</span><br><span class="line"></span><br><span class="line">exit; --退出mysql</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>数据库XX语言：</strong></p>
+<p>DDL 定义</p>
+<p>DML 操作</p>
+<p>DQL 查询</p>
+<p>DCL 控制</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -194,6 +134,66 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--List接口“</title>
+    <url>/2022/02/09/JAVA-List%E6%8E%A5%E5%8F%A3/</url>
+    <content><![CDATA[<p>List接口的特点：有序，有下标，元素可以重复</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/c9cdc1cdd6f5c40143f331e073b1e6d5.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>方法</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/0bedf789e0a4cd33aaa07ae2168acd44.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>添加和删除元素</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/19185e0b9483bfe1b38c34162844d34f.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>get方法用于获取对应下标的元素</p>
+<p>使用迭代器的时候一定要创建对象：Iteration it = new Iteration();</p>
+<p>列表迭代器ListIteration:</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/dcbd1ce79c18634b6492f4448bf5b888.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>ListIteration</p>
+<p>判断和获取位置：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ca6817f90e6db3a22f8091e3658e58ab.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>List对象使用List.remove();括号里面填的是对应删除位置的下标，要删除对应元素要使用“”</p>
+<p>subList方法：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6f314a747cf1a833d4c6d71055ca2ac7.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>subList</p>
+<p>用来返回一个子集合，括号里面有两个数，逗号前面是集合开始的位置，后面是集合结束的位置。注意是含头不含尾的，左闭右开。</p>
+<p><strong>List的类</strong>：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/de3ed4574c6a50d128b9bd4d3f3cdacb.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>Vector现在少用了，ArrayList用的多</p>
+<p>ArrayList默认长度是0。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--properties类“</title>
+    <url>/2022/02/09/JAVA-properties%E7%B1%BB/</url>
+    <content><![CDATA[<p> properties相当于一个集合</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d91d50beb656346ba65a174526fc43f6.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>setproperties在集合里面增加变量。</p>
+<p>1.list方法适用于PrintWriter</p>
+<p>2.store方法适用于FileOutputStream</p>
+<p>3.load方法适用于FileInputStream</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA--static关键字知识点</title>
     <url>/2022/02/09/JAVA-static%E5%85%B3%E9%94%AE%E5%AD%97%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<p>1.有static修饰的属性就不用声明对象了，直接用类名去.属性</p>
@@ -223,59 +223,16 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--外部类和内部类“</title>
-    <url>/2022/02/09/JAVA-%E5%A4%96%E9%83%A8%E7%B1%BB%E5%92%8C%E5%86%85%E9%83%A8%E7%B1%BB/</url>
-    <content><![CDATA[<p> 介绍外部类和内部类</p>
+    <title>JAVA--super知识点</title>
+    <url>/2022/02/09/JAVA-super%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>1.Super指向父类的构造方法，必须在构造方法的第一个；</p>
+<p>2.Super只能出现在子类的构造方法中.</p>
 <span id="more"></span>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package bilibili;</span><br><span class="line"></span><br><span class="line">class Oouter &#123;</span><br><span class="line">    class Inter &#123;</span><br><span class="line">        Inter() &#123;</span><br><span class="line">            System.out.println(&quot;这是内部类&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Outer&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Oouter oouter = new Oouter();</span><br><span class="line">        Oouter.Inter inter = oouter.new Inter();//这里最最重要</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-----------------------------------------------------------------------------</span><br><span class="line">内部类的概念：在一个类的内部再定义一个完整的类，内部类也会生成class文件。但是有$符号。</span><br></pre></td></tr></table></figure>
-
-<p>1.声明内部类的对象的方法是：</p>
-<p><strong>外部类名(点)内部类名(空格)内部类对象 = 外部类对象(点)new(空格)内部类名（）；</strong></p>
-<p>比如现在<strong>外部类名Outer，内部类名Inter，外部类对象outer，内部类对象inter</strong>，则：</p>
-<p>Outer.Inter inter = outer.new Inter();</p>
-<p>内部类可以调用外部类的私有属性，当然也可以调用外部私有方法，但是当内部类加上了static后就不能调用外部类的private属性了。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">private int a()&#123;</span><br><span class="line">    int a = 20;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br><span class="line">class Inter &#123;</span><br><span class="line">    public void print() &#123;</span><br><span class="line">        System.out.println(a());</span><br><span class="line">        System.out.println(&quot;这是内部类&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2.局部内部类：在方法里面定义类；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3.匿名内部类：没有名字的类：</span><br><span class="line">假设我们有一个类Apple，Apple里面有一个a方法，我们可以先不对Apple进行实例化，直接使用new Apple().a()来调用a方法.</span><br><span class="line">匿名内部类一般用在接口或者父类当中。</span><br><span class="line">匿名内部类必须在声明对象之后，然后在后面可以调用该匿名内部类的方法，该内部类是匿名的，然后要用声明的对象的名字。</span><br><span class="line">匿名内部类必须继承父类或者实现一个接口。</span><br></pre></td></tr></table></figure>
-
-<p>4.静态内部类：不依赖外部类，可直接创建或通过类名访问，可声明静态成员。</p>
-<p><strong>特点：</strong></p>
-<p>1.在内部类中可以调用内部类的私有方法，但是调用外部类的私有方法用（外部类的对象）.私有名字。</p>
-<p>2.只有外部类可以是静态的，内部类不行。</p>
-<p>3.内部类想要访问局部变量，需要局部变量是final修饰的（局部变量即方法里面定义的变量）</p>
-<p>4.内部类也可以继承接口用implements</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA--多态</title>
-    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
-    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
-<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
-<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
-<span id="more"></span>
-
-<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>多态的注意事项：</p>
-<p>1.多态是方法的多态，属性没有多态；</p>
-<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
-<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
-<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
-<p>##但是有些方法是不能重写的：</p>
-<p>1.static方法：属于类，不属于实例</p>
-<p>2.final属性</p>
-<p>3.private方法是私有的，当然重写了也没用</p>
-<p>instanceof （类型转换） 引用类型</p>
+<p>3.this和super不能同时调用构造方法</p>
+<p>与this的对比：<br>this：本类的构造；super：父类的构造</p>
+<p>this：没有继承也可以使用；super：必须要有继承才可以使用</p>
+<p>this：调用本身对象；super：调用父类对象</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -338,16 +295,32 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--super知识点</title>
-    <url>/2022/02/09/JAVA-super%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>1.Super指向父类的构造方法，必须在构造方法的第一个；</p>
-<p>2.Super只能出现在子类的构造方法中.</p>
+    <title>”JAVA--外部类和内部类“</title>
+    <url>/2022/02/09/JAVA-%E5%A4%96%E9%83%A8%E7%B1%BB%E5%92%8C%E5%86%85%E9%83%A8%E7%B1%BB/</url>
+    <content><![CDATA[<p> 介绍外部类和内部类</p>
 <span id="more"></span>
 
-<p>3.this和super不能同时调用构造方法</p>
-<p>与this的对比：<br>this：本类的构造；super：父类的构造</p>
-<p>this：没有继承也可以使用；super：必须要有继承才可以使用</p>
-<p>this：调用本身对象；super：调用父类对象</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package bilibili;</span><br><span class="line"></span><br><span class="line">class Oouter &#123;</span><br><span class="line">    class Inter &#123;</span><br><span class="line">        Inter() &#123;</span><br><span class="line">            System.out.println(&quot;这是内部类&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Outer&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Oouter oouter = new Oouter();</span><br><span class="line">        Oouter.Inter inter = oouter.new Inter();//这里最最重要</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-----------------------------------------------------------------------------</span><br><span class="line">内部类的概念：在一个类的内部再定义一个完整的类，内部类也会生成class文件。但是有$符号。</span><br></pre></td></tr></table></figure>
+
+<p>1.声明内部类的对象的方法是：</p>
+<p><strong>外部类名(点)内部类名(空格)内部类对象 = 外部类对象(点)new(空格)内部类名（）；</strong></p>
+<p>比如现在<strong>外部类名Outer，内部类名Inter，外部类对象outer，内部类对象inter</strong>，则：</p>
+<p>Outer.Inter inter = outer.new Inter();</p>
+<p>内部类可以调用外部类的私有属性，当然也可以调用外部私有方法，但是当内部类加上了static后就不能调用外部类的private属性了。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">private int a()&#123;</span><br><span class="line">    int a = 20;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br><span class="line">class Inter &#123;</span><br><span class="line">    public void print() &#123;</span><br><span class="line">        System.out.println(a());</span><br><span class="line">        System.out.println(&quot;这是内部类&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2.局部内部类：在方法里面定义类；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3.匿名内部类：没有名字的类：</span><br><span class="line">假设我们有一个类Apple，Apple里面有一个a方法，我们可以先不对Apple进行实例化，直接使用new Apple().a()来调用a方法.</span><br><span class="line">匿名内部类一般用在接口或者父类当中。</span><br><span class="line">匿名内部类必须在声明对象之后，然后在后面可以调用该匿名内部类的方法，该内部类是匿名的，然后要用声明的对象的名字。</span><br><span class="line">匿名内部类必须继承父类或者实现一个接口。</span><br></pre></td></tr></table></figure>
+
+<p>4.静态内部类：不依赖外部类，可直接创建或通过类名访问，可声明静态成员。</p>
+<p><strong>特点：</strong></p>
+<p>1.在内部类中可以调用内部类的私有方法，但是调用外部类的私有方法用（外部类的对象）.私有名字。</p>
+<p>2.只有外部类可以是静态的，内部类不行。</p>
+<p>3.内部类想要访问局部变量，需要局部变量是final修饰的（局部变量即方法里面定义的变量）</p>
+<p>4.内部类也可以继承接口用implements</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -367,6 +340,56 @@
 <p>GBK ：简体中文。</p>
 <p>GB312：简体中文。</p>
 <p>BIG5：台湾，繁体中文。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA--封装</title>
+    <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
+    <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
+<span id="more"></span>
+
+<p>2.get/set 方法最重要：用get方法获得该值，用set方法给该值赋予数值,因为你的属性被private限制住了，只能通过其他方法输出。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class AA&#123;</span><br><span class="line">    private int a=20;</span><br><span class="line">    public int geta()&#123;</span><br><span class="line">        return this.a;</span><br><span class="line">    &#125;</span><br><span class="line">    public void seta(int a)&#123;</span><br><span class="line">        this.a=a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class getset &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        AA aa = new AA();</span><br><span class="line">        //System.out.println(aa.a);这样写是错的，因为属性a被private限制了，只能在AA类中使用</span><br><span class="line">        //这时候就要使用set和get函数了</span><br><span class="line">        aa.seta(50);//这一步用来设置a的值</span><br><span class="line">        System.out.println(aa.geta());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>封装的作用：</p>
+<p>1.提高程序的安全性，保护程序</p>
+<p>2.统一接口（唯一接口只有get/set）</p>
+<p>3.隐藏代码实现细节</p>
+<p>4.系统的可维护性增加</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA--多态</title>
+    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
+    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
+<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
+<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
+<span id="more"></span>
+
+<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>多态的注意事项：</p>
+<p>1.多态是方法的多态，属性没有多态；</p>
+<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
+<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
+<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
+<p>##但是有些方法是不能重写的：</p>
+<p>1.static方法：属于类，不属于实例</p>
+<p>2.final属性</p>
+<p>3.private方法是私有的，当然重写了也没用</p>
+<p>instanceof （类型转换） 引用类型</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -421,29 +444,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--封装</title>
-    <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
-    <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
-<span id="more"></span>
-
-<p>2.get/set 方法最重要：用get方法获得该值，用set方法给该值赋予数值,因为你的属性被private限制住了，只能通过其他方法输出。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class AA&#123;</span><br><span class="line">    private int a=20;</span><br><span class="line">    public int geta()&#123;</span><br><span class="line">        return this.a;</span><br><span class="line">    &#125;</span><br><span class="line">    public void seta(int a)&#123;</span><br><span class="line">        this.a=a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class getset &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        AA aa = new AA();</span><br><span class="line">        //System.out.println(aa.a);这样写是错的，因为属性a被private限制了，只能在AA类中使用</span><br><span class="line">        //这时候就要使用set和get函数了</span><br><span class="line">        aa.seta(50);//这一步用来设置a的值</span><br><span class="line">        System.out.println(aa.geta());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>封装的作用：</p>
-<p>1.提高程序的安全性，保护程序</p>
-<p>2.统一接口（唯一接口只有get/set）</p>
-<p>3.隐藏代码实现细节</p>
-<p>4.系统的可维护性增加</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--拆箱和装箱，字符串数字转换“</title>
     <url>/2022/02/09/JAVA-%E6%8B%86%E7%AE%B1%E5%92%8C%E8%A3%85%E7%AE%B1%EF%BC%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2/</url>
     <content><![CDATA[<p>数据类型（int，float等等）存放在栈里面。</p>
@@ -472,6 +472,24 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--抽象类“</title>
+    <url>/2022/02/09/JAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
+    <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
+<span id="more"></span>
+
+<p>1.当子类继承的父类当中有抽象的方法时，子类必须要重写抽象方法</p>
+<p>2.java里面的类是单继承的，但是接口时多继承的</p>
+<p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
+<p>4.抽象方法必须在抽象类里面</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--捕获异常“</title>
     <url>/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/</url>
     <content><![CDATA[<p> 捕获异常的知识点</p>
@@ -484,24 +502,6 @@
 <p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--抽象类“</title>
-    <url>/2022/02/09/JAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
-    <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
-<span id="more"></span>
-
-<p>1.当子类继承的父类当中有抽象的方法时，子类必须要重写抽象方法</p>
-<p>2.java里面的类是单继承的，但是接口时多继承的</p>
-<p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
-<p>4.抽象方法必须在抽象类里面</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -563,42 +563,6 @@
 <p><img src="https://img-blog.csdnimg.cn/img_convert/d8784fef04c69c151654bbe73747730f.png" alt="img"></p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p>删除表的话用：DROP TABLE student;</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA--数组（基础）</title>
-    <url>/2022/02/09/JAVA-%E6%95%B0%E7%BB%84%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/</url>
-    <content><![CDATA[<p> <strong>有关数组的基础知识</strong></p>
-<span id="more"></span>
-
-<p><strong>两种给数组赋值的方法：</strong><br> 1.静态初始化：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int num[] = &#123;1,2,3,4,5,6,7,8,9,10&#125;;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这个的意思是在声明数组的过程中顺便给数组赋了值，称为静态初始化。但是这个静态初始化赋予数组的值并不是固定的，在后面也可以对其中一个元素进行变更。</p>
-<p>2.动态初始化：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int num[] = new int[5];</span><br><span class="line">num[0] = 1;</span><br><span class="line">num[1] = 2;</span><br><span class="line">num[2] = 3;</span><br><span class="line">num[3] = 4;</span><br><span class="line">num[4] = 5;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>像这样先使用</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int num[] = new int[5];</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>对数组num进行声明和创建（注意，这里数组的下标最多到达4，不能到5，因为是从0开始的，如果到达了5会运行错误，显示数组下标溢出）,然后在下面的代码中对num进行赋值。</p>
-<p>数组越界异常警报是这样的：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Array Index Out Of Bounds Exception:数组下标越界</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>数组的四个基本特点：</strong></p>
-<p>1.数组的长度是确定的，一旦数组被确定，它的长度就不能被更改。</p>
-<p>2.数组的内容可以是所有的类型（基本类型和引用类型都可以），但是数组不能是多种类型的混合，只能是单独一种类型。</p>
-<p>3.数组本身是在堆当中的。</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -689,6 +653,23 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--泛型“</title>
+    <url>/2022/02/09/JAVA-%E6%B3%9B%E5%9E%8B/</url>
+    <content><![CDATA[<p>介绍泛型的基本概念</p>
+<span id="more"></span>
+
+<p><strong>基本概念：</strong>（传递类型参数的东西）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/446e9973ebc5dab7b15dbedca430ed4c.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--流的知识点“</title>
     <url>/2022/02/09/JAVA-%E6%B5%81%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<p><strong>概念：存储和内存之间的传输数据的通道.(硬盘和内存之间)</strong></p>
@@ -758,27 +739,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--类的盘点“</title>
-    <url>/2022/02/09/JAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9/</url>
-    <content><![CDATA[<p>先来一个特殊的：</p>
-<p>double res = 1.4-0.5/0.9;</p>
-<span id="more"></span>
-
-<p>System.out.println(res);//这时候输出的会是0.999999999</p>
-<p>这时候就要用到BigDecimal来精确输出double类型的数据了。</p>
-<p>BigDecimal num = new BigDecimal(“0.9”);//这样就可以声明一个BigDecimal数据了。</p>
-<p>当然要在前面加上import java.math.BigDecimal来引入BigDecimal</p>
-<hr>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).</span><br><span class="line">divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>)))<span class="comment">//这样就可以输出1而不是0.9999999了。</span></span><br><span class="line">同样也可以:</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">num</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>))</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--文件file类“</title>
     <url>/2022/02/09/JAVA-%E6%96%87%E4%BB%B6file%E7%B1%BB/</url>
     <content><![CDATA[<p>java.io.File是文件名的抽象表示。</p>
@@ -834,23 +794,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--泛型“</title>
-    <url>/2022/02/09/JAVA-%E6%B3%9B%E5%9E%8B/</url>
-    <content><![CDATA[<p>介绍泛型的基本概念</p>
-<span id="more"></span>
-
-<p><strong>基本概念：</strong>（传递类型参数的东西）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/446e9973ebc5dab7b15dbedca430ed4c.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JAVA--继承</title>
     <url>/2022/02/09/JAVA-%E7%BB%A7%E6%89%BF/</url>
     <content><![CDATA[<p>1.extend的意思是’’拓展，扩大’’,子类是对父类的拓展。</p>
@@ -863,6 +806,27 @@
 <p>2.Object！</p>
 <p>在Java中所有的类都默认继承Object类！！！</p>
 <p>例：public class AA /<em>entend Object</em>/{}</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--类的盘点“</title>
+    <url>/2022/02/09/JAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9/</url>
+    <content><![CDATA[<p>先来一个特殊的：</p>
+<p>double res = 1.4-0.5/0.9;</p>
+<span id="more"></span>
+
+<p>System.out.println(res);//这时候输出的会是0.999999999</p>
+<p>这时候就要用到BigDecimal来精确输出double类型的数据了。</p>
+<p>BigDecimal num = new BigDecimal(“0.9”);//这样就可以声明一个BigDecimal数据了。</p>
+<p>当然要在前面加上import java.math.BigDecimal来引入BigDecimal</p>
+<hr>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).</span><br><span class="line">divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>)))<span class="comment">//这样就可以输出1而不是0.9999999了。</span></span><br><span class="line">同样也可以:</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">num</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>))</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -927,6 +891,42 @@
       </tags>
   </entry>
   <entry>
+    <title>JAVA--数组（基础）</title>
+    <url>/2022/02/09/JAVA-%E6%95%B0%E7%BB%84%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/</url>
+    <content><![CDATA[<p> <strong>有关数组的基础知识</strong></p>
+<span id="more"></span>
+
+<p><strong>两种给数组赋值的方法：</strong><br> 1.静态初始化：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int num[] = &#123;1,2,3,4,5,6,7,8,9,10&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这个的意思是在声明数组的过程中顺便给数组赋了值，称为静态初始化。但是这个静态初始化赋予数组的值并不是固定的，在后面也可以对其中一个元素进行变更。</p>
+<p>2.动态初始化：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int num[] = new int[5];</span><br><span class="line">num[0] = 1;</span><br><span class="line">num[1] = 2;</span><br><span class="line">num[2] = 3;</span><br><span class="line">num[3] = 4;</span><br><span class="line">num[4] = 5;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>像这样先使用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int num[] = new int[5];</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>对数组num进行声明和创建（注意，这里数组的下标最多到达4，不能到5，因为是从0开始的，如果到达了5会运行错误，显示数组下标溢出）,然后在下面的代码中对num进行赋值。</p>
+<p>数组越界异常警报是这样的：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Array Index Out Of Bounds Exception:数组下标越界</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>数组的四个基本特点：</strong></p>
+<p>1.数组的长度是确定的，一旦数组被确定，它的长度就不能被更改。</p>
+<p>2.数组的内容可以是所有的类型（基本类型和引用类型都可以），但是数组不能是多种类型的混合，只能是单独一种类型。</p>
+<p>3.数组本身是在堆当中的。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”Linux--Xshell和Xftp“</title>
     <url>/2022/02/09/Linux-Xshell%E5%92%8CXftp/</url>
     <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
@@ -979,6 +979,37 @@
 <p>若是普通用户登录后需要获得管理员权限，使用su-用户名 即可。</p>
 <p>使用logout来注销用户登录（在运行级别三上面有用）</p>
 <p>在root情况下logout退到你原来的用户，再使用一次logout退出系统！</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”Linux--用户管理“</title>
+    <url>/2022/02/09/Linux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<p> 一、基本操作：</p>
+<p>添加用户：useradd 用户名</p>
+<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
+<span id="more"></span>
+
+<p>删除用户(不保留家目录)：userdel -r 用户名</p>
+<p>更改用户密码：passwd 用户名</p>
+<p>查询用户信息：id 用户名</p>
+<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
+<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
+<p>想要查看现在的用户是谁：who am i（离谱）</p>
+<p>pwd：查看现在在哪个目录下面</p>
+<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
+<p>添加组：groupadd 组名</p>
+<p>删除组：groupdel 组名</p>
+<p>创建用户的同时分组：useradd -g 组名 用户名</p>
+<p>用户换组：usermod -g 新组名 用户名</p>
+<p><strong>用户和组的相关文件：</strong></p>
+<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -1108,37 +1139,6 @@
 <p>17.history指令：</p>
 <p>显示出历史指令。</p>
 <p><img src="https://img-blog.csdnimg.cn/a9bd055e7e5b4ecdbd997227dca209b4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_14,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”Linux--用户管理“</title>
-    <url>/2022/02/09/Linux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<p> 一、基本操作：</p>
-<p>添加用户：useradd 用户名</p>
-<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
-<span id="more"></span>
-
-<p>删除用户(不保留家目录)：userdel -r 用户名</p>
-<p>更改用户密码：passwd 用户名</p>
-<p>查询用户信息：id 用户名</p>
-<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
-<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
-<p>想要查看现在的用户是谁：who am i（离谱）</p>
-<p>pwd：查看现在在哪个目录下面</p>
-<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
-<p>添加组：groupadd 组名</p>
-<p>删除组：groupdel 组名</p>
-<p>创建用户的同时分组：useradd -g 组名 用户名</p>
-<p>用户换组：usermod -g 新组名 用户名</p>
-<p><strong>用户和组的相关文件：</strong></p>
-<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -2237,27 +2237,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo博客的基本操作</title>
-    <url>/2022/02/09/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<p>hexo clean 清除缓存</p>
-<p>hexo n “…” 生成博客文章，标题是…</p>
-<span id="more"></span>
-
-<p>hexo s   start博客，默认启动在localhost:4000端口</p>
-<p>hexo d   部署到远端</p>
-<p>当写完博客之后通常使用这三个：（依次输入）</p>
-<p>hexo clean </p>
-<p>hexo g</p>
-<p>hexo d</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo d出错时的解决办法</title>
     <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
@@ -2271,6 +2250,54 @@
 <p>hexo g</p>
 <p>hexo d</p>
 <p>部署</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>matlab -- 向量与矩阵</title>
+    <url>/2022/03/07/matlab-%E5%90%91%E9%87%8F%E4%B8%8E%E7%9F%A9%E9%98%B5/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h3 id="向量的基本命令"><a href="#向量的基本命令" class="headerlink" title="向量的基本命令"></a>向量的基本命令</h3><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">#创建一个四维向量（<span class="number">1</span>，<span class="number">2</span>，<span class="number">3</span>，<span class="number">4</span>）</span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">#注意：在matlab中下标是从<span class="number">1</span>开始计算的，而不是从<span class="number">0</span>开始计算的</span><br><span class="line">#使用y = x(<span class="built_in">i</span>)可以提取x中的第<span class="built_in">i</span>个元素！！</span><br><span class="line">y  = x(<span class="number">2</span>) #这里我们提取了x中的第二个元素是<span class="number">2</span>，不是<span class="number">3</span>！！！</span><br><span class="line">#使用分号；来分行，用逗号来分列！</span><br><span class="line">x = [<span class="number">1</span>;<span class="number">2</span>;<span class="number">3</span>;<span class="number">4</span>] #这时x就是四行了</span><br><span class="line"></span><br><span class="line">#创建等差数列来遍历向量</span><br><span class="line"></span><br><span class="line">#第一种等差数列的方式： x = a:d:b 表示遍历从a到b，其中公差是d（包括开头的数，当然也包括结尾的数，如果能取到的话）</span><br><span class="line">x = <span class="number">1</span>:<span class="number">2</span>:<span class="number">10</span>  #结果就是<span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">7</span> <span class="number">9</span></span><br><span class="line">#第二种等差数列的方式：x = <span class="built_in">linspace</span>(a,b,n),简单来说就是在a和b之间平均分成n分呈现出来。当a=b时会产生n个a。</span><br><span class="line">x = <span class="built_in">linspace</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">10</span>) #<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> <span class="number">10</span></span><br><span class="line"></span><br><span class="line">#求向量的维数（长度）</span><br><span class="line">n = <span class="built_in">length</span>(x)</span><br><span class="line">#求向量的转置</span><br><span class="line">xt = transpose(x)	#也可以表示为xt=x&#x27;</span><br><span class="line">#求最大值及对应位置的元素</span><br><span class="line">[m1,p1] = <span class="built_in">max</span>(x)	#m1表示最大值，p1表示对应的位置的元素</span><br><span class="line">#求最大值及对应位置的元素</span><br><span class="line">[m2,p2] = <span class="built_in">min</span>(x)	#m2表示最小值，p2表示对应位置的元素</span><br><span class="line">#求向量x中所有元素的和</span><br><span class="line">y = sum(x)			</span><br><span class="line">#求x中所有元素的平均值</span><br><span class="line">y = <span class="built_in">mean</span>(x)</span><br><span class="line">#求向量x的lp范数</span><br><span class="line">y = norm(x,p)</span><br><span class="line">#求向量的标准差</span><br><span class="line">y = std(x)</span><br><span class="line">#求向量中每个元素的绝对值</span><br><span class="line">y = <span class="built_in">abs</span>(x)</span><br><span class="line">#对向量中的每个元素进行从小到大的排序，p表示位置组成的变量</span><br><span class="line">[y,p] = <span class="built_in">sort</span>(x)				#正序排序</span><br><span class="line">[y,p] = <span class="built_in">sort</span>(x,<span class="string">&#x27;descend&#x27;</span>)	#倒序排序</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="矩阵的基本命令"><a href="#矩阵的基本命令" class="headerlink" title="矩阵的基本命令"></a>矩阵的基本命令</h3><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">#求矩阵X的大小，m是行数，n是列数</span><br><span class="line">[m,n] = <span class="built_in">size</span>(X)</span><br><span class="line">#求方阵X的行列式</span><br><span class="line">d = det(X)</span><br><span class="line">#求矩阵X的秩</span><br><span class="line">r = rank(X)</span><br><span class="line">#求矩阵X的迹，即矩阵的主对角线元素之和</span><br><span class="line">T = trace(X)</span><br><span class="line">#求主对角线元素组成的列向量</span><br><span class="line">d = <span class="built_in">diag</span>(X)</span><br><span class="line">#将矩阵X按列排成m X n维矩阵Y，要求X的元素个数为m X n</span><br><span class="line">Y = <span class="built_in">reshape</span>(X,m,n)</span><br><span class="line">#求可逆方阵X的逆矩阵</span><br><span class="line">XT = inv(X)</span><br><span class="line">#求m*n维矩阵X的伪逆矩阵Y，Y是n*m维的</span><br><span class="line">Y = pinv(X)</span><br><span class="line">#求矩阵X的lp范数，默认p=<span class="number">2</span></span><br><span class="line">n = norm(X,p)</span><br><span class="line">#求矩阵X的Frobenius范数，即将所有X的元素平方和开根号</span><br><span class="line">n = norm(X,<span class="string">&#x27;fro&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">#m*n维<span class="number">0</span>矩阵</span><br><span class="line">A = <span class="built_in">zeros</span>(m,n)</span><br><span class="line">#m*n维全<span class="number">1</span>矩阵</span><br><span class="line">A = <span class="built_in">ones</span>(m,n)</span><br><span class="line">#m*n维全无穷大矩阵</span><br><span class="line">A = <span class="built_in">inf</span>(m,n)</span><br><span class="line">#m*n维不定值矩阵</span><br><span class="line">A = <span class="built_in">nan</span>(m,n)</span><br><span class="line">#m*n维随机矩阵，元素服从（<span class="number">0</span>，<span class="number">1</span>）区间上的均匀分布</span><br><span class="line">A = <span class="built_in">rand</span>(m,n)</span><br><span class="line">#m*n维随机矩阵，元素服从均值为<span class="number">0</span>，标准差为<span class="number">1</span>的正态分布</span><br><span class="line">A = <span class="built_in">randn</span>(m,n)</span><br><span class="line">#生成m*n维单位矩阵</span><br><span class="line">A = <span class="built_in">eye</span>(m,n)</span><br><span class="line">#m阶杨辉三角矩阵</span><br><span class="line">A = <span class="built_in">pascal</span>(x)</span><br><span class="line">#向量x组成的范德蒙德矩阵</span><br><span class="line">A = <span class="built_in">vander</span>(x)</span><br><span class="line">#m阶魔术矩阵，即各行各列，对角线元素之和相等</span><br><span class="line">A = <span class="built_in">magic</span>(m)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">#求转置矩阵，在矩阵后面加上.<span class="string">&#x27;</span></span><br><span class="line"><span class="string">A = [1,2,3;4,5,6]</span></span><br><span class="line"><span class="string">B = A.&#x27;</span></span><br><span class="line">#求共轭转置矩阵，在矩阵后面加上<span class="string">&#x27;</span></span><br><span class="line"><span class="string">C = A&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#提取第i行第j列的元素</span><br><span class="line">A(i,j)</span><br><span class="line">#提取第i行的元素</span><br><span class="line">A(i,:)</span><br><span class="line">#提取第j列的元素</span><br><span class="line">A(:,j)</span><br><span class="line">#删除第j列的元素</span><br><span class="line">A(:,j) = []</span><br><span class="line">#删除第1和3行的元素</span><br><span class="line">A([1,3],:) = []</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客的基本操作</title>
+    <url>/2022/02/09/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p>hexo clean 清除缓存</p>
+<p>hexo n “…” 生成博客文章，标题是…</p>
+<span id="more"></span>
+
+<p>hexo s   start博客，默认启动在localhost:4000端口</p>
+<p>hexo d   部署到远端</p>
+<p>当写完博客之后通常使用这三个：（依次输入）</p>
+<p>hexo clean </p>
+<p>hexo g</p>
+<p>hexo d</p>
 ]]></content>
       <categories>
         <category>hexo</category>
@@ -2298,31 +2325,6 @@
       </tags>
   </entry>
   <entry>
-    <title>matlab -- 向量与矩阵</title>
-    <url>/2022/03/07/matlab-%E5%90%91%E9%87%8F%E4%B8%8E%E7%9F%A9%E9%98%B5/</url>
-    <content><![CDATA[<h3 id="向量的基本命令"><a href="#向量的基本命令" class="headerlink" title="向量的基本命令"></a>向量的基本命令</h3><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">#创建一个四维向量（<span class="number">1</span>，<span class="number">2</span>，<span class="number">3</span>，<span class="number">4</span>）</span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">#注意：在matlab中下标是从<span class="number">1</span>开始计算的，而不是从<span class="number">0</span>开始计算的</span><br><span class="line">#使用y = x(<span class="built_in">i</span>)可以提取x中的第<span class="built_in">i</span>个元素！！</span><br><span class="line">y  = x(<span class="number">2</span>) #这里我们提取了x中的第二个元素是<span class="number">2</span>，不是<span class="number">3</span>！！！</span><br><span class="line">#使用分号；来分行，用逗号来分列！</span><br><span class="line">x = [<span class="number">1</span>;<span class="number">2</span>;<span class="number">3</span>;<span class="number">4</span>] #这时x就是四行了</span><br><span class="line"></span><br><span class="line">#创建等差数列来遍历向量</span><br><span class="line"></span><br><span class="line">#第一种等差数列的方式： x = a:d:b 表示遍历从a到b，其中公差是d（包括开头的数，当然也包括结尾的数，如果能取到的话）</span><br><span class="line">x = <span class="number">1</span>:<span class="number">2</span>:<span class="number">10</span>  #结果就是<span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">7</span> <span class="number">9</span></span><br><span class="line">#第二种等差数列的方式：x = <span class="built_in">linspace</span>(a,b,n),简单来说就是在a和b之间平均分成n分呈现出来。当a=b时会产生n个a。</span><br><span class="line">x = <span class="built_in">linspace</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">10</span>) #<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> <span class="number">10</span></span><br><span class="line"></span><br><span class="line">#求向量的维数（长度）</span><br><span class="line">n = <span class="built_in">length</span>(x)</span><br><span class="line">#求向量的转置</span><br><span class="line">xt = transpose(x)	#也可以表示为xt=x&#x27;</span><br><span class="line">#求最大值及对应位置的元素</span><br><span class="line">[m1,p1] = <span class="built_in">max</span>(x)	#m1表示最大值，p1表示对应的位置的元素</span><br><span class="line">#求最大值及对应位置的元素</span><br><span class="line">[m2,p2] = <span class="built_in">min</span>(x)	#m2表示最小值，p2表示对应位置的元素</span><br><span class="line">#求向量x中所有元素的和</span><br><span class="line">y = sum(x)			</span><br><span class="line">#求x中所有元素的平均值</span><br><span class="line">y = <span class="built_in">mean</span>(x)</span><br><span class="line">#求向量x的lp范数</span><br><span class="line">y = norm(x,p)</span><br><span class="line">#求向量的标准差</span><br><span class="line">y = std(x)</span><br><span class="line">#求向量中每个元素的绝对值</span><br><span class="line">y = <span class="built_in">abs</span>(x)</span><br><span class="line">#对向量中的每个元素进行从小到大的排序，p表示位置组成的变量</span><br><span class="line">[y,p] = <span class="built_in">sort</span>(x)				#正序排序</span><br><span class="line">[y,p] = <span class="built_in">sort</span>(x,<span class="string">&#x27;descend&#x27;</span>)	#倒序排序</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="矩阵的基本命令"><a href="#矩阵的基本命令" class="headerlink" title="矩阵的基本命令"></a>矩阵的基本命令</h3><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">#求矩阵X的大小，m是行数，n是列数</span><br><span class="line">[m,n] = <span class="built_in">size</span>(X)</span><br><span class="line">#求方阵X的行列式</span><br><span class="line">d = det(X)</span><br><span class="line">#求矩阵X的秩</span><br><span class="line">r = rank(X)</span><br><span class="line">#求矩阵X的迹，即矩阵的主对角线元素之和</span><br><span class="line">T = trace(X)</span><br><span class="line">#求主对角线元素组成的列向量</span><br><span class="line">d = <span class="built_in">diag</span>(X)</span><br><span class="line">#将矩阵X按列排成m X n维矩阵Y，要求X的元素个数为m X n</span><br><span class="line">Y = <span class="built_in">reshape</span>(X,m,n)</span><br><span class="line">#求可逆方阵X的逆矩阵</span><br><span class="line">XT = inv(X)</span><br><span class="line">#求m*n维矩阵X的伪逆矩阵Y，Y是n*m维的</span><br><span class="line">Y = pinv(X)</span><br><span class="line">#求矩阵X的lp范数，默认p=<span class="number">2</span></span><br><span class="line">n = norm(X,p)</span><br><span class="line">#求矩阵X的Frobenius范数，即将所有X的元素平方和开根号</span><br><span class="line">n = norm(X,<span class="string">&#x27;fro&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">#m*n维<span class="number">0</span>矩阵</span><br><span class="line">A = <span class="built_in">zeros</span>(m,n)</span><br><span class="line">#m*n维全<span class="number">1</span>矩阵</span><br><span class="line">A = <span class="built_in">ones</span>(m,n)</span><br><span class="line">#m*n维全无穷大矩阵</span><br><span class="line">A = <span class="built_in">inf</span>(m,n)</span><br><span class="line">#m*n维不定值矩阵</span><br><span class="line">A = <span class="built_in">nan</span>(m,n)</span><br><span class="line">#m*n维随机矩阵，元素服从（<span class="number">0</span>，<span class="number">1</span>）区间上的均匀分布</span><br><span class="line">A = <span class="built_in">rand</span>(m,n)</span><br><span class="line">#m*n维随机矩阵，元素服从均值为<span class="number">0</span>，标准差为<span class="number">1</span>的正态分布</span><br><span class="line">A = <span class="built_in">randn</span>(m,n)</span><br><span class="line">#生成m*n维单位矩阵</span><br><span class="line">A = <span class="built_in">eye</span>(m,n)</span><br><span class="line">#m阶杨辉三角矩阵</span><br><span class="line">A = <span class="built_in">pascal</span>(x)</span><br><span class="line">#向量x组成的范德蒙德矩阵</span><br><span class="line">A = <span class="built_in">vander</span>(x)</span><br><span class="line">#m阶魔术矩阵，即各行各列，对角线元素之和相等</span><br><span class="line">A = <span class="built_in">magic</span>(m)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">#求转置矩阵，在矩阵后面加上.<span class="string">&#x27;</span></span><br><span class="line"><span class="string">A = [1,2,3;4,5,6]</span></span><br><span class="line"><span class="string">B = A.&#x27;</span></span><br><span class="line">#求共轭转置矩阵，在矩阵后面加上<span class="string">&#x27;</span></span><br><span class="line"><span class="string">C = A&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#提取第i行第j列的元素</span><br><span class="line">A(i,j)</span><br><span class="line">#提取第i行的元素</span><br><span class="line">A(i,:)</span><br><span class="line">#提取第j列的元素</span><br><span class="line">A(:,j)</span><br><span class="line">#删除第j列的元素</span><br><span class="line">A(:,j) = []</span><br><span class="line">#删除第1和3行的元素</span><br><span class="line">A([1,3],:) = []</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>matlab</category>
-      </categories>
-      <tags>
-        <tag>matlab</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”python--random“</title>
     <url>/2022/02/09/python-random/</url>
     <content><![CDATA[<p>随机生产一个取值范围在10~100的整数：random.randint(10,100)</p>
@@ -2336,24 +2338,6 @@
 <p>在后面我们再使用三次</p>
 <p>random.randint(1~10）</p>
 <p>三次生成的数分别是1，3，6，所以可以推断出setstate的作用是把前三次生成的随机数变成一个固定的状态再后面再生成！</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--一些函数“</title>
-    <url>/2022/02/09/python-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<p> bool()：判断括号里面的结果是真还是假。</p>
-<p>真的情况：在括号里面加引号，引号里面有任何值的结果都是真以及直接输入true（不加引号）</p>
-<p>假的情况：在引号里面有引号但是引号里面什么都没有以及直接输入false</p>
-<span id="more"></span>
-
-<p>以下是定义为false的情况：</p>
-<p><img src="https://img-blog.csdnimg.cn/91c7d524a1064e67a99244784f03bcc4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -2388,6 +2372,59 @@
 <p><strong>打包：即生成一个元组</strong></p>
 <p>解包：如下图这样，生成的t有三个元素，分别赋值给x,y,z称之为解包，解包需要注意的是：左侧变量名的数量必须跟右侧元素的数量一致。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">t = (<span class="number">123</span>,<span class="number">12</span>,<span class="number">1</span>)</span><br><span class="line">x,y,z = t</span><br><span class="line"><span class="built_in">print</span>(x,y,z)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--一些函数“</title>
+    <url>/2022/02/09/python-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p> bool()：判断括号里面的结果是真还是假。</p>
+<p>真的情况：在括号里面加引号，引号里面有任何值的结果都是真以及直接输入true（不加引号）</p>
+<p>假的情况：在引号里面有引号但是引号里面什么都没有以及直接输入false</p>
+<span id="more"></span>
+
+<p>以下是定义为false的情况：</p>
+<p><img src="https://img-blog.csdnimg.cn/91c7d524a1064e67a99244784f03bcc4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python--函数</title>
+    <url>/2022/02/19/python-%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="函数的基本操作"><a href="#函数的基本操作" class="headerlink" title="函数的基本操作"></a><strong>函数的基本操作</strong></h2><span id="more"></span>
+
+<h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用def来定义一个函数myfun,来实现x的累加</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfunadd</span>(<span class="params">x</span>):</span><br><span class="line">	x = x + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="位置参数"><a href="#位置参数" class="headerlink" title="位置参数"></a>位置参数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#位置参数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">a,b,c</span>):</span><br><span class="line">    <span class="keyword">return</span><span class="string">&quot;&quot;</span>.join((c,b,a)) <span class="comment">#使用join表示在后面添加字符串</span></span><br><span class="line"><span class="built_in">print</span>(func(<span class="string">&quot;我&quot;</span>, <span class="string">&quot;是&quot;</span>, <span class="string">&quot;你&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#帮助函数中的/:代表着/的左边不能指定参数的名字，只能指定其值，但是/的右边就无所谓了。</span></span><br><span class="line"><span class="comment">#我们还可以用*来代替/ *的左边不能用参数的名字，但是右边要用</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">a,*,b,c</span>):</span><br><span class="line">	<span class="built_in">print</span>(a,b,c)</span><br><span class="line">fun(<span class="string">&quot;d&quot;</span>,<span class="string">&quot;e&quot;</span>,<span class="string">&quot;g&quot;</span>) <span class="comment">#error,第二第三个参数要加参数名字</span></span><br><span class="line">fun(<span class="string">&quot;d&quot;</span>,b=<span class="string">&quot;e&quot;</span>,c=<span class="string">&quot;g&quot;</span>) <span class="comment">#d e g</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="收集参数"><a href="#收集参数" class="headerlink" title="收集参数"></a><strong>收集参数</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#收集函数即只指定一个参数，然后允许调用函数时传入任意数量的参数。在函数的形式参数之前加上*号即可</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfun</span>(<span class="params">*var</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;一共传入了&#123;&#125;个参数&quot;</span>.<span class="built_in">format</span>(<span class="built_in">len</span>(var)))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;第二个参数是&#123;&#125;&quot;</span>.<span class="built_in">format</span>(var[<span class="number">1</span>]))</span><br><span class="line"></span><br><span class="line"><span class="comment">#注意只能指定一个带*号的参数，要是需要其他的形式参数，那么需要用到关键字参数。</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfun2</span>(<span class="params">*var,a,b</span>):</span><br><span class="line">    <span class="built_in">print</span>(var,a,b)</span><br><span class="line">myfun2(<span class="string">&quot;Deng&quot;</span>,a=<span class="string">&quot;Gao&quot;</span>,b=<span class="string">&quot;zheng&quot;</span>) <span class="comment">#像这样a和b使用了关键字参数即可</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#在形式参数之前加上两个*代表着传入的参数可以自动转换成为字典</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfun</span>(<span class="params">**var</span>):</span><br><span class="line">    <span class="built_in">print</span>(var) <span class="comment">#</span></span><br><span class="line">myfun(a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span>) <span class="comment">#(&#x27;a&#x27;:&#x27;1&#x27;,&#x27;b&#x27;:&#x27;2&#x27;,&#x27;c&#x27;:&#x27;3&#x27;)即为字典形式</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#综合</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">xing</span>(<span class="params">a,*b,**c</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;a=&quot;</span>,a,<span class="string">&quot;b=&quot;</span>,b,<span class="string">&quot;c=&quot;</span>,c)</span><br><span class="line">xing(<span class="string">&quot;deng&quot;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,c=<span class="string">&quot;zheng&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>#！！！个人总结：1.对于没有星的参数来说，在传入参数时只要出现“，”，那么就会自动跳到下一个参数！2.对于有一个星的参数来说，不能使用关键字参数来传递参数给它！！！否则会报错，它会自动收集剩下的数，即捡破烂。3.对于有两个*的参数来说，你必须要使用关键字参数来传递，因为它会让你的数变成字典！</p>
+<p>综上：没有星无所谓使不使用关键字参数，有一个星不能使用关键字参数，两个星必须使用关键字参数。</p>
+<h3 id="解包参数"><a href="#解包参数" class="headerlink" title="解包参数"></a>解包参数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#先定义参数的值，然后再传递参数</span></span><br><span class="line">var = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">a,b,c</span>):</span><br><span class="line">    <span class="built_in">print</span>(a,b,c)</span><br><span class="line">fun(*var)  <span class="comment">#1,2,3 这样就是解包啦！</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#字典的解包</span></span><br><span class="line">var = (<span class="string">&#x27;a&#x27;</span> = <span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;b&#x27;</span> = <span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;c&#x27;</span> = <span class="string">&#x27;3&#x27;</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">a,b,c</span>):</span><br><span class="line">    <span class="built_in">print</span>(a,b,c)</span><br><span class="line">fun(**var)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#在函数中定义函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">funA</span>():</span><br><span class="line">    x = <span class="number">888</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">funB</span>(): <span class="comment">#这个funB函数的作用域就在funA中，外部调用funB会报错的。</span></span><br><span class="line">    	<span class="built_in">print</span>(x)</span><br><span class="line">    funB() </span><br><span class="line">    </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">outer</span>():</span><br><span class="line">    x=<span class="number">0</span></span><br><span class="line">    y=<span class="number">0</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner</span>(<span class="params">x1,y1</span>):</span><br><span class="line">        <span class="built_in">print</span>(x,y)</span><br><span class="line"><span class="comment">#使用下列语句可以调用inner函数！</span></span><br><span class="line">outer()() <span class="comment">#第一个括号表示调用outer函数，第二个括号表示inner函数</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#函数中函数的名称可以做参数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">avg</span>(<span class="params">x,y</span>):</span><br><span class="line">    <span class="keyword">return</span> (x+y)/<span class="number">2</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">函数名,x,y</span>):</span><br><span class="line">    函数名(x,y)  <span class="comment">#我们这里把参数的名字当中函数名</span></span><br><span class="line">f(avg,<span class="number">2</span>,<span class="number">4</span>) <span class="comment">#这里实现的就是avg(2,4) = 3</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2445,41 +2482,6 @@
 
 
 <h3 id="修改字典和删除字典"><a href="#修改字典和删除字典" class="headerlink" title="修改字典和删除字典"></a>修改字典和删除字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#修改字典</span></span><br><span class="line">di = &#123;<span class="string">&#x27;name&#x27;</span> = <span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;num&#x27;</span> = <span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;class&#x27;</span> = <span class="number">3</span>&#125;</span><br><span class="line">di[<span class="string">&#x27;name&#x27;</span> = <span class="string">&#x27;10&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(di[<span class="string">&#x27;name&#x27;</span>])  <span class="comment">#10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除字典</span></span><br><span class="line"><span class="keyword">del</span> di[<span class="string">&#x27;name&#x27;</span>] <span class="comment"># 删除键 &#x27;Name&#x27;</span></span><br><span class="line">di.clear()     <span class="comment"># 清空字典，但是字典还是保留着的</span></span><br><span class="line"><span class="keyword">del</span> di         <span class="comment"># 删除字典</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python--函数</title>
-    <url>/2022/02/19/python-%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h2 id="函数的基本操作"><a href="#函数的基本操作" class="headerlink" title="函数的基本操作"></a><strong>函数的基本操作</strong></h2><span id="more"></span>
-
-<h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用def来定义一个函数myfun,来实现x的累加</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfunadd</span>(<span class="params">x</span>):</span><br><span class="line">	x = x + <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="位置参数"><a href="#位置参数" class="headerlink" title="位置参数"></a>位置参数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#位置参数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">a,b,c</span>):</span><br><span class="line">    <span class="keyword">return</span><span class="string">&quot;&quot;</span>.join((c,b,a)) <span class="comment">#使用join表示在后面添加字符串</span></span><br><span class="line"><span class="built_in">print</span>(func(<span class="string">&quot;我&quot;</span>, <span class="string">&quot;是&quot;</span>, <span class="string">&quot;你&quot;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#帮助函数中的/:代表着/的左边不能指定参数的名字，只能指定其值，但是/的右边就无所谓了。</span></span><br><span class="line"><span class="comment">#我们还可以用*来代替/ *的左边不能用参数的名字，但是右边要用</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">a,*,b,c</span>):</span><br><span class="line">	<span class="built_in">print</span>(a,b,c)</span><br><span class="line">fun(<span class="string">&quot;d&quot;</span>,<span class="string">&quot;e&quot;</span>,<span class="string">&quot;g&quot;</span>) <span class="comment">#error,第二第三个参数要加参数名字</span></span><br><span class="line">fun(<span class="string">&quot;d&quot;</span>,b=<span class="string">&quot;e&quot;</span>,c=<span class="string">&quot;g&quot;</span>) <span class="comment">#d e g</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="收集参数"><a href="#收集参数" class="headerlink" title="收集参数"></a><strong>收集参数</strong></h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#收集函数即只指定一个参数，然后允许调用函数时传入任意数量的参数。在函数的形式参数之前加上*号即可</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfun</span>(<span class="params">*var</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;一共传入了&#123;&#125;个参数&quot;</span>.<span class="built_in">format</span>(<span class="built_in">len</span>(var)))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;第二个参数是&#123;&#125;&quot;</span>.<span class="built_in">format</span>(var[<span class="number">1</span>]))</span><br><span class="line"></span><br><span class="line"><span class="comment">#注意只能指定一个带*号的参数，要是需要其他的形式参数，那么需要用到关键字参数。</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfun2</span>(<span class="params">*var,a,b</span>):</span><br><span class="line">    <span class="built_in">print</span>(var,a,b)</span><br><span class="line">myfun2(<span class="string">&quot;Deng&quot;</span>,a=<span class="string">&quot;Gao&quot;</span>,b=<span class="string">&quot;zheng&quot;</span>) <span class="comment">#像这样a和b使用了关键字参数即可</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#在形式参数之前加上两个*代表着传入的参数可以自动转换成为字典</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">myfun</span>(<span class="params">**var</span>):</span><br><span class="line">    <span class="built_in">print</span>(var) <span class="comment">#</span></span><br><span class="line">myfun(a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span>) <span class="comment">#(&#x27;a&#x27;:&#x27;1&#x27;,&#x27;b&#x27;:&#x27;2&#x27;,&#x27;c&#x27;:&#x27;3&#x27;)即为字典形式</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#综合</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">xing</span>(<span class="params">a,*b,**c</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;a=&quot;</span>,a,<span class="string">&quot;b=&quot;</span>,b,<span class="string">&quot;c=&quot;</span>,c)</span><br><span class="line">xing(<span class="string">&quot;deng&quot;</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,c=<span class="string">&quot;zheng&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>#！！！个人总结：1.对于没有星的参数来说，在传入参数时只要出现“，”，那么就会自动跳到下一个参数！2.对于有一个星的参数来说，不能使用关键字参数来传递参数给它！！！否则会报错，它会自动收集剩下的数，即捡破烂。3.对于有两个*的参数来说，你必须要使用关键字参数来传递，因为它会让你的数变成字典！</p>
-<p>综上：没有星无所谓使不使用关键字参数，有一个星不能使用关键字参数，两个星必须使用关键字参数。</p>
-<h3 id="解包参数"><a href="#解包参数" class="headerlink" title="解包参数"></a>解包参数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#先定义参数的值，然后再传递参数</span></span><br><span class="line">var = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">a,b,c</span>):</span><br><span class="line">    <span class="built_in">print</span>(a,b,c)</span><br><span class="line">fun(*var)  <span class="comment">#1,2,3 这样就是解包啦！</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#字典的解包</span></span><br><span class="line">var = (<span class="string">&#x27;a&#x27;</span> = <span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;b&#x27;</span> = <span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;c&#x27;</span> = <span class="string">&#x27;3&#x27;</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">a,b,c</span>):</span><br><span class="line">    <span class="built_in">print</span>(a,b,c)</span><br><span class="line">fun(**var)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#在函数中定义函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">funA</span>():</span><br><span class="line">    x = <span class="number">888</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">funB</span>(): <span class="comment">#这个funB函数的作用域就在funA中，外部调用funB会报错的。</span></span><br><span class="line">    	<span class="built_in">print</span>(x)</span><br><span class="line">    funB() </span><br><span class="line">    </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">outer</span>():</span><br><span class="line">    x=<span class="number">0</span></span><br><span class="line">    y=<span class="number">0</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner</span>(<span class="params">x1,y1</span>):</span><br><span class="line">        <span class="built_in">print</span>(x,y)</span><br><span class="line"><span class="comment">#使用下列语句可以调用inner函数！</span></span><br><span class="line">outer()() <span class="comment">#第一个括号表示调用outer函数，第二个括号表示inner函数</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#函数中函数的名称可以做参数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">avg</span>(<span class="params">x,y</span>):</span><br><span class="line">    <span class="keyword">return</span> (x+y)/<span class="number">2</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">函数名,x,y</span>):</span><br><span class="line">    函数名(x,y)  <span class="comment">#我们这里把参数的名字当中函数名</span></span><br><span class="line">f(avg,<span class="number">2</span>,<span class="number">4</span>) <span class="comment">#这里实现的就是avg(2,4) = 3</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2627,30 +2629,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”python--除和地板除“</title>
-    <url>/2022/02/09/python-%E9%99%A4%E5%92%8C%E5%9C%B0%E6%9D%BF%E9%99%A4/</url>
-    <content><![CDATA[<p>3/2=1.5这个谁都懂</p>
-<p>但是3//2=1这个代表3/2的结果向下取整，称之为地板除。</p>
-<span id="more"></span>
-
-<p>如-5//2，先算-5/2=-2.5，再向下取整，得-3。</p>
-<p>我们还可以使用python的内置函数divmod（）</p>
-<p>如divmod(3,2)=(1,1)结果中的第一个1代表着3//2的结果，第二个1代表着3%2的结果。</p>
-<p>内置函数abs，如abs（x）意思是取x的绝对值</p>
-<p>任何数据类型后面加括号加值的结果都是强制转换成该数据类型。</p>
-<p>如：x=2.5</p>
-<p>int（x）的结果就是2，向下取整！</p>
-<p>pow(2,3)代表2的三次方，和2**3的效果一样。</p>
-<p>pow（2,3,4）代表着2**3%4即2的三次方结果除四的余数！</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python--集合</title>
     <url>/2022/02/17/python-%E9%9B%86%E5%90%88/</url>
     <content><![CDATA[<h1 id="一些集合的基本操作"><a href="#一些集合的基本操作" class="headerlink" title="一些集合的基本操作"></a>一些集合的基本操作</h1><span id="more"></span>
@@ -2715,9 +2693,35 @@
       </tags>
   </entry>
   <entry>
+    <title>”python--除和地板除“</title>
+    <url>/2022/02/09/python-%E9%99%A4%E5%92%8C%E5%9C%B0%E6%9D%BF%E9%99%A4/</url>
+    <content><![CDATA[<p>3/2=1.5这个谁都懂</p>
+<p>但是3//2=1这个代表3/2的结果向下取整，称之为地板除。</p>
+<span id="more"></span>
+
+<p>如-5//2，先算-5/2=-2.5，再向下取整，得-3。</p>
+<p>我们还可以使用python的内置函数divmod（）</p>
+<p>如divmod(3,2)=(1,1)结果中的第一个1代表着3//2的结果，第二个1代表着3%2的结果。</p>
+<p>内置函数abs，如abs（x）意思是取x的绝对值</p>
+<p>任何数据类型后面加括号加值的结果都是强制转换成该数据类型。</p>
+<p>如：x=2.5</p>
+<p>int（x）的结果就是2，向下取整！</p>
+<p>pow(2,3)代表2的三次方，和2**3的效果一样。</p>
+<p>pow（2,3,4）代表着2**3%4即2的三次方结果除四的余数！</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数值分析-- 误差</title>
     <url>/2022/03/07/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-%E8%AF%AF%E5%B7%AE/</url>
-    <content><![CDATA[<h3 id="误差和误差限"><a href="#误差和误差限" class="headerlink" title="误差和误差限"></a>误差和误差限</h3><p>设X* 为X的一个近似值（可大于X也可小于X），有e* =  X-X* ,称e* 为<strong>绝对误差</strong>，简称<strong>误差</strong>。</p>
+    <content><![CDATA[<span id="more"></span>
+
+<h3 id="误差和误差限"><a href="#误差和误差限" class="headerlink" title="误差和误差限"></a>误差和误差限</h3><p>设X* 为X的一个近似值（可大于X也可小于X），有e* =  X-X* ,称e* 为<strong>绝对误差</strong>，简称<strong>误差</strong>。</p>
 <p>易得出结论：当绝对误差大于0时，近似值大于真实值，称为<strong>强近似值</strong>；当绝对误差小于0时，近似值小于真实值，称为<strong>弱近似值</strong>。</p>
 <p>误差的绝对值不超过某个正数E* ，称这个正数E<em>为近似值的*<em>误差限</em></em> </p>
 <h3 id="相对误差和相对误差限"><a href="#相对误差和相对误差限" class="headerlink" title="相对误差和相对误差限"></a>相对误差和相对误差限</h3><p>**相对误差:*<em>指的是近似值e</em> 与真实值X的比值，称为e(r)*（右下角有个小r）</p>
@@ -2982,6 +2986,34 @@
       </tags>
   </entry>
   <entry>
+    <title>统计学-- 数据的搜集</title>
+    <url>/2022/03/08/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%90%9C%E9%9B%86/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h3 id="数据的分类"><a href="#数据的分类" class="headerlink" title="数据的分类"></a>数据的分类</h3><p>1.原始数据：调查，观察实验。</p>
+<p>2.次级数据：已被做好的，统计年鉴，期刊等等。</p>
+<h3 id="概率抽样和非概率抽样"><a href="#概率抽样和非概率抽样" class="headerlink" title="概率抽样和非概率抽样"></a>概率抽样和非概率抽样</h3><p>1.概率抽样（随机抽样）：</p>
+<p>​    （1）简单随机抽样：（需要<strong>抽样框</strong>，<strong>抽样框</strong>通常包括所有总体单位的信息，如小区用户信息，住户门牌号等）从包括总体N个单位的抽样框中一个个的抽取n个单位作为样本，抽中每个样本的概率是相等的。</p>
+<p>​    （2）分层抽样：把总体按照某种特征或某种规则划分成多层，然后从不同的层中抽取样本，然后将这些样本结合起来。</p>
+<p>​    （3）整群抽样：总体中若干个单位合并为<strong>群</strong>，抽样的时候直接抽取群，然后对选中的群全部进行调查，称为<strong>整群抽样</strong>。</p>
+<p>​    （4）系统抽样：将所有单位按一定的顺序排好，在规定的范围内随机抽取一个单位作为初始单位。然后按照一定的规则确定其他的样本单位。</p>
+<p>​    （5）多阶段抽样：先进行整群抽样，然后再从群里面抽取若干个单位进行调查。</p>
+<p>2.非概率抽样：</p>
+<p>​    （1）方便抽样：调查过程中调查员依据方便的原则</p>
+<p>​    （2）判断抽样：研究人员根据经验，判断等，有目标的选择对象进行研究</p>
+<p>​    （3）自愿抽样：自愿者自愿参与</p>
+<p>​    （4）滚雪球抽样：先选择一组样本，然后由这个样本提供其他的样本，故称为滚雪球</p>
+<p>​    （5）配额抽样：类似于概率抽样中的分层抽样</p>
+<p>​    </p>
+]]></content>
+      <categories>
+        <category>统计学</category>
+      </categories>
+      <tags>
+        <tag>统计学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>统计学 -- 导论</title>
     <url>/2022/03/04/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E5%AF%BC%E8%AE%BA/</url>
     <content><![CDATA[<h3 id="统计数据的类型"><a href="#统计数据的类型" class="headerlink" title="统计数据的类型"></a>统计数据的类型</h3><span id="more"></span>
@@ -3013,32 +3045,6 @@
 <p>​    （1）数量指标-&gt;总体GDP</p>
 <p>​    （2）质量指标-&gt;人均GDP</p>
 <p>4.统计指标的构成如下：时间限制，空间限制，计算方法，指标名称，数值，计量单位</p>
-]]></content>
-      <categories>
-        <category>统计学</category>
-      </categories>
-      <tags>
-        <tag>统计学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>统计学-- 数据的搜集</title>
-    <url>/2022/03/08/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%90%9C%E9%9B%86/</url>
-    <content><![CDATA[<h3 id="数据的分类"><a href="#数据的分类" class="headerlink" title="数据的分类"></a>数据的分类</h3><p>1.原始数据：调查，观察实验。</p>
-<p>2.次级数据：已被做好的，统计年鉴，期刊等等。</p>
-<h3 id="概率抽样和非概率抽样"><a href="#概率抽样和非概率抽样" class="headerlink" title="概率抽样和非概率抽样"></a>概率抽样和非概率抽样</h3><p>1.概率抽样（随机抽样）：</p>
-<p>​    （1）简单随机抽样：（需要<strong>抽样框</strong>，<strong>抽样框</strong>通常包括所有总体单位的信息，如小区用户信息，住户门牌号等）从包括总体N个单位的抽样框中一个个的抽取n个单位作为样本，抽中每个样本的概率是相等的。</p>
-<p>​    （2）分层抽样：把总体按照某种特征或某种规则划分成多层，然后从不同的层中抽取样本，然后将这些样本结合起来。</p>
-<p>​    （3）整群抽样：总体中若干个单位合并为<strong>群</strong>，抽样的时候直接抽取群，然后对选中的群全部进行调查，称为<strong>整群抽样</strong>。</p>
-<p>​    （4）系统抽样：将所有单位按一定的顺序排好，在规定的范围内随机抽取一个单位作为初始单位。然后按照一定的规则确定其他的样本单位。</p>
-<p>​    （5）多阶段抽样：先进行整群抽样，然后再从群里面抽取若干个单位进行调查。</p>
-<p>2.非概率抽样：</p>
-<p>​    （1）方便抽样：调查过程中调查员依据方便的原则</p>
-<p>​    （2）判断抽样：研究人员根据经验，判断等，有目标的选择对象进行研究</p>
-<p>​    （3）自愿抽样：自愿者自愿参与</p>
-<p>​    （4）滚雪球抽样：先选择一组样本，然后由这个样本提供其他的样本，故称为滚雪球</p>
-<p>​    （5）配额抽样：类似于概率抽样中的分层抽样</p>
-<p>​    </p>
 ]]></content>
       <categories>
         <category>统计学</category>

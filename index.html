@@ -423,10 +423,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-03-08 18:49:32 / 修改时间：19:35:35" itemprop="dateCreated datePublished" datetime="2022-03-08T18:49:32+08:00">2022-03-08</time>
+              <time title="创建时间：2022-03-08 18:49:32" itemprop="dateCreated datePublished" datetime="2022-03-08T18:49:32+08:00">2022-03-08</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-13 22:52:57" itemprop="dateModified" datetime="2022-03-13T22:52:57+08:00">2022-03-13</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -476,7 +482,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="数据的分类"><a href="#数据的分类" class="headerlink" title="数据的分类"></a>数据的分类</h3><p>1.原始数据：调查，观察实验。</p>
+          <span id="more"></span>
+
+<h3 id="数据的分类"><a href="#数据的分类" class="headerlink" title="数据的分类"></a>数据的分类</h3><p>1.原始数据：调查，观察实验。</p>
 <p>2.次级数据：已被做好的，统计年鉴，期刊等等。</p>
 <h3 id="概率抽样和非概率抽样"><a href="#概率抽样和非概率抽样" class="headerlink" title="概率抽样和非概率抽样"></a>概率抽样和非概率抽样</h3><p>1.概率抽样（随机抽样）：</p>
 <p>​    （1）简单随机抽样：（需要<strong>抽样框</strong>，<strong>抽样框</strong>通常包括所有总体单位的信息，如小区用户信息，住户门牌号等）从包括总体N个单位的抽样框中一个个的抽取n个单位作为样本，抽中每个样本的概率是相等的。</p>
@@ -544,7 +552,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-08 23:15:11" itemprop="dateModified" datetime="2022-03-08T23:15:11+08:00">2022-03-08</time>
+                <time title="修改时间：2022-03-13 18:11:12" itemprop="dateModified" datetime="2022-03-13T18:11:12+08:00">2022-03-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -595,7 +603,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="向量的基本命令"><a href="#向量的基本命令" class="headerlink" title="向量的基本命令"></a>向量的基本命令</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#创建一个四维向量（<span class="number">1</span>，<span class="number">2</span>，<span class="number">3</span>，<span class="number">4</span>）</span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">#注意：在matlab中下标是从<span class="number">1</span>开始计算的，而不是从<span class="number">0</span>开始计算的</span><br><span class="line">#使用y = x(<span class="built_in">i</span>)可以提取x中的第<span class="built_in">i</span>个元素！！</span><br><span class="line">y  = x(<span class="number">2</span>) #这里我们提取了x中的第二个元素是<span class="number">2</span>，不是<span class="number">3</span>！！！</span><br><span class="line">#使用分号；来分行，用逗号来分列！</span><br><span class="line">x = [<span class="number">1</span>;<span class="number">2</span>;<span class="number">3</span>;<span class="number">4</span>] #这时x就是四行了</span><br><span class="line"></span><br><span class="line">#创建等差数列来遍历向量</span><br><span class="line"></span><br><span class="line">#第一种等差数列的方式： x = a:d:b 表示遍历从a到b，其中公差是d（包括开头的数，当然也包括结尾的数，如果能取到的话）</span><br><span class="line">x = <span class="number">1</span>:<span class="number">2</span>:<span class="number">10</span>  #结果就是<span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">7</span> <span class="number">9</span></span><br><span class="line">#第二种等差数列的方式：x = <span class="built_in">linspace</span>(a,b,n),简单来说就是在a和b之间平均分成n分呈现出来。当a=b时会产生n个a。</span><br><span class="line">x = <span class="built_in">linspace</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">10</span>) #<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> <span class="number">10</span></span><br><span class="line"></span><br><span class="line">#求向量的维数（长度）</span><br><span class="line">n = <span class="built_in">length</span>(x)</span><br><span class="line">#求向量的转置</span><br><span class="line">xt = transpose(x)	#也可以表示为xt=x&#x27;</span><br><span class="line">#求最大值及对应位置的元素</span><br><span class="line">[m1,p1] = <span class="built_in">max</span>(x)	#m1表示最大值，p1表示对应的位置的元素</span><br><span class="line">#求最大值及对应位置的元素</span><br><span class="line">[m2,p2] = <span class="built_in">min</span>(x)	#m2表示最小值，p2表示对应位置的元素</span><br><span class="line">#求向量x中所有元素的和</span><br><span class="line">y = sum(x)			</span><br><span class="line">#求x中所有元素的平均值</span><br><span class="line">y = <span class="built_in">mean</span>(x)</span><br><span class="line">#求向量x的lp范数</span><br><span class="line">y = norm(x,p)</span><br><span class="line">#求向量的标准差</span><br><span class="line">y = std(x)</span><br><span class="line">#求向量中每个元素的绝对值</span><br><span class="line">y = <span class="built_in">abs</span>(x)</span><br><span class="line">#对向量中的每个元素进行从小到大的排序，p表示位置组成的变量</span><br><span class="line">[y,p] = <span class="built_in">sort</span>(x)				#正序排序</span><br><span class="line">[y,p] = <span class="built_in">sort</span>(x,<span class="string">&#x27;descend&#x27;</span>)	#倒序排序</span><br></pre></td></tr></table></figure>
+          <span id="more"></span>
+
+<h3 id="向量的基本命令"><a href="#向量的基本命令" class="headerlink" title="向量的基本命令"></a>向量的基本命令</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#创建一个四维向量（<span class="number">1</span>，<span class="number">2</span>，<span class="number">3</span>，<span class="number">4</span>）</span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">#注意：在matlab中下标是从<span class="number">1</span>开始计算的，而不是从<span class="number">0</span>开始计算的</span><br><span class="line">#使用y = x(<span class="built_in">i</span>)可以提取x中的第<span class="built_in">i</span>个元素！！</span><br><span class="line">y  = x(<span class="number">2</span>) #这里我们提取了x中的第二个元素是<span class="number">2</span>，不是<span class="number">3</span>！！！</span><br><span class="line">#使用分号；来分行，用逗号来分列！</span><br><span class="line">x = [<span class="number">1</span>;<span class="number">2</span>;<span class="number">3</span>;<span class="number">4</span>] #这时x就是四行了</span><br><span class="line"></span><br><span class="line">#创建等差数列来遍历向量</span><br><span class="line"></span><br><span class="line">#第一种等差数列的方式： x = a:d:b 表示遍历从a到b，其中公差是d（包括开头的数，当然也包括结尾的数，如果能取到的话）</span><br><span class="line">x = <span class="number">1</span>:<span class="number">2</span>:<span class="number">10</span>  #结果就是<span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">7</span> <span class="number">9</span></span><br><span class="line">#第二种等差数列的方式：x = <span class="built_in">linspace</span>(a,b,n),简单来说就是在a和b之间平均分成n分呈现出来。当a=b时会产生n个a。</span><br><span class="line">x = <span class="built_in">linspace</span>(<span class="number">1</span>,<span class="number">10</span>,<span class="number">10</span>) #<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> <span class="number">10</span></span><br><span class="line"></span><br><span class="line">#求向量的维数（长度）</span><br><span class="line">n = <span class="built_in">length</span>(x)</span><br><span class="line">#求向量的转置</span><br><span class="line">xt = transpose(x)	#也可以表示为xt=x&#x27;</span><br><span class="line">#求最大值及对应位置的元素</span><br><span class="line">[m1,p1] = <span class="built_in">max</span>(x)	#m1表示最大值，p1表示对应的位置的元素</span><br><span class="line">#求最大值及对应位置的元素</span><br><span class="line">[m2,p2] = <span class="built_in">min</span>(x)	#m2表示最小值，p2表示对应位置的元素</span><br><span class="line">#求向量x中所有元素的和</span><br><span class="line">y = sum(x)			</span><br><span class="line">#求x中所有元素的平均值</span><br><span class="line">y = <span class="built_in">mean</span>(x)</span><br><span class="line">#求向量x的lp范数</span><br><span class="line">y = norm(x,p)</span><br><span class="line">#求向量的标准差</span><br><span class="line">y = std(x)</span><br><span class="line">#求向量中每个元素的绝对值</span><br><span class="line">y = <span class="built_in">abs</span>(x)</span><br><span class="line">#对向量中的每个元素进行从小到大的排序，p表示位置组成的变量</span><br><span class="line">[y,p] = <span class="built_in">sort</span>(x)				#正序排序</span><br><span class="line">[y,p] = <span class="built_in">sort</span>(x,<span class="string">&#x27;descend&#x27;</span>)	#倒序排序</span><br></pre></td></tr></table></figure>
 
 
 
@@ -654,10 +664,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-03-07 19:42:13 / 修改时间：21:04:46" itemprop="dateCreated datePublished" datetime="2022-03-07T19:42:13+08:00">2022-03-07</time>
+              <time title="创建时间：2022-03-07 19:42:13" itemprop="dateCreated datePublished" datetime="2022-03-07T19:42:13+08:00">2022-03-07</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-13 18:10:41" itemprop="dateModified" datetime="2022-03-13T18:10:41+08:00">2022-03-13</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -707,7 +723,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="误差和误差限"><a href="#误差和误差限" class="headerlink" title="误差和误差限"></a>误差和误差限</h3><p>设X* 为X的一个近似值（可大于X也可小于X），有e* =  X-X* ,称e* 为<strong>绝对误差</strong>，简称<strong>误差</strong>。</p>
+          <span id="more"></span>
+
+<h3 id="误差和误差限"><a href="#误差和误差限" class="headerlink" title="误差和误差限"></a>误差和误差限</h3><p>设X* 为X的一个近似值（可大于X也可小于X），有e* =  X-X* ,称e* 为<strong>绝对误差</strong>，简称<strong>误差</strong>。</p>
 <p>易得出结论：当绝对误差大于0时，近似值大于真实值，称为<strong>强近似值</strong>；当绝对误差小于0时，近似值小于真实值，称为<strong>弱近似值</strong>。</p>
 <p>误差的绝对值不超过某个正数E* ，称这个正数E<em>为近似值的*<em>误差限</em></em> </p>
 <h3 id="相对误差和相对误差限"><a href="#相对误差和相对误差限" class="headerlink" title="相对误差和相对误差限"></a>相对误差和相对误差限</h3><p>**相对误差:*<em>指的是近似值e</em> 与真实值X的比值，称为e(r)*（右下角有个小r）</p>
