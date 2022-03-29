@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"hexo.denggaozheng.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="定点数（考试重点）定点数：小数点的位置不变 浮点数：小数点的位置会改变 无符号数定义：整个机器的全部二进制位全部是数值位，没有符号位。相当于数的绝对值。 有符号数定点整数小数点在最后 定点小数小数点紧跟在符号位的后面。 由此我们可以知道，如果要保存一个定点数，需要定点整数和定点小数分开保存 可以用原码，反码，补码来表示定点正数和定点小数，可以用移码表示定点整数 尾数：用来表示整数或者小数的数值部分">
+  <meta name="description" content="定点数（考试重点）定点数：小数点的位置不变 浮点数：小数点的位置会改变">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机组成原理--数、码">
 <meta property="og:url" content="http://hexo.denggaozheng.top/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/index.html">
 <meta property="og:site_name" content="Denggaozheng&#96;s blog">
-<meta property="og:description" content="定点数（考试重点）定点数：小数点的位置不变 浮点数：小数点的位置会改变 无符号数定义：整个机器的全部二进制位全部是数值位，没有符号位。相当于数的绝对值。 有符号数定点整数小数点在最后 定点小数小数点紧跟在符号位的后面。 由此我们可以知道，如果要保存一个定点数，需要定点整数和定点小数分开保存 可以用原码，反码，补码来表示定点正数和定点小数，可以用移码表示定点整数 尾数：用来表示整数或者小数的数值部分">
+<meta property="og:description" content="定点数（考试重点）定点数：小数点的位置不变 浮点数：小数点的位置会改变">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-24T13:11:46.000Z">
-<meta property="article:modified_time" content="2022-03-27T13:41:39.148Z">
+<meta property="article:modified_time" content="2022-03-29T13:37:44.692Z">
 <meta property="article:author" content="邓高正">
 <meta property="article:tag" content="计组">
 <meta name="twitter:card" content="summary">
@@ -218,7 +218,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-27 21:41:39" itemprop="dateModified" datetime="2022-03-27T21:41:39+08:00">2022-03-27</time>
+                <time title="修改时间：2022-03-29 21:37:44" itemprop="dateModified" datetime="2022-03-29T21:37:44+08:00">2022-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -250,14 +250,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>739</span>
+              <span>2.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -271,6 +271,10 @@
       
         <h2 id="定点数（考试重点）"><a href="#定点数（考试重点）" class="headerlink" title="定点数（考试重点）"></a>定点数（考试重点）</h2><p>定点数：小数点的位置不变</p>
 <p>浮点数：小数点的位置会改变</p>
+<span id="more"></span>
+
+
+
 <h3 id="无符号数"><a href="#无符号数" class="headerlink" title="无符号数"></a>无符号数</h3><p>定义：整个机器的全部二进制位全部是数值位，没有符号位。相当于数的绝对值。</p>
 <h3 id="有符号数"><a href="#有符号数" class="headerlink" title="有符号数"></a>有符号数</h3><h4 id="定点整数"><a href="#定点整数" class="headerlink" title="定点整数"></a>定点整数</h4><p>小数点在最后</p>
 <h4 id="定点小数"><a href="#定点小数" class="headerlink" title="定点小数"></a>定点小数</h4><p>小数点紧跟在符号位的后面。</p>
@@ -292,11 +296,51 @@
 <p>负数的补码 = 反码末位+1（要考虑到进位问题）</p>
 <p>注意：补码的真值0只有一种表示形式</p>
 <p>定点整数补码，[x]补 = 1，0000000，表示-2^7</p>
-<h4 id="补码转原码"><a href="#补码转原码" class="headerlink" title="补码转原码"></a>补码转原码</h4><p>方法和原码转补码的方法一样，都是取反之后加一</p>
+<h5 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h5><p>通过x的补码求-x的补码：符号位全部取反，再在末位加一</p>
+<h4 id="补码转原码"><a href="#补码转原码" class="headerlink" title="补码转原码"></a>补码转原码</h4><p>方法和原码转补码的方法一样，都是<strong>取反之后加一（不是加一后取反）</strong></p>
+<p><strong>即：补码的补码是原码</strong></p>
 <h4 id="移码"><a href="#移码" class="headerlink" title="移码"></a>移码</h4><p>在补码的基础上将符号位取反</p>
 <p><strong>移码只能用于表示整数</strong></p>
 <p>移码可以方便计算机判断哪个值更大</p>
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>综上，我们只有在看到符号位是1的才需要进行反码原码的操作，0的反码和补码都是它本身</p>
+<h2 id="原码补码移码的作用"><a href="#原码补码移码的作用" class="headerlink" title="原码补码移码的作用"></a>原码补码移码的作用</h2><h3 id="补码的作用"><a href="#补码的作用" class="headerlink" title="补码的作用"></a>补码的作用</h3><h4 id="带余除法"><a href="#带余除法" class="headerlink" title="带余除法"></a>带余除法</h4><p>如 x mod m = r .</p>
+<p>实际是x = qm + r（其中q是整数，r是余数）</p>
+<p>mod 12 把所有数分成了12类（余数相同的是一类）同一类数都是等价的，即1+0和1+12和1+24都是等效的！！</p>
+<p>同一类数<strong>（如1和13和25）</strong>之间互为补数，两者的绝对值之和为模数<strong>（12）</strong></p>
+<p><strong>重点公式：模-a的绝对值=a的补数</strong>（如12-|-3| = 9）</p>
+<h5 id="计算机中的应用"><a href="#计算机中的应用" class="headerlink" title="计算机中的应用"></a>计算机中的应用</h5><p>计算机中的模是2的八次方，任何一个数想要求补码就拿2的八次方减去该数绝对值即可，但是有了补码就可以用上面的重点公式来算了，十分方便，因此可以总结出：<br><strong>补码的作用是：让减法操作转变为加法操作，节省计算机硬件的成本！</strong></p>
+<p>使得ALU算术逻辑单元中只需要设计加法相关的电路而不需要设计减法电路，非常的银杏化！</p>
+<p>执行加法操作的时候，符号位会一起参与运算！</p>
+<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><h3 id="移位运算（-）"><a href="#移位运算（-）" class="headerlink" title="移位运算（*）"></a>移位运算（*）</h3><p>移位：通过改变各个数码位和小数点的相对位置，从而改变各个数码位的位权，可以用移位运算实现乘法，除法。</p>
+<h4 id="算术移位（符号位保持不变，数值位移动）"><a href="#算术移位（符号位保持不变，数值位移动）" class="headerlink" title="算术移位（符号位保持不变，数值位移动）"></a>算术移位（符号位保持不变，数值位移动）</h4><p>因为定点数的小数点位置是不变的，那我们可以改变数的位置，各个数的位权发生改变。</p>
+<p>如110011.000向右移一位变成：11001.100。这时，前数除2的一次方即可得到后数。</p>
+<p>110011.000向左移一位变成：1100110.000，这时前数乘以2的一次方即可得到后数。</p>
+<p>110011.000向左移两位变成：11001100.000，这时前数乘以2的二次方即可得到后数。</p>
+<p><strong>右移：高位补零，低位（小数点后的位数）舍弃，如果舍弃的位数等于0，那么除2，如果舍弃的位数不等于0，那么会丢失精度。</strong></p>
+<p><strong>左移：低位补零，高位舍弃，若舍弃位=0，相当于*2，若舍弃位！=0，会出现严重误差（因为最高位只能表示到(2^8)-1）</strong></p>
+<h5 id="反码的算术移位"><a href="#反码的算术移位" class="headerlink" title="反码的算术移位"></a>反码的算术移位</h5><p><strong>正数：</strong>因为正数的反码与原码相同，因此正数反码的算术移位也和原码相同！</p>
+<p><strong>负数：</strong>负数的算术移位与原码相反，左移在低位补1，右移在高位补1.</p>
+<h5 id="补码的算术移位"><a href="#补码的算术移位" class="headerlink" title="补码的算术移位"></a>补码的算术移位</h5><p><strong>正数：算术移位与原码相同</strong></p>
+<p><strong>负数移位的前提：在负数的补码中，补码最右边的1（包括自己）的右边与原码一致，最右边的1的左边与反码一致·</strong></p>
+<p><strong>负数：右移，高位补1，左移，低位补0.</strong></p>
+<h5 id="计算机中的表达"><a href="#计算机中的表达" class="headerlink" title="计算机中的表达"></a>计算机中的表达</h5><p>例如-20*7，我们可以把7看成（2^0 + 2^1 + 2^2）,所以就是-20 * （2^0 + 2^1 + 2^2），计算机就判断把-20的二进制形式左移或者右移几位就行了！</p>
+<h5 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h5><h5 id="正数：全补0；"><a href="#正数：全补0；" class="headerlink" title="正数：全补0；"></a>正数：全补0；</h5><p><strong>负数：原码补0，反码补1，补码左0右1</strong></p>
+<h4 id="逻辑移位"><a href="#逻辑移位" class="headerlink" title="逻辑移位"></a>逻辑移位</h4><p>不需要考虑别的，<strong>相当于对无符号数的算数移位</strong></p>
+<p>逻辑左移：高位补0，低位舍弃</p>
+<p>逻辑右移：低位补0，高位舍弃</p>
+<h4 id="循环移位"><a href="#循环移位" class="headerlink" title="循环移位"></a>循环移位</h4><p>左移时移出来的数放在最后！</p>
+<p>右移时移出来的数放在最前！</p>
+<h4 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h4><p><strong>进位位</strong>：如果我们把两个二进制数相加了结果大于8bit，那么多出来的那一位数就称为<strong>进位位</strong></p>
+<p>进位位的循环移位：左移时会把进位位的数放在原数的最后，把原数最前面的数放在进位位里面！</p>
+<h3 id="加减运算"><a href="#加减运算" class="headerlink" title="加减运算"></a>加减运算</h3><h4 id="原码的加减法"><a href="#原码的加减法" class="headerlink" title="原码的加减法"></a>原码的加减法</h4><h5 id="原码的加法运算"><a href="#原码的加法运算" class="headerlink" title="原码的加法运算"></a>原码的加法运算</h5><p>正+正=绝对值做加法，结果为正！</p>
+<p>负+负=绝对值做减法，结果为负！</p>
+<p>正+负=绝对值大的减绝对值小的，符号同绝对值大的数</p>
+<h5 id="原码的减法运算（减数符号取反变成加法）"><a href="#原码的减法运算（减数符号取反变成加法）" class="headerlink" title="原码的减法运算（减数符号取反变成加法）"></a>原码的减法运算（减数符号取反变成加法）</h5><p>正-负 = 正+正</p>
+<p>正-正 = 正+负</p>
+<p>负-正 = 负+负</p>
+<p>负-负 = 负+正</p>
+<h4 id="补码的加减法"><a href="#补码的加减法" class="headerlink" title="补码的加减法"></a>补码的加减法</h4><p>[A+B]补 = [A]补+[B]补</p>
+<p>[A-B]补 = [A]补 + [-B]补（其中用B补求-B补是符号位数值位全部取反，然后加一）</p>
 
     </div>
 
@@ -409,7 +453,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E7%82%B9%E6%95%B0%EF%BC%88%E8%80%83%E8%AF%95%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">定点数（考试重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text">无符号数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">有符号数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E7%82%B9%E6%95%B4%E6%95%B0"><span class="nav-number">1.2.1.</span> <span class="nav-text">定点整数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E7%82%B9%E5%B0%8F%E6%95%B0"><span class="nav-number">1.2.2.</span> <span class="nav-text">定点小数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%A0%81"><span class="nav-number">1.2.3.</span> <span class="nav-text">原码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A1%A8%E7%A4%BA%E5%AE%9A%E7%82%B9%E6%95%B4%E6%95%B0-%E4%BD%BF%E7%94%A8%E9%80%97%E5%8F%B7"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">表示定点整数(使用逗号)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A1%A8%E7%A4%BA%E5%AE%9A%E7%82%B9%E5%B0%8F%E6%95%B0%EF%BC%88%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%95%B0%E7%82%B9%EF%BC%89"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">表示定点小数（使用小数点）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8D%E7%A0%81"><span class="nav-number">1.2.4.</span> <span class="nav-text">反码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81"><span class="nav-number">1.2.5.</span> <span class="nav-text">补码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E8%BD%AC%E5%8E%9F%E7%A0%81"><span class="nav-number">1.2.6.</span> <span class="nav-text">补码转原码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A7%BB%E7%A0%81"><span class="nav-number">1.2.7.</span> <span class="nav-text">移码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.2.8.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E7%82%B9%E6%95%B0%EF%BC%88%E8%80%83%E8%AF%95%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">定点数（考试重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text">无符号数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">有符号数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E7%82%B9%E6%95%B4%E6%95%B0"><span class="nav-number">1.2.1.</span> <span class="nav-text">定点整数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E7%82%B9%E5%B0%8F%E6%95%B0"><span class="nav-number">1.2.2.</span> <span class="nav-text">定点小数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%A0%81"><span class="nav-number">1.2.3.</span> <span class="nav-text">原码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A1%A8%E7%A4%BA%E5%AE%9A%E7%82%B9%E6%95%B4%E6%95%B0-%E4%BD%BF%E7%94%A8%E9%80%97%E5%8F%B7"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">表示定点整数(使用逗号)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A1%A8%E7%A4%BA%E5%AE%9A%E7%82%B9%E5%B0%8F%E6%95%B0%EF%BC%88%E4%BD%BF%E7%94%A8%E5%B0%8F%E6%95%B0%E7%82%B9%EF%BC%89"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">表示定点小数（使用小数点）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8D%E7%A0%81"><span class="nav-number">1.2.4.</span> <span class="nav-text">反码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81"><span class="nav-number">1.2.5.</span> <span class="nav-text">补码</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">题目</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E8%BD%AC%E5%8E%9F%E7%A0%81"><span class="nav-number">1.2.6.</span> <span class="nav-text">补码转原码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A7%BB%E7%A0%81"><span class="nav-number">1.2.7.</span> <span class="nav-text">移码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.2.8.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%A0%81%E8%A1%A5%E7%A0%81%E7%A7%BB%E7%A0%81%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">原码补码移码的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">补码的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%A6%E4%BD%99%E9%99%A4%E6%B3%95"><span class="nav-number">2.1.1.</span> <span class="nav-text">带余除法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">计算机中的应用</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E7%AE%97"><span class="nav-number">3.</span> <span class="nav-text">运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%BB%E4%BD%8D%E8%BF%90%E7%AE%97%EF%BC%88-%EF%BC%89"><span class="nav-number">3.1.</span> <span class="nav-text">移位运算（*）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%97%E6%9C%AF%E7%A7%BB%E4%BD%8D%EF%BC%88%E7%AC%A6%E5%8F%B7%E4%BD%8D%E4%BF%9D%E6%8C%81%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%95%B0%E5%80%BC%E4%BD%8D%E7%A7%BB%E5%8A%A8%EF%BC%89"><span class="nav-number">3.1.1.</span> <span class="nav-text">算术移位（符号位保持不变，数值位移动）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%8D%E7%A0%81%E7%9A%84%E7%AE%97%E6%9C%AF%E7%A7%BB%E4%BD%8D"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">反码的算术移位</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E7%9A%84%E7%AE%97%E6%9C%AF%E7%A7%BB%E4%BD%8D"><span class="nav-number">3.1.1.2.</span> <span class="nav-text">补码的算术移位</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E8%BE%BE"><span class="nav-number">3.1.1.3.</span> <span class="nav-text">计算机中的表达</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="nav-number">3.1.1.4.</span> <span class="nav-text">总结：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AD%A3%E6%95%B0%EF%BC%9A%E5%85%A8%E8%A1%A50%EF%BC%9B"><span class="nav-number">3.1.1.5.</span> <span class="nav-text">正数：全补0；</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E7%A7%BB%E4%BD%8D"><span class="nav-number">3.1.2.</span> <span class="nav-text">逻辑移位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E7%A7%BB%E4%BD%8D"><span class="nav-number">3.1.3.</span> <span class="nav-text">循环移位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5"><span class="nav-number">3.1.4.</span> <span class="nav-text">特殊情况</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%87%8F%E8%BF%90%E7%AE%97"><span class="nav-number">3.2.</span> <span class="nav-text">加减运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%A0%81%E7%9A%84%E5%8A%A0%E5%87%8F%E6%B3%95"><span class="nav-number">3.2.1.</span> <span class="nav-text">原码的加减法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8E%9F%E7%A0%81%E7%9A%84%E5%8A%A0%E6%B3%95%E8%BF%90%E7%AE%97"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">原码的加法运算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8E%9F%E7%A0%81%E7%9A%84%E5%87%8F%E6%B3%95%E8%BF%90%E7%AE%97%EF%BC%88%E5%87%8F%E6%95%B0%E7%AC%A6%E5%8F%B7%E5%8F%96%E5%8F%8D%E5%8F%98%E6%88%90%E5%8A%A0%E6%B3%95%EF%BC%89"><span class="nav-number">3.2.1.2.</span> <span class="nav-text">原码的减法运算（减数符号取反变成加法）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E7%9A%84%E5%8A%A0%E5%87%8F%E6%B3%95"><span class="nav-number">3.2.2.</span> <span class="nav-text">补码的加减法</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -486,13 +530,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">64k</span>
+    <span title="站点总字数">65k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">58 分钟</span>
+    <span title="站点阅读时长">59 分钟</span>
     <span class="post-meta-divider">|</span>
   <span id="busuanzi_container_site_pv">
     <span class="post-meta-item-icon">
@@ -535,7 +579,7 @@ setInterval("createtime()",250);
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共34.4k字</span>
+  <span class="post-count">博客全站共35.5k字</span>
 </div>
         
 

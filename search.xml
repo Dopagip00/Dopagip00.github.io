@@ -39,35 +39,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--JDBC知识点“</title>
-    <url>/2022/02/09/JAVA-JDBC%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>JDBC相当于一个驱动，让数据库和java打交道。</p>
-<span id="more"></span>
-
-<p>对于开发人员来说，只需要掌握JDBC接口的操作即可。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/6cb5c95aa1fa076e8db6cc3bbedaf3e6.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>结构图，我们只需要学JDBC</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/1f734dc4920ffa0e272fe890bfcf6492.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>记得先要导入jar包</p>
-<h2 id="mysql-—-基本的操作"><a href="#mysql-—-基本的操作" class="headerlink" title="mysql — 基本的操作"></a><a href="https://dopagip.wordpress.com/2021/12/12/mysql-%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">mysql — 基本的操作</a></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--在sql里面所有的注释都用“--”,school是我们创建的数据库。</span><br><span class="line">show databases; --显示所有的数据库</span><br><span class="line"></span><br><span class="line">use school; --使用数据库</span><br><span class="line">change database</span><br><span class="line"></span><br><span class="line">use tables;  --显示所有的数据表</span><br><span class="line"></span><br><span class="line">desc tables; --显示数据库中所有表的信息</span><br><span class="line"></span><br><span class="line">create database &quot;school&quot;; --创建数据库</span><br><span class="line"></span><br><span class="line">exit; --退出mysql</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>数据库XX语言：</strong></p>
-<p>DDL 定义</p>
-<p>DML 操作</p>
-<p>DQL 查询</p>
-<p>DCL 控制</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--List接口“</title>
     <url>/2022/02/09/JAVA-List%E6%8E%A5%E5%8F%A3/</url>
     <content><![CDATA[<p>List接口的特点：有序，有下标，元素可以重复</p>
@@ -108,25 +79,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--Sring声明“</title>
-    <url>/2022/02/09/JAVA-Sring%E5%A3%B0%E6%98%8E/</url>
-    <content><![CDATA[<p>引用类型的引用在栈里面，对象在堆里面。</p>
-<span id="more"></span>
-
-<p>字符串的字面值存储在字符串池中，可以实现共享。</p>
-<p>String name = 20;//这里name存储在堆里面，20存储在方法池里面。</p>
-<p>声明string字符串有两种方式：</p>
-<p>1.String name = “Hellp”//产生一个对象，存储在字符串池中</p>
-<p>2.String name = new String(“Hello”)//产生两个对象，在字符串池和堆中各存放一个</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--SringBuffer和StringBudilder“</title>
     <url>/2022/02/09/JAVA-SringBuffer%E5%92%8CStringBudilder/</url>
     <content><![CDATA[<p>这两个都是可变字符串.</p>
@@ -140,6 +92,54 @@
 <p>replace(“0”，“5”，str)把0-5之间的字符替换为str。</p>
 <p>用<strong>delete删除指定位置的字符：</strong></p>
 <p>delete（“0”，“5”）删除0-5之间的字符串。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--JDBC知识点“</title>
+    <url>/2022/02/09/JAVA-JDBC%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>JDBC相当于一个驱动，让数据库和java打交道。</p>
+<span id="more"></span>
+
+<p>对于开发人员来说，只需要掌握JDBC接口的操作即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6cb5c95aa1fa076e8db6cc3bbedaf3e6.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>结构图，我们只需要学JDBC</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/1f734dc4920ffa0e272fe890bfcf6492.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>记得先要导入jar包</p>
+<h2 id="mysql-—-基本的操作"><a href="#mysql-—-基本的操作" class="headerlink" title="mysql — 基本的操作"></a><a href="https://dopagip.wordpress.com/2021/12/12/mysql-%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">mysql — 基本的操作</a></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--在sql里面所有的注释都用“--”,school是我们创建的数据库。</span><br><span class="line">show databases; --显示所有的数据库</span><br><span class="line"></span><br><span class="line">use school; --使用数据库</span><br><span class="line">change database</span><br><span class="line"></span><br><span class="line">use tables;  --显示所有的数据表</span><br><span class="line"></span><br><span class="line">desc tables; --显示数据库中所有表的信息</span><br><span class="line"></span><br><span class="line">create database &quot;school&quot;; --创建数据库</span><br><span class="line"></span><br><span class="line">exit; --退出mysql</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>数据库XX语言：</strong></p>
+<p>DDL 定义</p>
+<p>DML 操作</p>
+<p>DQL 查询</p>
+<p>DCL 控制</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--Sring声明“</title>
+    <url>/2022/02/09/JAVA-Sring%E5%A3%B0%E6%98%8E/</url>
+    <content><![CDATA[<p>引用类型的引用在栈里面，对象在堆里面。</p>
+<span id="more"></span>
+
+<p>字符串的字面值存储在字符串池中，可以实现共享。</p>
+<p>String name = 20;//这里name存储在堆里面，20存储在方法池里面。</p>
+<p>声明string字符串有两种方式：</p>
+<p>1.String name = “Hellp”//产生一个对象，存储在字符串池中</p>
+<p>2.String name = new String(“Hello”)//产生两个对象，在字符串池和堆中各存放一个</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -194,6 +194,25 @@
       </tags>
   </entry>
   <entry>
+    <title>JAVA--super知识点</title>
+    <url>/2022/02/09/JAVA-super%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>1.Super指向父类的构造方法，必须在构造方法的第一个；</p>
+<p>2.Super只能出现在子类的构造方法中.</p>
+<span id="more"></span>
+
+<p>3.this和super不能同时调用构造方法</p>
+<p>与this的对比：<br>this：本类的构造；super：父类的构造</p>
+<p>this：没有继承也可以使用；super：必须要有继承才可以使用</p>
+<p>this：调用本身对象；super：调用父类对象</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA--static关键字知识点</title>
     <url>/2022/02/09/JAVA-static%E5%85%B3%E9%94%AE%E5%AD%97%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<p>1.有static修饰的属性就不用声明对象了，直接用类名去.属性</p>
@@ -214,6 +233,33 @@
 
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p><strong>子类不能继承被final继承的父类！</strong></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA--多态</title>
+    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
+    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
+<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
+<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
+<span id="more"></span>
+
+<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>多态的注意事项：</p>
+<p>1.多态是方法的多态，属性没有多态；</p>
+<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
+<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
+<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
+<p>##但是有些方法是不能重写的：</p>
+<p>1.static方法：属于类，不属于实例</p>
+<p>2.final属性</p>
+<p>3.private方法是私有的，当然重写了也没用</p>
+<p>instanceof （类型转换） 引用类型</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -258,43 +304,16 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--super知识点</title>
-    <url>/2022/02/09/JAVA-super%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>1.Super指向父类的构造方法，必须在构造方法的第一个；</p>
-<p>2.Super只能出现在子类的构造方法中.</p>
+    <title>”JAVA--字符编码知识点“</title>
+    <url>/2022/02/09/JAVA-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>介绍五种常用编码方式</p>
 <span id="more"></span>
 
-<p>3.this和super不能同时调用构造方法</p>
-<p>与this的对比：<br>this：本类的构造；super：父类的构造</p>
-<p>this：没有继承也可以使用；super：必须要有继承才可以使用</p>
-<p>this：调用本身对象；super：调用父类对象</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA--多态</title>
-    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
-    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
-<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
-<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
-<span id="more"></span>
-
-<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>多态的注意事项：</p>
-<p>1.多态是方法的多态，属性没有多态；</p>
-<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
-<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
-<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
-<p>##但是有些方法是不能重写的：</p>
-<p>1.static方法：属于类，不属于实例</p>
-<p>2.final属性</p>
-<p>3.private方法是私有的，当然重写了也没用</p>
-<p>instanceof （类型转换） 引用类型</p>
+<p>ISO-8859-1 ：ASCII编码+西欧希腊等国的字符编码。</p>
+<p>UTF-8：针对Unicode码的字符编码。</p>
+<p>GBK ：简体中文。</p>
+<p>GB312：简体中文。</p>
+<p>BIG5：台湾，繁体中文。</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -357,16 +376,38 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--字符编码知识点“</title>
-    <url>/2022/02/09/JAVA-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>介绍五种常用编码方式</p>
+    <title>JAVA--封装</title>
+    <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
+    <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
 <span id="more"></span>
 
-<p>ISO-8859-1 ：ASCII编码+西欧希腊等国的字符编码。</p>
-<p>UTF-8：针对Unicode码的字符编码。</p>
-<p>GBK ：简体中文。</p>
-<p>GB312：简体中文。</p>
-<p>BIG5：台湾，繁体中文。</p>
+<p>2.get/set 方法最重要：用get方法获得该值，用set方法给该值赋予数值,因为你的属性被private限制住了，只能通过其他方法输出。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class AA&#123;</span><br><span class="line">    private int a=20;</span><br><span class="line">    public int geta()&#123;</span><br><span class="line">        return this.a;</span><br><span class="line">    &#125;</span><br><span class="line">    public void seta(int a)&#123;</span><br><span class="line">        this.a=a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class getset &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        AA aa = new AA();</span><br><span class="line">        //System.out.println(aa.a);这样写是错的，因为属性a被private限制了，只能在AA类中使用</span><br><span class="line">        //这时候就要使用set和get函数了</span><br><span class="line">        aa.seta(50);//这一步用来设置a的值</span><br><span class="line">        System.out.println(aa.geta());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>封装的作用：</p>
+<p>1.提高程序的安全性，保护程序</p>
+<p>2.统一接口（唯一接口只有get/set）</p>
+<p>3.隐藏代码实现细节</p>
+<p>4.系统的可维护性增加</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--抽象类“</title>
+    <url>/2022/02/09/JAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
+    <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
+<span id="more"></span>
+
+<p>1.当子类继承的父类当中有抽象的方法时，子类必须要重写抽象方法</p>
+<p>2.java里面的类是单继承的，但是接口时多继承的</p>
+<p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
+<p>4.抽象方法必须在抽象类里面</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -449,20 +490,21 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--封装</title>
-    <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
-    <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
+    <title>”JAVA--接口interface“</title>
+    <url>/2022/02/09/JAVA-%E6%8E%A5%E5%8F%A3interface/</url>
+    <content><![CDATA[<p> 1.接口只有规范，无法写方法，是专业的抽象。实现约束和实现分离，面向接口编程。</p>
 <span id="more"></span>
 
-<p>2.get/set 方法最重要：用get方法获得该值，用set方法给该值赋予数值,因为你的属性被private限制住了，只能通过其他方法输出。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class AA&#123;</span><br><span class="line">    private int a=20;</span><br><span class="line">    public int geta()&#123;</span><br><span class="line">        return this.a;</span><br><span class="line">    &#125;</span><br><span class="line">    public void seta(int a)&#123;</span><br><span class="line">        this.a=a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class getset &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        AA aa = new AA();</span><br><span class="line">        //System.out.println(aa.a);这样写是错的，因为属性a被private限制了，只能在AA类中使用</span><br><span class="line">        //这时候就要使用set和get函数了</span><br><span class="line">        aa.seta(50);//这一步用来设置a的值</span><br><span class="line">        System.out.println(aa.geta());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.接口就是规范，约束了编程的行为</p>
+<p>写一个接口：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public interface jiekou &#123;//这是一个接口，下面实行增删改查</span><br><span class="line">    void insert();</span><br><span class="line">    void delete();</span><br><span class="line">    void update();</span><br><span class="line">    void select();</span><br><span class="line">    //上面的四个方法都是在接口里面的方法，固定为抽象方法，抽象的abstract可以省略，直接用返回值+方法名来定义方法即可；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>封装的作用：</p>
-<p>1.提高程序的安全性，保护程序</p>
-<p>2.统一接口（唯一接口只有get/set）</p>
-<p>3.隐藏代码实现细节</p>
-<p>4.系统的可维护性增加</p>
+<p>（抽象）类只能单继承，但是接口可以多继承，这就是接口的好处；</p>
+<p>继承接口用关键字implement，格式为：class+类名+implement+接口名{}</p>
+<p>实现了接口中的类就要重写接口中的方法，接口的多继承用逗号连接实现。</p>
+<p>接口的作用</p>
+<p><img src="https://img-blog.csdnimg.cn/9ec1434941764960bada7de63fcf34be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -484,48 +526,6 @@
 <p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--抽象类“</title>
-    <url>/2022/02/09/JAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
-    <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
-<span id="more"></span>
-
-<p>1.当子类继承的父类当中有抽象的方法时，子类必须要重写抽象方法</p>
-<p>2.java里面的类是单继承的，但是接口时多继承的</p>
-<p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
-<p>4.抽象方法必须在抽象类里面</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--接口interface“</title>
-    <url>/2022/02/09/JAVA-%E6%8E%A5%E5%8F%A3interface/</url>
-    <content><![CDATA[<p> 1.接口只有规范，无法写方法，是专业的抽象。实现约束和实现分离，面向接口编程。</p>
-<span id="more"></span>
-
-<p>2.接口就是规范，约束了编程的行为</p>
-<p>写一个接口：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public interface jiekou &#123;//这是一个接口，下面实行增删改查</span><br><span class="line">    void insert();</span><br><span class="line">    void delete();</span><br><span class="line">    void update();</span><br><span class="line">    void select();</span><br><span class="line">    //上面的四个方法都是在接口里面的方法，固定为抽象方法，抽象的abstract可以省略，直接用返回值+方法名来定义方法即可；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（抽象）类只能单继承，但是接口可以多继承，这就是接口的好处；</p>
-<p>继承接口用关键字implement，格式为：class+类名+implement+接口名{}</p>
-<p>实现了接口中的类就要重写接口中的方法，接口的多继承用逗号连接实现。</p>
-<p>接口的作用</p>
-<p><img src="https://img-blog.csdnimg.cn/9ec1434941764960bada7de63fcf34be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -744,6 +744,44 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--泛型“</title>
+    <url>/2022/02/09/JAVA-%E6%B3%9B%E5%9E%8B/</url>
+    <content><![CDATA[<p>介绍泛型的基本概念</p>
+<span id="more"></span>
+
+<p><strong>基本概念：</strong>（传递类型参数的东西）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/446e9973ebc5dab7b15dbedca430ed4c.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--类的盘点“</title>
+    <url>/2022/02/09/JAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9/</url>
+    <content><![CDATA[<p>先来一个特殊的：</p>
+<p>double res = 1.4-0.5/0.9;</p>
+<span id="more"></span>
+
+<p>System.out.println(res);//这时候输出的会是0.999999999</p>
+<p>这时候就要用到BigDecimal来精确输出double类型的数据了。</p>
+<p>BigDecimal num = new BigDecimal(“0.9”);//这样就可以声明一个BigDecimal数据了。</p>
+<p>当然要在前面加上import java.math.BigDecimal来引入BigDecimal</p>
+<hr>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).</span><br><span class="line">divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>)))<span class="comment">//这样就可以输出1而不是0.9999999了。</span></span><br><span class="line">同样也可以:</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">num</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>))</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--流的知识点“</title>
     <url>/2022/02/09/JAVA-%E6%B5%81%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<p><strong>概念：存储和内存之间的传输数据的通道.(硬盘和内存之间)</strong></p>
@@ -813,52 +851,18 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--泛型“</title>
-    <url>/2022/02/09/JAVA-%E6%B3%9B%E5%9E%8B/</url>
-    <content><![CDATA[<p>介绍泛型的基本概念</p>
+    <title>JAVA--继承</title>
+    <url>/2022/02/09/JAVA-%E7%BB%A7%E6%89%BF/</url>
+    <content><![CDATA[<p>1.extend的意思是’’拓展，扩大’’,子类是对父类的拓展。</p>
 <span id="more"></span>
 
-<p><strong>基本概念：</strong>（传递类型参数的东西）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/446e9973ebc5dab7b15dbedca430ed4c.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--类的盘点“</title>
-    <url>/2022/02/09/JAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9/</url>
-    <content><![CDATA[<p>先来一个特殊的：</p>
-<p>double res = 1.4-0.5/0.9;</p>
-<span id="more"></span>
-
-<p>System.out.println(res);//这时候输出的会是0.999999999</p>
-<p>这时候就要用到BigDecimal来精确输出double类型的数据了。</p>
-<p>BigDecimal num = new BigDecimal(“0.9”);//这样就可以声明一个BigDecimal数据了。</p>
-<p>当然要在前面加上import java.math.BigDecimal来引入BigDecimal</p>
-<hr>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).</span><br><span class="line">divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>)))<span class="comment">//这样就可以输出1而不是0.9999999了。</span></span><br><span class="line">同样也可以:</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">num</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>))</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--集合知识点“</title>
-    <url>/2022/02/09/JAVA-%E9%9B%86%E5%90%88%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>1.集合的概念：存放对象的容器，类似数组的概念，同样集合也有对多个对象进行批量操作的功能。</p>
-<span id="more"></span>
-
-<p>2.集合与数组的区别：<br>（1）数组的长度是固定的，但是集合的长度是不固定的。</p>
-<p>（2）数组可以存放引用类型（如Integer Float等）和基本数据类型（int float 等），集合只能存放引用类型。</p>
-<p>3.集合用到的所有类都在java.util.*这个包里面。</p>
+<p><img src="https://img-blog.csdnimg.cn/5d39b5ad4d0c474a818fe81179381fc9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>如teacher is a person.</p>
+<p><strong>子类不能继承父类的private属性或者方法！</strong></p>
+<p>ctrl+H可以打开继承面板</p>
+<p>2.Object！</p>
+<p>在Java中所有的类都默认继承Object类！！！</p>
+<p>例：public class AA /<em>entend Object</em>/{}</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -888,18 +892,32 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--继承</title>
-    <url>/2022/02/09/JAVA-%E7%BB%A7%E6%89%BF/</url>
-    <content><![CDATA[<p>1.extend的意思是’’拓展，扩大’’,子类是对父类的拓展。</p>
+    <title>”JAVA--集合知识点“</title>
+    <url>/2022/02/09/JAVA-%E9%9B%86%E5%90%88%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>1.集合的概念：存放对象的容器，类似数组的概念，同样集合也有对多个对象进行批量操作的功能。</p>
 <span id="more"></span>
 
-<p><img src="https://img-blog.csdnimg.cn/5d39b5ad4d0c474a818fe81179381fc9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>如teacher is a person.</p>
-<p><strong>子类不能继承父类的private属性或者方法！</strong></p>
-<p>ctrl+H可以打开继承面板</p>
-<p>2.Object！</p>
-<p>在Java中所有的类都默认继承Object类！！！</p>
-<p>例：public class AA /<em>entend Object</em>/{}</p>
+<p>2.集合与数组的区别：<br>（1）数组的长度是固定的，但是集合的长度是不固定的。</p>
+<p>（2）数组可以存放引用类型（如Integer Float等）和基本数据类型（int float 等），集合只能存放引用类型。</p>
+<p>3.集合用到的所有类都在java.util.*这个包里面。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA--面向对象知识点总结</title>
+    <url>/2022/02/09/JAVA-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>有关面向对象知识点的总结</p>
+<span id="more"></span>
+
+<p>1.类与对象：</p>
+<p>类是一个模板（抽象），对象是一个具体的实例（具体化）<br>2.方法：<br>定义、调用<br>3.对应的引用<br>引用类型:基本类型 (8)<br>对象是通过引用来操作的:栈—&gt;堆<br>4.属性:字段Field 成员变量<br><strong>默认初始化:</strong><br>数字: 0 和 0.0<br>char : u0000<br>boolean: false<br>引用: null<br>修饰符属性类型 属性名。属性值!<br>5.对象的创建和使用(属性就是变量的意思)<br>必须使用new关键字创造对象，构造器 Person my = new Person();<br>-对象的属性my. name<br>-对象的方法my. sleep()</p>
+<p>6.类：<br>静态的定义：属性</p>
+<p>动态的定义：方法</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -914,6 +932,52 @@
     <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
 <p>不同点：Xftp用于发送文件。</p>
 <p>Xshell可以使用windows来访问Linux，实现远程操控。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”Linux--实用指令“</title>
+    <url>/2022/02/09/Linux-%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[<p>介绍Linux的运行级别和找回root密码的方式</p>
+<span id="more"></span>
+
+<p> <strong>1.运行级别：</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/cfe449dfc95f4cc1869792e4e53bf39c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_11,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>常用的运行级别是3和5</p>
+<p>使用init来切换运行级别（init 运行级别）</p>
+<p>查看当前运行级别：systemctl get-default</p>
+<p><strong>2.找回root密码</strong></p>
+<p>(1)在登录前的界面按下“e”编辑，如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/24c29cb043ac4d2f91a731ff9b6121ae.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（2）找到linux16所在的那一行的下面一行：（如果没找到linux16就按着键盘向下的箭头就能看见了）</p>
+<p><img src="https://img-blog.csdnimg.cn/2f7d063b6b994865a19935d18958e2de.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> （3）在UTF-8后面按下空格后加上这句话：init=/bin/sh</p>
+<p><img src="https://img-blog.csdnimg.cn/8b229a66f7534503bcf5298f85aa9fcf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>(4)输入完之后按下快捷键Ctrl+x进入单用户模式（如果左边的Ctrl不行就试试右边的） </p>
+<p>（5）在光标闪烁的位置输入这句话：mount -o remount,rw/  输入完之后回车。</p>
+<p><img src="https://img-blog.csdnimg.cn/2f62ded86e884e48b6b27fa8e15eb14d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/3db9328c5fb742acbf74ccdcc4698f29.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> （6）然后在新界面光标闪烁位置输入passwd然后回车，输入新密码，然后确认密码</p>
+<p>（7）输入完之后当我们看到passwd=****就说明成功修改了密码。</p>
+<p><img src="https://img-blog.csdnimg.cn/5f29832e73d74f2dad243c54a44b6f6e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（8）紧接着在下面的一行输入这句话：touch /.autorelabel（注意：touch和/之间有一个空格）</p>
+<p><img src="https://img-blog.csdnimg.cn/8df0b14725b648ec9f51e7b974ae8f33.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（9）继续在光标闪烁的位置输入exec /sbin/init（同样在exec和/之间有一个空格），完成后按回车，耐心等待系统修改密码（时间会稍长）完成后linux会自动重启。</p>
+<p><img src="https://img-blog.csdnimg.cn/4b5f47ea34064e89a594099f73e1c200.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（10）登录时使用新密码即可 .</p>
+<p>如果在登录的状态下修改密码那就容易得多了，在终端使用passwd 用户名 即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/8d46bf1dc8f4486f80463a0ad95c030b.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h1 id="Linux里的帮助指令"><a href="#Linux里的帮助指令" class="headerlink" title="Linux里的帮助指令"></a><strong>Linux里的帮助指令</strong></h1><p><img src="https://img-blog.csdnimg.cn/4735254542224f94a3e8ba707bc2c2dc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> 基本命令：</p>
+<p>ls 显示当前目录下所有文件但是没有隐藏文件</p>
+<p>ls -a 显示当前目录下所有文件包括隐藏文件</p>
+<p>ls -l（等效于ll）表示目录以单行的方式输出<img src="https://img-blog.csdnimg.cn/c8efefc5fb2144dc9fab281847b94cb6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> ls -la或者ls -al 表示单行输出文件包括隐藏文件</p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -970,55 +1034,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--面向对象知识点总结</title>
-    <url>/2022/02/09/JAVA-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p>有关面向对象知识点的总结</p>
-<span id="more"></span>
-
-<p>1.类与对象：</p>
-<p>类是一个模板（抽象），对象是一个具体的实例（具体化）<br>2.方法：<br>定义、调用<br>3.对应的引用<br>引用类型:基本类型 (8)<br>对象是通过引用来操作的:栈—&gt;堆<br>4.属性:字段Field 成员变量<br><strong>默认初始化:</strong><br>数字: 0 和 0.0<br>char : u0000<br>boolean: false<br>引用: null<br>修饰符属性类型 属性名。属性值!<br>5.对象的创建和使用(属性就是变量的意思)<br>必须使用new关键字创造对象，构造器 Person my = new Person();<br>-对象的属性my. name<br>-对象的方法my. sleep()</p>
-<p>6.类：<br>静态的定义：属性</p>
-<p>动态的定义：方法</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”Linux--用户管理“</title>
-    <url>/2022/02/09/Linux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<p> 一、基本操作：</p>
-<p>添加用户：useradd 用户名</p>
-<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
-<span id="more"></span>
-
-<p>删除用户(不保留家目录)：userdel -r 用户名</p>
-<p>更改用户密码：passwd 用户名</p>
-<p>查询用户信息：id 用户名</p>
-<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
-<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
-<p>想要查看现在的用户是谁：who am i（离谱）</p>
-<p>pwd：查看现在在哪个目录下面</p>
-<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
-<p>添加组：groupadd 组名</p>
-<p>删除组：groupdel 组名</p>
-<p>创建用户的同时分组：useradd -g 组名 用户名</p>
-<p>用户换组：usermod -g 新组名 用户名</p>
-<p><strong>用户和组的相关文件：</strong></p>
-<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”Linux--忘记密码的找回方法“</title>
     <url>/2022/02/09/Linux-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E6%89%BE%E5%9B%9E%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<p>非常详细！保姆级教程！</p>
@@ -1051,43 +1066,48 @@
       </tags>
   </entry>
   <entry>
-    <title>”Linux--实用指令“</title>
-    <url>/2022/02/09/Linux-%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
-    <content><![CDATA[<p>介绍Linux的运行级别和找回root密码的方式</p>
+    <title>”Linux--文件目录指令“</title>
+    <url>/2022/02/09/Linux-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[<p>介绍Linux用于文件的常用指令</p>
 <span id="more"></span>
 
-<p> <strong>1.运行级别：</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/cfe449dfc95f4cc1869792e4e53bf39c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_11,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>常用的运行级别是3和5</p>
-<p>使用init来切换运行级别（init 运行级别）</p>
-<p>查看当前运行级别：systemctl get-default</p>
-<p><strong>2.找回root密码</strong></p>
-<p>(1)在登录前的界面按下“e”编辑，如图：</p>
-<p><img src="https://img-blog.csdnimg.cn/24c29cb043ac4d2f91a731ff9b6121ae.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（2）找到linux16所在的那一行的下面一行：（如果没找到linux16就按着键盘向下的箭头就能看见了）</p>
-<p><img src="https://img-blog.csdnimg.cn/2f7d063b6b994865a19935d18958e2de.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> （3）在UTF-8后面按下空格后加上这句话：init=/bin/sh</p>
-<p><img src="https://img-blog.csdnimg.cn/8b229a66f7534503bcf5298f85aa9fcf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>(4)输入完之后按下快捷键Ctrl+x进入单用户模式（如果左边的Ctrl不行就试试右边的） </p>
-<p>（5）在光标闪烁的位置输入这句话：mount -o remount,rw/  输入完之后回车。</p>
-<p><img src="https://img-blog.csdnimg.cn/2f62ded86e884e48b6b27fa8e15eb14d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/3db9328c5fb742acbf74ccdcc4698f29.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> （6）然后在新界面光标闪烁位置输入passwd然后回车，输入新密码，然后确认密码</p>
-<p>（7）输入完之后当我们看到passwd=****就说明成功修改了密码。</p>
-<p><img src="https://img-blog.csdnimg.cn/5f29832e73d74f2dad243c54a44b6f6e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（8）紧接着在下面的一行输入这句话：touch /.autorelabel（注意：touch和/之间有一个空格）</p>
-<p><img src="https://img-blog.csdnimg.cn/8df0b14725b648ec9f51e7b974ae8f33.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（9）继续在光标闪烁的位置输入exec /sbin/init（同样在exec和/之间有一个空格），完成后按回车，耐心等待系统修改密码（时间会稍长）完成后linux会自动重启。</p>
-<p><img src="https://img-blog.csdnimg.cn/4b5f47ea34064e89a594099f73e1c200.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（10）登录时使用新密码即可 .</p>
-<p>如果在登录的状态下修改密码那就容易得多了，在终端使用passwd 用户名 即可。</p>
-<p><img src="https://img-blog.csdnimg.cn/8d46bf1dc8f4486f80463a0ad95c030b.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<h1 id="Linux里的帮助指令"><a href="#Linux里的帮助指令" class="headerlink" title="Linux里的帮助指令"></a><strong>Linux里的帮助指令</strong></h1><p><img src="https://img-blog.csdnimg.cn/4735254542224f94a3e8ba707bc2c2dc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> 基本命令：</p>
-<p>ls 显示当前目录下所有文件但是没有隐藏文件</p>
-<p>ls -a 显示当前目录下所有文件包括隐藏文件</p>
-<p>ls -l（等效于ll）表示目录以单行的方式输出<img src="https://img-blog.csdnimg.cn/c8efefc5fb2144dc9fab281847b94cb6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> ls -la或者ls -al 表示单行输出文件包括隐藏文件</p>
+<p>1.pwd指令：显示当前文件目录的绝对路径</p>
+<p>2.ls指令：显示当前目录下的文件（-a显示隐藏文件，-l以单行形式输出）</p>
+<p>3.cd指令：（1）cd ~ 回到自己的家目录</p>
+<p>​        （2）cd .. 回到上一级目录</p>
+<p>4.mkdir（make dir）指令：mkdir 创建目录，mkdir -p 创建多级目录</p>
+<p>5.rmdir 删除指定目录：（1）删除空目录 rmdir 目录</p>
+<p>​                    (2) 删除非空目录 rm -rf 目录（是rm -f 和rm -r的结合体）</p>
+<p>6.创建空文件：touch 文件名称。如创建一个Hello.txt 文件，使用touch Hello.txt</p>
+<p><strong>7.cp指令：</strong></p>
+<p><strong>(1)比如想把home/a路径下的Hello.txt文件拷贝到home/b路径下，我们要先在home/a路径下执行操作:cp Hello.txt home/b/</strong></p>
+<p><strong>(2)把整个文件夹的内容拷贝到另外一个文件夹：cp -r home/a/ home/b/（其中是把a拷贝到b）</strong></p>
+<p><strong>（3）强制覆盖文件的方法是在cp前面加一个\ 其他的不变</strong></p>
+<p>8.rm指令：rm -r 递归删除整个文件夹</p>
+<p>​         rm -f 强制删除不提示</p>
+<p>9.mv指令：</p>
+<p><img src="https://img-blog.csdnimg.cn/ab9d6a81664b4e97bfbb25e95846b7ba.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>例：若想把/home/目录下面的pig.txt文件移动到/target/目录下面，使用1.cd /home/  2.mv pig.txt /target/</p>
+<p>10.cat指令：显示文件的内容（用cat -n 来显示行数），通常在cat指令后面会加上一个| more来给用户操作，有了more指令不会把你的文件在一行显示完可以有更多的操作。</p>
+<p>11.more指令：也可以使用more指令来显示文件内容：more /home/Hello.java<img src="https://img-blog.csdnimg.cn/77e9b31369dc4d4b82157f2fb77c92fd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> 12.less指令： 跟more指令一样的作用，但是less指令是在文件看到哪里加载到哪里，不看的内容不会加载，这对大型文件很有作用。<img src="https://img-blog.csdnimg.cn/8593ab6174384638beca6a7edf1bb9bc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>13.echo指令：</p>
+<p><img src="https://img-blog.csdnimg.cn/54a6b36c221b419e94f67338cf510d72.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_16,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>14.head指令：<br> <img src="https://img-blog.csdnimg.cn/b7a7a2663dd64d828304850916f30986.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动">​</p>
+<p> 例题答案：head -n 5 /etc/profile</p>
+<p>15.tail指令：（与head指令相反） </p>
+<p><img src="https://img-blog.csdnimg.cn/57c3d4a749ae43fa9a3530cd01a49298.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> 在后面加-f是实时监控、</p>
+<p>比如我要监控Hello.txt文件，那么使用tail -f Hello.txt，然后我在linux的终端使用echo Hello &gt; Hello.txt，这时会在Xshell中显示Hello，因为实时监控了。</p>
+<p>在echo Hello &gt; Hello.txt 中&gt;的作用是覆盖原先文件的内容，而&gt;&gt;的作用是在文件的后面追加内容</p>
+<p><img src="https://img-blog.csdnimg.cn/9c2cbff394d14f77b07a3d72c5631388.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/6abcdc70449d491fa2902b21acffb776.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>16.ln指令：</p>
+<p>ln -s [源文件或者目录] [软链接名] </p>
+<p><img src="https://img-blog.csdnimg.cn/9f1d6f2211584101bd42d61514438c39.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>17.history指令：</p>
+<p>显示出历史指令。</p>
+<p><img src="https://img-blog.csdnimg.cn/a9bd055e7e5b4ecdbd997227dca209b4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_14,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -2186,54 +2206,77 @@
       </tags>
   </entry>
   <entry>
-    <title>”Linux--文件目录指令“</title>
-    <url>/2022/02/09/Linux-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E6%8C%87%E4%BB%A4/</url>
-    <content><![CDATA[<p>介绍Linux用于文件的常用指令</p>
+    <title>hexo d出错时的解决办法</title>
+    <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
 <span id="more"></span>
 
-<p>1.pwd指令：显示当前文件目录的绝对路径</p>
-<p>2.ls指令：显示当前目录下的文件（-a显示隐藏文件，-l以单行形式输出）</p>
-<p>3.cd指令：（1）cd ~ 回到自己的家目录</p>
-<p>​        （2）cd .. 回到上一级目录</p>
-<p>4.mkdir（make dir）指令：mkdir 创建目录，mkdir -p 创建多级目录</p>
-<p>5.rmdir 删除指定目录：（1）删除空目录 rmdir 目录</p>
-<p>​                    (2) 删除非空目录 rm -rf 目录（是rm -f 和rm -r的结合体）</p>
-<p>6.创建空文件：touch 文件名称。如创建一个Hello.txt 文件，使用touch Hello.txt</p>
-<p><strong>7.cp指令：</strong></p>
-<p><strong>(1)比如想把home/a路径下的Hello.txt文件拷贝到home/b路径下，我们要先在home/a路径下执行操作:cp Hello.txt home/b/</strong></p>
-<p><strong>(2)把整个文件夹的内容拷贝到另外一个文件夹：cp -r home/a/ home/b/（其中是把a拷贝到b）</strong></p>
-<p><strong>（3）强制覆盖文件的方法是在cp前面加一个\ 其他的不变</strong></p>
-<p>8.rm指令：rm -r 递归删除整个文件夹</p>
-<p>​         rm -f 强制删除不提示</p>
-<p>9.mv指令：</p>
-<p><img src="https://img-blog.csdnimg.cn/ab9d6a81664b4e97bfbb25e95846b7ba.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>例：若想把/home/目录下面的pig.txt文件移动到/target/目录下面，使用1.cd /home/  2.mv pig.txt /target/</p>
-<p>10.cat指令：显示文件的内容（用cat -n 来显示行数），通常在cat指令后面会加上一个| more来给用户操作，有了more指令不会把你的文件在一行显示完可以有更多的操作。</p>
-<p>11.more指令：也可以使用more指令来显示文件内容：more /home/Hello.java<img src="https://img-blog.csdnimg.cn/77e9b31369dc4d4b82157f2fb77c92fd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> 12.less指令： 跟more指令一样的作用，但是less指令是在文件看到哪里加载到哪里，不看的内容不会加载，这对大型文件很有作用。<img src="https://img-blog.csdnimg.cn/8593ab6174384638beca6a7edf1bb9bc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>13.echo指令：</p>
-<p><img src="https://img-blog.csdnimg.cn/54a6b36c221b419e94f67338cf510d72.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_16,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>14.head指令：<br> <img src="https://img-blog.csdnimg.cn/b7a7a2663dd64d828304850916f30986.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动">​</p>
-<p> 例题答案：head -n 5 /etc/profile</p>
-<p>15.tail指令：（与head指令相反） </p>
-<p><img src="https://img-blog.csdnimg.cn/57c3d4a749ae43fa9a3530cd01a49298.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> 在后面加-f是实时监控、</p>
-<p>比如我要监控Hello.txt文件，那么使用tail -f Hello.txt，然后我在linux的终端使用echo Hello &gt; Hello.txt，这时会在Xshell中显示Hello，因为实时监控了。</p>
-<p>在echo Hello &gt; Hello.txt 中&gt;的作用是覆盖原先文件的内容，而&gt;&gt;的作用是在文件的后面追加内容</p>
-<p><img src="https://img-blog.csdnimg.cn/9c2cbff394d14f77b07a3d72c5631388.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/6abcdc70449d491fa2902b21acffb776.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>16.ln指令：</p>
-<p>ln -s [源文件或者目录] [软链接名] </p>
-<p><img src="https://img-blog.csdnimg.cn/9f1d6f2211584101bd42d61514438c39.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>17.history指令：</p>
-<p>显示出历史指令。</p>
-<p><img src="https://img-blog.csdnimg.cn/a9bd055e7e5b4ecdbd997227dca209b4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_14,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>删除blog/.deploy_git文件</p>
+<p>然后输入</p>
+<p>git config –gloabl core.autocrlf false`</p>
+<p>重新</p>
+<p>hexo clean</p>
+<p>hexo g</p>
+<p>hexo d</p>
+<p>部署</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”Linux--用户管理“</title>
+    <url>/2022/02/09/Linux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<p> 一、基本操作：</p>
+<p>添加用户：useradd 用户名</p>
+<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
+<span id="more"></span>
+
+<p>删除用户(不保留家目录)：userdel -r 用户名</p>
+<p>更改用户密码：passwd 用户名</p>
+<p>查询用户信息：id 用户名</p>
+<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
+<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
+<p>想要查看现在的用户是谁：who am i（离谱）</p>
+<p>pwd：查看现在在哪个目录下面</p>
+<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
+<p>添加组：groupadd 组名</p>
+<p>删除组：groupdel 组名</p>
+<p>创建用户的同时分组：useradd -g 组名 用户名</p>
+<p>用户换组：usermod -g 新组名 用户名</p>
+<p><strong>用户和组的相关文件：</strong></p>
+<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客的基本操作</title>
+    <url>/2022/02/09/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p>hexo clean 清除缓存</p>
+<p>hexo n “…” 生成博客文章，标题是…</p>
+<span id="more"></span>
+
+<p>hexo s   start博客，默认启动在localhost:4000端口</p>
+<p>hexo d   部署到远端</p>
+<p>当写完博客之后通常使用这三个：（依次输入）</p>
+<p>hexo clean </p>
+<p>hexo g</p>
+<p>hexo d</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -2268,46 +2311,21 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo博客的基本操作</title>
-    <url>/2022/02/09/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<p>hexo clean 清除缓存</p>
-<p>hexo n “…” 生成博客文章，标题是…</p>
+    <title>python--name属性</title>
+    <url>/2022/03/10/python-name%E5%B1%9E%E6%80%A7/</url>
+    <content><![CDATA[<p>python中的 __  <em>name</em> _ _属性</p>
 <span id="more"></span>
 
-<p>hexo s   start博客，默认启动在localhost:4000端口</p>
-<p>hexo d   部署到远端</p>
-<p>当写完博客之后通常使用这三个：（依次输入）</p>
-<p>hexo clean </p>
-<p>hexo g</p>
-<p>hexo d</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo d出错时的解决办法</title>
-    <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
-<span id="more"></span>
+<p>除了直接运行，python文件还可以直接作为模块导入。通过Python中的__name__属性来判断，分两种情况：<br>1.如果文件作为模块被导入，那么他的__name__值被自动设置为模块名</p>
+<p>2.如果文件直接运行，那么__name__的属性值自动设置为字符串’<strong>main</strong>‘</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>()</span><br><span class="line"><span class="keyword">if</span> __name__ = <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;directly run&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> __name__ = <span class="string">&#x27;hello&#x27;</span>:</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;import way&quot;</span>)</span><br><span class="line">    </span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
 
-<p>删除blog/.deploy_git文件</p>
-<p>然后输入</p>
-<p>git config –gloabl core.autocrlf false`</p>
-<p>重新</p>
-<p>hexo clean</p>
-<p>hexo g</p>
-<p>hexo d</p>
-<p>部署</p>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>python</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -2325,24 +2343,6 @@
       </categories>
       <tags>
         <tag>matlab</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python--name属性</title>
-    <url>/2022/03/10/python-name%E5%B1%9E%E6%80%A7/</url>
-    <content><![CDATA[<p>python中的 __  <em>name</em> _ _属性</p>
-<span id="more"></span>
-
-<p>除了直接运行，python文件还可以直接作为模块导入。通过Python中的__name__属性来判断，分两种情况：<br>1.如果文件作为模块被导入，那么他的__name__值被自动设置为模块名</p>
-<p>2.如果文件直接运行，那么__name__的属性值自动设置为字符串’<strong>main</strong>‘</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>()</span><br><span class="line"><span class="keyword">if</span> __name__ = <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;directly run&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> __name__ = <span class="string">&#x27;hello&#x27;</span>:</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;import way&quot;</span>)</span><br><span class="line">    </span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -2456,6 +2456,46 @@
       </tags>
   </entry>
   <entry>
+    <title>python--字符串</title>
+    <url>/2022/02/13/python-%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    <content><![CDATA[<h2 id="涵盖了python中大部分的字符串操作"><a href="#涵盖了python中大部分的字符串操作" class="headerlink" title="涵盖了python中大部分的字符串操作"></a>涵盖了python中大部分的字符串操作</h2><span id="more"></span>
+
+<h3 id="大小写字母转换："><a href="#大小写字母转换：" class="headerlink" title="大小写字母转换："></a>大小写字母转换：</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#capitalize 将首字母变成大写，其他不变</span></span><br><span class="line">x = <span class="string">&quot;abcde&quot;</span></span><br><span class="line">x.capitalize() <span class="comment">#Abcde</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#casefold 返回一个全部是小写的新字符串</span></span><br><span class="line">x = <span class="string">&quot;AbCdE&quot;</span></span><br><span class="line">x.casefold() <span class="comment">#abcde</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#title 将字符串首字母变成大写，其他的全变成小写</span></span><br><span class="line">x = <span class="string">&quot;aBCDe&quot;</span></span><br><span class="line">x.title() <span class="comment">#Abcde</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#swapcase 将字符串中大小写字母翻转，大写变小写，小写变大写</span></span><br><span class="line">x = <span class="string">&quot;AbCdE&quot;</span></span><br><span class="line">x.swapcase() <span class="comment">#aBcDe</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#upper 将所有字母变大写</span></span><br><span class="line">x = <span class="string">&quot;abcde&quot;</span></span><br><span class="line">x.upper() <span class="comment">#ABCDE</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#lower 将所有字母变小写</span></span><br><span class="line">x = <span class="string">&quot;ABCDE&quot;</span></span><br><span class="line">x.lower() <span class="comment">#abcde</span></span><br><span class="line"><span class="comment">#关于casefold和lower：casefold比lower更加强大。casefold可以处理包括英文字符在内的诸多字符类型，但是lower只能处理英文字符。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="左中右对齐"><a href="#左中右对齐" class="headerlink" title="左中右对齐"></a>左中右对齐</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用对齐有一个条件：在center等的括号内的数字要大于字符串的长度才能实现此功能！</span></span><br><span class="line">x = <span class="string">&quot;你真厉害！&quot;</span> <span class="comment">#这里一共有五个字符长度，在center括号内的数字需要大于五个字符</span></span><br><span class="line">x.center(<span class="number">7</span>) <span class="comment">#&quot; 你真厉害！ &quot;</span></span><br><span class="line">x.ljust(<span class="number">7</span>)  <span class="comment">#&quot;你真厉害！  &quot;</span></span><br><span class="line">x.rjust(<span class="number">7</span>)  <span class="comment">#&quot;  你真厉害！&quot;</span></span><br><span class="line">x.zfill(<span class="number">9</span>)  <span class="comment">#&quot;0000你真厉害d！&quot;右对齐，并且用0填充左侧</span></span><br><span class="line"><span class="comment">#在后面可以自定义空格中填充的字符串</span></span><br><span class="line">x.center(<span class="number">11</span>,<span class="string">&quot;噢&quot;</span>) <span class="comment">#&quot;噢噢噢你真厉害！噢噢噢&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="寻找字符串"><a href="#寻找字符串" class="headerlink" title="寻找字符串"></a>寻找字符串</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#count统计字符在字符串中出现的次数</span></span><br><span class="line">x = <span class="string">&quot;上海的自来水来自海上&quot;</span></span><br><span class="line">x.count(<span class="string">&quot;自&quot;</span>) <span class="comment">#出现了两次，所以是2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#find查找字符在字符串中第一次出现的位置，rfind则是相反方向的查找（从右往左查找）</span></span><br><span class="line">x = <span class="string">&quot;上海的自来水来自海上&quot;</span></span><br><span class="line">x.find(<span class="string">&quot;海&quot;</span>)  <span class="comment">#1</span></span><br><span class="line">x.rfind(<span class="string">&quot;海&quot;</span>) <span class="comment">#8</span></span><br><span class="line">x.find(<span class="string">&quot;去&quot;</span>)  <span class="comment">#如果在字符串中找不到字符则返回-1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#index和find类似，但是如果找不到会抛出异常</span></span><br><span class="line">x.index(<span class="string">&quot;去&quot;</span>) <span class="comment">#error:...</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="字符串替换和表格转换"><a href="#字符串替换和表格转换" class="headerlink" title="字符串替换和表格转换"></a>字符串替换和表格转换</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#replace方法用于将前后的字符串进行对调</span></span><br><span class="line">x = <span class="string">&quot;上海自来水来自海上&quot;</span></span><br><span class="line">x.replace(<span class="string">&quot;上海&quot;</span>,<span class="string">&quot;北京&quot;</span>) <span class="comment">#北京自来水来自海上</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#创建表格maketrans,注意：在maketrans中字符串的长度一定要匹配，否则会报如下错误：ValueError: the first two maketrans arguments must have equal length</span></span><br><span class="line">table = <span class="built_in">str</span>.maketrans(<span class="string">&quot;abc&quot;</span>,<span class="string">&quot;def&quot;</span>)</span><br><span class="line"><span class="string">&quot;ghi&quot;</span>.translate(table)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="字符串的判断（全部返回bool类型）"><a href="#字符串的判断（全部返回bool类型）" class="headerlink" title="字符串的判断（全部返回bool类型）"></a>字符串的判断（全部返回bool类型）</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#startwith判断字符是否出现在字符串的开始位置</span></span><br><span class="line">x = <span class="string">&quot;我爱python&quot;</span></span><br><span class="line">x.startwith(<span class="string">&quot;我&quot;</span>) <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#同理endswith判断字符是否出现在字符串的结束位置</span></span><br><span class="line">x = <span class="string">&quot;我爱python&quot;</span></span><br><span class="line">x.endswith(<span class="string">&quot;o&quot;</span>) <span class="comment">#false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#startswith和endswith的进阶，可以自定义起始和结束位置</span></span><br><span class="line">startswith(<span class="string">&quot;我&quot;</span>,<span class="number">1</span>) <span class="comment">#表示从“1”的位置开始，此时字符串变成了“爱python”</span></span><br><span class="line">endswith(<span class="string">&quot;on&quot;</span>,<span class="number">0</span>,<span class="number">4</span>) <span class="comment">#表示从“0”的地方开始，在“4”的位置结束，此时字符串变成了“我爱pyt”</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#istitle判断字符串中是否都是以大写字母开头，其余的都是小写</span></span><br><span class="line">x = <span class="string">&quot;Abc&quot;</span></span><br><span class="line">x.istitle() <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isupper判断字符串里面是否都是大写字母</span></span><br><span class="line"><span class="comment">#islower判断字符串里面是否都是小写字母</span></span><br><span class="line">x = <span class="string">&quot;ABC&quot;</span></span><br><span class="line">x.isupper() <span class="comment">#true</span></span><br><span class="line">x.islower() <span class="comment">#false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isalpha判断字符串是否全部由字母构成（存在空格也不算！）</span></span><br><span class="line">x=<span class="string">&quot;ABCDE &quot;</span></span><br><span class="line">x.isalpha() <span class="comment">#false,因为我有空格的存在</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isspace判断是否全部由空白字符构成，转义字符，tab，space全部都算是空白字符</span></span><br><span class="line"><span class="string">&quot;	\n \t &quot;</span>.space() <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isprintable判断字符串所有元素是否都是可打印字符，注意细节：转义字符不是可打印字符！！</span></span><br><span class="line"><span class="string">&quot;我爱python \n&quot;</span>.isprintable() <span class="comment">#false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isdecimal(),isdigit(),isnumeric()都是判断字符串中是否都是数字的方法。但是我们通常使用isalnum()方法，它是一个集大成者，只要上面三个方法中任意一个返回true，那么isalnum就返回true</span></span><br><span class="line">x = <span class="string">&quot;123456&quot;</span></span><br><span class="line">x.isalum() <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isidentifier判断是否是python承认的变量命名</span></span><br><span class="line"><span class="string">&quot;I love python&quot;</span>.isidentifier() <span class="comment">#false</span></span><br><span class="line"><span class="string">&quot;I_love_python&quot;</span>.isidentifier() <span class="comment">#true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#lstrip去除左侧的空白</span></span><br><span class="line"><span class="comment">#rstrip去除右侧的空白</span></span><br><span class="line"><span class="comment">#strip左右的空白都不要</span></span><br><span class="line"><span class="string">&quot;	左侧不要留白&quot;</span>.lstrip() <span class="comment">#&quot;左侧不要留白&quot;</span></span><br><span class="line"><span class="string">&quot;右侧不要留白		&quot;</span>.rstrip() <span class="comment">#&quot;右侧不要留白&quot;</span></span><br><span class="line"><span class="comment">#也可以自定义去除，但是其实是从左或者从右去除到与传入字符没有相同才停止，即匹配来去除，而不是只是删除对应的字符！</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.lstrip(abcd) <span class="comment">#&quot;dopagip00.com&quot;</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.rstrip(abcd) <span class="comment">#&quot;www.dopagip00&quot;</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.strip(abcd) <span class="comment">#&quot;dopagip00&quot;</span></span><br><span class="line"><span class="comment">#对应上面的代码实际上去除的不是abcd（根本不存在abcd）去除的是abcd对应的左右分别四个字符。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#使用removeprefix(prefix)--&gt;前缀和removesuffix(suffix)--&gt;后缀去除一个特定的子字符串</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.removeprefix(www.) <span class="comment">#&quot;dopagip00.com&quot;</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.removesuffix(.com) <span class="comment">#&quot;www.dopagip00&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#只切分一次：切割字符串,partition表示以.进行切割从右往左寻找分隔符,只找一个！！找到一个就不找了！rpartition表示从右往左寻找分隔符，同样只寻找一个。</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.partition(<span class="string">&quot;.&quot;</span>) <span class="comment">#(&#x27;www&#x27;,&#x27;.&#x27;,&#x27;dopagip00.com&#x27;)</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.rpartition(<span class="string">&quot;.&quot;</span>) <span class="comment">#(&#x27;www.dopagip00&#x27;,&#x27;.&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#切分到没有为止：split按照给定的字符进行切分，默认切分空格。在指定字符的后面一个参数还可以指定分割的次数。</span></span><br><span class="line"><span class="string">&quot;www dopagip com&quot;</span>.split() <span class="comment">#(&#x27;www&#x27;,&#x27;dopagip&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"><span class="string">&quot;www.dopagip.com&quot;</span>.split(<span class="string">&quot;.&quot;</span>) <span class="comment">#(&#x27;www&#x27;,&#x27;dopagip&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"><span class="string">&quot;www.dopagip.com&quot;</span>.rsplit(<span class="string">&quot;.&quot;</span>,<span class="number">1</span>) <span class="comment">#我这里指定切割一次，而且是从右往左切，结果：										 (&quot;www.dopagip&quot;,&quot;com&quot;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#splitlines是以&#x27;行&#x27;进行分割。</span></span><br><span class="line"><span class="string">&quot;www\ndopagip00\ncom&quot;</span>.splitlines() <span class="comment">#(&#x27;www&#x27;,&#x27;dopagip00&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">#join是把列表的数组组合起来成字符串。</span></span><br><span class="line"><span class="string">&quot;.&quot;</span>.join([<span class="string">&#x27;www&#x27;</span>,<span class="string">&#x27;dopagip00&#x27;</span>,<span class="string">&#x27;com&#x27;</span>]) <span class="comment">#www.dopagip00.com</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="格式化字符串（占位）"><a href="#格式化字符串（占位）" class="headerlink" title="格式化字符串（占位）"></a>格式化字符串（占位）</h3><p>其实和c语言的%d,%s占位符类似，只不过python是用{}来占位 </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#format方法format里面的参数就是占位的字符，format里面的参数与&#123;&#125;对应，有几个参数就有几个&#123;&#125;</span></span><br><span class="line">a = <span class="string">&quot;python&quot;</span></span><br><span class="line">b = <span class="string">&quot;C&quot;</span></span><br><span class="line">c = <span class="string">&quot;PHP&quot;</span></span><br><span class="line">d = <span class="string">&quot;JAVA&quot;</span></span><br><span class="line"><span class="string">&quot;我爱 &#123;&#125; &quot;</span>.<span class="built_in">format</span>(a) <span class="comment">#我爱python</span></span><br><span class="line"><span class="string">&quot;我爱&#123;&#125;,&#123;&#125;,&#123;&#125;,&#123;&#125;&quot;</span>.<span class="built_in">format</span>(a,b,c,d) <span class="comment">#我爱python,C,PHP,JAVA</span></span><br><span class="line"><span class="comment">#可以在花括号中间加入数字表示占位的顺序,甚至可以在括号内加变量名，然后在format里面给变量赋值</span></span><br><span class="line">a = <span class="string">&quot;python&quot;</span></span><br><span class="line">b = <span class="string">&quot;C&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;1&#125;,&#123;0&#125;&quot;</span>.<span class="built_in">format</span>(a, b)) <span class="comment">#我爱python，C</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;0&#125;,&#123;1&#125;&quot;</span>.<span class="built_in">format</span>(a, b)) <span class="comment">#我爱C，python</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;py&#125;,&#123;ja&#125;&quot;</span>.<span class="built_in">format</span>(py=<span class="string">&quot;python&quot;</span>,ja=<span class="string">&quot;java&quot;</span>)) <span class="comment">#我爱python,java</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#千分符</span></span><br><span class="line"><span class="string">&quot;&#123;:,&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">1234</span>) <span class="comment">#1,234</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保留小数点后x位即.xf，类别c语言%.xf</span></span><br><span class="line"><span class="string">&quot;&#123;.2f&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">3.14159</span>) <span class="comment">#3.14</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保留x位数,即.xg</span></span><br><span class="line"><span class="string">&quot;&#123;.2g&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">3.14159</span>) <span class="comment">#3.1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#截取x位字符，不能用于数字，会报错！！</span></span><br><span class="line"><span class="string">&quot;&#123;:.2&#125;&quot;</span>.<span class="built_in">format</span>(<span class="string">&quot;我爱py&quot;</span>)  <span class="comment">#我爱</span></span><br><span class="line"><span class="string">&quot;&#123;:.2&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">1234</span>)     <span class="comment">#error</span></span><br></pre></td></tr></table></figure>
+
+<p>：后面可以加很多值，如下表：（参数即format里面的参数）</p>
+<p><img src="/2022/02/13/python-%E5%AD%97%E7%AC%A6%E4%B8%B2/Users\me\AppData\Roaming\Typora\typora-user-images\image-20220213212943323.png" alt="image-20220213212943323"></p>
+<h3 id><a href="#" class="headerlink" title></a></h3>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”python--列表里的函数“</title>
     <url>/2022/02/09/python-%E5%88%97%E8%A1%A8%E9%87%8C%E7%9A%84%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<p> sort()将数组从小到大排序。</p>
@@ -2505,46 +2545,6 @@
 <h3 id="修改字典和删除字典"><a href="#修改字典和删除字典" class="headerlink" title="修改字典和删除字典"></a>修改字典和删除字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#修改字典</span></span><br><span class="line">di = &#123;<span class="string">&#x27;name&#x27;</span> = <span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;num&#x27;</span> = <span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;class&#x27;</span> = <span class="number">3</span>&#125;</span><br><span class="line">di[<span class="string">&#x27;name&#x27;</span> = <span class="string">&#x27;10&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(di[<span class="string">&#x27;name&#x27;</span>])  <span class="comment">#10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除字典</span></span><br><span class="line"><span class="keyword">del</span> di[<span class="string">&#x27;name&#x27;</span>] <span class="comment"># 删除键 &#x27;Name&#x27;</span></span><br><span class="line">di.clear()     <span class="comment"># 清空字典，但是字典还是保留着的</span></span><br><span class="line"><span class="keyword">del</span> di         <span class="comment"># 删除字典</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python--字符串</title>
-    <url>/2022/02/13/python-%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
-    <content><![CDATA[<h2 id="涵盖了python中大部分的字符串操作"><a href="#涵盖了python中大部分的字符串操作" class="headerlink" title="涵盖了python中大部分的字符串操作"></a>涵盖了python中大部分的字符串操作</h2><span id="more"></span>
-
-<h3 id="大小写字母转换："><a href="#大小写字母转换：" class="headerlink" title="大小写字母转换："></a>大小写字母转换：</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#capitalize 将首字母变成大写，其他不变</span></span><br><span class="line">x = <span class="string">&quot;abcde&quot;</span></span><br><span class="line">x.capitalize() <span class="comment">#Abcde</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#casefold 返回一个全部是小写的新字符串</span></span><br><span class="line">x = <span class="string">&quot;AbCdE&quot;</span></span><br><span class="line">x.casefold() <span class="comment">#abcde</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#title 将字符串首字母变成大写，其他的全变成小写</span></span><br><span class="line">x = <span class="string">&quot;aBCDe&quot;</span></span><br><span class="line">x.title() <span class="comment">#Abcde</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#swapcase 将字符串中大小写字母翻转，大写变小写，小写变大写</span></span><br><span class="line">x = <span class="string">&quot;AbCdE&quot;</span></span><br><span class="line">x.swapcase() <span class="comment">#aBcDe</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#upper 将所有字母变大写</span></span><br><span class="line">x = <span class="string">&quot;abcde&quot;</span></span><br><span class="line">x.upper() <span class="comment">#ABCDE</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#lower 将所有字母变小写</span></span><br><span class="line">x = <span class="string">&quot;ABCDE&quot;</span></span><br><span class="line">x.lower() <span class="comment">#abcde</span></span><br><span class="line"><span class="comment">#关于casefold和lower：casefold比lower更加强大。casefold可以处理包括英文字符在内的诸多字符类型，但是lower只能处理英文字符。</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="左中右对齐"><a href="#左中右对齐" class="headerlink" title="左中右对齐"></a>左中右对齐</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用对齐有一个条件：在center等的括号内的数字要大于字符串的长度才能实现此功能！</span></span><br><span class="line">x = <span class="string">&quot;你真厉害！&quot;</span> <span class="comment">#这里一共有五个字符长度，在center括号内的数字需要大于五个字符</span></span><br><span class="line">x.center(<span class="number">7</span>) <span class="comment">#&quot; 你真厉害！ &quot;</span></span><br><span class="line">x.ljust(<span class="number">7</span>)  <span class="comment">#&quot;你真厉害！  &quot;</span></span><br><span class="line">x.rjust(<span class="number">7</span>)  <span class="comment">#&quot;  你真厉害！&quot;</span></span><br><span class="line">x.zfill(<span class="number">9</span>)  <span class="comment">#&quot;0000你真厉害d！&quot;右对齐，并且用0填充左侧</span></span><br><span class="line"><span class="comment">#在后面可以自定义空格中填充的字符串</span></span><br><span class="line">x.center(<span class="number">11</span>,<span class="string">&quot;噢&quot;</span>) <span class="comment">#&quot;噢噢噢你真厉害！噢噢噢&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="寻找字符串"><a href="#寻找字符串" class="headerlink" title="寻找字符串"></a>寻找字符串</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#count统计字符在字符串中出现的次数</span></span><br><span class="line">x = <span class="string">&quot;上海的自来水来自海上&quot;</span></span><br><span class="line">x.count(<span class="string">&quot;自&quot;</span>) <span class="comment">#出现了两次，所以是2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#find查找字符在字符串中第一次出现的位置，rfind则是相反方向的查找（从右往左查找）</span></span><br><span class="line">x = <span class="string">&quot;上海的自来水来自海上&quot;</span></span><br><span class="line">x.find(<span class="string">&quot;海&quot;</span>)  <span class="comment">#1</span></span><br><span class="line">x.rfind(<span class="string">&quot;海&quot;</span>) <span class="comment">#8</span></span><br><span class="line">x.find(<span class="string">&quot;去&quot;</span>)  <span class="comment">#如果在字符串中找不到字符则返回-1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#index和find类似，但是如果找不到会抛出异常</span></span><br><span class="line">x.index(<span class="string">&quot;去&quot;</span>) <span class="comment">#error:...</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="字符串替换和表格转换"><a href="#字符串替换和表格转换" class="headerlink" title="字符串替换和表格转换"></a>字符串替换和表格转换</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#replace方法用于将前后的字符串进行对调</span></span><br><span class="line">x = <span class="string">&quot;上海自来水来自海上&quot;</span></span><br><span class="line">x.replace(<span class="string">&quot;上海&quot;</span>,<span class="string">&quot;北京&quot;</span>) <span class="comment">#北京自来水来自海上</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#创建表格maketrans,注意：在maketrans中字符串的长度一定要匹配，否则会报如下错误：ValueError: the first two maketrans arguments must have equal length</span></span><br><span class="line">table = <span class="built_in">str</span>.maketrans(<span class="string">&quot;abc&quot;</span>,<span class="string">&quot;def&quot;</span>)</span><br><span class="line"><span class="string">&quot;ghi&quot;</span>.translate(table)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="字符串的判断（全部返回bool类型）"><a href="#字符串的判断（全部返回bool类型）" class="headerlink" title="字符串的判断（全部返回bool类型）"></a>字符串的判断（全部返回bool类型）</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#startwith判断字符是否出现在字符串的开始位置</span></span><br><span class="line">x = <span class="string">&quot;我爱python&quot;</span></span><br><span class="line">x.startwith(<span class="string">&quot;我&quot;</span>) <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#同理endswith判断字符是否出现在字符串的结束位置</span></span><br><span class="line">x = <span class="string">&quot;我爱python&quot;</span></span><br><span class="line">x.endswith(<span class="string">&quot;o&quot;</span>) <span class="comment">#false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#startswith和endswith的进阶，可以自定义起始和结束位置</span></span><br><span class="line">startswith(<span class="string">&quot;我&quot;</span>,<span class="number">1</span>) <span class="comment">#表示从“1”的位置开始，此时字符串变成了“爱python”</span></span><br><span class="line">endswith(<span class="string">&quot;on&quot;</span>,<span class="number">0</span>,<span class="number">4</span>) <span class="comment">#表示从“0”的地方开始，在“4”的位置结束，此时字符串变成了“我爱pyt”</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#istitle判断字符串中是否都是以大写字母开头，其余的都是小写</span></span><br><span class="line">x = <span class="string">&quot;Abc&quot;</span></span><br><span class="line">x.istitle() <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isupper判断字符串里面是否都是大写字母</span></span><br><span class="line"><span class="comment">#islower判断字符串里面是否都是小写字母</span></span><br><span class="line">x = <span class="string">&quot;ABC&quot;</span></span><br><span class="line">x.isupper() <span class="comment">#true</span></span><br><span class="line">x.islower() <span class="comment">#false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isalpha判断字符串是否全部由字母构成（存在空格也不算！）</span></span><br><span class="line">x=<span class="string">&quot;ABCDE &quot;</span></span><br><span class="line">x.isalpha() <span class="comment">#false,因为我有空格的存在</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isspace判断是否全部由空白字符构成，转义字符，tab，space全部都算是空白字符</span></span><br><span class="line"><span class="string">&quot;	\n \t &quot;</span>.space() <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isprintable判断字符串所有元素是否都是可打印字符，注意细节：转义字符不是可打印字符！！</span></span><br><span class="line"><span class="string">&quot;我爱python \n&quot;</span>.isprintable() <span class="comment">#false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isdecimal(),isdigit(),isnumeric()都是判断字符串中是否都是数字的方法。但是我们通常使用isalnum()方法，它是一个集大成者，只要上面三个方法中任意一个返回true，那么isalnum就返回true</span></span><br><span class="line">x = <span class="string">&quot;123456&quot;</span></span><br><span class="line">x.isalum() <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#isidentifier判断是否是python承认的变量命名</span></span><br><span class="line"><span class="string">&quot;I love python&quot;</span>.isidentifier() <span class="comment">#false</span></span><br><span class="line"><span class="string">&quot;I_love_python&quot;</span>.isidentifier() <span class="comment">#true</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="截取字符串"><a href="#截取字符串" class="headerlink" title="截取字符串"></a>截取字符串</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#lstrip去除左侧的空白</span></span><br><span class="line"><span class="comment">#rstrip去除右侧的空白</span></span><br><span class="line"><span class="comment">#strip左右的空白都不要</span></span><br><span class="line"><span class="string">&quot;	左侧不要留白&quot;</span>.lstrip() <span class="comment">#&quot;左侧不要留白&quot;</span></span><br><span class="line"><span class="string">&quot;右侧不要留白		&quot;</span>.rstrip() <span class="comment">#&quot;右侧不要留白&quot;</span></span><br><span class="line"><span class="comment">#也可以自定义去除，但是其实是从左或者从右去除到与传入字符没有相同才停止，即匹配来去除，而不是只是删除对应的字符！</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.lstrip(abcd) <span class="comment">#&quot;dopagip00.com&quot;</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.rstrip(abcd) <span class="comment">#&quot;www.dopagip00&quot;</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.strip(abcd) <span class="comment">#&quot;dopagip00&quot;</span></span><br><span class="line"><span class="comment">#对应上面的代码实际上去除的不是abcd（根本不存在abcd）去除的是abcd对应的左右分别四个字符。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#使用removeprefix(prefix)--&gt;前缀和removesuffix(suffix)--&gt;后缀去除一个特定的子字符串</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.removeprefix(www.) <span class="comment">#&quot;dopagip00.com&quot;</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.removesuffix(.com) <span class="comment">#&quot;www.dopagip00&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#只切分一次：切割字符串,partition表示以.进行切割从右往左寻找分隔符,只找一个！！找到一个就不找了！rpartition表示从右往左寻找分隔符，同样只寻找一个。</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.partition(<span class="string">&quot;.&quot;</span>) <span class="comment">#(&#x27;www&#x27;,&#x27;.&#x27;,&#x27;dopagip00.com&#x27;)</span></span><br><span class="line"><span class="string">&quot;www.dopagip00.com&quot;</span>.rpartition(<span class="string">&quot;.&quot;</span>) <span class="comment">#(&#x27;www.dopagip00&#x27;,&#x27;.&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#切分到没有为止：split按照给定的字符进行切分，默认切分空格。在指定字符的后面一个参数还可以指定分割的次数。</span></span><br><span class="line"><span class="string">&quot;www dopagip com&quot;</span>.split() <span class="comment">#(&#x27;www&#x27;,&#x27;dopagip&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"><span class="string">&quot;www.dopagip.com&quot;</span>.split(<span class="string">&quot;.&quot;</span>) <span class="comment">#(&#x27;www&#x27;,&#x27;dopagip&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"><span class="string">&quot;www.dopagip.com&quot;</span>.rsplit(<span class="string">&quot;.&quot;</span>,<span class="number">1</span>) <span class="comment">#我这里指定切割一次，而且是从右往左切，结果：										 (&quot;www.dopagip&quot;,&quot;com&quot;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#splitlines是以&#x27;行&#x27;进行分割。</span></span><br><span class="line"><span class="string">&quot;www\ndopagip00\ncom&quot;</span>.splitlines() <span class="comment">#(&#x27;www&#x27;,&#x27;dopagip00&#x27;,&#x27;com&#x27;)</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">#join是把列表的数组组合起来成字符串。</span></span><br><span class="line"><span class="string">&quot;.&quot;</span>.join([<span class="string">&#x27;www&#x27;</span>,<span class="string">&#x27;dopagip00&#x27;</span>,<span class="string">&#x27;com&#x27;</span>]) <span class="comment">#www.dopagip00.com</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="格式化字符串（占位）"><a href="#格式化字符串（占位）" class="headerlink" title="格式化字符串（占位）"></a>格式化字符串（占位）</h3><p>其实和c语言的%d,%s占位符类似，只不过python是用{}来占位 </p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#format方法format里面的参数就是占位的字符，format里面的参数与&#123;&#125;对应，有几个参数就有几个&#123;&#125;</span></span><br><span class="line">a = <span class="string">&quot;python&quot;</span></span><br><span class="line">b = <span class="string">&quot;C&quot;</span></span><br><span class="line">c = <span class="string">&quot;PHP&quot;</span></span><br><span class="line">d = <span class="string">&quot;JAVA&quot;</span></span><br><span class="line"><span class="string">&quot;我爱 &#123;&#125; &quot;</span>.<span class="built_in">format</span>(a) <span class="comment">#我爱python</span></span><br><span class="line"><span class="string">&quot;我爱&#123;&#125;,&#123;&#125;,&#123;&#125;,&#123;&#125;&quot;</span>.<span class="built_in">format</span>(a,b,c,d) <span class="comment">#我爱python,C,PHP,JAVA</span></span><br><span class="line"><span class="comment">#可以在花括号中间加入数字表示占位的顺序,甚至可以在括号内加变量名，然后在format里面给变量赋值</span></span><br><span class="line">a = <span class="string">&quot;python&quot;</span></span><br><span class="line">b = <span class="string">&quot;C&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;1&#125;,&#123;0&#125;&quot;</span>.<span class="built_in">format</span>(a, b)) <span class="comment">#我爱python，C</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;0&#125;,&#123;1&#125;&quot;</span>.<span class="built_in">format</span>(a, b)) <span class="comment">#我爱C，python</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;py&#125;,&#123;ja&#125;&quot;</span>.<span class="built_in">format</span>(py=<span class="string">&quot;python&quot;</span>,ja=<span class="string">&quot;java&quot;</span>)) <span class="comment">#我爱python,java</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#千分符</span></span><br><span class="line"><span class="string">&quot;&#123;:,&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">1234</span>) <span class="comment">#1,234</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保留小数点后x位即.xf，类别c语言%.xf</span></span><br><span class="line"><span class="string">&quot;&#123;.2f&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">3.14159</span>) <span class="comment">#3.14</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保留x位数,即.xg</span></span><br><span class="line"><span class="string">&quot;&#123;.2g&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">3.14159</span>) <span class="comment">#3.1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#截取x位字符，不能用于数字，会报错！！</span></span><br><span class="line"><span class="string">&quot;&#123;:.2&#125;&quot;</span>.<span class="built_in">format</span>(<span class="string">&quot;我爱py&quot;</span>)  <span class="comment">#我爱</span></span><br><span class="line"><span class="string">&quot;&#123;:.2&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">1234</span>)     <span class="comment">#error</span></span><br></pre></td></tr></table></figure>
-
-<p>：后面可以加很多值，如下表：（参数即format里面的参数）</p>
-<p><img src="/2022/02/13/python-%E5%AD%97%E7%AC%A6%E4%B8%B2/Users\me\AppData\Roaming\Typora\typora-user-images\image-20220213212943323.png" alt="image-20220213212943323"></p>
-<h3 id><a href="#" class="headerlink" title></a></h3>]]></content>
       <categories>
         <category>python</category>
       </categories>
@@ -2618,6 +2618,30 @@
 
 <h3 id="迭代器，迭代对象"><a href="#迭代器，迭代对象" class="headerlink" title="迭代器，迭代对象"></a>迭代器，迭代对象</h3><p>首先要知道一个迭代器一定是一个迭代对象！</p>
 <p>区别是：迭代对象是可以反复使用的，而迭代器是一次性的。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--除和地板除“</title>
+    <url>/2022/02/09/python-%E9%99%A4%E5%92%8C%E5%9C%B0%E6%9D%BF%E9%99%A4/</url>
+    <content><![CDATA[<p>3/2=1.5这个谁都懂</p>
+<p>但是3//2=1这个代表3/2的结果向下取整，称之为地板除。</p>
+<span id="more"></span>
+
+<p>如-5//2，先算-5/2=-2.5，再向下取整，得-3。</p>
+<p>我们还可以使用python的内置函数divmod（）</p>
+<p>如divmod(3,2)=(1,1)结果中的第一个1代表着3//2的结果，第二个1代表着3%2的结果。</p>
+<p>内置函数abs，如abs（x）意思是取x的绝对值</p>
+<p>任何数据类型后面加括号加值的结果都是强制转换成该数据类型。</p>
+<p>如：x=2.5</p>
+<p>int（x）的结果就是2，向下取整！</p>
+<p>pow(2,3)代表2的三次方，和2**3的效果一样。</p>
+<p>pow（2,3,4）代表着2**3%4即2的三次方结果除四的余数！</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -2714,30 +2738,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”python--除和地板除“</title>
-    <url>/2022/02/09/python-%E9%99%A4%E5%92%8C%E5%9C%B0%E6%9D%BF%E9%99%A4/</url>
-    <content><![CDATA[<p>3/2=1.5这个谁都懂</p>
-<p>但是3//2=1这个代表3/2的结果向下取整，称之为地板除。</p>
-<span id="more"></span>
-
-<p>如-5//2，先算-5/2=-2.5，再向下取整，得-3。</p>
-<p>我们还可以使用python的内置函数divmod（）</p>
-<p>如divmod(3,2)=(1,1)结果中的第一个1代表着3//2的结果，第二个1代表着3%2的结果。</p>
-<p>内置函数abs，如abs（x）意思是取x的绝对值</p>
-<p>任何数据类型后面加括号加值的结果都是强制转换成该数据类型。</p>
-<p>如：x=2.5</p>
-<p>int（x）的结果就是2，向下取整！</p>
-<p>pow(2,3)代表2的三次方，和2**3的效果一样。</p>
-<p>pow（2,3,4）代表着2**3%4即2的三次方结果除四的余数！</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数值分析--Lagrange插值</title>
     <url>/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Lagrange%E6%8F%92%E5%80%BC/</url>
     <content><![CDATA[<p>拉格朗日插值法分为一次插值，两次插值直到n次插值，划分的方法是有两个点就有一次插值，有三个点就有两次插值，同理可以推出有n个点就有n-1次插值。</p>
@@ -2766,6 +2766,36 @@
 <p>C1 = f[x0,x1] = [f(x1)-f(x0)]/x1-x0</p>
 <p>C2 = f[x0,x1,x2] = f(x1)-f(x0)/x1-x0 ……</p>
 <h3 id="牛顿插值"><a href="#牛顿插值" class="headerlink" title="牛顿插值"></a>牛顿插值</h3><p>Nn(x) = C0 + C1(x-x0) + C2 (x-x0)(x-x1) + … + Cn(x-x0)(x-x1)..(x-xn)</p>
+]]></content>
+      <categories>
+        <category>数值分析</category>
+      </categories>
+      <tags>
+        <tag>数值分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数值分析-- 误差</title>
+    <url>/2022/03/07/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-%E8%AF%AF%E5%B7%AE/</url>
+    <content><![CDATA[<h3 id="误差和误差限"><a href="#误差和误差限" class="headerlink" title="误差和误差限"></a>误差和误差限</h3><span id="more"></span>
+
+<p>设X* 为X的一个近似值（可大于X也可小于X），有e* =  X-X* ,称e* 为<strong>绝对误差</strong>，简称<strong>误差</strong>。</p>
+<p>易得出结论：当绝对误差大于0时，近似值大于真实值，称为<strong>强近似值</strong>；当绝对误差小于0时，近似值小于真实值，称为<strong>弱近似值</strong>。</p>
+<p>误差的绝对值不超过某个正数E* ，称这个正数E<em>为近似值的*<em>误差限</em></em> </p>
+<h3 id="相对误差和相对误差限"><a href="#相对误差和相对误差限" class="headerlink" title="相对误差和相对误差限"></a>相对误差和相对误差限</h3><p>**相对误差:*<em>指的是近似值e</em> 与真实值X的比值，称为e(r)*（右下角有个小r）</p>
+<p><strong>相对误差限：</strong>相对误差不能超过相对误差限E(r)* ，E(r)* =E* / |x*|</p>
+<h3 id="绝对误差的计算方法"><a href="#绝对误差的计算方法" class="headerlink" title="绝对误差的计算方法"></a>绝对误差的计算方法</h3><p><strong>注意：绝对误差限一定是一个单位的半个单位，如0.5，0.05，0.005，0.0005等等，那么换成科学计数法的形式就可以变成1/2 * 10^-p</strong></p>
+<p><strong>（其中p取正整数！）这时，-p就可以换成另一种表示方法，-p = m-n+1  （其中m是小数点离第一个非0数字的后一位有多远，如123.45的m就是2，而0.00123的m就是-3）（其中n是有几位有效数字如123.45就有5为有效数字，那么n就是5.）通常情况下都是知道了m和n要去求p的！！</strong></p>
+<p>例如“派”取近似值3.14，那么|3.14-“派”| = 0.0015926&lt;=0.005=1/2 * 10^-2，则绝对误差限就是1/2 * 10^-2</p>
+<h3 id="相对误差的计算方法"><a href="#相对误差的计算方法" class="headerlink" title="相对误差的计算方法"></a>相对误差的计算方法</h3><p>若近似值有n为有效数字，其中a是近似值的个位数。</p>
+<p>E(r)*&lt;=1/2a * 10^-(n-1)</p>
+<h3 id="误差估计中的重要公式"><a href="#误差估计中的重要公式" class="headerlink" title="误差估计中的重要公式"></a>误差估计中的重要公式</h3><p>E(x1* +- x2* ) = E(x1* ) +- E(x2*)</p>
+<p><em><em>E(x1</em> * x2</em> ) = |x1*| * E(x2*) + |x2 *| * E(x1 *)**这个公式在平常的运算中常常能用得上。</p>
+<p>E(x1* / x2* ) = |x1*| * E(x2*) + |x2 *| * E(x1 *) / |x2 *|^2    这是上面那一条的除法运算</p>
+<h3 id="误差中的规则"><a href="#误差中的规则" class="headerlink" title="误差中的规则"></a>误差中的规则</h3><p>1.要避免除数的绝对值远远小于被除数绝对值的除法</p>
+<p>2.避免出现有效数字少的相减如x=123.401,  y = 123.412  ，那么y-x =0.011只有两位有效数字。</p>
+<p>3.防止大数吃掉小数</p>
+<p>4.注意简化运算流程，简化运算步骤</p>
 ]]></content>
       <categories>
         <category>数值分析</category>
@@ -2866,33 +2896,43 @@
       </tags>
   </entry>
   <entry>
-    <title>数值分析-- 误差</title>
-    <url>/2022/03/07/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-%E8%AF%AF%E5%B7%AE/</url>
-    <content><![CDATA[<h3 id="误差和误差限"><a href="#误差和误差限" class="headerlink" title="误差和误差限"></a>误差和误差限</h3><span id="more"></span>
+    <title>机器学习-- Matplotlib库</title>
+    <url>/2022/03/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-Matplotlib%E5%BA%93/</url>
+    <content><![CDATA[<p>Matplotlib库用来创建图表</p>
+<span id="more"></span>
 
-<p>设X* 为X的一个近似值（可大于X也可小于X），有e* =  X-X* ,称e* 为<strong>绝对误差</strong>，简称<strong>误差</strong>。</p>
-<p>易得出结论：当绝对误差大于0时，近似值大于真实值，称为<strong>强近似值</strong>；当绝对误差小于0时，近似值小于真实值，称为<strong>弱近似值</strong>。</p>
-<p>误差的绝对值不超过某个正数E* ，称这个正数E<em>为近似值的*<em>误差限</em></em> </p>
-<h3 id="相对误差和相对误差限"><a href="#相对误差和相对误差限" class="headerlink" title="相对误差和相对误差限"></a>相对误差和相对误差限</h3><p>**相对误差:*<em>指的是近似值e</em> 与真实值X的比值，称为e(r)*（右下角有个小r）</p>
-<p><strong>相对误差限：</strong>相对误差不能超过相对误差限E(r)* ，E(r)* =E* / |x*|</p>
-<h3 id="绝对误差的计算方法"><a href="#绝对误差的计算方法" class="headerlink" title="绝对误差的计算方法"></a>绝对误差的计算方法</h3><p><strong>注意：绝对误差限一定是一个单位的半个单位，如0.5，0.05，0.005，0.0005等等，那么换成科学计数法的形式就可以变成1/2 * 10^-p</strong></p>
-<p><strong>（其中p取正整数！）这时，-p就可以换成另一种表示方法，-p = m-n+1  （其中m是小数点离第一个非0数字的后一位有多远，如123.45的m就是2，而0.00123的m就是-3）（其中n是有几位有效数字如123.45就有5为有效数字，那么n就是5.）通常情况下都是知道了m和n要去求p的！！</strong></p>
-<p>例如“派”取近似值3.14，那么|3.14-“派”| = 0.0015926&lt;=0.005=1/2 * 10^-2，则绝对误差限就是1/2 * 10^-2</p>
-<h3 id="相对误差的计算方法"><a href="#相对误差的计算方法" class="headerlink" title="相对误差的计算方法"></a>相对误差的计算方法</h3><p>若近似值有n为有效数字，其中a是近似值的个位数。</p>
-<p>E(r)*&lt;=1/2a * 10^-(n-1)</p>
-<h3 id="误差估计中的重要公式"><a href="#误差估计中的重要公式" class="headerlink" title="误差估计中的重要公式"></a>误差估计中的重要公式</h3><p>E(x1* +- x2* ) = E(x1* ) +- E(x2*)</p>
-<p><em><em>E(x1</em> * x2</em> ) = |x1*| * E(x2*) + |x2 *| * E(x1 *)**这个公式在平常的运算中常常能用得上。</p>
-<p>E(x1* / x2* ) = |x1*| * E(x2*) + |x2 *| * E(x1 *) / |x2 *|^2    这是上面那一条的除法运算</p>
-<h3 id="误差中的规则"><a href="#误差中的规则" class="headerlink" title="误差中的规则"></a>误差中的规则</h3><p>1.要避免除数的绝对值远远小于被除数绝对值的除法</p>
-<p>2.避免出现有效数字少的相减如x=123.401,  y = 123.412  ，那么y-x =0.011只有两位有效数字。</p>
-<p>3.防止大数吃掉小数</p>
-<p>4.注意简化运算流程，简化运算步骤</p>
+<p>在使用Matplotlib库的时候要导入matpltlib库</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+
+<p>常用的图形函数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#绘制折线图</span></span><br><span class="line">plt.plot()</span><br><span class="line"><span class="comment">#绘制柱形图</span></span><br><span class="line">plt.bar()</span><br><span class="line"><span class="comment">#绘制饼图</span></span><br><span class="line">plt.pie()</span><br></pre></td></tr></table></figure>
+
+<h3 id="绘制基本的图表"><a href="#绘制基本的图表" class="headerlink" title="绘制基本的图表"></a>绘制基本的图表</h3><h4 id="绘制折线图"><a href="#绘制折线图" class="headerlink" title="绘制折线图"></a>绘制折线图</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">y = [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]</span><br><span class="line">plt.plot(x,y)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h4 id="绘制柱形图"><a href="#绘制柱形图" class="headerlink" title="绘制柱形图"></a>绘制柱形图</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">y = [<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]</span><br><span class="line">plt.bar(x,y)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h4 id="绘制散点图"><a href="#绘制散点图" class="headerlink" title="绘制散点图"></a>绘制散点图</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">x = np.random.rand(<span class="number">10</span>)		<span class="comment">#生成10个位于0~1之间的数</span></span><br><span class="line">y = np.random.rand(<span class="number">10</span>)</span><br><span class="line">plt.scatter(x,y)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h4 id="绘制直方图"><a href="#绘制直方图" class="headerlink" title="绘制直方图"></a>绘制直方图</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">data = np.random.randn(<span class="number">10000</span>)	<span class="comment">#生成10000个服从标准正态分布的随机数</span></span><br><span class="line">plt.hist(data,bins=<span class="number">40</span>,edgecolor=<span class="string">&#x27;black&#x27;</span>)   <span class="comment">#绘制直方图的函数,bins为直方图的数量（颗粒度），edgecolor为柱形图的边框颜色</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h3><h4 id="添加文字"><a href="#添加文字" class="headerlink" title="添加文字"></a>添加文字</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">y = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">plt.plot(x,y)</span><br><span class="line">plt.title(<span class="string">&#x27;TITLE&#x27;</span>)		<span class="comment">#设置图标上面的标题</span></span><br><span class="line">plt.xlabel(<span class="string">&#x27;X&#x27;</span>)			<span class="comment">#设置横坐标的值</span></span><br><span class="line">plt.ylabel(<span class="string">&#x27;Y&#x27;</span>)			<span class="comment">#设置纵坐标的值</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<h4 id="添加图例"><a href="#添加图例" class="headerlink" title="添加图例"></a>添加图例</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">plt(x,y,lable=<span class="string">&#x27;x+y&#x27;</span>)	<span class="comment">#只是在之前的条件后面添加一个label参数</span></span><br><span class="line">plt.legend(loc=<span class="string">&#x27;upper left&#x27;</span>)	<span class="comment">#这是用来把图例设置在图表的左上方</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="设置图表大小"><a href="#设置图表大小" class="headerlink" title="设置图表大小"></a>设置图表大小</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">plt.rcParams[<span class="string">&#x27;figure.figsize&#x27;</span>] = (<span class="number">8</span>,<span class="number">6</span>)		<span class="comment">#其中8是长度，6是宽度</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="设置x轴刻度的问题"><a href="#设置x轴刻度的问题" class="headerlink" title="设置x轴刻度的问题"></a>设置x轴刻度的问题</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">plt.xticks(rotation=<span class="number">45</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="解决中文显示问题ax"><a href="#解决中文显示问题ax" class="headerlink" title="解决中文显示问题ax"></a>解决中文显示问题ax</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pylot <span class="keyword">as</span> plt</span><br><span class="line">plt.rcParams[fort.sans-serif] = [<span class="string">&#x27;SimHei&#x27;</span>]	<span class="comment">#用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>	<span class="comment">#解决符号显示为方块的问题</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="绘制多图"><a href="#绘制多图" class="headerlink" title="绘制多图"></a>绘制多图</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Matplotlib库中的figure作为画布，axes作为子图，一个画布中可以有多张子图，绘制多图常用subplot()函数和subplots()函数.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#subplot函数，他的参数为三位整数，分别表示子图的行数列数和当前子图的序号。</span></span><br><span class="line">ax = plot.subplot(<span class="number">221</span>)</span><br><span class="line">plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>])	<span class="comment">#表示这个两行两列的子图绘制折线图。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#subplots函数，表示生成几行几列的子图</span></span><br><span class="line">fig,axes = plt.subplots(<span class="number">2</span>,<span class="number">2</span>)	<span class="comment">#表示生成两行两列的一共四个的子图,fig是画布参数，axes是子图参数</span></span><br><span class="line">ax1,ax2,ax3,ax4 = axes.flatten()	<span class="comment">#这个语句将子图变量赋值给ax1,ax2,ax3,ax4</span></span><br><span class="line"><span class="comment">#之后就可以使用subplot在子图中画图</span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>数值分析</category>
+        <category>机器学习</category>
       </categories>
       <tags>
-        <tag>数值分析</tag>
+        <tag>机器学习</tag>
       </tags>
   </entry>
   <entry>
@@ -2970,46 +3010,6 @@
       </categories>
       <tags>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习-- Matplotlib库</title>
-    <url>/2022/03/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-Matplotlib%E5%BA%93/</url>
-    <content><![CDATA[<p>Matplotlib库用来创建图表</p>
-<span id="more"></span>
-
-<p>在使用Matplotlib库的时候要导入matpltlib库</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
-
-<p>常用的图形函数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#绘制折线图</span></span><br><span class="line">plt.plot()</span><br><span class="line"><span class="comment">#绘制柱形图</span></span><br><span class="line">plt.bar()</span><br><span class="line"><span class="comment">#绘制饼图</span></span><br><span class="line">plt.pie()</span><br></pre></td></tr></table></figure>
-
-<h3 id="绘制基本的图表"><a href="#绘制基本的图表" class="headerlink" title="绘制基本的图表"></a>绘制基本的图表</h3><h4 id="绘制折线图"><a href="#绘制折线图" class="headerlink" title="绘制折线图"></a>绘制折线图</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">y = [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]</span><br><span class="line">plt.plot(x,y)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<h4 id="绘制柱形图"><a href="#绘制柱形图" class="headerlink" title="绘制柱形图"></a>绘制柱形图</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">y = [<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]</span><br><span class="line">plt.bar(x,y)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<h4 id="绘制散点图"><a href="#绘制散点图" class="headerlink" title="绘制散点图"></a>绘制散点图</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">x = np.random.rand(<span class="number">10</span>)		<span class="comment">#生成10个位于0~1之间的数</span></span><br><span class="line">y = np.random.rand(<span class="number">10</span>)</span><br><span class="line">plt.scatter(x,y)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<h4 id="绘制直方图"><a href="#绘制直方图" class="headerlink" title="绘制直方图"></a>绘制直方图</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">data = np.random.randn(<span class="number">10000</span>)	<span class="comment">#生成10000个服从标准正态分布的随机数</span></span><br><span class="line">plt.hist(data,bins=<span class="number">40</span>,edgecolor=<span class="string">&#x27;black&#x27;</span>)   <span class="comment">#绘制直方图的函数,bins为直方图的数量（颗粒度），edgecolor为柱形图的边框颜色</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<h3 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h3><h4 id="添加文字"><a href="#添加文字" class="headerlink" title="添加文字"></a>添加文字</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">x = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">y = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line">plt.plot(x,y)</span><br><span class="line">plt.title(<span class="string">&#x27;TITLE&#x27;</span>)		<span class="comment">#设置图标上面的标题</span></span><br><span class="line">plt.xlabel(<span class="string">&#x27;X&#x27;</span>)			<span class="comment">#设置横坐标的值</span></span><br><span class="line">plt.ylabel(<span class="string">&#x27;Y&#x27;</span>)			<span class="comment">#设置纵坐标的值</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-<h4 id="添加图例"><a href="#添加图例" class="headerlink" title="添加图例"></a>添加图例</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">plt(x,y,lable=<span class="string">&#x27;x+y&#x27;</span>)	<span class="comment">#只是在之前的条件后面添加一个label参数</span></span><br><span class="line">plt.legend(loc=<span class="string">&#x27;upper left&#x27;</span>)	<span class="comment">#这是用来把图例设置在图表的左上方</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="设置图表大小"><a href="#设置图表大小" class="headerlink" title="设置图表大小"></a>设置图表大小</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">plt.rcParams[<span class="string">&#x27;figure.figsize&#x27;</span>] = (<span class="number">8</span>,<span class="number">6</span>)		<span class="comment">#其中8是长度，6是宽度</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="设置x轴刻度的问题"><a href="#设置x轴刻度的问题" class="headerlink" title="设置x轴刻度的问题"></a>设置x轴刻度的问题</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">plt.xticks(rotation=<span class="number">45</span>)</span><br></pre></td></tr></table></figure>
-
-<h4 id="解决中文显示问题ax"><a href="#解决中文显示问题ax" class="headerlink" title="解决中文显示问题ax"></a>解决中文显示问题ax</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pylot <span class="keyword">as</span> plt</span><br><span class="line">plt.rcParams[fort.sans-serif] = [<span class="string">&#x27;SimHei&#x27;</span>]	<span class="comment">#用来正常显示中文标签</span></span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="literal">False</span>	<span class="comment">#解决符号显示为方块的问题</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="绘制多图"><a href="#绘制多图" class="headerlink" title="绘制多图"></a>绘制多图</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Matplotlib库中的figure作为画布，axes作为子图，一个画布中可以有多张子图，绘制多图常用subplot()函数和subplots()函数.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#subplot函数，他的参数为三位整数，分别表示子图的行数列数和当前子图的序号。</span></span><br><span class="line">ax = plot.subplot(<span class="number">221</span>)</span><br><span class="line">plt.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>])	<span class="comment">#表示这个两行两列的子图绘制折线图。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#subplots函数，表示生成几行几列的子图</span></span><br><span class="line">fig,axes = plt.subplots(<span class="number">2</span>,<span class="number">2</span>)	<span class="comment">#表示生成两行两列的一共四个的子图,fig是画布参数，axes是子图参数</span></span><br><span class="line">ax1,ax2,ax3,ax4 = axes.flatten()	<span class="comment">#这个语句将子图变量赋值给ax1,ax2,ax3,ax4</span></span><br><span class="line"><span class="comment">#之后就可以使用subplot在子图中画图</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
       </tags>
   </entry>
   <entry>
@@ -3116,6 +3116,10 @@
     <url>/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/</url>
     <content><![CDATA[<h2 id="定点数（考试重点）"><a href="#定点数（考试重点）" class="headerlink" title="定点数（考试重点）"></a>定点数（考试重点）</h2><p>定点数：小数点的位置不变</p>
 <p>浮点数：小数点的位置会改变</p>
+<span id="more"></span>
+
+
+
 <h3 id="无符号数"><a href="#无符号数" class="headerlink" title="无符号数"></a>无符号数</h3><p>定义：整个机器的全部二进制位全部是数值位，没有符号位。相当于数的绝对值。</p>
 <h3 id="有符号数"><a href="#有符号数" class="headerlink" title="有符号数"></a>有符号数</h3><h4 id="定点整数"><a href="#定点整数" class="headerlink" title="定点整数"></a>定点整数</h4><p>小数点在最后</p>
 <h4 id="定点小数"><a href="#定点小数" class="headerlink" title="定点小数"></a>定点小数</h4><p>小数点紧跟在符号位的后面。</p>
@@ -3137,11 +3141,161 @@
 <p>负数的补码 = 反码末位+1（要考虑到进位问题）</p>
 <p>注意：补码的真值0只有一种表示形式</p>
 <p>定点整数补码，[x]补 = 1，0000000，表示-2^7</p>
-<h4 id="补码转原码"><a href="#补码转原码" class="headerlink" title="补码转原码"></a>补码转原码</h4><p>方法和原码转补码的方法一样，都是取反之后加一</p>
+<h5 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h5><p>通过x的补码求-x的补码：符号位全部取反，再在末位加一</p>
+<h4 id="补码转原码"><a href="#补码转原码" class="headerlink" title="补码转原码"></a>补码转原码</h4><p>方法和原码转补码的方法一样，都是<strong>取反之后加一（不是加一后取反）</strong></p>
+<p><strong>即：补码的补码是原码</strong></p>
 <h4 id="移码"><a href="#移码" class="headerlink" title="移码"></a>移码</h4><p>在补码的基础上将符号位取反</p>
 <p><strong>移码只能用于表示整数</strong></p>
 <p>移码可以方便计算机判断哪个值更大</p>
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>综上，我们只有在看到符号位是1的才需要进行反码原码的操作，0的反码和补码都是它本身</p>
+<h2 id="原码补码移码的作用"><a href="#原码补码移码的作用" class="headerlink" title="原码补码移码的作用"></a>原码补码移码的作用</h2><h3 id="补码的作用"><a href="#补码的作用" class="headerlink" title="补码的作用"></a>补码的作用</h3><h4 id="带余除法"><a href="#带余除法" class="headerlink" title="带余除法"></a>带余除法</h4><p>如 x mod m = r .</p>
+<p>实际是x = qm + r（其中q是整数，r是余数）</p>
+<p>mod 12 把所有数分成了12类（余数相同的是一类）同一类数都是等价的，即1+0和1+12和1+24都是等效的！！</p>
+<p>同一类数<strong>（如1和13和25）</strong>之间互为补数，两者的绝对值之和为模数<strong>（12）</strong></p>
+<p><strong>重点公式：模-a的绝对值=a的补数</strong>（如12-|-3| = 9）</p>
+<h5 id="计算机中的应用"><a href="#计算机中的应用" class="headerlink" title="计算机中的应用"></a>计算机中的应用</h5><p>计算机中的模是2的八次方，任何一个数想要求补码就拿2的八次方减去该数绝对值即可，但是有了补码就可以用上面的重点公式来算了，十分方便，因此可以总结出：<br><strong>补码的作用是：让减法操作转变为加法操作，节省计算机硬件的成本！</strong></p>
+<p>使得ALU算术逻辑单元中只需要设计加法相关的电路而不需要设计减法电路，非常的银杏化！</p>
+<p>执行加法操作的时候，符号位会一起参与运算！</p>
+<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><h3 id="移位运算（-）"><a href="#移位运算（-）" class="headerlink" title="移位运算（*）"></a>移位运算（*）</h3><p>移位：通过改变各个数码位和小数点的相对位置，从而改变各个数码位的位权，可以用移位运算实现乘法，除法。</p>
+<h4 id="算术移位（符号位保持不变，数值位移动）"><a href="#算术移位（符号位保持不变，数值位移动）" class="headerlink" title="算术移位（符号位保持不变，数值位移动）"></a>算术移位（符号位保持不变，数值位移动）</h4><p>因为定点数的小数点位置是不变的，那我们可以改变数的位置，各个数的位权发生改变。</p>
+<p>如110011.000向右移一位变成：11001.100。这时，前数除2的一次方即可得到后数。</p>
+<p>110011.000向左移一位变成：1100110.000，这时前数乘以2的一次方即可得到后数。</p>
+<p>110011.000向左移两位变成：11001100.000，这时前数乘以2的二次方即可得到后数。</p>
+<p><strong>右移：高位补零，低位（小数点后的位数）舍弃，如果舍弃的位数等于0，那么除2，如果舍弃的位数不等于0，那么会丢失精度。</strong></p>
+<p><strong>左移：低位补零，高位舍弃，若舍弃位=0，相当于*2，若舍弃位！=0，会出现严重误差（因为最高位只能表示到(2^8)-1）</strong></p>
+<h5 id="反码的算术移位"><a href="#反码的算术移位" class="headerlink" title="反码的算术移位"></a>反码的算术移位</h5><p><strong>正数：</strong>因为正数的反码与原码相同，因此正数反码的算术移位也和原码相同！</p>
+<p><strong>负数：</strong>负数的算术移位与原码相反，左移在低位补1，右移在高位补1.</p>
+<h5 id="补码的算术移位"><a href="#补码的算术移位" class="headerlink" title="补码的算术移位"></a>补码的算术移位</h5><p><strong>正数：算术移位与原码相同</strong></p>
+<p><strong>负数移位的前提：在负数的补码中，补码最右边的1（包括自己）的右边与原码一致，最右边的1的左边与反码一致·</strong></p>
+<p><strong>负数：右移，高位补1，左移，低位补0.</strong></p>
+<h5 id="计算机中的表达"><a href="#计算机中的表达" class="headerlink" title="计算机中的表达"></a>计算机中的表达</h5><p>例如-20*7，我们可以把7看成（2^0 + 2^1 + 2^2）,所以就是-20 * （2^0 + 2^1 + 2^2），计算机就判断把-20的二进制形式左移或者右移几位就行了！</p>
+<h5 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h5><h5 id="正数：全补0；"><a href="#正数：全补0；" class="headerlink" title="正数：全补0；"></a>正数：全补0；</h5><p><strong>负数：原码补0，反码补1，补码左0右1</strong></p>
+<h4 id="逻辑移位"><a href="#逻辑移位" class="headerlink" title="逻辑移位"></a>逻辑移位</h4><p>不需要考虑别的，<strong>相当于对无符号数的算数移位</strong></p>
+<p>逻辑左移：高位补0，低位舍弃</p>
+<p>逻辑右移：低位补0，高位舍弃</p>
+<h4 id="循环移位"><a href="#循环移位" class="headerlink" title="循环移位"></a>循环移位</h4><p>左移时移出来的数放在最后！</p>
+<p>右移时移出来的数放在最前！</p>
+<h4 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h4><p><strong>进位位</strong>：如果我们把两个二进制数相加了结果大于8bit，那么多出来的那一位数就称为<strong>进位位</strong></p>
+<p>进位位的循环移位：左移时会把进位位的数放在原数的最后，把原数最前面的数放在进位位里面！</p>
+<h3 id="加减运算"><a href="#加减运算" class="headerlink" title="加减运算"></a>加减运算</h3><h4 id="原码的加减法"><a href="#原码的加减法" class="headerlink" title="原码的加减法"></a>原码的加减法</h4><h5 id="原码的加法运算"><a href="#原码的加法运算" class="headerlink" title="原码的加法运算"></a>原码的加法运算</h5><p>正+正=绝对值做加法，结果为正！</p>
+<p>负+负=绝对值做减法，结果为负！</p>
+<p>正+负=绝对值大的减绝对值小的，符号同绝对值大的数</p>
+<h5 id="原码的减法运算（减数符号取反变成加法）"><a href="#原码的减法运算（减数符号取反变成加法）" class="headerlink" title="原码的减法运算（减数符号取反变成加法）"></a>原码的减法运算（减数符号取反变成加法）</h5><p>正-负 = 正+正</p>
+<p>正-正 = 正+负</p>
+<p>负-正 = 负+负</p>
+<p>负-负 = 负+正</p>
+<h4 id="补码的加减法"><a href="#补码的加减法" class="headerlink" title="补码的加减法"></a>补码的加减法</h4><p>[A+B]补 = [A]补+[B]补</p>
+<p>[A-B]补 = [A]补 + [-B]补（其中用B补求-B补是符号位数值位全部取反，然后加一）</p>
+]]></content>
+      <categories>
+        <category>计组</category>
+      </categories>
+      <tags>
+        <tag>计组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机组成原理--数据的表示和运算</title>
+    <url>/2022/03/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/</url>
+    <content><![CDATA[<h2 id="进位计数制"><a href="#进位计数制" class="headerlink" title="进位计数制"></a>进位计数制</h2><span id="more"></span>
+
+<h3 id="不同的进制"><a href="#不同的进制" class="headerlink" title="不同的进制"></a>不同的进制</h3><p>其实进制的实质就是<strong>逢X进一</strong>，如十进制就是逢十进一，八进制逢八进一。</p>
+<p>二进制：0，1</p>
+<p>八进制：0，1，2，3，4，5，6，7</p>
+<p>十进制：0，1，2，3，4，5，6，7，8，9</p>
+<p>十六进制：0，1，2，3，4，5，6，7，8，9，A，B，C，D，E，F</p>
+<h4 id="基数"><a href="#基数" class="headerlink" title="基数"></a>基数</h4><p>不同进制的基数不同，如<strong>r进制的基数就是r</strong>，十进制的基数就是十</p>
+<h4 id="不同进制的加法"><a href="#不同进制的加法" class="headerlink" title="不同进制的加法"></a>不同进制的加法</h4><h5 id="八进制加法"><a href="#八进制加法" class="headerlink" title="八进制加法"></a>八进制加法</h5><p>逢八进一，那么5.4+0.4 = 6.0</p>
+<h5 id="十六进制加法"><a href="#十六进制加法" class="headerlink" title="十六进制加法"></a>十六进制加法</h5><p>逢十六进一，那么5.8+1.8 = 7.0</p>
+<h3 id="十进制计数法"><a href="#十进制计数法" class="headerlink" title="十进制计数法"></a>十进制计数法</h3><p>古印度人发明了阿拉伯数字：1，2，3，4.……</p>
+<h4 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h4><p>例如在十进制数<strong>987</strong>中，9是百位，8是十位，7是个位。也即9*10^2 + 8 * 10^1 + 7 * 10^0这三个分别代表了不同的权重。</p>
+<h4 id="从其他进制转换到十进制"><a href="#从其他进制转换到十进制" class="headerlink" title="从其他进制转换到十进制"></a>从其他进制转换到十进制</h4><p><strong>如二进制数11011要转化成十进制的方式就是从第一位到最后一位分别成对应进制基数的0，1，2，3，4次方。</strong></p>
+<p>在这个例子里面就是 1乘二的0次方 + 1乘二的1次方 + 0乘二的2次方 + 1乘二的3次方 + 1乘二的4次方 = 27</p>
+<h4 id="从十进制转化成其他进制"><a href="#从十进制转化成其他进制" class="headerlink" title="从十进制转化成其他进制"></a>从十进制转化成其他进制</h4><h5 id="十进制转二进制"><a href="#十进制转二进制" class="headerlink" title="十进制转二进制"></a>十进制转二进制</h5><h6 id="整数位置"><a href="#整数位置" class="headerlink" title="整数位置"></a>整数位置</h6><p><strong>除基取余法</strong></p>
+<p>拿十进制的数除2，得到的余数就是二进制的数，直到除到商为0为止，先得到的余数是低位的，后得到的余数是高位的。</p>
+<h6 id="小数位置"><a href="#小数位置" class="headerlink" title="小数位置"></a>小数位置</h6><p><strong>乘基取整法</strong></p>
+<p>拿十进制的小数部分乘2，看乘二之后的整数部分是不是1，是1的话该位的二进制就是1，否则是0。有一些十进制的小数位取不完（如0.3），遇到这种情况就取小数点的后五位</p>
+<h5 id="十进制转八进制和十六进制"><a href="#十进制转八进制和十六进制" class="headerlink" title="十进制转八进制和十六进制"></a>十进制转八进制和十六进制</h5><p>先把十进制转化成为二进制，再把二进制转化成为八进制和十六进制</p>
+<h3 id="二进制转八进制和十六进制"><a href="#二进制转八进制和十六进制" class="headerlink" title="二进制转八进制和十六进制"></a>二进制转八进制和十六进制</h3><h4 id="二进制转八进制"><a href="#二进制转八进制" class="headerlink" title="二进制转八进制"></a>二进制转八进制</h4><p>二进制中的数每三个分成一组，每组对应转换成八进制的数字（0~7）即可，如二进制数100111011001可以分成这样：100<strong>111</strong>011<strong>001</strong>,然后分别看，001转化成八进制是1，011转化成八进制是3，111转化成八进制是7，100转化成八进制是4，所以这个二进制数转化成八进制实际上是4731.</p>
+<p><strong>注意：位数不够的在前面或者后面补0</strong></p>
+<h4 id="二进制转十六进制"><a href="#二进制转十六进制" class="headerlink" title="二进制转十六进制"></a>二进制转十六进制</h4><p>把二进制数看成四个一组即可，要注意的是十六进制中，ABCDEF分别表示10，11，12，13，14，15</p>
+<h4 id="八进制转二进制"><a href="#八进制转二进制" class="headerlink" title="八进制转二进制"></a>八进制转二进制</h4><p>把八进制中<strong>每一个</strong>数都转化成为<strong>三个</strong>二进制数即可</p>
+<h3 id="如何区别不同进制"><a href="#如何区别不同进制" class="headerlink" title="如何区别不同进制"></a>如何区别不同进制</h3><p>一般会在右下角有角标，如八进制会在右下角有八的角标</p>
+<p>如果没有角标的情况下，会在数字的后面加上对应的字母以便区分，二进制的字母是B，十进制的字母是D，十六进制的字母是H。</p>
+<h3 id="真值和机器数"><a href="#真值和机器数" class="headerlink" title="真值和机器数"></a>真值和机器数</h3><p>在计算机中如何表示正负号，通常用0代表负号，用1代表正号。如5436这是个真值，为了表示他是正数，用<strong>1</strong>5436表示他是个正数，15436就是个机器数。在后面的原码，反码，补码，移码中会具体说明。</p>
+<h2 id="BCD码"><a href="#BCD码" class="headerlink" title="BCD码"></a>BCD码</h2><h3 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h3><p>使用二进制来编码的十进制数</p>
+<p>每<strong>四个二进制码（4bit）（一共对应了2^4=16种状态）对应这十进制中的0~9</strong>，那么明显有六种是冗余的</p>
+<h3 id="8421码"><a href="#8421码" class="headerlink" title="8421码"></a>8421码</h3><p>8421码种规定了0~9的二进制状态</p>
+<p><strong>9：1001</strong></p>
+<p><strong>8：1000</strong></p>
+<p><strong>7：0111</strong></p>
+<p><strong>6：0110</strong></p>
+<p><strong>5：0101</strong></p>
+<p><strong>4：0100</strong></p>
+<p><strong>3：0011</strong></p>
+<p><strong>2：0010</strong></p>
+<p><strong>1：0001</strong></p>
+<p><strong>0：0000</strong></p>
+<p>要记熟8421码，考试容易碰到</p>
+<h4 id="8421码中数之间的相加"><a href="#8421码中数之间的相加" class="headerlink" title="8421码中数之间的相加"></a>8421码中数之间的相加</h4><p>可以用二进制直接加（记住逢二进一就可以了），也可以用十进制加好之后再转化成二进制数。</p>
+<p><strong>Q：那么这里有个问题是相加得到的数大于9，不在8421码当中怎么办？</strong></p>
+<p><strong>A：通常把这个大于9的数再加上6即可得到两位数的表示方法</strong></p>
+<h3 id="余3码"><a href="#余3码" class="headerlink" title="余3码"></a>余3码</h3><p>在8421码表示的数值中每一个都加上一个二进制的0011，得到的就是余3码。</p>
+<h3 id="2421码"><a href="#2421码" class="headerlink" title="2421码"></a>2421码</h3><p>与8421码很类似，只是2421码对应的权值分别是2421.</p>
+<p>2421码在0~4的时候前两位的值是0</p>
+<h2 id="字符和字符串"><a href="#字符和字符串" class="headerlink" title="字符和字符串"></a>字符和字符串</h2><h3 id="ASCII码"><a href="#ASCII码" class="headerlink" title="ASCII码"></a>ASCII码</h3><p>在ASCII码中一共有128个字符，而2的7次方正好等于128，所以我们只需要7位二进制的编码就可以表示ASCII码中的数字符号字母，但是计算机为了凑够一个字节，通常使用8个bit来表示，这样正好凑够了一个字节（Byte）</p>
+<h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>已知<strong>A</strong>的ASCII码值是65，<strong>H</strong>存放在M单元中，求M单元中的二进制数</p>
+<p>H在26个字母的第八位，所以计算得M中存放的二进制值是<strong>0</strong>1001000（注意：一定要补一个0凑够八位）</p>
+<p><strong>按字节编址</strong>的意思是每一个地址对应着1B</p>
+<p>一个汉字占两个字节（2B）的大小</p>
+<h2 id="奇偶效验码"><a href="#奇偶效验码" class="headerlink" title="奇偶效验码"></a>奇偶效验码</h2><p>A的编码是00</p>
+<p>B的编码是01</p>
+<p>C的编码是10</p>
+<p>D的编码是11</p>
+<p>当然ABCD都是两个bit的。</p>
+<p><strong>位错误</strong>：0变1，1变0</p>
+<p>由若干位代码组成的一个字叫做<strong>码字</strong></p>
+<h3 id="码距"><a href="#码距" class="headerlink" title="码距"></a>码距</h3><p>将两个码字放在一起一个个字符的逐一进行对比，具有不同位的个数称为两个码字之间的距离，一种编码方案可能有若干个合法码字，各码字之间的<strong>最小距离</strong>称为<strong>码距</strong>。</p>
+<p>当码距=1时，无检错能力</p>
+<p>当码距=2时，具有检错能力</p>
+<p>当码距&gt;=3时，具有检错甚至纠错能力</p>
+<h3 id="奇效验码"><a href="#奇效验码" class="headerlink" title="奇效验码"></a>奇效验码</h3><p><strong>能发现奇数位错误</strong></p>
+<p>保证码中的“1”的个数是<strong>奇数</strong>个，如果是<strong>偶数</strong>，在前面添1；如果是<strong>奇数</strong>，在前面添0</p>
+<h3 id="偶效验码"><a href="#偶效验码" class="headerlink" title="偶效验码"></a>偶效验码</h3><p><strong>能发现偶数位错误</strong></p>
+<p>保证码中的“1”的个数是<strong>偶数</strong>个，如果是<strong>偶数</strong>，在前面添0；如果是<strong>奇数</strong>，在前面添1</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>在<strong>奇校验</strong>中有<strong>奇数个bit</strong>发生了错误是无法发现的</p>
+<p>在<strong>偶校验</strong>中有<strong>偶数个bit</strong>发生了错误是无法发现的</p>
+<h3 id="如何实现奇偶校验"><a href="#如何实现奇偶校验" class="headerlink" title="如何实现奇偶校验"></a>如何实现奇偶校验</h3><h4 id="先求校验码"><a href="#先求校验码" class="headerlink" title="先求校验码"></a>先求校验码</h4><p>将码中的每一bit都进行<strong>异或运算</strong>，返回值作为校验位</p>
+<p><strong>异或运算（模二加）：</strong>当两个值相同的时候返回0，当两个值不同的时候返回1</p>
+<h4 id="进行校验"><a href="#进行校验" class="headerlink" title="进行校验"></a>进行校验</h4><p>和求校验码很类似，对每个值都进行<strong>异或处理</strong>。如果结果为1说明出错了！</p>
+<h3 id="海明校验码"><a href="#海明校验码" class="headerlink" title="海明校验码"></a>海明校验码</h3><h4 id="海明码的设计思路"><a href="#海明码的设计思路" class="headerlink" title="海明码的设计思路"></a>海明码的设计思路</h4><p>将信息分组，对各组分别进行偶校验</p>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>设信息位有n位，校验位有k位，那么信息位+校验位一共有n+k位，校验位一共有2^k种状态。</p>
+<p>推出不等式：<strong>2^k&gt;=n+k+1</strong>（n是信息位是给出的，要求的只是k）</p>
+<h4 id="信息位"><a href="#信息位" class="headerlink" title="信息位"></a>信息位</h4><p>使用D加下标来表示，校验位用P加下标来表示。</p>
+<h4 id="校验位放什么位置"><a href="#校验位放什么位置" class="headerlink" title="校验位放什么位置"></a>校验位放什么位置</h4><p>校验位Pi应该放在2^(i-1)的位置上</p>
+<h4 id="求校验位的值"><a href="#求校验位的值" class="headerlink" title="求校验位的值"></a>求校验位的值</h4><p>(用D表示信息位，用P表示效验码位，用H表示所有位置，@代表异或，其实是圈里加号)</p>
+<p>先把信息位所处的位置用二进制方式表示出来，假设有三位，把第三位是1的数提出来进行异或运算（用来异或的值是信息位里面的值）</p>
+<p>P1 = D1 @ D2 @ D4</p>
+<p>P2 = D1 @ D3 @ D4</p>
+<p>P3 = D2 @ D3 @ D4</p>
+<h4 id="纠错"><a href="#纠错" class="headerlink" title="纠错"></a>纠错</h4><p>S1 = P1 @ D1 @ D2 @ D4</p>
+<p>S2 = P2 @ D1 @ D3 @ D4</p>
+<p>S3 = P3 @ D2 @ D3 @ D4</p>
+<p><strong>如果：S1，S2，S3中出现了1（假设在S2出现），那么就是010位置出现了错误</strong></p>
+<h4 id="海明码的能力"><a href="#海明码的能力" class="headerlink" title="海明码的能力"></a>海明码的能力</h4><p>海明码具有一个bit位的纠错能力和两个bit位的检错能力</p>
+<h4 id="全校验"><a href="#全校验" class="headerlink" title="全校验"></a>全校验</h4><p>S1S2S3=0 且全体偶校验成功，说明无错误！</p>
+<p>S1S2S3！=0且全体偶校验失败，说明有1处错误，纠正即可，纠正方法是上面的<strong>纠错</strong>部分</p>
+<p>S1S2S3！=0且全体偶校验成功，说明有两处错误，需要重新上传。</p>
+<h3 id="循环冗余校验码"><a href="#循环冗余校验码" class="headerlink" title="循环冗余校验码"></a>循环冗余校验码</h3><p><strong>循环冗余非常难，多看几次视频：<a href="https://www.bilibili.com/video/BV1BE411D7ii?p=13&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1BE411D7ii?p=13&amp;spm_id_from=pageDriver</a></strong></p>
+<p>定义：数据的发送方和接收方会先约定一个<strong>除数</strong>，当接收到数据后将要验证的数据除以除数，如果得到的数是0，那么这个数据是正确的，如果得到的数据不是0，那么这个数据是错误的。</p>
+<p>​            若是错误的，使用K个信息位加上R个校验位（R是生成多项式中的最高次幂），再进行除法，如果除数为0，说明OK；如果除数非0，说明有错误需要重新上传。</p>
+<h4 id="怎么求"><a href="#怎么求" class="headerlink" title="怎么求"></a>怎么求</h4><p>题目一般会给生成多项式G（G求出来的就是除数）出来，，例如G(x)=x^3 + x^2 +1，那么可以看成G(x)=1*x^3 + 1 *x^2 +0 * x^1 +1 *x^0,那么除数就是1101.（除数是早已经规定好的）</p>
+<p>在信息位后面补上r个0，，然后再与除数进行余二除。</p>
+<p><strong>余二除：从第一位开始看被除数的第一位如果是1那么商1，结果放原数，对后面的三位进行异或运算。。。得到的余数就是校验位，如果余数为000就是没错</strong></p>
+<h4 id="冗余校验码的检错能力的特点"><a href="#冗余校验码的检错能力的特点" class="headerlink" title="冗余校验码的检错能力的特点"></a>冗余校验码的检错能力的特点</h4><p>（1）可检测出所有奇数个错误</p>
+<p>（2）可检测出所有双bit的错误</p>
+<p>（3）可检测出所有小于等于校验位长度的连续错误</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>K位信息码，R位效验码，若生成多项式选择得当，2^R&gt;=K+R+1,则CRC码可纠一处错，因为(2^R)-1和K+R的所有位置元素是一一对应的！</p>
 ]]></content>
       <categories>
         <category>计组</category>
@@ -3266,114 +3420,6 @@
 <p><strong>响应时间：</strong>指用户向计算机发送一个请求，直到接收到回复为止的总时间</p>
 <h3 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h3><p><strong>主频高的CPU一定比主频低的CPU快吗？</strong></p>
 <p>答：不一定，具体还要看CPI（处理一条指令需要的用时）。就算CPI相等，也是不一定的，因为有一些CPU无法执行如乘法操作等复杂操作，那么只能用加法累加，那就复杂得多了</p>
-]]></content>
-      <categories>
-        <category>计组</category>
-      </categories>
-      <tags>
-        <tag>计组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机组成原理--数据的表示和运算</title>
-    <url>/2022/03/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/</url>
-    <content><![CDATA[<h2 id="进位计数制"><a href="#进位计数制" class="headerlink" title="进位计数制"></a>进位计数制</h2><h3 id="不同的进制"><a href="#不同的进制" class="headerlink" title="不同的进制"></a>不同的进制</h3><p>其实进制的实质就是<strong>逢X进一</strong>，如十进制就是逢十进一，八进制逢八进一。</p>
-<p>二进制：0，1</p>
-<p>八进制：0，1，2，3，4，5，6，7</p>
-<p>十进制：0，1，2，3，4，5，6，7，8，9</p>
-<p>十六进制：0，1，2，3，4，5，6，7，8，9，A，B，C，D，E，F</p>
-<h4 id="基数"><a href="#基数" class="headerlink" title="基数"></a>基数</h4><p>不同进制的基数不同，如<strong>r进制的基数就是r</strong>，十进制的基数就是十</p>
-<h4 id="不同进制的加法"><a href="#不同进制的加法" class="headerlink" title="不同进制的加法"></a>不同进制的加法</h4><h5 id="八进制加法"><a href="#八进制加法" class="headerlink" title="八进制加法"></a>八进制加法</h5><p>逢八进一，那么5.4+0.4 = 6.0</p>
-<h5 id="十六进制加法"><a href="#十六进制加法" class="headerlink" title="十六进制加法"></a>十六进制加法</h5><p>逢十六进一，那么5.8+1.8 = 7.0</p>
-<h3 id="十进制计数法"><a href="#十进制计数法" class="headerlink" title="十进制计数法"></a>十进制计数法</h3><p>古印度人发明了阿拉伯数字：1，2，3，4.……</p>
-<h4 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h4><p>例如在十进制数<strong>987</strong>中，9是百位，8是十位，7是个位。也即9*10^2 + 8 * 10^1 + 7 * 10^0这三个分别代表了不同的权重。</p>
-<h4 id="从其他进制转换到十进制"><a href="#从其他进制转换到十进制" class="headerlink" title="从其他进制转换到十进制"></a>从其他进制转换到十进制</h4><p><strong>如二进制数11011要转化成十进制的方式就是从第一位到最后一位分别成对应进制基数的0，1，2，3，4次方。</strong></p>
-<p>在这个例子里面就是 1乘二的0次方 + 1乘二的1次方 + 0乘二的2次方 + 1乘二的3次方 + 1乘二的4次方 = 27</p>
-<h4 id="从十进制转化成其他进制"><a href="#从十进制转化成其他进制" class="headerlink" title="从十进制转化成其他进制"></a>从十进制转化成其他进制</h4><h5 id="十进制转二进制"><a href="#十进制转二进制" class="headerlink" title="十进制转二进制"></a>十进制转二进制</h5><h6 id="整数位置"><a href="#整数位置" class="headerlink" title="整数位置"></a>整数位置</h6><p><strong>除基取余法</strong></p>
-<p>拿十进制的数除2，得到的余数就是二进制的数，直到除到商为0为止，先得到的余数是低位的，后得到的余数是高位的。</p>
-<h6 id="小数位置"><a href="#小数位置" class="headerlink" title="小数位置"></a>小数位置</h6><p><strong>乘基取整法</strong></p>
-<p>拿十进制的小数部分乘2，看乘二之后的整数部分是不是1，是1的话该位的二进制就是1，否则是0。有一些十进制的小数位取不完（如0.3），遇到这种情况就取小数点的后五位</p>
-<h5 id="十进制转八进制和十六进制"><a href="#十进制转八进制和十六进制" class="headerlink" title="十进制转八进制和十六进制"></a>十进制转八进制和十六进制</h5><p>先把十进制转化成为二进制，再把二进制转化成为八进制和十六进制</p>
-<h3 id="二进制转八进制和十六进制"><a href="#二进制转八进制和十六进制" class="headerlink" title="二进制转八进制和十六进制"></a>二进制转八进制和十六进制</h3><h4 id="二进制转八进制"><a href="#二进制转八进制" class="headerlink" title="二进制转八进制"></a>二进制转八进制</h4><p>二进制中的数每三个分成一组，每组对应转换成八进制的数字（0~7）即可，如二进制数100111011001可以分成这样：100<strong>111</strong>011<strong>001</strong>,然后分别看，001转化成八进制是1，011转化成八进制是3，111转化成八进制是7，100转化成八进制是4，所以这个二进制数转化成八进制实际上是4731.</p>
-<p><strong>注意：位数不够的在前面或者后面补0</strong></p>
-<h4 id="二进制转十六进制"><a href="#二进制转十六进制" class="headerlink" title="二进制转十六进制"></a>二进制转十六进制</h4><p>把二进制数看成四个一组即可，要注意的是十六进制中，ABCDEF分别表示10，11，12，13，14，15</p>
-<h4 id="八进制转二进制"><a href="#八进制转二进制" class="headerlink" title="八进制转二进制"></a>八进制转二进制</h4><p>把八进制中<strong>每一个</strong>数都转化成为<strong>三个</strong>二进制数即可</p>
-<h3 id="如何区别不同进制"><a href="#如何区别不同进制" class="headerlink" title="如何区别不同进制"></a>如何区别不同进制</h3><p>一般会在右下角有角标，如八进制会在右下角有八的角标</p>
-<p>如果没有角标的情况下，会在数字的后面加上对应的字母以便区分，二进制的字母是B，十进制的字母是D，十六进制的字母是H。</p>
-<h3 id="真值和机器数"><a href="#真值和机器数" class="headerlink" title="真值和机器数"></a>真值和机器数</h3><p>在计算机中如何表示正负号，通常用0代表负号，用1代表正号。如5436这是个真值，为了表示他是正数，用<strong>1</strong>5436表示他是个正数，15436就是个机器数。在后面的原码，反码，补码，移码中会具体说明。</p>
-<h2 id="BCD码"><a href="#BCD码" class="headerlink" title="BCD码"></a>BCD码</h2><h3 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h3><p>使用二进制来编码的十进制数</p>
-<p>每<strong>四个二进制码（4bit）（一共对应了2^4=16种状态）对应这十进制中的0~9</strong>，那么明显有六种是冗余的</p>
-<h3 id="8421码"><a href="#8421码" class="headerlink" title="8421码"></a>8421码</h3><p>8421码种规定了0~9的二进制状态</p>
-<p><strong>9：1001</strong></p>
-<p><strong>8：1000</strong></p>
-<p><strong>7：0111</strong></p>
-<p><strong>6：0110</strong></p>
-<p><strong>5：0101</strong></p>
-<p><strong>4：0100</strong></p>
-<p><strong>3：0011</strong></p>
-<p><strong>2：0010</strong></p>
-<p><strong>1：0001</strong></p>
-<p><strong>0：0000</strong></p>
-<p>要记熟8421码，考试容易碰到</p>
-<h4 id="8421码中数之间的相加"><a href="#8421码中数之间的相加" class="headerlink" title="8421码中数之间的相加"></a>8421码中数之间的相加</h4><p>可以用二进制直接加（记住逢二进一就可以了），也可以用十进制加好之后再转化成二进制数。</p>
-<p><strong>Q：那么这里有个问题是相加得到的数大于9，不在8421码当中怎么办？</strong></p>
-<p><strong>A：通常把这个大于9的数再加上6即可得到两位数的表示方法</strong></p>
-<h3 id="余3码"><a href="#余3码" class="headerlink" title="余3码"></a>余3码</h3><p>在8421码表示的数值中每一个都加上一个二进制的0011，得到的就是余3码。</p>
-<h3 id="2421码"><a href="#2421码" class="headerlink" title="2421码"></a>2421码</h3><p>与8421码很类似，只是2421码对应的权值分别是2421.</p>
-<p>2421码在0~4的时候前两位的值是0</p>
-<h2 id="字符和字符串"><a href="#字符和字符串" class="headerlink" title="字符和字符串"></a>字符和字符串</h2><h3 id="ASCII码"><a href="#ASCII码" class="headerlink" title="ASCII码"></a>ASCII码</h3><p>在ASCII码中一共有128个字符，而2的7次方正好等于128，所以我们只需要7位二进制的编码就可以表示ASCII码中的数字符号字母，但是计算机为了凑够一个字节，通常使用8个bit来表示，这样正好凑够了一个字节（Byte）</p>
-<h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>已知<strong>A</strong>的ASCII码值是65，<strong>H</strong>存放在M单元中，求M单元中的二进制数</p>
-<p>H在26个字母的第八位，所以计算得M中存放的二进制值是<strong>0</strong>1001000（注意：一定要补一个0凑够八位）</p>
-<p><strong>按字节编址</strong>的意思是每一个地址对应着1B</p>
-<p>一个汉字占两个字节（2B）的大小</p>
-<h2 id="奇偶效验码"><a href="#奇偶效验码" class="headerlink" title="奇偶效验码"></a>奇偶效验码</h2><p>A的编码是00</p>
-<p>B的编码是01</p>
-<p>C的编码是10</p>
-<p>D的编码是11</p>
-<p>当然ABCD都是两个bit的。</p>
-<p><strong>位错误</strong>：0变1，1变0</p>
-<p>由若干位代码组成的一个字叫做<strong>码字</strong></p>
-<h3 id="码距"><a href="#码距" class="headerlink" title="码距"></a>码距</h3><p>将两个码字放在一起一个个字符的逐一进行对比，具有不同位的个数称为两个码字之间的距离，一种编码方案可能有若干个合法码字，各码字之间的<strong>最小距离</strong>称为<strong>码距</strong>。</p>
-<p>当码距=1时，无检错能力</p>
-<p>当码距=2时，具有检错能力</p>
-<p>当码距&gt;=3时，具有检错甚至纠错能力</p>
-<h3 id="奇效验码"><a href="#奇效验码" class="headerlink" title="奇效验码"></a>奇效验码</h3><p><strong>能发现奇数位错误</strong></p>
-<p>保证码中的“1”的个数是<strong>奇数</strong>个，如果是<strong>偶数</strong>，在前面添1；如果是<strong>奇数</strong>，在前面添0</p>
-<h3 id="偶效验码"><a href="#偶效验码" class="headerlink" title="偶效验码"></a>偶效验码</h3><p><strong>能发现偶数位错误</strong></p>
-<p>保证码中的“1”的个数是<strong>偶数</strong>个，如果是<strong>偶数</strong>，在前面添0；如果是<strong>奇数</strong>，在前面添1</p>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>在<strong>奇校验</strong>中有<strong>奇数个bit</strong>发生了错误是无法发现的</p>
-<p>在<strong>偶校验</strong>中有<strong>偶数个bit</strong>发生了错误是无法发现的</p>
-<h3 id="如何实现奇偶校验"><a href="#如何实现奇偶校验" class="headerlink" title="如何实现奇偶校验"></a>如何实现奇偶校验</h3><h4 id="先求校验码"><a href="#先求校验码" class="headerlink" title="先求校验码"></a>先求校验码</h4><p>将码中的每一bit都进行<strong>异或运算</strong>，返回值作为校验位</p>
-<p><strong>异或运算（模二加）：</strong>当两个值相同的时候返回0，当两个值不同的时候返回1</p>
-<h4 id="进行校验"><a href="#进行校验" class="headerlink" title="进行校验"></a>进行校验</h4><p>和求校验码很类似，对每个值都进行<strong>异或处理</strong>。如果结果为1说明出错了！</p>
-<h3 id="海明校验码"><a href="#海明校验码" class="headerlink" title="海明校验码"></a>海明校验码</h3><h4 id="海明码的设计思路"><a href="#海明码的设计思路" class="headerlink" title="海明码的设计思路"></a>海明码的设计思路</h4><p>将信息分组，对各组分别进行偶校验</p>
-<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>设信息位有n位，校验位有k位，那么信息位+校验位一共有n+k位，校验位一共有2^k种状态。</p>
-<p>推出不等式：<strong>2^k&gt;=n+k+1</strong>（n是信息位是给出的，要求的只是k）</p>
-<h4 id="信息位"><a href="#信息位" class="headerlink" title="信息位"></a>信息位</h4><p>使用D加下标来表示，校验位用P加下标来表示。</p>
-<h4 id="校验位放什么位置"><a href="#校验位放什么位置" class="headerlink" title="校验位放什么位置"></a>校验位放什么位置</h4><p>校验位Pi应该放在2^(i-1)的位置上</p>
-<h4 id="求校验位的值"><a href="#求校验位的值" class="headerlink" title="求校验位的值"></a>求校验位的值</h4><p>(用D表示信息位，用P表示效验码位，用H表示所有位置，@代表异或，其实是圈里加号)</p>
-<p>先把信息位所处的位置用二进制方式表示出来，假设有三位，把第三位是1的数提出来进行异或运算（用来异或的值是信息位里面的值）</p>
-<p>P1 = D1 @ D2 @ D4</p>
-<p>P2 = D1 @ D3 @ D4</p>
-<p>P3 = D2 @ D3 @ D4</p>
-<h4 id="纠错"><a href="#纠错" class="headerlink" title="纠错"></a>纠错</h4><p>S1 = P1 @ D1 @ D2 @ D4</p>
-<p>S2 = P2 @ D1 @ D3 @ D4</p>
-<p>S3 = P3 @ D2 @ D3 @ D4</p>
-<p><strong>如果：S1，S2，S3中出现了1（假设在S2出现），那么就是010位置出现了错误</strong></p>
-<h4 id="海明码的能力"><a href="#海明码的能力" class="headerlink" title="海明码的能力"></a>海明码的能力</h4><p>海明码具有一个bit位的纠错能力和两个bit位的检错能力</p>
-<h4 id="全校验"><a href="#全校验" class="headerlink" title="全校验"></a>全校验</h4><p>S1S2S3=0 且全体偶校验成功，说明无错误！</p>
-<p>S1S2S3！=0且全体偶校验失败，说明有1处错误，纠正即可，纠正方法是上面的<strong>纠错</strong>部分</p>
-<p>S1S2S3！=0且全体偶校验成功，说明有两处错误，需要重新上传。</p>
-<h3 id="循环冗余校验码"><a href="#循环冗余校验码" class="headerlink" title="循环冗余校验码"></a>循环冗余校验码</h3><p><strong>循环冗余非常难，多看几次视频：<a href="https://www.bilibili.com/video/BV1BE411D7ii?p=13&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1BE411D7ii?p=13&amp;spm_id_from=pageDriver</a></strong></p>
-<p>定义：数据的发送方和接收方会先约定一个<strong>除数</strong>，当接收到数据后将要验证的数据除以除数，如果得到的数是0，那么这个数据是正确的，如果得到的数据不是0，那么这个数据是错误的。</p>
-<p>​            若是错误的，使用K个信息位加上R个校验位（R是生成多项式中的最高次幂），再进行除法，如果除数为0，说明OK；如果除数非0，说明有错误需要重新上传。</p>
-<h4 id="怎么求"><a href="#怎么求" class="headerlink" title="怎么求"></a>怎么求</h4><p>题目一般会给生成多项式G（G求出来的就是除数）出来，，例如G(x)=x^3 + x^2 +1，那么可以看成G(x)=1*x^3 + 1 *x^2 +0 * x^1 +1 *x^0,那么除数就是1101.（除数是早已经规定好的）</p>
-<p>在信息位后面补上r个0，，然后再与除数进行余二除。</p>
-<p><strong>余二除：从第一位开始看被除数的第一位如果是1那么商1，结果放原数，对后面的三位进行异或运算。。。得到的余数就是校验位，如果余数为000就是没错</strong></p>
-<h4 id="冗余校验码的检错能力的特点"><a href="#冗余校验码的检错能力的特点" class="headerlink" title="冗余校验码的检错能力的特点"></a>冗余校验码的检错能力的特点</h4><p>（1）可检测出所有奇数个错误</p>
-<p>（2）可检测出所有双bit的错误</p>
-<p>（3）可检测出所有小于等于校验位长度的连续错误</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>K位信息码，R位效验码，若生成多项式选择得当，2^R&gt;=K+R+1,则CRC码可纠一处错，因为(2^R)-1和K+R的所有位置元素是一一对应的！</p>
 ]]></content>
       <categories>
         <category>计组</category>
