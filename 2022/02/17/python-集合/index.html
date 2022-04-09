@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hexo.denggaozheng.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="一些集合的基本操作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python--集合">
+<meta property="og:url" content="http://hexo.denggaozheng.top/2022/02/17/python-%E9%9B%86%E5%90%88/index.html">
+<meta property="og:site_name" content="Denggaozheng&#96;s blog">
+<meta property="og:description" content="一些集合的基本操作">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-02-17T09:56:20.000Z">
+<meta property="article:modified_time" content="2022-02-20T03:12:36.814Z">
+<meta property="article:author" content="邓高正">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://hexo.denggaozheng.top/2022/02/17/python-%E9%9B%86%E5%90%88/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>python--集合 | Denggaozheng`s blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Denggaozheng`s blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://hexo.denggaozheng.top/2022/02/17/python-%E9%9B%86%E5%90%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="邓高正">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Denggaozheng`s blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          python--集合
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-02-17 17:56:20" itemprop="dateCreated datePublished" datetime="2022-02-17T17:56:20+08:00">2022-02-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-20 11:12:36" itemprop="dateModified" datetime="2022-02-20T11:12:36+08:00">2022-02-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="一些集合的基本操作"><a href="#一些集合的基本操作" class="headerlink" title="一些集合的基本操作"></a>一些集合的基本操作</h1><span id="more"></span>
+
+<h2 id="set-的集合表示方法"><a href="#set-的集合表示方法" class="headerlink" title="set()的集合表示方法"></a>set()的集合表示方法</h2><h3 id="创建集合"><a href="#创建集合" class="headerlink" title="创建集合"></a>创建集合</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#可以用&#123;&#125;或者set函数创建集合</span></span><br><span class="line"><span class="built_in">type</span>(&#123;<span class="string">&quot;Deng&quot;</span>&#125;) <span class="comment">#class=&quot;set&quot;</span></span><br><span class="line">s = <span class="built_in">set</span>(<span class="string">&quot;Deng&quot;</span>) <span class="comment">#class=&quot;set&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="集合的无序性"><a href="#集合的无序性" class="headerlink" title="集合的无序性"></a>集合的无序性</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建一个集合并且按字符输出可以发现集合是无序的！</span></span><br><span class="line">s = <span class="built_in">set</span>(<span class="string">&quot;Deng&quot;</span>)</span><br><span class="line">D <span class="keyword">in</span> s <span class="comment">#True</span></span><br><span class="line">d <span class="keyword">not</span> <span class="keyword">in</span> s <span class="comment">#True</span></span><br><span class="line"><span class="keyword">for</span> each <span class="keyword">in</span> s:</span><br><span class="line">    <span class="built_in">print</span>(each) <span class="comment"># n e D g 我们可以发现输出的结果是无序的，证明了集合的无序性！</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="集合会自动去重"><a href="#集合会自动去重" class="headerlink" title="集合会自动去重"></a>集合会自动去重</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">set</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">4</span>])) <span class="comment">#[1,2,3,4]就把多出来的3和4去掉了！</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="判断两个集合之间是否有关系"><a href="#判断两个集合之间是否有关系" class="headerlink" title="判断两个集合之间是否有关系"></a>判断两个集合之间是否有关系</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#先创建第一个集合</span></span><br><span class="line">D = <span class="built_in">set</span>(<span class="string">&quot;Deng&quot;</span>)</span><br><span class="line"><span class="comment">#使用isdisjoint方法判断两个集合之间是否有关系，具体如下</span></span><br><span class="line">s.isdisjoint(<span class="built_in">set</span>(<span class="string">&quot;python&quot;</span>)) <span class="comment">#False代表两个集合之间是有相关的！判断的依据是两个集合之间有相关的元素重合，那么可见有n重合，所以两个集合之间是有相关的及false</span></span><br><span class="line"><span class="comment">#再判断JAVA</span></span><br><span class="line">s.isdisjoint(<span class="built_in">set</span>(<span class="string">&quot;JAVA&quot;</span>)) <span class="comment">#True代表两个集合无关</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="检测两个集合是否有子集关系"><a href="#检测两个集合是否有子集关系" class="headerlink" title="检测两个集合是否有子集关系"></a>检测两个集合是否有子集关系</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用issubset方法，判断前面是否为后面的子集！</span></span><br><span class="line">s = <span class="built_in">set</span>(<span class="string">&quot;Deng&quot;</span>)</span><br><span class="line"><span class="comment">#判断s是否为后面的子集</span></span><br><span class="line">s.issubset(<span class="built_in">set</span>(<span class="string">&quot;DengGaozheng&quot;</span>)) <span class="comment">#True说明s正是DengGaozheng的子集！</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="检测两个集合是否有超集关系"><a href="#检测两个集合是否有超集关系" class="headerlink" title="检测两个集合是否有超集关系"></a>检测两个集合是否有超集关系</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#用issuperset对于A和B来说，A中所有元素都在B中有出现，那么说明B是A的超集！</span></span><br><span class="line">A = <span class="built_in">set</span>(<span class="string">&quot;Deng&quot;</span>)</span><br><span class="line">B = <span class="built_in">set</span>(<span class="string">&quot;DengGaozheng&quot;</span>)</span><br><span class="line">B.issuperset(A) <span class="comment">#True说明B是A的超集！</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="两个集合之间使用交集"><a href="#两个集合之间使用交集" class="headerlink" title="两个集合之间使用交集"></a>两个集合之间使用交集</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#intersection方法</span></span><br><span class="line">s = <span class="built_in">set</span>(<span class="string">&quot;Deng&quot;</span>)</span><br><span class="line">s.intersection(<span class="string">&quot;De&quot;</span>) <span class="comment">#&quot;De&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="两个集合之间使用并集"><a href="#两个集合之间使用并集" class="headerlink" title="两个集合之间使用并集"></a>两个集合之间使用并集</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#union方法</span></span><br><span class="line">s = <span class="built_in">set</span>(<span class="string">&quot;Deng&quot;</span>)</span><br><span class="line">s.union(<span class="built_in">set</span>(<span class="string">&quot;Gaozheng&quot;</span>)) <span class="comment">#&quot;DengGaozheng&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="两个集合之间使用差集"><a href="#两个集合之间使用差集" class="headerlink" title="两个集合之间使用差集"></a>两个集合之间使用差集</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#difference方法，差集即存在于一个集合而不存在于另一个集合的元素</span></span><br><span class="line">s = <span class="built_in">set</span>(<span class="string">&quot;DengGao&quot;</span>)</span><br><span class="line">s.difference(<span class="string">&quot;Deng&quot;</span>) <span class="comment">#&quot;Gao&quot;存在于s中而不存在于&quot;Deng&quot;中</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="管道符"><a href="#管道符" class="headerlink" title="管道符"></a>管道符</h3><p>| 管道符的作用是 把 管道符左边的的输出 当做右边命令后面待处理的结果。相当于并集的作用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">&quot;Deng&quot;</span></span><br><span class="line">s | <span class="string">&quot;Gao&quot;</span> | <span class="built_in">set</span>(<span class="string">&quot;zheng&quot;</span>) <span class="comment">#这串代码相当于s并&quot;Gao&quot;并set(&quot;zheng&quot;)，结果是&quot;DengGaozheng&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="专属于set的方法"><a href="#专属于set的方法" class="headerlink" title="专属于set的方法"></a>专属于set的方法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#update()用来在set创建的集合里面更新元素</span></span><br><span class="line">s = <span class="built_in">set</span>(<span class="string">&quot;Deng&quot;</span>)</span><br><span class="line">s.update(<span class="string">&quot;Gao&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(s) <span class="comment">#[&quot;Deng&quot;,&quot;G&quot;,&quot;a&quot;,&quot;o&quot;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#add()用于添加元素</span></span><br><span class="line">s = <span class="built_in">set</span>(<span class="string">&quot;Deng&quot;</span>)</span><br><span class="line">s.add(<span class="string">&quot;Gao&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(s) <span class="comment">#&quot;DengGao&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#update和add都可以添加元素，但是区别在于update添加字符串时添加的是单个字符，add添加字符串时添加的是字符串。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#用remove方法删除集合中的元素,如果删除了不存在的元素，那么会抛出异常</span></span><br><span class="line">s = [<span class="string">&#x27;D&#x27;</span>,<span class="string">&#x27;e&#x27;</span>,<span class="string">&#x27;n&#x27;</span>,<span class="string">&#x27;g&#x27;</span>]</span><br><span class="line">s.remove(<span class="string">&quot;D&quot;</span>) <span class="comment">#[&#x27;e&#x27;,&#x27;n&#x27;,&#x27;g&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#pop方法用于随机从集合中弹出一个元素(有点出栈的感觉)</span></span><br><span class="line">s = [<span class="string">&#x27;D&#x27;</span>,<span class="string">&#x27;e&#x27;</span>,<span class="string">&#x27;n&#x27;</span>,<span class="string">&#x27;g&#x27;</span>]</span><br><span class="line">s.pop() <span class="comment">#&#x27;e&#x27;</span></span><br><span class="line">s.pop() <span class="comment">#&#x27;g&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="frozenset-的集合表示方法"><a href="#frozenset-的集合表示方法" class="headerlink" title="frozenset()的集合表示方法"></a>frozenset()的集合表示方法</h2><h3 id="创建frozenset集合"><a href="#创建frozenset集合" class="headerlink" title="创建frozenset集合"></a>创建frozenset集合</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建frozenset集合</span></span><br><span class="line">s = <span class="built_in">frozenset</span>(<span class="string">&quot;Deng&quot;</span>)</span><br><span class="line"><span class="built_in">type</span>(s) <span class="comment">#class = frozenset</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="可哈希"><a href="#可哈希" class="headerlink" title="可哈希"></a>可哈希</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#整数哈希值：对于整数来说，哈希值永远等于自身的值</span></span><br><span class="line"><span class="built_in">hash</span>(<span class="number">1</span>) <span class="comment">#1</span></span><br><span class="line"><span class="built_in">hash</span>(<span class="number">1.0</span>) <span class="comment">#1.0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#列表是不可哈希的</span></span><br><span class="line"><span class="built_in">hash</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]) <span class="comment">#error!</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#哈希配合frozenset可以实现嵌套的集合，这在set里面是实现不了的！</span></span><br><span class="line">x = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br><span class="line">x = <span class="built_in">frozenset</span>(x)</span><br><span class="line">y = &#123;x,<span class="number">4</span>,<span class="number">5</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(y)  <span class="comment">#&#123;forzenset(&#123;1,2,3&#125;),4,5&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/02/16/python-%E5%AD%97%E5%85%B8/" rel="prev" title="python--字典">
+      <i class="fa fa-chevron-left"></i> python--字典
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/02/19/python-%E5%87%BD%E6%95%B0/" rel="next" title="python--函数">
+      python--函数 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E9%9B%86%E5%90%88%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">一些集合的基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#set-%E7%9A%84%E9%9B%86%E5%90%88%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">set()的集合表示方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%9B%86%E5%90%88"><span class="nav-number">1.1.1.</span> <span class="nav-text">创建集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E7%9A%84%E6%97%A0%E5%BA%8F%E6%80%A7"><span class="nav-number">1.1.2.</span> <span class="nav-text">集合的无序性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E4%BC%9A%E8%87%AA%E5%8A%A8%E5%8E%BB%E9%87%8D"><span class="nav-number">1.1.3.</span> <span class="nav-text">集合会自动去重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E4%B8%A4%E4%B8%AA%E9%9B%86%E5%90%88%E4%B9%8B%E9%97%B4%E6%98%AF%E5%90%A6%E6%9C%89%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.4.</span> <span class="nav-text">判断两个集合之间是否有关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E4%B8%A4%E4%B8%AA%E9%9B%86%E5%90%88%E6%98%AF%E5%90%A6%E6%9C%89%E5%AD%90%E9%9B%86%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.5.</span> <span class="nav-text">检测两个集合是否有子集关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E4%B8%A4%E4%B8%AA%E9%9B%86%E5%90%88%E6%98%AF%E5%90%A6%E6%9C%89%E8%B6%85%E9%9B%86%E5%85%B3%E7%B3%BB"><span class="nav-number">1.1.6.</span> <span class="nav-text">检测两个集合是否有超集关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E4%B8%AA%E9%9B%86%E5%90%88%E4%B9%8B%E9%97%B4%E4%BD%BF%E7%94%A8%E4%BA%A4%E9%9B%86"><span class="nav-number">1.1.7.</span> <span class="nav-text">两个集合之间使用交集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E4%B8%AA%E9%9B%86%E5%90%88%E4%B9%8B%E9%97%B4%E4%BD%BF%E7%94%A8%E5%B9%B6%E9%9B%86"><span class="nav-number">1.1.8.</span> <span class="nav-text">两个集合之间使用并集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E4%B8%AA%E9%9B%86%E5%90%88%E4%B9%8B%E9%97%B4%E4%BD%BF%E7%94%A8%E5%B7%AE%E9%9B%86"><span class="nav-number">1.1.9.</span> <span class="nav-text">两个集合之间使用差集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%A1%E9%81%93%E7%AC%A6"><span class="nav-number">1.1.10.</span> <span class="nav-text">管道符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%93%E5%B1%9E%E4%BA%8Eset%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.11.</span> <span class="nav-text">专属于set的方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#frozenset-%E7%9A%84%E9%9B%86%E5%90%88%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">frozenset()的集合表示方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BAfrozenset%E9%9B%86%E5%90%88"><span class="nav-number">1.2.1.</span> <span class="nav-text">创建frozenset集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E5%93%88%E5%B8%8C"><span class="nav-number">1.2.2.</span> <span class="nav-text">可哈希</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">邓高正</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">邓高正</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">77k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:10</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>
