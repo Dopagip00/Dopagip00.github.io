@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://hexo.denggaozheng.top">
-  <title>将web内容上传服务器 | Denggaozheng`s blog</title>
+  <title>机器学习--决策树 | Denggaozheng`s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="先上总结1.先用原始服务器的实例创建一个ubuntu镜像，记住镜像的账号（root）和密码。2.先使用cmd进行root连接：（ssh &amp;#114;&amp;#111;&amp;#x6f;&amp;#x74;&amp;#x40;&amp;#49;&amp;#x32;&amp;#48;&amp;#x2e;&amp;#55;&amp;#55;&amp;#46;&amp;#x31;&amp;#x37;&amp;#46;&amp;#50;&amp;#49;&amp;#54;）当然使用putty或者Xshell同样可以3.使用Xftp7上传">
+  <meta name="description" content="节点父节点和子节点是相对的，子节点的上边是父节点，父节点的下面是子节点 根节点：没有父节点的节点叫做根节点，即初始节点 叶子节点：没有子节点的节点叫做叶子节点，即最终节点 决策树可以做分类分析（分类决策树模型），也可以做回归分析（回归决策树模型） 分类决策树模型123456from sklearn.tree import DecisionTreeClassifierX &#x3D; [[1,2],[3,4]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="将web内容上传服务器">
-<meta property="og:url" content="http://hexo.denggaozheng.top/2022/06/03/%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
+<meta property="og:title" content="机器学习--决策树">
+<meta property="og:url" content="http://hexo.denggaozheng.top/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/index.html">
 <meta property="og:site_name" content="Denggaozheng&#96;s blog">
-<meta property="og:description" content="先上总结1.先用原始服务器的实例创建一个ubuntu镜像，记住镜像的账号（root）和密码。2.先使用cmd进行root连接：（ssh &amp;#114;&amp;#111;&amp;#x6f;&amp;#x74;&amp;#x40;&amp;#49;&amp;#x32;&amp;#48;&amp;#x2e;&amp;#55;&amp;#55;&amp;#46;&amp;#x31;&amp;#x37;&amp;#46;&amp;#50;&amp;#49;&amp;#54;）当然使用putty或者Xshell同样可以3.使用Xftp7上传">
+<meta property="og:description" content="节点父节点和子节点是相对的，子节点的上边是父节点，父节点的下面是子节点 根节点：没有父节点的节点叫做根节点，即初始节点 叶子节点：没有子节点的节点叫做叶子节点，即最终节点 决策树可以做分类分析（分类决策树模型），也可以做回归分析（回归决策树模型） 分类决策树模型123456from sklearn.tree import DecisionTreeClassifierX &#x3D; [[1,2],[3,4]">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-06-03T13:07:33.000Z">
-<meta property="article:modified_time" content="2022-06-03T13:20:38.991Z">
+<meta property="article:published_time" content="2022-06-06T12:13:09.000Z">
+<meta property="article:modified_time" content="2022-06-06T15:15:25.050Z">
 <meta property="article:author" content="邓高正">
-<meta property="article:tag" content="web">
+<meta property="article:tag" content="机器学习">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Denggaozheng`s blog" type="application/atom+xml">
@@ -63,7 +63,7 @@
 			</ul>
 		</nav>
 		<nav>
-    总文章数 74
+    总文章数 78
 </nav>
 		<nav class="header-smart-menu">
     		
@@ -158,20 +158,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-将web内容上传服务器" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-机器学习-决策树" class="article article-type-post " itemscope itemprop="blogPost">
 <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      将web内容上传服务器
+      机器学习--决策树
     </h1>
   
 
         
-        <a href="/2022/06/03/%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2022-06-03T13:07:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-03</time>
+        <a href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/" class="archive-article-date">
+  	<time datetime="2022-06-06T12:13:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-06</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -182,11 +182,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="先上总结"><a href="#先上总结" class="headerlink" title="先上总结"></a>先上总结</h4><p>1.先用原始服务器的实例创建一个ubuntu镜像，记住镜像的账号（root）和密码。<br>2.先使用cmd进行root连接：（ssh <a href="mailto:&#114;&#111;&#x6f;&#x74;&#x40;&#49;&#x32;&#48;&#x2e;&#55;&#55;&#46;&#x31;&#x37;&#46;&#50;&#49;&#54;">&#114;&#111;&#x6f;&#x74;&#x40;&#49;&#x32;&#48;&#x2e;&#55;&#55;&#46;&#x31;&#x37;&#46;&#50;&#49;&#54;</a>）当然使用putty或者Xshell同样可以<br>3.使用Xftp7上传对应的web网页到服务器对应的目录中，目录为var\www\html（其中的var目录是和root同级目录）<br>4.上传之后，在浏览器中使用公网的ip即可看到网页。<br>试了一天TT</p>
-<span id="more"></span>
+        <h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>父节点和子节点是相对的，子节点的上边是父节点，父节点的下面是子节点</p>
+<p>根节点：没有父节点的节点叫做根节点，即初始节点</p>
+<p>叶子节点：没有子节点的节点叫做叶子节点，即最终节点</p>
+<h3 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h3><p>可以做<strong>分类分析（分类决策树模型）</strong>，也可以做<strong>回归分析（回归决策树模型）</strong></p>
+<h4 id="分类决策树模型"><a href="#分类决策树模型" class="headerlink" title="分类决策树模型"></a>分类决策树模型</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]<span class="comment">#共有5个训练集，每个训练集有2个特征</span></span><br><span class="line">y = [<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]<span class="comment">#这是因变量，分类为1和0</span></span><br><span class="line">model = DecisionTreeClassifier(random_state=<span class="number">0</span>)<span class="comment">#引入模型并设置随即状态为0，0只是保证运行结果一致</span></span><br><span class="line">model.fit(X,y)<span class="comment">#使用fit训练</span></span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))<span class="comment">#使用predict预测</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="参考视频，资料"><a href="#参考视频，资料" class="headerlink" title="参考视频，资料"></a>参考视频，资料</h4><p>b站视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click</a></p>
-<p>博客园日志：<a target="_blank" rel="noopener" href="http://t.zoukankan.com/chrischen98-p-10874821.html%EF%BC%88%E4%B8%8A%E5%8D%88%E4%B8%80%E7%9B%B4%E7%9C%8B%E8%BF%99%E4%B8%AA%EF%BC%8C%E4%BD%86%E6%98%AF%E7%94%A8%E4%BA%86iis%E4%B9%8B%E5%90%8E%E7%BD%91%E9%A1%B5%E4%B8%80%E7%9B%B4%E4%B8%8D%E6%98%BE%E7%A4%BA,%E8%AE%BE%E7%BD%AE%E5%95%A5%E7%AB%AF%E5%8F%A3%E9%83%BD%E6%B2%A1%E7%94%A8%EF%BC%89">http://t.zoukankan.com/chrischen98-p-10874821.html（上午一直看这个，但是用了iis之后网页一直不显示,设置啥端口都没用）</a></p>
+<h4 id="回归决策树模型"><a href="#回归决策树模型" class="headerlink" title="回归决策树模型"></a>回归决策树模型</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = DecisionTreeRegressor(max_depth=<span class="number">2</span>,random_state=<span class="number">0</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">9</span>,<span class="number">9</span>]]))</span><br></pre></td></tr></table></figure>
+
+<h3 id="总体决策树模型搭建"><a href="#总体决策树模型搭建" class="headerlink" title="总体决策树模型搭建"></a>总体决策树模型搭建</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1.数据读取与预处理</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;XX.xlsx&#x27;</span>)</span><br><span class="line">df = df.replace(&#123;<span class="string">&#x27;工资&#x27;</span>:&#123;<span class="string">&#x27;低&#x27;</span>:<span class="number">0</span>,<span class="string">&#x27;中&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;高&#x27;</span>:<span class="number">2</span>&#125;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">#2.提取特征变量和目标变量</span></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;离职&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;离职&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#3.划分训练集和测试集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#4.训练模型及搭建</span></span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line">model = DecisionTreeClassifier(max_depth=<span class="number">3</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X_train,y_train)</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -231,7 +236,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
         		</li>
       		
 		</ul>
@@ -243,7 +248,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/web//" class="article-tag-list-link color4">web</a>
+        			<a href="/categories/机器学习//" class="article-tag-list-link color5">机器学习</a>
         		</li>
       		
 		</ul>
@@ -261,18 +266,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          NFT--MetaMask的创建
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/04/14/html-%E5%9F%BA%E7%A1%80/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">html -- 基础</div>
+    <a href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">机器学习--逻辑回归</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -299,7 +295,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%88%E4%B8%8A%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">先上总结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%A7%86%E9%A2%91%EF%BC%8C%E8%B5%84%E6%96%99"><span class="toc-number">2.</span> <span class="toc-text">参考视频，资料</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%82%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-number">2.</span> <span class="toc-text">决策树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%E5%86%B3%E7%AD%96%E6%A0%91%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.1.</span> <span class="toc-text">分类决策树模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9E%E5%BD%92%E5%86%B3%E7%AD%96%E6%A0%91%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.2.</span> <span class="toc-text">回归决策树模型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E4%BD%93%E5%86%B3%E7%AD%96%E6%A0%91%E6%A8%A1%E5%9E%8B%E6%90%AD%E5%BB%BA"><span class="toc-number">3.</span> <span class="toc-text">总体决策树模型搭建</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -325,7 +321,7 @@
 <center><p>
   
     <h1 class="article-title_code_ant" itemprop="name">
-      将web内容上传服务器
+      机器学习--决策树
     </h1>
   
 </p></center>
@@ -456,11 +452,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -468,11 +464,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数值分析</a>
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">web</a>
+                <a href="javascript:void(0)" class="js-tag color5">数值分析</a>
               </li>
              
               <li class="article-tag-list-item">

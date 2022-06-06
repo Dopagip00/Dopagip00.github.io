@@ -16,7 +16,7 @@
 <meta property="og:description" content="学习numpy库的主要目的是为了后面学习pandas库打下基础">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-05T03:29:32.000Z">
-<meta property="article:modified_time" content="2022-03-08T12:02:52.661Z">
+<meta property="article:modified_time" content="2022-06-05T12:13:00.843Z">
 <meta property="article:author" content="邓高正">
 <meta property="article:tag" content="machine leaning">
 <meta name="twitter:card" content="summary">
@@ -63,7 +63,7 @@
 			</ul>
 		</nav>
 		<nav>
-    总文章数 74
+    总文章数 78
 </nav>
 		<nav class="header-smart-menu">
     		
@@ -188,7 +188,7 @@
 <h3 id="python中数组、元组、列表的区别"><a href="#python中数组、元组、列表的区别" class="headerlink" title="python中数组、元组、列表的区别"></a>python中数组、元组、列表的区别</h3><p><strong>首先要知道python中是没有数组的</strong></p>
 <p>列表和元组的区别：列表中可以append元素，可以pop元素，而元组做不到，只能对元组元素进行索引而不能对它赋值！</p>
 <p><strong>创建数组的第一种方式</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]  <span class="comment">#创建一个列表a</span></span><br><span class="line">b = np.array([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>])   <span class="comment">#</span></span><br><span class="line"><span class="built_in">print</span>(a)	<span class="comment">#[1,2,3]-&gt;这是列表的表现形式</span></span><br><span class="line"><span class="built_in">print</span>(b)	<span class="comment">#[4 5 6]-&gt;这是数组的表现形式</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))	<span class="comment">#class = list</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(b))	<span class="comment">#class = numpy.ndarray</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]  <span class="comment">#创建一个列表a</span></span><br><span class="line">b = np.array([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>])   <span class="comment">#通过array创建数组</span></span><br><span class="line"><span class="built_in">print</span>(a)	<span class="comment">#[1,2,3]-&gt;这是列表的表现形式</span></span><br><span class="line"><span class="built_in">print</span>(b)	<span class="comment">#[4 5 6]-&gt;这是数组的表现形式</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))	<span class="comment">#class = list</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(b))	<span class="comment">#class = numpy.ndarray</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#数组和列表的切片都遵循左闭右开的元组</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">b = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">0</span>:<span class="number">2</span>]) 	<span class="comment">#因为左闭右开所以是[1,2]</span></span><br><span class="line"><span class="built_in">print</span>(b[<span class="number">0</span>:<span class="number">2</span>])	<span class="comment">#因为左闭右开所以是[1 2],注意和列表的表达形式不一样</span></span><br></pre></td></tr></table></figure>
 
@@ -200,7 +200,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用np.arange可以传递1~3个参数</span></span><br><span class="line"><span class="comment">#1个参数,那么这个参数就是终止值，起始值默认是0，步长默认是1</span></span><br><span class="line">x = np.arange(<span class="number">5</span>)	<span class="comment">#相当于np.arange(0,5,1)</span></span><br><span class="line"><span class="comment">#2个参数，第一个参数是初始值，第二个参数是终止值，步长默认为1</span></span><br><span class="line">x = np.arange(<span class="number">5</span>,<span class="number">10</span>)	<span class="comment">#相当于np.arange(5,10,1)</span></span><br><span class="line"><span class="comment">#3个参数，第一个参数是初始值，第二个参数是终止值，第三个参数是步长</span></span><br><span class="line">x = np.arange(<span class="number">5</span>,<span class="number">10</span>,<span class="number">0.5</span>)</span><br></pre></td></tr></table></figure>
 
 <p><strong>创建数组的第三种方式</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用np.random可以创建随机一维数组</span></span><br><span class="line"><span class="comment">#例如使用np.random.randn(n)可以创建n个服从标准正态分布(均值为0，标准差为1)的随机数</span></span><br><span class="line">np.random.randn(<span class="number">3</span>)	<span class="comment">#创建服从标准正态分布的3个随机数</span></span><br><span class="line"><span class="comment">#如果把randn改成rand（n），即为创建n个处于0~1的随机数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#想要转换成二维随机数，可以用创建一维数组的arange和转变成二维数组的reshape来实现。</span></span><br><span class="line">a = np.arange(<span class="number">20</span>).reshape(<span class="number">4</span>,<span class="number">5</span>)	<span class="comment">#reshape的第一个参数是行数，第二个参数是列数，如这个例子就是创建3行4列的二维数组</span></span><br><span class="line"><span class="comment">#np.random.randint用于创建随机整数</span></span><br><span class="line">np.random.randint(<span class="number">0</span>,<span class="number">10</span>,(<span class="number">4</span>,<span class="number">4</span>))	<span class="comment">#第一个参数是初始值，第二个参数是终止值，（4，4）则是创建为4X4的二维向量</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用np.random可以创建随机一维数组</span></span><br><span class="line"><span class="comment">#例如使用np.random.randn(n)可以创建n个服从标准正态分布(均值为0，标准差为1)的随机数</span></span><br><span class="line">np.random.randn(<span class="number">3</span>)	<span class="comment">#创建服从标准正态分布的3个随机数</span></span><br><span class="line"><span class="comment">#如果把randn改成rand（n），即为创建n个处于0~1的随机数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#想要转换成二维随机数，可以用创建一维数组的arange和转变成二维数组的reshape来实现。</span></span><br><span class="line">a = np.arange(<span class="number">20</span>).reshape(<span class="number">4</span>,<span class="number">5</span>)	<span class="comment">#reshape的第一个参数是行数，第二个参数是列数，如这个例子就是创建3行4列的二维数组</span></span><br><span class="line"><span class="comment">#np.random.randint用于创建随机整数（注意是随机）</span></span><br><span class="line">np.random.randint(<span class="number">0</span>,<span class="number">10</span>,(<span class="number">4</span>,<span class="number">4</span>))	<span class="comment">#第一个参数是初始值，第二个参数是终止值，（4，4）则是创建为4X4的二维向量</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -471,11 +471,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -483,11 +483,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数值分析</a>
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">web</a>
+                <a href="javascript:void(0)" class="js-tag color5">数值分析</a>
               </li>
              
               <li class="article-tag-list-item">
