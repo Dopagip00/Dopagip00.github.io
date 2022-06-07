@@ -58,7 +58,7 @@
 			</ul>
 		</nav>
 		<nav>
-    总文章数 78
+    总文章数 83
 </nav>
 		<nav class="header-smart-menu">
     		
@@ -155,20 +155,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-机器学习-决策树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-机器学习-XGBoost与Light-GBM" class="article article-type-post  article-index" itemscope itemprop="blogPost">
 <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/">机器学习--决策树</a>
+      <a class="article-title" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-XGBoost%E4%B8%8ELight-GBM/">机器学习--XGBoost与Light-GBM</a>
     </h1>
   
 
         
-        <a href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2022-06-06T12:13:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-06</time>
+        <a href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-XGBoost%E4%B8%8ELight-GBM/" class="archive-article-date">
+  	<time datetime="2022-06-07T09:04:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-07</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -179,15 +179,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>父节点和子节点是相对的，子节点的上边是父节点，父节点的下面是子节点</p>
-<p>根节点：没有父节点的节点叫做根节点，即初始节点</p>
-<p>叶子节点：没有子节点的节点叫做叶子节点，即最终节点</p>
-<h3 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h3><p>可以做<strong>分类分析（分类决策树模型）</strong>，也可以做<strong>回归分析（回归决策树模型）</strong></p>
-<h4 id="分类决策树模型"><a href="#分类决策树模型" class="headerlink" title="分类决策树模型"></a>分类决策树模型</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]<span class="comment">#共有5个训练集，每个训练集有2个特征</span></span><br><span class="line">y = [<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]<span class="comment">#这是因变量，分类为1和0</span></span><br><span class="line">model = DecisionTreeClassifier(random_state=<span class="number">0</span>)<span class="comment">#引入模型并设置随即状态为0，0只是保证运行结果一致</span></span><br><span class="line">model.fit(X,y)<span class="comment">#使用fit训练</span></span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))<span class="comment">#使用predict预测</span></span><br></pre></td></tr></table></figure>
+        <h2 id="XGBoost算法"><a href="#XGBoost算法" class="headerlink" title="XGBoost算法"></a>XGBoost算法</h2><h3 id="XGBoost分类算法"><a href="#XGBoost分类算法" class="headerlink" title="XGBoost分类算法"></a>XGBoost分类算法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> xgboost <span class="keyword">import</span> XGBClassifier</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment">#其实唯一的distinguish就是这里的X数组用numpy数组创建</span></span><br><span class="line">X = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]])</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line">model = XGBClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict(np.array([[<span class="number">5</span>,<span class="number">5</span>]])))</span><br></pre></td></tr></table></figure>
 
-<h4 id="回归决策树模型"><a href="#回归决策树模型" class="headerlink" title="回归决策树模型"></a>回归决策树模型</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = DecisionTreeRegressor(max_depth=<span class="number">2</span>,random_state=<span class="number">0</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">9</span>,<span class="number">9</span>]]))</span><br></pre></td></tr></table></figure>
+<h3 id="XGBoost回归模型"><a href="#XGBoost回归模型" class="headerlink" title="XGBoost回归模型"></a>XGBoost回归模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> xgboost <span class="keyword">import</span> XGBRegressor</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">X = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]])</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = XGRegressor()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict(np.array([[<span class="number">5</span>,<span class="number">5</span>]])))</span><br></pre></td></tr></table></figure>
 
-<h3 id="总体决策树模型搭建"><a href="#总体决策树模型搭建" class="headerlink" title="总体决策树模型搭建"></a>总体决策树模型搭建</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1.数据读取与预处理</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;XX.xlsx&#x27;</span>)</span><br><span class="line">df = df.replace(&#123;<span class="string">&#x27;工资&#x27;</span>:&#123;<span class="string">&#x27;低&#x27;</span>:<span class="number">0</span>,<span class="string">&#x27;中&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;高&#x27;</span>:<span class="number">2</span>&#125;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">#2.提取特征变量和目标变量</span></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;离职&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;离职&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#3.划分训练集和测试集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#4.训练模型及搭建</span></span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line">model = DecisionTreeClassifier(max_depth=<span class="number">3</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X_train,y_train)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Light-GBM"><a href="#Light-GBM" class="headerlink" title="Light-GBM"></a>Light-GBM</h2><h3 id="Light-GBM分类模型"><a href="#Light-GBM分类模型" class="headerlink" title="Light-GBM分类模型"></a>Light-GBM分类模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lightgbm <span class="keyword">import</span> LGBMClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line">model = LGBMClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
+
+<h3 id="Light-GBM回归模型"><a href="#Light-GBM回归模型" class="headerlink" title="Light-GBM回归模型"></a>Light-GBM回归模型</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from lightgbm import LGBMRegressor</span><br><span class="line">X = [[1,2],[3,4],[5,6],[7,8],[9,10]]</span><br><span class="line">y = [1,2,3,4,5]</span><br><span class="line">model = LGBMRegressor()</span><br><span class="line">model.fit(X,y)</span><br><span class="line">print(model.predict([[5,5]]))</span><br></pre></td></tr></table></figure>
 
 
       
@@ -223,7 +223,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-XGBoost%E4%B8%8ELight-GBM/">展开全文 >></a>
         </p>
       
 
@@ -256,26 +256,26 @@
 <center><p>
   
     <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/">机器学习--决策树</a>
+      <a class="article-title_code_ant" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-XGBoost%E4%B8%8ELight-GBM/">机器学习--XGBoost与Light-GBM</a>
     </h1>
   
 </p></center>
 
   
-    <article id="post-机器学习-逻辑回归" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-机器学习-AdaBoost和GBDT" class="article article-type-post  article-index" itemscope itemprop="blogPost">
 <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">机器学习--逻辑回归</a>
+      <a class="article-title" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-AdaBoost%E5%92%8CGBDT/">机器学习--AdaBoost和GBDT</a>
     </h1>
   
 
         
-        <a href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" class="archive-article-date">
-  	<time datetime="2022-06-06T09:15:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-06</time>
+        <a href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-AdaBoost%E5%92%8CGBDT/" class="archive-article-date">
+  	<time datetime="2022-06-07T08:01:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-07</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -286,106 +286,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Logistic回归"><a href="#Logistic回归" class="headerlink" title="Logistic回归"></a>Logistic回归</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1.读取数据</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;股票客户流失.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#2.划分特征变量和目标变量</span></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;是否流失&#x27;</span>)<span class="comment">#删除是否流失行</span></span><br><span class="line">y = df[<span class="string">&#x27;是否流失&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#3.划分训练集和测试集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X-train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"><span class="comment">#用train_test_split函数来区分测试集和训练集，test_size是测试集所占的比重，random_state是将其分类，记住就行了。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#4.模型搭建</span></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line">model = LogisticRegression()</span><br><span class="line">model.fit(X_train,y_train)</span><br><span class="line"></span><br><span class="line"><span class="comment">#5.模型使用1：预测数据结果</span></span><br><span class="line">y_pred = model.predict(X_test)</span><br><span class="line"><span class="built_in">print</span>(y_pred[<span class="number">0</span>:<span class="number">100</span>])<span class="comment">#显示y的预测值中的前一百个数据</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#全部的数据预测</span></span><br><span class="line">score = model.score(X_test,y_test)</span><br><span class="line"></span><br><span class="line"><span class="comment">#6.模型使用2：预测概率</span></span><br><span class="line">y_pred_proba = model.predict_preba(X_test)</span><br><span class="line"><span class="built_in">print</span>(y_pred_proba[<span class="number">0</span>:<span class="number">5</span>])<span class="comment">#打印前五个客户的分类概率</span></span><br></pre></td></tr></table></figure>
+        <h2 id="AdaBoost模型"><a href="#AdaBoost模型" class="headerlink" title="AdaBoost模型"></a>AdaBoost模型</h2><h3 id="AdaBoost分类模型"><a href="#AdaBoost分类模型" class="headerlink" title="AdaBoost分类模型"></a>AdaBoost分类模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> AdaBoostClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">model = AdaBoostClassifier(random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
 
-<h3 id="ROC，KS曲线"><a href="#ROC，KS曲线" class="headerlink" title="ROC，KS曲线"></a>ROC，KS曲线</h3>
-      
+<h3 id="AdaBoost回归模型"><a href="#AdaBoost回归模型" class="headerlink" title="AdaBoost回归模型"></a>AdaBoost回归模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensembel <span class="keyword">import</span> AdaBoostRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">model = AdaBoostRegressor(random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/机器学习//" class="article-tag-list-link color5">机器学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
+<h3 id="信用卡案例"><a href="#信用卡案例" class="headerlink" title="信用卡案例"></a>信用卡案例</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excle(<span class="string">&#x27;信用卡精准营销模型.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;响应&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;响应&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,train_test_split=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> AdaBoostClassifier</span><br><span class="line">model = AdaBoostClassifier()</span><br><span class="line">model.fit(X_train,y_train)</span><br><span class="line"></span><br><span class="line"><span class="comment">#评估模型</span></span><br><span class="line">y_pred = model.predict(X_test)</span><br><span class="line">a = pd.DataFrame()<span class="comment">#创建一个空DateFrame</span></span><br><span class="line">a[<span class="string">&#x27;预测值&#x27;</span>] = <span class="built_in">list</span>(y_pred)</span><br><span class="line">a[<span class="string">&#x27;实际值&#x27;</span>] = <span class="built_in">list</span>(y_test)</span><br><span class="line"><span class="comment">#获得所有值</span></span><br><span class="line">score = model.score(X_train,y_train)</span><br><span class="line"><span class="comment">#查看概率(不太懂)</span></span><br><span class="line">y_pred_proba = model.predict_proba(X_test)</span><br></pre></td></tr></table></figure>
 
 
 
+<h2 id="GBDT模型"><a href="#GBDT模型" class="headerlink" title="GBDT模型"></a>GBDT模型</h2><h3 id="GBDT分类模型"><a href="#GBDT分类模型" class="headerlink" title="GBDT分类模型"></a>GBDT分类模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> GradientBoostingClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">model = GradientBoostingClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
 
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">机器学习--逻辑回归</a>
-    </h1>
-  
-</p></center>
-
-  
-    <article id="post-机器学习-线性回归（重点）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89/">机器学习--线性回归（重点）</a>
-    </h1>
-  
-
-        
-        <a href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2022-06-05T12:51:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-05</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1.读取数据</span></span><br><span class="line"><span class="keyword">import</span> pandas<span class="comment">#导入pandas库</span></span><br><span class="line">df = pandas.read_excel(<span class="string">&#x27;IT行业收入表.xlsx&#x27;</span>) <span class="comment">#读取excel表，excel表中是有数据的哦</span></span><br><span class="line"><span class="built_in">print</span>(df.head())<span class="comment">#显示df的前五行</span></span><br><span class="line">X = df[[<span class="string">&#x27;工龄&#x27;</span>]]</span><br><span class="line"><span class="comment">#如果是多元线性回归则是如下</span></span><br><span class="line">X = df[[<span class="string">&#x27;工龄&#x27;</span>],[<span class="string">&#x27;姓名&#x27;</span>],[<span class="string">&#x27;性别&#x27;</span>]]</span><br><span class="line">Y = df[<span class="string">&#x27;薪水&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#2.模型搭建</span></span><br><span class="line"><span class="keyword">from</span> sklean.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line">regr = LinearRegression()<span class="comment">#成为线性回归模型，赋值给regr</span></span><br><span class="line">regr.fit(X,Y)<span class="comment">#训练模型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#3.模型可视化</span></span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.scatter(X,Y)</span><br><span class="line">plt.plot(X,regr.predict(X))<span class="comment">#X和X预测值进行线性回归分析</span></span><br><span class="line">plt.xlabel(<span class="string">&#x27;工龄&#x27;</span>)<span class="comment">#表示x坐标显示工龄</span></span><br><span class="line">plt.ylabel(<span class="string">&#x27;薪水&#x27;</span>)<span class="comment">#表示y坐标显示薪水</span></span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment">#4.线性回归方程构造</span></span><br><span class="line">a = regr.coef_[<span class="number">0</span>]	<span class="comment">#斜率</span></span><br><span class="line">b = regr.intercept_	<span class="comment">#截距</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#结果就是y = ax+b</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#线性回归的模型评估</span></span><br><span class="line"><span class="keyword">import</span> statsmodels.api <span class="keyword">as</span> sm</span><br><span class="line">X2 = sm.add_constant(X)<span class="comment">#为特征变量X添加常数项即截距b</span></span><br><span class="line">est = sm.OLS(Y,X2).fit()<span class="comment">#使用OLS和fit函数进行回归方程模型搭建</span></span><br><span class="line"><span class="built_in">print</span>(est.summary())<span class="comment">#将模型打印出来</span></span><br></pre></td></tr></table></figure>
+<h3 id="GBDT回归模型"><a href="#GBDT回归模型" class="headerlink" title="GBDT回归模型"></a>GBDT回归模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> GradientBoostingRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">model = GradientBoostingRegressor(random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
 
 
       
@@ -421,7 +332,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-AdaBoost%E5%92%8CGBDT/">展开全文 >></a>
         </p>
       
 
@@ -454,26 +365,26 @@
 <center><p>
   
     <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89/">机器学习--线性回归（重点）</a>
+      <a class="article-title_code_ant" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-AdaBoost%E5%92%8CGBDT/">机器学习--AdaBoost和GBDT</a>
     </h1>
   
 </p></center>
 
   
-    <article id="post-机器学习-列表切片" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-机器学习-随机森林模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
 <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/">机器学习--列表切片</a>
+      <a class="article-title" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%A8%A1%E5%9E%8B/">机器学习--随机森林模型</a>
     </h1>
   
 
         
-        <a href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/" class="archive-article-date">
-  	<time datetime="2022-06-05T12:01:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-05</time>
+        <a href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2022-06-07T07:01:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-07</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -484,8 +395,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>只需要列表切片的时候是左闭右开的！</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">0</span>:<span class="number">2</span>])</span><br><span class="line"><span class="comment">#因为左闭右开，所以打印出来的结果是[1,2]</span></span><br></pre></td></tr></table></figure>
+        <h3 id="随机森林的分类模型"><a href="#随机森林的分类模型" class="headerlink" title="随机森林的分类模型"></a>随机森林的分类模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>]</span><br><span class="line">model = RandomForestClassifier(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line">model.predict([[<span class="number">5</span>,<span class="number">5</span>]])</span><br></pre></td></tr></table></figure>
+
+<h3 id="随机森林的回归模型"><a href="#随机森林的回归模型" class="headerlink" title="随机森林的回归模型"></a>随机森林的回归模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = RandomForestRegressor(n_estimators=<span class="number">10</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
 
 
       
@@ -521,7 +433,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%A8%A1%E5%9E%8B/">展开全文 >></a>
         </p>
       
 
@@ -554,26 +466,26 @@
 <center><p>
   
     <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/">机器学习--列表切片</a>
+      <a class="article-title_code_ant" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%A8%A1%E5%9E%8B/">机器学习--随机森林模型</a>
     </h1>
   
 </p></center>
 
   
-    <article id="post-NFT-MetaMask的创建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-机器学习-K近邻算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
 <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/">NFT--MetaMask的创建</a>
+      <a class="article-title" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/">机器学习--K近邻算法</a>
     </h1>
   
 
         
-        <a href="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2022-06-05T08:42:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-05</time>
+        <a href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2022-06-07T01:17:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-07</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -584,207 +496,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Chrome中的MetaMask钱包的创建"><a href="#Chrome中的MetaMask钱包的创建" class="headerlink" title="Chrome中的MetaMask钱包的创建"></a>Chrome中的MetaMask钱包的创建</h3>
-        
-          <a class="article-more-a" href="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/#more">more >></a>
-        
-      
+        <h3 id="K近邻算法"><a href="#K近邻算法" class="headerlink" title="K近邻算法"></a>K近邻算法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#算法</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;葡萄酒.xlsx&#x27;</span>)</span><br><span class="line">X_train = df[[<span class="string">&#x27;酒精含量(%)&#x27;</span>,<span class="string">&#x27;酸含量(%)&#x27;</span>]]</span><br><span class="line">y_train= df[<span class="string">&#x27;分类&#x27;</span>]</span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KN</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = KNeighborsRegressor(n_neighbors=<span class="number">2</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NFT</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/NFT//" class="article-tag-list-link color4">NFT</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
+<h3 id="手写数字识别模型"><a href="#手写数字识别模型" class="headerlink" title="手写数字识别模型"></a>手写数字识别模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;手写数字识别.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;对应数字&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;对应数字&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neibhors <span class="keyword">import</span> KNeighborsClassifier</span><br><span class="line">model = KNeighborsClassifier(n_neibhors=<span class="number">5</span>)<span class="comment">#记得要加n_neighbors参数</span></span><br><span class="line">model.fit(X_train,y_train)<span class="comment">#训练模型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#开始处理图片</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line">img = Image.<span class="built_in">open</span>(<span class="string">&#x27;图片.jpg&#x27;</span>)<span class="comment">#打开图片文件</span></span><br><span class="line">img = img.resize((<span class="number">32</span>,<span class="number">32</span>))<span class="comment">#重新定义图片大小</span></span><br><span class="line">img = img.convert(<span class="string">&#x27;L&#x27;</span>)<span class="comment">#灰度处理</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">img_new = img.point(<span class="keyword">lambda</span> x:<span class="number">0</span> <span class="keyword">if</span> x&gt;<span class="number">128</span> <span class="keyword">else</span> <span class="number">1</span>)<span class="comment">#这里是如果x的色彩大于128则赋值为0，否则赋值为1</span></span><br><span class="line">arr = np.array(img_new)</span><br><span class="line">arr_new = arr.reshape(<span class="number">1</span>,-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#进行预测</span></span><br><span class="line">answer = model.predict(arr_new)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;图片中的数字为:&quot;</span>+<span class="built_in">str</span>(answer[<span class="number">0</span>]))</span><br></pre></td></tr></table></figure>
 
 
 
 
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/">NFT--MetaMask的创建</a>
-    </h1>
-  
-</p></center>
-
-  
-    <article id="post-web--将web内容上传服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/">web--将web内容上传服务器</a>
-    </h1>
-  
-
-        
-        <a href="/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2022-06-03T13:07:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-03</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="先上总结"><a href="#先上总结" class="headerlink" title="先上总结"></a>先上总结</h4><p>1.先用原始服务器的实例创建一个ubuntu镜像，记住镜像的账号（root）和密码。<br>2.先使用cmd进行root连接：（ssh <a href="mailto:&#x72;&#x6f;&#111;&#116;&#64;&#49;&#50;&#x30;&#46;&#55;&#x37;&#x2e;&#49;&#x37;&#46;&#x32;&#x31;&#54;">&#x72;&#x6f;&#111;&#116;&#64;&#49;&#50;&#x30;&#46;&#55;&#x37;&#x2e;&#49;&#x37;&#46;&#x32;&#x31;&#54;</a>）当然使用putty或者Xshell同样可以<br>3.使用Xftp7上传对应的web网页到服务器对应的目录中，目录为var\www\html（其中的var目录是和root同级目录）<br>4.上传之后，在浏览器中使用公网的ip即可看到网页。<br>试了一天TT</p>
-        
-          <a class="article-more-a" href="/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/web//" class="article-tag-list-link color4">web</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/">web--将web内容上传服务器</a>
-    </h1>
-  
-</p></center>
-
-  
-    <article id="post-html-基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/04/14/html-%E5%9F%BA%E7%A1%80/">html -- 基础</a>
-    </h1>
-  
-
-        
-        <a href="/2022/04/14/html-%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  	<time datetime="2022-04-14T13:01:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-14</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--标准格式--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mate</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line">    	标题 </span><br><span class="line">    <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">h2</span>&gt;</span>标题2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        	段落1</span><br><span class="line">    	<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
       
@@ -799,7 +517,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
         		</li>
       		
 		</ul>
@@ -811,7 +529,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/html//" class="article-tag-list-link color5">html</a>
+        			<a href="/categories/机器学习//" class="article-tag-list-link color5">机器学习</a>
         		</li>
       		
 		</ul>
@@ -820,7 +538,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/04/14/html-%E5%9F%BA%E7%A1%80/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/">展开全文 >></a>
         </p>
       
 
@@ -853,26 +571,26 @@
 <center><p>
   
     <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/04/14/html-%E5%9F%BA%E7%A1%80/">html -- 基础</a>
+      <a class="article-title_code_ant" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/">机器学习--K近邻算法</a>
     </h1>
   
 </p></center>
 
   
-    <article id="post-计算机组成原理-存储器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-机器学习-朴素贝叶斯" class="article article-type-post  article-index" itemscope itemprop="blogPost">
 <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/">计算机组成原理--存储器</a>
+      <a class="article-title" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/">机器学习--朴素贝叶斯</a>
     </h1>
   
 
         
-        <a href="/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2022-04-05T13:21:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-05</time>
+        <a href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/" class="archive-article-date">
+  	<time datetime="2022-06-07T00:49:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-07</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -883,11 +601,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="主存简单模型和寻址概念"><a href="#主存简单模型和寻址概念" class="headerlink" title="主存简单模型和寻址概念"></a>主存简单模型和寻址概念</h2><h3 id="主存储器"><a href="#主存储器" class="headerlink" title="主存储器"></a>主存储器</h3><p>包括<strong>存储体</strong>和<strong>MAR</strong>（Address地址存储器），<strong>MDR</strong>（Data数据存储器）</p>
-<p>-&gt;地址存储器（存储传入的地址）-&gt;存储体（寄存二进制位）&lt;-&gt;数据存储器&lt;-&gt;</p>
-        
-          <a class="article-more-a" href="/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/#more">more >></a>
-        
+        <h3 id="朴素贝叶斯"><a href="#朴素贝叶斯" class="headerlink" title="朴素贝叶斯"></a>朴素贝叶斯</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.naive_bayes <span class="keyword">import</span> GaussianNB</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]<span class="comment">#两个特征</span></span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line">model = GaussianNB</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
+
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1.读取excel表</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;肿瘤数据.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#2.划分特征变量和目标变量</span></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;肿瘤性质&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;肿瘤性质&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#3.区分训练集和测试集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,y_train,X_test,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#4.模型搭建</span></span><br><span class="line"><span class="keyword">from</span> sklearn.navie_bayes <span class="keyword">import</span> GaussianNB</span><br><span class="line">model = GaussianNB()</span><br><span class="line">model.fit(X_train,y_train)</span><br><span class="line"></span><br><span class="line"><span class="comment">#5.模型评估</span></span><br><span class="line">y_pred = model.predict(X_test)</span><br><span class="line">a = pd.DataFrame()</span><br><span class="line">a[<span class="string">&#x27;预测值&#x27;</span>] = <span class="built_in">list</span>(y_pred)</span><br><span class="line">a[<span class="string">&#x27;实际值&#x27;</span>] = <span class="built_in">list</span>(y_test)</span><br><span class="line"></span><br><span class="line"><span class="comment">#获得所有数据</span></span><br><span class="line">score = model.score(X_test,y_test)</span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -900,7 +618,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">计组</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
         		</li>
       		
 		</ul>
@@ -912,7 +630,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/计组//" class="article-tag-list-link color3">计组</a>
+        			<a href="/categories/机器学习//" class="article-tag-list-link color5">机器学习</a>
         		</li>
       		
 		</ul>
@@ -921,7 +639,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/">展开全文 >></a>
         </p>
       
 
@@ -954,208 +672,7 @@
 <center><p>
   
     <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/">计算机组成原理--存储器</a>
-    </h1>
-  
-</p></center>
-
-  
-    <article id="post-计算机组成原理-算数逻辑单元ALU" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/">计算机组成原理--算数逻辑单元ALU</a>
-    </h1>
-  
-
-        
-        <a href="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/" class="archive-article-date">
-  	<time datetime="2022-04-04T13:12:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-04</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="ALU实现"><a href="#ALU实现" class="headerlink" title="ALU实现"></a>ALU实现</h2>
-        
-          <a class="article-more-a" href="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">计组</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/计组//" class="article-tag-list-link color3">计组</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/">计算机组成原理--算数逻辑单元ALU</a>
-    </h1>
-  
-</p></center>
-
-  
-    <article id="post-计算机组成原理-数、码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/">计算机组成原理--数、码</a>
-    </h1>
-  
-
-        
-        <a href="/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/" class="archive-article-date">
-  	<time datetime="2022-03-24T13:11:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-24</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="定点数（考试重点）"><a href="#定点数（考试重点）" class="headerlink" title="定点数（考试重点）"></a>定点数（考试重点）</h2><p>定点数：小数点的位置不变</p>
-<p>浮点数：小数点的位置会改变</p>
-        
-          <a class="article-more-a" href="/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">计组</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/计组//" class="article-tag-list-link color3">计组</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/">计算机组成原理--数、码</a>
+      <a class="article-title_code_ant" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/">机器学习--朴素贝叶斯</a>
     </h1>
   
 </p></center>
@@ -1163,7 +680,7 @@
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -1294,11 +811,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">

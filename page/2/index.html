@@ -58,7 +58,7 @@
 			</ul>
 		</nav>
 		<nav>
-    总文章数 78
+    总文章数 83
 </nav>
 		<nav class="header-smart-menu">
     		
@@ -155,20 +155,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-计算机组成原理-数据的表示和运算" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-机器学习-决策树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
 <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/">计算机组成原理--数据的表示和运算</a>
+      <a class="article-title" href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/">机器学习--决策树</a>
     </h1>
   
 
         
-        <a href="/2022/03/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/" class="archive-article-date">
-  	<time datetime="2022-03-21T13:47:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-21</time>
+        <a href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/" class="archive-article-date">
+  	<time datetime="2022-06-06T12:13:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-06</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -179,611 +179,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="进位计数制"><a href="#进位计数制" class="headerlink" title="进位计数制"></a>进位计数制</h2>
-        
-          <a class="article-more-a" href="/2022/03/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/#more">more >></a>
-        
-      
+        <h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>父节点和子节点是相对的，子节点的上边是父节点，父节点的下面是子节点</p>
+<p>根节点：没有父节点的节点叫做根节点，即初始节点</p>
+<p>叶子节点：没有子节点的节点叫做叶子节点，即最终节点</p>
+<h3 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h3><p>可以做<strong>分类分析（分类决策树模型）</strong>，也可以做<strong>回归分析（回归决策树模型）</strong></p>
+<h4 id="分类决策树模型"><a href="#分类决策树模型" class="headerlink" title="分类决策树模型"></a>分类决策树模型</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]<span class="comment">#共有5个训练集，每个训练集有2个特征</span></span><br><span class="line">y = [<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]<span class="comment">#这是因变量，分类为1和0</span></span><br><span class="line">model = DecisionTreeClassifier(random_state=<span class="number">0</span>)<span class="comment">#引入模型并设置随即状态为0，0只是保证运行结果一致</span></span><br><span class="line">model.fit(X,y)<span class="comment">#使用fit训练</span></span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))<span class="comment">#使用predict预测</span></span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">计组</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<h4 id="回归决策树模型"><a href="#回归决策树模型" class="headerlink" title="回归决策树模型"></a>回归决策树模型</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = DecisionTreeRegressor(max_depth=<span class="number">2</span>,random_state=<span class="number">0</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">9</span>,<span class="number">9</span>]]))</span><br></pre></td></tr></table></figure>
 
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/计组//" class="article-tag-list-link color3">计组</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<h3 id="总体决策树模型搭建"><a href="#总体决策树模型搭建" class="headerlink" title="总体决策树模型搭建"></a>总体决策树模型搭建</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1.数据读取与预处理</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;XX.xlsx&#x27;</span>)</span><br><span class="line">df = df.replace(&#123;<span class="string">&#x27;工资&#x27;</span>:&#123;<span class="string">&#x27;低&#x27;</span>:<span class="number">0</span>,<span class="string">&#x27;中&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;高&#x27;</span>:<span class="number">2</span>&#125;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">#2.提取特征变量和目标变量</span></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;离职&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;离职&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#3.划分训练集和测试集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#4.训练模型及搭建</span></span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line">model = DecisionTreeClassifier(max_depth=<span class="number">3</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X_train,y_train)</span><br></pre></td></tr></table></figure>
 
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/03/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/">计算机组成原理--数据的表示和运算</a>
-    </h1>
-  
-</p></center>
-
-  
-    <article id="post-matlab-程序设计" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/21/matlab-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">matlab--程序设计</a>
-    </h1>
-  
-
-        
-        <a href="/2022/03/21/matlab-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="archive-article-date">
-  	<time datetime="2022-03-21T11:22:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-21</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>matlab中的程序设计知识</p>
-        
-          <a class="article-more-a" href="/2022/03/21/matlab-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/matlab//" class="article-tag-list-link color2">matlab</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/21/matlab-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/03/21/matlab-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">matlab--程序设计</a>
-    </h1>
-  
-</p></center>
-
-  
-    <article id="post-计算机组成原理-硬件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%A1%AC%E4%BB%B6/">计算机组成原理--硬件</a>
-    </h1>
-  
-
-        
-        <a href="/2022/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%A1%AC%E4%BB%B6/" class="archive-article-date">
-  	<time datetime="2022-03-16T12:43:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-16</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>计算机硬件如何区分二进制中的0和1？</p>
-<p><strong>由低电平和高电平来区分0和1，低电平（电力较低）表示0，高电平（电力较高）表示1.</strong></p>
-        
-          <a class="article-more-a" href="/2022/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%A1%AC%E4%BB%B6/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">计组</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/计组//" class="article-tag-list-link color3">计组</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%A1%AC%E4%BB%B6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%A1%AC%E4%BB%B6/">计算机组成原理--硬件</a>
-    </h1>
-  
-</p></center>
-
-  
-    <article id="post-数值分析-Newton插值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Newton%E6%8F%92%E5%80%BC/">数值分析--Newton插值</a>
-    </h1>
-  
-
-        
-        <a href="/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Newton%E6%8F%92%E5%80%BC/" class="archive-article-date">
-  	<time datetime="2022-03-16T12:15:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-16</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在拉格朗日插值中解决了Ln(x)的问题，那么要解决L2(x)=L1(x)+？中的？是什么，我们需要引入牛顿插值来解决</p>
-        
-          <a class="article-more-a" href="/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Newton%E6%8F%92%E5%80%BC/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数值分析</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数值分析//" class="article-tag-list-link color5">数值分析</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Newton%E6%8F%92%E5%80%BC/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Newton%E6%8F%92%E5%80%BC/">数值分析--Newton插值</a>
-    </h1>
-  
-</p></center>
-
-  
-    <article id="post-数值分析-Lagrange插值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Lagrange%E6%8F%92%E5%80%BC/">数值分析--Lagrange插值</a>
-    </h1>
-  
-
-        
-        <a href="/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Lagrange%E6%8F%92%E5%80%BC/" class="archive-article-date">
-  	<time datetime="2022-03-16T12:14:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-16</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>拉格朗日插值法分为一次插值，两次插值直到n次插值，划分的方法是有两个点就有一次插值，有三个点就有两次插值，同理可以推出有n个点就有n-1次插值。</p>
-        
-          <a class="article-more-a" href="/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Lagrange%E6%8F%92%E5%80%BC/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数值分析</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数值分析//" class="article-tag-list-link color5">数值分析</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Lagrange%E6%8F%92%E5%80%BC/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Lagrange%E6%8F%92%E5%80%BC/">数值分析--Lagrange插值</a>
-    </h1>
-  
-</p></center>
-
-  
-    <article id="post-python-name属性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/10/python-name%E5%B1%9E%E6%80%A7/">python--name属性</a>
-    </h1>
-  
-
-        
-        <a href="/2022/03/10/python-name%E5%B1%9E%E6%80%A7/" class="archive-article-date">
-  	<time datetime="2022-03-10T13:29:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-10</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>python中的 __  <em>name</em> _ _属性</p>
-        
-          <a class="article-more-a" href="/2022/03/10/python-name%E5%B1%9E%E6%80%A7/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/python//" class="article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/10/python-name%E5%B1%9E%E6%80%A7/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/03/10/python-name%E5%B1%9E%E6%80%A7/">python--name属性</a>
-    </h1>
-  
-</p></center>
-
-  
-    <article id="post-机器学习-Matplotlib库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-Matplotlib%E5%BA%93/">机器学习-- Matplotlib库</a>
-    </h1>
-  
-
-        
-        <a href="/2022/03/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-Matplotlib%E5%BA%93/" class="archive-article-date">
-  	<time datetime="2022-03-10T12:34:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-10</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Matplotlib库用来创建图表</p>
-        
-          <a class="article-more-a" href="/2022/03/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-Matplotlib%E5%BA%93/#more">more >></a>
-        
       
 
       
@@ -817,7 +223,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-Matplotlib%E5%BA%93/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/">展开全文 >></a>
         </p>
       
 
@@ -850,26 +256,26 @@
 <center><p>
   
     <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/03/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-Matplotlib%E5%BA%93/">机器学习-- Matplotlib库</a>
+      <a class="article-title_code_ant" href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/">机器学习--决策树</a>
     </h1>
   
 </p></center>
 
   
-    <article id="post-机器学习-pandas库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-机器学习-逻辑回归" class="article article-type-post  article-index" itemscope itemprop="blogPost">
 <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pandas%E5%BA%93/">机器学习--pandas库</a>
+      <a class="article-title" href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">机器学习--逻辑回归</a>
     </h1>
   
 
         
-        <a href="/2022/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pandas%E5%BA%93/" class="archive-article-date">
-  	<time datetime="2022-03-08T12:04:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-08</time>
+        <a href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" class="archive-article-date">
+  	<time datetime="2022-06-06T09:15:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-06</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -880,10 +286,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>pandas库基础</p>
-        
-          <a class="article-more-a" href="/2022/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pandas%E5%BA%93/#more">more >></a>
-        
+        <h3 id="Logistic回归"><a href="#Logistic回归" class="headerlink" title="Logistic回归"></a>Logistic回归</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1.读取数据</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;股票客户流失.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#2.划分特征变量和目标变量</span></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;是否流失&#x27;</span>)<span class="comment">#删除是否流失行</span></span><br><span class="line">y = df[<span class="string">&#x27;是否流失&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#3.划分训练集和测试集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X-train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"><span class="comment">#用train_test_split函数来区分测试集和训练集，test_size是测试集所占的比重，random_state是将其分类，记住就行了。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#4.模型搭建</span></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line">model = LogisticRegression()</span><br><span class="line">model.fit(X_train,y_train)</span><br><span class="line"></span><br><span class="line"><span class="comment">#5.模型使用1：预测数据结果</span></span><br><span class="line">y_pred = model.predict(X_test)</span><br><span class="line"><span class="built_in">print</span>(y_pred[<span class="number">0</span>:<span class="number">100</span>])<span class="comment">#显示y的预测值中的前一百个数据</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#全部的数据预测</span></span><br><span class="line">score = model.score(X_test,y_test)</span><br><span class="line"></span><br><span class="line"><span class="comment">#6.模型使用2：预测概率</span></span><br><span class="line">y_pred_proba = model.predict_preba(X_test)</span><br><span class="line"><span class="built_in">print</span>(y_pred_proba[<span class="number">0</span>:<span class="number">5</span>])<span class="comment">#打印前五个客户的分类概率</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="ROC，KS曲线"><a href="#ROC，KS曲线" class="headerlink" title="ROC，KS曲线"></a>ROC，KS曲线</h3>
       
 
       
@@ -917,7 +322,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pandas%E5%BA%93/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">展开全文 >></a>
         </p>
       
 
@@ -950,26 +355,26 @@
 <center><p>
   
     <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pandas%E5%BA%93/">机器学习--pandas库</a>
+      <a class="article-title_code_ant" href="/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">机器学习--逻辑回归</a>
     </h1>
   
 </p></center>
 
   
-    <article id="post-统计学-数据的搜集" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-机器学习-线性回归（重点）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
 <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/08/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%90%9C%E9%9B%86/">统计学-- 数据的搜集</a>
+      <a class="article-title" href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89/">机器学习--线性回归（重点）</a>
     </h1>
   
 
         
-        <a href="/2022/03/08/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%90%9C%E9%9B%86/" class="archive-article-date">
-  	<time datetime="2022-03-08T10:49:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-08</time>
+        <a href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2022-06-05T12:51:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-05</time>
 </a>
         <!-- 需要添加的位置 -->
         <!-- 开始添加字数统计-->
@@ -980,9 +385,208 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="数据的分类"><a href="#数据的分类" class="headerlink" title="数据的分类"></a>数据的分类</h3>
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1.读取数据</span></span><br><span class="line"><span class="keyword">import</span> pandas<span class="comment">#导入pandas库</span></span><br><span class="line">df = pandas.read_excel(<span class="string">&#x27;IT行业收入表.xlsx&#x27;</span>) <span class="comment">#读取excel表，excel表中是有数据的哦</span></span><br><span class="line"><span class="built_in">print</span>(df.head())<span class="comment">#显示df的前五行</span></span><br><span class="line">X = df[[<span class="string">&#x27;工龄&#x27;</span>]]</span><br><span class="line"><span class="comment">#如果是多元线性回归则是如下</span></span><br><span class="line">X = df[[<span class="string">&#x27;工龄&#x27;</span>],[<span class="string">&#x27;姓名&#x27;</span>],[<span class="string">&#x27;性别&#x27;</span>]]</span><br><span class="line">Y = df[<span class="string">&#x27;薪水&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#2.模型搭建</span></span><br><span class="line"><span class="keyword">from</span> sklean.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line">regr = LinearRegression()<span class="comment">#成为线性回归模型，赋值给regr</span></span><br><span class="line">regr.fit(X,Y)<span class="comment">#训练模型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#3.模型可视化</span></span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.scatter(X,Y)</span><br><span class="line">plt.plot(X,regr.predict(X))<span class="comment">#X和X预测值进行线性回归分析</span></span><br><span class="line">plt.xlabel(<span class="string">&#x27;工龄&#x27;</span>)<span class="comment">#表示x坐标显示工龄</span></span><br><span class="line">plt.ylabel(<span class="string">&#x27;薪水&#x27;</span>)<span class="comment">#表示y坐标显示薪水</span></span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment">#4.线性回归方程构造</span></span><br><span class="line">a = regr.coef_[<span class="number">0</span>]	<span class="comment">#斜率</span></span><br><span class="line">b = regr.intercept_	<span class="comment">#截距</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#结果就是y = ax+b</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#线性回归的模型评估</span></span><br><span class="line"><span class="keyword">import</span> statsmodels.api <span class="keyword">as</span> sm</span><br><span class="line">X2 = sm.add_constant(X)<span class="comment">#为特征变量X添加常数项即截距b</span></span><br><span class="line">est = sm.OLS(Y,X2).fit()<span class="comment">#使用OLS和fit函数进行回归方程模型搭建</span></span><br><span class="line"><span class="built_in">print</span>(est.summary())<span class="comment">#将模型打印出来</span></span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/机器学习//" class="article-tag-list-link color5">机器学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
         
-          <a class="article-more-a" href="/2022/03/08/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%90%9C%E9%9B%86/#more">more >></a>
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+<center><p>
+  
+    <h1 itemprop="name">
+      <a class="article-title_code_ant" href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89/">机器学习--线性回归（重点）</a>
+    </h1>
+  
+</p></center>
+
+  
+    <article id="post-机器学习-列表切片" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/">机器学习--列表切片</a>
+    </h1>
+  
+
+        
+        <a href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/" class="archive-article-date">
+  	<time datetime="2022-06-05T12:01:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-05</time>
+</a>
+        <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+        <!-- 添加完成 -->
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>只需要列表切片的时候是左闭右开的！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">0</span>:<span class="number">2</span>])</span><br><span class="line"><span class="comment">#因为左闭右开，所以打印出来的结果是[1,2]</span></span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/机器学习//" class="article-tag-list-link color5">机器学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+<center><p>
+  
+    <h1 itemprop="name">
+      <a class="article-title_code_ant" href="/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/">机器学习--列表切片</a>
+    </h1>
+  
+</p></center>
+
+  
+    <article id="post-NFT-MetaMask的创建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/">NFT--MetaMask的创建</a>
+    </h1>
+  
+
+        
+        <a href="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/" class="archive-article-date">
+  	<time datetime="2022-06-05T08:42:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-05</time>
+</a>
+        <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+        <!-- 添加完成 -->
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Chrome中的MetaMask钱包的创建"><a href="#Chrome中的MetaMask钱包的创建" class="headerlink" title="Chrome中的MetaMask钱包的创建"></a>Chrome中的MetaMask钱包的创建</h3>
+        
+          <a class="article-more-a" href="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/#more">more >></a>
         
       
 
@@ -996,7 +600,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">统计学</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NFT</a>
         		</li>
       		
 		</ul>
@@ -1008,7 +612,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/统计学//" class="article-tag-list-link color4">统计学</a>
+        			<a href="/categories/NFT//" class="article-tag-list-link color4">NFT</a>
         		</li>
       		
 		</ul>
@@ -1017,7 +621,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/08/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%90%9C%E9%9B%86/">展开全文 >></a>
+          <a class="article-more-a" href="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/">展开全文 >></a>
         </p>
       
 
@@ -1050,107 +654,7 @@
 <center><p>
   
     <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/03/08/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%90%9C%E9%9B%86/">统计学-- 数据的搜集</a>
-    </h1>
-  
-</p></center>
-
-  
-    <article id="post-matlab-向量与矩阵" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/07/matlab-%E5%90%91%E9%87%8F%E4%B8%8E%E7%9F%A9%E9%98%B5/">matlab -- 向量与矩阵</a>
-    </h1>
-  
-
-        
-        <a href="/2022/03/07/matlab-%E5%90%91%E9%87%8F%E4%B8%8E%E7%9F%A9%E9%98%B5/" class="archive-article-date">
-  	<time datetime="2022-03-07T13:05:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-07</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="向量的基本命令"><a href="#向量的基本命令" class="headerlink" title="向量的基本命令"></a>向量的基本命令</h3>
-        
-          <a class="article-more-a" href="/2022/03/07/matlab-%E5%90%91%E9%87%8F%E4%B8%8E%E7%9F%A9%E9%98%B5/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/matlab//" class="article-tag-list-link color2">matlab</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/03/07/matlab-%E5%90%91%E9%87%8F%E4%B8%8E%E7%9F%A9%E9%98%B5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/03/07/matlab-%E5%90%91%E9%87%8F%E4%B8%8E%E7%9F%A9%E9%98%B5/">matlab -- 向量与矩阵</a>
+      <a class="article-title_code_ant" href="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/">NFT--MetaMask的创建</a>
     </h1>
   
 </p></center>
@@ -1158,7 +662,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -1289,11 +793,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
