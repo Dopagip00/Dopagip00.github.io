@@ -84,8 +84,8 @@ http://hexo.denggaozheng.top/2022/02/09/JAVA-SringBuffer%E5%92%8CStringBudilder/
 http://hexo.denggaozheng.top/2022/02/09/JAVA-properties%E7%B1%BB/
 http://hexo.denggaozheng.top/2022/02/09/JAVA-List%E6%8E%A5%E5%8F%A3/
 http://hexo.denggaozheng.top/lib/bookmark/README.html
-http://hexo.denggaozheng.top/lib/bookmark/package.json
 http://hexo.denggaozheng.top/lib/bookmark/renovate.json
+http://hexo.denggaozheng.top/lib/bookmark/package.json
 http://hexo.denggaozheng.top/
 http://hexo.denggaozheng.top/tags/JAVA/
 http://hexo.denggaozheng.top/tags/Linux/
