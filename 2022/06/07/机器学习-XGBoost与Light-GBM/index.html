@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://hexo.denggaozheng.top">
   <title>机器学习--XGBoost与Light-GBM | Denggaozheng`s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="XGBoost算法XGBoost分类算法123456789from xgboost import XGBClassifierimport numpy as np#其实唯一的distinguish就是这里的X数组用numpy数组创建X &#x3D; np.array([[1,2],[3,4],[5,6],[7,8],[9,10]])y &#x3D; [0,0,0,1,1]model &#x3D; XGBClassifier()m">
+  <meta name="description" content="XGBoost算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习--XGBoost与Light-GBM">
 <meta property="og:url" content="http://hexo.denggaozheng.top/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-XGBoost%E4%B8%8ELight-GBM/index.html">
 <meta property="og:site_name" content="Denggaozheng&#96;s blog">
-<meta property="og:description" content="XGBoost算法XGBoost分类算法123456789from xgboost import XGBClassifierimport numpy as np#其实唯一的distinguish就是这里的X数组用numpy数组创建X &#x3D; np.array([[1,2],[3,4],[5,6],[7,8],[9,10]])y &#x3D; [0,0,0,1,1]model &#x3D; XGBClassifier()m">
+<meta property="og:description" content="XGBoost算法">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-07T09:04:45.000Z">
-<meta property="article:modified_time" content="2022-06-07T09:31:52.119Z">
+<meta property="article:modified_time" content="2022-06-07T12:56:46.567Z">
 <meta property="article:author" content="邓高正">
 <meta property="article:tag" content="机器学习">
 <meta name="twitter:card" content="summary">
@@ -182,7 +182,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="XGBoost算法"><a href="#XGBoost算法" class="headerlink" title="XGBoost算法"></a>XGBoost算法</h2><h3 id="XGBoost分类算法"><a href="#XGBoost分类算法" class="headerlink" title="XGBoost分类算法"></a>XGBoost分类算法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> xgboost <span class="keyword">import</span> XGBClassifier</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment">#其实唯一的distinguish就是这里的X数组用numpy数组创建</span></span><br><span class="line">X = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]])</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line">model = XGBClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict(np.array([[<span class="number">5</span>,<span class="number">5</span>]])))</span><br></pre></td></tr></table></figure>
+        <h2 id="XGBoost算法"><a href="#XGBoost算法" class="headerlink" title="XGBoost算法"></a>XGBoost算法</h2><span id="more"></span>
+
+<h3 id="XGBoost分类算法"><a href="#XGBoost分类算法" class="headerlink" title="XGBoost分类算法"></a>XGBoost分类算法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> xgboost <span class="keyword">import</span> XGBClassifier</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment">#其实唯一的distinguish就是这里的X数组用numpy数组创建</span></span><br><span class="line">X = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]])</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line">model = XGBClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict(np.array([[<span class="number">5</span>,<span class="number">5</span>]])))</span><br></pre></td></tr></table></figure>
 
 <h3 id="XGBoost回归模型"><a href="#XGBoost回归模型" class="headerlink" title="XGBoost回归模型"></a>XGBoost回归模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> xgboost <span class="keyword">import</span> XGBRegressor</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">X = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]])</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = XGRegressor()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict(np.array([[<span class="number">5</span>,<span class="number">5</span>]])))</span><br></pre></td></tr></table></figure>
 
@@ -452,11 +454,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -15,13 +15,13 @@
 <meta property="og:site_name" content="Denggaozheng&#96;s blog">
 <meta property="og:description" content="涵盖了python中大部分的字符串操作">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://hexo.denggaozheng.top/2022/02/13/python-%E5%AD%97%E7%AC%A6%E4%B8%B2/Users/me/AppData/Roaming/Typora/typora-user-images/image-20220213212943323.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/02/13/python-%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20220213212943323.png">
 <meta property="article:published_time" content="2022-02-13T01:56:51.000Z">
-<meta property="article:modified_time" content="2022-02-13T13:36:42.135Z">
+<meta property="article:modified_time" content="2022-06-07T12:45:23.521Z">
 <meta property="article:author" content="邓高正">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://hexo.denggaozheng.top/2022/02/13/python-%E5%AD%97%E7%AC%A6%E4%B8%B2/Users/me/AppData/Roaming/Typora/typora-user-images/image-20220213212943323.png">
+<meta name="twitter:image" content="http://hexo.denggaozheng.top/2022/02/13/python-%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20220213212943323.png">
   
     <link rel="alternative" href="/atom.xml" title="Denggaozheng`s blog" type="application/atom+xml">
   
@@ -212,7 +212,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#format方法format里面的参数就是占位的字符，format里面的参数与&#123;&#125;对应，有几个参数就有几个&#123;&#125;</span></span><br><span class="line">a = <span class="string">&quot;python&quot;</span></span><br><span class="line">b = <span class="string">&quot;C&quot;</span></span><br><span class="line">c = <span class="string">&quot;PHP&quot;</span></span><br><span class="line">d = <span class="string">&quot;JAVA&quot;</span></span><br><span class="line"><span class="string">&quot;我爱 &#123;&#125; &quot;</span>.<span class="built_in">format</span>(a) <span class="comment">#我爱python</span></span><br><span class="line"><span class="string">&quot;我爱&#123;&#125;,&#123;&#125;,&#123;&#125;,&#123;&#125;&quot;</span>.<span class="built_in">format</span>(a,b,c,d) <span class="comment">#我爱python,C,PHP,JAVA</span></span><br><span class="line"><span class="comment">#可以在花括号中间加入数字表示占位的顺序,甚至可以在括号内加变量名，然后在format里面给变量赋值</span></span><br><span class="line">a = <span class="string">&quot;python&quot;</span></span><br><span class="line">b = <span class="string">&quot;C&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;1&#125;,&#123;0&#125;&quot;</span>.<span class="built_in">format</span>(a, b)) <span class="comment">#我爱python，C</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;0&#125;,&#123;1&#125;&quot;</span>.<span class="built_in">format</span>(a, b)) <span class="comment">#我爱C，python</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;我爱&#123;py&#125;,&#123;ja&#125;&quot;</span>.<span class="built_in">format</span>(py=<span class="string">&quot;python&quot;</span>,ja=<span class="string">&quot;java&quot;</span>)) <span class="comment">#我爱python,java</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#千分符</span></span><br><span class="line"><span class="string">&quot;&#123;:,&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">1234</span>) <span class="comment">#1,234</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保留小数点后x位即.xf，类别c语言%.xf</span></span><br><span class="line"><span class="string">&quot;&#123;.2f&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">3.14159</span>) <span class="comment">#3.14</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#保留x位数,即.xg</span></span><br><span class="line"><span class="string">&quot;&#123;.2g&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">3.14159</span>) <span class="comment">#3.1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#截取x位字符，不能用于数字，会报错！！</span></span><br><span class="line"><span class="string">&quot;&#123;:.2&#125;&quot;</span>.<span class="built_in">format</span>(<span class="string">&quot;我爱py&quot;</span>)  <span class="comment">#我爱</span></span><br><span class="line"><span class="string">&quot;&#123;:.2&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">1234</span>)     <span class="comment">#error</span></span><br></pre></td></tr></table></figure>
 
 <p>：后面可以加很多值，如下表：（参数即format里面的参数）</p>
-<p><img src="/2022/02/13/python-%E5%AD%97%E7%AC%A6%E4%B8%B2/Users\me\AppData\Roaming\Typora\typora-user-images\image-20220213212943323.png" alt="image-20220213212943323"></p>
+<p><img src="/2022/02/13/python-%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20220213212943323.png" alt="image-20220213212943323"></p>
 <h3 id><a href="#" class="headerlink" title></a></h3>
       
 
@@ -482,11 +482,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">

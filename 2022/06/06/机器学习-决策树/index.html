@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://hexo.denggaozheng.top">
   <title>机器学习--决策树 | Denggaozheng`s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="节点父节点和子节点是相对的，子节点的上边是父节点，父节点的下面是子节点 根节点：没有父节点的节点叫做根节点，即初始节点 叶子节点：没有子节点的节点叫做叶子节点，即最终节点 决策树可以做分类分析（分类决策树模型），也可以做回归分析（回归决策树模型） 分类决策树模型123456from sklearn.tree import DecisionTreeClassifierX &#x3D; [[1,2],[3,4]">
+  <meta name="description" content="节点父节点和子节点是相对的，子节点的上边是父节点，父节点的下面是子节点 根节点：没有父节点的节点叫做根节点，即初始节点 叶子节点：没有子节点的节点叫做叶子节点，即最终节点">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习--决策树">
 <meta property="og:url" content="http://hexo.denggaozheng.top/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/index.html">
 <meta property="og:site_name" content="Denggaozheng&#96;s blog">
-<meta property="og:description" content="节点父节点和子节点是相对的，子节点的上边是父节点，父节点的下面是子节点 根节点：没有父节点的节点叫做根节点，即初始节点 叶子节点：没有子节点的节点叫做叶子节点，即最终节点 决策树可以做分类分析（分类决策树模型），也可以做回归分析（回归决策树模型） 分类决策树模型123456from sklearn.tree import DecisionTreeClassifierX &#x3D; [[1,2],[3,4]">
+<meta property="og:description" content="节点父节点和子节点是相对的，子节点的上边是父节点，父节点的下面是子节点 根节点：没有父节点的节点叫做根节点，即初始节点 叶子节点：没有子节点的节点叫做叶子节点，即最终节点">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-06T12:13:09.000Z">
-<meta property="article:modified_time" content="2022-06-06T15:15:25.050Z">
+<meta property="article:modified_time" content="2022-06-07T12:57:02.921Z">
 <meta property="article:author" content="邓高正">
 <meta property="article:tag" content="机器学习">
 <meta name="twitter:card" content="summary">
@@ -185,6 +185,8 @@
         <h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>父节点和子节点是相对的，子节点的上边是父节点，父节点的下面是子节点</p>
 <p>根节点：没有父节点的节点叫做根节点，即初始节点</p>
 <p>叶子节点：没有子节点的节点叫做叶子节点，即最终节点</p>
+<span id="more"></span>
+
 <h3 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h3><p>可以做<strong>分类分析（分类决策树模型）</strong>，也可以做<strong>回归分析（回归决策树模型）</strong></p>
 <h4 id="分类决策树模型"><a href="#分类决策树模型" class="headerlink" title="分类决策树模型"></a>分类决策树模型</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]<span class="comment">#共有5个训练集，每个训练集有2个特征</span></span><br><span class="line">y = [<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]<span class="comment">#这是因变量，分类为1和0</span></span><br><span class="line">model = DecisionTreeClassifier(random_state=<span class="number">0</span>)<span class="comment">#引入模型并设置随即状态为0，0只是保证运行结果一致</span></span><br><span class="line">model.fit(X,y)<span class="comment">#使用fit训练</span></span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))<span class="comment">#使用predict预测</span></span><br></pre></td></tr></table></figure>
 
@@ -461,11 +463,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
