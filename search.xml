@@ -127,6 +127,25 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--Sring声明“</title>
+    <url>/2022/02/09/JAVA-Sring%E5%A3%B0%E6%98%8E/</url>
+    <content><![CDATA[<p>引用类型的引用在栈里面，对象在堆里面。</p>
+<span id="more"></span>
+
+<p>字符串的字面值存储在字符串池中，可以实现共享。</p>
+<p>String name = 20;//这里name存储在堆里面，20存储在方法池里面。</p>
+<p>声明string字符串有两种方式：</p>
+<p>1.String name = “Hellp”//产生一个对象，存储在字符串池中</p>
+<p>2.String name = new String(“Hello”)//产生两个对象，在字符串池和堆中各存放一个</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--Sring方法“</title>
     <url>/2022/02/09/JAVA-Sring%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<p>一共十三点</p>
@@ -152,16 +171,32 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--Sring声明“</title>
-    <url>/2022/02/09/JAVA-Sring%E5%A3%B0%E6%98%8E/</url>
-    <content><![CDATA[<p>引用类型的引用在栈里面，对象在堆里面。</p>
+    <title>”JAVA--外部类和内部类“</title>
+    <url>/2022/02/09/JAVA-%E5%A4%96%E9%83%A8%E7%B1%BB%E5%92%8C%E5%86%85%E9%83%A8%E7%B1%BB/</url>
+    <content><![CDATA[<p> 介绍外部类和内部类</p>
 <span id="more"></span>
 
-<p>字符串的字面值存储在字符串池中，可以实现共享。</p>
-<p>String name = 20;//这里name存储在堆里面，20存储在方法池里面。</p>
-<p>声明string字符串有两种方式：</p>
-<p>1.String name = “Hellp”//产生一个对象，存储在字符串池中</p>
-<p>2.String name = new String(“Hello”)//产生两个对象，在字符串池和堆中各存放一个</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package bilibili;</span><br><span class="line"></span><br><span class="line">class Oouter &#123;</span><br><span class="line">    class Inter &#123;</span><br><span class="line">        Inter() &#123;</span><br><span class="line">            System.out.println(&quot;这是内部类&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Outer&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Oouter oouter = new Oouter();</span><br><span class="line">        Oouter.Inter inter = oouter.new Inter();//这里最最重要</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-----------------------------------------------------------------------------</span><br><span class="line">内部类的概念：在一个类的内部再定义一个完整的类，内部类也会生成class文件。但是有$符号。</span><br></pre></td></tr></table></figure>
+
+<p>1.声明内部类的对象的方法是：</p>
+<p><strong>外部类名(点)内部类名(空格)内部类对象 = 外部类对象(点)new(空格)内部类名（）；</strong></p>
+<p>比如现在<strong>外部类名Outer，内部类名Inter，外部类对象outer，内部类对象inter</strong>，则：</p>
+<p>Outer.Inter inter = outer.new Inter();</p>
+<p>内部类可以调用外部类的私有属性，当然也可以调用外部私有方法，但是当内部类加上了static后就不能调用外部类的private属性了。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">private int a()&#123;</span><br><span class="line">    int a = 20;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br><span class="line">class Inter &#123;</span><br><span class="line">    public void print() &#123;</span><br><span class="line">        System.out.println(a());</span><br><span class="line">        System.out.println(&quot;这是内部类&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2.局部内部类：在方法里面定义类；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3.匿名内部类：没有名字的类：</span><br><span class="line">假设我们有一个类Apple，Apple里面有一个a方法，我们可以先不对Apple进行实例化，直接使用new Apple().a()来调用a方法.</span><br><span class="line">匿名内部类一般用在接口或者父类当中。</span><br><span class="line">匿名内部类必须在声明对象之后，然后在后面可以调用该匿名内部类的方法，该内部类是匿名的，然后要用声明的对象的名字。</span><br><span class="line">匿名内部类必须继承父类或者实现一个接口。</span><br></pre></td></tr></table></figure>
+
+<p>4.静态内部类：不依赖外部类，可直接创建或通过类名访问，可声明静态成员。</p>
+<p><strong>特点：</strong></p>
+<p>1.在内部类中可以调用内部类的私有方法，但是调用外部类的私有方法用（外部类的对象）.私有名字。</p>
+<p>2.只有外部类可以是静态的，内部类不行。</p>
+<p>3.内部类想要访问局部变量，需要局部变量是final修饰的（局部变量即方法里面定义的变量）</p>
+<p>4.内部类也可以继承接口用implements</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -171,17 +206,16 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--properties类“</title>
-    <url>/2022/02/09/JAVA-properties%E7%B1%BB/</url>
-    <content><![CDATA[<p> properties相当于一个集合</p>
+    <title>JAVA--super知识点</title>
+    <url>/2022/02/09/JAVA-super%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>1.Super指向父类的构造方法，必须在构造方法的第一个；</p>
+<p>2.Super只能出现在子类的构造方法中.</p>
 <span id="more"></span>
 
-<p><img src="https://img-blog.csdnimg.cn/img_convert/d91d50beb656346ba65a174526fc43f6.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>setproperties在集合里面增加变量。</p>
-<p>1.list方法适用于PrintWriter</p>
-<p>2.store方法适用于FileOutputStream</p>
-<p>3.load方法适用于FileInputStream</p>
+<p>3.this和super不能同时调用构造方法</p>
+<p>与this的对比：<br>this：本类的构造；super：父类的构造</p>
+<p>this：没有继承也可以使用；super：必须要有继承才可以使用</p>
+<p>this：调用本身对象；super：调用父类对象</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -220,16 +254,17 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--super知识点</title>
-    <url>/2022/02/09/JAVA-super%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>1.Super指向父类的构造方法，必须在构造方法的第一个；</p>
-<p>2.Super只能出现在子类的构造方法中.</p>
+    <title>”JAVA--properties类“</title>
+    <url>/2022/02/09/JAVA-properties%E7%B1%BB/</url>
+    <content><![CDATA[<p> properties相当于一个集合</p>
 <span id="more"></span>
 
-<p>3.this和super不能同时调用构造方法</p>
-<p>与this的对比：<br>this：本类的构造；super：父类的构造</p>
-<p>this：没有继承也可以使用；super：必须要有继承才可以使用</p>
-<p>this：调用本身对象；super：调用父类对象</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d91d50beb656346ba65a174526fc43f6.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>setproperties在集合里面增加变量。</p>
+<p>1.list方法适用于PrintWriter</p>
+<p>2.store方法适用于FileOutputStream</p>
+<p>3.load方法适用于FileInputStream</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -285,32 +320,42 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--外部类和内部类“</title>
-    <url>/2022/02/09/JAVA-%E5%A4%96%E9%83%A8%E7%B1%BB%E5%92%8C%E5%86%85%E9%83%A8%E7%B1%BB/</url>
-    <content><![CDATA[<p> 介绍外部类和内部类</p>
-<span id="more"></span>
+    <title>”JAVA--常用类“</title>
+    <url>/2022/02/09/JAVA-%E5%B8%B8%E7%94%A8%E7%B1%BB/</url>
+    <content><![CDATA[<p>介绍两个类：Date和Calendar</p>
+<p><strong>一、Date表示特定的瞬间，精确到毫秒。</strong></p>
+<p>1.创建date对象：</p>
+<p>Date date=new Date();</p>
+<p>2.一些方法：直接打印date：输出当前的时间。</p>
+<p>打印date.getTime输出从1970.1.1到现在所有的毫秒数。</p>
+<p>方法after和before:直接加一天。</p>
+<p>compareTo方法，date1.toString(date2)，是date1-date2.</p>
+<p>当然也可以用equal方法。</p>
+<p><strong>二、Calendar类提供了获取各类日历字段的方法：(就是你代替了date类当中的许多方法)</strong></p>
+<p>因为Calendar的构造方法是protected的，所以不能直接创建对象。要通过</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Calendar calendar = Calendar.getInstance();来设置Calendar对象。</span><br><span class="line">Calendar的方法很多，get最常见，int year = calendar.get(calendar.YEAR);这样输出的就是今年的年份了。</span><br><span class="line">int year = calendar.get(calendar.YEAR);</span><br><span class="line">int month = calendar.get(calendar.MONTH);</span><br><span class="line">int day = calendar.get(calendar.DAY_OF_WEEK);</span><br><span class="line">int hour = calendar.get(calendar.HOUR);</span><br><span class="line">int minute = calendar.get(calendar.MINUTE);</span><br><span class="line">int second = calendar.get(calendar.SECOND);</span><br><span class="line">这样分别定义了年，月，日，小时，分钟，秒。用get()方法!</span><br><span class="line">calendar.getActualMaximum()可以输出括号内的最大值，如calendar.getActualMaximum(Calendar.DAY_OF_MOUTH),可以输出月份的最大值30.</span><br><span class="line">同理calendar.getActualMinimum()</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package bilibili;</span><br><span class="line"></span><br><span class="line">class Oouter &#123;</span><br><span class="line">    class Inter &#123;</span><br><span class="line">        Inter() &#123;</span><br><span class="line">            System.out.println(&quot;这是内部类&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Outer&#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Oouter oouter = new Oouter();</span><br><span class="line">        Oouter.Inter inter = oouter.new Inter();//这里最最重要</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-----------------------------------------------------------------------------</span><br><span class="line">内部类的概念：在一个类的内部再定义一个完整的类，内部类也会生成class文件。但是有$符号。</span><br></pre></td></tr></table></figure>
-
-<p>1.声明内部类的对象的方法是：</p>
-<p><strong>外部类名(点)内部类名(空格)内部类对象 = 外部类对象(点)new(空格)内部类名（）；</strong></p>
-<p>比如现在<strong>外部类名Outer，内部类名Inter，外部类对象outer，内部类对象inter</strong>，则：</p>
-<p>Outer.Inter inter = outer.new Inter();</p>
-<p>内部类可以调用外部类的私有属性，当然也可以调用外部私有方法，但是当内部类加上了static后就不能调用外部类的private属性了。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">private int a()&#123;</span><br><span class="line">    int a = 20;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br><span class="line">class Inter &#123;</span><br><span class="line">    public void print() &#123;</span><br><span class="line">        System.out.println(a());</span><br><span class="line">        System.out.println(&quot;这是内部类&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2.局部内部类：在方法里面定义类；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3.匿名内部类：没有名字的类：</span><br><span class="line">假设我们有一个类Apple，Apple里面有一个a方法，我们可以先不对Apple进行实例化，直接使用new Apple().a()来调用a方法.</span><br><span class="line">匿名内部类一般用在接口或者父类当中。</span><br><span class="line">匿名内部类必须在声明对象之后，然后在后面可以调用该匿名内部类的方法，该内部类是匿名的，然后要用声明的对象的名字。</span><br><span class="line">匿名内部类必须继承父类或者实现一个接口。</span><br></pre></td></tr></table></figure>
-
-<p>4.静态内部类：不依赖外部类，可直接创建或通过类名访问，可声明静态成员。</p>
-<p><strong>特点：</strong></p>
-<p>1.在内部类中可以调用内部类的私有方法，但是调用外部类的私有方法用（外部类的对象）.私有名字。</p>
-<p>2.只有外部类可以是静态的，内部类不行。</p>
-<p>3.内部类想要访问局部变量，需要局部变量是final修饰的（局部变量即方法里面定义的变量）</p>
-<p>4.内部类也可以继承接口用implements</p>
+<p><strong>三、SimpleDateFormat类用于格式化解析日期：（import java.text.SimpleDateFormat）</strong></p>
+<p>1.创建SimpleDateFormat对象：(Y：年，M:月，d：日，H：小时，m:分钟，s：秒)</p>
+<p>SimpleDateFormat sim = new SimpleDateFormat(“YYYY年MM月dd日 HH:mm:ss”)</p>
+<p>2.//创建date：</p>
+<p>Date date = new Date();</p>
+<p>//格式化date</p>
+<p>String str = sim.format(date);</p>
+<p>这时候再把str打印出来就可以得到—–2021年11月08日 10:27:08</p>
+<p><strong>四、System类（很重要！）</strong></p>
+<p>私有类，不需要创建对象，并且方法是静态的。</p>
+<p>方法：</p>
+<p><strong>1.arraycopy：用于复制数组</strong></p>
+<p>arraycopy(src,srcPos,dest,destPos,length)有五个参数</p>
+<p>//src:原数组，srcPos：从什么位置开始复制，dest：目标数组，destPos:目标数组的位置</p>
+<p>要注意目标数组长度要大于等于原数组长度。</p>
+<p><strong>2.currentTimeMillis：获取当前系统时间，返回毫秒值。</strong></p>
+<p>可以用来计算程序执行的时间，在程序前面加个start在程序后面加个end。</p>
+<p><strong>3.gc()：建议JVM使用垃圾回收器回收垃圾。</strong></p>
+<p>用来回收不用的对象。</p>
+<p>4.exit(int status)：退出JVM，参数是0表示正常退出，参数是-1表示异常退出。</p>
+<p>在exit后面的语句当然就不执行了！</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -373,6 +418,24 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--抽象类“</title>
+    <url>/2022/02/09/JAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
+    <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
+<span id="more"></span>
+
+<p>1.当子类继承的父类当中有抽象的方法时，子类必须要重写抽象方法</p>
+<p>2.java里面的类是单继承的，但是接口时多继承的</p>
+<p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
+<p>4.抽象方法必须在抽象类里面</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA--封装</title>
     <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
     <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
@@ -387,69 +450,6 @@
 <p>2.统一接口（唯一接口只有get/set）</p>
 <p>3.隐藏代码实现细节</p>
 <p>4.系统的可维护性增加</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--常用类“</title>
-    <url>/2022/02/09/JAVA-%E5%B8%B8%E7%94%A8%E7%B1%BB/</url>
-    <content><![CDATA[<p>介绍两个类：Date和Calendar</p>
-<p><strong>一、Date表示特定的瞬间，精确到毫秒。</strong></p>
-<p>1.创建date对象：</p>
-<p>Date date=new Date();</p>
-<p>2.一些方法：直接打印date：输出当前的时间。</p>
-<p>打印date.getTime输出从1970.1.1到现在所有的毫秒数。</p>
-<p>方法after和before:直接加一天。</p>
-<p>compareTo方法，date1.toString(date2)，是date1-date2.</p>
-<p>当然也可以用equal方法。</p>
-<p><strong>二、Calendar类提供了获取各类日历字段的方法：(就是你代替了date类当中的许多方法)</strong></p>
-<p>因为Calendar的构造方法是protected的，所以不能直接创建对象。要通过</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Calendar calendar = Calendar.getInstance();来设置Calendar对象。</span><br><span class="line">Calendar的方法很多，get最常见，int year = calendar.get(calendar.YEAR);这样输出的就是今年的年份了。</span><br><span class="line">int year = calendar.get(calendar.YEAR);</span><br><span class="line">int month = calendar.get(calendar.MONTH);</span><br><span class="line">int day = calendar.get(calendar.DAY_OF_WEEK);</span><br><span class="line">int hour = calendar.get(calendar.HOUR);</span><br><span class="line">int minute = calendar.get(calendar.MINUTE);</span><br><span class="line">int second = calendar.get(calendar.SECOND);</span><br><span class="line">这样分别定义了年，月，日，小时，分钟，秒。用get()方法!</span><br><span class="line">calendar.getActualMaximum()可以输出括号内的最大值，如calendar.getActualMaximum(Calendar.DAY_OF_MOUTH),可以输出月份的最大值30.</span><br><span class="line">同理calendar.getActualMinimum()</span><br></pre></td></tr></table></figure>
-
-<p><strong>三、SimpleDateFormat类用于格式化解析日期：（import java.text.SimpleDateFormat）</strong></p>
-<p>1.创建SimpleDateFormat对象：(Y：年，M:月，d：日，H：小时，m:分钟，s：秒)</p>
-<p>SimpleDateFormat sim = new SimpleDateFormat(“YYYY年MM月dd日 HH:mm:ss”)</p>
-<p>2.//创建date：</p>
-<p>Date date = new Date();</p>
-<p>//格式化date</p>
-<p>String str = sim.format(date);</p>
-<p>这时候再把str打印出来就可以得到—–2021年11月08日 10:27:08</p>
-<p><strong>四、System类（很重要！）</strong></p>
-<p>私有类，不需要创建对象，并且方法是静态的。</p>
-<p>方法：</p>
-<p><strong>1.arraycopy：用于复制数组</strong></p>
-<p>arraycopy(src,srcPos,dest,destPos,length)有五个参数</p>
-<p>//src:原数组，srcPos：从什么位置开始复制，dest：目标数组，destPos:目标数组的位置</p>
-<p>要注意目标数组长度要大于等于原数组长度。</p>
-<p><strong>2.currentTimeMillis：获取当前系统时间，返回毫秒值。</strong></p>
-<p>可以用来计算程序执行的时间，在程序前面加个start在程序后面加个end。</p>
-<p><strong>3.gc()：建议JVM使用垃圾回收器回收垃圾。</strong></p>
-<p>用来回收不用的对象。</p>
-<p>4.exit(int status)：退出JVM，参数是0表示正常退出，参数是-1表示异常退出。</p>
-<p>在exit后面的语句当然就不执行了！</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--抽象类“</title>
-    <url>/2022/02/09/JAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
-    <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
-<span id="more"></span>
-
-<p>1.当子类继承的父类当中有抽象的方法时，子类必须要重写抽象方法</p>
-<p>2.java里面的类是单继承的，但是接口时多继承的</p>
-<p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
-<p>4.抽象方法必须在抽象类里面</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -478,6 +478,51 @@
 <p>int num = 20;</p>
 <p>Integer integer = num;</p>
 <p>String s = integer.tostring(num，10)//这里解释一下，tostring括号里面的num是要转换为字符串的数字，后面的10是转换为10进制的，当然也可以变成8/16转换成八进制十六进制。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--接口interface“</title>
+    <url>/2022/02/09/JAVA-%E6%8E%A5%E5%8F%A3interface/</url>
+    <content><![CDATA[<p> 1.接口只有规范，无法写方法，是专业的抽象。实现约束和实现分离，面向接口编程。</p>
+<span id="more"></span>
+
+<p>2.接口就是规范，约束了编程的行为</p>
+<p>写一个接口：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public interface jiekou &#123;//这是一个接口，下面实行增删改查</span><br><span class="line">    void insert();</span><br><span class="line">    void delete();</span><br><span class="line">    void update();</span><br><span class="line">    void select();</span><br><span class="line">    //上面的四个方法都是在接口里面的方法，固定为抽象方法，抽象的abstract可以省略，直接用返回值+方法名来定义方法即可；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（抽象）类只能单继承，但是接口可以多继承，这就是接口的好处；</p>
+<p>继承接口用关键字implement，格式为：class+类名+implement+接口名{}</p>
+<p>实现了接口中的类就要重写接口中的方法，接口的多继承用逗号连接实现。</p>
+<p>接口的作用</p>
+<p><img src="https://img-blog.csdnimg.cn/9ec1434941764960bada7de63fcf34be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--捕获异常“</title>
+    <url>/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<p> 捕获异常的知识点</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
+<p>假设要捕获多个异常，从大到小。</p>
+<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -524,30 +569,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--接口interface“</title>
-    <url>/2022/02/09/JAVA-%E6%8E%A5%E5%8F%A3interface/</url>
-    <content><![CDATA[<p> 1.接口只有规范，无法写方法，是专业的抽象。实现约束和实现分离，面向接口编程。</p>
-<span id="more"></span>
-
-<p>2.接口就是规范，约束了编程的行为</p>
-<p>写一个接口：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public interface jiekou &#123;//这是一个接口，下面实行增删改查</span><br><span class="line">    void insert();</span><br><span class="line">    void delete();</span><br><span class="line">    void update();</span><br><span class="line">    void select();</span><br><span class="line">    //上面的四个方法都是在接口里面的方法，固定为抽象方法，抽象的abstract可以省略，直接用返回值+方法名来定义方法即可；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（抽象）类只能单继承，但是接口可以多继承，这就是接口的好处；</p>
-<p>继承接口用关键字implement，格式为：class+类名+implement+接口名{}</p>
-<p>实现了接口中的类就要重写接口中的方法，接口的多继承用逗号连接实现。</p>
-<p>接口的作用</p>
-<p><img src="https://img-blog.csdnimg.cn/9ec1434941764960bada7de63fcf34be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JAVA--数组（基础）</title>
     <url>/2022/02/09/JAVA-%E6%95%B0%E7%BB%84%EF%BC%88%E5%9F%BA%E7%A1%80%EF%BC%89/</url>
     <content><![CDATA[<p> <strong>有关数组的基础知识</strong></p>
@@ -575,76 +596,6 @@
 <p>1.数组的长度是确定的，一旦数组被确定，它的长度就不能被更改。</p>
 <p>2.数组的内容可以是所有的类型（基本类型和引用类型都可以），但是数组不能是多种类型的混合，只能是单独一种类型。</p>
 <p>3.数组本身是在堆当中的。</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--方法盘点“</title>
-    <url>/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E7%9B%98%E7%82%B9/</url>
-    <content><![CDATA[<p>介绍四个方法</p>
-<span id="more"></span>
-
-<p><strong>getCalss()方法：</strong></p>
-<p>1.使用方法:<strong>对象.getClass()</strong>;</p>
-<p>2.有什么用：返回对象的内容，比如这个对象是A类的，那就返回A类给getClass()，返回的值是Class类型的。</p>
-<p><strong>hashcode()方法：</strong></p>
-<p>1.使用方法:<strong>对象.hashcode()</strong>;</p>
-<p>2.返回一个值，哈希码的值实际上是对象的地址或者字符串之类的，所以相同对象返回相同哈希码。</p>
-<p><strong>toString()方法</strong>：</p>
-<p>1.其实也就是返回getclass和hashcode的合体，但是哈希值是十六进制的。</p>
-<p>qeual方法：</p>
-<p>return(this == 一个类对象)</p>
-<p>System.out.println(s1.equal(s2)) #判断s1和s2对象是否相等。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/017447037a9afaba91fed9ca66807b05.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA--方法重写</title>
-    <url>/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/</url>
-    <content><![CDATA[<p>方法的调用只和左边有关，即A a/B b</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/e3ae7194364e47b2b5dd489751a7ae95.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>方法的重写不要用static，</p>
-<p><img src="https://img-blog.csdnimg.cn/74ba5f5219e542c88cbe7cfa66795b61.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_13,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>因为b是A new出来的对象，因此调用了A的方法</strong></p>
-<p><strong>因为静态方法是类的方法，而非静态是对象的方法</strong></p>
-<p><strong>有static时，b调用了B类的方法，因为b是用b类定义的</strong></p>
-<p><strong>没有static时，b调用的是对象的方法，而b是用A类new的</strong></p>
-<p><strong>简单来说就是有static调用后面，没有static调用前面。</strong></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--捕获异常“</title>
-    <url>/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<p> 捕获异常的知识点</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
-<p>假设要捕获多个异常，从大到小。</p>
-<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -709,6 +660,55 @@
       </tags>
   </entry>
   <entry>
+    <title>JAVA--方法重写</title>
+    <url>/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/</url>
+    <content><![CDATA[<p>方法的调用只和左边有关，即A a/B b</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/e3ae7194364e47b2b5dd489751a7ae95.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>方法的重写不要用static，</p>
+<p><img src="https://img-blog.csdnimg.cn/74ba5f5219e542c88cbe7cfa66795b61.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAcXFfNTI1OTk4NzA=,size_13,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>因为b是A new出来的对象，因此调用了A的方法</strong></p>
+<p><strong>因为静态方法是类的方法，而非静态是对象的方法</strong></p>
+<p><strong>有static时，b调用了B类的方法，因为b是用b类定义的</strong></p>
+<p><strong>没有static时，b调用的是对象的方法，而b是用A类new的</strong></p>
+<p><strong>简单来说就是有static调用后面，没有static调用前面。</strong></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--方法盘点“</title>
+    <url>/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E7%9B%98%E7%82%B9/</url>
+    <content><![CDATA[<p>介绍四个方法</p>
+<span id="more"></span>
+
+<p><strong>getCalss()方法：</strong></p>
+<p>1.使用方法:<strong>对象.getClass()</strong>;</p>
+<p>2.有什么用：返回对象的内容，比如这个对象是A类的，那就返回A类给getClass()，返回的值是Class类型的。</p>
+<p><strong>hashcode()方法：</strong></p>
+<p>1.使用方法:<strong>对象.hashcode()</strong>;</p>
+<p>2.返回一个值，哈希码的值实际上是对象的地址或者字符串之类的，所以相同对象返回相同哈希码。</p>
+<p><strong>toString()方法</strong>：</p>
+<p>1.其实也就是返回getclass和hashcode的合体，但是哈希值是十六进制的。</p>
+<p>qeual方法：</p>
+<p>return(this == 一个类对象)</p>
+<p>System.out.println(s1.equal(s2)) #判断s1和s2对象是否相等。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/017447037a9afaba91fed9ca66807b05.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA--构造器</title>
     <url>/2022/02/09/JAVA-%E6%9E%84%E9%80%A0%E5%99%A8/</url>
     <content><![CDATA[<p> 定义一个构造器：（构造方法必须没有返回值）</p>
@@ -732,6 +732,27 @@
 <p>显式定义是什么意思：就是即使方法里面什么东西都没有你也要把该方法写出来。</p>
 <p><strong>其实构造器最大的作用就是初始化值！</strong></p>
 <p><strong>快捷键：在IDEA里面Alt+Insert 快速建立构造器！</strong></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--类的盘点“</title>
+    <url>/2022/02/09/JAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9/</url>
+    <content><![CDATA[<p>先来一个特殊的：</p>
+<p>double res = 1.4-0.5/0.9;</p>
+<span id="more"></span>
+
+<p>System.out.println(res);//这时候输出的会是0.999999999</p>
+<p>这时候就要用到BigDecimal来精确输出double类型的数据了。</p>
+<p>BigDecimal num = new BigDecimal(“0.9”);//这样就可以声明一个BigDecimal数据了。</p>
+<p>当然要在前面加上import java.math.BigDecimal来引入BigDecimal</p>
+<hr>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).</span><br><span class="line">divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>)))<span class="comment">//这样就可以输出1而不是0.9999999了。</span></span><br><span class="line">同样也可以:</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">num</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>))</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -827,27 +848,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--类的盘点“</title>
-    <url>/2022/02/09/JAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9/</url>
-    <content><![CDATA[<p>先来一个特殊的：</p>
-<p>double res = 1.4-0.5/0.9;</p>
-<span id="more"></span>
-
-<p>System.out.println(res);//这时候输出的会是0.999999999</p>
-<p>这时候就要用到BigDecimal来精确输出double类型的数据了。</p>
-<p>BigDecimal num = new BigDecimal(“0.9”);//这样就可以声明一个BigDecimal数据了。</p>
-<p>当然要在前面加上import java.math.BigDecimal来引入BigDecimal</p>
-<hr>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).</span><br><span class="line">divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>)))<span class="comment">//这样就可以输出1而不是0.9999999了。</span></span><br><span class="line">同样也可以:</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">num</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>))</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JAVA--继承</title>
     <url>/2022/02/09/JAVA-%E7%BB%A7%E6%89%BF/</url>
     <content><![CDATA[<p>1.extend的意思是’’拓展，扩大’’,子类是对父类的拓展。</p>
@@ -924,6 +924,20 @@
       </tags>
   </entry>
   <entry>
+    <title>”Linux--Xshell和Xftp“</title>
+    <url>/2022/02/09/Linux-Xshell%E5%92%8CXftp/</url>
+    <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
+<p>不同点：Xftp用于发送文件。</p>
+<p>Xshell可以使用windows来访问Linux，实现远程操控。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”Linux--vi和vim“</title>
     <url>/2022/02/09/Linux-vi%E5%92%8Cvim/</url>
     <content><![CDATA[<p> vim具有编程的能力，是vi的增强版本，代码补全，颜色都有（有点像IDEA） </p>
@@ -962,20 +976,6 @@
 <p>若是普通用户登录后需要获得管理员权限，使用su-用户名 即可。</p>
 <p>使用logout来注销用户登录（在运行级别三上面有用）</p>
 <p>在root情况下logout退到你原来的用户，再使用一次logout退出系统！</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”Linux--Xshell和Xftp“</title>
-    <url>/2022/02/09/Linux-Xshell%E5%92%8CXftp/</url>
-    <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
-<p>不同点：Xftp用于发送文件。</p>
-<p>Xshell可以使用windows来访问Linux，实现远程操控。</p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -1152,25 +1152,25 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo d出错时的解决办法</title>
-    <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
-<span id="more"></span>
+    <title>NFT--MetaMask的创建</title>
+    <url>/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/</url>
+    <content><![CDATA[<h3 id="Chrome中的MetaMask钱包的创建"><a href="#Chrome中的MetaMask钱包的创建" class="headerlink" title="Chrome中的MetaMask钱包的创建"></a>Chrome中的MetaMask钱包的创建</h3><span id="more"></span>
 
-<p>删除blog/.deploy_git文件</p>
-<p>然后输入</p>
-<p>git config –gloabl core.autocrlf false`</p>
-<p>重新</p>
-<p>hexo clean</p>
-<p>hexo g</p>
-<p>hexo d</p>
-<p>部署</p>
+<p>1.先把MetaMask添加到Chrome插件</p>
+<p>2.按照提示设置密码</p>
+<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164451817.png" alt="image-20220605164451817"></p>
+<p>3.每个账户都会有一个专属的助记词，<strong>请记住你的助记词，很重要</strong></p>
+<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164617756.png" alt="image-20220605164617756"></p>
+<p>4.为了确保你记住会让你确认一遍</p>
+<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605165616940.png" alt="image-20220605165616940"></p>
+<p>5.完成之后就创建好你的MetaMask账户了！</p>
+<p>6.再登陆Mintable.app网站（用于NFT的购买和售卖）创建账户，和你的Meta Mask账户连接即可进行NFT的购买和售卖。</p>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>NFT</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>NFT</tag>
       </tags>
   </entry>
   <entry>
@@ -2263,25 +2263,25 @@
       </tags>
   </entry>
   <entry>
-    <title>NFT--MetaMask的创建</title>
-    <url>/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/</url>
-    <content><![CDATA[<h3 id="Chrome中的MetaMask钱包的创建"><a href="#Chrome中的MetaMask钱包的创建" class="headerlink" title="Chrome中的MetaMask钱包的创建"></a>Chrome中的MetaMask钱包的创建</h3><span id="more"></span>
+    <title>hexo d出错时的解决办法</title>
+    <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
+<span id="more"></span>
 
-<p>1.先把MetaMask添加到Chrome插件</p>
-<p>2.按照提示设置密码</p>
-<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164451817.png" alt="image-20220605164451817"></p>
-<p>3.每个账户都会有一个专属的助记词，<strong>请记住你的助记词，很重要</strong></p>
-<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164617756.png" alt="image-20220605164617756"></p>
-<p>4.为了确保你记住会让你确认一遍</p>
-<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605165616940.png" alt="image-20220605165616940"></p>
-<p>5.完成之后就创建好你的MetaMask账户了！</p>
-<p>6.再登陆Mintable.app网站（用于NFT的购买和售卖）创建账户，和你的Meta Mask账户连接即可进行NFT的购买和售卖。</p>
+<p>删除blog/.deploy_git文件</p>
+<p>然后输入</p>
+<p>git config –gloabl core.autocrlf false`</p>
+<p>重新</p>
+<p>hexo clean</p>
+<p>hexo g</p>
+<p>hexo d</p>
+<p>部署</p>
 ]]></content>
       <categories>
-        <category>NFT</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>NFT</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -2590,29 +2590,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”python--深拷贝和浅拷贝“</title>
-    <url>/2022/02/09/python-%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
-    <content><![CDATA[<p><strong>假设B复制了A，当修改A时，看B是否会发生变化，如果B也跟着变了，说明这是浅拷贝，拿人手短，如果B没变，那就是深拷贝，自食其力。</strong></p>
-<span id="more"></span>
-
-<p>浅拷贝的实现方法：</p>
-<p>x=…..</p>
-<p>y=copy.copy(x)</p>
-<p>深拷贝的实现方法：</p>
-<p>x=…</p>
-<p>y=copy.deepcopy(x)</p>
-<p>其中第一个copy是copy模块</p>
-<p><img src="https://img-blog.csdnimg.cn/550469b3a1764d3d9357df29840651d2.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这样的copy是浅拷贝</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”python--字符串“</title>
     <url>/2022/02/09/python-%E5%AD%97%E7%AC%A6%E4%B8%B2OLD/</url>
     <content><![CDATA[<p>在打印文本的时候如果不想显示转义字符的结果，可以在字符串的引号前面加上r。</p>
@@ -2687,6 +2664,53 @@
       </tags>
   </entry>
   <entry>
+    <title>”python--除和地板除“</title>
+    <url>/2022/02/09/python-%E9%99%A4%E5%92%8C%E5%9C%B0%E6%9D%BF%E9%99%A4/</url>
+    <content><![CDATA[<p>3/2=1.5这个谁都懂</p>
+<p>但是3//2=1这个代表3/2的结果向下取整，称之为地板除。</p>
+<span id="more"></span>
+
+<p>如-5//2，先算-5/2=-2.5，再向下取整，得-3。</p>
+<p>我们还可以使用python的内置函数divmod（）</p>
+<p>如divmod(3,2)=(1,1)结果中的第一个1代表着3//2的结果，第二个1代表着3%2的结果。</p>
+<p>内置函数abs，如abs（x）意思是取x的绝对值</p>
+<p>任何数据类型后面加括号加值的结果都是强制转换成该数据类型。</p>
+<p>如：x=2.5</p>
+<p>int（x）的结果就是2，向下取整！</p>
+<p>pow(2,3)代表2的三次方，和2**3的效果一样。</p>
+<p>pow（2,3,4）代表着2**3%4即2的三次方结果除四的余数！</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--深拷贝和浅拷贝“</title>
+    <url>/2022/02/09/python-%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
+    <content><![CDATA[<p><strong>假设B复制了A，当修改A时，看B是否会发生变化，如果B也跟着变了，说明这是浅拷贝，拿人手短，如果B没变，那就是深拷贝，自食其力。</strong></p>
+<span id="more"></span>
+
+<p>浅拷贝的实现方法：</p>
+<p>x=…..</p>
+<p>y=copy.copy(x)</p>
+<p>深拷贝的实现方法：</p>
+<p>x=…</p>
+<p>y=copy.deepcopy(x)</p>
+<p>其中第一个copy是copy模块</p>
+<p><img src="https://img-blog.csdnimg.cn/550469b3a1764d3d9357df29840651d2.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这样的copy是浅拷贝</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python--集合</title>
     <url>/2022/02/17/python-%E9%9B%86%E5%90%88/</url>
     <content><![CDATA[<h1 id="一些集合的基本操作"><a href="#一些集合的基本操作" class="headerlink" title="一些集合的基本操作"></a>一些集合的基本操作</h1><span id="more"></span>
@@ -2751,46 +2775,6 @@
       </tags>
   </entry>
   <entry>
-    <title>web--将web内容上传服务器</title>
-    <url>/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<h4 id="先上总结"><a href="#先上总结" class="headerlink" title="先上总结"></a>先上总结</h4><p>1.先用原始服务器的实例创建一个ubuntu镜像，记住镜像的账号（root）和密码。<br>2.先使用cmd进行root连接：（ssh <a href="mailto:&#114;&#111;&#x6f;&#116;&#x40;&#x31;&#x32;&#x30;&#46;&#x37;&#55;&#x2e;&#49;&#55;&#46;&#50;&#x31;&#x36;">&#114;&#111;&#x6f;&#116;&#x40;&#x31;&#x32;&#x30;&#46;&#x37;&#55;&#x2e;&#49;&#55;&#46;&#50;&#x31;&#x36;</a>）当然使用putty或者Xshell同样可以<br>3.使用Xftp7上传对应的web网页到服务器对应的目录中，目录为var\www\html（其中的var目录是和root同级目录）<br>4.上传之后，在浏览器中使用公网的ip即可看到网页。<br>试了一天TT</p>
-<span id="more"></span>
-
-<h4 id="参考视频，资料"><a href="#参考视频，资料" class="headerlink" title="参考视频，资料"></a>参考视频，资料</h4><p>b站视频：<a href="https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click</a></p>
-<p>博客园日志：<a href="http://t.zoukankan.com/chrischen98-p-10874821.html%EF%BC%88%E4%B8%8A%E5%8D%88%E4%B8%80%E7%9B%B4%E7%9C%8B%E8%BF%99%E4%B8%AA%EF%BC%8C%E4%BD%86%E6%98%AF%E7%94%A8%E4%BA%86iis%E4%B9%8B%E5%90%8E%E7%BD%91%E9%A1%B5%E4%B8%80%E7%9B%B4%E4%B8%8D%E6%98%BE%E7%A4%BA,%E8%AE%BE%E7%BD%AE%E5%95%A5%E7%AB%AF%E5%8F%A3%E9%83%BD%E6%B2%A1%E7%94%A8%EF%BC%89">http://t.zoukankan.com/chrischen98-p-10874821.html（上午一直看这个，但是用了iis之后网页一直不显示,设置啥端口都没用）</a></p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--除和地板除“</title>
-    <url>/2022/02/09/python-%E9%99%A4%E5%92%8C%E5%9C%B0%E6%9D%BF%E9%99%A4/</url>
-    <content><![CDATA[<p>3/2=1.5这个谁都懂</p>
-<p>但是3//2=1这个代表3/2的结果向下取整，称之为地板除。</p>
-<span id="more"></span>
-
-<p>如-5//2，先算-5/2=-2.5，再向下取整，得-3。</p>
-<p>我们还可以使用python的内置函数divmod（）</p>
-<p>如divmod(3,2)=(1,1)结果中的第一个1代表着3//2的结果，第二个1代表着3%2的结果。</p>
-<p>内置函数abs，如abs（x）意思是取x的绝对值</p>
-<p>任何数据类型后面加括号加值的结果都是强制转换成该数据类型。</p>
-<p>如：x=2.5</p>
-<p>int（x）的结果就是2，向下取整！</p>
-<p>pow(2,3)代表2的三次方，和2**3的效果一样。</p>
-<p>pow（2,3,4）代表着2**3%4即2的三次方结果除四的余数！</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数值分析--Lagrange插值</title>
     <url>/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Lagrange%E6%8F%92%E5%80%BC/</url>
     <content><![CDATA[<p>拉格朗日插值法分为一次插值，两次插值直到n次插值，划分的方法是有两个点就有一次插值，有三个点就有两次插值，同理可以推出有n个点就有n-1次插值。</p>
@@ -2809,6 +2793,22 @@
       </tags>
   </entry>
   <entry>
+    <title>web--将web内容上传服务器</title>
+    <url>/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<h4 id="先上总结"><a href="#先上总结" class="headerlink" title="先上总结"></a>先上总结</h4><p>1.先用原始服务器的实例创建一个ubuntu镜像，记住镜像的账号（root）和密码。<br>2.先使用cmd进行root连接：（ssh <a href="mailto:&#114;&#111;&#111;&#x74;&#64;&#49;&#50;&#48;&#46;&#x37;&#x37;&#x2e;&#x31;&#x37;&#x2e;&#x32;&#49;&#54;">&#114;&#111;&#111;&#x74;&#64;&#49;&#50;&#48;&#46;&#x37;&#x37;&#x2e;&#x31;&#x37;&#x2e;&#x32;&#49;&#54;</a>）当然使用putty或者Xshell同样可以<br>3.使用Xftp7上传对应的web网页到服务器对应的目录中，目录为var\www\html（其中的var目录是和root同级目录）<br>4.上传之后，在浏览器中使用公网的ip即可看到网页。<br>试了一天TT</p>
+<span id="more"></span>
+
+<h4 id="参考视频，资料"><a href="#参考视频，资料" class="headerlink" title="参考视频，资料"></a>参考视频，资料</h4><p>b站视频：<a href="https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click</a></p>
+<p>博客园日志：<a href="http://t.zoukankan.com/chrischen98-p-10874821.html%EF%BC%88%E4%B8%8A%E5%8D%88%E4%B8%80%E7%9B%B4%E7%9C%8B%E8%BF%99%E4%B8%AA%EF%BC%8C%E4%BD%86%E6%98%AF%E7%94%A8%E4%BA%86iis%E4%B9%8B%E5%90%8E%E7%BD%91%E9%A1%B5%E4%B8%80%E7%9B%B4%E4%B8%8D%E6%98%BE%E7%A4%BA,%E8%AE%BE%E7%BD%AE%E5%95%A5%E7%AB%AF%E5%8F%A3%E9%83%BD%E6%B2%A1%E7%94%A8%EF%BC%89">http://t.zoukankan.com/chrischen98-p-10874821.html（上午一直看这个，但是用了iis之后网页一直不显示,设置啥端口都没用）</a></p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数值分析--Newton插值</title>
     <url>/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Newton%E6%8F%92%E5%80%BC/</url>
     <content><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在拉格朗日插值中解决了Ln(x)的问题，那么要解决L2(x)=L1(x)+？中的？是什么，我们需要引入牛顿插值来解决</p>
@@ -2819,6 +2819,36 @@
 <p>C1 = f[x0,x1] = [f(x1)-f(x0)]/x1-x0</p>
 <p>C2 = f[x0,x1,x2] = f(x1)-f(x0)/x1-x0 ……</p>
 <h3 id="牛顿插值"><a href="#牛顿插值" class="headerlink" title="牛顿插值"></a>牛顿插值</h3><p>Nn(x) = C0 + C1(x-x0) + C2 (x-x0)(x-x1) + … + Cn(x-x0)(x-x1)..(x-xn)</p>
+]]></content>
+      <categories>
+        <category>数值分析</category>
+      </categories>
+      <tags>
+        <tag>数值分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数值分析-- 误差</title>
+    <url>/2022/03/07/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-%E8%AF%AF%E5%B7%AE/</url>
+    <content><![CDATA[<h3 id="误差和误差限"><a href="#误差和误差限" class="headerlink" title="误差和误差限"></a>误差和误差限</h3><span id="more"></span>
+
+<p>设X* 为X的一个近似值（可大于X也可小于X），有e* =  X-X* ,称e* 为<strong>绝对误差</strong>，简称<strong>误差</strong>。</p>
+<p>易得出结论：当绝对误差大于0时，近似值大于真实值，称为<strong>强近似值</strong>；当绝对误差小于0时，近似值小于真实值，称为<strong>弱近似值</strong>。</p>
+<p>误差的绝对值不超过某个正数E* ，称这个正数E<em>为近似值的*<em>误差限</em></em> </p>
+<h3 id="相对误差和相对误差限"><a href="#相对误差和相对误差限" class="headerlink" title="相对误差和相对误差限"></a>相对误差和相对误差限</h3><p>**相对误差:*<em>指的是近似值e</em> 与真实值X的比值，称为e(r)*（右下角有个小r）</p>
+<p><strong>相对误差限：</strong>相对误差不能超过相对误差限E(r)* ，E(r)* =E* / |x*|</p>
+<h3 id="绝对误差的计算方法"><a href="#绝对误差的计算方法" class="headerlink" title="绝对误差的计算方法"></a>绝对误差的计算方法</h3><p><strong>注意：绝对误差限一定是一个单位的半个单位，如0.5，0.05，0.005，0.0005等等，那么换成科学计数法的形式就可以变成1/2 * 10^-p</strong></p>
+<p><strong>（其中p取正整数！）这时，-p就可以换成另一种表示方法，-p = m-n+1  （其中m是小数点离第一个非0数字的后一位有多远，如123.45的m就是2，而0.00123的m就是-3）（其中n是有几位有效数字如123.45就有5为有效数字，那么n就是5.）通常情况下都是知道了m和n要去求p的！！</strong></p>
+<p>例如“派”取近似值3.14，那么|3.14-“派”| = 0.0015926&lt;=0.005=1/2 * 10^-2，则绝对误差限就是1/2 * 10^-2</p>
+<h3 id="相对误差的计算方法"><a href="#相对误差的计算方法" class="headerlink" title="相对误差的计算方法"></a>相对误差的计算方法</h3><p>若近似值有n为有效数字，其中a是近似值的个位数。</p>
+<p>E(r)*&lt;=1/2a * 10^-(n-1)</p>
+<h3 id="误差估计中的重要公式"><a href="#误差估计中的重要公式" class="headerlink" title="误差估计中的重要公式"></a>误差估计中的重要公式</h3><p>E(x1* +- x2* ) = E(x1* ) +- E(x2*)</p>
+<p><em><em>E(x1</em> * x2</em> ) = |x1*| * E(x2*) + |x2 *| * E(x1 *)**这个公式在平常的运算中常常能用得上。</p>
+<p>E(x1* / x2* ) = |x1*| * E(x2*) + |x2 *| * E(x1 *) / |x2 *|^2    这是上面那一条的除法运算</p>
+<h3 id="误差中的规则"><a href="#误差中的规则" class="headerlink" title="误差中的规则"></a>误差中的规则</h3><p>1.要避免除数的绝对值远远小于被除数绝对值的除法</p>
+<p>2.避免出现有效数字少的相减如x=123.401,  y = 123.412  ，那么y-x =0.011只有两位有效数字。</p>
+<p>3.防止大数吃掉小数</p>
+<p>4.注意简化运算流程，简化运算步骤</p>
 ]]></content>
       <categories>
         <category>数值分析</category>
@@ -2916,61 +2946,6 @@
       </categories>
       <tags>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数值分析-- 误差</title>
-    <url>/2022/03/07/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-%E8%AF%AF%E5%B7%AE/</url>
-    <content><![CDATA[<h3 id="误差和误差限"><a href="#误差和误差限" class="headerlink" title="误差和误差限"></a>误差和误差限</h3><span id="more"></span>
-
-<p>设X* 为X的一个近似值（可大于X也可小于X），有e* =  X-X* ,称e* 为<strong>绝对误差</strong>，简称<strong>误差</strong>。</p>
-<p>易得出结论：当绝对误差大于0时，近似值大于真实值，称为<strong>强近似值</strong>；当绝对误差小于0时，近似值小于真实值，称为<strong>弱近似值</strong>。</p>
-<p>误差的绝对值不超过某个正数E* ，称这个正数E<em>为近似值的*<em>误差限</em></em> </p>
-<h3 id="相对误差和相对误差限"><a href="#相对误差和相对误差限" class="headerlink" title="相对误差和相对误差限"></a>相对误差和相对误差限</h3><p>**相对误差:*<em>指的是近似值e</em> 与真实值X的比值，称为e(r)*（右下角有个小r）</p>
-<p><strong>相对误差限：</strong>相对误差不能超过相对误差限E(r)* ，E(r)* =E* / |x*|</p>
-<h3 id="绝对误差的计算方法"><a href="#绝对误差的计算方法" class="headerlink" title="绝对误差的计算方法"></a>绝对误差的计算方法</h3><p><strong>注意：绝对误差限一定是一个单位的半个单位，如0.5，0.05，0.005，0.0005等等，那么换成科学计数法的形式就可以变成1/2 * 10^-p</strong></p>
-<p><strong>（其中p取正整数！）这时，-p就可以换成另一种表示方法，-p = m-n+1  （其中m是小数点离第一个非0数字的后一位有多远，如123.45的m就是2，而0.00123的m就是-3）（其中n是有几位有效数字如123.45就有5为有效数字，那么n就是5.）通常情况下都是知道了m和n要去求p的！！</strong></p>
-<p>例如“派”取近似值3.14，那么|3.14-“派”| = 0.0015926&lt;=0.005=1/2 * 10^-2，则绝对误差限就是1/2 * 10^-2</p>
-<h3 id="相对误差的计算方法"><a href="#相对误差的计算方法" class="headerlink" title="相对误差的计算方法"></a>相对误差的计算方法</h3><p>若近似值有n为有效数字，其中a是近似值的个位数。</p>
-<p>E(r)*&lt;=1/2a * 10^-(n-1)</p>
-<h3 id="误差估计中的重要公式"><a href="#误差估计中的重要公式" class="headerlink" title="误差估计中的重要公式"></a>误差估计中的重要公式</h3><p>E(x1* +- x2* ) = E(x1* ) +- E(x2*)</p>
-<p><em><em>E(x1</em> * x2</em> ) = |x1*| * E(x2*) + |x2 *| * E(x1 *)**这个公式在平常的运算中常常能用得上。</p>
-<p>E(x1* / x2* ) = |x1*| * E(x2*) + |x2 *| * E(x1 *) / |x2 *|^2    这是上面那一条的除法运算</p>
-<h3 id="误差中的规则"><a href="#误差中的规则" class="headerlink" title="误差中的规则"></a>误差中的规则</h3><p>1.要避免除数的绝对值远远小于被除数绝对值的除法</p>
-<p>2.避免出现有效数字少的相减如x=123.401,  y = 123.412  ，那么y-x =0.011只有两位有效数字。</p>
-<p>3.防止大数吃掉小数</p>
-<p>4.注意简化运算流程，简化运算步骤</p>
-]]></content>
-      <categories>
-        <category>数值分析</category>
-      </categories>
-      <tags>
-        <tag>数值分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习--AdaBoost和GBDT</title>
-    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-AdaBoost%E5%92%8CGBDT/</url>
-    <content><![CDATA[<h2 id="AdaBoost模型"><a href="#AdaBoost模型" class="headerlink" title="AdaBoost模型"></a>AdaBoost模型</h2><span id="more"></span>
-
-<h3 id="AdaBoost分类模型"><a href="#AdaBoost分类模型" class="headerlink" title="AdaBoost分类模型"></a>AdaBoost分类模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> AdaBoostClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">model = AdaBoostClassifier(random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
-
-<h3 id="AdaBoost回归模型"><a href="#AdaBoost回归模型" class="headerlink" title="AdaBoost回归模型"></a>AdaBoost回归模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensembel <span class="keyword">import</span> AdaBoostRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">model = AdaBoostRegressor(random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
-
-<h3 id="信用卡案例"><a href="#信用卡案例" class="headerlink" title="信用卡案例"></a>信用卡案例</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excle(<span class="string">&#x27;信用卡精准营销模型.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;响应&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;响应&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,train_test_split=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> AdaBoostClassifier</span><br><span class="line">model = AdaBoostClassifier()</span><br><span class="line">model.fit(X_train,y_train)</span><br><span class="line"></span><br><span class="line"><span class="comment">#评估模型</span></span><br><span class="line">y_pred = model.predict(X_test)</span><br><span class="line">a = pd.DataFrame()<span class="comment">#创建一个空DateFrame</span></span><br><span class="line">a[<span class="string">&#x27;预测值&#x27;</span>] = <span class="built_in">list</span>(y_pred)</span><br><span class="line">a[<span class="string">&#x27;实际值&#x27;</span>] = <span class="built_in">list</span>(y_test)</span><br><span class="line"><span class="comment">#获得所有值</span></span><br><span class="line">score = model.score(X_train,y_train)</span><br><span class="line"><span class="comment">#查看概率(不太懂)</span></span><br><span class="line">y_pred_proba = model.predict_proba(X_test)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="GBDT模型"><a href="#GBDT模型" class="headerlink" title="GBDT模型"></a>GBDT模型</h2><h3 id="GBDT分类模型"><a href="#GBDT分类模型" class="headerlink" title="GBDT分类模型"></a>GBDT分类模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> GradientBoostingClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">model = GradientBoostingClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
-
-<h3 id="GBDT回归模型"><a href="#GBDT回归模型" class="headerlink" title="GBDT回归模型"></a>GBDT回归模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> GradientBoostingRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">model = GradientBoostingRegressor(random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
       </tags>
   </entry>
   <entry>
@@ -3072,6 +3047,31 @@
       </tags>
   </entry>
   <entry>
+    <title>机器学习--AdaBoost和GBDT</title>
+    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-AdaBoost%E5%92%8CGBDT/</url>
+    <content><![CDATA[<h2 id="AdaBoost模型"><a href="#AdaBoost模型" class="headerlink" title="AdaBoost模型"></a>AdaBoost模型</h2><span id="more"></span>
+
+<h3 id="AdaBoost分类模型"><a href="#AdaBoost分类模型" class="headerlink" title="AdaBoost分类模型"></a>AdaBoost分类模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> AdaBoostClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">model = AdaBoostClassifier(random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
+
+<h3 id="AdaBoost回归模型"><a href="#AdaBoost回归模型" class="headerlink" title="AdaBoost回归模型"></a>AdaBoost回归模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensembel <span class="keyword">import</span> AdaBoostRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">model = AdaBoostRegressor(random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
+
+<h3 id="信用卡案例"><a href="#信用卡案例" class="headerlink" title="信用卡案例"></a>信用卡案例</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excle(<span class="string">&#x27;信用卡精准营销模型.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;响应&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;响应&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,train_test_split=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> AdaBoostClassifier</span><br><span class="line">model = AdaBoostClassifier()</span><br><span class="line">model.fit(X_train,y_train)</span><br><span class="line"></span><br><span class="line"><span class="comment">#评估模型</span></span><br><span class="line">y_pred = model.predict(X_test)</span><br><span class="line">a = pd.DataFrame()<span class="comment">#创建一个空DateFrame</span></span><br><span class="line">a[<span class="string">&#x27;预测值&#x27;</span>] = <span class="built_in">list</span>(y_pred)</span><br><span class="line">a[<span class="string">&#x27;实际值&#x27;</span>] = <span class="built_in">list</span>(y_test)</span><br><span class="line"><span class="comment">#获得所有值</span></span><br><span class="line">score = model.score(X_train,y_train)</span><br><span class="line"><span class="comment">#查看概率(不太懂)</span></span><br><span class="line">y_pred_proba = model.predict_proba(X_test)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="GBDT模型"><a href="#GBDT模型" class="headerlink" title="GBDT模型"></a>GBDT模型</h2><h3 id="GBDT分类模型"><a href="#GBDT分类模型" class="headerlink" title="GBDT分类模型"></a>GBDT分类模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> GradientBoostingClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">model = GradientBoostingClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
+
+<h3 id="GBDT回归模型"><a href="#GBDT回归模型" class="headerlink" title="GBDT回归模型"></a>GBDT回归模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> GradientBoostingRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">model = GradientBoostingRegressor(random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>机器学习-- Matplotlib库</title>
     <url>/2022/03/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-Matplotlib%E5%BA%93/</url>
     <content><![CDATA[<p>Matplotlib库用来创建图表</p>
@@ -3139,6 +3139,40 @@
       </tags>
   </entry>
   <entry>
+    <title>机器学习--pandas库</title>
+    <url>/2022/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pandas%E5%BA%93/</url>
+    <content><![CDATA[<p>pandas库基础</p>
+<span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#numpy库用random等函数创建数组，而pandas用Series创建数组</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">s = pd.Series([<span class="string">&#x27;邓&#x27;</span>,<span class="string">&#x27;高&#x27;</span>,<span class="string">&#x27;正&#x27;</span>])	<span class="comment">#Series不单止创建了一维数组，还创建了索引，使用s[i]即可找到对应元素的位置</span></span><br><span class="line"><span class="built_in">print</span>(s[<span class="number">1</span>])	<span class="comment">#高</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="二维数据表格DataFrame的创建"><a href="#二维数据表格DataFrame的创建" class="headerlink" title="二维数据表格DataFrame的创建"></a>二维数据表格DataFrame的创建</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用DataFrame创建二维数组</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">a = pd.DataFrame([<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>])	<span class="comment">#生成的结果会有行索引和列索引，当然我们也可以自定义行列索引，如下</span></span><br><span class="line">a = pd.DataFrame([<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],columns=[<span class="string">&#x27;data&#x27;</span>,<span class="string">&#x27;score&#x27;</span>],index=[<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>])	<span class="comment">#这样就自定义了行列是什么</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#DataFrame同样可以创建字典，字典值默认为列索引</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">b = pd.DataFrame(&#123;<span class="string">&#x27;a&#x27;</span>:[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>],<span class="string">&#x27;b&#x27;</span>:[<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]&#125;,index=[<span class="string">&#x27;x&#x27;</span>,<span class="string">&#x27;y&#x27;</span>,<span class="string">&#x27;z&#x27;</span>])</span><br><span class="line"><span class="comment">#若想让字典为行索引</span></span><br><span class="line">c = pd.DataFrame.from_dict(&#123;<span class="string">&#x27;a&#x27;</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],<span class="string">&#x27;b&#x27;</span>:[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]&#125;,orient=<span class="string">&quot;index&quot;</span>)</span><br><span class="line"><span class="comment">#DataFrame支持将二维表格转置</span></span><br><span class="line">b = pd.DataFrame(&#123;<span class="string">&#x27;a&#x27;</span>:[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>],<span class="string">&#x27;b&#x27;</span>:[<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]&#125;,index=[<span class="string">&#x27;x&#x27;</span>,<span class="string">&#x27;y&#x27;</span>,<span class="string">&#x27;z&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(b.T)	<span class="comment">#打印转置后的表格</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#若要修改行索引和列索引的名字，使用rename函数</span></span><br><span class="line">a = a.rename(columns = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>],index = [<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>])</span><br><span class="line"><span class="comment">#其实上面那个只是创建了一个新的索引并未改变a的内容，需要使用inplace=True才能改变a的内容</span></span><br><span class="line">a = a.rename(columns = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>],index = [<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>]，inplace=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看index索引的值</span></span><br><span class="line">a.index.values()</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Excel表格的读取和写入"><a href="#Excel表格的读取和写入" class="headerlink" title="Excel表格的读取和写入"></a>Excel表格的读取和写入</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用pandas函数</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.read_excel(<span class="string">&#x27;data.xlsx&#x27;</span>)</span><br><span class="line"><span class="comment">#通过打印data可以看到读取表格中的内容</span></span><br><span class="line">data.head(n)		<span class="comment">#其中的n是查看多少行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#read_excel函数还可以设置更多的参数</span></span><br><span class="line">pd.read_excel(<span class="string">&#x27;data.xlsx&#x27;</span>,sheet_name=<span class="number">0</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)	<span class="comment">#其中sheet_name是工作表的位置，可以是工作表的名称，也可以是数字，默认是0，即第1个工作表，encoding自然是编码形式不必多说。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#pd还可以读取csv文件，使用read_csv</span></span><br><span class="line">pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>,delimiter=<span class="string">&#x27;,&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)	<span class="comment">#delimiter指的是指定csv文件中的分隔符。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Excel的写入</span></span><br><span class="line"><span class="comment">#先创建DataFrame</span></span><br><span class="line">data = pd.DataFrame([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>]],columns=[<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>])</span><br><span class="line"><span class="comment">#将data写入excel中</span></span><br><span class="line">data.to_excel(<span class="string">&#x27;data.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#在字符串之前加入r可以取消字符串中反斜杠的意义。</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">r&quot;D:\\niu\\bi&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="数据的选取与处理"><a href="#数据的选取与处理" class="headerlink" title="数据的选取与处理"></a>数据的选取与处理</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#先创建一个二维数组</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.DataFrame(np.arange(<span class="number">1</span>,<span class="number">10</span>,<span class="number">1</span>).reshape(<span class="number">3</span>,<span class="number">3</span>),index=(<span class="string">&#x27;r1&#x27;</span>,<span class="string">&#x27;r2&#x27;</span>,<span class="string">&#x27;r3&#x27;</span>),columns=(<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c2&#x27;</span>,<span class="string">&#x27;c3&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#选择打印一行</span></span><br><span class="line"><span class="built_in">print</span>(data[<span class="string">&#x27;c1&#x27;</span>])</span><br><span class="line"><span class="comment">#选择打印多行</span></span><br><span class="line"><span class="comment">#print([&#x27;c1&#x27;,&#x27;c2&#x27;]),这样的做法是错误的</span></span><br><span class="line"><span class="built_in">print</span>([[<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c2&#x27;</span>]])	<span class="comment">#这样的做法才是正确的！</span></span><br><span class="line"><span class="comment">#要选取第2~3行的数据</span></span><br><span class="line">data[<span class="number">1</span>:<span class="number">3</span>]	<span class="comment">#注意序号从0开始，并且是左闭右开</span></span><br><span class="line"><span class="comment">#python中的pandas库推荐使用iloc函数来选取数组中的行列</span></span><br><span class="line">d = data.iloc[<span class="number">1</span>:<span class="number">3</span>]		<span class="comment">#选取第2~3行</span></span><br><span class="line">e = data.iloc[-<span class="number">1</span>]		<span class="comment">#选取倒数第一行</span></span><br><span class="line"><span class="comment">#还可以使用loc来选取行的名称来实现输出</span></span><br><span class="line">f = data.loc[[<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c2&#x27;</span>]]</span><br><span class="line"><span class="comment">#可以用head函数选取前n行</span></span><br><span class="line">data.head(<span class="number">5</span>)</span><br><span class="line"><span class="comment">#如果只想选取某几行的前几个元素，可以在后面加上[]</span></span><br><span class="line">data.iloc[<span class="number">1</span>:<span class="number">3</span>][<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#数据筛选</span></span><br><span class="line">a = data[data[<span class="string">&#x27;c1&#x27;</span>]&gt;<span class="number">1</span>]		<span class="comment">#选取data中c1列中大于1的数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#查看数据情况</span></span><br><span class="line"><span class="comment">#可以通过DataFrame中的shape属性来查看二维数组的行列</span></span><br><span class="line">data.shape()			<span class="comment">#(3,3)其中，前一个参数是行，后一个参数是列</span></span><br><span class="line"><span class="comment">#使用describe()可以查看每一列的数据个数，平均值，标准差，最小值，最大值等信息</span></span><br><span class="line">data.describe()</span><br><span class="line"></span><br><span class="line"><span class="comment">#通过运算创建新的列或者行</span></span><br><span class="line">data[<span class="string">&#x27;c4&#x27;</span>] = data[<span class="string">&#x27;c3&#x27;</span>] - data[<span class="string">&#x27;c1&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#可以使用sort_values函数来对表格进行排列，其中ascending参数确定是升序还是降序</span></span><br><span class="line">a = data.sort_values(by=<span class="string">&#x27;c2&#x27;</span>,ascending=<span class="literal">False</span>)	<span class="comment">#其中False表示降序排序，True表示升序排序</span></span><br><span class="line"><span class="comment">#通过sort_index函数进行行排序</span></span><br><span class="line">a = a.sort_index(<span class="string">&#x27;r2&#x27;</span>,ascending=<span class="literal">True</span>)			<span class="comment">#同样True表示升序，False表示降序</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#使用drop()函数删除数组中的列或者行</span></span><br><span class="line">a = data.drop(columns=[<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c3&#x27;</span>],index=[<span class="string">&#x27;r2&#x27;</span>],inplace=<span class="literal">True</span>)	<span class="comment">#这里删除了c1和c3两列，和r2这一行，inplace参数表示是否选择改变原表格，默认值为False。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="数据表的拼接"><a href="#数据表的拼接" class="headerlink" title="数据表的拼接"></a>数据表的拼接</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#merge()函数将多个数据表进行合并，merge会自己判断相同的项的位置并进行合并，也可以自己设置on参数来选择按照哪一列来合并</span></span><br><span class="line">df1 = ..... 	<span class="comment">#是一个数据表</span></span><br><span class="line">df2 = .....		<span class="comment">#也是一个数据表</span></span><br><span class="line">df3 = merge(df1,df2,on=<span class="string">&#x27;公司&#x27;</span>)</span><br><span class="line"><span class="comment">#如果想取并值,可以设置how函数。</span></span><br><span class="line">df3 = pd.merge(df1,df2,how=<span class="string">&#x27;outer&#x27;</span>)		<span class="comment">#改成outer即可取并值连接</span></span><br><span class="line"><span class="comment">#如果想保留左表的内容</span></span><br><span class="line">df3 = pd.merge(df1,df2,how=<span class="string">&#x27;left&#x27;</span>)</span><br><span class="line"><span class="comment">#如果想保留右表的内容</span></span><br><span class="line">df3 = pd.merge(df1,df2,how=<span class="string">&#x27;right&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#concat()函数</span></span><br><span class="line"><span class="comment">#concat函数是全连接，不去管是否有相同的值能进行合并，而是直接合并，只有一个可设置参数axis</span></span><br><span class="line">df3 = pd.concat([df1,df2],axis=<span class="number">0</span>)	<span class="comment">#这个表示纵向连接</span></span><br><span class="line">df3 = pd.concat([df1,df2],axis=<span class="number">1</span>)	<span class="comment">#这个表示横向连接</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#append()函数</span></span><br><span class="line"><span class="comment">#append函数可以看成concat函数的简化版</span></span><br><span class="line">df3 = df1.append(df2)</span><br><span class="line"><span class="comment">#append函数还有一个常用功能是在列表里面添加元素</span></span><br><span class="line">df3 = df1.append(&#123;<span class="string">&#x27;公司&#x27;</span>:<span class="string">&#x27;腾讯&#x27;</span>,<span class="string">&#x27;分数&#x27;</span>:<span class="string">&#x27;90.0&#x27;</span>&#125;,ignore_index=<span class="literal">True</span>)	<span class="comment">#这个ignore_index参数是设置忽略原列表中的数值的</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>机器学习-- numpy库</title>
     <url>/2022/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-numpy%E5%BA%93/</url>
     <content><![CDATA[<p>学习numpy库的主要目的是为了后面学习pandas库打下基础</p>
@@ -3170,30 +3204,10 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习--pandas库</title>
-    <url>/2022/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pandas%E5%BA%93/</url>
-    <content><![CDATA[<p>pandas库基础</p>
-<span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#numpy库用random等函数创建数组，而pandas用Series创建数组</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">s = pd.Series([<span class="string">&#x27;邓&#x27;</span>,<span class="string">&#x27;高&#x27;</span>,<span class="string">&#x27;正&#x27;</span>])	<span class="comment">#Series不单止创建了一维数组，还创建了索引，使用s[i]即可找到对应元素的位置</span></span><br><span class="line"><span class="built_in">print</span>(s[<span class="number">1</span>])	<span class="comment">#高</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="二维数据表格DataFrame的创建"><a href="#二维数据表格DataFrame的创建" class="headerlink" title="二维数据表格DataFrame的创建"></a>二维数据表格DataFrame的创建</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用DataFrame创建二维数组</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">a = pd.DataFrame([<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>])	<span class="comment">#生成的结果会有行索引和列索引，当然我们也可以自定义行列索引，如下</span></span><br><span class="line">a = pd.DataFrame([<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],columns=[<span class="string">&#x27;data&#x27;</span>,<span class="string">&#x27;score&#x27;</span>],index=[<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>])	<span class="comment">#这样就自定义了行列是什么</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#DataFrame同样可以创建字典，字典值默认为列索引</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">b = pd.DataFrame(&#123;<span class="string">&#x27;a&#x27;</span>:[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>],<span class="string">&#x27;b&#x27;</span>:[<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]&#125;,index=[<span class="string">&#x27;x&#x27;</span>,<span class="string">&#x27;y&#x27;</span>,<span class="string">&#x27;z&#x27;</span>])</span><br><span class="line"><span class="comment">#若想让字典为行索引</span></span><br><span class="line">c = pd.DataFrame.from_dict(&#123;<span class="string">&#x27;a&#x27;</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],<span class="string">&#x27;b&#x27;</span>:[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]&#125;,orient=<span class="string">&quot;index&quot;</span>)</span><br><span class="line"><span class="comment">#DataFrame支持将二维表格转置</span></span><br><span class="line">b = pd.DataFrame(&#123;<span class="string">&#x27;a&#x27;</span>:[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>],<span class="string">&#x27;b&#x27;</span>:[<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]&#125;,index=[<span class="string">&#x27;x&#x27;</span>,<span class="string">&#x27;y&#x27;</span>,<span class="string">&#x27;z&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(b.T)	<span class="comment">#打印转置后的表格</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#若要修改行索引和列索引的名字，使用rename函数</span></span><br><span class="line">a = a.rename(columns = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>],index = [<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>])</span><br><span class="line"><span class="comment">#其实上面那个只是创建了一个新的索引并未改变a的内容，需要使用inplace=True才能改变a的内容</span></span><br><span class="line">a = a.rename(columns = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>],index = [<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>]，inplace=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看index索引的值</span></span><br><span class="line">a.index.values()</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="Excel表格的读取和写入"><a href="#Excel表格的读取和写入" class="headerlink" title="Excel表格的读取和写入"></a>Excel表格的读取和写入</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用pandas函数</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.read_excel(<span class="string">&#x27;data.xlsx&#x27;</span>)</span><br><span class="line"><span class="comment">#通过打印data可以看到读取表格中的内容</span></span><br><span class="line">data.head(n)		<span class="comment">#其中的n是查看多少行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#read_excel函数还可以设置更多的参数</span></span><br><span class="line">pd.read_excel(<span class="string">&#x27;data.xlsx&#x27;</span>,sheet_name=<span class="number">0</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)	<span class="comment">#其中sheet_name是工作表的位置，可以是工作表的名称，也可以是数字，默认是0，即第1个工作表，encoding自然是编码形式不必多说。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#pd还可以读取csv文件，使用read_csv</span></span><br><span class="line">pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>,delimiter=<span class="string">&#x27;,&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)	<span class="comment">#delimiter指的是指定csv文件中的分隔符。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Excel的写入</span></span><br><span class="line"><span class="comment">#先创建DataFrame</span></span><br><span class="line">data = pd.DataFrame([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>]],columns=[<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>])</span><br><span class="line"><span class="comment">#将data写入excel中</span></span><br><span class="line">data.to_excel(<span class="string">&#x27;data.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#在字符串之前加入r可以取消字符串中反斜杠的意义。</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">r&quot;D:\\niu\\bi&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="数据的选取与处理"><a href="#数据的选取与处理" class="headerlink" title="数据的选取与处理"></a>数据的选取与处理</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#先创建一个二维数组</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.DataFrame(np.arange(<span class="number">1</span>,<span class="number">10</span>,<span class="number">1</span>).reshape(<span class="number">3</span>,<span class="number">3</span>),index=(<span class="string">&#x27;r1&#x27;</span>,<span class="string">&#x27;r2&#x27;</span>,<span class="string">&#x27;r3&#x27;</span>),columns=(<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c2&#x27;</span>,<span class="string">&#x27;c3&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#选择打印一行</span></span><br><span class="line"><span class="built_in">print</span>(data[<span class="string">&#x27;c1&#x27;</span>])</span><br><span class="line"><span class="comment">#选择打印多行</span></span><br><span class="line"><span class="comment">#print([&#x27;c1&#x27;,&#x27;c2&#x27;]),这样的做法是错误的</span></span><br><span class="line"><span class="built_in">print</span>([[<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c2&#x27;</span>]])	<span class="comment">#这样的做法才是正确的！</span></span><br><span class="line"><span class="comment">#要选取第2~3行的数据</span></span><br><span class="line">data[<span class="number">1</span>:<span class="number">3</span>]	<span class="comment">#注意序号从0开始，并且是左闭右开</span></span><br><span class="line"><span class="comment">#python中的pandas库推荐使用iloc函数来选取数组中的行列</span></span><br><span class="line">d = data.iloc[<span class="number">1</span>:<span class="number">3</span>]		<span class="comment">#选取第2~3行</span></span><br><span class="line">e = data.iloc[-<span class="number">1</span>]		<span class="comment">#选取倒数第一行</span></span><br><span class="line"><span class="comment">#还可以使用loc来选取行的名称来实现输出</span></span><br><span class="line">f = data.loc[[<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c2&#x27;</span>]]</span><br><span class="line"><span class="comment">#可以用head函数选取前n行</span></span><br><span class="line">data.head(<span class="number">5</span>)</span><br><span class="line"><span class="comment">#如果只想选取某几行的前几个元素，可以在后面加上[]</span></span><br><span class="line">data.iloc[<span class="number">1</span>:<span class="number">3</span>][<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#数据筛选</span></span><br><span class="line">a = data[data[<span class="string">&#x27;c1&#x27;</span>]&gt;<span class="number">1</span>]		<span class="comment">#选取data中c1列中大于1的数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#查看数据情况</span></span><br><span class="line"><span class="comment">#可以通过DataFrame中的shape属性来查看二维数组的行列</span></span><br><span class="line">data.shape()			<span class="comment">#(3,3)其中，前一个参数是行，后一个参数是列</span></span><br><span class="line"><span class="comment">#使用describe()可以查看每一列的数据个数，平均值，标准差，最小值，最大值等信息</span></span><br><span class="line">data.describe()</span><br><span class="line"></span><br><span class="line"><span class="comment">#通过运算创建新的列或者行</span></span><br><span class="line">data[<span class="string">&#x27;c4&#x27;</span>] = data[<span class="string">&#x27;c3&#x27;</span>] - data[<span class="string">&#x27;c1&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#可以使用sort_values函数来对表格进行排列，其中ascending参数确定是升序还是降序</span></span><br><span class="line">a = data.sort_values(by=<span class="string">&#x27;c2&#x27;</span>,ascending=<span class="literal">False</span>)	<span class="comment">#其中False表示降序排序，True表示升序排序</span></span><br><span class="line"><span class="comment">#通过sort_index函数进行行排序</span></span><br><span class="line">a = a.sort_index(<span class="string">&#x27;r2&#x27;</span>,ascending=<span class="literal">True</span>)			<span class="comment">#同样True表示升序，False表示降序</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#使用drop()函数删除数组中的列或者行</span></span><br><span class="line">a = data.drop(columns=[<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c3&#x27;</span>],index=[<span class="string">&#x27;r2&#x27;</span>],inplace=<span class="literal">True</span>)	<span class="comment">#这里删除了c1和c3两列，和r2这一行，inplace参数表示是否选择改变原表格，默认值为False。</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="数据表的拼接"><a href="#数据表的拼接" class="headerlink" title="数据表的拼接"></a>数据表的拼接</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#merge()函数将多个数据表进行合并，merge会自己判断相同的项的位置并进行合并，也可以自己设置on参数来选择按照哪一列来合并</span></span><br><span class="line">df1 = ..... 	<span class="comment">#是一个数据表</span></span><br><span class="line">df2 = .....		<span class="comment">#也是一个数据表</span></span><br><span class="line">df3 = merge(df1,df2,on=<span class="string">&#x27;公司&#x27;</span>)</span><br><span class="line"><span class="comment">#如果想取并值,可以设置how函数。</span></span><br><span class="line">df3 = pd.merge(df1,df2,how=<span class="string">&#x27;outer&#x27;</span>)		<span class="comment">#改成outer即可取并值连接</span></span><br><span class="line"><span class="comment">#如果想保留左表的内容</span></span><br><span class="line">df3 = pd.merge(df1,df2,how=<span class="string">&#x27;left&#x27;</span>)</span><br><span class="line"><span class="comment">#如果想保留右表的内容</span></span><br><span class="line">df3 = pd.merge(df1,df2,how=<span class="string">&#x27;right&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#concat()函数</span></span><br><span class="line"><span class="comment">#concat函数是全连接，不去管是否有相同的值能进行合并，而是直接合并，只有一个可设置参数axis</span></span><br><span class="line">df3 = pd.concat([df1,df2],axis=<span class="number">0</span>)	<span class="comment">#这个表示纵向连接</span></span><br><span class="line">df3 = pd.concat([df1,df2],axis=<span class="number">1</span>)	<span class="comment">#这个表示横向连接</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#append()函数</span></span><br><span class="line"><span class="comment">#append函数可以看成concat函数的简化版</span></span><br><span class="line">df3 = df1.append(df2)</span><br><span class="line"><span class="comment">#append函数还有一个常用功能是在列表里面添加元素</span></span><br><span class="line">df3 = df1.append(&#123;<span class="string">&#x27;公司&#x27;</span>:<span class="string">&#x27;腾讯&#x27;</span>,<span class="string">&#x27;分数&#x27;</span>:<span class="string">&#x27;90.0&#x27;</span>&#125;,ignore_index=<span class="literal">True</span>)	<span class="comment">#这个ignore_index参数是设置忽略原列表中的数值的</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
+    <title>机器学习--列表切片</title>
+    <url>/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/</url>
+    <content><![CDATA[<p>只需要列表切片的时候是左闭右开的！</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">0</span>:<span class="number">2</span>])</span><br><span class="line"><span class="comment">#因为左闭右开，所以打印出来的结果是[1,2]</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -3244,20 +3258,6 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习--列表切片</title>
-    <url>/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/</url>
-    <content><![CDATA[<p>只需要列表切片的时候是左闭右开的！</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">0</span>:<span class="number">2</span>])</span><br><span class="line"><span class="comment">#因为左闭右开，所以打印出来的结果是[1,2]</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>机器学习--深度学习</title>
     <url>/2022/06/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#先构造数据并进行拟合</span></span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">0</span>],[<span class="number">5</span>,<span class="number">1</span>],[<span class="number">6</span>,<span class="number">4</span>],[<span class="number">4</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">2</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>]</span><br><span class="line"><span class="keyword">from</span> sklearn.neural_network <span class="keyword">import</span> MLPClassifier<span class="comment">#Machine Learning Please</span></span><br><span class="line">model = MLPClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="comment">#预测</span></span><br><span class="line">y_pred = model.predict(X)</span><br><span class="line"><span class="comment">#进行预测值和实际值的对比</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">a = pd.DataFrame()</span><br><span class="line">a[<span class="string">&#x27;实际值&#x27;</span>] = <span class="built_in">list</span>[y]</span><br><span class="line">a[<span class="string">&#x27;预测值&#x27;</span>] = <span class="built_in">list</span>[y_pred]</span><br></pre></td></tr></table></figure>
@@ -3278,44 +3278,6 @@
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#1.读取数据</span></span><br><span class="line"><span class="keyword">import</span> pandas<span class="comment">#导入pandas库</span></span><br><span class="line">df = pandas.read_excel(<span class="string">&#x27;IT行业收入表.xlsx&#x27;</span>) <span class="comment">#读取excel表，excel表中是有数据的哦</span></span><br><span class="line"><span class="built_in">print</span>(df.head())<span class="comment">#显示df的前五行</span></span><br><span class="line">X = df[[<span class="string">&#x27;工龄&#x27;</span>]]</span><br><span class="line"><span class="comment">#如果是多元线性回归则是如下</span></span><br><span class="line">X = df[[<span class="string">&#x27;工龄&#x27;</span>],[<span class="string">&#x27;姓名&#x27;</span>],[<span class="string">&#x27;性别&#x27;</span>]]</span><br><span class="line">Y = df[<span class="string">&#x27;薪水&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#2.模型搭建</span></span><br><span class="line"><span class="keyword">from</span> sklean.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line">regr = LinearRegression()<span class="comment">#成为线性回归模型，赋值给regr</span></span><br><span class="line">regr.fit(X,Y)<span class="comment">#训练模型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#3.模型可视化</span></span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.scatter(X,Y)</span><br><span class="line">plt.plot(X,regr.predict(X))<span class="comment">#X和X预测值进行线性回归分析</span></span><br><span class="line">plt.xlabel(<span class="string">&#x27;工龄&#x27;</span>)<span class="comment">#表示x坐标显示工龄</span></span><br><span class="line">plt.ylabel(<span class="string">&#x27;薪水&#x27;</span>)<span class="comment">#表示y坐标显示薪水</span></span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment">#4.线性回归方程构造</span></span><br><span class="line">a = regr.coef_[<span class="number">0</span>]	<span class="comment">#斜率</span></span><br><span class="line">b = regr.intercept_	<span class="comment">#截距</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#结果就是y = ax+b</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#线性回归的模型评估</span></span><br><span class="line"><span class="keyword">import</span> statsmodels.api <span class="keyword">as</span> sm</span><br><span class="line">X2 = sm.add_constant(X)<span class="comment">#为特征变量X添加常数项即截距b</span></span><br><span class="line">est = sm.OLS(Y,X2).fit()<span class="comment">#使用OLS和fit函数进行回归方程模型搭建</span></span><br><span class="line"><span class="built_in">print</span>(est.summary())<span class="comment">#将模型打印出来</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="实战案例"><a href="#实战案例" class="headerlink" title="实战案例"></a>实战案例</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#读取数据</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;XX.xlsx&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(df.head())</span><br><span class="line">X = df[[<span class="string">&#x27;历史&#x27;</span>],[<span class="string">&#x27;贷款次数&#x27;</span>],[<span class="string">&#x27;学历&#x27;</span>],[<span class="string">&#x27;月收入&#x27;</span>]]<span class="comment">#这里用了两个方括号</span></span><br><span class="line">Y = df[<span class="string">&#x27;客户价值&#x27;</span>]<span class="comment">#注意这里只用了一个方括号</span></span><br><span class="line"><span class="comment">#模型搭建</span></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line">regr = LinearRegression</span><br><span class="line">regr.fit(X,y)</span><br><span class="line"><span class="comment">#方程构造</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;各系数:&#x27;</span>+<span class="built_in">str</span>(regr.coef_)) <span class="comment">#就是截距的位置</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;常数项:&#x27;</span>+<span class="built_in">str</span>(regr.intercept_))<span class="comment">#X前面的系数</span></span><br><span class="line"><span class="comment">#模型评估</span></span><br><span class="line"><span class="keyword">import</span> statsmodels.api <span class="keyword">as</span> sm <span class="comment">#引入相关库</span></span><br><span class="line">X2 = sm.add_constant(X)<span class="comment">#添加常数项X,即截距b</span></span><br><span class="line">est = sm.OLS(Y,X2).fit()</span><br><span class="line"><span class="built_in">print</span>(est.summary())</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习--逻辑回归</title>
-    <url>/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</url>
-    <content><![CDATA[<h3 id="Logistic回归"><a href="#Logistic回归" class="headerlink" title="Logistic回归"></a>Logistic回归</h3><span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#1.读取数据</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;股票客户流失.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#2.划分特征变量和目标变量</span></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;是否流失&#x27;</span>)<span class="comment">#删除是否流失行</span></span><br><span class="line">y = df[<span class="string">&#x27;是否流失&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#3.划分训练集和测试集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X-train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"><span class="comment">#用train_test_split函数来区分测试集和训练集，test_size是测试集所占的比重，random_state是将其分类，记住就行了。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#4.模型搭建</span></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line">model = LogisticRegression()</span><br><span class="line">model.fit(X_train,y_train)</span><br><span class="line"></span><br><span class="line"><span class="comment">#5.模型使用1：预测数据结果</span></span><br><span class="line">y_pred = model.predict(X_test)</span><br><span class="line"><span class="built_in">print</span>(y_pred[<span class="number">0</span>:<span class="number">100</span>])<span class="comment">#显示y的预测值中的前一百个数据</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#全部的数据预测</span></span><br><span class="line">score = model.score(X_test,y_test)</span><br><span class="line"></span><br><span class="line"><span class="comment">#6.模型使用2：预测概率</span></span><br><span class="line">y_pred_proba = model.predict_preba(X_test)</span><br><span class="line"><span class="built_in">print</span>(y_pred_proba[<span class="number">0</span>:<span class="number">5</span>])<span class="comment">#打印前五个客户的分类概率</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="ROC，KS曲线"><a href="#ROC，KS曲线" class="headerlink" title="ROC，KS曲线"></a>ROC，KS曲线</h3><h4 id="ROC"><a href="#ROC" class="headerlink" title="ROC"></a>ROC</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> roc_curve</span><br><span class="line">fpr,tpr,thres = roc_curve(y_test,y_pred_proba[:,<span class="number">1</span>]) <span class="comment">#fpr:假警报率,tpr:命中率,thres:阈值</span></span><br><span class="line"></span><br><span class="line">a = pd.DataFrame() <span class="comment">#创建一个空DataFrame</span></span><br><span class="line">a[<span class="string">&#x27;假警报率&#x27;</span>] = <span class="built_in">list</span>(fpr) <span class="comment">#用列表的形式将他们表示出来</span></span><br><span class="line">a[<span class="string">&#x27;命中率&#x27;</span>] = <span class="built_in">list</span>(tpr)</span><br><span class="line">a[<span class="string">&#x27;阈值&#x27;</span>] = <span class="built_in">list</span>(thres)</span><br><span class="line"></span><br><span class="line"><span class="comment">#开始绘制ROC曲线</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.plot(fpr,tpr)<span class="comment">#折线图</span></span><br><span class="line">plt.title(<span class="string">&#x27;ROC&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;FPR&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;TPR&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment">#求模型的AUC值</span></span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> roc_auc_score</span><br><span class="line">score = roc_auc_score(y_test,y_pred_proba[:,<span class="number">1</span>])<span class="comment">#y_pred_proba[:,1]是流失概率</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="KS"><a href="#KS" class="headerlink" title="KS"></a>KS</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> roc_curve</span><br><span class="line">fpr,tpr,thres = roc_curve(y_test,y_pred_proba[:,<span class="number">1</span>]) <span class="comment">#fpr:假警报率,tpr:命中率,thres:阈值</span></span><br><span class="line"></span><br><span class="line">a = pd.DataFrame() <span class="comment">#创建一个空DataFrame</span></span><br><span class="line">a[<span class="string">&#x27;假警报率&#x27;</span>] = <span class="built_in">list</span>(fpr) <span class="comment">#用列表的形式将他们表示出来</span></span><br><span class="line">a[<span class="string">&#x27;命中率&#x27;</span>] = <span class="built_in">list</span>(tpr)</span><br><span class="line">a[<span class="string">&#x27;阈值&#x27;</span>] = <span class="built_in">list</span>(thres)</span><br><span class="line"></span><br><span class="line"><span class="comment">#绘图</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.plot(thres[<span class="number">1</span>:],tpr[<span class="number">1</span>:])</span><br><span class="line">plt.plot(thres[<span class="number">1</span>:],fpr[<span class="number">1</span>:])</span><br><span class="line">plt.plot(thres[<span class="number">1</span>:],tpr[<span class="number">1</span>:]-fpr[<span class="number">1</span>:])</span><br><span class="line">plt.xlabel(<span class="string">&#x27;threshold&#x27;</span>)</span><br><span class="line">plt.legend([<span class="string">&#x27;tpr&#x27;</span>,<span class="string">&#x27;fpr&#x27;</span>,<span class="string">&#x27;tpr-fpr&#x27;</span>])<span class="comment">#说明对应的线有什么用</span></span><br><span class="line">plt.gca().invert_xaxis()<span class="comment">#先用gca函数获取坐标轴信息，再使用invert_xaxis函数将x轴反转</span></span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#快速求KS值</span></span><br><span class="line"><span class="built_in">max</span>(tpr-fpr)</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习--随机森林模型</title>
-    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%A8%A1%E5%9E%8B/</url>
-    <content><![CDATA[<h3 id="随机森林的分类模型"><a href="#随机森林的分类模型" class="headerlink" title="随机森林的分类模型"></a>随机森林的分类模型</h3><span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>]</span><br><span class="line">model = RandomForestClassifier(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line">model.predict([[<span class="number">5</span>,<span class="number">5</span>]])</span><br></pre></td></tr></table></figure>
-
-<h3 id="随机森林的回归模型"><a href="#随机森林的回归模型" class="headerlink" title="随机森林的回归模型"></a>随机森林的回归模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = RandomForestRegressor(n_estimators=<span class="number">10</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -3357,6 +3319,44 @@
 <h3 id="第十章"><a href="#第十章" class="headerlink" title="第十章"></a>第十章</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;信用卡交易模型.xlsx&#x27;</span>)</span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;欺诈标签&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;欺诈标签&#x27;</span>]</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">123</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> xgboost <span class="keyword">import</span> XGBClassifier</span><br><span class="line">model = XGBClassifier(n_estimator=<span class="number">100</span>,learning_rate=<span class="number">0.05</span>)<span class="comment">#重点记住</span></span><br><span class="line">model.fit(X_train,y_train)</span><br><span class="line"></span><br><span class="line">y_pred = model.predict(X_test)</span><br><span class="line">a = pd.DataFrame()</span><br><span class="line">a[<span class="string">&#x27;预测值&#x27;</span>] = <span class="built_in">list</span>(y_pred)</span><br><span class="line">a[<span class="string">&#x27;实际值&#x27;</span>] = <span class="built_in">list</span>(y_test)</span><br><span class="line"><span class="comment">#查看所有分数</span></span><br><span class="line">score = model.score(X_test,y_test)</span><br><span class="line"></span><br><span class="line">y_pred_proba = model.predict(X_test)</span><br><span class="line">y_pred_proba[:,<span class="number">1</span>]</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> roc_curve</span><br><span class="line">fpr,tpr,thres = roc_curve(y_test,y_pred_proba[:,<span class="number">1</span>])</span><br><span class="line"><span class="keyword">import</span> matplotlib <span class="keyword">as</span> plt</span><br><span class="line">plt.plot(fpr,tpr)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
 <h3 id="12-2-4-数据降维之PCA-其实就是在K近邻的基础上X-train加上pca"><a href="#12-2-4-数据降维之PCA-其实就是在K近邻的基础上X-train加上pca" class="headerlink" title="12.2.4(数据降维之PCA)其实就是在K近邻的基础上X_train加上pca"></a>12.2.4(数据降维之PCA)其实就是在K近邻的基础上X_train加上pca</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsClassifier</span><br><span class="line">model = KNeighborsClassifier()</span><br><span class="line">model.fit(X_train_pca,y_train)<span class="comment">#加上pca证明数据降维</span></span><br><span class="line"></span><br><span class="line">y_pred = model.predict(X_test_pca)<span class="comment">#加上pca证明数据降维</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">a = pd.DataFrame()</span><br><span class="line">a[<span class="string">&#x27;预测值&#x27;</span>] = y_pred</span><br><span class="line">a[<span class="string">&#x27;实际值&#x27;</span>] = y_test</span><br><span class="line"><span class="comment">#查看所有数据</span></span><br><span class="line">score = model.score(X_test_pca,y_test)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习--逻辑回归</title>
+    <url>/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</url>
+    <content><![CDATA[<h3 id="Logistic回归"><a href="#Logistic回归" class="headerlink" title="Logistic回归"></a>Logistic回归</h3><span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#1.读取数据</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;股票客户流失.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#2.划分特征变量和目标变量</span></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;是否流失&#x27;</span>)<span class="comment">#删除是否流失行</span></span><br><span class="line">y = df[<span class="string">&#x27;是否流失&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#3.划分训练集和测试集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X-train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"><span class="comment">#用train_test_split函数来区分测试集和训练集，test_size是测试集所占的比重，random_state是将其分类，记住就行了。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#4.模型搭建</span></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line">model = LogisticRegression()</span><br><span class="line">model.fit(X_train,y_train)</span><br><span class="line"></span><br><span class="line"><span class="comment">#5.模型使用1：预测数据结果</span></span><br><span class="line">y_pred = model.predict(X_test)</span><br><span class="line"><span class="built_in">print</span>(y_pred[<span class="number">0</span>:<span class="number">100</span>])<span class="comment">#显示y的预测值中的前一百个数据</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#全部的数据预测</span></span><br><span class="line">score = model.score(X_test,y_test)</span><br><span class="line"></span><br><span class="line"><span class="comment">#6.模型使用2：预测概率</span></span><br><span class="line">y_pred_proba = model.predict_preba(X_test)</span><br><span class="line"><span class="built_in">print</span>(y_pred_proba[<span class="number">0</span>:<span class="number">5</span>])<span class="comment">#打印前五个客户的分类概率</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="ROC，KS曲线"><a href="#ROC，KS曲线" class="headerlink" title="ROC，KS曲线"></a>ROC，KS曲线</h3><h4 id="ROC"><a href="#ROC" class="headerlink" title="ROC"></a>ROC</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> roc_curve</span><br><span class="line">fpr,tpr,thres = roc_curve(y_test,y_pred_proba[:,<span class="number">1</span>]) <span class="comment">#fpr:假警报率,tpr:命中率,thres:阈值</span></span><br><span class="line"></span><br><span class="line">a = pd.DataFrame() <span class="comment">#创建一个空DataFrame</span></span><br><span class="line">a[<span class="string">&#x27;假警报率&#x27;</span>] = <span class="built_in">list</span>(fpr) <span class="comment">#用列表的形式将他们表示出来</span></span><br><span class="line">a[<span class="string">&#x27;命中率&#x27;</span>] = <span class="built_in">list</span>(tpr)</span><br><span class="line">a[<span class="string">&#x27;阈值&#x27;</span>] = <span class="built_in">list</span>(thres)</span><br><span class="line"></span><br><span class="line"><span class="comment">#开始绘制ROC曲线</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.plot(fpr,tpr)<span class="comment">#折线图</span></span><br><span class="line">plt.title(<span class="string">&#x27;ROC&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;FPR&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;TPR&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="comment">#求模型的AUC值</span></span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> roc_auc_score</span><br><span class="line">score = roc_auc_score(y_test,y_pred_proba[:,<span class="number">1</span>])<span class="comment">#y_pred_proba[:,1]是流失概率</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="KS"><a href="#KS" class="headerlink" title="KS"></a>KS</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> roc_curve</span><br><span class="line">fpr,tpr,thres = roc_curve(y_test,y_pred_proba[:,<span class="number">1</span>]) <span class="comment">#fpr:假警报率,tpr:命中率,thres:阈值</span></span><br><span class="line"></span><br><span class="line">a = pd.DataFrame() <span class="comment">#创建一个空DataFrame</span></span><br><span class="line">a[<span class="string">&#x27;假警报率&#x27;</span>] = <span class="built_in">list</span>(fpr) <span class="comment">#用列表的形式将他们表示出来</span></span><br><span class="line">a[<span class="string">&#x27;命中率&#x27;</span>] = <span class="built_in">list</span>(tpr)</span><br><span class="line">a[<span class="string">&#x27;阈值&#x27;</span>] = <span class="built_in">list</span>(thres)</span><br><span class="line"></span><br><span class="line"><span class="comment">#绘图</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.plot(thres[<span class="number">1</span>:],tpr[<span class="number">1</span>:])</span><br><span class="line">plt.plot(thres[<span class="number">1</span>:],fpr[<span class="number">1</span>:])</span><br><span class="line">plt.plot(thres[<span class="number">1</span>:],tpr[<span class="number">1</span>:]-fpr[<span class="number">1</span>:])</span><br><span class="line">plt.xlabel(<span class="string">&#x27;threshold&#x27;</span>)</span><br><span class="line">plt.legend([<span class="string">&#x27;tpr&#x27;</span>,<span class="string">&#x27;fpr&#x27;</span>,<span class="string">&#x27;tpr-fpr&#x27;</span>])<span class="comment">#说明对应的线有什么用</span></span><br><span class="line">plt.gca().invert_xaxis()<span class="comment">#先用gca函数获取坐标轴信息，再使用invert_xaxis函数将x轴反转</span></span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#快速求KS值</span></span><br><span class="line"><span class="built_in">max</span>(tpr-fpr)</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习--随机森林模型</title>
+    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<h3 id="随机森林的分类模型"><a href="#随机森林的分类模型" class="headerlink" title="随机森林的分类模型"></a>随机森林的分类模型</h3><span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>]</span><br><span class="line">model = RandomForestClassifier(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line">model.predict([[<span class="number">5</span>,<span class="number">5</span>]])</span><br></pre></td></tr></table></figure>
+
+<h3 id="随机森林的回归模型"><a href="#随机森林的回归模型" class="headerlink" title="随机森林的回归模型"></a>随机森林的回归模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = RandomForestRegressor(n_estimators=<span class="number">10</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
