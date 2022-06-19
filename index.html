@@ -58,7 +58,7 @@
 			</ul>
 		</nav>
 		<nav>
-    总文章数 85
+    总文章数 86
 </nav>
 		<nav class="header-smart-menu">
     		
@@ -154,6 +154,111 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-python-考试复习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/06/19/python-%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/">python--考试复习</a>
+    </h1>
+  
+
+        
+        <a href="/2022/06/19/python-%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2022-06-19T12:03:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-19</time>
+</a>
+        <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+        <!-- 添加完成 -->
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="随机数生成"><a href="#随机数生成" class="headerlink" title="随机数生成"></a>随机数生成</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="comment"># 产生 1 到 10 的一个整数型随机数</span></span><br><span class="line"><span class="built_in">print</span>(random.randint(<span class="number">1</span>, <span class="number">10</span>))</span><br><span class="line"><span class="comment"># 产生 0 到 1 之间的随机浮点数</span></span><br><span class="line"><span class="built_in">print</span>(random.random())</span><br><span class="line"><span class="comment"># 产生  1.1 到 5.4 之间的随机浮点数，区间可以不是整数</span></span><br><span class="line"><span class="built_in">print</span>(random.uniform(<span class="number">1.1</span>, <span class="number">5.4</span>))</span><br><span class="line"><span class="comment"># 从序列中随机选取一个元素</span></span><br><span class="line"><span class="built_in">print</span>(random.choice([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">0</span>]))</span><br><span class="line"><span class="comment"># 生成从1到100的间隔为2的随机整数</span></span><br><span class="line"><span class="built_in">print</span>(random.randrange(<span class="number">1</span>, <span class="number">100</span>, <span class="number">2</span>))</span><br><span class="line"><span class="comment"># 将序列a中的元素顺序打乱</span></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>]</span><br><span class="line">random.shuffle([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>])</span><br><span class="line"><span class="built_in">print</span>(a)</span><br></pre></td></tr></table></figure>
+
+<h3 id="列表排序"><a href="#列表排序" class="headerlink" title="列表排序"></a>列表排序</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#reverse方法</span></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">a.reverse()</span><br><span class="line"><span class="built_in">print</span>(a) <span class="comment">#[4,3,2,1]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#sort方法:由小到大进行排序</span></span><br><span class="line">x = [<span class="number">3</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>]</span><br><span class="line">x.sort()</span><br><span class="line"><span class="built_in">print</span>(x) <span class="comment">#[1,2,3,4,5]</span></span><br><span class="line"><span class="comment">#还可以将根据字符串的长度进行升序排列</span></span><br><span class="line">x = [<span class="string">&#x27;aaaaa&#x27;</span>,<span class="string">&#x27;aaa&#x27;</span>,<span class="string">&#x27;aa&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;aaaa&#x27;</span>]</span><br><span class="line">x.sort()</span><br><span class="line"><span class="built_in">print</span>(x) <span class="comment">#[&#x27;a&#x27;,&#x27;aa&#x27;,&#x27;aaa&#x27;,&#x27;aaaa&#x27;,&#x27;aaaaa&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#sort函数会对原列表进行修改，但是sorted函数不会进行修改,因此需要创建一个变量来存放新的列表</span></span><br><span class="line">x = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">y = <span class="built_in">sorted</span>(x)</span><br><span class="line"><span class="built_in">print</span>(x,end=<span class="string">&#x27;  &#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(y)</span><br></pre></td></tr></table></figure>
+
+<h3 id="统计字符串中不同类型字符的个数"><a href="#统计字符串中不同类型字符的个数" class="headerlink" title="统计字符串中不同类型字符的个数"></a>统计字符串中不同类型字符的个数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">character = <span class="built_in">input</span>(<span class="string">&#x27;请输入任意字符：&#x27;</span>)</span><br><span class="line">i = number = space = other = letter = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(character )):</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;a&#x27;</span> &lt;= character [i] &lt;= <span class="string">&#x27;z&#x27;</span> <span class="keyword">or</span> <span class="string">&#x27;A&#x27;</span> &lt;= character [i] &lt;= <span class="string">&#x27;Z&#x27;</span>:</span><br><span class="line">        letter += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> <span class="string">&#x27;0&#x27;</span> &lt;= character [i] &lt;= <span class="string">&#x27;9&#x27;</span>:</span><br><span class="line">        number += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> character [i] == <span class="string">&#x27; &#x27;</span>:</span><br><span class="line">        space += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        other += <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;字母个数为：&quot;</span>,letter,<span class="string">&#x27;\t&#x27;</span>,<span class="string">&quot;数字个数为：&quot;</span>,number,<span class="string">&#x27;\t&#x27;</span>,<span class="string">&quot;空格个数为：&quot;</span>,space,<span class="string">&#x27;\t&#x27;</span>,<span class="string">&quot;其他字符个数为：&quot;</span>,other)</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串加密"><a href="#字符串加密" class="headerlink" title="字符串加密"></a>字符串加密</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Mes = <span class="built_in">input</span>(<span class="string">&#x27;请输入一串字符：&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;加密后为:&#x27;</span>,end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(Mes)):</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">ord</span>(Mes[i])&gt;=<span class="number">65</span> <span class="keyword">and</span> <span class="built_in">ord</span>(Mes[i])&lt;=<span class="number">87</span>) <span class="keyword">or</span> (<span class="built_in">ord</span>(Mes[i])&gt;=<span class="number">97</span> <span class="keyword">and</span> <span class="built_in">ord</span>(Mes[i])&lt;=<span class="number">119</span>):</span><br><span class="line">        m=<span class="built_in">chr</span>(<span class="built_in">ord</span>(Mes[i])+<span class="number">3</span>)</span><br><span class="line">    <span class="keyword">elif</span> (<span class="built_in">ord</span>(Mes[i])&gt;=<span class="number">88</span> <span class="keyword">and</span> <span class="built_in">ord</span>(Mes[i])&lt;=<span class="number">90</span>) <span class="keyword">or</span>(<span class="built_in">ord</span>(Mes[i])&gt;=<span class="number">120</span> <span class="keyword">and</span> <span class="built_in">ord</span>(Mes[i])&lt;=<span class="number">122</span>):</span><br><span class="line">        m=<span class="built_in">chr</span>(<span class="built_in">ord</span>(Mes[i])-<span class="number">23</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        m=Mes[i]</span><br><span class="line">    <span class="built_in">print</span> (m,end=<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/python//" class="article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/06/19/python-%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+<center><p>
+  
+    <h1 itemprop="name">
+      <a class="article-title_code_ant" href="/2022/06/19/python-%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/">python--考试复习</a>
+    </h1>
+  
+</p></center>
+
   
     <article id="post-机器学习-考试复习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
 <div class="article-inner">
@@ -565,109 +670,9 @@
 </p></center>
 
   
-    <article id="post-机器学习-随机森林模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%A8%A1%E5%9E%8B/">机器学习--随机森林模型</a>
-    </h1>
-  
-
-        
-        <a href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
-  	<time datetime="2022-06-07T07:01:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-07</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="随机森林的分类模型"><a href="#随机森林的分类模型" class="headerlink" title="随机森林的分类模型"></a>随机森林的分类模型</h3>
-        
-          <a class="article-more-a" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%A8%A1%E5%9E%8B/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/机器学习//" class="article-tag-list-link color5">机器学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%A8%A1%E5%9E%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%A8%A1%E5%9E%8B/">机器学习--随机森林模型</a>
-    </h1>
-  
-</p></center>
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -790,11 +795,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">NFT</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">NFT</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -802,11 +807,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
