@@ -8,13 +8,14 @@
   <link rel="dns-prefetch" href="http://hexo.denggaozheng.top">
   <title>计算机组成原理--存储器 | Denggaozheng`s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="主存简单模型和寻址概念主存储器包括存储体和MAR（Address地址存储器），MDR（Data数据存储器） -&gt;地址存储器（存储传入的地址）-&gt;存储体（寄存二进制位）&lt;-&gt;数据存储器&lt;-&gt;">
+  <meta name="description" content="主存简单模型和寻址概念">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机组成原理--存储器">
 <meta property="og:url" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/index.html">
 <meta property="og:site_name" content="Denggaozheng&#96;s blog">
-<meta property="og:description" content="主存简单模型和寻址概念主存储器包括存储体和MAR（Address地址存储器），MDR（Data数据存储器） -&gt;地址存储器（存储传入的地址）-&gt;存储体（寄存二进制位）&lt;-&gt;数据存储器&lt;-&gt;">
+<meta property="og:description" content="主存简单模型和寻址概念">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg2020.cnblogs.com%2Fblog%2F1936734%2F202008%2F1936734-20200815111656942-1547259356.png&refer=http%3A%2F%2Fimg2020.cnblogs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1658407131&t=4134fe455416c58972756b4d11111ad1">
 <meta property="og:image" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407203824780.png">
 <meta property="og:image" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407205005959.png">
 <meta property="og:image" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407205342224.png">
@@ -22,11 +23,11 @@
 <meta property="og:image" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407210942248.png">
 <meta property="og:image" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407211604968.png">
 <meta property="article:published_time" content="2022-04-05T13:21:13.000Z">
-<meta property="article:modified_time" content="2022-06-07T12:43:29.357Z">
+<meta property="article:modified_time" content="2022-06-21T12:41:00.856Z">
 <meta property="article:author" content="邓高正">
 <meta property="article:tag" content="计组">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407203824780.png">
+<meta name="twitter:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg2020.cnblogs.com%2Fblog%2F1936734%2F202008%2F1936734-20200815111656942-1547259356.png&refer=http%3A%2F%2Fimg2020.cnblogs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1658407131&t=4134fe455416c58972756b4d11111ad1">
   
     <link rel="alternative" href="/atom.xml" title="Denggaozheng`s blog" type="application/atom+xml">
   
@@ -189,10 +190,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="主存简单模型和寻址概念"><a href="#主存简单模型和寻址概念" class="headerlink" title="主存简单模型和寻址概念"></a>主存简单模型和寻址概念</h2><h3 id="主存储器"><a href="#主存储器" class="headerlink" title="主存储器"></a>主存储器</h3><p>包括<strong>存储体</strong>和<strong>MAR</strong>（Address地址存储器），<strong>MDR</strong>（Data数据存储器）</p>
-<p>-&gt;地址存储器（存储传入的地址）-&gt;存储体（寄存二进制位）&lt;-&gt;数据存储器&lt;-&gt;</p>
-<span id="more"></span>
+        <h2 id="主存简单模型和寻址概念"><a href="#主存简单模型和寻址概念" class="headerlink" title="主存简单模型和寻址概念"></a>主存简单模型和寻址概念</h2><span id="more"></span>
 
+<h3 id="主存储器"><a href="#主存储器" class="headerlink" title="主存储器"></a>主存储器</h3><p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg2020.cnblogs.com%2Fblog%2F1936734%2F202008%2F1936734-20200815111656942-1547259356.png&refer=http%3A%2F%2Fimg2020.cnblogs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1658407131&t=4134fe455416c58972756b4d11111ad1" alt="img"></p>
+<p>包括<strong>存储体</strong>和<strong>MAR</strong>（Address地址存储器），<strong>MDR</strong>（Data数据存储器）</p>
+<p>-&gt;地址存储器（存储传入的地址）-&gt;存储体（寄存二进制位）&lt;-&gt;数据存储器&lt;-&gt;</p>
 <p>存储元：</p>
 <h4 id="”读“操作"><a href="#”读“操作" class="headerlink" title="”读“操作"></a>”读“操作</h4><p>从地址存储器出发经过开关元件到数据寄存器</p>
 <p>图中的一行就是一个<strong>存储单元</strong>，一个存储单元中有若干个存储元。而一个存储体是由若干个存储单元构成的。</p>
@@ -534,15 +536,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">NFT</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color4">NFT</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -554,6 +552,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
              
@@ -562,11 +564,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
