@@ -65,28 +65,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--SringBuffer和StringBudilder“</title>
-    <url>/2022/02/09/JAVA-SringBuffer%E5%92%8CStringBudilder/</url>
-    <content><![CDATA[<p>这两个都是可变字符串.</p>
-<span id="more"></span>
-
-<p><strong>StringBuffer</strong>：</p>
-<p>StringBuffer str = new StringBuffer();</p>
-<p>可以使用append在后面追加字符串，用insert增加字符串</p>
-<p>insert（“0”，str）在第0个字符的前面增加字符串str。</p>
-<p><strong>用replace来更改指定位置字符：</strong></p>
-<p>replace(“0”，“5”，str)把0-5之间的字符替换为str。</p>
-<p>用<strong>delete删除指定位置的字符：</strong></p>
-<p>delete（“0”，“5”）删除0-5之间的字符串。</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--List接口“</title>
     <url>/2022/02/09/JAVA-List%E6%8E%A5%E5%8F%A3/</url>
     <content><![CDATA[<p>List接口的特点：有序，有下标，元素可以重复</p>
@@ -127,6 +105,28 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--SringBuffer和StringBudilder“</title>
+    <url>/2022/02/09/JAVA-SringBuffer%E5%92%8CStringBudilder/</url>
+    <content><![CDATA[<p>这两个都是可变字符串.</p>
+<span id="more"></span>
+
+<p><strong>StringBuffer</strong>：</p>
+<p>StringBuffer str = new StringBuffer();</p>
+<p>可以使用append在后面追加字符串，用insert增加字符串</p>
+<p>insert（“0”，str）在第0个字符的前面增加字符串str。</p>
+<p><strong>用replace来更改指定位置字符：</strong></p>
+<p>replace(“0”，“5”，str)把0-5之间的字符替换为str。</p>
+<p>用<strong>delete删除指定位置的字符：</strong></p>
+<p>delete（“0”，“5”）删除0-5之间的字符串。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--Sring声明“</title>
     <url>/2022/02/09/JAVA-Sring%E5%A3%B0%E6%98%8E/</url>
     <content><![CDATA[<p>引用类型的引用在栈里面，对象在堆里面。</p>
@@ -137,26 +137,6 @@
 <p>声明string字符串有两种方式：</p>
 <p>1.String name = “Hellp”//产生一个对象，存储在字符串池中</p>
 <p>2.String name = new String(“Hello”)//产生两个对象，在字符串池和堆中各存放一个</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--properties类“</title>
-    <url>/2022/02/09/JAVA-properties%E7%B1%BB/</url>
-    <content><![CDATA[<p> properties相当于一个集合</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/img_convert/d91d50beb656346ba65a174526fc43f6.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>setproperties在集合里面增加变量。</p>
-<p>1.list方法适用于PrintWriter</p>
-<p>2.store方法适用于FileOutputStream</p>
-<p>3.load方法适用于FileInputStream</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -182,6 +162,26 @@
 <p>11.equal：比较两个字符串是否相等，如果内容相同但是大小写不同用字符串1.equalIgnoreCase(字符串2).</p>
 <p>12.s3.compareTo(s4)：实现s3减s4，如果是字符串就用第一个字符的ASCII码相减，如果第一个字符相等就比较第二个。<code>String s1 = &quot;abc&quot;;</code>String s2 = “abcxyz”;前三个abc都相同，但是s1后面没有了，就用长度相减3-6 = -3；</p>
 <p>13.replace(“a1”，“a2”)：用a2替换a1。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--properties类“</title>
+    <url>/2022/02/09/JAVA-properties%E7%B1%BB/</url>
+    <content><![CDATA[<p> properties相当于一个集合</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d91d50beb656346ba65a174526fc43f6.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>setproperties在集合里面增加变量。</p>
+<p>1.list方法适用于PrintWriter</p>
+<p>2.store方法适用于FileOutputStream</p>
+<p>3.load方法适用于FileInputStream</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -239,6 +239,33 @@
       </tags>
   </entry>
   <entry>
+    <title>JAVA--多态</title>
+    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
+    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
+<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
+<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
+<span id="more"></span>
+
+<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>多态的注意事项：</p>
+<p>1.多态是方法的多态，属性没有多态；</p>
+<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
+<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
+<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
+<p>##但是有些方法是不能重写的：</p>
+<p>1.static方法：属于类，不属于实例</p>
+<p>2.final属性</p>
+<p>3.private方法是私有的，当然重写了也没用</p>
+<p>instanceof （类型转换） 引用类型</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--外部类和内部类“</title>
     <url>/2022/02/09/JAVA-%E5%A4%96%E9%83%A8%E7%B1%BB%E5%92%8C%E5%86%85%E9%83%A8%E7%B1%BB/</url>
     <content><![CDATA[<p> 介绍外部类和内部类</p>
@@ -265,33 +292,6 @@
 <p>2.只有外部类可以是静态的，内部类不行。</p>
 <p>3.内部类想要访问局部变量，需要局部变量是final修饰的（局部变量即方法里面定义的变量）</p>
 <p>4.内部类也可以继承接口用implements</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA--多态</title>
-    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
-    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
-<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
-<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
-<span id="more"></span>
-
-<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>多态的注意事项：</p>
-<p>1.多态是方法的多态，属性没有多态；</p>
-<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
-<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
-<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
-<p>##但是有些方法是不能重写的：</p>
-<p>1.static方法：属于类，不属于实例</p>
-<p>2.final属性</p>
-<p>3.private方法是私有的，当然重写了也没用</p>
-<p>instanceof （类型转换） 引用类型</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -487,6 +487,27 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--捕获异常“</title>
+    <url>/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<p> 捕获异常的知识点</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
+<p>假设要捕获多个异常，从大到小。</p>
+<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--接口interface“</title>
     <url>/2022/02/09/JAVA-%E6%8E%A5%E5%8F%A3interface/</url>
     <content><![CDATA[<p> 1.接口只有规范，无法写方法，是专业的抽象。实现约束和实现分离，面向接口编程。</p>
@@ -539,27 +560,6 @@
 <p><img src="https://img-blog.csdnimg.cn/img_convert/d8784fef04c69c151654bbe73747730f.png" alt="img"></p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p>删除表的话用：DROP TABLE student;</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--捕获异常“</title>
-    <url>/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<p> 捕获异常的知识点</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
-<p>假设要捕获多个异常，从大到小。</p>
-<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -660,6 +660,33 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--方法盘点“</title>
+    <url>/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E7%9B%98%E7%82%B9/</url>
+    <content><![CDATA[<p>介绍四个方法</p>
+<span id="more"></span>
+
+<p><strong>getCalss()方法：</strong></p>
+<p>1.使用方法:<strong>对象.getClass()</strong>;</p>
+<p>2.有什么用：返回对象的内容，比如这个对象是A类的，那就返回A类给getClass()，返回的值是Class类型的。</p>
+<p><strong>hashcode()方法：</strong></p>
+<p>1.使用方法:<strong>对象.hashcode()</strong>;</p>
+<p>2.返回一个值，哈希码的值实际上是对象的地址或者字符串之类的，所以相同对象返回相同哈希码。</p>
+<p><strong>toString()方法</strong>：</p>
+<p>1.其实也就是返回getclass和hashcode的合体，但是哈希值是十六进制的。</p>
+<p>qeual方法：</p>
+<p>return(this == 一个类对象)</p>
+<p>System.out.println(s1.equal(s2)) #判断s1和s2对象是否相等。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/017447037a9afaba91fed9ca66807b05.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA--构造器</title>
     <url>/2022/02/09/JAVA-%E6%9E%84%E9%80%A0%E5%99%A8/</url>
     <content><![CDATA[<p> 定义一个构造器：（构造方法必须没有返回值）</p>
@@ -721,33 +748,6 @@
 
 <p><strong>基本概念：</strong>（传递类型参数的东西）</p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/446e9973ebc5dab7b15dbedca430ed4c.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--方法盘点“</title>
-    <url>/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E7%9B%98%E7%82%B9/</url>
-    <content><![CDATA[<p>介绍四个方法</p>
-<span id="more"></span>
-
-<p><strong>getCalss()方法：</strong></p>
-<p>1.使用方法:<strong>对象.getClass()</strong>;</p>
-<p>2.有什么用：返回对象的内容，比如这个对象是A类的，那就返回A类给getClass()，返回的值是Class类型的。</p>
-<p><strong>hashcode()方法：</strong></p>
-<p>1.使用方法:<strong>对象.hashcode()</strong>;</p>
-<p>2.返回一个值，哈希码的值实际上是对象的地址或者字符串之类的，所以相同对象返回相同哈希码。</p>
-<p><strong>toString()方法</strong>：</p>
-<p>1.其实也就是返回getclass和hashcode的合体，但是哈希值是十六进制的。</p>
-<p>qeual方法：</p>
-<p>return(this == 一个类对象)</p>
-<p>System.out.println(s1.equal(s2)) #判断s1和s2对象是否相等。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/017447037a9afaba91fed9ca66807b05.png" alt="img"></p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
@@ -848,26 +848,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--转换流知识点“</title>
-    <url>/2022/02/09/JAVA-%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>InputStreamReader和OutputStreamWriter:</p>
-<span id="more"></span>
-
-
-<p> <strong>InputStreamReader</strong>:</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/f0b6cfe4735777363bc8e2eeafde2a2b.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这样接下来直接用isr即可</p>
-<p>OutputStreamWriter同理。</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JAVA--继承</title>
     <url>/2022/02/09/JAVA-%E7%BB%A7%E6%89%BF/</url>
     <content><![CDATA[<p>1.extend的意思是’’拓展，扩大’’,子类是对父类的拓展。</p>
@@ -880,6 +860,26 @@
 <p>2.Object！</p>
 <p>在Java中所有的类都默认继承Object类！！！</p>
 <p>例：public class AA /<em>entend Object</em>/{}</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--转换流知识点“</title>
+    <url>/2022/02/09/JAVA-%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>InputStreamReader和OutputStreamWriter:</p>
+<span id="more"></span>
+
+
+<p> <strong>InputStreamReader</strong>:</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/f0b6cfe4735777363bc8e2eeafde2a2b.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这样接下来直接用isr即可</p>
+<p>OutputStreamWriter同理。</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -924,6 +924,20 @@
       </tags>
   </entry>
   <entry>
+    <title>”Linux--Xshell和Xftp“</title>
+    <url>/2022/02/09/Linux-Xshell%E5%92%8CXftp/</url>
+    <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
+<p>不同点：Xftp用于发送文件。</p>
+<p>Xshell可以使用windows来访问Linux，实现远程操控。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”Linux--vi和vim“</title>
     <url>/2022/02/09/Linux-vi%E5%92%8Cvim/</url>
     <content><![CDATA[<p> vim具有编程的能力，是vi的增强版本，代码补全，颜色都有（有点像IDEA） </p>
@@ -962,52 +976,6 @@
 <p>若是普通用户登录后需要获得管理员权限，使用su-用户名 即可。</p>
 <p>使用logout来注销用户登录（在运行级别三上面有用）</p>
 <p>在root情况下logout退到你原来的用户，再使用一次logout退出系统！</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”Linux--Xshell和Xftp“</title>
-    <url>/2022/02/09/Linux-Xshell%E5%92%8CXftp/</url>
-    <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
-<p>不同点：Xftp用于发送文件。</p>
-<p>Xshell可以使用windows来访问Linux，实现远程操控。</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”Linux--忘记密码的找回方法“</title>
-    <url>/2022/02/09/Linux-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E6%89%BE%E5%9B%9E%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>非常详细！保姆级教程！</p>
-<span id="more"></span>
-
-<p> (1)在登录前的界面按下“e”编辑，如图：</p>
-<p><img src="https://img-blog.csdnimg.cn/24c29cb043ac4d2f91a731ff9b6121ae.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（2）找到linux16所在的那一行的下面一行：（如果没找到linux16就按着键盘向下的箭头就能看见了）</p>
-<p><img src="https://img-blog.csdnimg.cn/2f7d063b6b994865a19935d18958e2de.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> （3）在UTF-8后面按下空格后加上这句话：init=/bin/sh</p>
-<p><img src="https://img-blog.csdnimg.cn/8b229a66f7534503bcf5298f85aa9fcf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>(4)输入完之后按下快捷键Ctrl+x进入单用户模式（如果左边的Ctrl不行就试试右边的） </p>
-<p>（5）在光标闪烁的位置输入这句话：mount -o remount,rw/  输入完之后回车。</p>
-<p><img src="https://img-blog.csdnimg.cn/2f62ded86e884e48b6b27fa8e15eb14d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/3db9328c5fb742acbf74ccdcc4698f29.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> （6）然后在新界面光标闪烁位置输入passwd然后回车，输入新密码，然后确认密码</p>
-<p>（7）输入完之后当我们看到passwd=****就说明成功修改了密码。</p>
-<p><img src="https://img-blog.csdnimg.cn/5f29832e73d74f2dad243c54a44b6f6e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（8）紧接着在下面的一行输入这句话：touch /.autorelabel（注意：touch和/之间有一个空格）</p>
-<p><img src="https://img-blog.csdnimg.cn/8df0b14725b648ec9f51e7b974ae8f33.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（9）继续在光标闪烁的位置输入exec /sbin/init（同样在exec和/之间有一个空格），完成后按回车，耐心等待系统修改密码（时间会稍长）完成后linux会自动重启。</p>
-<p><img src="https://img-blog.csdnimg.cn/4b5f47ea34064e89a594099f73e1c200.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（10）登录时使用新密码即可 .</p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -1121,56 +1089,35 @@
       </tags>
   </entry>
   <entry>
-    <title>”Linux--用户管理“</title>
-    <url>/2022/02/09/Linux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<p> 一、基本操作：</p>
-<p>添加用户：useradd 用户名</p>
-<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
+    <title>”Linux--忘记密码的找回方法“</title>
+    <url>/2022/02/09/Linux-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E6%89%BE%E5%9B%9E%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>非常详细！保姆级教程！</p>
 <span id="more"></span>
 
-<p>删除用户(不保留家目录)：userdel -r 用户名</p>
-<p>更改用户密码：passwd 用户名</p>
-<p>查询用户信息：id 用户名</p>
-<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
-<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
-<p>想要查看现在的用户是谁：who am i（离谱）</p>
-<p>pwd：查看现在在哪个目录下面</p>
-<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
-<p>添加组：groupadd 组名</p>
-<p>删除组：groupdel 组名</p>
-<p>创建用户的同时分组：useradd -g 组名 用户名</p>
-<p>用户换组：usermod -g 新组名 用户名</p>
-<p><strong>用户和组的相关文件：</strong></p>
-<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> (1)在登录前的界面按下“e”编辑，如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/24c29cb043ac4d2f91a731ff9b6121ae.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（2）找到linux16所在的那一行的下面一行：（如果没找到linux16就按着键盘向下的箭头就能看见了）</p>
+<p><img src="https://img-blog.csdnimg.cn/2f7d063b6b994865a19935d18958e2de.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> （3）在UTF-8后面按下空格后加上这句话：init=/bin/sh</p>
+<p><img src="https://img-blog.csdnimg.cn/8b229a66f7534503bcf5298f85aa9fcf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>(4)输入完之后按下快捷键Ctrl+x进入单用户模式（如果左边的Ctrl不行就试试右边的） </p>
+<p>（5）在光标闪烁的位置输入这句话：mount -o remount,rw/  输入完之后回车。</p>
+<p><img src="https://img-blog.csdnimg.cn/2f62ded86e884e48b6b27fa8e15eb14d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/3db9328c5fb742acbf74ccdcc4698f29.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> （6）然后在新界面光标闪烁位置输入passwd然后回车，输入新密码，然后确认密码</p>
+<p>（7）输入完之后当我们看到passwd=****就说明成功修改了密码。</p>
+<p><img src="https://img-blog.csdnimg.cn/5f29832e73d74f2dad243c54a44b6f6e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（8）紧接着在下面的一行输入这句话：touch /.autorelabel（注意：touch和/之间有一个空格）</p>
+<p><img src="https://img-blog.csdnimg.cn/8df0b14725b648ec9f51e7b974ae8f33.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（9）继续在光标闪烁的位置输入exec /sbin/init（同样在exec和/之间有一个空格），完成后按回车，耐心等待系统修改密码（时间会稍长）完成后linux会自动重启。</p>
+<p><img src="https://img-blog.csdnimg.cn/4b5f47ea34064e89a594099f73e1c200.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（10）登录时使用新密码即可 .</p>
 ]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo d出错时的解决办法</title>
-    <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
-<span id="more"></span>
-
-<p>删除blog/.deploy_git文件</p>
-<p>然后输入</p>
-<p>git config –gloabl core.autocrlf false`</p>
-<p>重新</p>
-<p>hexo clean</p>
-<p>hexo g</p>
-<p>hexo d</p>
-<p>部署</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -2263,6 +2210,37 @@
       </tags>
   </entry>
   <entry>
+    <title>”Linux--用户管理“</title>
+    <url>/2022/02/09/Linux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<p> 一、基本操作：</p>
+<p>添加用户：useradd 用户名</p>
+<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
+<span id="more"></span>
+
+<p>删除用户(不保留家目录)：userdel -r 用户名</p>
+<p>更改用户密码：passwd 用户名</p>
+<p>查询用户信息：id 用户名</p>
+<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
+<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
+<p>想要查看现在的用户是谁：who am i（离谱）</p>
+<p>pwd：查看现在在哪个目录下面</p>
+<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
+<p>添加组：groupadd 组名</p>
+<p>删除组：groupdel 组名</p>
+<p>创建用户的同时分组：useradd -g 组名 用户名</p>
+<p>用户换组：usermod -g 新组名 用户名</p>
+<p><strong>用户和组的相关文件：</strong></p>
+<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>NFT--MetaMask的创建</title>
     <url>/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/</url>
     <content><![CDATA[<h3 id="Chrome中的MetaMask钱包的创建"><a href="#Chrome中的MetaMask钱包的创建" class="headerlink" title="Chrome中的MetaMask钱包的创建"></a>Chrome中的MetaMask钱包的创建</h3><span id="more"></span>
@@ -2306,20 +2284,38 @@
       </tags>
   </entry>
   <entry>
-    <title>matlab--程序设计</title>
-    <url>/2022/03/21/matlab-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</url>
-    <content><![CDATA[<p>matlab中的程序设计知识</p>
+    <title>hexo d出错时的解决办法</title>
+    <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
 <span id="more"></span>
 
-<p>使用input函数可以让用户输入想输入的值，可以是任何形式的。</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">#可以在input函数的括号内加入想说的话，如</span><br><span class="line">a = input(<span class="string">&quot;请输入a的值：&quot;</span>)	#然后这个a的值会赋值给变量a，在后面可以对a进行相应的运算</span><br><span class="line">b = a * <span class="number">2</span>	 #b = <span class="number">2</span>a</span><br></pre></td></tr></table></figure>
+<p>删除blog/.deploy_git文件</p>
+<p>然后输入</p>
+<p>git config –gloabl core.autocrlf false`</p>
+<p>重新</p>
+<p>hexo clean</p>
+<p>hexo g</p>
+<p>hexo d</p>
+<p>部署</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>html -- 基础</title>
+    <url>/2022/04/14/html-%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--标准格式--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mate</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line">    	标题 </span><br><span class="line">    <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">h2</span>&gt;</span>标题2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        	段落1</span><br><span class="line">    	<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
-        <category>matlab</category>
+        <category>html</category>
       </categories>
       <tags>
-        <tag>matlab</tag>
+        <tag>html</tag>
       </tags>
   </entry>
   <entry>
@@ -2354,6 +2350,23 @@
       </tags>
   </entry>
   <entry>
+    <title>matlab--程序设计</title>
+    <url>/2022/03/21/matlab-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<p>matlab中的程序设计知识</p>
+<span id="more"></span>
+
+<p>使用input函数可以让用户输入想输入的值，可以是任何形式的。</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">#可以在input函数的括号内加入想说的话，如</span><br><span class="line">a = input(<span class="string">&quot;请输入a的值：&quot;</span>)	#然后这个a的值会赋值给变量a，在后面可以对a进行相应的运算</span><br><span class="line">b = a * <span class="number">2</span>	 #b = <span class="number">2</span>a</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python--name属性</title>
     <url>/2022/03/10/python-name%E5%B1%9E%E6%80%A7/</url>
     <content><![CDATA[<p>python中的 __  <em>name</em> _ _属性</p>
@@ -2372,16 +2385,25 @@
       </tags>
   </entry>
   <entry>
-    <title>html -- 基础</title>
-    <url>/2022/04/14/html-%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--标准格式--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mate</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line">    	标题 </span><br><span class="line">    <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">h2</span>&gt;</span>标题2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        	段落1</span><br><span class="line">    	<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>”python--random“</title>
+    <url>/2022/02/09/python-random/</url>
+    <content><![CDATA[<p>随机生产一个取值范围在10~100的整数：random.randint(10,100)</p>
+<span id="more"></span>
 
+<p>一个比较重要的语法：</p>
+<p>random.randint(1~10)假设生成的随机数是1</p>
+<p>random.randint(1~10)假设生成的随机数是3</p>
+<p>random.randint(1~10)假设生成的随机数是6</p>
+<p>我们使用random.setstate(x)</p>
+<p>在后面我们再使用三次</p>
+<p>random.randint(1~10）</p>
+<p>三次生成的数分别是1，3，6，所以可以推断出setstate的作用是把前三次生成的随机数变成一个固定的状态再后面再生成！</p>
 ]]></content>
       <categories>
-        <category>html</category>
+        <category>python</category>
       </categories>
       <tags>
-        <tag>html</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -2471,49 +2493,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”python--random“</title>
-    <url>/2022/02/09/python-random/</url>
-    <content><![CDATA[<p>随机生产一个取值范围在10~100的整数：random.randint(10,100)</p>
-<span id="more"></span>
-
-<p>一个比较重要的语法：</p>
-<p>random.randint(1~10)假设生成的随机数是1</p>
-<p>random.randint(1~10)假设生成的随机数是3</p>
-<p>random.randint(1~10)假设生成的随机数是6</p>
-<p>我们使用random.setstate(x)</p>
-<p>在后面我们再使用三次</p>
-<p>random.randint(1~10）</p>
-<p>三次生成的数分别是1，3，6，所以可以推断出setstate的作用是把前三次生成的随机数变成一个固定的状态再后面再生成！</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--列表里的函数“</title>
-    <url>/2022/02/09/python-%E5%88%97%E8%A1%A8%E9%87%8C%E7%9A%84%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<p> sort()将数组从小到大排序。</p>
-<p>reverse（）将数组此时的位置进行倒转</p>
-<span id="more"></span>
-
-<p>count（？）问号的内容是数组里面的数据元素，这个函数用于数出这个数据元素在这个数组里面出现了几次</p>
-<p>index（？），问号的内容是数组里面的数据元素，这个函数用于显示这个元素在数组里面出现的位置（如果有多个元素相同，那么显示第一个元素的位置）。<strong>可以在后面再加两个参数分别显示查找开始和结束的位置，index(？，start，end)</strong></p>
-<p>一个数组赋值给另外一个列表，比如nums数组赋值给nums_two数组：nums_two = nums.copy()</p>
-<p><strong>注意：nums这个数组和nums[:]这个数组是表示的同一个</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/9ee34faef1d743f089ab46f13fbc0e56.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/1918e8c5870c4dcba8d4b42608cde2ad.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_5,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python--字典</title>
     <url>/2022/02/16/python-%E5%AD%97%E5%85%B8/</url>
     <content><![CDATA[<h2 id="字典是另一种可变容器模型，且可存储任意类型对象。"><a href="#字典是另一种可变容器模型，且可存储任意类型对象。" class="headerlink" title="字典是另一种可变容器模型，且可存储任意类型对象。"></a>字典是另一种可变容器模型，且可存储任意类型对象。</h2><span id="more"></span>
@@ -2590,6 +2569,69 @@
       </tags>
   </entry>
   <entry>
+    <title>”python--列表里的函数“</title>
+    <url>/2022/02/09/python-%E5%88%97%E8%A1%A8%E9%87%8C%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p> sort()将数组从小到大排序。</p>
+<p>reverse（）将数组此时的位置进行倒转</p>
+<span id="more"></span>
+
+<p>count（？）问号的内容是数组里面的数据元素，这个函数用于数出这个数据元素在这个数组里面出现了几次</p>
+<p>index（？），问号的内容是数组里面的数据元素，这个函数用于显示这个元素在数组里面出现的位置（如果有多个元素相同，那么显示第一个元素的位置）。<strong>可以在后面再加两个参数分别显示查找开始和结束的位置，index(？，start，end)</strong></p>
+<p>一个数组赋值给另外一个列表，比如nums数组赋值给nums_two数组：nums_two = nums.copy()</p>
+<p><strong>注意：nums这个数组和nums[:]这个数组是表示的同一个</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/9ee34faef1d743f089ab46f13fbc0e56.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/1918e8c5870c4dcba8d4b42608cde2ad.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_5,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--字符串“</title>
+    <url>/2022/02/09/python-%E5%AD%97%E7%AC%A6%E4%B8%B2OLD/</url>
+    <content><![CDATA[<p>在打印文本的时候如果不想显示转义字符的结果，可以在字符串的引号前面加上r。</p>
+<span id="more"></span>
+
+<p>如：1.不加r的时候:print(“D:\three\two\one\now”)</p>
+<p>​     显示的结果是：<img src="https://img-blog.csdnimg.cn/cec7ee435319424bad8f796d47085fe4.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>2.加上r的时候: print(<strong>r</strong>“D:\three\two\one\now”)</p>
+<p>​     显示的结果是：<img src="https://img-blog.csdnimg.cn/f7f5f4fca14d45db930067db3de40836.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>加上r代表这后面的字符串显示原始字符！</strong></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--深拷贝和浅拷贝“</title>
+    <url>/2022/02/09/python-%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
+    <content><![CDATA[<p><strong>假设B复制了A，当修改A时，看B是否会发生变化，如果B也跟着变了，说明这是浅拷贝，拿人手短，如果B没变，那就是深拷贝，自食其力。</strong></p>
+<span id="more"></span>
+
+<p>浅拷贝的实现方法：</p>
+<p>x=…..</p>
+<p>y=copy.copy(x)</p>
+<p>深拷贝的实现方法：</p>
+<p>x=…</p>
+<p>y=copy.deepcopy(x)</p>
+<p>其中第一个copy是copy模块</p>
+<p><img src="https://img-blog.csdnimg.cn/550469b3a1764d3d9357df29840651d2.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这样的copy是浅拷贝</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python--序列</title>
     <url>/2022/02/15/python-%E5%BA%8F%E5%88%97/</url>
     <content><![CDATA[<h2 id="包含了大部分的序列的操作和函数"><a href="#包含了大部分的序列的操作和函数" class="headerlink" title="包含了大部分的序列的操作和函数"></a>包含了大部分的序列的操作和函数</h2><span id="more"></span>
@@ -2636,48 +2678,6 @@
 
 <h3 id="迭代器，迭代对象"><a href="#迭代器，迭代对象" class="headerlink" title="迭代器，迭代对象"></a>迭代器，迭代对象</h3><p>首先要知道一个迭代器一定是一个迭代对象！</p>
 <p>区别是：迭代对象是可以反复使用的，而迭代器是一次性的。</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--深拷贝和浅拷贝“</title>
-    <url>/2022/02/09/python-%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
-    <content><![CDATA[<p><strong>假设B复制了A，当修改A时，看B是否会发生变化，如果B也跟着变了，说明这是浅拷贝，拿人手短，如果B没变，那就是深拷贝，自食其力。</strong></p>
-<span id="more"></span>
-
-<p>浅拷贝的实现方法：</p>
-<p>x=…..</p>
-<p>y=copy.copy(x)</p>
-<p>深拷贝的实现方法：</p>
-<p>x=…</p>
-<p>y=copy.deepcopy(x)</p>
-<p>其中第一个copy是copy模块</p>
-<p><img src="https://img-blog.csdnimg.cn/550469b3a1764d3d9357df29840651d2.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这样的copy是浅拷贝</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--字符串“</title>
-    <url>/2022/02/09/python-%E5%AD%97%E7%AC%A6%E4%B8%B2OLD/</url>
-    <content><![CDATA[<p>在打印文本的时候如果不想显示转义字符的结果，可以在字符串的引号前面加上r。</p>
-<span id="more"></span>
-
-<p>如：1.不加r的时候:print(“D:\three\two\one\now”)</p>
-<p>​     显示的结果是：<img src="https://img-blog.csdnimg.cn/cec7ee435319424bad8f796d47085fe4.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>2.加上r的时候: print(<strong>r</strong>“D:\three\two\one\now”)</p>
-<p>​     显示的结果是：<img src="https://img-blog.csdnimg.cn/f7f5f4fca14d45db930067db3de40836.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>加上r代表这后面的字符串显示原始字符！</strong></p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -2736,22 +2736,6 @@
       </categories>
       <tags>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web--将web内容上传服务器</title>
-    <url>/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<h4 id="先上总结"><a href="#先上总结" class="headerlink" title="先上总结"></a>先上总结</h4><p>1.先用原始服务器的实例创建一个ubuntu镜像，记住镜像的账号（root）和密码。<br>2.先使用cmd进行root连接：（ssh <a href="mailto:&#x72;&#111;&#x6f;&#116;&#x40;&#x31;&#50;&#x30;&#x2e;&#55;&#x37;&#x2e;&#49;&#55;&#46;&#50;&#x31;&#54;">&#x72;&#111;&#x6f;&#116;&#x40;&#x31;&#50;&#x30;&#x2e;&#55;&#x37;&#x2e;&#49;&#55;&#46;&#50;&#x31;&#54;</a>）当然使用putty或者Xshell同样可以<br>3.使用Xftp7上传对应的web网页到服务器对应的目录中，目录为var\www\html（其中的var目录是和root同级目录）<br>4.上传之后，在浏览器中使用公网的ip即可看到网页。<br>试了一天TT</p>
-<span id="more"></span>
-
-<h4 id="参考视频，资料"><a href="#参考视频，资料" class="headerlink" title="参考视频，资料"></a>参考视频，资料</h4><p>b站视频：<a href="https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click</a></p>
-<p>博客园日志：<a href="http://t.zoukankan.com/chrischen98-p-10874821.html%EF%BC%88%E4%B8%8A%E5%8D%88%E4%B8%80%E7%9B%B4%E7%9C%8B%E8%BF%99%E4%B8%AA%EF%BC%8C%E4%BD%86%E6%98%AF%E7%94%A8%E4%BA%86iis%E4%B9%8B%E5%90%8E%E7%BD%91%E9%A1%B5%E4%B8%80%E7%9B%B4%E4%B8%8D%E6%98%BE%E7%A4%BA,%E8%AE%BE%E7%BD%AE%E5%95%A5%E7%AB%AF%E5%8F%A3%E9%83%BD%E6%B2%A1%E7%94%A8%EF%BC%89">http://t.zoukankan.com/chrischen98-p-10874821.html（上午一直看这个，但是用了iis之后网页一直不显示,设置啥端口都没用）</a></p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -2819,6 +2803,22 @@
       </tags>
   </entry>
   <entry>
+    <title>web--将web内容上传服务器</title>
+    <url>/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<h4 id="先上总结"><a href="#先上总结" class="headerlink" title="先上总结"></a>先上总结</h4><p>1.先用原始服务器的实例创建一个ubuntu镜像，记住镜像的账号（root）和密码。<br>2.先使用cmd进行root连接：（ssh <a href="mailto:&#x72;&#111;&#111;&#116;&#64;&#x31;&#x32;&#x30;&#46;&#55;&#55;&#x2e;&#x31;&#55;&#46;&#x32;&#x31;&#54;">&#x72;&#111;&#111;&#116;&#64;&#x31;&#x32;&#x30;&#46;&#55;&#55;&#x2e;&#x31;&#55;&#46;&#x32;&#x31;&#54;</a>）当然使用putty或者Xshell同样可以<br>3.使用Xftp7上传对应的web网页到服务器对应的目录中，目录为var\www\html（其中的var目录是和root同级目录）<br>4.上传之后，在浏览器中使用公网的ip即可看到网页。<br>试了一天TT</p>
+<span id="more"></span>
+
+<h4 id="参考视频，资料"><a href="#参考视频，资料" class="headerlink" title="参考视频，资料"></a>参考视频，资料</h4><p>b站视频：<a href="https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click</a></p>
+<p>博客园日志：<a href="http://t.zoukankan.com/chrischen98-p-10874821.html%EF%BC%88%E4%B8%8A%E5%8D%88%E4%B8%80%E7%9B%B4%E7%9C%8B%E8%BF%99%E4%B8%AA%EF%BC%8C%E4%BD%86%E6%98%AF%E7%94%A8%E4%BA%86iis%E4%B9%8B%E5%90%8E%E7%BD%91%E9%A1%B5%E4%B8%80%E7%9B%B4%E4%B8%8D%E6%98%BE%E7%A4%BA,%E8%AE%BE%E7%BD%AE%E5%95%A5%E7%AB%AF%E5%8F%A3%E9%83%BD%E6%B2%A1%E7%94%A8%EF%BC%89">http://t.zoukankan.com/chrischen98-p-10874821.html（上午一直看这个，但是用了iis之后网页一直不显示,设置啥端口都没用）</a></p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数值分析--Lagrange插值</title>
     <url>/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Lagrange%E6%8F%92%E5%80%BC/</url>
     <content><![CDATA[<p>拉格朗日插值法分为一次插值，两次插值直到n次插值，划分的方法是有两个点就有一次插值，有三个点就有两次插值，同理可以推出有n个点就有n-1次插值。</p>
@@ -2828,25 +2828,6 @@
 <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>当我们知道图中有n个点的时候，要找到同时穿过这n个点的函数，即把分别穿过n个点的函数相加，得到的就是拉格朗日插值。</p>
 <h3 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h3><p>当图中有三个点的时候，L2(x) = [(x-x1)(x-x2)/(x0-x1)(x0-x2)]y0 + [(x-x0)(x-x2)/(x1-x0)(x1-x2)]y1 + [(x-x0)(x-x1)/(x2-x0)(x2-x1)]y2</p>
 <p>当图中有n个点的时候，Ln(x) = n(大派键)i=0且i不等于j (x-xj)/(xi-xj)</p>
-]]></content>
-      <categories>
-        <category>数值分析</category>
-      </categories>
-      <tags>
-        <tag>数值分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数值分析--Newton插值</title>
-    <url>/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Newton%E6%8F%92%E5%80%BC/</url>
-    <content><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在拉格朗日插值中解决了Ln(x)的问题，那么要解决L2(x)=L1(x)+？中的？是什么，我们需要引入牛顿插值来解决</p>
-<span id="more"></span>
-
-<h3 id="差商"><a href="#差商" class="headerlink" title="差商"></a>差商</h3><p>要想解决牛顿插值问题先要知道差商的概念。</p>
-<p>C0 = f(x0) = f(x0)</p>
-<p>C1 = f[x0,x1] = [f(x1)-f(x0)]/x1-x0</p>
-<p>C2 = f[x0,x1,x2] = f(x1)-f(x0)/x1-x0 ……</p>
-<h3 id="牛顿插值"><a href="#牛顿插值" class="headerlink" title="牛顿插值"></a>牛顿插值</h3><p>Nn(x) = C0 + C1(x-x0) + C2 (x-x0)(x-x1) + … + Cn(x-x0)(x-x1)..(x-xn)</p>
 ]]></content>
       <categories>
         <category>数值分析</category>
@@ -2883,6 +2864,102 @@
       </categories>
       <tags>
         <tag>数值分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数值分析--Newton插值</title>
+    <url>/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Newton%E6%8F%92%E5%80%BC/</url>
+    <content><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在拉格朗日插值中解决了Ln(x)的问题，那么要解决L2(x)=L1(x)+？中的？是什么，我们需要引入牛顿插值来解决</p>
+<span id="more"></span>
+
+<h3 id="差商"><a href="#差商" class="headerlink" title="差商"></a>差商</h3><p>要想解决牛顿插值问题先要知道差商的概念。</p>
+<p>C0 = f(x0) = f(x0)</p>
+<p>C1 = f[x0,x1] = [f(x1)-f(x0)]/x1-x0</p>
+<p>C2 = f[x0,x1,x2] = f(x1)-f(x0)/x1-x0 ……</p>
+<h3 id="牛顿插值"><a href="#牛顿插值" class="headerlink" title="牛顿插值"></a>牛顿插值</h3><p>Nn(x) = C0 + C1(x-x0) + C2 (x-x0)(x-x1) + … + Cn(x-x0)(x-x1)..(x-xn)</p>
+]]></content>
+      <categories>
+        <category>数值分析</category>
+      </categories>
+      <tags>
+        <tag>数值分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构--线性表</title>
+    <url>/2022/02/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
+    <content><![CDATA[<h1 id="线性表的基础内容及应用"><a href="#线性表的基础内容及应用" class="headerlink" title="线性表的基础内容及应用"></a>线性表的基础内容及应用</h1><span id="more"></span>
+
+<h2 id="基础知识（重点！！）"><a href="#基础知识（重点！！）" class="headerlink" title="基础知识（重点！！）"></a>基础知识（重点！！）</h2><p>1.ElemType是你<strong>自己定义</strong>的数据类型，想用什么用什么，使用typedef定义，如<strong>typedef int ElemType</strong></p>
+<p>2.数组的静态分配和动态分配：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//静态分配,很好理解</span></span><br><span class="line">ElemType data[MAXSIZE];</span><br><span class="line"></span><br><span class="line"><span class="comment">//静态分配，难理解！</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">ElemType *data;</span><br><span class="line"><span class="type">int</span> length;</span><br><span class="line">&#125;sqList;</span><br><span class="line"><span class="comment">//接着上面的，在动态分配的固定的函数给他分配内存！</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MaxSize 100</span></span><br><span class="line">sqList L;</span><br><span class="line">L.data = (ElemType*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ElemType)*MaxSize);<span class="comment">//其中ElemType*表示强制类型转换，因为在定义的时候是指针类型的！</span></span><br></pre></td></tr></table></figure>
+
+<p>3.接上！内存分配函数</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//下列三个函数都是要在加载头文件&lt;stdlib.h&gt;的前提下</span></span><br><span class="line"><span class="comment">//malloc(m)函数:开辟m字节长度的地址空间，并返回这段空间的首地址！</span></span><br><span class="line"><span class="comment">//sizeof(x)函数:计算变量x的长度</span></span><br><span class="line"><span class="comment">//free(p)函数:释放指针p所指变量的存储空间，即删除一个变量</span></span><br></pre></td></tr></table></figure>
+
+<p>4.C++的动态存储分配：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//创建空间--new</span></span><br><span class="line"><span class="keyword">new</span> 类型名（初值列表）</span><br><span class="line">    功能：</span><br><span class="line">    	申请用于存放T类型对象的内存空间，并赋予初值</span><br><span class="line">    结果值：</span><br><span class="line">    	成功：T类型的指针，指向新分配的内存</span><br><span class="line">    	失败：<span class="number">0</span> </span><br><span class="line"><span class="comment">//如int *p1 = new int;</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//删除空间--delete</span></span><br><span class="line">    <span class="keyword">delete</span> 指针P</span><br><span class="line">    功能：</span><br><span class="line">    	释放指针P所指向的内存，P必须是<span class="keyword">new</span>操作的返回值</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="线性表的定义"><a href="#线性表的定义" class="headerlink" title="线性表的定义"></a>线性表的定义</h3><p>线性表：<strong>零个或多个</strong>数据元素的<strong>有限序列</strong></p>
+<p>线性表中的元素有且只有一个直接前驱和直接后继（除了线性表中的第一个和最后一个元素）</p>
+<p><strong>线性表元素的个数n定义为线性表的长度为n。当n=0时，线性表为空表！</strong></p>
+<p>在比较复杂的线性表当中，一个数据元素可以由若干个数据项组成！</p>
+<h3 id="线性表的抽象数据类型"><a href="#线性表的抽象数据类型" class="headerlink" title="线性表的抽象数据类型"></a>线性表的抽象数据类型</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">ADT 线性表(List)</span><br><span class="line">Data</span><br><span class="line">	线性表的数据对象的集合为&#123;a1,a2,..,an&#125;,每个元素的类型均为DataType，其中，除了第一个元素a1外，每个元素有且只有一个直接前驱元素，除了最后一个元素an外，每个元素有且只有一个直接后继元素。数据元素之间的关系是一对一的关系。</span><br><span class="line">Operation</span><br><span class="line">    <span class="title function_">InitList</span><span class="params">(*L)</span>:初始化操作，建立一个空的线性表L。</span><br><span class="line">    <span class="title function_">DestroyList</span><span class="params">(*L)</span>:销毁一个线性表。</span><br><span class="line">    <span class="title function_">ListEmpty</span><span class="params">(L)</span>:判断线性表是否为空表，若线性表为空，返回<span class="literal">true</span>，否则返回<span class="literal">false</span>。</span><br><span class="line">    <span class="title function_">CleanList</span><span class="params">(*L)</span>:将线性表清空。</span><br><span class="line">    <span class="title function_">GetElem</span><span class="params">(L,i,*e)</span>:将线性表L中的第i个元素值返回给e。</span><br><span class="line">    <span class="title function_">LocateElem</span><span class="params">(L,e)</span>:在线性表L中查找与给定值e相等的元素，如果查找成功，返回该元素在表中序号表示成功；否则返回0表示失败！</span><br><span class="line">    <span class="title function_">priorElem</span><span class="params">(L,cur_e,*pre_e)</span>:如果cur_e不是线性表中的第一个元素，那么返回它的直接前驱，否则操作失败！</span><br><span class="line">    <span class="title function_">NextElem</span><span class="params">(L,cur_e,*next_e)</span>:如果cur_e不是线性表中的最后一个元素，那么返回它的直接后继，否则操作失败！</span><br><span class="line">    <span class="title function_">ListInsert</span><span class="params">(*L,i,e)</span>:在线性表L中的第i个位置插入新元素e。</span><br><span class="line">    <span class="title function_">ListDelete</span><span class="params">(*L,i,*e)</span>:删除在线性表L中第i个位置元素，并用e返回其值。</span><br><span class="line">    <span class="title function_">ListLength</span><span class="params">(L)</span>:返回线性表L的元素个数。</span><br><span class="line">endADT</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="线性表的顺序存储结构"><a href="#线性表的顺序存储结构" class="headerlink" title="线性表的顺序存储结构"></a>线性表的顺序存储结构</h3><p>顺序存储的定义：在逻辑结构上相邻的数据储存在物理位置也相邻的地方</p>
+<h4 id="顺序表中存储位置的计算（重点！）"><a href="#顺序表中存储位置的计算（重点！）" class="headerlink" title="顺序表中存储位置的计算（重点！）"></a>顺序表中存储位置的计算（重点！）</h4><p>如果每个元素占用8个存储单元，已知ai的存储位置是2000，问a（i+1）的存储位置</p>
+<p>答：a(i+1) = ai + 8  = 2008</p>
+<p>假设每个元素占用L个存储单元，已知第一个元素的位置，求第i个元素的位置：</p>
+<p>*<em>LOC(ai) = LOC(a1) + (i-1)<em>L</em></em></p>
+<h4 id="结构体指针"><a href="#结构体指针" class="headerlink" title="结构体指针"></a>结构体指针</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="type">long</span> num;</span><br><span class="line">	<span class="type">char</span> name[<span class="number">10</span>];</span><br><span class="line">	<span class="type">char</span> gender;</span><br><span class="line">	<span class="type">float</span> score;</span><br><span class="line">&#125;stu=&#123;<span class="number">01</span>;<span class="string">&quot;dgz&quot;</span>;<span class="string">&#x27;男&#x27;</span>;<span class="number">90</span>&#125;   <span class="comment">//这里使用了尾随法来给结构体类型赋值</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span> *<span class="title">p</span>;</span>    <span class="comment">//创建一个结构体指针</span></span><br><span class="line">p = &amp;stu;			<span class="comment">//这个结构体指针指向的是结构体变量stu</span></span><br><span class="line"><span class="comment">//现在我们想使用指针调用结构体变量stu中的num变量，有三种方法</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%ld\n&quot;</span>,stu.num);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%ld\n&quot;</span>,*p.num);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%ld\n&quot;</span>,p -&gt; num);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="顺序结构的代码-very-very-important"><a href="#顺序结构的代码-very-very-important" class="headerlink" title="顺序结构的代码(very very important!!!)"></a>顺序结构的代码(very very important!!!)</h4><p><strong>标准格式(下面所有的代码全部以他为依据！)</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAXSIZE 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType data[MAXSIZE];</span><br><span class="line">    <span class="type">int</span> length;</span><br><span class="line">&#125;sqList;</span><br></pre></td></tr></table></figure>
+
+<p><strong>用e返回线性表L中的第i个元素</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;</span><br><span class="line">Status <span class="title function_">GetElem</span><span class="params">(sqList L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;L-&gt;length<span class="number">-1</span> || i&lt;<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;=<span class="number">1</span> &amp;&amp; i&lt;=L-&gt;length<span class="number">-1</span>)&#123;</span><br><span class="line">        e = L-&gt;data[i<span class="number">-1</span>];</span><br><span class="line">        <span class="keyword">return</span> OK;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="顺序结构的插入（重点！）"><a href="#顺序结构的插入（重点！）" class="headerlink" title="顺序结构的插入（重点！）"></a>顺序结构的插入（重点！）</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//初始条件：L存在，1&lt;=i&lt;=ListLength(L)</span></span><br><span class="line"><span class="comment">//操作结果：在L中第i个位置之前插入新的元素e，L长度加一</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXSIZE 100</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status</span><br><span class="line">Status <span class="title function_">ListInsert</span><span class="params">(SqList *L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">	<span class="type">int</span> k;</span><br><span class="line">	<span class="keyword">if</span>(L-&gt;length==MAXSIZE)		<span class="comment">//如果线性表满了插不进去</span></span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span> || i&gt;L-&gt;length+<span class="number">1</span>)	<span class="comment">//如果元素在线性表外，也插不进去</span></span><br><span class="line">        <span class="keyword">return</span> OK;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;=<span class="number">1</span> &amp;&amp; i&lt;=length+<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(k=L-&gt;length<span class="number">-1</span>;k&gt;=i<span class="number">-1</span>;k--)&#123;</span><br><span class="line">            data[k+<span class="number">1</span>] = data[k];</span><br><span class="line">        &#125;</span><br><span class="line">        L-&gt;length = L-&gt;length+<span class="number">1</span>;</span><br><span class="line">        L-&gt;data[i<span class="number">-1</span>] = e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="顺序结构的删除"><a href="#顺序结构的删除" class="headerlink" title="顺序结构的删除"></a>顺序结构的删除</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//删除i位置的元素，并用</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;		<span class="comment">//Status当作int类型</span></span><br><span class="line">ListDelete(sqList *L,<span class="type">int</span> i,ElemType *e)&#123;</span><br><span class="line">    <span class="type">int</span> k;</span><br><span class="line">    <span class="keyword">if</span>(L-&gt;length==<span class="number">0</span> || i&lt;<span class="number">1</span> || i&gt;L-&gt;length)</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    *e = L-&gt;data[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">if</span>(L-&gt;length&gt;i &amp;&amp; i&gt;<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(k=i;k&lt;=L-&gt;length<span class="number">-1</span>;k++)&#123;</span><br><span class="line">            L-&gt;data[k<span class="number">-1</span>] = L-&gt;data[k];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;length--;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="插入和删除的时间复杂度"><a href="#插入和删除的时间复杂度" class="headerlink" title="插入和删除的时间复杂度"></a>插入和删除的时间复杂度</h5><p>最简单的情况：插在最后一个元素位置，时间复杂度是O（1）</p>
+<p>最复杂的情况：插在第一个元素位置，时间复杂度是O（n）</p>
+<p>平均下来的时间复杂度是：(n+1)/2，即O（n）</p>
+<h4 id="线性表顺序存储的优缺点"><a href="#线性表顺序存储的优缺点" class="headerlink" title="线性表顺序存储的优缺点"></a>线性表顺序存储的优缺点</h4><p>优点：1.无需为表中元素之间的逻辑关系而增加额外的存储空间；</p>
+<p>​            2.可以快速的查找任意元素的位置</p>
+<p>缺点：1.插入和删除操作需要移动大量的元素</p>
+<p>​            2.当线性表长度变化太大时，难以确定存储空间的变化！</p>
+<p>​            3.造成存储空间的“碎片化”。</p>
+<h3 id="线性表的链式存储"><a href="#线性表的链式存储" class="headerlink" title="线性表的链式存储"></a>线性表的链式存储</h3><h4 id="链式存储的定义"><a href="#链式存储的定义" class="headerlink" title="链式存储的定义"></a>链式存储的定义</h4><p>​    为了表示ai和ai+1之间的关系，对于ai来说，除了存储本身的数据，还需要存储一个指向下一个数据元素的指针，我们把ai中存储数据的域叫做<strong>数据域</strong>，把存储指针的域叫做<strong>指针域</strong>，把指针域中的数据叫做<strong>指针或链</strong>，这两部分信息组成数据元素ai的存储映像，称为<strong>结点</strong>。</p>
+<p>​    n个结点链接成一个链表，即为线性表的链式存储，每个结点中值包含一个指针域，称为<strong>单链表</strong>。</p>
+<p>​    链表中第一个结点的存储位置称为<strong>头指针</strong></p>
+<p>​    链表中最后一个结点的存储位置为空，用<strong>NULL或者^</strong>表示</p>
+<p>​    <strong>如a|b -&gt; c|d -&gt; e|f    这个案例中a|b就是头结点，b就是头指针。头节点中的数据域a一般不存放数据</strong></p>
+<p>​    如果线性表为空表，那么头结点的指针为空指针</p>
+<h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><h4 id="链式存储的代码（重点！）"><a href="#链式存储的代码（重点！）" class="headerlink" title="链式存储的代码（重点！）"></a>链式存储的代码（重点！）</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//线性表单链表的存储结构之定义单链表结点类型（一切的基础！）</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span><span class="comment">//定义一个结构体</span></span><br><span class="line">	ElemType data;	<span class="comment">//定义数据域</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">next</span>;</span>	<span class="comment">//指针指向下一个结点</span></span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">LinkList</span>;</span></span><br></pre></td></tr></table></figure>
+
+<p>假设p是指向下一个元素的指针，那么下一个元素的数据域表示为<strong>p-&gt;data</strong>，下一个元素的指针域表示为<strong>p-&gt;next</strong>，那么<strong>p-&gt;next-&gt;data</strong>就指向再下一个元素的数据域！</p>
+<h5 id="查找元素并返回值GetElem"><a href="#查找元素并返回值GetElem" class="headerlink" title="查找元素并返回值GetElem()"></a>查找元素并返回值GetElem()</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//链式存储中的用e返回第i个位置的元素操作！</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;</span><br><span class="line">Status <span class="title function_">GetElem</span> <span class="params">(LinkList L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">    <span class="type">int</span> k;</span><br><span class="line">    LinkList p;			<span class="comment">//声明指针</span></span><br><span class="line">    p = L-&gt;next;		<span class="comment">//p指向线性表的第一个结点</span></span><br><span class="line">    k = <span class="number">1</span>;				<span class="comment">//k为计数器</span></span><br><span class="line">    <span class="keyword">while</span>(p &amp;&amp; k&lt;i)		<span class="comment">//p不为NULL且k没等于i时，循环继续</span></span><br><span class="line">    &#123;</span><br><span class="line">        p = p-&gt;next;	<span class="comment">//p指向下一个结点,在最后一次循环的时候，其实指向的是第i-1个元素</span></span><br><span class="line">        ++k;			<span class="comment">//k递增</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(!p || k&gt;i)&#123;</span><br><span class="line">        <span class="keyword">return</span> ERROR；</span><br><span class="line">    &#125;</span><br><span class="line">    *e = p-&gt;data;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//核心思想是指针的后移，这也是很多算法的实现方法。</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="不知道要循环多少次的循环别使用for，用while"><a href="#不知道要循环多少次的循环别使用for，用while" class="headerlink" title="不知道要循环多少次的循环别使用for，用while"></a>不知道要循环多少次的循环别使用for，用while</h5><h5 id="链式表的插入操作"><a href="#链式表的插入操作" class="headerlink" title="链式表的插入操作"></a>链式表的插入操作</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//先进行元素位置i的查找，找到时候进行插入新的元素e的赋值操作！</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;</span><br><span class="line">Status <span class="title function_">ListInsert</span><span class="params">(LinkList *L,<span class="type">int</span> i,ElemType e)</span>&#123;</span><br><span class="line">    <span class="type">int</span> k;</span><br><span class="line">    LinkList p,s;</span><br><span class="line">    p = *L</span><br><span class="line">    <span class="keyword">while</span>(p &amp;&amp; k&lt;=i)&#123;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">        ++k;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(!p || k&gt;i)&#123;</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    &#125;</span><br><span class="line">    s = (LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node)); <span class="comment">//生成新结点（C标准函数）</span></span><br><span class="line">    s-&gt;data = e;</span><br><span class="line">    s-&gt;next = p-&gt;next;</span><br><span class="line">    p-&gt;next = s;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="链式表的删除操作"><a href="#链式表的删除操作" class="headerlink" title="链式表的删除操作"></a>链式表的删除操作</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Status <span class="title function_">ListDelete</span><span class="params">(LinkList *L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">	<span class="type">int</span> k=<span class="number">1</span>;</span><br><span class="line">	LinkList p,q;</span><br><span class="line">	p = *L;</span><br><span class="line">	<span class="keyword">while</span>(p-&gt;next &amp;&amp; k&lt;i)</span><br><span class="line">	&#123;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">		k++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(!(p-&gt;next) || k&gt;i)</span><br><span class="line">		<span class="keyword">return</span> ERROR;</span><br><span class="line">	q = p-&gt;next;			<span class="comment">//令q为要删除的结点</span></span><br><span class="line">	p-&gt;next = q-&gt;next;</span><br><span class="line">	<span class="built_in">free</span>(q);				<span class="comment">//释放q的空间</span></span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="单链表的整表创建"><a href="#单链表的整表创建" class="headerlink" title="单链表的整表创建"></a>单链表的整表创建</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* 随机产生n个元素的值，建立带表头结点的单链线性表L(头插法) */</span><br><span class="line">void CreateListHead(LinkList *L,int n)</span><br><span class="line">&#123;</span><br><span class="line">	LinkList p;</span><br><span class="line">	int i;</span><br><span class="line">	srand(time(0));				//初始化随机数种子</span><br><span class="line">	*L = (LinkList)malloc(sizeof(Node));</span><br><span class="line">	(*L)-&gt;next = NULL;</span><br><span class="line">	for(i=0;i&lt;n;i++)&#123;</span><br><span class="line">		p=(LinkList)malloc(sizeof(Node));</span><br><span class="line">		p-&gt;data = rand() % 100+1;</span><br><span class="line">		p-&gt;next = (*L)-&gt;next;</span><br><span class="line">		(*L)-&gt;next=p;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -2977,83 +3054,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构--线性表</title>
-    <url>/2022/02/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
-    <content><![CDATA[<h1 id="线性表的基础内容及应用"><a href="#线性表的基础内容及应用" class="headerlink" title="线性表的基础内容及应用"></a>线性表的基础内容及应用</h1><span id="more"></span>
-
-<h2 id="基础知识（重点！！）"><a href="#基础知识（重点！！）" class="headerlink" title="基础知识（重点！！）"></a>基础知识（重点！！）</h2><p>1.ElemType是你<strong>自己定义</strong>的数据类型，想用什么用什么，使用typedef定义，如<strong>typedef int ElemType</strong></p>
-<p>2.数组的静态分配和动态分配：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//静态分配,很好理解</span></span><br><span class="line">ElemType data[MAXSIZE];</span><br><span class="line"></span><br><span class="line"><span class="comment">//静态分配，难理解！</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">ElemType *data;</span><br><span class="line"><span class="type">int</span> length;</span><br><span class="line">&#125;sqList;</span><br><span class="line"><span class="comment">//接着上面的，在动态分配的固定的函数给他分配内存！</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MaxSize 100</span></span><br><span class="line">sqList L;</span><br><span class="line">L.data = (ElemType*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ElemType)*MaxSize);<span class="comment">//其中ElemType*表示强制类型转换，因为在定义的时候是指针类型的！</span></span><br></pre></td></tr></table></figure>
-
-<p>3.接上！内存分配函数</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//下列三个函数都是要在加载头文件&lt;stdlib.h&gt;的前提下</span></span><br><span class="line"><span class="comment">//malloc(m)函数:开辟m字节长度的地址空间，并返回这段空间的首地址！</span></span><br><span class="line"><span class="comment">//sizeof(x)函数:计算变量x的长度</span></span><br><span class="line"><span class="comment">//free(p)函数:释放指针p所指变量的存储空间，即删除一个变量</span></span><br></pre></td></tr></table></figure>
-
-<p>4.C++的动态存储分配：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//创建空间--new</span></span><br><span class="line"><span class="keyword">new</span> 类型名（初值列表）</span><br><span class="line">    功能：</span><br><span class="line">    	申请用于存放T类型对象的内存空间，并赋予初值</span><br><span class="line">    结果值：</span><br><span class="line">    	成功：T类型的指针，指向新分配的内存</span><br><span class="line">    	失败：<span class="number">0</span> </span><br><span class="line"><span class="comment">//如int *p1 = new int;</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//删除空间--delete</span></span><br><span class="line">    <span class="keyword">delete</span> 指针P</span><br><span class="line">    功能：</span><br><span class="line">    	释放指针P所指向的内存，P必须是<span class="keyword">new</span>操作的返回值</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="线性表的定义"><a href="#线性表的定义" class="headerlink" title="线性表的定义"></a>线性表的定义</h3><p>线性表：<strong>零个或多个</strong>数据元素的<strong>有限序列</strong></p>
-<p>线性表中的元素有且只有一个直接前驱和直接后继（除了线性表中的第一个和最后一个元素）</p>
-<p><strong>线性表元素的个数n定义为线性表的长度为n。当n=0时，线性表为空表！</strong></p>
-<p>在比较复杂的线性表当中，一个数据元素可以由若干个数据项组成！</p>
-<h3 id="线性表的抽象数据类型"><a href="#线性表的抽象数据类型" class="headerlink" title="线性表的抽象数据类型"></a>线性表的抽象数据类型</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">ADT 线性表(List)</span><br><span class="line">Data</span><br><span class="line">	线性表的数据对象的集合为&#123;a1,a2,..,an&#125;,每个元素的类型均为DataType，其中，除了第一个元素a1外，每个元素有且只有一个直接前驱元素，除了最后一个元素an外，每个元素有且只有一个直接后继元素。数据元素之间的关系是一对一的关系。</span><br><span class="line">Operation</span><br><span class="line">    <span class="title function_">InitList</span><span class="params">(*L)</span>:初始化操作，建立一个空的线性表L。</span><br><span class="line">    <span class="title function_">DestroyList</span><span class="params">(*L)</span>:销毁一个线性表。</span><br><span class="line">    <span class="title function_">ListEmpty</span><span class="params">(L)</span>:判断线性表是否为空表，若线性表为空，返回<span class="literal">true</span>，否则返回<span class="literal">false</span>。</span><br><span class="line">    <span class="title function_">CleanList</span><span class="params">(*L)</span>:将线性表清空。</span><br><span class="line">    <span class="title function_">GetElem</span><span class="params">(L,i,*e)</span>:将线性表L中的第i个元素值返回给e。</span><br><span class="line">    <span class="title function_">LocateElem</span><span class="params">(L,e)</span>:在线性表L中查找与给定值e相等的元素，如果查找成功，返回该元素在表中序号表示成功；否则返回0表示失败！</span><br><span class="line">    <span class="title function_">priorElem</span><span class="params">(L,cur_e,*pre_e)</span>:如果cur_e不是线性表中的第一个元素，那么返回它的直接前驱，否则操作失败！</span><br><span class="line">    <span class="title function_">NextElem</span><span class="params">(L,cur_e,*next_e)</span>:如果cur_e不是线性表中的最后一个元素，那么返回它的直接后继，否则操作失败！</span><br><span class="line">    <span class="title function_">ListInsert</span><span class="params">(*L,i,e)</span>:在线性表L中的第i个位置插入新元素e。</span><br><span class="line">    <span class="title function_">ListDelete</span><span class="params">(*L,i,*e)</span>:删除在线性表L中第i个位置元素，并用e返回其值。</span><br><span class="line">    <span class="title function_">ListLength</span><span class="params">(L)</span>:返回线性表L的元素个数。</span><br><span class="line">endADT</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="线性表的顺序存储结构"><a href="#线性表的顺序存储结构" class="headerlink" title="线性表的顺序存储结构"></a>线性表的顺序存储结构</h3><p>顺序存储的定义：在逻辑结构上相邻的数据储存在物理位置也相邻的地方</p>
-<h4 id="顺序表中存储位置的计算（重点！）"><a href="#顺序表中存储位置的计算（重点！）" class="headerlink" title="顺序表中存储位置的计算（重点！）"></a>顺序表中存储位置的计算（重点！）</h4><p>如果每个元素占用8个存储单元，已知ai的存储位置是2000，问a（i+1）的存储位置</p>
-<p>答：a(i+1) = ai + 8  = 2008</p>
-<p>假设每个元素占用L个存储单元，已知第一个元素的位置，求第i个元素的位置：</p>
-<p>*<em>LOC(ai) = LOC(a1) + (i-1)<em>L</em></em></p>
-<h4 id="结构体指针"><a href="#结构体指针" class="headerlink" title="结构体指针"></a>结构体指针</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="type">long</span> num;</span><br><span class="line">	<span class="type">char</span> name[<span class="number">10</span>];</span><br><span class="line">	<span class="type">char</span> gender;</span><br><span class="line">	<span class="type">float</span> score;</span><br><span class="line">&#125;stu=&#123;<span class="number">01</span>;<span class="string">&quot;dgz&quot;</span>;<span class="string">&#x27;男&#x27;</span>;<span class="number">90</span>&#125;   <span class="comment">//这里使用了尾随法来给结构体类型赋值</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span> *<span class="title">p</span>;</span>    <span class="comment">//创建一个结构体指针</span></span><br><span class="line">p = &amp;stu;			<span class="comment">//这个结构体指针指向的是结构体变量stu</span></span><br><span class="line"><span class="comment">//现在我们想使用指针调用结构体变量stu中的num变量，有三种方法</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%ld\n&quot;</span>,stu.num);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%ld\n&quot;</span>,*p.num);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%ld\n&quot;</span>,p -&gt; num);</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="顺序结构的代码-very-very-important"><a href="#顺序结构的代码-very-very-important" class="headerlink" title="顺序结构的代码(very very important!!!)"></a>顺序结构的代码(very very important!!!)</h4><p><strong>标准格式(下面所有的代码全部以他为依据！)</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAXSIZE 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType data[MAXSIZE];</span><br><span class="line">    <span class="type">int</span> length;</span><br><span class="line">&#125;sqList;</span><br></pre></td></tr></table></figure>
-
-<p><strong>用e返回线性表L中的第i个元素</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;</span><br><span class="line">Status <span class="title function_">GetElem</span><span class="params">(sqList L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;L-&gt;length<span class="number">-1</span> || i&lt;<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;=<span class="number">1</span> &amp;&amp; i&lt;=L-&gt;length<span class="number">-1</span>)&#123;</span><br><span class="line">        e = L-&gt;data[i<span class="number">-1</span>];</span><br><span class="line">        <span class="keyword">return</span> OK;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="顺序结构的插入（重点！）"><a href="#顺序结构的插入（重点！）" class="headerlink" title="顺序结构的插入（重点！）"></a>顺序结构的插入（重点！）</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//初始条件：L存在，1&lt;=i&lt;=ListLength(L)</span></span><br><span class="line"><span class="comment">//操作结果：在L中第i个位置之前插入新的元素e，L长度加一</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXSIZE 100</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status</span><br><span class="line">Status <span class="title function_">ListInsert</span><span class="params">(SqList *L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">	<span class="type">int</span> k;</span><br><span class="line">	<span class="keyword">if</span>(L-&gt;length==MAXSIZE)		<span class="comment">//如果线性表满了插不进去</span></span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span> || i&gt;L-&gt;length+<span class="number">1</span>)	<span class="comment">//如果元素在线性表外，也插不进去</span></span><br><span class="line">        <span class="keyword">return</span> OK;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;=<span class="number">1</span> &amp;&amp; i&lt;=length+<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(k=L-&gt;length<span class="number">-1</span>;k&gt;=i<span class="number">-1</span>;k--)&#123;</span><br><span class="line">            data[k+<span class="number">1</span>] = data[k];</span><br><span class="line">        &#125;</span><br><span class="line">        L-&gt;length = L-&gt;length+<span class="number">1</span>;</span><br><span class="line">        L-&gt;data[i<span class="number">-1</span>] = e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="顺序结构的删除"><a href="#顺序结构的删除" class="headerlink" title="顺序结构的删除"></a>顺序结构的删除</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//删除i位置的元素，并用</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;		<span class="comment">//Status当作int类型</span></span><br><span class="line">ListDelete(sqList *L,<span class="type">int</span> i,ElemType *e)&#123;</span><br><span class="line">    <span class="type">int</span> k;</span><br><span class="line">    <span class="keyword">if</span>(L-&gt;length==<span class="number">0</span> || i&lt;<span class="number">1</span> || i&gt;L-&gt;length)</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    *e = L-&gt;data[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">if</span>(L-&gt;length&gt;i &amp;&amp; i&gt;<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(k=i;k&lt;=L-&gt;length<span class="number">-1</span>;k++)&#123;</span><br><span class="line">            L-&gt;data[k<span class="number">-1</span>] = L-&gt;data[k];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;length--;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="插入和删除的时间复杂度"><a href="#插入和删除的时间复杂度" class="headerlink" title="插入和删除的时间复杂度"></a>插入和删除的时间复杂度</h5><p>最简单的情况：插在最后一个元素位置，时间复杂度是O（1）</p>
-<p>最复杂的情况：插在第一个元素位置，时间复杂度是O（n）</p>
-<p>平均下来的时间复杂度是：(n+1)/2，即O（n）</p>
-<h4 id="线性表顺序存储的优缺点"><a href="#线性表顺序存储的优缺点" class="headerlink" title="线性表顺序存储的优缺点"></a>线性表顺序存储的优缺点</h4><p>优点：1.无需为表中元素之间的逻辑关系而增加额外的存储空间；</p>
-<p>​            2.可以快速的查找任意元素的位置</p>
-<p>缺点：1.插入和删除操作需要移动大量的元素</p>
-<p>​            2.当线性表长度变化太大时，难以确定存储空间的变化！</p>
-<p>​            3.造成存储空间的“碎片化”。</p>
-<h3 id="线性表的链式存储"><a href="#线性表的链式存储" class="headerlink" title="线性表的链式存储"></a>线性表的链式存储</h3><h4 id="链式存储的定义"><a href="#链式存储的定义" class="headerlink" title="链式存储的定义"></a>链式存储的定义</h4><p>​    为了表示ai和ai+1之间的关系，对于ai来说，除了存储本身的数据，还需要存储一个指向下一个数据元素的指针，我们把ai中存储数据的域叫做<strong>数据域</strong>，把存储指针的域叫做<strong>指针域</strong>，把指针域中的数据叫做<strong>指针或链</strong>，这两部分信息组成数据元素ai的存储映像，称为<strong>结点</strong>。</p>
-<p>​    n个结点链接成一个链表，即为线性表的链式存储，每个结点中值包含一个指针域，称为<strong>单链表</strong>。</p>
-<p>​    链表中第一个结点的存储位置称为<strong>头指针</strong></p>
-<p>​    链表中最后一个结点的存储位置为空，用<strong>NULL或者^</strong>表示</p>
-<p>​    <strong>如a|b -&gt; c|d -&gt; e|f    这个案例中a|b就是头结点，b就是头指针。头节点中的数据域a一般不存放数据</strong></p>
-<p>​    如果线性表为空表，那么头结点的指针为空指针</p>
-<h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><h4 id="链式存储的代码（重点！）"><a href="#链式存储的代码（重点！）" class="headerlink" title="链式存储的代码（重点！）"></a>链式存储的代码（重点！）</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//线性表单链表的存储结构之定义单链表结点类型（一切的基础！）</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span><span class="comment">//定义一个结构体</span></span><br><span class="line">	ElemType data;	<span class="comment">//定义数据域</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">next</span>;</span>	<span class="comment">//指针指向下一个结点</span></span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">LinkList</span>;</span></span><br></pre></td></tr></table></figure>
-
-<p>假设p是指向下一个元素的指针，那么下一个元素的数据域表示为<strong>p-&gt;data</strong>，下一个元素的指针域表示为<strong>p-&gt;next</strong>，那么<strong>p-&gt;next-&gt;data</strong>就指向再下一个元素的数据域！</p>
-<h5 id="查找元素并返回值GetElem"><a href="#查找元素并返回值GetElem" class="headerlink" title="查找元素并返回值GetElem()"></a>查找元素并返回值GetElem()</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//链式存储中的用e返回第i个位置的元素操作！</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;</span><br><span class="line">Status <span class="title function_">GetElem</span> <span class="params">(LinkList L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">    <span class="type">int</span> k;</span><br><span class="line">    LinkList p;			<span class="comment">//声明指针</span></span><br><span class="line">    p = L-&gt;next;		<span class="comment">//p指向线性表的第一个结点</span></span><br><span class="line">    k = <span class="number">1</span>;				<span class="comment">//k为计数器</span></span><br><span class="line">    <span class="keyword">while</span>(p &amp;&amp; k&lt;i)		<span class="comment">//p不为NULL且k没等于i时，循环继续</span></span><br><span class="line">    &#123;</span><br><span class="line">        p = p-&gt;next;	<span class="comment">//p指向下一个结点,在最后一次循环的时候，其实指向的是第i-1个元素</span></span><br><span class="line">        ++k;			<span class="comment">//k递增</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(!p || k&gt;i)&#123;</span><br><span class="line">        <span class="keyword">return</span> ERROR；</span><br><span class="line">    &#125;</span><br><span class="line">    *e = p-&gt;data;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//核心思想是指针的后移，这也是很多算法的实现方法。</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="不知道要循环多少次的循环别使用for，用while"><a href="#不知道要循环多少次的循环别使用for，用while" class="headerlink" title="不知道要循环多少次的循环别使用for，用while"></a>不知道要循环多少次的循环别使用for，用while</h5><h5 id="链式表的插入操作"><a href="#链式表的插入操作" class="headerlink" title="链式表的插入操作"></a>链式表的插入操作</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//先进行元素位置i的查找，找到时候进行插入新的元素e的赋值操作！</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;</span><br><span class="line">Status <span class="title function_">ListInsert</span><span class="params">(LinkList *L,<span class="type">int</span> i,ElemType e)</span>&#123;</span><br><span class="line">    <span class="type">int</span> k;</span><br><span class="line">    LinkList p,s;</span><br><span class="line">    p = *L</span><br><span class="line">    <span class="keyword">while</span>(p &amp;&amp; k&lt;=i)&#123;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">        ++k;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(!p || k&gt;i)&#123;</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    &#125;</span><br><span class="line">    s = (LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node)); <span class="comment">//生成新结点（C标准函数）</span></span><br><span class="line">    s-&gt;data = e;</span><br><span class="line">    s-&gt;next = p-&gt;next;</span><br><span class="line">    p-&gt;next = s;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="链式表的删除操作"><a href="#链式表的删除操作" class="headerlink" title="链式表的删除操作"></a>链式表的删除操作</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Status <span class="title function_">ListDelete</span><span class="params">(LinkList *L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">	<span class="type">int</span> k=<span class="number">1</span>;</span><br><span class="line">	LinkList p,q;</span><br><span class="line">	p = *L;</span><br><span class="line">	<span class="keyword">while</span>(p-&gt;next &amp;&amp; k&lt;i)</span><br><span class="line">	&#123;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">		k++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(!(p-&gt;next) || k&gt;i)</span><br><span class="line">		<span class="keyword">return</span> ERROR;</span><br><span class="line">	q = p-&gt;next;			<span class="comment">//令q为要删除的结点</span></span><br><span class="line">	p-&gt;next = q-&gt;next;</span><br><span class="line">	<span class="built_in">free</span>(q);				<span class="comment">//释放q的空间</span></span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="单链表的整表创建"><a href="#单链表的整表创建" class="headerlink" title="单链表的整表创建"></a>单链表的整表创建</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* 随机产生n个元素的值，建立带表头结点的单链线性表L(头插法) */</span><br><span class="line">void CreateListHead(LinkList *L,int n)</span><br><span class="line">&#123;</span><br><span class="line">	LinkList p;</span><br><span class="line">	int i;</span><br><span class="line">	srand(time(0));				//初始化随机数种子</span><br><span class="line">	*L = (LinkList)malloc(sizeof(Node));</span><br><span class="line">	(*L)-&gt;next = NULL;</span><br><span class="line">	for(i=0;i&lt;n;i++)&#123;</span><br><span class="line">		p=(LinkList)malloc(sizeof(Node));</span><br><span class="line">		p-&gt;data = rand() % 100+1;</span><br><span class="line">		p-&gt;next = (*L)-&gt;next;</span><br><span class="line">		(*L)-&gt;next=p;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>机器学习--AdaBoost和GBDT</title>
     <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-AdaBoost%E5%92%8CGBDT/</url>
     <content><![CDATA[<h2 id="AdaBoost模型"><a href="#AdaBoost模型" class="headerlink" title="AdaBoost模型"></a>AdaBoost模型</h2><span id="more"></span>
@@ -3069,27 +3069,6 @@
 <h2 id="GBDT模型"><a href="#GBDT模型" class="headerlink" title="GBDT模型"></a>GBDT模型</h2><h3 id="GBDT分类模型"><a href="#GBDT分类模型" class="headerlink" title="GBDT分类模型"></a>GBDT分类模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> GradientBoostingClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">model = GradientBoostingClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
 
 <h3 id="GBDT回归模型"><a href="#GBDT回归模型" class="headerlink" title="GBDT回归模型"></a>GBDT回归模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> GradientBoostingRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">model = GradientBoostingRegressor(random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习--K近邻算法</title>
-    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="K近邻算法"><a href="#K近邻算法" class="headerlink" title="K近邻算法"></a>K近邻算法</h3><span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#算法</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;葡萄酒.xlsx&#x27;</span>)</span><br><span class="line">X_train = df[[<span class="string">&#x27;酒精含量(%)&#x27;</span>,<span class="string">&#x27;酸含量(%)&#x27;</span>]]</span><br><span class="line">y_train= df[<span class="string">&#x27;分类&#x27;</span>]</span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KN</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = KNeighborsRegressor(n_neighbors=<span class="number">2</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
-
-<h3 id="手写数字识别模型"><a href="#手写数字识别模型" class="headerlink" title="手写数字识别模型"></a>手写数字识别模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;手写数字识别.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;对应数字&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;对应数字&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neibhors <span class="keyword">import</span> KNeighborsClassifier</span><br><span class="line">model = KNeighborsClassifier(n_neibhors=<span class="number">5</span>)<span class="comment">#记得要加n_neighbors参数</span></span><br><span class="line">model.fit(X_train,y_train)<span class="comment">#训练模型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#开始处理图片</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line">img = Image.<span class="built_in">open</span>(<span class="string">&#x27;图片.jpg&#x27;</span>)<span class="comment">#打开图片文件</span></span><br><span class="line">img = img.resize((<span class="number">32</span>,<span class="number">32</span>))<span class="comment">#重新定义图片大小</span></span><br><span class="line">img = img.convert(<span class="string">&#x27;L&#x27;</span>)<span class="comment">#灰度处理</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">img_new = img.point(<span class="keyword">lambda</span> x:<span class="number">0</span> <span class="keyword">if</span> x&gt;<span class="number">128</span> <span class="keyword">else</span> <span class="number">1</span>)<span class="comment">#这里是如果x的色彩大于128则赋值为0，否则赋值为1</span></span><br><span class="line">arr = np.array(img_new)</span><br><span class="line">arr_new = arr.reshape(<span class="number">1</span>,-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#进行预测</span></span><br><span class="line">answer = model.predict(arr_new)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;图片中的数字为:&quot;</span>+<span class="built_in">str</span>(answer[<span class="number">0</span>]))</span><br></pre></td></tr></table></figure>
-
-
-
-
 
 ]]></content>
       <categories>
@@ -3140,30 +3119,44 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习--pandas库</title>
-    <url>/2022/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pandas%E5%BA%93/</url>
-    <content><![CDATA[<p>pandas库基础</p>
-<span id="more"></span>
+    <title>机器学习--K近邻算法</title>
+    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="K近邻算法"><a href="#K近邻算法" class="headerlink" title="K近邻算法"></a>K近邻算法</h3><span id="more"></span>
 
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#numpy库用random等函数创建数组，而pandas用Series创建数组</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">s = pd.Series([<span class="string">&#x27;邓&#x27;</span>,<span class="string">&#x27;高&#x27;</span>,<span class="string">&#x27;正&#x27;</span>])	<span class="comment">#Series不单止创建了一维数组，还创建了索引，使用s[i]即可找到对应元素的位置</span></span><br><span class="line"><span class="built_in">print</span>(s[<span class="number">1</span>])	<span class="comment">#高</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#算法</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;葡萄酒.xlsx&#x27;</span>)</span><br><span class="line">X_train = df[[<span class="string">&#x27;酒精含量(%)&#x27;</span>,<span class="string">&#x27;酸含量(%)&#x27;</span>]]</span><br><span class="line">y_train= df[<span class="string">&#x27;分类&#x27;</span>]</span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KN</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = KNeighborsRegressor(n_neighbors=<span class="number">2</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
 
-
-
-<h3 id="二维数据表格DataFrame的创建"><a href="#二维数据表格DataFrame的创建" class="headerlink" title="二维数据表格DataFrame的创建"></a>二维数据表格DataFrame的创建</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用DataFrame创建二维数组</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">a = pd.DataFrame([<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>])	<span class="comment">#生成的结果会有行索引和列索引，当然我们也可以自定义行列索引，如下</span></span><br><span class="line">a = pd.DataFrame([<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],columns=[<span class="string">&#x27;data&#x27;</span>,<span class="string">&#x27;score&#x27;</span>],index=[<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>])	<span class="comment">#这样就自定义了行列是什么</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#DataFrame同样可以创建字典，字典值默认为列索引</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">b = pd.DataFrame(&#123;<span class="string">&#x27;a&#x27;</span>:[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>],<span class="string">&#x27;b&#x27;</span>:[<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]&#125;,index=[<span class="string">&#x27;x&#x27;</span>,<span class="string">&#x27;y&#x27;</span>,<span class="string">&#x27;z&#x27;</span>])</span><br><span class="line"><span class="comment">#若想让字典为行索引</span></span><br><span class="line">c = pd.DataFrame.from_dict(&#123;<span class="string">&#x27;a&#x27;</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],<span class="string">&#x27;b&#x27;</span>:[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]&#125;,orient=<span class="string">&quot;index&quot;</span>)</span><br><span class="line"><span class="comment">#DataFrame支持将二维表格转置</span></span><br><span class="line">b = pd.DataFrame(&#123;<span class="string">&#x27;a&#x27;</span>:[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>],<span class="string">&#x27;b&#x27;</span>:[<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]&#125;,index=[<span class="string">&#x27;x&#x27;</span>,<span class="string">&#x27;y&#x27;</span>,<span class="string">&#x27;z&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(b.T)	<span class="comment">#打印转置后的表格</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#若要修改行索引和列索引的名字，使用rename函数</span></span><br><span class="line">a = a.rename(columns = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>],index = [<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>])</span><br><span class="line"><span class="comment">#其实上面那个只是创建了一个新的索引并未改变a的内容，需要使用inplace=True才能改变a的内容</span></span><br><span class="line">a = a.rename(columns = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>],index = [<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>]，inplace=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看index索引的值</span></span><br><span class="line">a.index.values()</span><br></pre></td></tr></table></figure>
+<h3 id="手写数字识别模型"><a href="#手写数字识别模型" class="headerlink" title="手写数字识别模型"></a>手写数字识别模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;手写数字识别.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;对应数字&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;对应数字&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neibhors <span class="keyword">import</span> KNeighborsClassifier</span><br><span class="line">model = KNeighborsClassifier(n_neibhors=<span class="number">5</span>)<span class="comment">#记得要加n_neighbors参数</span></span><br><span class="line">model.fit(X_train,y_train)<span class="comment">#训练模型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#开始处理图片</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line">img = Image.<span class="built_in">open</span>(<span class="string">&#x27;图片.jpg&#x27;</span>)<span class="comment">#打开图片文件</span></span><br><span class="line">img = img.resize((<span class="number">32</span>,<span class="number">32</span>))<span class="comment">#重新定义图片大小</span></span><br><span class="line">img = img.convert(<span class="string">&#x27;L&#x27;</span>)<span class="comment">#灰度处理</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">img_new = img.point(<span class="keyword">lambda</span> x:<span class="number">0</span> <span class="keyword">if</span> x&gt;<span class="number">128</span> <span class="keyword">else</span> <span class="number">1</span>)<span class="comment">#这里是如果x的色彩大于128则赋值为0，否则赋值为1</span></span><br><span class="line">arr = np.array(img_new)</span><br><span class="line">arr_new = arr.reshape(<span class="number">1</span>,-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#进行预测</span></span><br><span class="line">answer = model.predict(arr_new)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;图片中的数字为:&quot;</span>+<span class="built_in">str</span>(answer[<span class="number">0</span>]))</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="Excel表格的读取和写入"><a href="#Excel表格的读取和写入" class="headerlink" title="Excel表格的读取和写入"></a>Excel表格的读取和写入</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用pandas函数</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.read_excel(<span class="string">&#x27;data.xlsx&#x27;</span>)</span><br><span class="line"><span class="comment">#通过打印data可以看到读取表格中的内容</span></span><br><span class="line">data.head(n)		<span class="comment">#其中的n是查看多少行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#read_excel函数还可以设置更多的参数</span></span><br><span class="line">pd.read_excel(<span class="string">&#x27;data.xlsx&#x27;</span>,sheet_name=<span class="number">0</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)	<span class="comment">#其中sheet_name是工作表的位置，可以是工作表的名称，也可以是数字，默认是0，即第1个工作表，encoding自然是编码形式不必多说。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#pd还可以读取csv文件，使用read_csv</span></span><br><span class="line">pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>,delimiter=<span class="string">&#x27;,&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)	<span class="comment">#delimiter指的是指定csv文件中的分隔符。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Excel的写入</span></span><br><span class="line"><span class="comment">#先创建DataFrame</span></span><br><span class="line">data = pd.DataFrame([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>]],columns=[<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>])</span><br><span class="line"><span class="comment">#将data写入excel中</span></span><br><span class="line">data.to_excel(<span class="string">&#x27;data.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#在字符串之前加入r可以取消字符串中反斜杠的意义。</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">r&quot;D:\\niu\\bi&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习--XGBoost与Light-GBM</title>
+    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-XGBoost%E4%B8%8ELight-GBM/</url>
+    <content><![CDATA[<h2 id="XGBoost算法"><a href="#XGBoost算法" class="headerlink" title="XGBoost算法"></a>XGBoost算法</h2><span id="more"></span>
+
+<h3 id="XGBoost分类算法"><a href="#XGBoost分类算法" class="headerlink" title="XGBoost分类算法"></a>XGBoost分类算法</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> xgboost <span class="keyword">import</span> XGBClassifier</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment">#其实唯一的distinguish就是这里的X数组用numpy数组创建</span></span><br><span class="line">X = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]])</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line">model = XGBClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict(np.array([[<span class="number">5</span>,<span class="number">5</span>]])))</span><br></pre></td></tr></table></figure>
+
+<h3 id="XGBoost回归模型"><a href="#XGBoost回归模型" class="headerlink" title="XGBoost回归模型"></a>XGBoost回归模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> xgboost <span class="keyword">import</span> XGBRegressor</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">X = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]])</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = XGRegressor()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict(np.array([[<span class="number">5</span>,<span class="number">5</span>]])))</span><br></pre></td></tr></table></figure>
+
+<h3 id="案例实战"><a href="#案例实战" class="headerlink" title="案例实战"></a>案例实战</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;信用卡评分模型.xlsx&#x27;</span>)</span><br><span class="line">df.head()</span><br><span class="line"><span class="comment">#提取特征变量</span></span><br><span class="line">X = df.drop(<span class="string">&#x27;信用评分&#x27;</span>)</span><br><span class="line">Y = df[<span class="string">&#x27;信用评分&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line">model = LinearRegression()</span><br><span class="line">model.fit(X,Y)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;各项系数为&#x27;</span>+<span class="built_in">str</span>(model.coef_))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;截距为&#x27;</span>+<span class="built_in">str</span>(model.intercept_))</span><br><span class="line"></span><br><span class="line"><span class="comment">#模型评估</span></span><br><span class="line"><span class="keyword">import</span> statsmodels.api <span class="keyword">as</span> sm</span><br><span class="line">X2 = sm.add_constant(X)</span><br><span class="line">est = sm.OLS(Y,X2).fit()</span><br><span class="line"><span class="built_in">print</span>(est.summary())</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="数据的选取与处理"><a href="#数据的选取与处理" class="headerlink" title="数据的选取与处理"></a>数据的选取与处理</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#先创建一个二维数组</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.DataFrame(np.arange(<span class="number">1</span>,<span class="number">10</span>,<span class="number">1</span>).reshape(<span class="number">3</span>,<span class="number">3</span>),index=(<span class="string">&#x27;r1&#x27;</span>,<span class="string">&#x27;r2&#x27;</span>,<span class="string">&#x27;r3&#x27;</span>),columns=(<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c2&#x27;</span>,<span class="string">&#x27;c3&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#选择打印一行</span></span><br><span class="line"><span class="built_in">print</span>(data[<span class="string">&#x27;c1&#x27;</span>])</span><br><span class="line"><span class="comment">#选择打印多行</span></span><br><span class="line"><span class="comment">#print([&#x27;c1&#x27;,&#x27;c2&#x27;]),这样的做法是错误的</span></span><br><span class="line"><span class="built_in">print</span>([[<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c2&#x27;</span>]])	<span class="comment">#这样的做法才是正确的！</span></span><br><span class="line"><span class="comment">#要选取第2~3行的数据</span></span><br><span class="line">data[<span class="number">1</span>:<span class="number">3</span>]	<span class="comment">#注意序号从0开始，并且是左闭右开</span></span><br><span class="line"><span class="comment">#python中的pandas库推荐使用iloc函数来选取数组中的行列</span></span><br><span class="line">d = data.iloc[<span class="number">1</span>:<span class="number">3</span>]		<span class="comment">#选取第2~3行</span></span><br><span class="line">e = data.iloc[-<span class="number">1</span>]		<span class="comment">#选取倒数第一行</span></span><br><span class="line"><span class="comment">#还可以使用loc来选取行的名称来实现输出</span></span><br><span class="line">f = data.loc[[<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c2&#x27;</span>]]</span><br><span class="line"><span class="comment">#可以用head函数选取前n行</span></span><br><span class="line">data.head(<span class="number">5</span>)</span><br><span class="line"><span class="comment">#如果只想选取某几行的前几个元素，可以在后面加上[]</span></span><br><span class="line">data.iloc[<span class="number">1</span>:<span class="number">3</span>][<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#数据筛选</span></span><br><span class="line">a = data[data[<span class="string">&#x27;c1&#x27;</span>]&gt;<span class="number">1</span>]		<span class="comment">#选取data中c1列中大于1的数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#查看数据情况</span></span><br><span class="line"><span class="comment">#可以通过DataFrame中的shape属性来查看二维数组的行列</span></span><br><span class="line">data.shape()			<span class="comment">#(3,3)其中，前一个参数是行，后一个参数是列</span></span><br><span class="line"><span class="comment">#使用describe()可以查看每一列的数据个数，平均值，标准差，最小值，最大值等信息</span></span><br><span class="line">data.describe()</span><br><span class="line"></span><br><span class="line"><span class="comment">#通过运算创建新的列或者行</span></span><br><span class="line">data[<span class="string">&#x27;c4&#x27;</span>] = data[<span class="string">&#x27;c3&#x27;</span>] - data[<span class="string">&#x27;c1&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#可以使用sort_values函数来对表格进行排列，其中ascending参数确定是升序还是降序</span></span><br><span class="line">a = data.sort_values(by=<span class="string">&#x27;c2&#x27;</span>,ascending=<span class="literal">False</span>)	<span class="comment">#其中False表示降序排序，True表示升序排序</span></span><br><span class="line"><span class="comment">#通过sort_index函数进行行排序</span></span><br><span class="line">a = a.sort_index(<span class="string">&#x27;r2&#x27;</span>,ascending=<span class="literal">True</span>)			<span class="comment">#同样True表示升序，False表示降序</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#使用drop()函数删除数组中的列或者行</span></span><br><span class="line">a = data.drop(columns=[<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c3&#x27;</span>],index=[<span class="string">&#x27;r2&#x27;</span>],inplace=<span class="literal">True</span>)	<span class="comment">#这里删除了c1和c3两列，和r2这一行，inplace参数表示是否选择改变原表格，默认值为False。</span></span><br></pre></td></tr></table></figure>
+<h2 id="Light-GBM"><a href="#Light-GBM" class="headerlink" title="Light-GBM"></a>Light-GBM</h2><h3 id="Light-GBM分类模型"><a href="#Light-GBM分类模型" class="headerlink" title="Light-GBM分类模型"></a>Light-GBM分类模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> lightgbm <span class="keyword">import</span> LGBMClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line">model = LGBMClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
 
+<h3 id="Light-GBM回归模型"><a href="#Light-GBM回归模型" class="headerlink" title="Light-GBM回归模型"></a>Light-GBM回归模型</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from lightgbm import LGBMRegressor</span><br><span class="line">X = [[1,2],[3,4],[5,6],[7,8],[9,10]]</span><br><span class="line">y = [1,2,3,4,5]</span><br><span class="line">model = LGBMRegressor()</span><br><span class="line">model.fit(X,y)</span><br><span class="line">print(model.predict([[5,5]]))</span><br></pre></td></tr></table></figure>
 
-
-<h3 id="数据表的拼接"><a href="#数据表的拼接" class="headerlink" title="数据表的拼接"></a>数据表的拼接</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#merge()函数将多个数据表进行合并，merge会自己判断相同的项的位置并进行合并，也可以自己设置on参数来选择按照哪一列来合并</span></span><br><span class="line">df1 = ..... 	<span class="comment">#是一个数据表</span></span><br><span class="line">df2 = .....		<span class="comment">#也是一个数据表</span></span><br><span class="line">df3 = merge(df1,df2,on=<span class="string">&#x27;公司&#x27;</span>)</span><br><span class="line"><span class="comment">#如果想取并值,可以设置how函数。</span></span><br><span class="line">df3 = pd.merge(df1,df2,how=<span class="string">&#x27;outer&#x27;</span>)		<span class="comment">#改成outer即可取并值连接</span></span><br><span class="line"><span class="comment">#如果想保留左表的内容</span></span><br><span class="line">df3 = pd.merge(df1,df2,how=<span class="string">&#x27;left&#x27;</span>)</span><br><span class="line"><span class="comment">#如果想保留右表的内容</span></span><br><span class="line">df3 = pd.merge(df1,df2,how=<span class="string">&#x27;right&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#concat()函数</span></span><br><span class="line"><span class="comment">#concat函数是全连接，不去管是否有相同的值能进行合并，而是直接合并，只有一个可设置参数axis</span></span><br><span class="line">df3 = pd.concat([df1,df2],axis=<span class="number">0</span>)	<span class="comment">#这个表示纵向连接</span></span><br><span class="line">df3 = pd.concat([df1,df2],axis=<span class="number">1</span>)	<span class="comment">#这个表示横向连接</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#append()函数</span></span><br><span class="line"><span class="comment">#append函数可以看成concat函数的简化版</span></span><br><span class="line">df3 = df1.append(df2)</span><br><span class="line"><span class="comment">#append函数还有一个常用功能是在列表里面添加元素</span></span><br><span class="line">df3 = df1.append(&#123;<span class="string">&#x27;公司&#x27;</span>:<span class="string">&#x27;腾讯&#x27;</span>,<span class="string">&#x27;分数&#x27;</span>:<span class="string">&#x27;90.0&#x27;</span>&#125;,ignore_index=<span class="literal">True</span>)	<span class="comment">#这个ignore_index参数是设置忽略原列表中的数值的</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
+<h3 id="案例实战-1"><a href="#案例实战-1" class="headerlink" title="案例实战"></a>案例实战</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;广告收入数据.xlsx&#x27;</span>)</span><br><span class="line"><span class="comment">#提取特征变量</span></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;收益&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;收益&#x27;</span>]</span><br><span class="line"><span class="comment">#划分测试集和训练集</span></span><br><span class="line"><span class="keyword">import</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"><span class="comment">#模型回归训练</span></span><br><span class="line"><span class="keyword">from</span> lightGBM <span class="keyword">import</span> LGBMRegressor</span><br><span class="line">model = LGBRegressor()</span><br><span class="line">model.fit(X_train,y_train)</span><br><span class="line"><span class="comment">#预测</span></span><br><span class="line">y_pred = model.predict(X_test)</span><br><span class="line">a = pd.DataFrame()</span><br><span class="line">a[<span class="string">&#x27;实际值&#x27;</span>] = <span class="built_in">list</span>(y_test)</span><br><span class="line">a[<span class="string">&#x27;预测值&#x27;</span>] = <span class="built_in">list</span>(y_pred)</span><br><span class="line"><span class="comment">#全部数据</span></span><br><span class="line">score = model.score(X_test,y_test)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -3205,10 +3198,30 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习--列表切片</title>
-    <url>/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/</url>
-    <content><![CDATA[<p>只需要列表切片的时候是左闭右开的！</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">0</span>:<span class="number">2</span>])</span><br><span class="line"><span class="comment">#因为左闭右开，所以打印出来的结果是[1,2]</span></span><br></pre></td></tr></table></figure>
+    <title>机器学习--pandas库</title>
+    <url>/2022/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pandas%E5%BA%93/</url>
+    <content><![CDATA[<p>pandas库基础</p>
+<span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#numpy库用random等函数创建数组，而pandas用Series创建数组</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">s = pd.Series([<span class="string">&#x27;邓&#x27;</span>,<span class="string">&#x27;高&#x27;</span>,<span class="string">&#x27;正&#x27;</span>])	<span class="comment">#Series不单止创建了一维数组，还创建了索引，使用s[i]即可找到对应元素的位置</span></span><br><span class="line"><span class="built_in">print</span>(s[<span class="number">1</span>])	<span class="comment">#高</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="二维数据表格DataFrame的创建"><a href="#二维数据表格DataFrame的创建" class="headerlink" title="二维数据表格DataFrame的创建"></a>二维数据表格DataFrame的创建</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用DataFrame创建二维数组</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">a = pd.DataFrame([<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>])	<span class="comment">#生成的结果会有行索引和列索引，当然我们也可以自定义行列索引，如下</span></span><br><span class="line">a = pd.DataFrame([<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],columns=[<span class="string">&#x27;data&#x27;</span>,<span class="string">&#x27;score&#x27;</span>],index=[<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>])	<span class="comment">#这样就自定义了行列是什么</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#DataFrame同样可以创建字典，字典值默认为列索引</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">b = pd.DataFrame(&#123;<span class="string">&#x27;a&#x27;</span>:[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>],<span class="string">&#x27;b&#x27;</span>:[<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]&#125;,index=[<span class="string">&#x27;x&#x27;</span>,<span class="string">&#x27;y&#x27;</span>,<span class="string">&#x27;z&#x27;</span>])</span><br><span class="line"><span class="comment">#若想让字典为行索引</span></span><br><span class="line">c = pd.DataFrame.from_dict(&#123;<span class="string">&#x27;a&#x27;</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],<span class="string">&#x27;b&#x27;</span>:[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]&#125;,orient=<span class="string">&quot;index&quot;</span>)</span><br><span class="line"><span class="comment">#DataFrame支持将二维表格转置</span></span><br><span class="line">b = pd.DataFrame(&#123;<span class="string">&#x27;a&#x27;</span>:[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>],<span class="string">&#x27;b&#x27;</span>:[<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]&#125;,index=[<span class="string">&#x27;x&#x27;</span>,<span class="string">&#x27;y&#x27;</span>,<span class="string">&#x27;z&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(b.T)	<span class="comment">#打印转置后的表格</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#若要修改行索引和列索引的名字，使用rename函数</span></span><br><span class="line">a = a.rename(columns = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>],index = [<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>])</span><br><span class="line"><span class="comment">#其实上面那个只是创建了一个新的索引并未改变a的内容，需要使用inplace=True才能改变a的内容</span></span><br><span class="line">a = a.rename(columns = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>],index = [<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>]，inplace=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看index索引的值</span></span><br><span class="line">a.index.values()</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Excel表格的读取和写入"><a href="#Excel表格的读取和写入" class="headerlink" title="Excel表格的读取和写入"></a>Excel表格的读取和写入</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用pandas函数</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.read_excel(<span class="string">&#x27;data.xlsx&#x27;</span>)</span><br><span class="line"><span class="comment">#通过打印data可以看到读取表格中的内容</span></span><br><span class="line">data.head(n)		<span class="comment">#其中的n是查看多少行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#read_excel函数还可以设置更多的参数</span></span><br><span class="line">pd.read_excel(<span class="string">&#x27;data.xlsx&#x27;</span>,sheet_name=<span class="number">0</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)	<span class="comment">#其中sheet_name是工作表的位置，可以是工作表的名称，也可以是数字，默认是0，即第1个工作表，encoding自然是编码形式不必多说。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#pd还可以读取csv文件，使用read_csv</span></span><br><span class="line">pd.read_csv(<span class="string">&#x27;data.csv&#x27;</span>,delimiter=<span class="string">&#x27;,&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)	<span class="comment">#delimiter指的是指定csv文件中的分隔符。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Excel的写入</span></span><br><span class="line"><span class="comment">#先创建DataFrame</span></span><br><span class="line">data = pd.DataFrame([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>]],columns=[<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>])</span><br><span class="line"><span class="comment">#将data写入excel中</span></span><br><span class="line">data.to_excel(<span class="string">&#x27;data.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#在字符串之前加入r可以取消字符串中反斜杠的意义。</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">r&quot;D:\\niu\\bi&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="数据的选取与处理"><a href="#数据的选取与处理" class="headerlink" title="数据的选取与处理"></a>数据的选取与处理</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#先创建一个二维数组</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.DataFrame(np.arange(<span class="number">1</span>,<span class="number">10</span>,<span class="number">1</span>).reshape(<span class="number">3</span>,<span class="number">3</span>),index=(<span class="string">&#x27;r1&#x27;</span>,<span class="string">&#x27;r2&#x27;</span>,<span class="string">&#x27;r3&#x27;</span>),columns=(<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c2&#x27;</span>,<span class="string">&#x27;c3&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#选择打印一行</span></span><br><span class="line"><span class="built_in">print</span>(data[<span class="string">&#x27;c1&#x27;</span>])</span><br><span class="line"><span class="comment">#选择打印多行</span></span><br><span class="line"><span class="comment">#print([&#x27;c1&#x27;,&#x27;c2&#x27;]),这样的做法是错误的</span></span><br><span class="line"><span class="built_in">print</span>([[<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c2&#x27;</span>]])	<span class="comment">#这样的做法才是正确的！</span></span><br><span class="line"><span class="comment">#要选取第2~3行的数据</span></span><br><span class="line">data[<span class="number">1</span>:<span class="number">3</span>]	<span class="comment">#注意序号从0开始，并且是左闭右开</span></span><br><span class="line"><span class="comment">#python中的pandas库推荐使用iloc函数来选取数组中的行列</span></span><br><span class="line">d = data.iloc[<span class="number">1</span>:<span class="number">3</span>]		<span class="comment">#选取第2~3行</span></span><br><span class="line">e = data.iloc[-<span class="number">1</span>]		<span class="comment">#选取倒数第一行</span></span><br><span class="line"><span class="comment">#还可以使用loc来选取行的名称来实现输出</span></span><br><span class="line">f = data.loc[[<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c2&#x27;</span>]]</span><br><span class="line"><span class="comment">#可以用head函数选取前n行</span></span><br><span class="line">data.head(<span class="number">5</span>)</span><br><span class="line"><span class="comment">#如果只想选取某几行的前几个元素，可以在后面加上[]</span></span><br><span class="line">data.iloc[<span class="number">1</span>:<span class="number">3</span>][<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#数据筛选</span></span><br><span class="line">a = data[data[<span class="string">&#x27;c1&#x27;</span>]&gt;<span class="number">1</span>]		<span class="comment">#选取data中c1列中大于1的数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#查看数据情况</span></span><br><span class="line"><span class="comment">#可以通过DataFrame中的shape属性来查看二维数组的行列</span></span><br><span class="line">data.shape()			<span class="comment">#(3,3)其中，前一个参数是行，后一个参数是列</span></span><br><span class="line"><span class="comment">#使用describe()可以查看每一列的数据个数，平均值，标准差，最小值，最大值等信息</span></span><br><span class="line">data.describe()</span><br><span class="line"></span><br><span class="line"><span class="comment">#通过运算创建新的列或者行</span></span><br><span class="line">data[<span class="string">&#x27;c4&#x27;</span>] = data[<span class="string">&#x27;c3&#x27;</span>] - data[<span class="string">&#x27;c1&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#可以使用sort_values函数来对表格进行排列，其中ascending参数确定是升序还是降序</span></span><br><span class="line">a = data.sort_values(by=<span class="string">&#x27;c2&#x27;</span>,ascending=<span class="literal">False</span>)	<span class="comment">#其中False表示降序排序，True表示升序排序</span></span><br><span class="line"><span class="comment">#通过sort_index函数进行行排序</span></span><br><span class="line">a = a.sort_index(<span class="string">&#x27;r2&#x27;</span>,ascending=<span class="literal">True</span>)			<span class="comment">#同样True表示升序，False表示降序</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#使用drop()函数删除数组中的列或者行</span></span><br><span class="line">a = data.drop(columns=[<span class="string">&#x27;c1&#x27;</span>,<span class="string">&#x27;c3&#x27;</span>],index=[<span class="string">&#x27;r2&#x27;</span>],inplace=<span class="literal">True</span>)	<span class="comment">#这里删除了c1和c3两列，和r2这一行，inplace参数表示是否选择改变原表格，默认值为False。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="数据表的拼接"><a href="#数据表的拼接" class="headerlink" title="数据表的拼接"></a>数据表的拼接</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#merge()函数将多个数据表进行合并，merge会自己判断相同的项的位置并进行合并，也可以自己设置on参数来选择按照哪一列来合并</span></span><br><span class="line">df1 = ..... 	<span class="comment">#是一个数据表</span></span><br><span class="line">df2 = .....		<span class="comment">#也是一个数据表</span></span><br><span class="line">df3 = merge(df1,df2,on=<span class="string">&#x27;公司&#x27;</span>)</span><br><span class="line"><span class="comment">#如果想取并值,可以设置how函数。</span></span><br><span class="line">df3 = pd.merge(df1,df2,how=<span class="string">&#x27;outer&#x27;</span>)		<span class="comment">#改成outer即可取并值连接</span></span><br><span class="line"><span class="comment">#如果想保留左表的内容</span></span><br><span class="line">df3 = pd.merge(df1,df2,how=<span class="string">&#x27;left&#x27;</span>)</span><br><span class="line"><span class="comment">#如果想保留右表的内容</span></span><br><span class="line">df3 = pd.merge(df1,df2,how=<span class="string">&#x27;right&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#concat()函数</span></span><br><span class="line"><span class="comment">#concat函数是全连接，不去管是否有相同的值能进行合并，而是直接合并，只有一个可设置参数axis</span></span><br><span class="line">df3 = pd.concat([df1,df2],axis=<span class="number">0</span>)	<span class="comment">#这个表示纵向连接</span></span><br><span class="line">df3 = pd.concat([df1,df2],axis=<span class="number">1</span>)	<span class="comment">#这个表示横向连接</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#append()函数</span></span><br><span class="line"><span class="comment">#append函数可以看成concat函数的简化版</span></span><br><span class="line">df3 = df1.append(df2)</span><br><span class="line"><span class="comment">#append函数还有一个常用功能是在列表里面添加元素</span></span><br><span class="line">df3 = df1.append(&#123;<span class="string">&#x27;公司&#x27;</span>:<span class="string">&#x27;腾讯&#x27;</span>,<span class="string">&#x27;分数&#x27;</span>:<span class="string">&#x27;90.0&#x27;</span>&#125;,ignore_index=<span class="literal">True</span>)	<span class="comment">#这个ignore_index参数是设置忽略原列表中的数值的</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
 
 ]]></content>
       <categories>
@@ -3242,36 +3255,10 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习--深度学习</title>
-    <url>/2022/06/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#先构造数据并进行拟合</span></span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">0</span>],[<span class="number">5</span>,<span class="number">1</span>],[<span class="number">6</span>,<span class="number">4</span>],[<span class="number">4</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">2</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>]</span><br><span class="line"><span class="keyword">from</span> sklearn.neural_network <span class="keyword">import</span> MLPClassifier<span class="comment">#Machine Learning Please</span></span><br><span class="line">model = MLPClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="comment">#预测</span></span><br><span class="line">y_pred = model.predict(X)</span><br><span class="line"><span class="comment">#进行预测值和实际值的对比</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">a = pd.DataFrame()</span><br><span class="line">a[<span class="string">&#x27;实际值&#x27;</span>] = <span class="built_in">list</span>[y]</span><br><span class="line">a[<span class="string">&#x27;预测值&#x27;</span>] = <span class="built_in">list</span>[y_pred]</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="案例实战"><a href="#案例实战" class="headerlink" title="案例实战"></a>案例实战</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#导入数据</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;用户情感分析.xlsx&#x27;</span>)</span><br><span class="line">df.head()<span class="comment">#打印前五行数据</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-  </entry>
-  <entry>
-    <title>机器学习--XGBoost与Light-GBM</title>
-    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-XGBoost%E4%B8%8ELight-GBM/</url>
-    <content><![CDATA[<h2 id="XGBoost算法"><a href="#XGBoost算法" class="headerlink" title="XGBoost算法"></a>XGBoost算法</h2><span id="more"></span>
-
-<h3 id="XGBoost分类算法"><a href="#XGBoost分类算法" class="headerlink" title="XGBoost分类算法"></a>XGBoost分类算法</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> xgboost <span class="keyword">import</span> XGBClassifier</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment">#其实唯一的distinguish就是这里的X数组用numpy数组创建</span></span><br><span class="line">X = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]])</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line">model = XGBClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict(np.array([[<span class="number">5</span>,<span class="number">5</span>]])))</span><br></pre></td></tr></table></figure>
-
-<h3 id="XGBoost回归模型"><a href="#XGBoost回归模型" class="headerlink" title="XGBoost回归模型"></a>XGBoost回归模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> xgboost <span class="keyword">import</span> XGBRegressor</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">X = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]])</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = XGRegressor()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict(np.array([[<span class="number">5</span>,<span class="number">5</span>]])))</span><br></pre></td></tr></table></figure>
-
-<h3 id="案例实战"><a href="#案例实战" class="headerlink" title="案例实战"></a>案例实战</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;信用卡评分模型.xlsx&#x27;</span>)</span><br><span class="line">df.head()</span><br><span class="line"><span class="comment">#提取特征变量</span></span><br><span class="line">X = df.drop(<span class="string">&#x27;信用评分&#x27;</span>)</span><br><span class="line">Y = df[<span class="string">&#x27;信用评分&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line">model = LinearRegression()</span><br><span class="line">model.fit(X,Y)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;各项系数为&#x27;</span>+<span class="built_in">str</span>(model.coef_))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;截距为&#x27;</span>+<span class="built_in">str</span>(model.intercept_))</span><br><span class="line"></span><br><span class="line"><span class="comment">#模型评估</span></span><br><span class="line"><span class="keyword">import</span> statsmodels.api <span class="keyword">as</span> sm</span><br><span class="line">X2 = sm.add_constant(X)</span><br><span class="line">est = sm.OLS(Y,X2).fit()</span><br><span class="line"><span class="built_in">print</span>(est.summary())</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Light-GBM"><a href="#Light-GBM" class="headerlink" title="Light-GBM"></a>Light-GBM</h2><h3 id="Light-GBM分类模型"><a href="#Light-GBM分类模型" class="headerlink" title="Light-GBM分类模型"></a>Light-GBM分类模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> lightgbm <span class="keyword">import</span> LGBMClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line">model = LGBMClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
-
-<h3 id="Light-GBM回归模型"><a href="#Light-GBM回归模型" class="headerlink" title="Light-GBM回归模型"></a>Light-GBM回归模型</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from lightgbm import LGBMRegressor</span><br><span class="line">X = [[1,2],[3,4],[5,6],[7,8],[9,10]]</span><br><span class="line">y = [1,2,3,4,5]</span><br><span class="line">model = LGBMRegressor()</span><br><span class="line">model.fit(X,y)</span><br><span class="line">print(model.predict([[5,5]]))</span><br></pre></td></tr></table></figure>
-
-<h3 id="案例实战-1"><a href="#案例实战-1" class="headerlink" title="案例实战"></a>案例实战</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;广告收入数据.xlsx&#x27;</span>)</span><br><span class="line"><span class="comment">#提取特征变量</span></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;收益&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;收益&#x27;</span>]</span><br><span class="line"><span class="comment">#划分测试集和训练集</span></span><br><span class="line"><span class="keyword">import</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"><span class="comment">#模型回归训练</span></span><br><span class="line"><span class="keyword">from</span> lightGBM <span class="keyword">import</span> LGBMRegressor</span><br><span class="line">model = LGBRegressor()</span><br><span class="line">model.fit(X_train,y_train)</span><br><span class="line"><span class="comment">#预测</span></span><br><span class="line">y_pred = model.predict(X_test)</span><br><span class="line">a = pd.DataFrame()</span><br><span class="line">a[<span class="string">&#x27;实际值&#x27;</span>] = <span class="built_in">list</span>(y_test)</span><br><span class="line">a[<span class="string">&#x27;预测值&#x27;</span>] = <span class="built_in">list</span>(y_pred)</span><br><span class="line"><span class="comment">#全部数据</span></span><br><span class="line">score = model.score(X_test,y_test)</span><br></pre></td></tr></table></figure>
+    <title>机器学习--列表切片</title>
+    <url>/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/</url>
+    <content><![CDATA[<p>只需要列表切片的时候是左闭右开的！</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">0</span>:<span class="number">2</span>])</span><br><span class="line"><span class="comment">#因为左闭右开，所以打印出来的结果是[1,2]</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -3297,6 +3284,19 @@
       <tags>
         <tag>机器学习</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>机器学习--深度学习</title>
+    <url>/2022/06/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#先构造数据并进行拟合</span></span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">0</span>],[<span class="number">5</span>,<span class="number">1</span>],[<span class="number">6</span>,<span class="number">4</span>],[<span class="number">4</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">2</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>]</span><br><span class="line"><span class="keyword">from</span> sklearn.neural_network <span class="keyword">import</span> MLPClassifier<span class="comment">#Machine Learning Please</span></span><br><span class="line">model = MLPClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="comment">#预测</span></span><br><span class="line">y_pred = model.predict(X)</span><br><span class="line"><span class="comment">#进行预测值和实际值的对比</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">a = pd.DataFrame()</span><br><span class="line">a[<span class="string">&#x27;实际值&#x27;</span>] = <span class="built_in">list</span>[y]</span><br><span class="line">a[<span class="string">&#x27;预测值&#x27;</span>] = <span class="built_in">list</span>[y_pred]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="案例实战"><a href="#案例实战" class="headerlink" title="案例实战"></a>案例实战</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#导入数据</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;用户情感分析.xlsx&#x27;</span>)</span><br><span class="line">df.head()<span class="comment">#打印前五行数据</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
   </entry>
   <entry>
     <title>机器学习--线性回归（重点）</title>
@@ -3336,7 +3336,7 @@
 
 
 
-<h3 id="第八章"><a href="#第八章" class="headerlink" title="第八章"></a>第八章</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tushare <span class="keyword">as</span> ts</span><br><span class="line">df = ts.get_hist_data(<span class="string">&#x27;000002&#x27;</span>,start=<span class="string">&#x27;2018-01-01&#x27;</span>,end=<span class="string">&#x27;2019-01-31&#x27;</span>)</span><br><span class="line"><span class="comment">#获取分钟级别的数据</span></span><br><span class="line">df = ts.get_hist_data(<span class="string">&#x27;000002&#x27;</span>,ktype=<span class="string">&#x27;5&#x27;</span>)</span><br><span class="line">df = ts.get_realtime_quotes(<span class="string">&#x27;000002&#x27;</span>)</span><br><span class="line">df = df[[<span class="string">&#x27;code&#x27;</span>,<span class="string">&#x27;name&#x27;</span>,<span class="string">&#x27;price&#x27;</span>,<span class="string">&#x27;bid&#x27;</span>,<span class="string">&#x27;ask&#x27;</span>,<span class="string">&#x27;volume&#x27;</span>,<span class="string">&#x27;amount&#x27;</span>,<span class="string">&#x27;time&#x27;</span>]]</span><br><span class="line">df = ts.get_realtime_quotes([<span class="string">&#x27;000002&#x27;</span>,<span class="string">&#x27;000980&#x27;</span>,<span class="string">&#x27;000981&#x27;</span>])</span><br><span class="line"><span class="comment">#获取分笔数据</span></span><br><span class="line">df = ts.get_tick_data(<span class="string">&#x27;000002&#x27;</span>,date=<span class="string">&#x27;2018-12-12&#x27;</span>,src=<span class="string">&#x27;tt&#x27;</span>)</span><br><span class="line">df = ts.get_today_ticks(<span class="string">&#x27;000002&#x27;</span>)</span><br><span class="line">df = ts.get_index()</span><br><span class="line"></span><br><span class="line">df = ts.get_k_data(<span class="string">&#x27;000002&#x27;</span>,start=<span class="string">&#x27;2015-01-01&#x27;</span>,end=<span class="string">&#x27;2019-12-31&#x27;</span>)</span><br><span class="line">df = df.set_index(<span class="string">&#x27;date&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="第八章"><a href="#第八章" class="headerlink" title="第八章"></a>第八章</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#引入需要用到的库</span></span><br><span class="line"><span class="keyword">import</span> tushare <span class="keyword">as</span> ts</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> talib</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> accuracy_score</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1.股票基本数据获取</span></span><br><span class="line">df = ts.get_k_data(<span class="string">&#x27;000002&#x27;</span>,start=<span class="string">&#x27;2015-01-01&#x27;</span>,end=<span class="string">&#x27;2019-12-31&#x27;</span>)</span><br><span class="line">df = df.set_index(<span class="string">&#x27;date&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#简单衍生变量构造</span></span><br><span class="line">df[<span class="string">&#x27;close-open&#x27;</span>] = (df[<span class="string">&#x27;close&#x27;</span>] - df[<span class="string">&#x27;open&#x27;</span>])/df[<span class="string">&#x27;open&#x27;</span>]</span><br><span class="line">df[<span class="string">&#x27;high-low&#x27;</span>] = (df[<span class="string">&#x27;high&#x27;</span>] - df[<span class="string">&#x27;low&#x27;</span>])/df[<span class="string">&#x27;low&#x27;</span>]</span><br><span class="line">df[<span class="string">&#x27;pre_close&#x27;</span>] = df[<span class="string">&#x27;close&#x27;</span>].shift(<span class="number">1</span>)</span><br><span class="line">df[<span class="string">&#x27;price_change&#x27;</span>] = df[<span class="string">&#x27;close&#x27;</span>]-df[<span class="string">&#x27;pre_close&#x27;</span>]</span><br><span class="line">df[<span class="string">&#x27;p_change&#x27;</span>] = (df[<span class="string">&#x27;close&#x27;</span>]-df[<span class="string">&#x27;pre_close&#x27;</span>])/df[<span class="string">&#x27;pre_close&#x27;</span>]*<span class="number">100</span></span><br><span class="line"><span class="comment">#移动平均线相关数据构造</span></span><br><span class="line">df[<span class="string">&#x27;MA5&#x27;</span>] = df[<span class="string">&#x27;close&#x27;</span>].rolling(<span class="number">5</span>).mean()</span><br><span class="line">df[<span class="string">&#x27;MA10&#x27;</span>] = df[<span class="string">&#x27;close&#x27;</span>].rolling(<span class="number">10</span>).mean()</span><br><span class="line">df.dropna(inplace=<span class="literal">True</span>)  <span class="comment"># 删除空值</span></span><br><span class="line"><span class="comment">#通过Ta_lib库构造衍生变量</span></span><br><span class="line">df[<span class="string">&#x27;RSI&#x27;</span>] = talib.RSI(df[<span class="string">&#x27;close&#x27;</span>], timeperiod=<span class="number">12</span>)</span><br><span class="line">df[<span class="string">&#x27;MOM&#x27;</span>] = talib.MOM(df[<span class="string">&#x27;close&#x27;</span>], timeperiod=<span class="number">5</span>)</span><br><span class="line">df[<span class="string">&#x27;EMA12&#x27;</span>] = talib.EMA(df[<span class="string">&#x27;close&#x27;</span>], timeperiod=<span class="number">12</span>)</span><br><span class="line">df[<span class="string">&#x27;EMA26&#x27;</span>] = talib.EMA(df[<span class="string">&#x27;close&#x27;</span>], timeperiod=<span class="number">26</span>)</span><br><span class="line">df[<span class="string">&#x27;MACD&#x27;</span>], df[<span class="string">&#x27;MACDsignal&#x27;</span>], df[<span class="string">&#x27;MACDhist&#x27;</span>] = talib.MACD(df[<span class="string">&#x27;close&#x27;</span>], fastperiod=<span class="number">12</span>, slowperiod=<span class="number">26</span>, signalperiod=<span class="number">9</span>)</span><br><span class="line">df.dropna(inplace=<span class="literal">True</span>)</span><br><span class="line">df.tail()</span><br><span class="line"><span class="comment">#特征变量和目标变量提取</span></span><br><span class="line">X = df[[<span class="string">&#x27;close&#x27;</span>, <span class="string">&#x27;volume&#x27;</span>, <span class="string">&#x27;close-open&#x27;</span>, <span class="string">&#x27;MA5&#x27;</span>, <span class="string">&#x27;MA10&#x27;</span>, <span class="string">&#x27;high-low&#x27;</span>, <span class="string">&#x27;RSI&#x27;</span>, <span class="string">&#x27;MOM&#x27;</span>, <span class="string">&#x27;EMA12&#x27;</span>, <span class="string">&#x27;MACD&#x27;</span>, <span class="string">&#x27;MACDsignal&#x27;</span>, <span class="string">&#x27;MACDhist&#x27;</span>]]</span><br><span class="line">y = np.where(df[<span class="string">&#x27;price_change&#x27;</span>].shift(-<span class="number">1</span>)&gt; <span class="number">0</span>, <span class="number">1</span>, -<span class="number">1</span>)</span><br><span class="line"><span class="comment">#训练集和测试集数据划分</span></span><br><span class="line">X_length = X.shape[<span class="number">0</span>]  <span class="comment"># shape属性获取X的行数和列数，shape[0]即表示行数</span></span><br><span class="line">split = <span class="built_in">int</span>(X_length * <span class="number">0.9</span>)</span><br><span class="line">X_train, X_test = X[:split], X[split:]</span><br><span class="line">y_train, y_test = y[:split], y[split:]</span><br><span class="line"><span class="comment">#4.模型搭建</span></span><br><span class="line">model = RandomForestClassifier(max_depth=<span class="number">3</span>, n_estimators=<span class="number">10</span>, min_samples_leaf=<span class="number">10</span>, random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X_train, y_train)</span><br></pre></td></tr></table></figure>
 
 <h3 id="第九章"><a href="#第九章" class="headerlink" title="第九章"></a>第九章</h3><h4 id="9-2"><a href="#9-2" class="headerlink" title="9.2"></a>9.2</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excle(<span class="string">&#x27;信用卡精准营销模型.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;响应&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;响应&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,train_test_split=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> AdaBoostClassifier</span><br><span class="line">model = AdaBoostClassifier()</span><br><span class="line">model.fit(X_train,y_train)</span><br><span class="line"></span><br><span class="line"><span class="comment">#评估模型</span></span><br><span class="line">y_pred = model.predict(X_test)</span><br><span class="line">a = pd.DataFrame()<span class="comment">#创建一个空DateFrame</span></span><br><span class="line">a[<span class="string">&#x27;预测值&#x27;</span>] = <span class="built_in">list</span>(y_pred)</span><br><span class="line">a[<span class="string">&#x27;实际值&#x27;</span>] = <span class="built_in">list</span>(y_test)</span><br><span class="line"><span class="comment">#获得所有值</span></span><br><span class="line">score = model.score(X_train,y_train)</span><br><span class="line"><span class="comment">#查看概率(不太懂)</span></span><br><span class="line">y_pred_proba = model.predict_proba(X_test)</span><br><span class="line"><span class="comment">#用ROC曲线绘制图像</span></span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> roc_curve</span><br><span class="line">fpr,tpr,thres = roc_curve(y_test.values,y_pred_proba[:,<span class="number">1</span>])</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.plot(fpr,tpr)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 
@@ -3368,6 +3368,23 @@
 <h4 id="KS"><a href="#KS" class="headerlink" title="KS"></a>KS</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> roc_curve</span><br><span class="line">fpr,tpr,thres = roc_curve(y_test,y_pred_proba[:,<span class="number">1</span>]) <span class="comment">#fpr:假警报率,tpr:命中率,thres:阈值</span></span><br><span class="line"></span><br><span class="line">a = pd.DataFrame() <span class="comment">#创建一个空DataFrame</span></span><br><span class="line">a[<span class="string">&#x27;假警报率&#x27;</span>] = <span class="built_in">list</span>(fpr) <span class="comment">#用列表的形式将他们表示出来</span></span><br><span class="line">a[<span class="string">&#x27;命中率&#x27;</span>] = <span class="built_in">list</span>(tpr)</span><br><span class="line">a[<span class="string">&#x27;阈值&#x27;</span>] = <span class="built_in">list</span>(thres)</span><br><span class="line"></span><br><span class="line"><span class="comment">#绘图</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.plot(thres[<span class="number">1</span>:],tpr[<span class="number">1</span>:])</span><br><span class="line">plt.plot(thres[<span class="number">1</span>:],fpr[<span class="number">1</span>:])</span><br><span class="line">plt.plot(thres[<span class="number">1</span>:],tpr[<span class="number">1</span>:]-fpr[<span class="number">1</span>:])</span><br><span class="line">plt.xlabel(<span class="string">&#x27;threshold&#x27;</span>)</span><br><span class="line">plt.legend([<span class="string">&#x27;tpr&#x27;</span>,<span class="string">&#x27;fpr&#x27;</span>,<span class="string">&#x27;tpr-fpr&#x27;</span>])<span class="comment">#说明对应的线有什么用</span></span><br><span class="line">plt.gca().invert_xaxis()<span class="comment">#先用gca函数获取坐标轴信息，再使用invert_xaxis函数将x轴反转</span></span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#快速求KS值</span></span><br><span class="line"><span class="built_in">max</span>(tpr-fpr)</span><br></pre></td></tr></table></figure>
 
 
+
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习--随机森林模型</title>
+    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<h3 id="随机森林的分类模型"><a href="#随机森林的分类模型" class="headerlink" title="随机森林的分类模型"></a>随机森林的分类模型</h3><span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>]</span><br><span class="line">model = RandomForestClassifier(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line">model.predict([[<span class="number">5</span>,<span class="number">5</span>]])</span><br></pre></td></tr></table></figure>
+
+<h3 id="随机森林的回归模型"><a href="#随机森林的回归模型" class="headerlink" title="随机森林的回归模型"></a>随机森林的回归模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = RandomForestRegressor(n_estimators=<span class="number">10</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -3418,20 +3435,31 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习--随机森林模型</title>
-    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%A8%A1%E5%9E%8B/</url>
-    <content><![CDATA[<h3 id="随机森林的分类模型"><a href="#随机森林的分类模型" class="headerlink" title="随机森林的分类模型"></a>随机森林的分类模型</h3><span id="more"></span>
+    <title>统计学-- 数据的搜集</title>
+    <url>/2022/03/08/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%90%9C%E9%9B%86/</url>
+    <content><![CDATA[<h3 id="数据的分类"><a href="#数据的分类" class="headerlink" title="数据的分类"></a>数据的分类</h3><span id="more"></span>
 
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>]</span><br><span class="line">model = RandomForestClassifier(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line">model.predict([[<span class="number">5</span>,<span class="number">5</span>]])</span><br></pre></td></tr></table></figure>
-
-<h3 id="随机森林的回归模型"><a href="#随机森林的回归模型" class="headerlink" title="随机森林的回归模型"></a>随机森林的回归模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = RandomForestRegressor(n_estimators=<span class="number">10</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
-
+<p>1.原始数据：调查，观察实验。</p>
+<p>2.次级数据：已被做好的，统计年鉴，期刊等等。</p>
+<h3 id="概率抽样和非概率抽样"><a href="#概率抽样和非概率抽样" class="headerlink" title="概率抽样和非概率抽样"></a>概率抽样和非概率抽样</h3><p>1.概率抽样（随机抽样）：</p>
+<p>​    （1）简单随机抽样：（需要<strong>抽样框</strong>，<strong>抽样框</strong>通常包括所有总体单位的信息，如小区用户信息，住户门牌号等）从包括总体N个单位的抽样框中一个个的抽取n个单位作为样本，抽中每个样本的概率是相等的。</p>
+<p>​    （2）分层抽样：把总体按照某种特征或某种规则划分成多层，然后从不同的层中抽取样本，然后将这些样本结合起来。</p>
+<p>​    （3）整群抽样：总体中若干个单位合并为<strong>群</strong>，抽样的时候直接抽取群，然后对选中的群全部进行调查，称为<strong>整群抽样</strong>。</p>
+<p>​    （4）系统抽样：将所有单位按一定的顺序排好，在规定的范围内随机抽取一个单位作为初始单位。然后按照一定的规则确定其他的样本单位。</p>
+<p>​    （5）多阶段抽样：先进行整群抽样，然后再从群里面抽取若干个单位进行调查。</p>
+<p>2.非概率抽样：</p>
+<p>​    （1）方便抽样：调查过程中调查员依据方便的原则</p>
+<p>​    （2）判断抽样：研究人员根据经验，判断等，有目标的选择对象进行研究</p>
+<p>​    （3）自愿抽样：自愿者自愿参与</p>
+<p>​    （4）滚雪球抽样：先选择一组样本，然后由这个样本提供其他的样本，故称为滚雪球</p>
+<p>​    （5）配额抽样：类似于概率抽样中的分层抽样</p>
+<p>​    </p>
 ]]></content>
       <categories>
-        <category>机器学习</category>
+        <category>统计学</category>
       </categories>
       <tags>
-        <tag>机器学习</tag>
+        <tag>统计学</tag>
       </tags>
   </entry>
   <entry>
@@ -3528,34 +3556,6 @@
       </categories>
       <tags>
         <tag>计组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>统计学-- 数据的搜集</title>
-    <url>/2022/03/08/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%90%9C%E9%9B%86/</url>
-    <content><![CDATA[<h3 id="数据的分类"><a href="#数据的分类" class="headerlink" title="数据的分类"></a>数据的分类</h3><span id="more"></span>
-
-<p>1.原始数据：调查，观察实验。</p>
-<p>2.次级数据：已被做好的，统计年鉴，期刊等等。</p>
-<h3 id="概率抽样和非概率抽样"><a href="#概率抽样和非概率抽样" class="headerlink" title="概率抽样和非概率抽样"></a>概率抽样和非概率抽样</h3><p>1.概率抽样（随机抽样）：</p>
-<p>​    （1）简单随机抽样：（需要<strong>抽样框</strong>，<strong>抽样框</strong>通常包括所有总体单位的信息，如小区用户信息，住户门牌号等）从包括总体N个单位的抽样框中一个个的抽取n个单位作为样本，抽中每个样本的概率是相等的。</p>
-<p>​    （2）分层抽样：把总体按照某种特征或某种规则划分成多层，然后从不同的层中抽取样本，然后将这些样本结合起来。</p>
-<p>​    （3）整群抽样：总体中若干个单位合并为<strong>群</strong>，抽样的时候直接抽取群，然后对选中的群全部进行调查，称为<strong>整群抽样</strong>。</p>
-<p>​    （4）系统抽样：将所有单位按一定的顺序排好，在规定的范围内随机抽取一个单位作为初始单位。然后按照一定的规则确定其他的样本单位。</p>
-<p>​    （5）多阶段抽样：先进行整群抽样，然后再从群里面抽取若干个单位进行调查。</p>
-<p>2.非概率抽样：</p>
-<p>​    （1）方便抽样：调查过程中调查员依据方便的原则</p>
-<p>​    （2）判断抽样：研究人员根据经验，判断等，有目标的选择对象进行研究</p>
-<p>​    （3）自愿抽样：自愿者自愿参与</p>
-<p>​    （4）滚雪球抽样：先选择一组样本，然后由这个样本提供其他的样本，故称为滚雪球</p>
-<p>​    （5）配额抽样：类似于概率抽样中的分层抽样</p>
-<p>​    </p>
-]]></content>
-      <categories>
-        <category>统计学</category>
-      </categories>
-      <tags>
-        <tag>统计学</tag>
       </tags>
   </entry>
   <entry>
