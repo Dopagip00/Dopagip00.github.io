@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://hexo.denggaozheng.top/2022/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%A1%AC%E4%BB%B6/image-20220318195906524.png">
 <meta property="og:image" content="http://hexo.denggaozheng.top/2022/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%A1%AC%E4%BB%B6/image-20220321203540393.png">
 <meta property="article:published_time" content="2022-03-16T12:43:44.000Z">
-<meta property="article:modified_time" content="2022-06-07T12:39:24.659Z">
+<meta property="article:modified_time" content="2022-06-30T02:41:36.891Z">
 <meta property="article:author" content="邓高正">
 <meta property="article:tag" content="计组">
 <meta name="twitter:card" content="summary">
@@ -70,7 +70,7 @@
 			</ul>
 		</nav>
 		<nav>
-    总文章数 86
+    总文章数 87
 </nav>
 		<nav class="header-smart-menu">
     		
@@ -202,8 +202,9 @@
 <p>冯诺依曼提出了<strong>存储程序</strong>的概念：指先将所有指令以二进制代码的形式事先输入计算机的主存储器中，计算机就一一读取这些指令，这样程序员就不用一条一条指令的输入了</p>
 <p><img src="/2022/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%A1%AC%E4%BB%B6/image-20220317101430363.png" alt="image-20220317101430363"></p>
 <p>在计算机系统中，<strong>软件和硬件在逻辑上是等效的</strong>，对于乘法运算，可以设计一个专门的硬件电路进行乘法运算。</p>
+<p><strong>在处理同一个问题的情况下，硬件的效率大于软件，所以请在条件允许的情况下使用硬件提升效率</strong></p>
 <p>冯诺依曼计算机的五个特征：<br>1.计算机由五大部件组成：存储器，输入设备，运算器，输出设备，控制器</p>
-<p>2.指令和数据以同等地位存储在存储器中，可以通过地址来访问</p>
+<p>2.指令和数据以同等地位存储在存储器中，形式上没有区别，可以通过地址来访问</p>
 <p>3.指令和数据用二进制表示</p>
 <p>4.指令由操作码和地址码组成</p>
 <p>5.存储程序（上面讲过了）</p>
@@ -217,25 +218,27 @@
 <p>MAR：Memory Address Register    存储地址寄存器</p>
 <p>MDR：Memory Data Register          存储数据寄存器</p>
 <p>CPU将地址指令发给MAR，MAR将指令发给存储体，存储体经过处理后将读出的数据发给MDR，MDR在还给CPU即可得到我们的元素了</p>
+<p><strong>CPU能够直接访问的存储器是主存储器，辅助存储器中的信息要调入主存储器中才能够被CPU所读取</strong></p>
 <p><strong>数据是存放在存储体当中的</strong></p>
+<p><strong>在现代计算机中，MAR和MDR是存在CPU中的，包括Cache也是存在CPU中。</strong></p>
 <h3 id="主存储器中的组成部分：（选择题的高频考点）"><a href="#主存储器中的组成部分：（选择题的高频考点）" class="headerlink" title="主存储器中的组成部分：（选择题的高频考点）"></a>主存储器中的组成部分：（选择题的高频考点）</h3><p><strong>存储单元：</strong>每个存储单元存放一串二进制代码</p>
 <p><strong>存储字（word）</strong>：存储单元中二进制代码的组合</p>
 <p><strong>存储字长</strong>：存储单元中二进制代码的位数</p>
 <p><strong>储存元</strong>：即存储二进制的电子元件，每个存储元可以存1bit（使用电容存储）</p>
-<p>1</p>
-<h3 id="运算器，存储器，控制器的构成"><a href="#运算器，存储器，控制器的构成" class="headerlink" title="运算器，存储器，控制器的构成"></a>运算器，存储器，控制器的构成</h3><p>MAR位数反映存储单元的个数</p>
+<p><strong>存储体=若干个存储单元，存储单元=若干个存储元件，一个存储元件存储着一位二进制代码（0/1），构成存储单元中的一串代码称为存储字，位数称为存储字长</strong></p>
+<h3 id="运算器，存储器，控制器的构成"><a href="#运算器，存储器，控制器的构成" class="headerlink" title="运算器，存储器，控制器的构成"></a>运算器，存储器，控制器的构成</h3><p>MAR位数反映存储单元的位数</p>
 <p>MDR位数=存储字长</p>
 <p>例：MAR=4位 即一共有2^4个<strong>存储单元</strong> </p>
 <p>​        MDR=16位 每个<strong>存储单元</strong>可以存放16bit，一个字 = 16bit</p>
-<p>​        1个字节 = 8bit 1B = 1个字节 1b=1个bit</p>
+<p>​        1个字节 = 8bit 1B = 1个字节 1B=8bit 1b=1个bit</p>
 <h4 id="运算器"><a href="#运算器" class="headerlink" title="运算器"></a>运算器</h4><p>ACC：累加器，用于存放操作数，或者运算结果</p>
 <p>MQ：乘商寄存器，在乘除运算时，用于存放操作数或者运算结果的。</p>
-<p>x：通用的操作数寄存器，用于存放操作数</p>
+<p>X：通用的操作数寄存器，用于存放操作数</p>
 <p><strong>ALU</strong>：算数逻辑单元，通过内部复杂的电路实现算术运算、逻辑运算</p>
 <h4 id="控制器"><a href="#控制器" class="headerlink" title="控制器"></a>控制器</h4><p><strong>CU</strong>：控制单元，<strong>分析指令</strong>，给出控制信号</p>
 <p>IR：指令寄存器，存放当前执行的指令</p>
 <p>PC：程序计数器，存放下一条指令的地址，有自动加1的功能</p>
-<p>**完成一条指令需要的步骤：取指令（PC）-&gt;分析指令IR-&gt;执行指令（CU） </p>
+<p>完成一条指令需要的步骤：取指令（PC）-&gt;分析指令IR-&gt;执行指令（CU） </p>
 <h3 id="一个完整的计算机计算乘法的例子"><a href="#一个完整的计算机计算乘法的例子" class="headerlink" title="一个完整的计算机计算乘法的例子"></a>一个完整的计算机计算乘法的例子</h3><p><strong>重要！！！</strong></p>
 <p><strong>一串代码运行的各个步骤：</strong>我们要计算的是a * b的结果</p>
 <h4 id="第一步：把a存进ACC中"><a href="#第一步：把a存进ACC中" class="headerlink" title="第一步：把a存进ACC中"></a>第一步：把a存进ACC中</h4><p><strong>1.（PC）= 0，指向第一条指令的存储地址</strong></p>
@@ -257,8 +260,8 @@
 <p>5.Ad(IR) -&gt; MAR ，MAR此时的值是b</p>
 <p>6.MAR -&gt;主存储器-&gt;MDR </p>
 <p>7.MDR - &gt;MQ,此时MQ中的值是b的值</p>
-<p>8.ACC -&gt; x，<strong>注意，这一步非常重要，在运算器当中，永远会把被乘数（ab中的a）转移到x中，乘数（ab中的b）转移到MQ中</strong>，此时x中的值是a的值。</p>
-<p>9.<strong>此时ALU会把x中的值和MQ中的值都提取出来进行相乘的操作，然后！把结果存放在ACC当中，如果乘积太大需要MQ来进行辅助存储</strong></p>
+<p>8.ACC -&gt; X，<strong>注意，这一步非常重要，在运算器当中，永远会把被乘数（ab中的a）转移到X中，乘数（ab中的b）转移到MQ中</strong>，此时X中的值是a的值。</p>
+<p>9.<strong>此时ALU会把X中的值和MQ中的值都提取出来进行相乘的操作，然后！把结果存放在ACC当中，如果乘积太大需要MQ来进行辅助存储</strong></p>
 <h4 id="第三步：加法操作，存c，然后实现a-b-c"><a href="#第三步：加法操作，存c，然后实现a-b-c" class="headerlink" title="第三步：加法操作，存c，然后实现a *b + c"></a>第三步：加法操作，存c，然后实现a *b + c</h4><p>1.PC -&gt; MAR</p>
 <p>2.MAR - &gt;主存储器 -&gt; MDR</p>
 <p>3.MDR -&gt; IR</p>
@@ -271,6 +274,7 @@
 <p>3.MDR -&gt; 存储单元为8的位置</p>
 <h4 id="第五步：停机操作"><a href="#第五步：停机操作" class="headerlink" title="第五步：停机操作"></a>第五步：停机操作</h4><p>这个属于操作系统的范畴了</p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>在计算机执行指令的时候，前面的**取指令（PC-&gt;MAR-&gt;MDR-&gt;IR）(注意这里取指令结束PC加一)<strong>，</strong>分析指令(IR-&gt;CU)**的操作都是一模一样的</p>
+<p><strong>记住有个“被”字的都是在ACC中，被乘数在ACC中，乘数在乘法寄存器MQ中，结果赋值给ACC；被加数在ACC，加数在X，结果赋值给ACC；最后ACC-&gt;MDR，那么MDR中就是结果，以二进制的形式表示。</strong></p>
 <h2 id="计算机系统的层次结构"><a href="#计算机系统的层次结构" class="headerlink" title="计算机系统的层次结构"></a>计算机系统的层次结构</h2><p>计算机层次一共分成五层结构，由上至下分别是：高级语言机器，汇编语言机器，操作系统语言机器，传统机器（识别机器语言的），微程序机器（执行微指令的）</p>
 <p>汇编语言和高级语言所存在的机器都是<strong>虚拟机器</strong>，因为机器并不能直接识别汇编语言和高级语言，而是要把他们两个翻译成机器语言才能使计算机识别。</p>
 <p><img src="/2022/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%A1%AC%E4%BB%B6/image-20220321203540393.png" alt="image-20220321203540393"></p>
@@ -289,7 +293,7 @@
 <p><strong>CPU的主频：CPU内数字脉冲震荡的频率，如CPU的主频是10，那么代表着每秒钟有10个脉冲信号,主频=CPU时钟周期分之一</strong></p>
 <p>CPI也对CPU的主频有影响，CPI：执行一条指令所需要的时钟周期数</p>
 <p>执行一条指令的耗时是CPI * CPU的时钟周期</p>
-<p>公式总结：CPU执行时间= （指令条数*CPI）/主频。或CPU时钟周期数/主频</p>
+<p>公式总结：CPU执行时间= （指令条数*CPI）/主频。或CPU时钟周期数/主频 = 1/主频^2</p>
 <p>​                    IPS：每秒执行了多少条指令，IPS = 主频/平均CPI</p>
 <p>​                    FLOPS：每秒执行了多少次浮点运算</p>
 <p>KIPS:千，10^3</p>
@@ -304,7 +308,7 @@
 <p>答：不一定，具体还要看CPI（处理一条指令需要的用时）。就算CPI相等，也是不一定的，因为有一些CPU无法执行如乘法操作等复杂操作，那么只能用加法累加，那就复杂得多了</p>
 <hr>
 <p><strong>王道书总结：</strong></p>
-<p>1.主频 = 时钟频率</p>
+<p>1.主频 = 时钟频率 = 1/时钟周期</p>
 <p>2.时钟周期 = 1/主频    （他俩是倒数关系）</p>
 <p>3.CPI（执行一条指令所需要的时钟周期） = 时钟周期/指令条数n = 1/主频*指令条数</p>
 <p>4.（常考，非常重要）<strong>CPU执行时间 = 时钟周期/主频 = 指令条数n*CPI/主频</strong></p>
@@ -586,6 +590,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">NFT</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">R语言</a>
               </li>
              
               <li class="article-tag-list-item">
