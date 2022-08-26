@@ -36,6 +36,54 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--JDBC知识点“</title>
+    <url>/2022/02/09/JAVA-JDBC%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>JDBC相当于一个驱动，让数据库和java打交道。</p>
+<span id="more"></span>
+
+<p>对于开发人员来说，只需要掌握JDBC接口的操作即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/6cb5c95aa1fa076e8db6cc3bbedaf3e6.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>结构图，我们只需要学JDBC</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/1f734dc4920ffa0e272fe890bfcf6492.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>记得先要导入jar包</p>
+<h2 id="mysql-—-基本的操作"><a href="#mysql-—-基本的操作" class="headerlink" title="mysql — 基本的操作"></a><a href="https://dopagip.wordpress.com/2021/12/12/mysql-%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">mysql — 基本的操作</a></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--在sql里面所有的注释都用“--”,school是我们创建的数据库。</span><br><span class="line">show databases; --显示所有的数据库</span><br><span class="line"></span><br><span class="line">use school; --使用数据库</span><br><span class="line">change database</span><br><span class="line"></span><br><span class="line">use tables;  --显示所有的数据表</span><br><span class="line"></span><br><span class="line">desc tables; --显示数据库中所有表的信息</span><br><span class="line"></span><br><span class="line">create database &quot;school&quot;; --创建数据库</span><br><span class="line"></span><br><span class="line">exit; --退出mysql</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>数据库XX语言：</strong></p>
+<p>DDL 定义</p>
+<p>DML 操作</p>
+<p>DQL 查询</p>
+<p>DCL 控制</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--Sring声明“</title>
+    <url>/2022/02/09/JAVA-Sring%E5%A3%B0%E6%98%8E/</url>
+    <content><![CDATA[<p>引用类型的引用在栈里面，对象在堆里面。</p>
+<span id="more"></span>
+
+<p>字符串的字面值存储在字符串池中，可以实现共享。</p>
+<p>String name = 20;//这里name存储在堆里面，20存储在方法池里面。</p>
+<p>声明string字符串有两种方式：</p>
+<p>1.String name = “Hellp”//产生一个对象，存储在字符串池中</p>
+<p>2.String name = new String(“Hello”)//产生两个对象，在字符串池和堆中各存放一个</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--List接口“</title>
     <url>/2022/02/09/JAVA-List%E6%8E%A5%E5%8F%A3/</url>
     <content><![CDATA[<p>List接口的特点：有序，有下标，元素可以重复</p>
@@ -76,35 +124,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--JDBC知识点“</title>
-    <url>/2022/02/09/JAVA-JDBC%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>JDBC相当于一个驱动，让数据库和java打交道。</p>
-<span id="more"></span>
-
-<p>对于开发人员来说，只需要掌握JDBC接口的操作即可。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/6cb5c95aa1fa076e8db6cc3bbedaf3e6.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>结构图，我们只需要学JDBC</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/1f734dc4920ffa0e272fe890bfcf6492.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>记得先要导入jar包</p>
-<h2 id="mysql-—-基本的操作"><a href="#mysql-—-基本的操作" class="headerlink" title="mysql — 基本的操作"></a><a href="https://dopagip.wordpress.com/2021/12/12/mysql-%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">mysql — 基本的操作</a></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--在sql里面所有的注释都用“--”,school是我们创建的数据库。</span><br><span class="line">show databases; --显示所有的数据库</span><br><span class="line"></span><br><span class="line">use school; --使用数据库</span><br><span class="line">change database</span><br><span class="line"></span><br><span class="line">use tables;  --显示所有的数据表</span><br><span class="line"></span><br><span class="line">desc tables; --显示数据库中所有表的信息</span><br><span class="line"></span><br><span class="line">create database &quot;school&quot;; --创建数据库</span><br><span class="line"></span><br><span class="line">exit; --退出mysql</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>数据库XX语言：</strong></p>
-<p>DDL 定义</p>
-<p>DML 操作</p>
-<p>DQL 查询</p>
-<p>DCL 控制</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--SringBuffer和StringBudilder“</title>
     <url>/2022/02/09/JAVA-SringBuffer%E5%92%8CStringBudilder/</url>
     <content><![CDATA[<p>这两个都是可变字符串.</p>
@@ -127,16 +146,17 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--Sring声明“</title>
-    <url>/2022/02/09/JAVA-Sring%E5%A3%B0%E6%98%8E/</url>
-    <content><![CDATA[<p>引用类型的引用在栈里面，对象在堆里面。</p>
+    <title>”JAVA--properties类“</title>
+    <url>/2022/02/09/JAVA-properties%E7%B1%BB/</url>
+    <content><![CDATA[<p> properties相当于一个集合</p>
 <span id="more"></span>
 
-<p>字符串的字面值存储在字符串池中，可以实现共享。</p>
-<p>String name = 20;//这里name存储在堆里面，20存储在方法池里面。</p>
-<p>声明string字符串有两种方式：</p>
-<p>1.String name = “Hellp”//产生一个对象，存储在字符串池中</p>
-<p>2.String name = new String(“Hello”)//产生两个对象，在字符串池和堆中各存放一个</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/d91d50beb656346ba65a174526fc43f6.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>setproperties在集合里面增加变量。</p>
+<p>1.list方法适用于PrintWriter</p>
+<p>2.store方法适用于FileOutputStream</p>
+<p>3.load方法适用于FileInputStream</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -191,53 +211,6 @@
 
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p><strong>子类不能继承被final继承的父类！</strong></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--properties类“</title>
-    <url>/2022/02/09/JAVA-properties%E7%B1%BB/</url>
-    <content><![CDATA[<p> properties相当于一个集合</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/img_convert/d91d50beb656346ba65a174526fc43f6.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>setproperties在集合里面增加变量。</p>
-<p>1.list方法适用于PrintWriter</p>
-<p>2.store方法适用于FileOutputStream</p>
-<p>3.load方法适用于FileInputStream</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA--多态</title>
-    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
-    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
-<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
-<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
-<span id="more"></span>
-
-<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>多态的注意事项：</p>
-<p>1.多态是方法的多态，属性没有多态；</p>
-<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
-<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
-<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
-<p>##但是有些方法是不能重写的：</p>
-<p>1.static方法：属于类，不属于实例</p>
-<p>2.final属性</p>
-<p>3.private方法是私有的，当然重写了也没用</p>
-<p>instanceof （类型转换） 引用类型</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -373,6 +346,61 @@
       </tags>
   </entry>
   <entry>
+    <title>JAVA--多态</title>
+    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
+    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
+<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
+<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
+<span id="more"></span>
+
+<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>多态的注意事项：</p>
+<p>1.多态是方法的多态，属性没有多态；</p>
+<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
+<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
+<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
+<p>##但是有些方法是不能重写的：</p>
+<p>1.static方法：属于类，不属于实例</p>
+<p>2.final属性</p>
+<p>3.private方法是私有的，当然重写了也没用</p>
+<p>instanceof （类型转换） 引用类型</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--拆箱和装箱，字符串数字转换“</title>
+    <url>/2022/02/09/JAVA-%E6%8B%86%E7%AE%B1%E5%92%8C%E8%A3%85%E7%AE%B1%EF%BC%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2/</url>
+    <content><![CDATA[<p>数据类型（int，float等等）存放在栈里面。</p>
+<p>引用类型（Integer，Float等等）存放在堆里面 。</p>
+<span id="more"></span>
+
+<p>装箱就是 Java 将基本类型转换成对应的包装类型，比如将 int 转换成 Integer 对象。反之将 Integer 转换成 int 值，则称为拆箱。</p>
+<p><strong>装箱:</strong></p>
+<p>int num = 20;</p>
+<p>Integer integer1 = num;</p>
+<p>如上这样就可以实现装箱使int成为integer了。</p>
+<p><strong>拆箱：</strong></p>
+<p>int num2=integer;</p>
+<p>这样就可以拆箱。</p>
+<p>integer的范围是-128——127之间，超过这个范围会溢出</p>
+<p><strong>字符串和数字之间的转换：</strong></p>
+<p>int num = 20;</p>
+<p>Integer integer = num;</p>
+<p>String s = integer.tostring(num，10)//这里解释一下，tostring括号里面的num是要转换为字符串的数字，后面的10是转换为10进制的，当然也可以变成8/16转换成八进制十六进制。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA--封装</title>
     <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
     <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
@@ -387,6 +415,24 @@
 <p>2.统一接口（唯一接口只有get/set）</p>
 <p>3.隐藏代码实现细节</p>
 <p>4.系统的可维护性增加</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--抽象类“</title>
+    <url>/2022/02/09/JAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
+    <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
+<span id="more"></span>
+
+<p>1.当子类继承的父类当中有抽象的方法时，子类必须要重写抽象方法</p>
+<p>2.java里面的类是单继承的，但是接口时多继承的</p>
+<p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
+<p>4.抽象方法必须在抽象类里面</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -441,52 +487,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--抽象类“</title>
-    <url>/2022/02/09/JAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
-    <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
-<span id="more"></span>
-
-<p>1.当子类继承的父类当中有抽象的方法时，子类必须要重写抽象方法</p>
-<p>2.java里面的类是单继承的，但是接口时多继承的</p>
-<p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
-<p>4.抽象方法必须在抽象类里面</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--拆箱和装箱，字符串数字转换“</title>
-    <url>/2022/02/09/JAVA-%E6%8B%86%E7%AE%B1%E5%92%8C%E8%A3%85%E7%AE%B1%EF%BC%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2/</url>
-    <content><![CDATA[<p>数据类型（int，float等等）存放在栈里面。</p>
-<p>引用类型（Integer，Float等等）存放在堆里面 。</p>
-<span id="more"></span>
-
-<p>装箱就是 Java 将基本类型转换成对应的包装类型，比如将 int 转换成 Integer 对象。反之将 Integer 转换成 int 值，则称为拆箱。</p>
-<p><strong>装箱:</strong></p>
-<p>int num = 20;</p>
-<p>Integer integer1 = num;</p>
-<p>如上这样就可以实现装箱使int成为integer了。</p>
-<p><strong>拆箱：</strong></p>
-<p>int num2=integer;</p>
-<p>这样就可以拆箱。</p>
-<p>integer的范围是-128——127之间，超过这个范围会溢出</p>
-<p><strong>字符串和数字之间的转换：</strong></p>
-<p>int num = 20;</p>
-<p>Integer integer = num;</p>
-<p>String s = integer.tostring(num，10)//这里解释一下，tostring括号里面的num是要转换为字符串的数字，后面的10是转换为10进制的，当然也可以变成8/16转换成八进制十六进制。</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--捕获异常“</title>
     <url>/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/</url>
     <content><![CDATA[<p> 捕获异常的知识点</p>
@@ -499,6 +499,61 @@
 <p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
 <p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--文件file类“</title>
+    <url>/2022/02/09/JAVA-%E6%96%87%E4%BB%B6file%E7%B1%BB/</url>
+    <content><![CDATA[<p>java.io.File是文件名的抽象表示。</p>
+<span id="more"></span>
+
+<p><strong>你的文件表示必须在创建对象时候体现。</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/fb6fdb58d06f307e95bb0d2ef094c34d.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>常用的方法</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/750b65bb2dac31431da0c1b5fd888c62.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>File中的Separator是\ ，Separator是;</p>
+<p><strong>最好是用一个布尔类型的变量来表示createNewFile</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/528a9bda160f3d0530d1dc86aad54817.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>用布尔类型表示</p>
+<p>删除文件：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9af1fd354a5574fcaab8bd8ebe206a6b.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>有这两种方法</p>
+<p>获取文件创建日期：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b26e5fed45d628eebec7235cb9350a2a.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>判断文件是否可写可读；</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/3f790142d2c2d99e836e65e2346e57d7.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>当只读的时候就不能写了</p>
+<p>判断是不是文件，是否是隐藏的：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/dce4fd3d48c2ccd0dc1fba07e62d8da5.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>判断是不是隐藏的，是不是文件：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ce447e9b190e99c3e310830dfc5b3daa.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这里可以选择</p>
+<h2 id="文件夹"><a href="#文件夹" class="headerlink" title="文件夹"></a>文件夹</h2><p><img src="https://img-blog.csdnimg.cn/img_convert/ac863ec6df97a50a337f82ec314ebcbc.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>mkdirs创建多级目录文件夹，mkdir创建单级文件夹。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9541a40c8b7423f37eb5e810b1bb34db.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>获取绝对路径，路径，文件名</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9a2e173622aa85c9f576a72996639cc0.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>判断是否是文件夹是否隐藏</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/de6bca422bb73bab89a0181d5a3a2381.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>用了增强for循环</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -632,93 +687,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--文件file类“</title>
-    <url>/2022/02/09/JAVA-%E6%96%87%E4%BB%B6file%E7%B1%BB/</url>
-    <content><![CDATA[<p>java.io.File是文件名的抽象表示。</p>
-<span id="more"></span>
-
-<p><strong>你的文件表示必须在创建对象时候体现。</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/fb6fdb58d06f307e95bb0d2ef094c34d.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>常用的方法</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/750b65bb2dac31431da0c1b5fd888c62.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>File中的Separator是\ ，Separator是;</p>
-<p><strong>最好是用一个布尔类型的变量来表示createNewFile</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/528a9bda160f3d0530d1dc86aad54817.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>用布尔类型表示</p>
-<p>删除文件：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9af1fd354a5574fcaab8bd8ebe206a6b.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>有这两种方法</p>
-<p>获取文件创建日期：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/b26e5fed45d628eebec7235cb9350a2a.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>判断文件是否可写可读；</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/3f790142d2c2d99e836e65e2346e57d7.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>当只读的时候就不能写了</p>
-<p>判断是不是文件，是否是隐藏的：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/dce4fd3d48c2ccd0dc1fba07e62d8da5.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>判断是不是隐藏的，是不是文件：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/ce447e9b190e99c3e310830dfc5b3daa.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这里可以选择</p>
-<h2 id="文件夹"><a href="#文件夹" class="headerlink" title="文件夹"></a>文件夹</h2><p><img src="https://img-blog.csdnimg.cn/img_convert/ac863ec6df97a50a337f82ec314ebcbc.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>mkdirs创建多级目录文件夹，mkdir创建单级文件夹。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9541a40c8b7423f37eb5e810b1bb34db.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>获取绝对路径，路径，文件名</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9a2e173622aa85c9f576a72996639cc0.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>判断是否是文件夹是否隐藏</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/de6bca422bb73bab89a0181d5a3a2381.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>用了增强for循环</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA--构造器</title>
-    <url>/2022/02/09/JAVA-%E6%9E%84%E9%80%A0%E5%99%A8/</url>
-    <content><![CDATA[<p> 定义一个构造器：（构造方法必须没有返回值）</p>
-<span id="more"></span>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">    public Person()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class void main(String[] args)&#123;</span><br><span class="line">    Person person = new Person();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>1.在类里面即使你什么都不写，都会存在一个构造器.</p>
-<p>2.当我们在用new关键字创建一个新对象的时候，<strong>对象调用的一定是方法，而不是调用类！！这就是为什么即使什么都不写依然会存在一个构造器的原因，因为要定义一个对象就一定需要构造器！简单理解为使用new创建对象的本质就是在调用构造器。</strong></p>
-<p><strong>举个例子：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">//还是刚才那个构造器</span><br><span class="line">class Person&#123;</span><br><span class="line">    String st;</span><br><span class="line">    public Person()&#123;</span><br><span class="line">        this.st = &quot;OK!&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class void main(String[] args)&#123;</span><br><span class="line">    Person person = new Person();</span><br><span class="line">    System.out.println(person.st);</span><br><span class="line">    //这里会输出OK！而不是NULL了，因为对象调用的是方法person而person已经定义了st为&quot;OK!&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>上面我们说的是无参数的构造器，下面我们来介绍有参数的构造器。</p>
-<p>有参构造，一旦有了有参构造，无参构造就必须显式定义，什么意思呢，下面来解释：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">//还是刚才那个构造器</span><br><span class="line">class Person&#123;</span><br><span class="line">    String st;</span><br><span class="line">    public Person()&#123;</span><br><span class="line">        this.st = &quot;不OK!&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    public Person(int a)&#123;</span><br><span class="line">        this.st = &quot;OK!&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class void main(String[] args)&#123;</span><br><span class="line">    Person person1 = new Person();//这里调用的是无参构造。</span><br><span class="line">    Person person2 = new Person(20);//这里调用的是有参构造。</span><br><span class="line">    //当然，你的对象名也不能相同，否则会报错。</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>无参构造是什么意思：就是在构造器中不加参数的。</p>
-<p>显式定义是什么意思：就是即使方法里面什么东西都没有你也要把该方法写出来。</p>
-<p><strong>其实构造器最大的作用就是初始化值！</strong></p>
-<p><strong>快捷键：在IDEA里面Alt+Insert 快速建立构造器！</strong></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JAVA--方法重写</title>
     <url>/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99/</url>
     <content><![CDATA[<p>方法的调用只和左边有关，即A a/B b</p>
@@ -758,18 +726,29 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--类的盘点“</title>
-    <url>/2022/02/09/JAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9/</url>
-    <content><![CDATA[<p>先来一个特殊的：</p>
-<p>double res = 1.4-0.5/0.9;</p>
+    <title>JAVA--构造器</title>
+    <url>/2022/02/09/JAVA-%E6%9E%84%E9%80%A0%E5%99%A8/</url>
+    <content><![CDATA[<p> 定义一个构造器：（构造方法必须没有返回值）</p>
 <span id="more"></span>
 
-<p>System.out.println(res);//这时候输出的会是0.999999999</p>
-<p>这时候就要用到BigDecimal来精确输出double类型的数据了。</p>
-<p>BigDecimal num = new BigDecimal(“0.9”);//这样就可以声明一个BigDecimal数据了。</p>
-<p>当然要在前面加上import java.math.BigDecimal来引入BigDecimal</p>
-<hr>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).</span><br><span class="line">divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>)))<span class="comment">//这样就可以输出1而不是0.9999999了。</span></span><br><span class="line">同样也可以:</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">num</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">    public Person()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class void main(String[] args)&#123;</span><br><span class="line">    Person person = new Person();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>1.在类里面即使你什么都不写，都会存在一个构造器.</p>
+<p>2.当我们在用new关键字创建一个新对象的时候，<strong>对象调用的一定是方法，而不是调用类！！这就是为什么即使什么都不写依然会存在一个构造器的原因，因为要定义一个对象就一定需要构造器！简单理解为使用new创建对象的本质就是在调用构造器。</strong></p>
+<p><strong>举个例子：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">//还是刚才那个构造器</span><br><span class="line">class Person&#123;</span><br><span class="line">    String st;</span><br><span class="line">    public Person()&#123;</span><br><span class="line">        this.st = &quot;OK!&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class void main(String[] args)&#123;</span><br><span class="line">    Person person = new Person();</span><br><span class="line">    System.out.println(person.st);</span><br><span class="line">    //这里会输出OK！而不是NULL了，因为对象调用的是方法person而person已经定义了st为&quot;OK!&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>上面我们说的是无参数的构造器，下面我们来介绍有参数的构造器。</p>
+<p>有参构造，一旦有了有参构造，无参构造就必须显式定义，什么意思呢，下面来解释：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">//还是刚才那个构造器</span><br><span class="line">class Person&#123;</span><br><span class="line">    String st;</span><br><span class="line">    public Person()&#123;</span><br><span class="line">        this.st = &quot;不OK!&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    public Person(int a)&#123;</span><br><span class="line">        this.st = &quot;OK!&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class void main(String[] args)&#123;</span><br><span class="line">    Person person1 = new Person();//这里调用的是无参构造。</span><br><span class="line">    Person person2 = new Person(20);//这里调用的是有参构造。</span><br><span class="line">    //当然，你的对象名也不能相同，否则会报错。</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>无参构造是什么意思：就是在构造器中不加参数的。</p>
+<p>显式定义是什么意思：就是即使方法里面什么东西都没有你也要把该方法写出来。</p>
+<p><strong>其实构造器最大的作用就是初始化值！</strong></p>
+<p><strong>快捷键：在IDEA里面Alt+Insert 快速建立构造器！</strong></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -869,23 +848,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--集合知识点“</title>
-    <url>/2022/02/09/JAVA-%E9%9B%86%E5%90%88%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>1.集合的概念：存放对象的容器，类似数组的概念，同样集合也有对多个对象进行批量操作的功能。</p>
-<span id="more"></span>
-
-<p>2.集合与数组的区别：<br>（1）数组的长度是固定的，但是集合的长度是不固定的。</p>
-<p>（2）数组可以存放引用类型（如Integer Float等）和基本数据类型（int float 等），集合只能存放引用类型。</p>
-<p>3.集合用到的所有类都在java.util.*这个包里面。</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--转换流知识点“</title>
     <url>/2022/02/09/JAVA-%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<p>InputStreamReader和OutputStreamWriter:</p>
@@ -906,6 +868,27 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--类的盘点“</title>
+    <url>/2022/02/09/JAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9/</url>
+    <content><![CDATA[<p>先来一个特殊的：</p>
+<p>double res = 1.4-0.5/0.9;</p>
+<span id="more"></span>
+
+<p>System.out.println(res);//这时候输出的会是0.999999999</p>
+<p>这时候就要用到BigDecimal来精确输出double类型的数据了。</p>
+<p>BigDecimal num = new BigDecimal(“0.9”);//这样就可以声明一个BigDecimal数据了。</p>
+<p>当然要在前面加上import java.math.BigDecimal来引入BigDecimal</p>
+<hr>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).</span><br><span class="line">divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>)))<span class="comment">//这样就可以输出1而不是0.9999999了。</span></span><br><span class="line">同样也可以:</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">num</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>))</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA--面向对象知识点总结</title>
     <url>/2022/02/09/JAVA-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<p>有关面向对象知识点的总结</p>
@@ -915,6 +898,23 @@
 <p>类是一个模板（抽象），对象是一个具体的实例（具体化）<br>2.方法：<br>定义、调用<br>3.对应的引用<br>引用类型:基本类型 (8)<br>对象是通过引用来操作的:栈—&gt;堆<br>4.属性:字段Field 成员变量<br><strong>默认初始化:</strong><br>数字: 0 和 0.0<br>char : u0000<br>boolean: false<br>引用: null<br>修饰符属性类型 属性名。属性值!<br>5.对象的创建和使用(属性就是变量的意思)<br>必须使用new关键字创造对象，构造器 Person my = new Person();<br>-对象的属性my. name<br>-对象的方法my. sleep()</p>
 <p>6.类：<br>静态的定义：属性</p>
 <p>动态的定义：方法</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--集合知识点“</title>
+    <url>/2022/02/09/JAVA-%E9%9B%86%E5%90%88%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>1.集合的概念：存放对象的容器，类似数组的概念，同样集合也有对多个对象进行批量操作的功能。</p>
+<span id="more"></span>
+
+<p>2.集合与数组的区别：<br>（1）数组的长度是固定的，但是集合的长度是不固定的。</p>
+<p>（2）数组可以存放引用类型（如Integer Float等）和基本数据类型（int float 等），集合只能存放引用类型。</p>
+<p>3.集合用到的所有类都在java.util.*这个包里面。</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -1031,6 +1031,37 @@
       </tags>
   </entry>
   <entry>
+    <title>”Linux--用户管理“</title>
+    <url>/2022/02/09/Linux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<p> 一、基本操作：</p>
+<p>添加用户：useradd 用户名</p>
+<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
+<span id="more"></span>
+
+<p>删除用户(不保留家目录)：userdel -r 用户名</p>
+<p>更改用户密码：passwd 用户名</p>
+<p>查询用户信息：id 用户名</p>
+<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
+<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
+<p>想要查看现在的用户是谁：who am i（离谱）</p>
+<p>pwd：查看现在在哪个目录下面</p>
+<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
+<p>添加组：groupadd 组名</p>
+<p>删除组：groupdel 组名</p>
+<p>创建用户的同时分组：useradd -g 组名 用户名</p>
+<p>用户换组：usermod -g 新组名 用户名</p>
+<p><strong>用户和组的相关文件：</strong></p>
+<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”Linux--忘记密码的找回方法“</title>
     <url>/2022/02/09/Linux-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E6%89%BE%E5%9B%9E%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<p>非常详细！保姆级教程！</p>
@@ -1112,59 +1143,6 @@
 <p>（3）date+%m        显示当前月份（month）</p>
 <p>（4）date+%d          显示当前是哪一天</p>
 <p>（5）date“+%Y-%m-%d %H;%M;%S” 显示年月日时分秒</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NFT--MetaMask的创建</title>
-    <url>/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/</url>
-    <content><![CDATA[<h3 id="Chrome中的MetaMask钱包的创建"><a href="#Chrome中的MetaMask钱包的创建" class="headerlink" title="Chrome中的MetaMask钱包的创建"></a>Chrome中的MetaMask钱包的创建</h3><span id="more"></span>
-
-<p>1.先把MetaMask添加到Chrome插件</p>
-<p>2.按照提示设置密码</p>
-<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164451817.png" alt="image-20220605164451817"></p>
-<p>3.每个账户都会有一个专属的助记词，<strong>请记住你的助记词，很重要</strong></p>
-<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164617756.png" alt="image-20220605164617756"></p>
-<p>4.为了确保你记住会让你确认一遍</p>
-<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605165616940.png" alt="image-20220605165616940"></p>
-<p>5.完成之后就创建好你的MetaMask账户了！</p>
-<p>6.再登陆Mintable.app网站（用于NFT的购买和售卖）创建账户，和你的Meta Mask账户连接即可进行NFT的购买和售卖。</p>
-]]></content>
-      <categories>
-        <category>NFT</category>
-      </categories>
-      <tags>
-        <tag>NFT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”Linux--用户管理“</title>
-    <url>/2022/02/09/Linux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<p> 一、基本操作：</p>
-<p>添加用户：useradd 用户名</p>
-<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
-<span id="more"></span>
-
-<p>删除用户(不保留家目录)：userdel -r 用户名</p>
-<p>更改用户密码：passwd 用户名</p>
-<p>查询用户信息：id 用户名</p>
-<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
-<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
-<p>想要查看现在的用户是谁：who am i（离谱）</p>
-<p>pwd：查看现在在哪个目录下面</p>
-<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
-<p>添加组：groupadd 组名</p>
-<p>删除组：groupdel 组名</p>
-<p>创建用户的同时分组：useradd -g 组名 用户名</p>
-<p>用户换组：usermod -g 新组名 用户名</p>
-<p><strong>用户和组的相关文件：</strong></p>
-<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -2263,43 +2241,6 @@
       </tags>
   </entry>
   <entry>
-    <title>R-安装R语言</title>
-    <url>/2022/07/03/R-%E5%AE%89%E8%A3%85R%E8%AF%AD%E8%A8%80/</url>
-    <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV1Uv411n76i?spm_id_from=333.337.search-card.all.click&amp;vd_source=acefe4c123e2b73c9e6c4b23e6627fa8">https://www.bilibili.com/video/BV1Uv411n76i?spm_id_from=333.337.search-card.all.click&amp;vd_source=acefe4c123e2b73c9e6c4b23e6627fa8</a></p>
-<p>需要注意的是在linux使用R的时候每次都要先激活R语言：conda activate user_R</p>
-<p>然后使用：R 来访问R语言</p>
-<p>使用：radian 来访问有颜色的R语言</p>
-]]></content>
-      <categories>
-        <category>R语言</category>
-      </categories>
-      <tags>
-        <tag>R语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo d出错时的解决办法</title>
-    <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
-<span id="more"></span>
-
-<p>删除blog/.deploy_git文件</p>
-<p>然后输入</p>
-<p>git config –gloabl core.autocrlf false`</p>
-<p>重新</p>
-<p>hexo clean</p>
-<p>hexo g</p>
-<p>hexo d</p>
-<p>部署</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>html -- 基础</title>
     <url>/2022/04/14/html-%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--标准格式--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mate</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line">    	标题 </span><br><span class="line">    <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">h2</span>&gt;</span>标题2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        	段落1</span><br><span class="line">    	<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -2334,32 +2275,78 @@
       </tags>
   </entry>
   <entry>
-    <title>matlab--程序设计</title>
-    <url>/2022/03/21/matlab-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</url>
-    <content><![CDATA[<p>matlab中的程序设计知识</p>
-<span id="more"></span>
+    <title>NFT--MetaMask的创建</title>
+    <url>/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/</url>
+    <content><![CDATA[<h3 id="Chrome中的MetaMask钱包的创建"><a href="#Chrome中的MetaMask钱包的创建" class="headerlink" title="Chrome中的MetaMask钱包的创建"></a>Chrome中的MetaMask钱包的创建</h3><span id="more"></span>
 
-<p>使用input函数可以让用户输入想输入的值，可以是任何形式的。</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">#可以在input函数的括号内加入想说的话，如</span><br><span class="line">a = input(<span class="string">&quot;请输入a的值：&quot;</span>)	#然后这个a的值会赋值给变量a，在后面可以对a进行相应的运算</span><br><span class="line">b = a * <span class="number">2</span>	 #b = <span class="number">2</span>a</span><br></pre></td></tr></table></figure>
-
+<p>1.先把MetaMask添加到Chrome插件</p>
+<p>2.按照提示设置密码</p>
+<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164451817.png" alt="image-20220605164451817"></p>
+<p>3.每个账户都会有一个专属的助记词，<strong>请记住你的助记词，很重要</strong></p>
+<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164617756.png" alt="image-20220605164617756"></p>
+<p>4.为了确保你记住会让你确认一遍</p>
+<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605165616940.png" alt="image-20220605165616940"></p>
+<p>5.完成之后就创建好你的MetaMask账户了！</p>
+<p>6.再登陆Mintable.app网站（用于NFT的购买和售卖）创建账户，和你的Meta Mask账户连接即可进行NFT的购买和售卖。</p>
 ]]></content>
       <categories>
-        <category>matlab</category>
+        <category>NFT</category>
       </categories>
       <tags>
-        <tag>matlab</tag>
+        <tag>NFT</tag>
       </tags>
   </entry>
   <entry>
-    <title>python--name属性</title>
-    <url>/2022/03/10/python-name%E5%B1%9E%E6%80%A7/</url>
-    <content><![CDATA[<p>python中的 __  <em>name</em> _ _属性</p>
+    <title>hexo d出错时的解决办法</title>
+    <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
 <span id="more"></span>
 
-<p>除了直接运行，python文件还可以直接作为模块导入。通过Python中的__name__属性来判断，分两种情况：<br>1.如果文件作为模块被导入，那么他的__name__值被自动设置为模块名</p>
-<p>2.如果文件直接运行，那么__name__的属性值自动设置为字符串’<strong>main</strong>‘</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>()</span><br><span class="line"><span class="keyword">if</span> __name__ = <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;directly run&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> __name__ = <span class="string">&#x27;hello&#x27;</span>:</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;import way&quot;</span>)</span><br><span class="line">    </span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+<p>删除blog/.deploy_git文件</p>
+<p>然后输入</p>
+<p>git config –gloabl core.autocrlf false`</p>
+<p>重新</p>
+<p>hexo clean</p>
+<p>hexo g</p>
+<p>hexo d</p>
+<p>部署</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>R-安装R语言</title>
+    <url>/2022/07/03/R-%E5%AE%89%E8%A3%85R%E8%AF%AD%E8%A8%80/</url>
+    <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV1Uv411n76i?spm_id_from=333.337.search-card.all.click&amp;vd_source=acefe4c123e2b73c9e6c4b23e6627fa8">https://www.bilibili.com/video/BV1Uv411n76i?spm_id_from=333.337.search-card.all.click&amp;vd_source=acefe4c123e2b73c9e6c4b23e6627fa8</a></p>
+<p>需要注意的是在linux使用R的时候每次都要先激活R语言：conda activate user_R</p>
+<p>然后使用：R 来访问R语言</p>
+<p>使用：radian 来访问有颜色的R语言</p>
+]]></content>
+      <categories>
+        <category>R语言</category>
+      </categories>
+      <tags>
+        <tag>R语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--random“</title>
+    <url>/2022/02/09/python-random/</url>
+    <content><![CDATA[<p>随机生产一个取值范围在10~100的整数：random.randint(10,100)</p>
+<span id="more"></span>
 
+<p>一个比较重要的语法：</p>
+<p>random.randint(1~10)假设生成的随机数是1</p>
+<p>random.randint(1~10)假设生成的随机数是3</p>
+<p>random.randint(1~10)假设生成的随机数是6</p>
+<p>我们使用random.setstate(x)</p>
+<p>在后面我们再使用三次</p>
+<p>random.randint(1~10）</p>
+<p>三次生成的数分别是1，3，6，所以可以推断出setstate的作用是把前三次生成的随机数变成一个固定的状态再后面再生成！</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -2400,19 +2387,32 @@
       </tags>
   </entry>
   <entry>
-    <title>”python--random“</title>
-    <url>/2022/02/09/python-random/</url>
-    <content><![CDATA[<p>随机生产一个取值范围在10~100的整数：random.randint(10,100)</p>
+    <title>matlab--程序设计</title>
+    <url>/2022/03/21/matlab-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<p>matlab中的程序设计知识</p>
 <span id="more"></span>
 
-<p>一个比较重要的语法：</p>
-<p>random.randint(1~10)假设生成的随机数是1</p>
-<p>random.randint(1~10)假设生成的随机数是3</p>
-<p>random.randint(1~10)假设生成的随机数是6</p>
-<p>我们使用random.setstate(x)</p>
-<p>在后面我们再使用三次</p>
-<p>random.randint(1~10）</p>
-<p>三次生成的数分别是1，3，6，所以可以推断出setstate的作用是把前三次生成的随机数变成一个固定的状态再后面再生成！</p>
+<p>使用input函数可以让用户输入想输入的值，可以是任何形式的。</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">#可以在input函数的括号内加入想说的话，如</span><br><span class="line">a = input(<span class="string">&quot;请输入a的值：&quot;</span>)	#然后这个a的值会赋值给变量a，在后面可以对a进行相应的运算</span><br><span class="line">b = a * <span class="number">2</span>	 #b = <span class="number">2</span>a</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python--name属性</title>
+    <url>/2022/03/10/python-name%E5%B1%9E%E6%80%A7/</url>
+    <content><![CDATA[<p>python中的 __  <em>name</em> _ _属性</p>
+<span id="more"></span>
+
+<p>除了直接运行，python文件还可以直接作为模块导入。通过Python中的__name__属性来判断，分两种情况：<br>1.如果文件作为模块被导入，那么他的__name__值被自动设置为模块名</p>
+<p>2.如果文件直接运行，那么__name__的属性值自动设置为字符串’<strong>main</strong>‘</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>()</span><br><span class="line"><span class="keyword">if</span> __name__ = <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;directly run&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> __name__ = <span class="string">&#x27;hello&#x27;</span>:</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;import way&quot;</span>)</span><br><span class="line">    </span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>python</category>
@@ -2508,6 +2508,27 @@
       </tags>
   </entry>
   <entry>
+    <title>”python--列表里的函数“</title>
+    <url>/2022/02/09/python-%E5%88%97%E8%A1%A8%E9%87%8C%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p> sort()将数组从小到大排序。</p>
+<p>reverse（）将数组此时的位置进行倒转</p>
+<span id="more"></span>
+
+<p>count（？）问号的内容是数组里面的数据元素，这个函数用于数出这个数据元素在这个数组里面出现了几次</p>
+<p>index（？），问号的内容是数组里面的数据元素，这个函数用于显示这个元素在数组里面出现的位置（如果有多个元素相同，那么显示第一个元素的位置）。<strong>可以在后面再加两个参数分别显示查找开始和结束的位置，index(？，start，end)</strong></p>
+<p>一个数组赋值给另外一个列表，比如nums数组赋值给nums_two数组：nums_two = nums.copy()</p>
+<p><strong>注意：nums这个数组和nums[:]这个数组是表示的同一个</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/9ee34faef1d743f089ab46f13fbc0e56.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/1918e8c5870c4dcba8d4b42608cde2ad.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_5,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python--字典</title>
     <url>/2022/02/16/python-%E5%AD%97%E5%85%B8/</url>
     <content><![CDATA[<h2 id="字典是另一种可变容器模型，且可存储任意类型对象。"><a href="#字典是另一种可变容器模型，且可存储任意类型对象。" class="headerlink" title="字典是另一种可变容器模型，且可存储任意类型对象。"></a>字典是另一种可变容器模型，且可存储任意类型对象。</h2><span id="more"></span>
@@ -2535,27 +2556,6 @@
 
 <h3 id="修改字典和删除字典"><a href="#修改字典和删除字典" class="headerlink" title="修改字典和删除字典"></a>修改字典和删除字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#修改字典</span></span><br><span class="line">di = &#123;<span class="string">&#x27;name&#x27;</span> = <span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;num&#x27;</span> = <span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;class&#x27;</span> = <span class="number">3</span>&#125;</span><br><span class="line">di[<span class="string">&#x27;name&#x27;</span> = <span class="string">&#x27;10&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(di[<span class="string">&#x27;name&#x27;</span>])  <span class="comment">#10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除字典</span></span><br><span class="line"><span class="keyword">del</span> di[<span class="string">&#x27;name&#x27;</span>] <span class="comment"># 删除键 &#x27;Name&#x27;</span></span><br><span class="line">di.clear()     <span class="comment"># 清空字典，但是字典还是保留着的</span></span><br><span class="line"><span class="keyword">del</span> di         <span class="comment"># 删除字典</span></span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--列表里的函数“</title>
-    <url>/2022/02/09/python-%E5%88%97%E8%A1%A8%E9%87%8C%E7%9A%84%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<p> sort()将数组从小到大排序。</p>
-<p>reverse（）将数组此时的位置进行倒转</p>
-<span id="more"></span>
-
-<p>count（？）问号的内容是数组里面的数据元素，这个函数用于数出这个数据元素在这个数组里面出现了几次</p>
-<p>index（？），问号的内容是数组里面的数据元素，这个函数用于显示这个元素在数组里面出现的位置（如果有多个元素相同，那么显示第一个元素的位置）。<strong>可以在后面再加两个参数分别显示查找开始和结束的位置，index(？，start，end)</strong></p>
-<p>一个数组赋值给另外一个列表，比如nums数组赋值给nums_two数组：nums_two = nums.copy()</p>
-<p><strong>注意：nums这个数组和nums[:]这个数组是表示的同一个</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/9ee34faef1d743f089ab46f13fbc0e56.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/1918e8c5870c4dcba8d4b42608cde2ad.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_5,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -2597,6 +2597,25 @@
 <p>：后面可以加很多值，如下表：（参数即format里面的参数）</p>
 <p><img src="/2022/02/13/python-%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20220213212943323.png" alt="image-20220213212943323"></p>
 <h3 id><a href="#" class="headerlink" title></a></h3>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--字符串“</title>
+    <url>/2022/02/09/python-%E5%AD%97%E7%AC%A6%E4%B8%B2OLD/</url>
+    <content><![CDATA[<p>在打印文本的时候如果不想显示转义字符的结果，可以在字符串的引号前面加上r。</p>
+<span id="more"></span>
+
+<p>如：1.不加r的时候:print(“D:\three\two\one\now”)</p>
+<p>​     显示的结果是：<img src="https://img-blog.csdnimg.cn/cec7ee435319424bad8f796d47085fe4.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>2.加上r的时候: print(<strong>r</strong>“D:\three\two\one\now”)</p>
+<p>​     显示的结果是：<img src="https://img-blog.csdnimg.cn/f7f5f4fca14d45db930067db3de40836.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>加上r代表这后面的字符串显示原始字符！</strong></p>
+]]></content>
       <categories>
         <category>python</category>
       </categories>
@@ -2660,16 +2679,44 @@
       </tags>
   </entry>
   <entry>
-    <title>”python--字符串“</title>
-    <url>/2022/02/09/python-%E5%AD%97%E7%AC%A6%E4%B8%B2OLD/</url>
-    <content><![CDATA[<p>在打印文本的时候如果不想显示转义字符的结果，可以在字符串的引号前面加上r。</p>
+    <title>”python--除和地板除“</title>
+    <url>/2022/02/09/python-%E9%99%A4%E5%92%8C%E5%9C%B0%E6%9D%BF%E9%99%A4/</url>
+    <content><![CDATA[<p>3/2=1.5这个谁都懂</p>
+<p>但是3//2=1这个代表3/2的结果向下取整，称之为地板除。</p>
 <span id="more"></span>
 
-<p>如：1.不加r的时候:print(“D:\three\two\one\now”)</p>
-<p>​     显示的结果是：<img src="https://img-blog.csdnimg.cn/cec7ee435319424bad8f796d47085fe4.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>2.加上r的时候: print(<strong>r</strong>“D:\three\two\one\now”)</p>
-<p>​     显示的结果是：<img src="https://img-blog.csdnimg.cn/f7f5f4fca14d45db930067db3de40836.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>加上r代表这后面的字符串显示原始字符！</strong></p>
+<p>如-5//2，先算-5/2=-2.5，再向下取整，得-3。</p>
+<p>我们还可以使用python的内置函数divmod（）</p>
+<p>如divmod(3,2)=(1,1)结果中的第一个1代表着3//2的结果，第二个1代表着3%2的结果。</p>
+<p>内置函数abs，如abs（x）意思是取x的绝对值</p>
+<p>任何数据类型后面加括号加值的结果都是强制转换成该数据类型。</p>
+<p>如：x=2.5</p>
+<p>int（x）的结果就是2，向下取整！</p>
+<p>pow(2,3)代表2的三次方，和2**3的效果一样。</p>
+<p>pow（2,3,4）代表着2**3%4即2的三次方结果除四的余数！</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--深拷贝和浅拷贝“</title>
+    <url>/2022/02/09/python-%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
+    <content><![CDATA[<p><strong>假设B复制了A，当修改A时，看B是否会发生变化，如果B也跟着变了，说明这是浅拷贝，拿人手短，如果B没变，那就是深拷贝，自食其力。</strong></p>
+<span id="more"></span>
+
+<p>浅拷贝的实现方法：</p>
+<p>x=…..</p>
+<p>y=copy.copy(x)</p>
+<p>深拷贝的实现方法：</p>
+<p>x=…</p>
+<p>y=copy.deepcopy(x)</p>
+<p>其中第一个copy是copy模块</p>
+<p><img src="https://img-blog.csdnimg.cn/550469b3a1764d3d9357df29840651d2.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这样的copy是浅拷贝</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -2698,29 +2745,6 @@
 <p>自己的总结<br>1.导入库时候先from再import<br>2.生成随机小数的函数：random.random() 要先导入random库<br>3.python序列类型：序列类型：字符串，列表，元组，映射类型：字典，集合类型：集合<br>4.元组，列表的区别：<br>a.列表可以进行修改，元组不行<br>b.列表拥有很多元组不具有的方法，如：append()，extend(),remove(),pop()<br>c.列表可以进行切片访问和修改，元组只能进行切片访问<br>d.元组的访问速度比列表快很多<br>e.列表不能作为字典的键，但是元组可以</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#append函数和extend函数的区别</span></span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="built_in">list</span> = []</span><br><span class="line"><span class="built_in">list</span>.append(a) <span class="comment">#list=[[1,2]]可见是整个列表添加上去的</span></span><br><span class="line"><span class="built_in">list</span>.extend(a) <span class="comment">#list=[1,2] 可见是列表拆开之后加上去的</span></span><br><span class="line"><span class="comment">#总结：如果extend的是字符串，则字符串会被拆分成字符数组，如果extend的是字典，则字典的key会被加入到List中</span></span><br></pre></td></tr></table></figure>
 <p>5.format函数的作用：”{0,3}”.format(“Hello”,”World”) 其中0是代表调用format括号内的第一个参数，3是当参数的字符串不足3位的时候，自动在后面补上空格<br>6.filter函数返回类型是迭代器，需要和list函数搭配使用，那么返回的就是列表，其功能和map函数类似，就是计算给定参数对应的函数值<br>7.rfind函数查找对应字符串最后一次出现的位置的第一个字符的位置！<br>8.升级pip的命令：pip install pip -U<br>9.一些库：request:http请求工具<br>      pandas:分析结构化数据的工具<br>      jieba:中文分词工具</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--深拷贝和浅拷贝“</title>
-    <url>/2022/02/09/python-%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
-    <content><![CDATA[<p><strong>假设B复制了A，当修改A时，看B是否会发生变化，如果B也跟着变了，说明这是浅拷贝，拿人手短，如果B没变，那就是深拷贝，自食其力。</strong></p>
-<span id="more"></span>
-
-<p>浅拷贝的实现方法：</p>
-<p>x=…..</p>
-<p>y=copy.copy(x)</p>
-<p>深拷贝的实现方法：</p>
-<p>x=…</p>
-<p>y=copy.deepcopy(x)</p>
-<p>其中第一个copy是copy模块</p>
-<p><img src="https://img-blog.csdnimg.cn/550469b3a1764d3d9357df29840651d2.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这样的copy是浅拷贝</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -2794,27 +2818,19 @@
       </tags>
   </entry>
   <entry>
-    <title>”python--除和地板除“</title>
-    <url>/2022/02/09/python-%E9%99%A4%E5%92%8C%E5%9C%B0%E6%9D%BF%E9%99%A4/</url>
-    <content><![CDATA[<p>3/2=1.5这个谁都懂</p>
-<p>但是3//2=1这个代表3/2的结果向下取整，称之为地板除。</p>
+    <title>web--将web内容上传服务器</title>
+    <url>/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<h4 id="先上总结"><a href="#先上总结" class="headerlink" title="先上总结"></a>先上总结</h4><p>1.先用原始服务器的实例创建一个ubuntu镜像，记住镜像的账号（root）和密码。<br>2.先使用cmd进行root连接：（ssh <a href="mailto:&#x72;&#111;&#x6f;&#116;&#64;&#x31;&#x32;&#x30;&#46;&#x37;&#x37;&#46;&#49;&#x37;&#x2e;&#50;&#49;&#54;">&#x72;&#111;&#x6f;&#116;&#64;&#x31;&#x32;&#x30;&#46;&#x37;&#x37;&#46;&#49;&#x37;&#x2e;&#50;&#49;&#54;</a>）当然使用putty或者Xshell同样可以<br>3.使用Xftp7上传对应的web网页到服务器对应的目录中，目录为var\www\html（其中的var目录是和root同级目录）<br>4.上传之后，在浏览器中使用公网的ip即可看到网页。<br>试了一天TT</p>
 <span id="more"></span>
 
-<p>如-5//2，先算-5/2=-2.5，再向下取整，得-3。</p>
-<p>我们还可以使用python的内置函数divmod（）</p>
-<p>如divmod(3,2)=(1,1)结果中的第一个1代表着3//2的结果，第二个1代表着3%2的结果。</p>
-<p>内置函数abs，如abs（x）意思是取x的绝对值</p>
-<p>任何数据类型后面加括号加值的结果都是强制转换成该数据类型。</p>
-<p>如：x=2.5</p>
-<p>int（x）的结果就是2，向下取整！</p>
-<p>pow(2,3)代表2的三次方，和2**3的效果一样。</p>
-<p>pow（2,3,4）代表着2**3%4即2的三次方结果除四的余数！</p>
+<h4 id="参考视频，资料"><a href="#参考视频，资料" class="headerlink" title="参考视频，资料"></a>参考视频，资料</h4><p>b站视频：<a href="https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click</a></p>
+<p>博客园日志：<a href="http://t.zoukankan.com/chrischen98-p-10874821.html%EF%BC%88%E4%B8%8A%E5%8D%88%E4%B8%80%E7%9B%B4%E7%9C%8B%E8%BF%99%E4%B8%AA%EF%BC%8C%E4%BD%86%E6%98%AF%E7%94%A8%E4%BA%86iis%E4%B9%8B%E5%90%8E%E7%BD%91%E9%A1%B5%E4%B8%80%E7%9B%B4%E4%B8%8D%E6%98%BE%E7%A4%BA,%E8%AE%BE%E7%BD%AE%E5%95%A5%E7%AB%AF%E5%8F%A3%E9%83%BD%E6%B2%A1%E7%94%A8%EF%BC%89">http://t.zoukankan.com/chrischen98-p-10874821.html（上午一直看这个，但是用了iis之后网页一直不显示,设置啥端口都没用）</a></p>
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>web</category>
       </categories>
       <tags>
-        <tag>python</tag>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -2827,36 +2843,6 @@
 <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>当我们知道图中有n个点的时候，要找到同时穿过这n个点的函数，即把分别穿过n个点的函数相加，得到的就是拉格朗日插值。</p>
 <h3 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h3><p>当图中有三个点的时候，L2(x) = [(x-x1)(x-x2)/(x0-x1)(x0-x2)]y0 + [(x-x0)(x-x2)/(x1-x0)(x1-x2)]y1 + [(x-x0)(x-x1)/(x2-x0)(x2-x1)]y2</p>
 <p>当图中有n个点的时候，Ln(x) = n(大派键)i=0且i不等于j (x-xj)/(xi-xj)</p>
-]]></content>
-      <categories>
-        <category>数值分析</category>
-      </categories>
-      <tags>
-        <tag>数值分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数值分析-- 误差</title>
-    <url>/2022/03/07/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-%E8%AF%AF%E5%B7%AE/</url>
-    <content><![CDATA[<h3 id="误差和误差限"><a href="#误差和误差限" class="headerlink" title="误差和误差限"></a>误差和误差限</h3><span id="more"></span>
-
-<p>设X* 为X的一个近似值（可大于X也可小于X），有e* =  X-X* ,称e* 为<strong>绝对误差</strong>，简称<strong>误差</strong>。</p>
-<p>易得出结论：当绝对误差大于0时，近似值大于真实值，称为<strong>强近似值</strong>；当绝对误差小于0时，近似值小于真实值，称为<strong>弱近似值</strong>。</p>
-<p>误差的绝对值不超过某个正数E* ，称这个正数E<em>为近似值的*<em>误差限</em></em> </p>
-<h3 id="相对误差和相对误差限"><a href="#相对误差和相对误差限" class="headerlink" title="相对误差和相对误差限"></a>相对误差和相对误差限</h3><p>**相对误差:*<em>指的是近似值e</em> 与真实值X的比值，称为e(r)*（右下角有个小r）</p>
-<p><strong>相对误差限：</strong>相对误差不能超过相对误差限E(r)* ，E(r)* =E* / |x*|</p>
-<h3 id="绝对误差的计算方法"><a href="#绝对误差的计算方法" class="headerlink" title="绝对误差的计算方法"></a>绝对误差的计算方法</h3><p><strong>注意：绝对误差限一定是一个单位的半个单位，如0.5，0.05，0.005，0.0005等等，那么换成科学计数法的形式就可以变成1/2 * 10^-p</strong></p>
-<p><strong>（其中p取正整数！）这时，-p就可以换成另一种表示方法，-p = m-n+1  （其中m是小数点离第一个非0数字的后一位有多远，如123.45的m就是2，而0.00123的m就是-3）（其中n是有几位有效数字如123.45就有5为有效数字，那么n就是5.）通常情况下都是知道了m和n要去求p的！！</strong></p>
-<p>例如“派”取近似值3.14，那么|3.14-“派”| = 0.0015926&lt;=0.005=1/2 * 10^-2，则绝对误差限就是1/2 * 10^-2</p>
-<h3 id="相对误差的计算方法"><a href="#相对误差的计算方法" class="headerlink" title="相对误差的计算方法"></a>相对误差的计算方法</h3><p>若近似值有n为有效数字，其中a是近似值的个位数。</p>
-<p>E(r)*&lt;=1/2a * 10^-(n-1)</p>
-<h3 id="误差估计中的重要公式"><a href="#误差估计中的重要公式" class="headerlink" title="误差估计中的重要公式"></a>误差估计中的重要公式</h3><p>E(x1* +- x2* ) = E(x1* ) +- E(x2*)</p>
-<p><em><em>E(x1</em> * x2</em> ) = |x1*| * E(x2*) + |x2 *| * E(x1 *)**这个公式在平常的运算中常常能用得上。</p>
-<p>E(x1* / x2* ) = |x1*| * E(x2*) + |x2 *| * E(x1 *) / |x2 *|^2    这是上面那一条的除法运算</p>
-<h3 id="误差中的规则"><a href="#误差中的规则" class="headerlink" title="误差中的规则"></a>误差中的规则</h3><p>1.要避免除数的绝对值远远小于被除数绝对值的除法</p>
-<p>2.避免出现有效数字少的相减如x=123.401,  y = 123.412  ，那么y-x =0.011只有两位有效数字。</p>
-<p>3.防止大数吃掉小数</p>
-<p>4.注意简化运算流程，简化运算步骤</p>
 ]]></content>
       <categories>
         <category>数值分析</category>
@@ -2882,22 +2868,6 @@
       </categories>
       <tags>
         <tag>数值分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web--将web内容上传服务器</title>
-    <url>/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<h4 id="先上总结"><a href="#先上总结" class="headerlink" title="先上总结"></a>先上总结</h4><p>1.先用原始服务器的实例创建一个ubuntu镜像，记住镜像的账号（root）和密码。<br>2.先使用cmd进行root连接：（ssh <a href="mailto:&#x72;&#x6f;&#x6f;&#x74;&#64;&#x31;&#50;&#48;&#x2e;&#55;&#x37;&#x2e;&#49;&#x37;&#x2e;&#50;&#49;&#54;">&#x72;&#x6f;&#x6f;&#x74;&#64;&#x31;&#50;&#48;&#x2e;&#55;&#x37;&#x2e;&#49;&#x37;&#x2e;&#50;&#49;&#54;</a>）当然使用putty或者Xshell同样可以<br>3.使用Xftp7上传对应的web网页到服务器对应的目录中，目录为var\www\html（其中的var目录是和root同级目录）<br>4.上传之后，在浏览器中使用公网的ip即可看到网页。<br>试了一天TT</p>
-<span id="more"></span>
-
-<h4 id="参考视频，资料"><a href="#参考视频，资料" class="headerlink" title="参考视频，资料"></a>参考视频，资料</h4><p>b站视频：<a href="https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click</a></p>
-<p>博客园日志：<a href="http://t.zoukankan.com/chrischen98-p-10874821.html%EF%BC%88%E4%B8%8A%E5%8D%88%E4%B8%80%E7%9B%B4%E7%9C%8B%E8%BF%99%E4%B8%AA%EF%BC%8C%E4%BD%86%E6%98%AF%E7%94%A8%E4%BA%86iis%E4%B9%8B%E5%90%8E%E7%BD%91%E9%A1%B5%E4%B8%80%E7%9B%B4%E4%B8%8D%E6%98%BE%E7%A4%BA,%E8%AE%BE%E7%BD%AE%E5%95%A5%E7%AB%AF%E5%8F%A3%E9%83%BD%E6%B2%A1%E7%94%A8%EF%BC%89">http://t.zoukankan.com/chrischen98-p-10874821.html（上午一直看这个，但是用了iis之后网页一直不显示,设置啥端口都没用）</a></p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -2946,12 +2916,135 @@
       </tags>
   </entry>
   <entry>
+    <title>数值分析-- 误差</title>
+    <url>/2022/03/07/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-%E8%AF%AF%E5%B7%AE/</url>
+    <content><![CDATA[<h3 id="误差和误差限"><a href="#误差和误差限" class="headerlink" title="误差和误差限"></a>误差和误差限</h3><span id="more"></span>
+
+<p>设X* 为X的一个近似值（可大于X也可小于X），有e* =  X-X* ,称e* 为<strong>绝对误差</strong>，简称<strong>误差</strong>。</p>
+<p>易得出结论：当绝对误差大于0时，近似值大于真实值，称为<strong>强近似值</strong>；当绝对误差小于0时，近似值小于真实值，称为<strong>弱近似值</strong>。</p>
+<p>误差的绝对值不超过某个正数E* ，称这个正数E<em>为近似值的*<em>误差限</em></em> </p>
+<h3 id="相对误差和相对误差限"><a href="#相对误差和相对误差限" class="headerlink" title="相对误差和相对误差限"></a>相对误差和相对误差限</h3><p>**相对误差:*<em>指的是近似值e</em> 与真实值X的比值，称为e(r)*（右下角有个小r）</p>
+<p><strong>相对误差限：</strong>相对误差不能超过相对误差限E(r)* ，E(r)* =E* / |x*|</p>
+<h3 id="绝对误差的计算方法"><a href="#绝对误差的计算方法" class="headerlink" title="绝对误差的计算方法"></a>绝对误差的计算方法</h3><p><strong>注意：绝对误差限一定是一个单位的半个单位，如0.5，0.05，0.005，0.0005等等，那么换成科学计数法的形式就可以变成1/2 * 10^-p</strong></p>
+<p><strong>（其中p取正整数！）这时，-p就可以换成另一种表示方法，-p = m-n+1  （其中m是小数点离第一个非0数字的后一位有多远，如123.45的m就是2，而0.00123的m就是-3）（其中n是有几位有效数字如123.45就有5为有效数字，那么n就是5.）通常情况下都是知道了m和n要去求p的！！</strong></p>
+<p>例如“派”取近似值3.14，那么|3.14-“派”| = 0.0015926&lt;=0.005=1/2 * 10^-2，则绝对误差限就是1/2 * 10^-2</p>
+<h3 id="相对误差的计算方法"><a href="#相对误差的计算方法" class="headerlink" title="相对误差的计算方法"></a>相对误差的计算方法</h3><p>若近似值有n为有效数字，其中a是近似值的个位数。</p>
+<p>E(r)*&lt;=1/2a * 10^-(n-1)</p>
+<h3 id="误差估计中的重要公式"><a href="#误差估计中的重要公式" class="headerlink" title="误差估计中的重要公式"></a>误差估计中的重要公式</h3><p>E(x1* +- x2* ) = E(x1* ) +- E(x2*)</p>
+<p><em><em>E(x1</em> * x2</em> ) = |x1*| * E(x2*) + |x2 *| * E(x1 *)**这个公式在平常的运算中常常能用得上。</p>
+<p>E(x1* / x2* ) = |x1*| * E(x2*) + |x2 *| * E(x1 *) / |x2 *|^2    这是上面那一条的除法运算</p>
+<h3 id="误差中的规则"><a href="#误差中的规则" class="headerlink" title="误差中的规则"></a>误差中的规则</h3><p>1.要避免除数的绝对值远远小于被除数绝对值的除法</p>
+<p>2.避免出现有效数字少的相减如x=123.401,  y = 123.412  ，那么y-x =0.011只有两位有效数字。</p>
+<p>3.防止大数吃掉小数</p>
+<p>4.注意简化运算流程，简化运算步骤</p>
+]]></content>
+      <categories>
+        <category>数值分析</category>
+      </categories>
+      <tags>
+        <tag>数值分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构--基本概念</title>
+    <url>/2022/02/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[<h1 id="本章主要讲解数据结构和算法的基本概念，在文中标有-的是重点内容一定要熟记！"><a href="#本章主要讲解数据结构和算法的基本概念，在文中标有-的是重点内容一定要熟记！" class="headerlink" title="本章主要讲解数据结构和算法的基本概念，在文中标有*的是重点内容一定要熟记！"></a>本章主要讲解数据结构和算法的基本概念，在文中标有*的是重点内容一定要熟记！</h1><span id="more"></span>
+
+<h2 id="数据结构知识点"><a href="#数据结构知识点" class="headerlink" title="数据结构知识点"></a>数据结构知识点</h2><h3 id="数据结构考纲"><a href="#数据结构考纲" class="headerlink" title="数据结构考纲"></a>数据结构考纲</h3><h4 id="数据结构的三要素（考点）"><a href="#数据结构的三要素（考点）" class="headerlink" title="数据结构的三要素（考点）"></a>数据结构的三要素（考点）</h4><p>1.<em>逻辑结构：分为线性结构和非线性结构。*<em>线性结构：线性表，栈，队列；非线性结构：树，图，集合</em></em></p>
+<p>2.*存储结构（物理结构）</p>
+<p>3.数据的运算</p>
+<h4 id="数据结构的五个特征"><a href="#数据结构的五个特征" class="headerlink" title="数据结构的五个特征"></a>数据结构的五个特征</h4><p>有穷性，确定性，可行性，输入，输出</p>
+<h4 id="效率的度量（重点-考点）"><a href="#效率的度量（重点-考点）" class="headerlink" title="效率的度量（重点+考点）"></a>效率的度量（重点+考点）</h4><p><strong>时间复杂度</strong>*和空间复杂度（<strong>时间复杂度是重中之重，选择题大题都会出现</strong>）</p>
+<h2 id="数据结构知识点-1"><a href="#数据结构知识点-1" class="headerlink" title="数据结构知识点"></a>数据结构知识点</h2><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><p>1.数据：数据是<strong>信息的载体</strong>，是描述客观事物属性的数，字符及所有<strong>能输入到计算机中并被计算机程序识别</strong>和处理的符号集合。数据是计算机程序加工的原料。</p>
+<p>（1）数值型数据：整数，实数等</p>
+<p>（2）非数值型数据：符号，文字，图像，图形，声音等。其中文字，图像等可以通过编码的方式转换成为字符数据进行处理。</p>
+<p>2.数据元素：<strong>数据元素</strong>是数据的基本单位，通常作为一个整体考虑。也称为<strong>记录</strong>、<strong>顶点</strong>、<strong>结点</strong>。</p>
+<p>3.数据项：一个数据元素由若干个数据项组成，<strong>数据项</strong>是数据元素中不可分割的<strong>最小单位</strong>。</p>
+<p>4.数据结构：<strong>数据结构</strong>是数据相互之间存在<strong>一种或多种特定关系</strong>的数据元素的集合。 </p>
+<p>（1）<strong>逻辑结构</strong>：数据元素之间的逻辑关系</p>
+<p>​    <strong>a.线性结构</strong>：有且仅有一个开始和一个终端结点，并且所有节点最多只有一个之间前趋和一个直接后继。</p>
+<p>​                            例如：<strong>线性表（一对一）、栈、队列、串</strong></p>
+<p>​    <strong>b.非线性结构</strong>：一个结点可能有多个直接前趋和直接后继</p>
+<p>​                            例如：<strong>树（一对多）、图（多对多）</strong></p>
+<p>（2）<strong>物理结构</strong>（存储结构）：数据元素及其关系在计算机内存中的表示。</p>
+<p>​    <strong>a.顺序存储结构</strong>：用一组<strong>连续</strong>的存储单元<strong>依次</strong>存储数据元素，数据元素之间的逻辑关系由元素的<strong>存储位置</strong>来表示，C中用数组来实现顺序存储关系。<strong>方便查找。</strong></p>
+<p>​    <strong>b.链式存储结构</strong>：用任意的存储单元存储数据元素，数据元素之间的逻辑关系用<strong>指针</strong>表示，C用<strong>指针</strong>来实现链式存储结构。<strong>方便插入和删除。</strong></p>
+<p>​    <strong>c.索引存储结构</strong>：需建立附加的索引表，索引表中每一项称为索引项，一般形式为（关键字，地址）</p>
+<p>​    <strong>d.散列存储</strong>：根据关键字计算出结点的存储地址</p>
+<p>5.数据对象：<strong>数据对象</strong>是具有<strong>相同性质</strong>的<strong>数据元素</strong>的集合，是数据的一个子集。如整数的数据对象是集合N={1,2,3,…}</p>
+<p> 6.数据类型：是指一组性质相同的值的集合和定义在此集合上的一组操作的总称。</p>
+<p>（1）原子类型：是不可以再分解的基本类型，包括整型（int），实型，字符型（char）等</p>
+<p>（2）结构类型：由若干个类型组合而成，是可以再分解的。如整型数组是由若干个整型数据组成的</p>
+<p>7.抽象数据类型（ADT）：抽象数据类型可用三元组（D，S，P）表示，D是数据对象，S是D上的关系集，P是对D的基本操作集。</p>
+<p>​    抽象数据类型的标准格式如下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">ADT 抽象数据类型名</span><br><span class="line">    Data</span><br><span class="line">        数据元素之间逻辑关系的定义</span><br><span class="line">    Operation</span><br><span class="line">        操作<span class="number">1</span></span><br><span class="line">        	初始条件</span><br><span class="line">        	操作结果描述</span><br><span class="line">        操作<span class="number">2</span></span><br><span class="line">        	...</span><br><span class="line">        操作n</span><br><span class="line">        	...</span><br><span class="line">    endADT</span><br></pre></td></tr></table></figure>
+
+<p><strong>综上：数据&gt;数据对象&gt;数据元素&gt;数据项</strong></p>
+<h2 id="算法知识点"><a href="#算法知识点" class="headerlink" title="算法知识点"></a>算法知识点</h2><h3 id="算法的基本概念"><a href="#算法的基本概念" class="headerlink" title="算法的基本概念"></a>算法的基本概念</h3><p>1.<strong>算法的定义：</strong>算法是解决特定问题求解步骤的描述，在计算机中表现为指令的有限序列，并且，每条指令表示一个或多个操作。</p>
+<p>2.<strong>算法的特性：</strong>算法具有五个基本特性：<strong>输入</strong>，<strong>输出</strong>，<strong>有穷性</strong>，<strong>确定性</strong>，<strong>可行性</strong>。</p>
+<p>​    （1）输入和输出：算法具有<strong>零个或多个</strong>输入，尽管大部分的函数都需要有输入。算法至少需要<strong>一个或多个</strong>输出，输出的形式可以是打印输出也可以是返回一个或多个值。</p>
+<p>​    （2）有穷性：指算法在执行<strong>有限步骤</strong>之后，自动结束循环而不会出现无限循环，并且每个步骤在一个<strong>可接受的时间</strong>内。</p>
+<p>​    （3）确定性：算法的每一个步骤都有确定的含义，<strong>不会出现二义性</strong>。即相同的输入只能出现相同的输出。</p>
+<p>​    （4）可行性：算法的每一步都必须是<strong>可行</strong>的，即每一步都能够通过执行<strong>有限步骤</strong>完成。</p>
+<h3 id="算法设计的要求"><a href="#算法设计的要求" class="headerlink" title="算法设计的要求"></a>算法设计的要求</h3><p>1.<strong>正确性</strong>：算法的正确性是指算法至少应该具有输入，输出和加工处理无歧义性，能正确反映问题的需求、得到问题的正确答案。</p>
+<p>正确性的要求分为以下四点，按照难度依次递增：    </p>
+<p>（1）算法程序没有语法错误。</p>
+<p>（2）算法程序对于合法的输入能够产生符合其要求的结果。</p>
+<p>（3）算法程序对于非法的输入数据能得出满足规格说明的结果。</p>
+<p>（4）算法程序对于精心选择的，甚至刁难的程序都有满足要求的输出结果。</p>
+<p>2.<strong>可读性</strong>：算法设计的另一目的是为了便于阅读、理解和交流。为了让别人看得懂啊。</p>
+<p>3.<strong>健壮性</strong>（处理异常问题的能力）：当输入数据不合法时，算法也能做出相关的处理，而不是产生异常或莫名其妙的结果。</p>
+<p>4.<strong>时间效率高和存储量低</strong>：设计算法应该尽量满足时间效率和存储量低的需求。</p>
+<h3 id="算法效率的度量方法"><a href="#算法效率的度量方法" class="headerlink" title="算法效率的度量方法"></a>算法效率的度量方法</h3><p>1.事后统计方法：利用计算机的计时器功能，对算法的运行时间进行对比，从而得出算法效率的高低。</p>
+<p>2.事前分析估计方法：在计算机程序编制之前，依据统计方法对算法进行估算。</p>
+<p>​    下面我们来对比1+2+3+…+100的两种算法：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//算法一</span></span><br><span class="line"><span class="type">int</span> i,sum=<span class="number">0</span>,n=<span class="number">100</span>;			<span class="comment">//执行1次</span></span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)&#123;			<span class="comment">//执行n+1次</span></span><br><span class="line">    sum = sum + i;			<span class="comment">//执行n次</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,sum)			<span class="comment">//执行一次</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//一共执行了1+(n+1)+n+1 = 2n+3次，即n次</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//算法二</span></span><br><span class="line"><span class="type">int</span> sum = <span class="number">0</span>,n = <span class="number">100</span>;		<span class="comment">//执行一次</span></span><br><span class="line">sum = (<span class="number">1</span>+n)*n/<span class="number">2</span>;			<span class="comment">//执行一次</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,sum);			<span class="comment">//执行一次</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//执行了三次，即1次</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="算法中函数的渐近增长（重点！）"><a href="#算法中函数的渐近增长（重点！）" class="headerlink" title="算法中函数的渐近增长（重点！）"></a>算法中函数的渐近增长（重点！）</h3><p>定义：给定两个函数f(n)和g(n)，如果存在一个整数N，使得所有的n&gt;N，f(n)总是比g(n)大，那么我们说f(n)的增长渐近快于g(n).</p>
+<p>对于算法A：2n^2+n 和 算法B：n^3+n^2 我们只需要看最高次幂的幂数，连与最高次项相乘的常数都不重要！</p>
+<p><strong>综上可知：判断一个算法的效率时，我们只需观察最高阶项，而函数中的常数和其他次要项往往可以忽略不计！</strong></p>
+<h3 id="算法的时间复杂度"><a href="#算法的时间复杂度" class="headerlink" title="算法的时间复杂度"></a>算法的时间复杂度</h3><p>使用O（）来体现算法时间复杂度的记法。</p>
+<p>推导大O阶：</p>
+<p>1.用常数1取代运行时间中的所有加法常数。</p>
+<p>2.在修改后的运行次数函数中，只保留最高阶项。</p>
+<p>3.如果最高阶项存在且不是1，则去除与这个项相乘的常数。</p>
+<p><strong>得到的结果就是大O阶！</strong></p>
+<h4 id="常数阶"><a href="#常数阶" class="headerlink" title="常数阶"></a>常数阶</h4><p>常数阶不论运行了10次20次100次都只能记作O(1)不能记作O(3)O(10)，初学者常常犯这样的错误</p>
+<p><strong>对于分支结构而言，无论是真是假，时间复杂度都是O(1)</strong></p>
+<h4 id="线性阶"><a href="#线性阶" class="headerlink" title="线性阶"></a>线性阶</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//线性阶的时间复杂度时O(n)</span></span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="对数阶"><a href="#对数阶" class="headerlink" title="对数阶"></a>对数阶</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> count = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(count&lt;n)&#123;</span><br><span class="line">	count = count * <span class="number">2</span>;			<span class="comment">//因为2^x=n，所以x=log2(n),即O(logn)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="平方阶"><a href="#平方阶" class="headerlink" title="平方阶"></a>平方阶</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">#平方阶的时间复杂度是O(n^<span class="number">2</span>)</span><br><span class="line"><span class="type">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++)&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//一个比较常见的时间复杂度判断</span></span><br><span class="line"><span class="type">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(j=i;j&lt;n;j++)&#123;		<span class="comment">//当i=0，执行n次，当i=1，执行n-1次...总执行次数是等差数列求和问题，n(n+1)/2=n^2/2 + n/2,所以O(n^2).</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="数列知识点（做题的基础）"><a href="#数列知识点（做题的基础）" class="headerlink" title="数列知识点（做题的基础）"></a>数列知识点（做题的基础）</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//等差数列的计算：前n项和等于n(n+1)/2</span></span><br><span class="line"><span class="comment">//等比数列的前n项和：(a1-an*q)/(1-q)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="时间复杂度所耗费的时间"><a href="#时间复杂度所耗费的时间" class="headerlink" title="时间复杂度所耗费的时间"></a>时间复杂度所耗费的时间</h4><p>O(1)&lt;O(log n)&lt;O(n)&lt;O(n*log n)&lt;O(n^2)&lt;O(n^3)&lt;O(2^n)&lt;O(n!)&lt;O(n^n)</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>要做好大O阶时间复杂度的题目，要学好数列的相关知识</p>
+<h3 id="算法的空间复杂度"><a href="#算法的空间复杂度" class="headerlink" title="算法的空间复杂度"></a>算法的空间复杂度</h3><p>算法空间复杂度的计算公式为S(n) = O(f(n))，其中n为问题的规模，f(n)是n所占存储空间的函数。</p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构--图论</title>
     <url>/2022/08/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%BE%E8%AE%BA/</url>
     <content><![CDATA[<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>1.定义：Graph是由顶点的有穷非空集合和顶点之间的边构成，表示为G（V，E），G表示一个图，V是图G中顶点的集合，E也是G中边的集合。</p>
 <p>2.线性表中的元素；树中结点；图中结点</p>
 <p>3.不允许图中不存在顶点，即G（V，E）中的V是有穷非空的</p>
 <p>4.图中任意两个顶点都可能有关系，顶点之间的逻辑关系用边来表示</p>
+<span id="more"></span>
+
 <h2 id="各种图的定义"><a href="#各种图的定义" class="headerlink" title="各种图的定义"></a>各种图的定义</h2><p>1.无向边，无向图：V0和V1两个顶点之间没有方向，称V0和V1为无向边，可表示为（V0，V1），也可以表示为(V1,V0)，如果途中所有的边都是无向边，那么称这个图为无向图。</p>
 <p>2.有向边：A，B有方向（A指向B，A-&gt;B），那么用&lt; A -&gt; B &gt;来表示，有向边A，B，A是弧尾，B是弧头</p>
 <p>3.简单图：不出现顶点到其他自身的边（A指向A自己），且同一条边不从夫出现时（A指向B，B也指向A），称图为简单图。</p>
@@ -3076,238 +3169,6 @@
 <p>8.关键路径的算法代码</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">CriticalPath</span><span class="params">(GraphAdjList GL)</span>&#123;</span><br><span class="line">    EdgeNode *e;</span><br><span class="line">    <span class="type">int</span> i,gettop,k,j;</span><br><span class="line">    <span class="type">int</span> ete,lte;</span><br><span class="line">    TopologicalSort(GL);</span><br><span class="line">    ltv=(<span class="type">int</span>*)<span class="built_in">malloc</span>(GL-&gt;numVertexes*<span class="keyword">sizeof</span>(<span class="type">int</span>));</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;GL-&gt;numVertexes;i++)</span><br><span class="line">        ltv[i]=etv[GL-&gt;numVertexes<span class="number">-1</span>];<span class="comment">//初始化ltv</span></span><br><span class="line">    <span class="keyword">while</span>(top2!=<span class="number">0</span>)&#123;<span class="comment">//计算ltv</span></span><br><span class="line">    	gettop=stack2[top2--];<span class="comment">//将拓扑序列出栈</span></span><br><span class="line">        <span class="keyword">for</span>(e=GL-&gt;adjList[gettop].firstedge;e;e=e-&gt;next)&#123;</span><br><span class="line">			k=e-&gt;adjvex;</span><br><span class="line">            <span class="keyword">if</span>(ltv[k]-e-&gt;weight&lt;ltv[gettop])</span><br><span class="line">                ltv[gettop]=ltv[k]-e-&gt;weight;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;GL-&gt;numVertexes;j++)</span><br><span class="line">        <span class="keyword">for</span>(e=GL-&gt;adjList[j].firstedge;e;e=e-&gt;next)&#123;</span><br><span class="line">			k=e-&gt;adjvex;</span><br><span class="line">            ete=etv[j];</span><br><span class="line">            lte=ltv[k]-e-&gt;weight;</span><br><span class="line">            <span class="keyword">if</span>(ete==lte)</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;&lt;v%d,v%d&gt;length:%d&quot;</span>,GL-&gt;adjList[j].data,GL-&gt;adjList[k].data,e-&gt;weight);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构--基本概念</title>
-    <url>/2022/02/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
-    <content><![CDATA[<h1 id="本章主要讲解数据结构和算法的基本概念，在文中标有-的是重点内容一定要熟记！"><a href="#本章主要讲解数据结构和算法的基本概念，在文中标有-的是重点内容一定要熟记！" class="headerlink" title="本章主要讲解数据结构和算法的基本概念，在文中标有*的是重点内容一定要熟记！"></a>本章主要讲解数据结构和算法的基本概念，在文中标有*的是重点内容一定要熟记！</h1><span id="more"></span>
-
-<h2 id="数据结构知识点"><a href="#数据结构知识点" class="headerlink" title="数据结构知识点"></a>数据结构知识点</h2><h3 id="数据结构考纲"><a href="#数据结构考纲" class="headerlink" title="数据结构考纲"></a>数据结构考纲</h3><h4 id="数据结构的三要素（考点）"><a href="#数据结构的三要素（考点）" class="headerlink" title="数据结构的三要素（考点）"></a>数据结构的三要素（考点）</h4><p>1.<em>逻辑结构：分为线性结构和非线性结构。*<em>线性结构：线性表，栈，队列；非线性结构：树，图，集合</em></em></p>
-<p>2.*存储结构（物理结构）</p>
-<p>3.数据的运算</p>
-<h4 id="数据结构的五个特征"><a href="#数据结构的五个特征" class="headerlink" title="数据结构的五个特征"></a>数据结构的五个特征</h4><p>有穷性，确定性，可行性，输入，输出</p>
-<h4 id="效率的度量（重点-考点）"><a href="#效率的度量（重点-考点）" class="headerlink" title="效率的度量（重点+考点）"></a>效率的度量（重点+考点）</h4><p><strong>时间复杂度</strong>*和空间复杂度（<strong>时间复杂度是重中之重，选择题大题都会出现</strong>）</p>
-<h2 id="数据结构知识点-1"><a href="#数据结构知识点-1" class="headerlink" title="数据结构知识点"></a>数据结构知识点</h2><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><p>1.数据：数据是<strong>信息的载体</strong>，是描述客观事物属性的数，字符及所有<strong>能输入到计算机中并被计算机程序识别</strong>和处理的符号集合。数据是计算机程序加工的原料。</p>
-<p>（1）数值型数据：整数，实数等</p>
-<p>（2）非数值型数据：符号，文字，图像，图形，声音等。其中文字，图像等可以通过编码的方式转换成为字符数据进行处理。</p>
-<p>2.数据元素：<strong>数据元素</strong>是数据的基本单位，通常作为一个整体考虑。也称为<strong>记录</strong>、<strong>顶点</strong>、<strong>结点</strong>。</p>
-<p>3.数据项：一个数据元素由若干个数据项组成，<strong>数据项</strong>是数据元素中不可分割的<strong>最小单位</strong>。</p>
-<p>4.数据结构：<strong>数据结构</strong>是数据相互之间存在<strong>一种或多种特定关系</strong>的数据元素的集合。 </p>
-<p>（1）<strong>逻辑结构</strong>：数据元素之间的逻辑关系</p>
-<p>​    <strong>a.线性结构</strong>：有且仅有一个开始和一个终端结点，并且所有节点最多只有一个之间前趋和一个直接后继。</p>
-<p>​                            例如：<strong>线性表（一对一）、栈、队列、串</strong></p>
-<p>​    <strong>b.非线性结构</strong>：一个结点可能有多个直接前趋和直接后继</p>
-<p>​                            例如：<strong>树（一对多）、图（多对多）</strong></p>
-<p>（2）<strong>物理结构</strong>（存储结构）：数据元素及其关系在计算机内存中的表示。</p>
-<p>​    <strong>a.顺序存储结构</strong>：用一组<strong>连续</strong>的存储单元<strong>依次</strong>存储数据元素，数据元素之间的逻辑关系由元素的<strong>存储位置</strong>来表示，C中用数组来实现顺序存储关系。<strong>方便查找。</strong></p>
-<p>​    <strong>b.链式存储结构</strong>：用任意的存储单元存储数据元素，数据元素之间的逻辑关系用<strong>指针</strong>表示，C用<strong>指针</strong>来实现链式存储结构。<strong>方便插入和删除。</strong></p>
-<p>​    <strong>c.索引存储结构</strong>：需建立附加的索引表，索引表中每一项称为索引项，一般形式为（关键字，地址）</p>
-<p>​    <strong>d.散列存储</strong>：根据关键字计算出结点的存储地址</p>
-<p>5.数据对象：<strong>数据对象</strong>是具有<strong>相同性质</strong>的<strong>数据元素</strong>的集合，是数据的一个子集。如整数的数据对象是集合N={1,2,3,…}</p>
-<p> 6.数据类型：是指一组性质相同的值的集合和定义在此集合上的一组操作的总称。</p>
-<p>（1）原子类型：是不可以再分解的基本类型，包括整型（int），实型，字符型（char）等</p>
-<p>（2）结构类型：由若干个类型组合而成，是可以再分解的。如整型数组是由若干个整型数据组成的</p>
-<p>7.抽象数据类型（ADT）：抽象数据类型可用三元组（D，S，P）表示，D是数据对象，S是D上的关系集，P是对D的基本操作集。</p>
-<p>​    抽象数据类型的标准格式如下：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">ADT 抽象数据类型名</span><br><span class="line">    Data</span><br><span class="line">        数据元素之间逻辑关系的定义</span><br><span class="line">    Operation</span><br><span class="line">        操作<span class="number">1</span></span><br><span class="line">        	初始条件</span><br><span class="line">        	操作结果描述</span><br><span class="line">        操作<span class="number">2</span></span><br><span class="line">        	...</span><br><span class="line">        操作n</span><br><span class="line">        	...</span><br><span class="line">    endADT</span><br></pre></td></tr></table></figure>
-
-<p><strong>综上：数据&gt;数据对象&gt;数据元素&gt;数据项</strong></p>
-<h2 id="算法知识点"><a href="#算法知识点" class="headerlink" title="算法知识点"></a>算法知识点</h2><h3 id="算法的基本概念"><a href="#算法的基本概念" class="headerlink" title="算法的基本概念"></a>算法的基本概念</h3><p>1.<strong>算法的定义：</strong>算法是解决特定问题求解步骤的描述，在计算机中表现为指令的有限序列，并且，每条指令表示一个或多个操作。</p>
-<p>2.<strong>算法的特性：</strong>算法具有五个基本特性：<strong>输入</strong>，<strong>输出</strong>，<strong>有穷性</strong>，<strong>确定性</strong>，<strong>可行性</strong>。</p>
-<p>​    （1）输入和输出：算法具有<strong>零个或多个</strong>输入，尽管大部分的函数都需要有输入。算法至少需要<strong>一个或多个</strong>输出，输出的形式可以是打印输出也可以是返回一个或多个值。</p>
-<p>​    （2）有穷性：指算法在执行<strong>有限步骤</strong>之后，自动结束循环而不会出现无限循环，并且每个步骤在一个<strong>可接受的时间</strong>内。</p>
-<p>​    （3）确定性：算法的每一个步骤都有确定的含义，<strong>不会出现二义性</strong>。即相同的输入只能出现相同的输出。</p>
-<p>​    （4）可行性：算法的每一步都必须是<strong>可行</strong>的，即每一步都能够通过执行<strong>有限步骤</strong>完成。</p>
-<h3 id="算法设计的要求"><a href="#算法设计的要求" class="headerlink" title="算法设计的要求"></a>算法设计的要求</h3><p>1.<strong>正确性</strong>：算法的正确性是指算法至少应该具有输入，输出和加工处理无歧义性，能正确反映问题的需求、得到问题的正确答案。</p>
-<p>正确性的要求分为以下四点，按照难度依次递增：    </p>
-<p>（1）算法程序没有语法错误。</p>
-<p>（2）算法程序对于合法的输入能够产生符合其要求的结果。</p>
-<p>（3）算法程序对于非法的输入数据能得出满足规格说明的结果。</p>
-<p>（4）算法程序对于精心选择的，甚至刁难的程序都有满足要求的输出结果。</p>
-<p>2.<strong>可读性</strong>：算法设计的另一目的是为了便于阅读、理解和交流。为了让别人看得懂啊。</p>
-<p>3.<strong>健壮性</strong>（处理异常问题的能力）：当输入数据不合法时，算法也能做出相关的处理，而不是产生异常或莫名其妙的结果。</p>
-<p>4.<strong>时间效率高和存储量低</strong>：设计算法应该尽量满足时间效率和存储量低的需求。</p>
-<h3 id="算法效率的度量方法"><a href="#算法效率的度量方法" class="headerlink" title="算法效率的度量方法"></a>算法效率的度量方法</h3><p>1.事后统计方法：利用计算机的计时器功能，对算法的运行时间进行对比，从而得出算法效率的高低。</p>
-<p>2.事前分析估计方法：在计算机程序编制之前，依据统计方法对算法进行估算。</p>
-<p>​    下面我们来对比1+2+3+…+100的两种算法：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//算法一</span></span><br><span class="line"><span class="type">int</span> i,sum=<span class="number">0</span>,n=<span class="number">100</span>;			<span class="comment">//执行1次</span></span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)&#123;			<span class="comment">//执行n+1次</span></span><br><span class="line">    sum = sum + i;			<span class="comment">//执行n次</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,sum)			<span class="comment">//执行一次</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//一共执行了1+(n+1)+n+1 = 2n+3次，即n次</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//算法二</span></span><br><span class="line"><span class="type">int</span> sum = <span class="number">0</span>,n = <span class="number">100</span>;		<span class="comment">//执行一次</span></span><br><span class="line">sum = (<span class="number">1</span>+n)*n/<span class="number">2</span>;			<span class="comment">//执行一次</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,sum);			<span class="comment">//执行一次</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//执行了三次，即1次</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="算法中函数的渐近增长（重点！）"><a href="#算法中函数的渐近增长（重点！）" class="headerlink" title="算法中函数的渐近增长（重点！）"></a>算法中函数的渐近增长（重点！）</h3><p>定义：给定两个函数f(n)和g(n)，如果存在一个整数N，使得所有的n&gt;N，f(n)总是比g(n)大，那么我们说f(n)的增长渐近快于g(n).</p>
-<p>对于算法A：2n^2+n 和 算法B：n^3+n^2 我们只需要看最高次幂的幂数，连与最高次项相乘的常数都不重要！</p>
-<p><strong>综上可知：判断一个算法的效率时，我们只需观察最高阶项，而函数中的常数和其他次要项往往可以忽略不计！</strong></p>
-<h3 id="算法的时间复杂度"><a href="#算法的时间复杂度" class="headerlink" title="算法的时间复杂度"></a>算法的时间复杂度</h3><p>使用O（）来体现算法时间复杂度的记法。</p>
-<p>推导大O阶：</p>
-<p>1.用常数1取代运行时间中的所有加法常数。</p>
-<p>2.在修改后的运行次数函数中，只保留最高阶项。</p>
-<p>3.如果最高阶项存在且不是1，则去除与这个项相乘的常数。</p>
-<p><strong>得到的结果就是大O阶！</strong></p>
-<h4 id="常数阶"><a href="#常数阶" class="headerlink" title="常数阶"></a>常数阶</h4><p>常数阶不论运行了10次20次100次都只能记作O(1)不能记作O(3)O(10)，初学者常常犯这样的错误</p>
-<p><strong>对于分支结构而言，无论是真是假，时间复杂度都是O(1)</strong></p>
-<h4 id="线性阶"><a href="#线性阶" class="headerlink" title="线性阶"></a>线性阶</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//线性阶的时间复杂度时O(n)</span></span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="对数阶"><a href="#对数阶" class="headerlink" title="对数阶"></a>对数阶</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> count = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(count&lt;n)&#123;</span><br><span class="line">	count = count * <span class="number">2</span>;			<span class="comment">//因为2^x=n，所以x=log2(n),即O(logn)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="平方阶"><a href="#平方阶" class="headerlink" title="平方阶"></a>平方阶</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">#平方阶的时间复杂度是O(n^<span class="number">2</span>)</span><br><span class="line"><span class="type">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++)&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//一个比较常见的时间复杂度判断</span></span><br><span class="line"><span class="type">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(j=i;j&lt;n;j++)&#123;		<span class="comment">//当i=0，执行n次，当i=1，执行n-1次...总执行次数是等差数列求和问题，n(n+1)/2=n^2/2 + n/2,所以O(n^2).</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="数列知识点（做题的基础）"><a href="#数列知识点（做题的基础）" class="headerlink" title="数列知识点（做题的基础）"></a>数列知识点（做题的基础）</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//等差数列的计算：前n项和等于n(n+1)/2</span></span><br><span class="line"><span class="comment">//等比数列的前n项和：(a1-an*q)/(1-q)</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="时间复杂度所耗费的时间"><a href="#时间复杂度所耗费的时间" class="headerlink" title="时间复杂度所耗费的时间"></a>时间复杂度所耗费的时间</h4><p>O(1)&lt;O(log n)&lt;O(n)&lt;O(n*log n)&lt;O(n^2)&lt;O(n^3)&lt;O(2^n)&lt;O(n!)&lt;O(n^n)</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>要做好大O阶时间复杂度的题目，要学好数列的相关知识</p>
-<h3 id="算法的空间复杂度"><a href="#算法的空间复杂度" class="headerlink" title="算法的空间复杂度"></a>算法的空间复杂度</h3><p>算法空间复杂度的计算公式为S(n) = O(f(n))，其中n为问题的规模，f(n)是n所占存储空间的函数。</p>
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构--树</title>
-    <url>/2022/07/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<p>1.树有n个结点，当n大于1时，其余结点可以分为m个互不相交的有限集。</p>
-<p>2.n大于0时，根节点是唯一的；</p>
-<p>   m大于0时，字数个数无限制，但一定是互不相交的。</p>
-<p>3.结点拥有的子叶数称为结点的度degree，度为0称为终端节点，度不为零称为分支节点，树的度是树内各个结点的度的max值</p>
-<p>4.结点的祖先是从根到该结点所经分支上的所有结点，</p>
-<p>​    同理，以某结点为根的子树的任一结点都为该结点的子孙。</p>
-<p>5.双亲在同一层的结点称为堂兄弟。</p>
-<p>6.森林（forest）是n棵互不相交的树的集合</p>
-<p>7.树的抽象数据结构</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">ADT Tree</span><br><span class="line">Data</span><br><span class="line">    树是由一个根节点和若干棵子树构成</span><br><span class="line">Operation</span><br><span class="line">    <span class="title function_">InitTree</span><span class="params">(*T)</span>:构造空树T</span><br><span class="line">    <span class="title function_">DestoryTree</span><span class="params">(*T)</span>:摧毁树T</span><br><span class="line">    <span class="title function_">CreateTree</span><span class="params">(*T,definition)</span>:按照definition定义的树来构造树T</span><br><span class="line">    <span class="title function_">ClearTree</span><span class="params">(*T)</span>:若树T存在，清空树T</span><br><span class="line">    <span class="title function_">TreeEmpty</span><span class="params">(T)</span>:若树T为空树，返回1，若不为空树，返回0</span><br><span class="line">    <span class="title function_">TreeDepth</span><span class="params">(T)</span>:返回树的深度</span><br><span class="line">    <span class="title function_">Root</span><span class="params">(T)</span>:返回T的根结点</span><br><span class="line">    <span class="title function_">Value</span><span class="params">(T,cur_e)</span>:cur_e是树T的一个结点,返回cur_e值</span><br><span class="line">    <span class="title function_">Assign</span><span class="params">(T,cur_e,value)</span>:cur_e是树T的一个结点cur_e赋值为value</span><br><span class="line">    <span class="title function_">Parent</span><span class="params">(T,cur_e)</span>:若cur_e是树T非根结点，返回双亲</span><br><span class="line">    <span class="title function_">LeftChild</span><span class="params">(T,cur_e)</span>:返回cur_e左孩子</span><br><span class="line">    <span class="title function_">RightSibling</span><span class="params">(T,cur_e)</span>:返回cur_e的右兄弟</span><br><span class="line">    <span class="title function_">InsertChild</span><span class="params">(*T,*p,i,c)</span>:插入c为树T中p所指结点第i个子树</span><br><span class="line">    <span class="title function_">DeleteChild</span><span class="params">(*T,*p,i)</span>:删除T中p所指第i个子树</span><br><span class="line">    endADT</span><br></pre></td></tr></table></figure>
-
-<h2 id="树的存储结构"><a href="#树的存储结构" class="headerlink" title="树的存储结构"></a>树的存储结构</h2><h3 id="双亲表示法"><a href="#双亲表示法" class="headerlink" title="双亲表示法"></a>双亲表示法</h3><p>1.每个结点，不一定有孩子，但一定有且仅有一个双亲</p>
-<p>2.定义双亲结点</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAXSIZE 200</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> PTElemType;</span><br><span class="line"><span class="type">int</span> <span class="class"><span class="keyword">struct</span> <span class="title">PTNode</span>&#123;</span><span class="comment">//PTNode相当于ParentNode</span></span><br><span class="line">    PTElemType data;</span><br><span class="line">    <span class="type">int</span> parent;<span class="comment">//结点，双亲位置</span></span><br><span class="line">&#125;PTNode;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    PTNode node[MAXSIZE];<span class="comment">//结点数组</span></span><br><span class="line">    <span class="type">int</span> r,n;<span class="comment">//根的位置r和结点数n</span></span><br><span class="line">&#125;PTree;</span><br></pre></td></tr></table></figure>
-
-<p><strong>只要双亲相等，那么int parent相等（即同一行的元素的parent结点相等）通常把根节点的parent值设置为-1</strong></p>
-<p>3.长子域：每个结点，若是存在长子（最左边的孩子），那么记录下它的下标，放入firstchild，否则记录-1</p>
-<p>4.右兄弟域：每一个结点如果存在右兄弟，那么记录下右兄弟的下标，没有则记录-1，录进rightsib</p>
-<h3 id="孩子表示法"><a href="#孩子表示法" class="headerlink" title="孩子表示法"></a>孩子表示法</h3><p>1.每个结点有多个指针域，每个指针指向一棵子树的根节点，这种方法叫做多重链表表示法</p>
-<p>2.指针域的个数等于树的度 data child1 child2 child3</p>
-<p>   其中n是树的度，一个结点有几个孩子就有几个指针</p>
-<p>3.孩子表示法：对于每个结点的孩子结点都创建一个链表，则n个结点有n个链表，有孩子结点的放到一列:data firstchild</p>
-<p>​    <strong>没有孩子的结点</strong>放在<strong>有孩子结点</strong>的后面，名为child next ，next指向他的兄弟</p>
-<p>孩子表示法结构定义</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_Tree_SIZE 200</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">CTNode</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> child;<span class="comment">//数据域</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">CTNode</span> *<span class="title">next</span>;</span><span class="comment">//定义结点</span></span><br><span class="line">&#125;*childPtr;<span class="comment">//表示结点要靠他</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    TElemType data;\</span><br><span class="line">    ChildPtr firstchild;</span><br><span class="line">&#125;CTBox;<span class="comment">//表头</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    CTBox nodes[MAX_Tree_SIZE];</span><br><span class="line">    <span class="type">int</span> r,n;<span class="comment">//根位置和结点数</span></span><br><span class="line">&#125;CTree;</span><br></pre></td></tr></table></figure>
-
-<p>三、孩子兄弟表示法</p>
-<p>​    因为长子唯一，且右兄弟结点唯一，那么设计两个指针，分别指向该节点的第一个孩子和此结点的兄弟，若有其一不存在，用NULL（^）表示</p>
-<p> data firstchild rightsib</p>
-<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>1.定义：二叉树是n个结点组成的有限集合</p>
-<p>2.特点：每个结点最多有两颗子树，所以Node的度小于等于2</p>
-<p>​             左右子树是有顺序的，不可以颠倒</p>
-<p>3.二叉树有5种基本形态：空二叉树，只有一个根节点，根节点有左子树，根节点有右子树，既有左子树也有右子树。</p>
-<p>4.特殊的二叉树： a 只有左子树的二叉树叫做左斜树</p>
-<p>​                           b 只有右孩子的二叉树的二叉树叫做右斜树</p>
-<p>5 满二叉树的特点：</p>
-<p>​    a.叶子只能出现在最下层，出现在其他层不行</p>
-<p>​    b.非叶子结点的度是2</p>
-<p>​    c.同样深度的二叉树中，满二叉树的节点最多</p>
-<p>6.完全二叉树</p>
-<p>   在满二叉树的条件下，保持所有节点位置不变，只减少数量</p>
-<p>​    满二叉树一定是完全二叉树，完全二叉树不一定是满二叉树，<strong>不能出现编号空档</strong></p>
-<h3 id="二叉树的性质"><a href="#二叉树的性质" class="headerlink" title="二叉树的性质"></a>二叉树的性质</h3><p>1.在二叉树的第i层至多有2的i-1次方个结点（i&gt;1）</p>
-<p>2.深度为k的二叉树至多有2的k-1次方个结点</p>
-<p>3.对于二叉树T，若子叶结点数为n0，度为2的结点数n2，那么n0=n2+1；</p>
-<p>4.具有n个结点的完全二叉树深度为log2n + 1（其中log2n向下取整），</p>
-<p>5.对于一棵有n个结点的完全二叉树（深度为log2n+1（同样log2n向下取整））的结点按顺序编号，对于任一结点i（1&lt;=i&lt;=n都有）：</p>
-<p>​    a.如果i=1，i是二叉树的根，无双亲，若i&gt;1，则双亲是结点i/2（向下取整）</p>
-<p>​    b.如果2i&gt;n，则i无左孩子，i是叶子结点，否则左孩子是2i</p>
-<p>​    c.如果2i+1&gt;n，则i无右孩子，否则右孩子是2i+1</p>
-<p>6.对于n个结点的二叉树，二叉链表中有2n个指针，其中n-1个指针指向孩子结点，同样有n-1个指针指向双亲结点。</p>
-<h3 id="二叉树的存储结构"><a href="#二叉树的存储结构" class="headerlink" title="二叉树的存储结构"></a>二叉树的存储结构</h3><p>一、树的顺序存储结构</p>
-<p>1.用一维数组存储二叉树的结点</p>
-<p><strong>数据</strong> A B C D E F G H </p>
-<p><strong>下标</strong> 1 2 3  4 5 6  7 8</p>
-<p>对于一般的二叉树，下标不用变，只需要把不存在的节点变为^即可</p>
-<p>2.但是这和存储方式在一般的树中会造成很大的空间浪费，所以只适用于完全二叉树</p>
-<p>二、二叉链表</p>
-<p>1.二叉链表是有两个指针的，一个指向左孩子，一个指向右孩子</p>
-<p> lchild data rchild</p>
-<p>2.二叉链表的结构定义</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></span><br><span class="line">	TElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span><span class="comment">//左右孩子指针</span></span><br><span class="line">&#125;BiTNode,BiTree;</span><br></pre></td></tr></table></figure>
-
-<h3 id="遍历二叉树"><a href="#遍历二叉树" class="headerlink" title="遍历二叉树"></a>遍历二叉树</h3><p>一、定义：从根节点出发，按照某种次序依次访问二叉树的所有结点，使得每个结点被访问一次且仅被访问一次。</p>
-<p>二、遍历方法：</p>
-<h4 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h4><p>先前序遍历左子树，再前序遍历后子树</p>
-<p>算法：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">PreOrderTraverse</span><span class="params">(BiTree T)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T==<span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,T-&gt;data);<span class="comment">//显示结点数据</span></span><br><span class="line">    PreOrderTraverse(T-&gt;lchild);<span class="comment">//先遍历左子树</span></span><br><span class="line">    PreOrderTraverse(T-&gt;rchild);<span class="comment">//再遍历右子树</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h4><p>算法:</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">InOrderTraverse</span><span class="params">(BiTree T)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(T==<span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> ;<span class="comment">//返回空</span></span><br><span class="line">    InOrderTraverse(T-&gt;lchild);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,T-&gt;data);</span><br><span class="line">    InorderTraverse(T-&gt;rchild);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h4><p>算法：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">TailOrderTraverse</span><span class="params">(BiTree T)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T==<span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    TailOrderTraverse(T-&gt;lchild);</span><br><span class="line">    TailOrderTraverse(T-&gt;rchild);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,T-&gt;data);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>注意：后序遍历在回退的时候，不能直接打印，要看该结点是否有右节点，如果有要先遍历到右节点再打印</p>
-<h4 id="根据已知顺序推导"><a href="#根据已知顺序推导" class="headerlink" title="根据已知顺序推导"></a>根据已知顺序推导</h4><p>已知前序/后序和中序可以推导整棵树</p>
-<p>已知前序和后序无法推导中序</p>
-<h3 id="二叉树的建立"><a href="#二叉树的建立" class="headerlink" title="二叉树的建立"></a>二叉树的建立</h3><p>1.拓展二叉树，对于每个结点的空的孩子都建立一个虚结点#；</p>
-<p>2.生成二叉树算法：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">CreateBiTree</span><span class="params">(BiTree *T)</span>&#123;</span><br><span class="line">    TElemType ch;<span class="comment">//键盘输入</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>,ch);</span><br><span class="line">    <span class="keyword">if</span>(ch==<span class="string">&#x27;#&#x27;</span>)<span class="comment">//如果键盘输入为0</span></span><br><span class="line">        *T=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        *T=(BiTree)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(BiTNode));<span class="comment">//给T赋予内存</span></span><br><span class="line">        <span class="keyword">if</span>(!*T)<span class="comment">//即当T等于NULL的时候</span></span><br><span class="line">            <span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">        (*T)-&gt;data=ch;<span class="comment">//生成结点</span></span><br><span class="line">        CreateBiTree(&amp;(*T)-&gt;lchild);<span class="comment">//递归，生成左孩子</span></span><br><span class="line">        CreateBiTree(&amp;(*T)-&gt;rchild);<span class="comment">//递归，生成右孩子</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="线索二叉树"><a href="#线索二叉树" class="headerlink" title="线索二叉树"></a>线索二叉树</h2><p>1.把指向前去和后继指针称为线索，加上线索的二叉链表称为线索二叉树（Threaded Binary Tree）</p>
-<p>2.增加布尔类型的标志域放在指针中</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">lchild ltag data rtag rchild</span><br><span class="line"><span class="comment">//当ltag=0，指向左孩子，当ltag=1，指向前驱</span></span><br><span class="line"><span class="comment">//当rtag=0，指向右孩子，当rtag=1，指向后继</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>注意：是在二叉树中空闲的指针才会用来指向前驱和后继，不能影响正常的左右孩子的表达</strong></p>
-<p>3.线索二叉树的结构实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span>&#123;</span>Link,Thread&#125; PointerTag;</span><br><span class="line"><span class="comment">//Link=0表示指向左右孩子结点，Thread==1表示指向前驱后继结点</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiThrNode</span>&#123;</span><span class="comment">//二叉树线索存储结点</span></span><br><span class="line">    TElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiThrNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">    PointTag LTag;</span><br><span class="line">    PointTag RTag;</span><br><span class="line">&#125;BiThrNode,*BiThrTree;<span class="comment">//线索树</span></span><br></pre></td></tr></table></figure>
-
-<p>4.线索化就是在遍历的过程中，一遍遍历一边修改空指针。</p>
-<p>5.中序遍历线索化</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">BiThrTree pre;<span class="comment">//指向刚访问过的节点</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">InThreading</span><span class="params">(BiTheTree p&#123;</span></span><br><span class="line"><span class="params">	<span class="keyword">if</span>(p)&#123;</span></span><br><span class="line"><span class="params">        InThreading(p-&gt;lchild);<span class="comment">//递归左子树线索化</span></span></span><br><span class="line"><span class="params">        <span class="keyword">if</span>(!p-&gt;lchild)&#123;<span class="comment">//无左孩子</span></span></span><br><span class="line"><span class="params">        	p-&gt;ltag=Thread;<span class="comment">//前驱线索</span></span></span><br><span class="line"><span class="params">            p-&gt;lchild=pre;<span class="comment">//左孩子指向前驱</span></span></span><br><span class="line"><span class="params">        &#125;</span></span><br><span class="line"><span class="params">        <span class="keyword">if</span>(!pre-&gt;rchild)&#123;</span></span><br><span class="line"><span class="params">            pre-&gt;rtag=Thread;</span></span><br><span class="line"><span class="params">            pre-&gt;rchild=p;</span></span><br><span class="line"><span class="params">        &#125;</span></span><br><span class="line"><span class="params">        pre=p;</span></span><br><span class="line"><span class="params">        InThreading(p-&gt;child);<span class="comment">//递归右子树线索化</span></span></span><br><span class="line"><span class="params">    &#125;   </span></span><br><span class="line"><span class="params">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>6.线索树中的头结点</p>
-<p>头结点 的左孩子指针指向树的根节点，右孩子指向中序遍历的最后一个结点。</p>
-<p>然后，令中序的第一个元素和最后一个元素的lchild和rchild结点指向根节点</p>
-<p>7.在6的基础上，代码如下：（中序遍历）</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Status <span class="title function_">InOrderTraverse_Thr</span><span class="params">(BiThrTree T)</span>&#123;</span><br><span class="line">	BiTree p;<span class="comment">//树中结点</span></span><br><span class="line">	p=T-&gt;lchild;<span class="comment">//树的头结点的左孩子是p，即p指向根节点</span></span><br><span class="line">	<span class="keyword">while</span>(p!=T)&#123;</span><br><span class="line">		<span class="keyword">while</span>(p-&gt;LTag==Link)<span class="comment">//结束条件p.LTag==Thr</span></span><br><span class="line">			p=p-&gt;child;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,p-&gt;data);<span class="comment">//中序的第一个结点</span></span><br><span class="line">        <span class="keyword">while</span>(p-&gt;RTag==Thread&amp;&amp;p-&gt;rchild!=T)&#123;</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,p-&gt;data);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    p=p-&gt;rchild;<span class="comment">//p进至右子树根</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>8.中序遍历的时间复杂度为O(n)，适用于遍历，查找结点时需要前去或者后继。</p>
-<h2 id="Transform"><a href="#Transform" class="headerlink" title="Transform"></a>Transform</h2><h3 id="树转二叉树"><a href="#树转二叉树" class="headerlink" title="树转二叉树"></a>树转二叉树</h3><p>1.加线，在所有兄弟结点之间加一条连线。</p>
-<p>2.去线，对树中的每一个结点，只保留它与first child 的连线。</p>
-<p>3.调整使得层次分明</p>
-<h3 id="森林转二叉树"><a href="#森林转二叉树" class="headerlink" title="森林转二叉树"></a>森林转二叉树</h3><p>1.把每棵树转化为二叉树。</p>
-<p>2.第一棵树位置不变，第二棵树插入第一棵树根节点的右孩子。</p>
-<h3 id="二叉树转树"><a href="#二叉树转树" class="headerlink" title="二叉树转树"></a>二叉树转树</h3><p>1.X的左孩子的所有右孩子结点都与X相连接。</p>
-<p>2.删除所有左孩子和右孩子的连线</p>
-<p>3.层次调整</p>
-<h3 id="二叉树转森林"><a href="#二叉树转森林" class="headerlink" title="二叉树转森林"></a>二叉树转森林</h3><p><strong>判断：二叉树的根节点是否有右孩子，如果有可变森林，没有不可变森林</strong></p>
-<p>1.删除所有与右孩子的连线！</p>
-<p>2.再将每棵分离后的二叉树转化为树</p>
-<h3 id="树和森林的遍历"><a href="#树和森林的遍历" class="headerlink" title="树和森林的遍历"></a>树和森林的遍历</h3><h4 id="树的遍历"><a href="#树的遍历" class="headerlink" title="树的遍历"></a>树的遍历</h4><p>1.先根遍历：从根出发，一次遍历每个子树</p>
-<p>2.后根遍历：从子树出发，最后遍历根</p>
-<h4 id="森林的遍历"><a href="#森林的遍历" class="headerlink" title="森林的遍历"></a>森林的遍历</h4><p>1.前序遍历：对没棵树从前往后先根遍历</p>
-<p>2.后序遍历：对每棵树从前往后后根遍历</p>
-<h2 id="赫夫曼树及其运用"><a href="#赫夫曼树及其运用" class="headerlink" title="赫夫曼树及其运用"></a>赫夫曼树及其运用</h2><p>1.定义：假设有n个权值{w1,w2,….,wn},构造一棵有n个叶子结点的二叉树，每个叶子结点带权wk，每个叶子结点路径长为lk，带权路径长度WPL=w1* l1+ w2 * l2 + … + wk * lk 最小的二叉树，称为赫夫曼树</p>
-<p>2.寻找最优赫夫曼树</p>
-<p>a.先把有权值的叶子结点从小到大排序成有序序列，A5,E10,B15,D30.</p>
-<p>b.取两个最小权值结点作为新结点N1的两个子结点，小在左，大在右</p>
-<p>c.将N1替换A与E，有N1:15,B:15,D:30,C:40</p>
-<p>d.将N1与B作为新结点N2，……，权值N2=N1+B=30</p>
-<p>…</p>
-<p>最后C：40，N3：60，将C与N3作为T的结点，T就是赫夫曼树的根节点</p>
-<h3 id="赫夫曼编码"><a href="#赫夫曼编码" class="headerlink" title="赫夫曼编码"></a>赫夫曼编码</h3><p>左0右1</p>
-<h2 id="二叉树递归三步"><a href="#二叉树递归三步" class="headerlink" title="二叉树递归三步"></a>二叉树递归三步</h2><p>1.递归函数的参数和返回值</p>
-<p>2.终止条件</p>
-<p>3.单层递归的逻辑</p>
 ]]></content>
       <categories>
         <category>数据结构</category>
@@ -3489,6 +3350,147 @@
       </tags>
   </entry>
   <entry>
+    <title>数据结构--树</title>
+    <url>/2022/07/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/</url>
+    <content><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>1.树有n个结点，当n大于1时，其余结点可以分为m个互不相交的有限集。</p>
+<p>2.n大于0时，根节点是唯一的；</p>
+<p>   m大于0时，字数个数无限制，但一定是互不相交的。</p>
+<p>3.结点拥有的子叶数称为结点的度degree，度为0称为终端节点，度不为零称为分支节点，树的度是树内各个结点的度的max值</p>
+<p>4.结点的祖先是从根到该结点所经分支上的所有结点，</p>
+<p>​    同理，以某结点为根的子树的任一结点都为该结点的子孙。</p>
+<span id="more"></span>
+
+<p>5.双亲在同一层的结点称为堂兄弟。</p>
+<p>6.森林（forest）是n棵互不相交的树的集合</p>
+<p>7.树的抽象数据结构</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">ADT Tree</span><br><span class="line">Data</span><br><span class="line">    树是由一个根节点和若干棵子树构成</span><br><span class="line">Operation</span><br><span class="line">    <span class="title function_">InitTree</span><span class="params">(*T)</span>:构造空树T</span><br><span class="line">    <span class="title function_">DestoryTree</span><span class="params">(*T)</span>:摧毁树T</span><br><span class="line">    <span class="title function_">CreateTree</span><span class="params">(*T,definition)</span>:按照definition定义的树来构造树T</span><br><span class="line">    <span class="title function_">ClearTree</span><span class="params">(*T)</span>:若树T存在，清空树T</span><br><span class="line">    <span class="title function_">TreeEmpty</span><span class="params">(T)</span>:若树T为空树，返回1，若不为空树，返回0</span><br><span class="line">    <span class="title function_">TreeDepth</span><span class="params">(T)</span>:返回树的深度</span><br><span class="line">    <span class="title function_">Root</span><span class="params">(T)</span>:返回T的根结点</span><br><span class="line">    <span class="title function_">Value</span><span class="params">(T,cur_e)</span>:cur_e是树T的一个结点,返回cur_e值</span><br><span class="line">    <span class="title function_">Assign</span><span class="params">(T,cur_e,value)</span>:cur_e是树T的一个结点cur_e赋值为value</span><br><span class="line">    <span class="title function_">Parent</span><span class="params">(T,cur_e)</span>:若cur_e是树T非根结点，返回双亲</span><br><span class="line">    <span class="title function_">LeftChild</span><span class="params">(T,cur_e)</span>:返回cur_e左孩子</span><br><span class="line">    <span class="title function_">RightSibling</span><span class="params">(T,cur_e)</span>:返回cur_e的右兄弟</span><br><span class="line">    <span class="title function_">InsertChild</span><span class="params">(*T,*p,i,c)</span>:插入c为树T中p所指结点第i个子树</span><br><span class="line">    <span class="title function_">DeleteChild</span><span class="params">(*T,*p,i)</span>:删除T中p所指第i个子树</span><br><span class="line">    endADT</span><br></pre></td></tr></table></figure>
+
+<h2 id="树的存储结构"><a href="#树的存储结构" class="headerlink" title="树的存储结构"></a>树的存储结构</h2><h3 id="双亲表示法"><a href="#双亲表示法" class="headerlink" title="双亲表示法"></a>双亲表示法</h3><p>1.每个结点，不一定有孩子，但一定有且仅有一个双亲</p>
+<p>2.定义双亲结点</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAXSIZE 200</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> PTElemType;</span><br><span class="line"><span class="type">int</span> <span class="class"><span class="keyword">struct</span> <span class="title">PTNode</span>&#123;</span><span class="comment">//PTNode相当于ParentNode</span></span><br><span class="line">    PTElemType data;</span><br><span class="line">    <span class="type">int</span> parent;<span class="comment">//结点，双亲位置</span></span><br><span class="line">&#125;PTNode;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    PTNode node[MAXSIZE];<span class="comment">//结点数组</span></span><br><span class="line">    <span class="type">int</span> r,n;<span class="comment">//根的位置r和结点数n</span></span><br><span class="line">&#125;PTree;</span><br></pre></td></tr></table></figure>
+
+<p><strong>只要双亲相等，那么int parent相等（即同一行的元素的parent结点相等）通常把根节点的parent值设置为-1</strong></p>
+<p>3.长子域：每个结点，若是存在长子（最左边的孩子），那么记录下它的下标，放入firstchild，否则记录-1</p>
+<p>4.右兄弟域：每一个结点如果存在右兄弟，那么记录下右兄弟的下标，没有则记录-1，录进rightsib</p>
+<h3 id="孩子表示法"><a href="#孩子表示法" class="headerlink" title="孩子表示法"></a>孩子表示法</h3><p>1.每个结点有多个指针域，每个指针指向一棵子树的根节点，这种方法叫做多重链表表示法</p>
+<p>2.指针域的个数等于树的度 data child1 child2 child3</p>
+<p>   其中n是树的度，一个结点有几个孩子就有几个指针</p>
+<p>3.孩子表示法：对于每个结点的孩子结点都创建一个链表，则n个结点有n个链表，有孩子结点的放到一列:data firstchild</p>
+<p>​    <strong>没有孩子的结点</strong>放在<strong>有孩子结点</strong>的后面，名为child next ，next指向他的兄弟</p>
+<p>孩子表示法结构定义</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_Tree_SIZE 200</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">CTNode</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> child;<span class="comment">//数据域</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">CTNode</span> *<span class="title">next</span>;</span><span class="comment">//定义结点</span></span><br><span class="line">&#125;*childPtr;<span class="comment">//表示结点要靠他</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    TElemType data;\</span><br><span class="line">    ChildPtr firstchild;</span><br><span class="line">&#125;CTBox;<span class="comment">//表头</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    CTBox nodes[MAX_Tree_SIZE];</span><br><span class="line">    <span class="type">int</span> r,n;<span class="comment">//根位置和结点数</span></span><br><span class="line">&#125;CTree;</span><br></pre></td></tr></table></figure>
+
+<p>三、孩子兄弟表示法</p>
+<p>​    因为长子唯一，且右兄弟结点唯一，那么设计两个指针，分别指向该节点的第一个孩子和此结点的兄弟，若有其一不存在，用NULL（^）表示</p>
+<p> data firstchild rightsib</p>
+<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>1.定义：二叉树是n个结点组成的有限集合</p>
+<p>2.特点：每个结点最多有两颗子树，所以Node的度小于等于2</p>
+<p>​             左右子树是有顺序的，不可以颠倒</p>
+<p>3.二叉树有5种基本形态：空二叉树，只有一个根节点，根节点有左子树，根节点有右子树，既有左子树也有右子树。</p>
+<p>4.特殊的二叉树： a 只有左子树的二叉树叫做左斜树</p>
+<p>​                           b 只有右孩子的二叉树的二叉树叫做右斜树</p>
+<p>5 满二叉树的特点：</p>
+<p>​    a.叶子只能出现在最下层，出现在其他层不行</p>
+<p>​    b.非叶子结点的度是2</p>
+<p>​    c.同样深度的二叉树中，满二叉树的节点最多</p>
+<p>6.完全二叉树</p>
+<p>   在满二叉树的条件下，保持所有节点位置不变，只减少数量</p>
+<p>​    满二叉树一定是完全二叉树，完全二叉树不一定是满二叉树，<strong>不能出现编号空档</strong></p>
+<h3 id="二叉树的性质"><a href="#二叉树的性质" class="headerlink" title="二叉树的性质"></a>二叉树的性质</h3><p>1.在二叉树的第i层至多有2的i-1次方个结点（i&gt;1）</p>
+<p>2.深度为k的二叉树至多有2的k-1次方个结点</p>
+<p>3.对于二叉树T，若子叶结点数为n0，度为2的结点数n2，那么n0=n2+1；</p>
+<p>4.具有n个结点的完全二叉树深度为log2n + 1（其中log2n向下取整），</p>
+<p>5.对于一棵有n个结点的完全二叉树（深度为log2n+1（同样log2n向下取整））的结点按顺序编号，对于任一结点i（1&lt;=i&lt;=n都有）：</p>
+<p>​    a.如果i=1，i是二叉树的根，无双亲，若i&gt;1，则双亲是结点i/2（向下取整）</p>
+<p>​    b.如果2i&gt;n，则i无左孩子，i是叶子结点，否则左孩子是2i</p>
+<p>​    c.如果2i+1&gt;n，则i无右孩子，否则右孩子是2i+1</p>
+<p>6.对于n个结点的二叉树，二叉链表中有2n个指针，其中n-1个指针指向孩子结点，同样有n-1个指针指向双亲结点。</p>
+<h3 id="二叉树的存储结构"><a href="#二叉树的存储结构" class="headerlink" title="二叉树的存储结构"></a>二叉树的存储结构</h3><p>一、树的顺序存储结构</p>
+<p>1.用一维数组存储二叉树的结点</p>
+<p><strong>数据</strong> A B C D E F G H </p>
+<p><strong>下标</strong> 1 2 3  4 5 6  7 8</p>
+<p>对于一般的二叉树，下标不用变，只需要把不存在的节点变为^即可</p>
+<p>2.但是这和存储方式在一般的树中会造成很大的空间浪费，所以只适用于完全二叉树</p>
+<p>二、二叉链表</p>
+<p>1.二叉链表是有两个指针的，一个指向左孩子，一个指向右孩子</p>
+<p> lchild data rchild</p>
+<p>2.二叉链表的结构定义</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></span><br><span class="line">	TElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span><span class="comment">//左右孩子指针</span></span><br><span class="line">&#125;BiTNode,BiTree;</span><br></pre></td></tr></table></figure>
+
+<h3 id="遍历二叉树"><a href="#遍历二叉树" class="headerlink" title="遍历二叉树"></a>遍历二叉树</h3><p>一、定义：从根节点出发，按照某种次序依次访问二叉树的所有结点，使得每个结点被访问一次且仅被访问一次。</p>
+<p>二、遍历方法：</p>
+<h4 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h4><p>先前序遍历左子树，再前序遍历后子树</p>
+<p>算法：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">PreOrderTraverse</span><span class="params">(BiTree T)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T==<span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,T-&gt;data);<span class="comment">//显示结点数据</span></span><br><span class="line">    PreOrderTraverse(T-&gt;lchild);<span class="comment">//先遍历左子树</span></span><br><span class="line">    PreOrderTraverse(T-&gt;rchild);<span class="comment">//再遍历右子树</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h4><p>算法:</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">InOrderTraverse</span><span class="params">(BiTree T)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(T==<span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> ;<span class="comment">//返回空</span></span><br><span class="line">    InOrderTraverse(T-&gt;lchild);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,T-&gt;data);</span><br><span class="line">    InorderTraverse(T-&gt;rchild);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h4><p>算法：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">TailOrderTraverse</span><span class="params">(BiTree T)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T==<span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    TailOrderTraverse(T-&gt;lchild);</span><br><span class="line">    TailOrderTraverse(T-&gt;rchild);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,T-&gt;data);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：后序遍历在回退的时候，不能直接打印，要看该结点是否有右节点，如果有要先遍历到右节点再打印</p>
+<h4 id="根据已知顺序推导"><a href="#根据已知顺序推导" class="headerlink" title="根据已知顺序推导"></a>根据已知顺序推导</h4><p>已知前序/后序和中序可以推导整棵树</p>
+<p>已知前序和后序无法推导中序</p>
+<h3 id="二叉树的建立"><a href="#二叉树的建立" class="headerlink" title="二叉树的建立"></a>二叉树的建立</h3><p>1.拓展二叉树，对于每个结点的空的孩子都建立一个虚结点#；</p>
+<p>2.生成二叉树算法：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">CreateBiTree</span><span class="params">(BiTree *T)</span>&#123;</span><br><span class="line">    TElemType ch;<span class="comment">//键盘输入</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>,ch);</span><br><span class="line">    <span class="keyword">if</span>(ch==<span class="string">&#x27;#&#x27;</span>)<span class="comment">//如果键盘输入为0</span></span><br><span class="line">        *T=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        *T=(BiTree)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(BiTNode));<span class="comment">//给T赋予内存</span></span><br><span class="line">        <span class="keyword">if</span>(!*T)<span class="comment">//即当T等于NULL的时候</span></span><br><span class="line">            <span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">        (*T)-&gt;data=ch;<span class="comment">//生成结点</span></span><br><span class="line">        CreateBiTree(&amp;(*T)-&gt;lchild);<span class="comment">//递归，生成左孩子</span></span><br><span class="line">        CreateBiTree(&amp;(*T)-&gt;rchild);<span class="comment">//递归，生成右孩子</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="线索二叉树"><a href="#线索二叉树" class="headerlink" title="线索二叉树"></a>线索二叉树</h2><p>1.把指向前去和后继指针称为线索，加上线索的二叉链表称为线索二叉树（Threaded Binary Tree）</p>
+<p>2.增加布尔类型的标志域放在指针中</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">lchild ltag data rtag rchild</span><br><span class="line"><span class="comment">//当ltag=0，指向左孩子，当ltag=1，指向前驱</span></span><br><span class="line"><span class="comment">//当rtag=0，指向右孩子，当rtag=1，指向后继</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：是在二叉树中空闲的指针才会用来指向前驱和后继，不能影响正常的左右孩子的表达</strong></p>
+<p>3.线索二叉树的结构实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">enum</span>&#123;</span>Link,Thread&#125; PointerTag;</span><br><span class="line"><span class="comment">//Link=0表示指向左右孩子结点，Thread==1表示指向前驱后继结点</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiThrNode</span>&#123;</span><span class="comment">//二叉树线索存储结点</span></span><br><span class="line">    TElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiThrNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">    PointTag LTag;</span><br><span class="line">    PointTag RTag;</span><br><span class="line">&#125;BiThrNode,*BiThrTree;<span class="comment">//线索树</span></span><br></pre></td></tr></table></figure>
+
+<p>4.线索化就是在遍历的过程中，一遍遍历一边修改空指针。</p>
+<p>5.中序遍历线索化</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">BiThrTree pre;<span class="comment">//指向刚访问过的节点</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">InThreading</span><span class="params">(BiTheTree p&#123;</span></span><br><span class="line"><span class="params">	<span class="keyword">if</span>(p)&#123;</span></span><br><span class="line"><span class="params">        InThreading(p-&gt;lchild);<span class="comment">//递归左子树线索化</span></span></span><br><span class="line"><span class="params">        <span class="keyword">if</span>(!p-&gt;lchild)&#123;<span class="comment">//无左孩子</span></span></span><br><span class="line"><span class="params">        	p-&gt;ltag=Thread;<span class="comment">//前驱线索</span></span></span><br><span class="line"><span class="params">            p-&gt;lchild=pre;<span class="comment">//左孩子指向前驱</span></span></span><br><span class="line"><span class="params">        &#125;</span></span><br><span class="line"><span class="params">        <span class="keyword">if</span>(!pre-&gt;rchild)&#123;</span></span><br><span class="line"><span class="params">            pre-&gt;rtag=Thread;</span></span><br><span class="line"><span class="params">            pre-&gt;rchild=p;</span></span><br><span class="line"><span class="params">        &#125;</span></span><br><span class="line"><span class="params">        pre=p;</span></span><br><span class="line"><span class="params">        InThreading(p-&gt;child);<span class="comment">//递归右子树线索化</span></span></span><br><span class="line"><span class="params">    &#125;   </span></span><br><span class="line"><span class="params">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>6.线索树中的头结点</p>
+<p>头结点 的左孩子指针指向树的根节点，右孩子指向中序遍历的最后一个结点。</p>
+<p>然后，令中序的第一个元素和最后一个元素的lchild和rchild结点指向根节点</p>
+<p>7.在6的基础上，代码如下：（中序遍历）</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Status <span class="title function_">InOrderTraverse_Thr</span><span class="params">(BiThrTree T)</span>&#123;</span><br><span class="line">	BiTree p;<span class="comment">//树中结点</span></span><br><span class="line">	p=T-&gt;lchild;<span class="comment">//树的头结点的左孩子是p，即p指向根节点</span></span><br><span class="line">	<span class="keyword">while</span>(p!=T)&#123;</span><br><span class="line">		<span class="keyword">while</span>(p-&gt;LTag==Link)<span class="comment">//结束条件p.LTag==Thr</span></span><br><span class="line">			p=p-&gt;child;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,p-&gt;data);<span class="comment">//中序的第一个结点</span></span><br><span class="line">        <span class="keyword">while</span>(p-&gt;RTag==Thread&amp;&amp;p-&gt;rchild!=T)&#123;</span><br><span class="line">            p=p-&gt;rchild;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,p-&gt;data);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    p=p-&gt;rchild;<span class="comment">//p进至右子树根</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>8.中序遍历的时间复杂度为O(n)，适用于遍历，查找结点时需要前去或者后继。</p>
+<h2 id="Transform"><a href="#Transform" class="headerlink" title="Transform"></a>Transform</h2><h3 id="树转二叉树"><a href="#树转二叉树" class="headerlink" title="树转二叉树"></a>树转二叉树</h3><p>1.加线，在所有兄弟结点之间加一条连线。</p>
+<p>2.去线，对树中的每一个结点，只保留它与first child 的连线。</p>
+<p>3.调整使得层次分明</p>
+<h3 id="森林转二叉树"><a href="#森林转二叉树" class="headerlink" title="森林转二叉树"></a>森林转二叉树</h3><p>1.把每棵树转化为二叉树。</p>
+<p>2.第一棵树位置不变，第二棵树插入第一棵树根节点的右孩子。</p>
+<h3 id="二叉树转树"><a href="#二叉树转树" class="headerlink" title="二叉树转树"></a>二叉树转树</h3><p>1.X的左孩子的所有右孩子结点都与X相连接。</p>
+<p>2.删除所有左孩子和右孩子的连线</p>
+<p>3.层次调整</p>
+<h3 id="二叉树转森林"><a href="#二叉树转森林" class="headerlink" title="二叉树转森林"></a>二叉树转森林</h3><p><strong>判断：二叉树的根节点是否有右孩子，如果有可变森林，没有不可变森林</strong></p>
+<p>1.删除所有与右孩子的连线！</p>
+<p>2.再将每棵分离后的二叉树转化为树</p>
+<h3 id="树和森林的遍历"><a href="#树和森林的遍历" class="headerlink" title="树和森林的遍历"></a>树和森林的遍历</h3><h4 id="树的遍历"><a href="#树的遍历" class="headerlink" title="树的遍历"></a>树的遍历</h4><p>1.先根遍历：从根出发，一次遍历每个子树</p>
+<p>2.后根遍历：从子树出发，最后遍历根</p>
+<h4 id="森林的遍历"><a href="#森林的遍历" class="headerlink" title="森林的遍历"></a>森林的遍历</h4><p>1.前序遍历：对没棵树从前往后先根遍历</p>
+<p>2.后序遍历：对每棵树从前往后后根遍历</p>
+<h2 id="赫夫曼树及其运用"><a href="#赫夫曼树及其运用" class="headerlink" title="赫夫曼树及其运用"></a>赫夫曼树及其运用</h2><p>1.定义：假设有n个权值{w1,w2,….,wn},构造一棵有n个叶子结点的二叉树，每个叶子结点带权wk，每个叶子结点路径长为lk，带权路径长度WPL=w1* l1+ w2 * l2 + … + wk * lk 最小的二叉树，称为赫夫曼树</p>
+<p>2.寻找最优赫夫曼树</p>
+<p>a.先把有权值的叶子结点从小到大排序成有序序列，A5,E10,B15,D30.</p>
+<p>b.取两个最小权值结点作为新结点N1的两个子结点，小在左，大在右</p>
+<p>c.将N1替换A与E，有N1:15,B:15,D:30,C:40</p>
+<p>d.将N1与B作为新结点N2，……，权值N2=N1+B=30</p>
+<p>…</p>
+<p>最后C：40，N3：60，将C与N3作为T的结点，T就是赫夫曼树的根节点</p>
+<h3 id="赫夫曼编码"><a href="#赫夫曼编码" class="headerlink" title="赫夫曼编码"></a>赫夫曼编码</h3><p>左0右1</p>
+<h2 id="二叉树递归三步"><a href="#二叉树递归三步" class="headerlink" title="二叉树递归三步"></a>二叉树递归三步</h2><p>1.递归函数的参数和返回值</p>
+<p>2.终止条件</p>
+<p>3.单层递归的逻辑</p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构--线性表（DH）</title>
     <url>/2022/07/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%88DH%EF%BC%89/</url>
     <content><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><span id="more"></span>
@@ -3584,6 +3586,27 @@
       </tags>
   </entry>
   <entry>
+    <title>机器学习--K近邻算法</title>
+    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="K近邻算法"><a href="#K近邻算法" class="headerlink" title="K近邻算法"></a>K近邻算法</h3><span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#算法</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;葡萄酒.xlsx&#x27;</span>)</span><br><span class="line">X_train = df[[<span class="string">&#x27;酒精含量(%)&#x27;</span>,<span class="string">&#x27;酸含量(%)&#x27;</span>]]</span><br><span class="line">y_train= df[<span class="string">&#x27;分类&#x27;</span>]</span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KN</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = KNeighborsRegressor(n_neighbors=<span class="number">2</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
+
+<h3 id="手写数字识别模型"><a href="#手写数字识别模型" class="headerlink" title="手写数字识别模型"></a>手写数字识别模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;手写数字识别.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;对应数字&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;对应数字&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neibhors <span class="keyword">import</span> KNeighborsClassifier</span><br><span class="line">model = KNeighborsClassifier(n_neibhors=<span class="number">5</span>)<span class="comment">#记得要加n_neighbors参数</span></span><br><span class="line">model.fit(X_train,y_train)<span class="comment">#训练模型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#开始处理图片</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line">img = Image.<span class="built_in">open</span>(<span class="string">&#x27;图片.jpg&#x27;</span>)<span class="comment">#打开图片文件</span></span><br><span class="line">img = img.resize((<span class="number">32</span>,<span class="number">32</span>))<span class="comment">#重新定义图片大小</span></span><br><span class="line">img = img.convert(<span class="string">&#x27;L&#x27;</span>)<span class="comment">#灰度处理</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">img_new = img.point(<span class="keyword">lambda</span> x:<span class="number">0</span> <span class="keyword">if</span> x&gt;<span class="number">128</span> <span class="keyword">else</span> <span class="number">1</span>)<span class="comment">#这里是如果x的色彩大于128则赋值为0，否则赋值为1</span></span><br><span class="line">arr = np.array(img_new)</span><br><span class="line">arr_new = arr.reshape(<span class="number">1</span>,-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#进行预测</span></span><br><span class="line">answer = model.predict(arr_new)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;图片中的数字为:&quot;</span>+<span class="built_in">str</span>(answer[<span class="number">0</span>]))</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>机器学习--AdaBoost和GBDT</title>
     <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-AdaBoost%E5%92%8CGBDT/</url>
     <content><![CDATA[<h2 id="AdaBoost模型"><a href="#AdaBoost模型" class="headerlink" title="AdaBoost模型"></a>AdaBoost模型</h2><span id="more"></span>
@@ -3599,27 +3622,6 @@
 <h2 id="GBDT模型"><a href="#GBDT模型" class="headerlink" title="GBDT模型"></a>GBDT模型</h2><h3 id="GBDT分类模型"><a href="#GBDT分类模型" class="headerlink" title="GBDT分类模型"></a>GBDT分类模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> GradientBoostingClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">model = GradientBoostingClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
 
 <h3 id="GBDT回归模型"><a href="#GBDT回归模型" class="headerlink" title="GBDT回归模型"></a>GBDT回归模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> GradientBoostingRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">model = GradientBoostingRegressor(random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习--K近邻算法</title>
-    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="K近邻算法"><a href="#K近邻算法" class="headerlink" title="K近邻算法"></a>K近邻算法</h3><span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#算法</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;葡萄酒.xlsx&#x27;</span>)</span><br><span class="line">X_train = df[[<span class="string">&#x27;酒精含量(%)&#x27;</span>,<span class="string">&#x27;酸含量(%)&#x27;</span>]]</span><br><span class="line">y_train= df[<span class="string">&#x27;分类&#x27;</span>]</span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KN</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = KNeighborsRegressor(n_neighbors=<span class="number">2</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
-
-<h3 id="手写数字识别模型"><a href="#手写数字识别模型" class="headerlink" title="手写数字识别模型"></a>手写数字识别模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;手写数字识别.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;对应数字&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;对应数字&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neibhors <span class="keyword">import</span> KNeighborsClassifier</span><br><span class="line">model = KNeighborsClassifier(n_neibhors=<span class="number">5</span>)<span class="comment">#记得要加n_neighbors参数</span></span><br><span class="line">model.fit(X_train,y_train)<span class="comment">#训练模型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#开始处理图片</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line">img = Image.<span class="built_in">open</span>(<span class="string">&#x27;图片.jpg&#x27;</span>)<span class="comment">#打开图片文件</span></span><br><span class="line">img = img.resize((<span class="number">32</span>,<span class="number">32</span>))<span class="comment">#重新定义图片大小</span></span><br><span class="line">img = img.convert(<span class="string">&#x27;L&#x27;</span>)<span class="comment">#灰度处理</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">img_new = img.point(<span class="keyword">lambda</span> x:<span class="number">0</span> <span class="keyword">if</span> x&gt;<span class="number">128</span> <span class="keyword">else</span> <span class="number">1</span>)<span class="comment">#这里是如果x的色彩大于128则赋值为0，否则赋值为1</span></span><br><span class="line">arr = np.array(img_new)</span><br><span class="line">arr_new = arr.reshape(<span class="number">1</span>,-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#进行预测</span></span><br><span class="line">answer = model.predict(arr_new)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;图片中的数字为:&quot;</span>+<span class="built_in">str</span>(answer[<span class="number">0</span>]))</span><br></pre></td></tr></table></figure>
-
-
-
-
 
 ]]></content>
       <categories>
@@ -3697,29 +3699,6 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习--决策树</title>
-    <url>/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/</url>
-    <content><![CDATA[<h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>父节点和子节点是相对的，子节点的上边是父节点，父节点的下面是子节点</p>
-<p>根节点：没有父节点的节点叫做根节点，即初始节点</p>
-<p>叶子节点：没有子节点的节点叫做叶子节点，即最终节点</p>
-<span id="more"></span>
-
-<h3 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h3><p>可以做<strong>分类分析（分类决策树模型）</strong>，也可以做<strong>回归分析（回归决策树模型）</strong></p>
-<h4 id="分类决策树模型"><a href="#分类决策树模型" class="headerlink" title="分类决策树模型"></a>分类决策树模型</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]<span class="comment">#共有5个训练集，每个训练集有2个特征</span></span><br><span class="line">y = [<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]<span class="comment">#这是因变量，分类为1和0</span></span><br><span class="line">model = DecisionTreeClassifier(random_state=<span class="number">0</span>)<span class="comment">#引入模型并设置随即状态为0，0只是保证运行结果一致</span></span><br><span class="line">model.fit(X,y)<span class="comment">#使用fit训练</span></span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))<span class="comment">#使用predict预测</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="回归决策树模型"><a href="#回归决策树模型" class="headerlink" title="回归决策树模型"></a>回归决策树模型</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = DecisionTreeRegressor(max_depth=<span class="number">2</span>,random_state=<span class="number">0</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">9</span>,<span class="number">9</span>]]))</span><br></pre></td></tr></table></figure>
-
-<h3 id="总体决策树模型搭建"><a href="#总体决策树模型搭建" class="headerlink" title="总体决策树模型搭建"></a>总体决策树模型搭建</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#1.数据读取与预处理</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;XX.xlsx&#x27;</span>)</span><br><span class="line">df = df.replace(&#123;<span class="string">&#x27;工资&#x27;</span>:&#123;<span class="string">&#x27;低&#x27;</span>:<span class="number">0</span>,<span class="string">&#x27;中&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;高&#x27;</span>:<span class="number">2</span>&#125;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">#2.提取特征变量和目标变量</span></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;离职&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;离职&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#3.划分训练集和测试集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#4.训练模型及搭建</span></span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line">model = DecisionTreeClassifier(max_depth=<span class="number">3</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X_train,y_train)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>机器学习--pandas库</title>
     <url>/2022/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-pandas%E5%BA%93/</url>
     <content><![CDATA[<p>pandas库基础</p>
@@ -3785,6 +3764,29 @@
       </tags>
   </entry>
   <entry>
+    <title>机器学习--决策树</title>
+    <url>/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/</url>
+    <content><![CDATA[<h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>父节点和子节点是相对的，子节点的上边是父节点，父节点的下面是子节点</p>
+<p>根节点：没有父节点的节点叫做根节点，即初始节点</p>
+<p>叶子节点：没有子节点的节点叫做叶子节点，即最终节点</p>
+<span id="more"></span>
+
+<h3 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h3><p>可以做<strong>分类分析（分类决策树模型）</strong>，也可以做<strong>回归分析（回归决策树模型）</strong></p>
+<h4 id="分类决策树模型"><a href="#分类决策树模型" class="headerlink" title="分类决策树模型"></a>分类决策树模型</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]<span class="comment">#共有5个训练集，每个训练集有2个特征</span></span><br><span class="line">y = [<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]<span class="comment">#这是因变量，分类为1和0</span></span><br><span class="line">model = DecisionTreeClassifier(random_state=<span class="number">0</span>)<span class="comment">#引入模型并设置随即状态为0，0只是保证运行结果一致</span></span><br><span class="line">model.fit(X,y)<span class="comment">#使用fit训练</span></span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))<span class="comment">#使用predict预测</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="回归决策树模型"><a href="#回归决策树模型" class="headerlink" title="回归决策树模型"></a>回归决策树模型</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = DecisionTreeRegressor(max_depth=<span class="number">2</span>,random_state=<span class="number">0</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">9</span>,<span class="number">9</span>]]))</span><br></pre></td></tr></table></figure>
+
+<h3 id="总体决策树模型搭建"><a href="#总体决策树模型搭建" class="headerlink" title="总体决策树模型搭建"></a>总体决策树模型搭建</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#1.数据读取与预处理</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;XX.xlsx&#x27;</span>)</span><br><span class="line">df = df.replace(&#123;<span class="string">&#x27;工资&#x27;</span>:&#123;<span class="string">&#x27;低&#x27;</span>:<span class="number">0</span>,<span class="string">&#x27;中&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;高&#x27;</span>:<span class="number">2</span>&#125;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">#2.提取特征变量和目标变量</span></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;离职&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;离职&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">#3.划分训练集和测试集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#4.训练模型及搭建</span></span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line">model = DecisionTreeClassifier(max_depth=<span class="number">3</span>,random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X_train,y_train)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>机器学习--列表切片</title>
     <url>/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/</url>
     <content><![CDATA[<p>只需要列表切片的时候是左闭右开的！</p>
@@ -3816,6 +3818,19 @@
       </tags>
   </entry>
   <entry>
+    <title>机器学习--深度学习</title>
+    <url>/2022/06/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#先构造数据并进行拟合</span></span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">0</span>],[<span class="number">5</span>,<span class="number">1</span>],[<span class="number">6</span>,<span class="number">4</span>],[<span class="number">4</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">2</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>]</span><br><span class="line"><span class="keyword">from</span> sklearn.neural_network <span class="keyword">import</span> MLPClassifier<span class="comment">#Machine Learning Please</span></span><br><span class="line">model = MLPClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="comment">#预测</span></span><br><span class="line">y_pred = model.predict(X)</span><br><span class="line"><span class="comment">#进行预测值和实际值的对比</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">a = pd.DataFrame()</span><br><span class="line">a[<span class="string">&#x27;实际值&#x27;</span>] = <span class="built_in">list</span>[y]</span><br><span class="line">a[<span class="string">&#x27;预测值&#x27;</span>] = <span class="built_in">list</span>[y_pred]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="案例实战"><a href="#案例实战" class="headerlink" title="案例实战"></a>案例实战</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#导入数据</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;用户情感分析.xlsx&#x27;</span>)</span><br><span class="line">df.head()<span class="comment">#打印前五行数据</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>机器学习--线性回归（重点）</title>
     <url>/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89/</url>
     <content><![CDATA[<span id="more"></span>
@@ -3831,19 +3846,6 @@
       <tags>
         <tag>机器学习</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>机器学习--深度学习</title>
-    <url>/2022/06/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#先构造数据并进行拟合</span></span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">0</span>],[<span class="number">5</span>,<span class="number">1</span>],[<span class="number">6</span>,<span class="number">4</span>],[<span class="number">4</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">2</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>]</span><br><span class="line"><span class="keyword">from</span> sklearn.neural_network <span class="keyword">import</span> MLPClassifier<span class="comment">#Machine Learning Please</span></span><br><span class="line">model = MLPClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="comment">#预测</span></span><br><span class="line">y_pred = model.predict(X)</span><br><span class="line"><span class="comment">#进行预测值和实际值的对比</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">a = pd.DataFrame()</span><br><span class="line">a[<span class="string">&#x27;实际值&#x27;</span>] = <span class="built_in">list</span>[y]</span><br><span class="line">a[<span class="string">&#x27;预测值&#x27;</span>] = <span class="built_in">list</span>[y_pred]</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="案例实战"><a href="#案例实战" class="headerlink" title="案例实战"></a>案例实战</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#导入数据</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;用户情感分析.xlsx&#x27;</span>)</span><br><span class="line">df.head()<span class="comment">#打印前五行数据</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
   </entry>
   <entry>
     <title>机器学习--考试复习</title>
@@ -4345,6 +4347,117 @@
       </tags>
   </entry>
   <entry>
+    <title>计算机组成原理--数据的表示和运算</title>
+    <url>/2022/03/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/</url>
+    <content><![CDATA[<h2 id="进位计数制"><a href="#进位计数制" class="headerlink" title="进位计数制"></a>进位计数制</h2><span id="more"></span>
+
+<h3 id="不同的进制"><a href="#不同的进制" class="headerlink" title="不同的进制"></a>不同的进制</h3><p>其实进制的实质就是<strong>逢X进一</strong>，如十进制就是逢十进一，八进制逢八进一。</p>
+<p>二进制：0，1</p>
+<p>八进制：0，1，2，3，4，5，6，7</p>
+<p>十进制：0，1，2，3，4，5，6，7，8，9</p>
+<p>十六进制：0，1，2，3，4，5，6，7，8，9，A，B，C，D，E，F</p>
+<h4 id="基数"><a href="#基数" class="headerlink" title="基数"></a>基数</h4><p>不同进制的基数不同，如<strong>r进制的基数就是r</strong>，十进制的基数就是十</p>
+<h4 id="不同进制的加法"><a href="#不同进制的加法" class="headerlink" title="不同进制的加法"></a>不同进制的加法</h4><h5 id="八进制加法"><a href="#八进制加法" class="headerlink" title="八进制加法"></a>八进制加法</h5><p>逢八进一，那么5.4+0.4 = 6.0</p>
+<h5 id="十六进制加法"><a href="#十六进制加法" class="headerlink" title="十六进制加法"></a>十六进制加法</h5><p>逢十六进一，那么5.8+1.8 = 7.0</p>
+<h3 id="十进制计数法"><a href="#十进制计数法" class="headerlink" title="十进制计数法"></a>十进制计数法</h3><p>古印度人发明了阿拉伯数字：1，2，3，4.……</p>
+<h4 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h4><p>例如在十进制数<strong>987</strong>中，9是百位，8是十位，7是个位。也即9*10^2 + 8 * 10^1 + 7 * 10^0这三个分别代表了不同的权重。</p>
+<h4 id="从其他进制转换到十进制"><a href="#从其他进制转换到十进制" class="headerlink" title="从其他进制转换到十进制"></a>从其他进制转换到十进制</h4><p><strong>如二进制数11011要转化成十进制的方式就是从第一位到最后一位分别成对应进制基数的0，1，2，3，4次方。</strong></p>
+<p>在这个例子里面就是 1乘二的0次方 + 1乘二的1次方 + 0乘二的2次方 + 1乘二的3次方 + 1乘二的4次方 = 27</p>
+<h4 id="从十进制转化成其他进制"><a href="#从十进制转化成其他进制" class="headerlink" title="从十进制转化成其他进制"></a>从十进制转化成其他进制</h4><h5 id="十进制转二进制"><a href="#十进制转二进制" class="headerlink" title="十进制转二进制"></a>十进制转二进制</h5><h6 id="整数位置"><a href="#整数位置" class="headerlink" title="整数位置"></a>整数位置</h6><p><strong>除基取余法</strong></p>
+<p>拿十进制的数除2，得到的余数就是二进制的数，直到除到商为0为止，先得到的余数是低位的，后得到的余数是高位的。</p>
+<h6 id="小数位置"><a href="#小数位置" class="headerlink" title="小数位置"></a>小数位置</h6><p><strong>乘基取整法</strong></p>
+<p>拿十进制的小数部分乘2，看乘二之后的整数部分是不是1，是1的话该位的二进制就是1，否则是0。有一些十进制的小数位取不完（如0.3），遇到这种情况就取小数点的后五位</p>
+<h5 id="十进制转八进制和十六进制"><a href="#十进制转八进制和十六进制" class="headerlink" title="十进制转八进制和十六进制"></a>十进制转八进制和十六进制</h5><p>先把十进制转化成为二进制，再把二进制转化成为八进制和十六进制</p>
+<h3 id="二进制转八进制和十六进制"><a href="#二进制转八进制和十六进制" class="headerlink" title="二进制转八进制和十六进制"></a>二进制转八进制和十六进制</h3><h4 id="二进制转八进制"><a href="#二进制转八进制" class="headerlink" title="二进制转八进制"></a>二进制转八进制</h4><p>二进制中的数每三个分成一组，每组对应转换成八进制的数字（0~7）即可，如二进制数100111011001可以分成这样：100<strong>111</strong>011<strong>001</strong>,然后分别看，001转化成八进制是1，011转化成八进制是3，111转化成八进制是7，100转化成八进制是4，所以这个二进制数转化成八进制实际上是4731.</p>
+<p><strong>注意：位数不够的在前面或者后面补0</strong></p>
+<h4 id="二进制转十六进制"><a href="#二进制转十六进制" class="headerlink" title="二进制转十六进制"></a>二进制转十六进制</h4><p>把二进制数看成四个一组即可，要注意的是十六进制中，ABCDEF分别表示10，11，12，13，14，15</p>
+<h4 id="八进制转二进制"><a href="#八进制转二进制" class="headerlink" title="八进制转二进制"></a>八进制转二进制</h4><p>把八进制中<strong>每一个</strong>数都转化成为<strong>三个</strong>二进制数即可</p>
+<h3 id="如何区别不同进制"><a href="#如何区别不同进制" class="headerlink" title="如何区别不同进制"></a>如何区别不同进制</h3><p>一般会在右下角有角标，如八进制会在右下角有八的角标</p>
+<p>如果没有角标的情况下，会在数字的后面加上对应的字母以便区分，二进制的字母是B，十进制的字母是D，十六进制的字母是H。</p>
+<h3 id="真值和机器数"><a href="#真值和机器数" class="headerlink" title="真值和机器数"></a>真值和机器数</h3><p>在计算机中如何表示正负号，通常用0代表负号，用1代表正号。如5436这是个真值，为了表示他是正数，用<strong>1</strong>5436表示他是个正数，15436就是个机器数。在后面的原码，反码，补码，移码中会具体说明。</p>
+<h2 id="BCD码"><a href="#BCD码" class="headerlink" title="BCD码"></a>BCD码</h2><h3 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h3><p>使用二进制来编码的十进制数</p>
+<p>每<strong>四个二进制码（4bit）（一共对应了2^4=16种状态）对应这十进制中的0~9</strong>，那么明显有六种是冗余的</p>
+<h3 id="8421码"><a href="#8421码" class="headerlink" title="8421码"></a>8421码</h3><p>8421码种规定了0~9的二进制状态</p>
+<p><strong>9：1001</strong></p>
+<p><strong>8：1000</strong></p>
+<p><strong>7：0111</strong></p>
+<p><strong>6：0110</strong></p>
+<p><strong>5：0101</strong></p>
+<p><strong>4：0100</strong></p>
+<p><strong>3：0011</strong></p>
+<p><strong>2：0010</strong></p>
+<p><strong>1：0001</strong></p>
+<p><strong>0：0000</strong></p>
+<p>要记熟8421码，考试容易碰到</p>
+<h4 id="8421码中数之间的相加"><a href="#8421码中数之间的相加" class="headerlink" title="8421码中数之间的相加"></a>8421码中数之间的相加</h4><p>可以用二进制直接加（记住逢二进一就可以了），也可以用十进制加好之后再转化成二进制数。</p>
+<p><strong>Q：那么这里有个问题是相加得到的数大于9，不在8421码当中怎么办？</strong></p>
+<p><strong>A：通常把这个大于9的数再加上6即可得到两位数的表示方法</strong></p>
+<h3 id="余3码"><a href="#余3码" class="headerlink" title="余3码"></a>余3码</h3><p>在8421码表示的数值中每一个都加上一个二进制的0011，得到的就是余3码。</p>
+<h3 id="2421码"><a href="#2421码" class="headerlink" title="2421码"></a>2421码</h3><p>与8421码很类似，只是2421码对应的权值分别是2421.</p>
+<p>2421码在0~4的时候前两位的值是0</p>
+<h2 id="字符和字符串"><a href="#字符和字符串" class="headerlink" title="字符和字符串"></a>字符和字符串</h2><h3 id="ASCII码"><a href="#ASCII码" class="headerlink" title="ASCII码"></a>ASCII码</h3><p>在ASCII码中一共有128个字符，而2的7次方正好等于128，所以我们只需要7位二进制的编码就可以表示ASCII码中的数字符号字母，但是计算机为了凑够一个字节，通常使用8个bit来表示，这样正好凑够了一个字节（Byte）</p>
+<h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>已知<strong>A</strong>的ASCII码值是65，<strong>H</strong>存放在M单元中，求M单元中的二进制数</p>
+<p>H在26个字母的第八位，所以计算得M中存放的二进制值是<strong>0</strong>1001000（注意：一定要补一个0凑够八位）</p>
+<p><strong>按字节编址</strong>的意思是每一个地址对应着1B</p>
+<p>一个汉字占两个字节（2B）的大小</p>
+<h2 id="奇偶效验码"><a href="#奇偶效验码" class="headerlink" title="奇偶效验码"></a>奇偶效验码</h2><p>A的编码是00</p>
+<p>B的编码是01</p>
+<p>C的编码是10</p>
+<p>D的编码是11</p>
+<p>当然ABCD都是两个bit的。</p>
+<p><strong>位错误</strong>：0变1，1变0</p>
+<p>由若干位代码组成的一个字叫做<strong>码字</strong></p>
+<h3 id="码距"><a href="#码距" class="headerlink" title="码距"></a>码距</h3><p>将两个码字放在一起一个个字符的逐一进行对比，具有不同位的个数称为两个码字之间的距离，一种编码方案可能有若干个合法码字，各码字之间的<strong>最小距离</strong>称为<strong>码距</strong>。</p>
+<p>当码距=1时，无检错能力</p>
+<p>当码距=2时，具有检错能力</p>
+<p>当码距&gt;=3时，具有检错甚至纠错能力</p>
+<h3 id="奇效验码"><a href="#奇效验码" class="headerlink" title="奇效验码"></a>奇效验码</h3><p><strong>能发现奇数位错误</strong></p>
+<p>保证码中的“1”的个数是<strong>奇数</strong>个，如果是<strong>偶数</strong>，在前面添1；如果是<strong>奇数</strong>，在前面添0</p>
+<h3 id="偶效验码"><a href="#偶效验码" class="headerlink" title="偶效验码"></a>偶效验码</h3><p><strong>能发现偶数位错误</strong></p>
+<p>保证码中的“1”的个数是<strong>偶数</strong>个，如果是<strong>偶数</strong>，在前面添0；如果是<strong>奇数</strong>，在前面添1</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>在<strong>奇校验</strong>中有<strong>奇数个bit</strong>发生了错误是无法发现的</p>
+<p>在<strong>偶校验</strong>中有<strong>偶数个bit</strong>发生了错误是无法发现的</p>
+<h3 id="如何实现奇偶校验"><a href="#如何实现奇偶校验" class="headerlink" title="如何实现奇偶校验"></a>如何实现奇偶校验</h3><h4 id="先求校验码"><a href="#先求校验码" class="headerlink" title="先求校验码"></a>先求校验码</h4><p>将码中的每一bit都进行<strong>异或运算</strong>，返回值作为校验位</p>
+<p><strong>异或运算（模二加）：</strong>当两个值相同的时候返回0，当两个值不同的时候返回1</p>
+<h4 id="进行校验"><a href="#进行校验" class="headerlink" title="进行校验"></a>进行校验</h4><p>和求校验码很类似，对每个值都进行<strong>异或处理</strong>。如果结果为1说明出错了！</p>
+<h3 id="海明校验码"><a href="#海明校验码" class="headerlink" title="海明校验码"></a>海明校验码</h3><h4 id="海明码的设计思路"><a href="#海明码的设计思路" class="headerlink" title="海明码的设计思路"></a>海明码的设计思路</h4><p>将信息分组，对各组分别进行偶校验</p>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>设信息位有n位，校验位有k位，那么信息位+校验位一共有n+k位，校验位一共有2^k种状态。</p>
+<p>推出不等式：<strong>2^k&gt;=n+k+1</strong>（n是信息位是给出的，要求的只是k）</p>
+<h4 id="信息位"><a href="#信息位" class="headerlink" title="信息位"></a>信息位</h4><p>使用D加下标来表示，校验位用P加下标来表示。</p>
+<h4 id="校验位放什么位置"><a href="#校验位放什么位置" class="headerlink" title="校验位放什么位置"></a>校验位放什么位置</h4><p>校验位Pi应该放在2^(i-1)的位置上</p>
+<h4 id="求校验位的值"><a href="#求校验位的值" class="headerlink" title="求校验位的值"></a>求校验位的值</h4><p>(用D表示信息位，用P表示效验码位，用H表示所有位置，@代表异或，其实是圈里加号)</p>
+<p>先把信息位所处的位置用二进制方式表示出来，假设有三位，把第三位是1的数提出来进行异或运算（用来异或的值是信息位里面的值）</p>
+<p>P1 = D1 @ D2 @ D4</p>
+<p>P2 = D1 @ D3 @ D4</p>
+<p>P3 = D2 @ D3 @ D4</p>
+<h4 id="纠错"><a href="#纠错" class="headerlink" title="纠错"></a>纠错</h4><p>S1 = P1 @ D1 @ D2 @ D4</p>
+<p>S2 = P2 @ D1 @ D3 @ D4</p>
+<p>S3 = P3 @ D2 @ D3 @ D4</p>
+<p><strong>如果：S1，S2，S3中出现了1（假设在S2出现），那么就是010位置出现了错误</strong></p>
+<h4 id="海明码的能力"><a href="#海明码的能力" class="headerlink" title="海明码的能力"></a>海明码的能力</h4><p>海明码具有一个bit位的纠错能力和两个bit位的检错能力</p>
+<h4 id="全校验"><a href="#全校验" class="headerlink" title="全校验"></a>全校验</h4><p>S1S2S3=0 且全体偶校验成功，说明无错误！</p>
+<p>S1S2S3！=0且全体偶校验失败，说明有1处错误，纠正即可，纠正方法是上面的<strong>纠错</strong>部分</p>
+<p>S1S2S3！=0且全体偶校验成功，说明有两处错误，需要重新上传。</p>
+<h3 id="循环冗余校验码"><a href="#循环冗余校验码" class="headerlink" title="循环冗余校验码"></a>循环冗余校验码</h3><p><strong>循环冗余非常难，多看几次视频：</strong></p>
+<p><strong><a href="https://www.bilibili.com/video/BV1BE411D7ii?p=13&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1BE411D7ii?p=13&amp;spm_id_from=pageDriver</a></strong></p>
+<p>定义：数据的发送方和接收方会先约定一个<strong>除数</strong>，当接收到数据后将要验证的数据除以除数，如果得到的数是0，那么这个数据是正确的，如果得到的数据不是0，那么这个数据是错误的。</p>
+<p>​            若是错误的，使用K个信息位加上R个校验位（R是生成多项式中的最高次幂），再进行除法，如果除数为0，说明OK；如果除数非0，说明有错误需要重新上传。</p>
+<h4 id="怎么求"><a href="#怎么求" class="headerlink" title="怎么求"></a>怎么求</h4><p>题目一般会给生成多项式G（G求出来的就是除数）出来，，例如G(x)=x^3 + x^2 +1，那么可以看成G(x)=1*x^3 + 1 *x^2 +0 * x^1 +1 *x^0,那么除数就是1101.（除数是早已经规定好的）</p>
+<p>在信息位后面补上r个0，，然后再与除数进行余二除。</p>
+<p><strong>余二除：从第一位开始看被除数的第一位如果是1那么商1，结果放原数，对后面的三位进行异或运算。。。得到的余数就是校验位，如果余数为000就是没错</strong></p>
+<h4 id="冗余校验码的检错能力的特点"><a href="#冗余校验码的检错能力的特点" class="headerlink" title="冗余校验码的检错能力的特点"></a>冗余校验码的检错能力的特点</h4><p>（1）可检测出所有奇数个错误</p>
+<p>（2）可检测出所有双bit的错误</p>
+<p>（3）可检测出所有小于等于校验位长度的连续错误</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>K位信息码，R位效验码，若生成多项式选择得当，2^R&gt;=K+R+1,则CRC码可纠一处错，因为(2^R)-1和K+R的所有位置元素是一一对应的！</p>
+]]></content>
+      <categories>
+        <category>计组</category>
+      </categories>
+      <tags>
+        <tag>计组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机组成原理--硬件</title>
     <url>/2022/03/16/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%A1%AC%E4%BB%B6/</url>
     <content><![CDATA[<p>计算机硬件如何区分二进制中的0和1？</p>
@@ -4495,117 +4608,6 @@
       </tags>
   </entry>
   <entry>
-    <title>计算机组成原理--数据的表示和运算</title>
-    <url>/2022/03/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/</url>
-    <content><![CDATA[<h2 id="进位计数制"><a href="#进位计数制" class="headerlink" title="进位计数制"></a>进位计数制</h2><span id="more"></span>
-
-<h3 id="不同的进制"><a href="#不同的进制" class="headerlink" title="不同的进制"></a>不同的进制</h3><p>其实进制的实质就是<strong>逢X进一</strong>，如十进制就是逢十进一，八进制逢八进一。</p>
-<p>二进制：0，1</p>
-<p>八进制：0，1，2，3，4，5，6，7</p>
-<p>十进制：0，1，2，3，4，5，6，7，8，9</p>
-<p>十六进制：0，1，2，3，4，5，6，7，8，9，A，B，C，D，E，F</p>
-<h4 id="基数"><a href="#基数" class="headerlink" title="基数"></a>基数</h4><p>不同进制的基数不同，如<strong>r进制的基数就是r</strong>，十进制的基数就是十</p>
-<h4 id="不同进制的加法"><a href="#不同进制的加法" class="headerlink" title="不同进制的加法"></a>不同进制的加法</h4><h5 id="八进制加法"><a href="#八进制加法" class="headerlink" title="八进制加法"></a>八进制加法</h5><p>逢八进一，那么5.4+0.4 = 6.0</p>
-<h5 id="十六进制加法"><a href="#十六进制加法" class="headerlink" title="十六进制加法"></a>十六进制加法</h5><p>逢十六进一，那么5.8+1.8 = 7.0</p>
-<h3 id="十进制计数法"><a href="#十进制计数法" class="headerlink" title="十进制计数法"></a>十进制计数法</h3><p>古印度人发明了阿拉伯数字：1，2，3，4.……</p>
-<h4 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h4><p>例如在十进制数<strong>987</strong>中，9是百位，8是十位，7是个位。也即9*10^2 + 8 * 10^1 + 7 * 10^0这三个分别代表了不同的权重。</p>
-<h4 id="从其他进制转换到十进制"><a href="#从其他进制转换到十进制" class="headerlink" title="从其他进制转换到十进制"></a>从其他进制转换到十进制</h4><p><strong>如二进制数11011要转化成十进制的方式就是从第一位到最后一位分别成对应进制基数的0，1，2，3，4次方。</strong></p>
-<p>在这个例子里面就是 1乘二的0次方 + 1乘二的1次方 + 0乘二的2次方 + 1乘二的3次方 + 1乘二的4次方 = 27</p>
-<h4 id="从十进制转化成其他进制"><a href="#从十进制转化成其他进制" class="headerlink" title="从十进制转化成其他进制"></a>从十进制转化成其他进制</h4><h5 id="十进制转二进制"><a href="#十进制转二进制" class="headerlink" title="十进制转二进制"></a>十进制转二进制</h5><h6 id="整数位置"><a href="#整数位置" class="headerlink" title="整数位置"></a>整数位置</h6><p><strong>除基取余法</strong></p>
-<p>拿十进制的数除2，得到的余数就是二进制的数，直到除到商为0为止，先得到的余数是低位的，后得到的余数是高位的。</p>
-<h6 id="小数位置"><a href="#小数位置" class="headerlink" title="小数位置"></a>小数位置</h6><p><strong>乘基取整法</strong></p>
-<p>拿十进制的小数部分乘2，看乘二之后的整数部分是不是1，是1的话该位的二进制就是1，否则是0。有一些十进制的小数位取不完（如0.3），遇到这种情况就取小数点的后五位</p>
-<h5 id="十进制转八进制和十六进制"><a href="#十进制转八进制和十六进制" class="headerlink" title="十进制转八进制和十六进制"></a>十进制转八进制和十六进制</h5><p>先把十进制转化成为二进制，再把二进制转化成为八进制和十六进制</p>
-<h3 id="二进制转八进制和十六进制"><a href="#二进制转八进制和十六进制" class="headerlink" title="二进制转八进制和十六进制"></a>二进制转八进制和十六进制</h3><h4 id="二进制转八进制"><a href="#二进制转八进制" class="headerlink" title="二进制转八进制"></a>二进制转八进制</h4><p>二进制中的数每三个分成一组，每组对应转换成八进制的数字（0~7）即可，如二进制数100111011001可以分成这样：100<strong>111</strong>011<strong>001</strong>,然后分别看，001转化成八进制是1，011转化成八进制是3，111转化成八进制是7，100转化成八进制是4，所以这个二进制数转化成八进制实际上是4731.</p>
-<p><strong>注意：位数不够的在前面或者后面补0</strong></p>
-<h4 id="二进制转十六进制"><a href="#二进制转十六进制" class="headerlink" title="二进制转十六进制"></a>二进制转十六进制</h4><p>把二进制数看成四个一组即可，要注意的是十六进制中，ABCDEF分别表示10，11，12，13，14，15</p>
-<h4 id="八进制转二进制"><a href="#八进制转二进制" class="headerlink" title="八进制转二进制"></a>八进制转二进制</h4><p>把八进制中<strong>每一个</strong>数都转化成为<strong>三个</strong>二进制数即可</p>
-<h3 id="如何区别不同进制"><a href="#如何区别不同进制" class="headerlink" title="如何区别不同进制"></a>如何区别不同进制</h3><p>一般会在右下角有角标，如八进制会在右下角有八的角标</p>
-<p>如果没有角标的情况下，会在数字的后面加上对应的字母以便区分，二进制的字母是B，十进制的字母是D，十六进制的字母是H。</p>
-<h3 id="真值和机器数"><a href="#真值和机器数" class="headerlink" title="真值和机器数"></a>真值和机器数</h3><p>在计算机中如何表示正负号，通常用0代表负号，用1代表正号。如5436这是个真值，为了表示他是正数，用<strong>1</strong>5436表示他是个正数，15436就是个机器数。在后面的原码，反码，补码，移码中会具体说明。</p>
-<h2 id="BCD码"><a href="#BCD码" class="headerlink" title="BCD码"></a>BCD码</h2><h3 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h3><p>使用二进制来编码的十进制数</p>
-<p>每<strong>四个二进制码（4bit）（一共对应了2^4=16种状态）对应这十进制中的0~9</strong>，那么明显有六种是冗余的</p>
-<h3 id="8421码"><a href="#8421码" class="headerlink" title="8421码"></a>8421码</h3><p>8421码种规定了0~9的二进制状态</p>
-<p><strong>9：1001</strong></p>
-<p><strong>8：1000</strong></p>
-<p><strong>7：0111</strong></p>
-<p><strong>6：0110</strong></p>
-<p><strong>5：0101</strong></p>
-<p><strong>4：0100</strong></p>
-<p><strong>3：0011</strong></p>
-<p><strong>2：0010</strong></p>
-<p><strong>1：0001</strong></p>
-<p><strong>0：0000</strong></p>
-<p>要记熟8421码，考试容易碰到</p>
-<h4 id="8421码中数之间的相加"><a href="#8421码中数之间的相加" class="headerlink" title="8421码中数之间的相加"></a>8421码中数之间的相加</h4><p>可以用二进制直接加（记住逢二进一就可以了），也可以用十进制加好之后再转化成二进制数。</p>
-<p><strong>Q：那么这里有个问题是相加得到的数大于9，不在8421码当中怎么办？</strong></p>
-<p><strong>A：通常把这个大于9的数再加上6即可得到两位数的表示方法</strong></p>
-<h3 id="余3码"><a href="#余3码" class="headerlink" title="余3码"></a>余3码</h3><p>在8421码表示的数值中每一个都加上一个二进制的0011，得到的就是余3码。</p>
-<h3 id="2421码"><a href="#2421码" class="headerlink" title="2421码"></a>2421码</h3><p>与8421码很类似，只是2421码对应的权值分别是2421.</p>
-<p>2421码在0~4的时候前两位的值是0</p>
-<h2 id="字符和字符串"><a href="#字符和字符串" class="headerlink" title="字符和字符串"></a>字符和字符串</h2><h3 id="ASCII码"><a href="#ASCII码" class="headerlink" title="ASCII码"></a>ASCII码</h3><p>在ASCII码中一共有128个字符，而2的7次方正好等于128，所以我们只需要7位二进制的编码就可以表示ASCII码中的数字符号字母，但是计算机为了凑够一个字节，通常使用8个bit来表示，这样正好凑够了一个字节（Byte）</p>
-<h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>已知<strong>A</strong>的ASCII码值是65，<strong>H</strong>存放在M单元中，求M单元中的二进制数</p>
-<p>H在26个字母的第八位，所以计算得M中存放的二进制值是<strong>0</strong>1001000（注意：一定要补一个0凑够八位）</p>
-<p><strong>按字节编址</strong>的意思是每一个地址对应着1B</p>
-<p>一个汉字占两个字节（2B）的大小</p>
-<h2 id="奇偶效验码"><a href="#奇偶效验码" class="headerlink" title="奇偶效验码"></a>奇偶效验码</h2><p>A的编码是00</p>
-<p>B的编码是01</p>
-<p>C的编码是10</p>
-<p>D的编码是11</p>
-<p>当然ABCD都是两个bit的。</p>
-<p><strong>位错误</strong>：0变1，1变0</p>
-<p>由若干位代码组成的一个字叫做<strong>码字</strong></p>
-<h3 id="码距"><a href="#码距" class="headerlink" title="码距"></a>码距</h3><p>将两个码字放在一起一个个字符的逐一进行对比，具有不同位的个数称为两个码字之间的距离，一种编码方案可能有若干个合法码字，各码字之间的<strong>最小距离</strong>称为<strong>码距</strong>。</p>
-<p>当码距=1时，无检错能力</p>
-<p>当码距=2时，具有检错能力</p>
-<p>当码距&gt;=3时，具有检错甚至纠错能力</p>
-<h3 id="奇效验码"><a href="#奇效验码" class="headerlink" title="奇效验码"></a>奇效验码</h3><p><strong>能发现奇数位错误</strong></p>
-<p>保证码中的“1”的个数是<strong>奇数</strong>个，如果是<strong>偶数</strong>，在前面添1；如果是<strong>奇数</strong>，在前面添0</p>
-<h3 id="偶效验码"><a href="#偶效验码" class="headerlink" title="偶效验码"></a>偶效验码</h3><p><strong>能发现偶数位错误</strong></p>
-<p>保证码中的“1”的个数是<strong>偶数</strong>个，如果是<strong>偶数</strong>，在前面添0；如果是<strong>奇数</strong>，在前面添1</p>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>在<strong>奇校验</strong>中有<strong>奇数个bit</strong>发生了错误是无法发现的</p>
-<p>在<strong>偶校验</strong>中有<strong>偶数个bit</strong>发生了错误是无法发现的</p>
-<h3 id="如何实现奇偶校验"><a href="#如何实现奇偶校验" class="headerlink" title="如何实现奇偶校验"></a>如何实现奇偶校验</h3><h4 id="先求校验码"><a href="#先求校验码" class="headerlink" title="先求校验码"></a>先求校验码</h4><p>将码中的每一bit都进行<strong>异或运算</strong>，返回值作为校验位</p>
-<p><strong>异或运算（模二加）：</strong>当两个值相同的时候返回0，当两个值不同的时候返回1</p>
-<h4 id="进行校验"><a href="#进行校验" class="headerlink" title="进行校验"></a>进行校验</h4><p>和求校验码很类似，对每个值都进行<strong>异或处理</strong>。如果结果为1说明出错了！</p>
-<h3 id="海明校验码"><a href="#海明校验码" class="headerlink" title="海明校验码"></a>海明校验码</h3><h4 id="海明码的设计思路"><a href="#海明码的设计思路" class="headerlink" title="海明码的设计思路"></a>海明码的设计思路</h4><p>将信息分组，对各组分别进行偶校验</p>
-<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>设信息位有n位，校验位有k位，那么信息位+校验位一共有n+k位，校验位一共有2^k种状态。</p>
-<p>推出不等式：<strong>2^k&gt;=n+k+1</strong>（n是信息位是给出的，要求的只是k）</p>
-<h4 id="信息位"><a href="#信息位" class="headerlink" title="信息位"></a>信息位</h4><p>使用D加下标来表示，校验位用P加下标来表示。</p>
-<h4 id="校验位放什么位置"><a href="#校验位放什么位置" class="headerlink" title="校验位放什么位置"></a>校验位放什么位置</h4><p>校验位Pi应该放在2^(i-1)的位置上</p>
-<h4 id="求校验位的值"><a href="#求校验位的值" class="headerlink" title="求校验位的值"></a>求校验位的值</h4><p>(用D表示信息位，用P表示效验码位，用H表示所有位置，@代表异或，其实是圈里加号)</p>
-<p>先把信息位所处的位置用二进制方式表示出来，假设有三位，把第三位是1的数提出来进行异或运算（用来异或的值是信息位里面的值）</p>
-<p>P1 = D1 @ D2 @ D4</p>
-<p>P2 = D1 @ D3 @ D4</p>
-<p>P3 = D2 @ D3 @ D4</p>
-<h4 id="纠错"><a href="#纠错" class="headerlink" title="纠错"></a>纠错</h4><p>S1 = P1 @ D1 @ D2 @ D4</p>
-<p>S2 = P2 @ D1 @ D3 @ D4</p>
-<p>S3 = P3 @ D2 @ D3 @ D4</p>
-<p><strong>如果：S1，S2，S3中出现了1（假设在S2出现），那么就是010位置出现了错误</strong></p>
-<h4 id="海明码的能力"><a href="#海明码的能力" class="headerlink" title="海明码的能力"></a>海明码的能力</h4><p>海明码具有一个bit位的纠错能力和两个bit位的检错能力</p>
-<h4 id="全校验"><a href="#全校验" class="headerlink" title="全校验"></a>全校验</h4><p>S1S2S3=0 且全体偶校验成功，说明无错误！</p>
-<p>S1S2S3！=0且全体偶校验失败，说明有1处错误，纠正即可，纠正方法是上面的<strong>纠错</strong>部分</p>
-<p>S1S2S3！=0且全体偶校验成功，说明有两处错误，需要重新上传。</p>
-<h3 id="循环冗余校验码"><a href="#循环冗余校验码" class="headerlink" title="循环冗余校验码"></a>循环冗余校验码</h3><p><strong>循环冗余非常难，多看几次视频：</strong></p>
-<p><strong><a href="https://www.bilibili.com/video/BV1BE411D7ii?p=13&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1BE411D7ii?p=13&amp;spm_id_from=pageDriver</a></strong></p>
-<p>定义：数据的发送方和接收方会先约定一个<strong>除数</strong>，当接收到数据后将要验证的数据除以除数，如果得到的数是0，那么这个数据是正确的，如果得到的数据不是0，那么这个数据是错误的。</p>
-<p>​            若是错误的，使用K个信息位加上R个校验位（R是生成多项式中的最高次幂），再进行除法，如果除数为0，说明OK；如果除数非0，说明有错误需要重新上传。</p>
-<h4 id="怎么求"><a href="#怎么求" class="headerlink" title="怎么求"></a>怎么求</h4><p>题目一般会给生成多项式G（G求出来的就是除数）出来，，例如G(x)=x^3 + x^2 +1，那么可以看成G(x)=1*x^3 + 1 *x^2 +0 * x^1 +1 *x^0,那么除数就是1101.（除数是早已经规定好的）</p>
-<p>在信息位后面补上r个0，，然后再与除数进行余二除。</p>
-<p><strong>余二除：从第一位开始看被除数的第一位如果是1那么商1，结果放原数，对后面的三位进行异或运算。。。得到的余数就是校验位，如果余数为000就是没错</strong></p>
-<h4 id="冗余校验码的检错能力的特点"><a href="#冗余校验码的检错能力的特点" class="headerlink" title="冗余校验码的检错能力的特点"></a>冗余校验码的检错能力的特点</h4><p>（1）可检测出所有奇数个错误</p>
-<p>（2）可检测出所有双bit的错误</p>
-<p>（3）可检测出所有小于等于校验位长度的连续错误</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>K位信息码，R位效验码，若生成多项式选择得当，2^R&gt;=K+R+1,则CRC码可纠一处错，因为(2^R)-1和K+R的所有位置元素是一一对应的！</p>
-]]></content>
-      <categories>
-        <category>计组</category>
-      </categories>
-      <tags>
-        <tag>计组</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>计算机组成原理--算数逻辑单元ALU</title>
     <url>/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/</url>
     <content><![CDATA[<h2 id="ALU实现"><a href="#ALU实现" class="headerlink" title="ALU实现"></a>ALU实现</h2><span id="more"></span>
@@ -4669,6 +4671,8 @@
 <p>3.资源共享观点： a.目的–资源共享</p>
 <p>​                                 b.组成单元–分布在不同地理位置的堕胎独立的自治计算机</p>
 <p>​                                 c.网络中的计算机必须遵循同意的规则–网络协议</p>
+<span id="more"></span>
+
 <h2 id="计算机网络的组成"><a href="#计算机网络的组成" class="headerlink" title="计算机网络的组成"></a>计算机网络的组成</h2><p>1.组成部分：硬件，软件，协议</p>
 <p>2.工作方式：边缘部分：由所有主机构成</p>
 <p>​                        核心部分：有大量的网络和路由器组成</p>
