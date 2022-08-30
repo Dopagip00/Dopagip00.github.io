@@ -84,6 +84,28 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--SringBuffer和StringBudilder“</title>
+    <url>/2022/02/09/JAVA-SringBuffer%E5%92%8CStringBudilder/</url>
+    <content><![CDATA[<p>这两个都是可变字符串.</p>
+<span id="more"></span>
+
+<p><strong>StringBuffer</strong>：</p>
+<p>StringBuffer str = new StringBuffer();</p>
+<p>可以使用append在后面追加字符串，用insert增加字符串</p>
+<p>insert（“0”，str）在第0个字符的前面增加字符串str。</p>
+<p><strong>用replace来更改指定位置字符：</strong></p>
+<p>replace(“0”，“5”，str)把0-5之间的字符替换为str。</p>
+<p>用<strong>delete删除指定位置的字符：</strong></p>
+<p>delete（“0”，“5”）删除0-5之间的字符串。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--List接口“</title>
     <url>/2022/02/09/JAVA-List%E6%8E%A5%E5%8F%A3/</url>
     <content><![CDATA[<p>List接口的特点：有序，有下标，元素可以重复</p>
@@ -124,19 +146,26 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--SringBuffer和StringBudilder“</title>
-    <url>/2022/02/09/JAVA-SringBuffer%E5%92%8CStringBudilder/</url>
-    <content><![CDATA[<p>这两个都是可变字符串.</p>
+    <title>JAVA--static关键字知识点</title>
+    <url>/2022/02/09/JAVA-static%E5%85%B3%E9%94%AE%E5%AD%97%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>1.有static修饰的属性就不用声明对象了，直接用类名去.属性</p>
 <span id="more"></span>
 
-<p><strong>StringBuffer</strong>：</p>
-<p>StringBuffer str = new StringBuffer();</p>
-<p>可以使用append在后面追加字符串，用insert增加字符串</p>
-<p>insert（“0”，str）在第0个字符的前面增加字符串str。</p>
-<p><strong>用replace来更改指定位置字符：</strong></p>
-<p>replace(“0”，“5”，str)把0-5之间的字符替换为str。</p>
-<p>用<strong>delete删除指定位置的字符：</strong></p>
-<p>delete（“0”，“5”）删除0-5之间的字符串。</p>
+<p>2.非静态方法能直接调用静态方法，但是静态方法不能调用非静态方法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class GG&#123;</span><br><span class="line">    public void  A()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public static void B()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">public class 静态 &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        GG.A();//不可行，因为A方法是非静态的</span><br><span class="line">        GG.B();//可行，因为B是静态的</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>介绍一些奇葩的代码块：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class QIPA &#123;</span><br><span class="line">    &#123;//作用：赋初值；</span><br><span class="line">        System.out.println(&quot;匿名代码块&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static &#123;//作用：只能执行一次</span><br><span class="line">        System.out.println(&quot;static代码块&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public QIPA()&#123;</span><br><span class="line">        System.out.println(&quot;普通的代码块&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        QIPA qipa = new QIPA();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/2a0caa983f3c4678bad9caf60fa4296e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> 先执行static代码块，再执行匿名的代码块，在执行普通的代码块。（static代码块即使不定义对象也可以执行）</p>
+<p>天秀操作：静态导入包（如我们想生成随机数）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.lang.math;//正常来说到这一步就不能往下了</span><br><span class="line">import static java.lang.math.random;//加个static就可以到下一步了，这叫静态调用包</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>子类不能继承被final继承的父类！</strong></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -191,35 +220,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--static关键字知识点</title>
-    <url>/2022/02/09/JAVA-static%E5%85%B3%E9%94%AE%E5%AD%97%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>1.有static修饰的属性就不用声明对象了，直接用类名去.属性</p>
-<span id="more"></span>
-
-<p>2.非静态方法能直接调用静态方法，但是静态方法不能调用非静态方法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class GG&#123;</span><br><span class="line">    public void  A()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public static void B()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">public class 静态 &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        GG.A();//不可行，因为A方法是非静态的</span><br><span class="line">        GG.B();//可行，因为B是静态的</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>介绍一些奇葩的代码块：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class QIPA &#123;</span><br><span class="line">    &#123;//作用：赋初值；</span><br><span class="line">        System.out.println(&quot;匿名代码块&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static &#123;//作用：只能执行一次</span><br><span class="line">        System.out.println(&quot;static代码块&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public QIPA()&#123;</span><br><span class="line">        System.out.println(&quot;普通的代码块&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        QIPA qipa = new QIPA();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/2a0caa983f3c4678bad9caf60fa4296e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> 先执行static代码块，再执行匿名的代码块，在执行普通的代码块。（static代码块即使不定义对象也可以执行）</p>
-<p>天秀操作：静态导入包（如我们想生成随机数）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import java.lang.math;//正常来说到这一步就不能往下了</span><br><span class="line">import static java.lang.math.random;//加个static就可以到下一步了，这叫静态调用包</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><strong>子类不能继承被final继承的父类！</strong></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JAVA--super知识点</title>
     <url>/2022/02/09/JAVA-super%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<p>1.Super指向父类的构造方法，必须在构造方法的第一个；</p>
@@ -265,6 +265,33 @@
 <p>2.只有外部类可以是静态的，内部类不行。</p>
 <p>3.内部类想要访问局部变量，需要局部变量是final修饰的（局部变量即方法里面定义的变量）</p>
 <p>4.内部类也可以继承接口用implements</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA--多态</title>
+    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
+    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
+<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
+<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
+<span id="more"></span>
+
+<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>多态的注意事项：</p>
+<p>1.多态是方法的多态，属性没有多态；</p>
+<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
+<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
+<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
+<p>##但是有些方法是不能重写的：</p>
+<p>1.static方法：属于类，不属于实例</p>
+<p>2.final属性</p>
+<p>3.private方法是私有的，当然重写了也没用</p>
+<p>instanceof （类型转换） 引用类型</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -346,24 +373,20 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--多态</title>
-    <url>/2022/02/09/JAVA-%E5%A4%9A%E6%80%81/</url>
-    <content><![CDATA[<p><strong>如果子类没有重写父类方法，就调用父类的。</strong></p>
-<p><strong>如果子类重写了父类，就算左边是父类，也是调用子类的重写方法。</strong></p>
-<p><strong>调用父类时，可以调用子类中的重写方法，但是不能调用子类中独有的方法！！！</strong></p>
+    <title>JAVA--封装</title>
+    <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
+    <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
 <span id="more"></span>
 
-<p>对象执行哪些方法主要看左边，和右边关系不大<img src="https://img-blog.csdnimg.cn/9e24d298f81a470e90e67d4007b4f523.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>多态的注意事项：</p>
-<p>1.多态是方法的多态，属性没有多态；</p>
-<p>\2. 父类和子类之间有联系 离谱的类型转换肯定报错（如String转Person方法）类型转换异常：ClassCastException.</p>
-<p>3.方法可以转换，同样遵循低转高原则（子类是低，父类是高），如果要高转低的话可以（子类）+方法名来实现。</p>
-<p>4.存在条件：继承关系，方法需要重写，父类的引用指向子类（即在声明对象的时候父类在左边，子类在右边）</p>
-<p>##但是有些方法是不能重写的：</p>
-<p>1.static方法：属于类，不属于实例</p>
-<p>2.final属性</p>
-<p>3.private方法是私有的，当然重写了也没用</p>
-<p>instanceof （类型转换） 引用类型</p>
+<p>2.get/set 方法最重要：用get方法获得该值，用set方法给该值赋予数值,因为你的属性被private限制住了，只能通过其他方法输出。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class AA&#123;</span><br><span class="line">    private int a=20;</span><br><span class="line">    public int geta()&#123;</span><br><span class="line">        return this.a;</span><br><span class="line">    &#125;</span><br><span class="line">    public void seta(int a)&#123;</span><br><span class="line">        this.a=a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class getset &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        AA aa = new AA();</span><br><span class="line">        //System.out.println(aa.a);这样写是错的，因为属性a被private限制了，只能在AA类中使用</span><br><span class="line">        //这时候就要使用set和get函数了</span><br><span class="line">        aa.seta(50);//这一步用来设置a的值</span><br><span class="line">        System.out.println(aa.geta());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>封装的作用：</p>
+<p>1.提高程序的安全性，保护程序</p>
+<p>2.统一接口（唯一接口只有get/set）</p>
+<p>3.隐藏代码实现细节</p>
+<p>4.系统的可维护性增加</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -401,29 +424,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--封装</title>
-    <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
-    <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
-<span id="more"></span>
-
-<p>2.get/set 方法最重要：用get方法获得该值，用set方法给该值赋予数值,因为你的属性被private限制住了，只能通过其他方法输出。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class AA&#123;</span><br><span class="line">    private int a=20;</span><br><span class="line">    public int geta()&#123;</span><br><span class="line">        return this.a;</span><br><span class="line">    &#125;</span><br><span class="line">    public void seta(int a)&#123;</span><br><span class="line">        this.a=a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class getset &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        AA aa = new AA();</span><br><span class="line">        //System.out.println(aa.a);这样写是错的，因为属性a被private限制了，只能在AA类中使用</span><br><span class="line">        //这时候就要使用set和get函数了</span><br><span class="line">        aa.seta(50);//这一步用来设置a的值</span><br><span class="line">        System.out.println(aa.geta());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>封装的作用：</p>
-<p>1.提高程序的安全性，保护程序</p>
-<p>2.统一接口（唯一接口只有get/set）</p>
-<p>3.隐藏代码实现细节</p>
-<p>4.系统的可维护性增加</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--抽象类“</title>
     <url>/2022/02/09/JAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
     <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
@@ -433,6 +433,27 @@
 <p>2.java里面的类是单继承的，但是接口时多继承的</p>
 <p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
 <p>4.抽象方法必须在抽象类里面</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--捕获异常“</title>
+    <url>/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<p> 捕获异常的知识点</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
+<p>假设要捕获多个异常，从大到小。</p>
+<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -478,82 +499,6 @@
 <p>用来回收不用的对象。</p>
 <p>4.exit(int status)：退出JVM，参数是0表示正常退出，参数是-1表示异常退出。</p>
 <p>在exit后面的语句当然就不执行了！</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--捕获异常“</title>
-    <url>/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<p> 捕获异常的知识点</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
-<p>假设要捕获多个异常，从大到小。</p>
-<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--文件file类“</title>
-    <url>/2022/02/09/JAVA-%E6%96%87%E4%BB%B6file%E7%B1%BB/</url>
-    <content><![CDATA[<p>java.io.File是文件名的抽象表示。</p>
-<span id="more"></span>
-
-<p><strong>你的文件表示必须在创建对象时候体现。</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/fb6fdb58d06f307e95bb0d2ef094c34d.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>常用的方法</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/750b65bb2dac31431da0c1b5fd888c62.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>File中的Separator是\ ，Separator是;</p>
-<p><strong>最好是用一个布尔类型的变量来表示createNewFile</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/528a9bda160f3d0530d1dc86aad54817.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>用布尔类型表示</p>
-<p>删除文件：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9af1fd354a5574fcaab8bd8ebe206a6b.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>有这两种方法</p>
-<p>获取文件创建日期：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/b26e5fed45d628eebec7235cb9350a2a.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>判断文件是否可写可读；</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/3f790142d2c2d99e836e65e2346e57d7.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>当只读的时候就不能写了</p>
-<p>判断是不是文件，是否是隐藏的：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/dce4fd3d48c2ccd0dc1fba07e62d8da5.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>判断是不是隐藏的，是不是文件：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/ce447e9b190e99c3e310830dfc5b3daa.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这里可以选择</p>
-<h2 id="文件夹"><a href="#文件夹" class="headerlink" title="文件夹"></a>文件夹</h2><p><img src="https://img-blog.csdnimg.cn/img_convert/ac863ec6df97a50a337f82ec314ebcbc.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>mkdirs创建多级目录文件夹，mkdir创建单级文件夹。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9541a40c8b7423f37eb5e810b1bb34db.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>获取绝对路径，路径，文件名</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9a2e173622aa85c9f576a72996639cc0.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>判断是否是文件夹是否隐藏</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/de6bca422bb73bab89a0181d5a3a2381.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>用了增强for循环</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -709,6 +654,61 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--文件file类“</title>
+    <url>/2022/02/09/JAVA-%E6%96%87%E4%BB%B6file%E7%B1%BB/</url>
+    <content><![CDATA[<p>java.io.File是文件名的抽象表示。</p>
+<span id="more"></span>
+
+<p><strong>你的文件表示必须在创建对象时候体现。</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/fb6fdb58d06f307e95bb0d2ef094c34d.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>常用的方法</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/750b65bb2dac31431da0c1b5fd888c62.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>File中的Separator是\ ，Separator是;</p>
+<p><strong>最好是用一个布尔类型的变量来表示createNewFile</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/528a9bda160f3d0530d1dc86aad54817.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>用布尔类型表示</p>
+<p>删除文件：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9af1fd354a5574fcaab8bd8ebe206a6b.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>有这两种方法</p>
+<p>获取文件创建日期：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/b26e5fed45d628eebec7235cb9350a2a.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>判断文件是否可写可读；</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/3f790142d2c2d99e836e65e2346e57d7.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>当只读的时候就不能写了</p>
+<p>判断是不是文件，是否是隐藏的：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/dce4fd3d48c2ccd0dc1fba07e62d8da5.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>判断是不是隐藏的，是不是文件：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ce447e9b190e99c3e310830dfc5b3daa.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这里可以选择</p>
+<h2 id="文件夹"><a href="#文件夹" class="headerlink" title="文件夹"></a>文件夹</h2><p><img src="https://img-blog.csdnimg.cn/img_convert/ac863ec6df97a50a337f82ec314ebcbc.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>mkdirs创建多级目录文件夹，mkdir创建单级文件夹。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9541a40c8b7423f37eb5e810b1bb34db.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>获取绝对路径，路径，文件名</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9a2e173622aa85c9f576a72996639cc0.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>判断是否是文件夹是否隐藏</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/de6bca422bb73bab89a0181d5a3a2381.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>用了增强for循环</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--泛型“</title>
     <url>/2022/02/09/JAVA-%E6%B3%9B%E5%9E%8B/</url>
     <content><![CDATA[<p>介绍泛型的基本概念</p>
@@ -749,6 +749,27 @@
 <p>显式定义是什么意思：就是即使方法里面什么东西都没有你也要把该方法写出来。</p>
 <p><strong>其实构造器最大的作用就是初始化值！</strong></p>
 <p><strong>快捷键：在IDEA里面Alt+Insert 快速建立构造器！</strong></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--类的盘点“</title>
+    <url>/2022/02/09/JAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9/</url>
+    <content><![CDATA[<p>先来一个特殊的：</p>
+<p>double res = 1.4-0.5/0.9;</p>
+<span id="more"></span>
+
+<p>System.out.println(res);//这时候输出的会是0.999999999</p>
+<p>这时候就要用到BigDecimal来精确输出double类型的数据了。</p>
+<p>BigDecimal num = new BigDecimal(“0.9”);//这样就可以声明一个BigDecimal数据了。</p>
+<p>当然要在前面加上import java.math.BigDecimal来引入BigDecimal</p>
+<hr>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).</span><br><span class="line">divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>)))<span class="comment">//这样就可以输出1而不是0.9999999了。</span></span><br><span class="line">同样也可以:</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">num</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>))</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -868,18 +889,14 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--类的盘点“</title>
-    <url>/2022/02/09/JAVA-%E7%B1%BB%E7%9A%84%E7%9B%98%E7%82%B9/</url>
-    <content><![CDATA[<p>先来一个特殊的：</p>
-<p>double res = 1.4-0.5/0.9;</p>
+    <title>”JAVA--集合知识点“</title>
+    <url>/2022/02/09/JAVA-%E9%9B%86%E5%90%88%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>1.集合的概念：存放对象的容器，类似数组的概念，同样集合也有对多个对象进行批量操作的功能。</p>
 <span id="more"></span>
 
-<p>System.out.println(res);//这时候输出的会是0.999999999</p>
-<p>这时候就要用到BigDecimal来精确输出double类型的数据了。</p>
-<p>BigDecimal num = new BigDecimal(“0.9”);//这样就可以声明一个BigDecimal数据了。</p>
-<p>当然要在前面加上import java.math.BigDecimal来引入BigDecimal</p>
-<hr>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).</span><br><span class="line">divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>)))<span class="comment">//这样就可以输出1而不是0.9999999了。</span></span><br><span class="line">同样也可以:</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">num</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;1.4&quot;</span>).subtract(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.5&quot;</span>)).divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;0.9&quot;</span>))</span><br></pre></td></tr></table></figure>
+<p>2.集合与数组的区别：<br>（1）数组的长度是固定的，但是集合的长度是不固定的。</p>
+<p>（2）数组可以存放引用类型（如Integer Float等）和基本数据类型（int float 等），集合只能存放引用类型。</p>
+<p>3.集合用到的所有类都在java.util.*这个包里面。</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -904,37 +921,6 @@
       </categories>
       <tags>
         <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--集合知识点“</title>
-    <url>/2022/02/09/JAVA-%E9%9B%86%E5%90%88%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>1.集合的概念：存放对象的容器，类似数组的概念，同样集合也有对多个对象进行批量操作的功能。</p>
-<span id="more"></span>
-
-<p>2.集合与数组的区别：<br>（1）数组的长度是固定的，但是集合的长度是不固定的。</p>
-<p>（2）数组可以存放引用类型（如Integer Float等）和基本数据类型（int float 等），集合只能存放引用类型。</p>
-<p>3.集合用到的所有类都在java.util.*这个包里面。</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”Linux--Xshell和Xftp“</title>
-    <url>/2022/02/09/Linux-Xshell%E5%92%8CXftp/</url>
-    <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
-<p>不同点：Xftp用于发送文件。</p>
-<p>Xshell可以使用windows来访问Linux，实现远程操控。</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -985,6 +971,52 @@
       </tags>
   </entry>
   <entry>
+    <title>”Linux--Xshell和Xftp“</title>
+    <url>/2022/02/09/Linux-Xshell%E5%92%8CXftp/</url>
+    <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
+<p>不同点：Xftp用于发送文件。</p>
+<p>Xshell可以使用windows来访问Linux，实现远程操控。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”Linux--忘记密码的找回方法“</title>
+    <url>/2022/02/09/Linux-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E6%89%BE%E5%9B%9E%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>非常详细！保姆级教程！</p>
+<span id="more"></span>
+
+<p> (1)在登录前的界面按下“e”编辑，如图：</p>
+<p><img src="https://img-blog.csdnimg.cn/24c29cb043ac4d2f91a731ff9b6121ae.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（2）找到linux16所在的那一行的下面一行：（如果没找到linux16就按着键盘向下的箭头就能看见了）</p>
+<p><img src="https://img-blog.csdnimg.cn/2f7d063b6b994865a19935d18958e2de.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> （3）在UTF-8后面按下空格后加上这句话：init=/bin/sh</p>
+<p><img src="https://img-blog.csdnimg.cn/8b229a66f7534503bcf5298f85aa9fcf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>(4)输入完之后按下快捷键Ctrl+x进入单用户模式（如果左边的Ctrl不行就试试右边的） </p>
+<p>（5）在光标闪烁的位置输入这句话：mount -o remount,rw/  输入完之后回车。</p>
+<p><img src="https://img-blog.csdnimg.cn/2f62ded86e884e48b6b27fa8e15eb14d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/3db9328c5fb742acbf74ccdcc4698f29.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> （6）然后在新界面光标闪烁位置输入passwd然后回车，输入新密码，然后确认密码</p>
+<p>（7）输入完之后当我们看到passwd=****就说明成功修改了密码。</p>
+<p><img src="https://img-blog.csdnimg.cn/5f29832e73d74f2dad243c54a44b6f6e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（8）紧接着在下面的一行输入这句话：touch /.autorelabel（注意：touch和/之间有一个空格）</p>
+<p><img src="https://img-blog.csdnimg.cn/8df0b14725b648ec9f51e7b974ae8f33.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（9）继续在光标闪烁的位置输入exec /sbin/init（同样在exec和/之间有一个空格），完成后按回车，耐心等待系统修改密码（时间会稍长）完成后linux会自动重启。</p>
+<p><img src="https://img-blog.csdnimg.cn/4b5f47ea34064e89a594099f73e1c200.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（10）登录时使用新密码即可 .</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”Linux--实用指令“</title>
     <url>/2022/02/09/Linux-%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4/</url>
     <content><![CDATA[<p>介绍Linux的运行级别和找回root密码的方式</p>
@@ -1022,69 +1054,6 @@
 <p>ls -a 显示当前目录下所有文件包括隐藏文件</p>
 <p>ls -l（等效于ll）表示目录以单行的方式输出<img src="https://img-blog.csdnimg.cn/c8efefc5fb2144dc9fab281847b94cb6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 <p> ls -la或者ls -al 表示单行输出文件包括隐藏文件</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”Linux--用户管理“</title>
-    <url>/2022/02/09/Linux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<p> 一、基本操作：</p>
-<p>添加用户：useradd 用户名</p>
-<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
-<span id="more"></span>
-
-<p>删除用户(不保留家目录)：userdel -r 用户名</p>
-<p>更改用户密码：passwd 用户名</p>
-<p>查询用户信息：id 用户名</p>
-<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
-<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
-<p>想要查看现在的用户是谁：who am i（离谱）</p>
-<p>pwd：查看现在在哪个目录下面</p>
-<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
-<p>添加组：groupadd 组名</p>
-<p>删除组：groupdel 组名</p>
-<p>创建用户的同时分组：useradd -g 组名 用户名</p>
-<p>用户换组：usermod -g 新组名 用户名</p>
-<p><strong>用户和组的相关文件：</strong></p>
-<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”Linux--忘记密码的找回方法“</title>
-    <url>/2022/02/09/Linux-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E6%89%BE%E5%9B%9E%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>非常详细！保姆级教程！</p>
-<span id="more"></span>
-
-<p> (1)在登录前的界面按下“e”编辑，如图：</p>
-<p><img src="https://img-blog.csdnimg.cn/24c29cb043ac4d2f91a731ff9b6121ae.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（2）找到linux16所在的那一行的下面一行：（如果没找到linux16就按着键盘向下的箭头就能看见了）</p>
-<p><img src="https://img-blog.csdnimg.cn/2f7d063b6b994865a19935d18958e2de.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> （3）在UTF-8后面按下空格后加上这句话：init=/bin/sh</p>
-<p><img src="https://img-blog.csdnimg.cn/8b229a66f7534503bcf5298f85aa9fcf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>(4)输入完之后按下快捷键Ctrl+x进入单用户模式（如果左边的Ctrl不行就试试右边的） </p>
-<p>（5）在光标闪烁的位置输入这句话：mount -o remount,rw/  输入完之后回车。</p>
-<p><img src="https://img-blog.csdnimg.cn/2f62ded86e884e48b6b27fa8e15eb14d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/3db9328c5fb742acbf74ccdcc4698f29.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> （6）然后在新界面光标闪烁位置输入passwd然后回车，输入新密码，然后确认密码</p>
-<p>（7）输入完之后当我们看到passwd=****就说明成功修改了密码。</p>
-<p><img src="https://img-blog.csdnimg.cn/5f29832e73d74f2dad243c54a44b6f6e.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（8）紧接着在下面的一行输入这句话：touch /.autorelabel（注意：touch和/之间有一个空格）</p>
-<p><img src="https://img-blog.csdnimg.cn/8df0b14725b648ec9f51e7b974ae8f33.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（9）继续在光标闪烁的位置输入exec /sbin/init（同样在exec和/之间有一个空格），完成后按回车，耐心等待系统修改密码（时间会稍长）完成后linux会自动重启。</p>
-<p><img src="https://img-blog.csdnimg.cn/4b5f47ea34064e89a594099f73e1c200.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>（10）登录时使用新密码即可 .</p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -1149,6 +1118,59 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”Linux--用户管理“</title>
+    <url>/2022/02/09/Linux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<p> 一、基本操作：</p>
+<p>添加用户：useradd 用户名</p>
+<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
+<span id="more"></span>
+
+<p>删除用户(不保留家目录)：userdel -r 用户名</p>
+<p>更改用户密码：passwd 用户名</p>
+<p>查询用户信息：id 用户名</p>
+<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
+<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
+<p>想要查看现在的用户是谁：who am i（离谱）</p>
+<p>pwd：查看现在在哪个目录下面</p>
+<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
+<p>添加组：groupadd 组名</p>
+<p>删除组：groupdel 组名</p>
+<p>创建用户的同时分组：useradd -g 组名 用户名</p>
+<p>用户换组：usermod -g 新组名 用户名</p>
+<p><strong>用户和组的相关文件：</strong></p>
+<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NFT--MetaMask的创建</title>
+    <url>/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/</url>
+    <content><![CDATA[<h3 id="Chrome中的MetaMask钱包的创建"><a href="#Chrome中的MetaMask钱包的创建" class="headerlink" title="Chrome中的MetaMask钱包的创建"></a>Chrome中的MetaMask钱包的创建</h3><span id="more"></span>
+
+<p>1.先把MetaMask添加到Chrome插件</p>
+<p>2.按照提示设置密码</p>
+<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164451817.png" alt="image-20220605164451817"></p>
+<p>3.每个账户都会有一个专属的助记词，<strong>请记住你的助记词，很重要</strong></p>
+<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164617756.png" alt="image-20220605164617756"></p>
+<p>4.为了确保你记住会让你确认一遍</p>
+<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605165616940.png" alt="image-20220605165616940"></p>
+<p>5.完成之后就创建好你的MetaMask账户了！</p>
+<p>6.再登陆Mintable.app网站（用于NFT的购买和售卖）创建账户，和你的Meta Mask账户连接即可进行NFT的购买和售卖。</p>
+]]></content>
+      <categories>
+        <category>NFT</category>
+      </categories>
+      <tags>
+        <tag>NFT</tag>
       </tags>
   </entry>
   <entry>
@@ -2241,59 +2263,18 @@
       </tags>
   </entry>
   <entry>
-    <title>html -- 基础</title>
-    <url>/2022/04/14/html-%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--标准格式--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mate</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line">    	标题 </span><br><span class="line">    <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">h2</span>&gt;</span>标题2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        	段落1</span><br><span class="line">    	<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+    <title>R-安装R语言</title>
+    <url>/2022/07/03/R-%E5%AE%89%E8%A3%85R%E8%AF%AD%E8%A8%80/</url>
+    <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV1Uv411n76i?spm_id_from=333.337.search-card.all.click&amp;vd_source=acefe4c123e2b73c9e6c4b23e6627fa8">https://www.bilibili.com/video/BV1Uv411n76i?spm_id_from=333.337.search-card.all.click&amp;vd_source=acefe4c123e2b73c9e6c4b23e6627fa8</a></p>
+<p>需要注意的是在linux使用R的时候每次都要先激活R语言：conda activate user_R</p>
+<p>然后使用：R 来访问R语言</p>
+<p>使用：radian 来访问有颜色的R语言</p>
 ]]></content>
       <categories>
-        <category>html</category>
+        <category>R语言</category>
       </categories>
       <tags>
-        <tag>html</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo博客的基本操作</title>
-    <url>/2022/02/09/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<p>hexo clean 清除缓存</p>
-<p>hexo n “…” 生成博客文章，标题是…</p>
-<span id="more"></span>
-
-<p>hexo s   start博客，默认启动在localhost:4000端口</p>
-<p>hexo d   部署到远端</p>
-<p>当写完博客之后通常使用这三个：（依次输入）</p>
-<p>hexo clean </p>
-<p>hexo g</p>
-<p>hexo d</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NFT--MetaMask的创建</title>
-    <url>/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/</url>
-    <content><![CDATA[<h3 id="Chrome中的MetaMask钱包的创建"><a href="#Chrome中的MetaMask钱包的创建" class="headerlink" title="Chrome中的MetaMask钱包的创建"></a>Chrome中的MetaMask钱包的创建</h3><span id="more"></span>
-
-<p>1.先把MetaMask添加到Chrome插件</p>
-<p>2.按照提示设置密码</p>
-<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164451817.png" alt="image-20220605164451817"></p>
-<p>3.每个账户都会有一个专属的助记词，<strong>请记住你的助记词，很重要</strong></p>
-<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164617756.png" alt="image-20220605164617756"></p>
-<p>4.为了确保你记住会让你确认一遍</p>
-<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605165616940.png" alt="image-20220605165616940"></p>
-<p>5.完成之后就创建好你的MetaMask账户了！</p>
-<p>6.再登陆Mintable.app网站（用于NFT的购买和售卖）创建账户，和你的Meta Mask账户连接即可进行NFT的购买和售卖。</p>
-]]></content>
-      <categories>
-        <category>NFT</category>
-      </categories>
-      <tags>
-        <tag>NFT</tag>
+        <tag>R语言</tag>
       </tags>
   </entry>
   <entry>
@@ -2319,40 +2300,24 @@
       </tags>
   </entry>
   <entry>
-    <title>R-安装R语言</title>
-    <url>/2022/07/03/R-%E5%AE%89%E8%A3%85R%E8%AF%AD%E8%A8%80/</url>
-    <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV1Uv411n76i?spm_id_from=333.337.search-card.all.click&amp;vd_source=acefe4c123e2b73c9e6c4b23e6627fa8">https://www.bilibili.com/video/BV1Uv411n76i?spm_id_from=333.337.search-card.all.click&amp;vd_source=acefe4c123e2b73c9e6c4b23e6627fa8</a></p>
-<p>需要注意的是在linux使用R的时候每次都要先激活R语言：conda activate user_R</p>
-<p>然后使用：R 来访问R语言</p>
-<p>使用：radian 来访问有颜色的R语言</p>
-]]></content>
-      <categories>
-        <category>R语言</category>
-      </categories>
-      <tags>
-        <tag>R语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--random“</title>
-    <url>/2022/02/09/python-random/</url>
-    <content><![CDATA[<p>随机生产一个取值范围在10~100的整数：random.randint(10,100)</p>
+    <title>hexo博客的基本操作</title>
+    <url>/2022/02/09/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p>hexo clean 清除缓存</p>
+<p>hexo n “…” 生成博客文章，标题是…</p>
 <span id="more"></span>
 
-<p>一个比较重要的语法：</p>
-<p>random.randint(1~10)假设生成的随机数是1</p>
-<p>random.randint(1~10)假设生成的随机数是3</p>
-<p>random.randint(1~10)假设生成的随机数是6</p>
-<p>我们使用random.setstate(x)</p>
-<p>在后面我们再使用三次</p>
-<p>random.randint(1~10）</p>
-<p>三次生成的数分别是1，3，6，所以可以推断出setstate的作用是把前三次生成的随机数变成一个固定的状态再后面再生成！</p>
+<p>hexo s   start博客，默认启动在localhost:4000端口</p>
+<p>hexo d   部署到远端</p>
+<p>当写完博客之后通常使用这三个：（依次输入）</p>
+<p>hexo clean </p>
+<p>hexo g</p>
+<p>hexo d</p>
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>python</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -2404,6 +2369,19 @@
       </tags>
   </entry>
   <entry>
+    <title>html -- 基础</title>
+    <url>/2022/04/14/html-%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--标准格式--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mate</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line">    	标题 </span><br><span class="line">    <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">h2</span>&gt;</span>标题2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        	段落1</span><br><span class="line">    	<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>html</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python--name属性</title>
     <url>/2022/03/10/python-name%E5%B1%9E%E6%80%A7/</url>
     <content><![CDATA[<p>python中的 __  <em>name</em> _ _属性</p>
@@ -2422,15 +2400,19 @@
       </tags>
   </entry>
   <entry>
-    <title>”python--一些函数“</title>
-    <url>/2022/02/09/python-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<p> bool()：判断括号里面的结果是真还是假。</p>
-<p>真的情况：在括号里面加引号，引号里面有任何值的结果都是真以及直接输入true（不加引号）</p>
-<p>假的情况：在引号里面有引号但是引号里面什么都没有以及直接输入false</p>
+    <title>”python--random“</title>
+    <url>/2022/02/09/python-random/</url>
+    <content><![CDATA[<p>随机生产一个取值范围在10~100的整数：random.randint(10,100)</p>
 <span id="more"></span>
 
-<p>以下是定义为false的情况：</p>
-<p><img src="https://img-blog.csdnimg.cn/91c7d524a1064e67a99244784f03bcc4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>一个比较重要的语法：</p>
+<p>random.randint(1~10)假设生成的随机数是1</p>
+<p>random.randint(1~10)假设生成的随机数是3</p>
+<p>random.randint(1~10)假设生成的随机数是6</p>
+<p>我们使用random.setstate(x)</p>
+<p>在后面我们再使用三次</p>
+<p>random.randint(1~10）</p>
+<p>三次生成的数分别是1，3，6，所以可以推断出setstate的作用是把前三次生成的随机数变成一个固定的状态再后面再生成！</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -2440,32 +2422,15 @@
       </tags>
   </entry>
   <entry>
-    <title>python--元组</title>
-    <url>/2022/02/11/python-%E5%85%83%E7%BB%84/</url>
-    <content><![CDATA[<h3 id="包含了元组中的大部分操作"><a href="#包含了元组中的大部分操作" class="headerlink" title="包含了元组中的大部分操作"></a>包含了元组中的大部分操作</h3><span id="more"></span>
+    <title>”python--一些函数“</title>
+    <url>/2022/02/09/python-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p> bool()：判断括号里面的结果是真还是假。</p>
+<p>真的情况：在括号里面加引号，引号里面有任何值的结果都是真以及直接输入true（不加引号）</p>
+<p>假的情况：在引号里面有引号但是引号里面什么都没有以及直接输入false</p>
+<span id="more"></span>
 
-<p>1.元组类似于数组，但是元组<strong>可以</strong>不带括号表示，如：数组：（1，2，3），元组：1，2，3。但是建议最好一直加上，增加代码的可读性。</p>
-<p>2.不可以改变元组里面的数，如：a[1] = 9 是不可取的。正是因为元组不能修改，所以相对于数组来说安全性更高。</p>
-<p>3.切片的翻转操作：a[::-1] 会把元组里面的所有的数进行翻转。</p>
-<p>4.大部分的函数操作是和数组操作一样的：index操作，count操作等等都和数组是一样的</p>
-<p>5.元组的嵌套：</p>
-<p>s=(1,2,3)</p>
-<p>t=(4,5,6)</p>
-<p>w=s , t</p>
-<p>print(w)</p>
-<p>输出w的结果是((1,2,3),(4,5,6))</p>
-<p>6.元组的迭代：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s=(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">t=(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">w=s,t</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> w:</span><br><span class="line">	<span class="keyword">for</span> each <span class="keyword">in</span> i:</span><br><span class="line">		<span class="built_in">print</span>(each,end=<span class="string">&quot; &quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>7.在元组中如何生成只有一个元素的元组：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = (<span class="number">12</span>,)</span><br><span class="line"><span class="built_in">type</span>(x)</span><br></pre></td></tr></table></figure>
-
-<p>使用type函数查看即可得出x是tuple元组类型，重要的是12后面的逗号！！</p>
-<p>8.打包和解包：</p>
-<p><strong>打包：即生成一个元组</strong></p>
-<p>解包：如下图这样，生成的t有三个元素，分别赋值给x,y,z称之为解包，解包需要注意的是：左侧变量名的数量必须跟右侧元素的数量一致。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">t = (<span class="number">123</span>,<span class="number">12</span>,<span class="number">1</span>)</span><br><span class="line">x,y,z = t</span><br><span class="line"><span class="built_in">print</span>(x,y,z)</span><br></pre></td></tr></table></figure>
-
+<p>以下是定义为false的情况：</p>
+<p><img src="https://img-blog.csdnimg.cn/91c7d524a1064e67a99244784f03bcc4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -2555,6 +2520,41 @@
 
 
 <h3 id="修改字典和删除字典"><a href="#修改字典和删除字典" class="headerlink" title="修改字典和删除字典"></a>修改字典和删除字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#修改字典</span></span><br><span class="line">di = &#123;<span class="string">&#x27;name&#x27;</span> = <span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;num&#x27;</span> = <span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;class&#x27;</span> = <span class="number">3</span>&#125;</span><br><span class="line">di[<span class="string">&#x27;name&#x27;</span> = <span class="string">&#x27;10&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(di[<span class="string">&#x27;name&#x27;</span>])  <span class="comment">#10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除字典</span></span><br><span class="line"><span class="keyword">del</span> di[<span class="string">&#x27;name&#x27;</span>] <span class="comment"># 删除键 &#x27;Name&#x27;</span></span><br><span class="line">di.clear()     <span class="comment"># 清空字典，但是字典还是保留着的</span></span><br><span class="line"><span class="keyword">del</span> di         <span class="comment"># 删除字典</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python--元组</title>
+    <url>/2022/02/11/python-%E5%85%83%E7%BB%84/</url>
+    <content><![CDATA[<h3 id="包含了元组中的大部分操作"><a href="#包含了元组中的大部分操作" class="headerlink" title="包含了元组中的大部分操作"></a>包含了元组中的大部分操作</h3><span id="more"></span>
+
+<p>1.元组类似于数组，但是元组<strong>可以</strong>不带括号表示，如：数组：（1，2，3），元组：1，2，3。但是建议最好一直加上，增加代码的可读性。</p>
+<p>2.不可以改变元组里面的数，如：a[1] = 9 是不可取的。正是因为元组不能修改，所以相对于数组来说安全性更高。</p>
+<p>3.切片的翻转操作：a[::-1] 会把元组里面的所有的数进行翻转。</p>
+<p>4.大部分的函数操作是和数组操作一样的：index操作，count操作等等都和数组是一样的</p>
+<p>5.元组的嵌套：</p>
+<p>s=(1,2,3)</p>
+<p>t=(4,5,6)</p>
+<p>w=s , t</p>
+<p>print(w)</p>
+<p>输出w的结果是((1,2,3),(4,5,6))</p>
+<p>6.元组的迭代：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">s=(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">t=(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">w=s,t</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> w:</span><br><span class="line">	<span class="keyword">for</span> each <span class="keyword">in</span> i:</span><br><span class="line">		<span class="built_in">print</span>(each,end=<span class="string">&quot; &quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>7.在元组中如何生成只有一个元素的元组：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = (<span class="number">12</span>,)</span><br><span class="line"><span class="built_in">type</span>(x)</span><br></pre></td></tr></table></figure>
+
+<p>使用type函数查看即可得出x是tuple元组类型，重要的是12后面的逗号！！</p>
+<p>8.打包和解包：</p>
+<p><strong>打包：即生成一个元组</strong></p>
+<p>解包：如下图这样，生成的t有三个元素，分别赋值给x,y,z称之为解包，解包需要注意的是：左侧变量名的数量必须跟右侧元素的数量一致。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">t = (<span class="number">123</span>,<span class="number">12</span>,<span class="number">1</span>)</span><br><span class="line">x,y,z = t</span><br><span class="line"><span class="built_in">print</span>(x,y,z)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -2679,6 +2679,29 @@
       </tags>
   </entry>
   <entry>
+    <title>”python--深拷贝和浅拷贝“</title>
+    <url>/2022/02/09/python-%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
+    <content><![CDATA[<p><strong>假设B复制了A，当修改A时，看B是否会发生变化，如果B也跟着变了，说明这是浅拷贝，拿人手短，如果B没变，那就是深拷贝，自食其力。</strong></p>
+<span id="more"></span>
+
+<p>浅拷贝的实现方法：</p>
+<p>x=…..</p>
+<p>y=copy.copy(x)</p>
+<p>深拷贝的实现方法：</p>
+<p>x=…</p>
+<p>y=copy.deepcopy(x)</p>
+<p>其中第一个copy是copy模块</p>
+<p><img src="https://img-blog.csdnimg.cn/550469b3a1764d3d9357df29840651d2.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这样的copy是浅拷贝</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”python--除和地板除“</title>
     <url>/2022/02/09/python-%E9%99%A4%E5%92%8C%E5%9C%B0%E6%9D%BF%E9%99%A4/</url>
     <content><![CDATA[<p>3/2=1.5这个谁都懂</p>
@@ -2694,29 +2717,6 @@
 <p>int（x）的结果就是2，向下取整！</p>
 <p>pow(2,3)代表2的三次方，和2**3的效果一样。</p>
 <p>pow（2,3,4）代表着2**3%4即2的三次方结果除四的余数！</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--深拷贝和浅拷贝“</title>
-    <url>/2022/02/09/python-%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
-    <content><![CDATA[<p><strong>假设B复制了A，当修改A时，看B是否会发生变化，如果B也跟着变了，说明这是浅拷贝，拿人手短，如果B没变，那就是深拷贝，自食其力。</strong></p>
-<span id="more"></span>
-
-<p>浅拷贝的实现方法：</p>
-<p>x=…..</p>
-<p>y=copy.copy(x)</p>
-<p>深拷贝的实现方法：</p>
-<p>x=…</p>
-<p>y=copy.deepcopy(x)</p>
-<p>其中第一个copy是copy模块</p>
-<p><img src="https://img-blog.csdnimg.cn/550469b3a1764d3d9357df29840651d2.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这样的copy是浅拷贝</p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -2751,6 +2751,22 @@
       </categories>
       <tags>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web--将web内容上传服务器</title>
+    <url>/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<h4 id="先上总结"><a href="#先上总结" class="headerlink" title="先上总结"></a>先上总结</h4><p>1.先用原始服务器的实例创建一个ubuntu镜像，记住镜像的账号（root）和密码。<br>2.先使用cmd进行root连接：（ssh <a href="mailto:&#114;&#111;&#111;&#x74;&#64;&#x31;&#x32;&#48;&#x2e;&#55;&#x37;&#46;&#49;&#x37;&#x2e;&#x32;&#49;&#54;">&#114;&#111;&#111;&#x74;&#64;&#x31;&#x32;&#48;&#x2e;&#55;&#x37;&#46;&#49;&#x37;&#x2e;&#x32;&#49;&#54;</a>）当然使用putty或者Xshell同样可以<br>3.使用Xftp7上传对应的web网页到服务器对应的目录中，目录为var\www\html（其中的var目录是和root同级目录）<br>4.上传之后，在浏览器中使用公网的ip即可看到网页。<br>试了一天TT</p>
+<span id="more"></span>
+
+<h4 id="参考视频，资料"><a href="#参考视频，资料" class="headerlink" title="参考视频，资料"></a>参考视频，资料</h4><p>b站视频：<a href="https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click</a></p>
+<p>博客园日志：<a href="http://t.zoukankan.com/chrischen98-p-10874821.html%EF%BC%88%E4%B8%8A%E5%8D%88%E4%B8%80%E7%9B%B4%E7%9C%8B%E8%BF%99%E4%B8%AA%EF%BC%8C%E4%BD%86%E6%98%AF%E7%94%A8%E4%BA%86iis%E4%B9%8B%E5%90%8E%E7%BD%91%E9%A1%B5%E4%B8%80%E7%9B%B4%E4%B8%8D%E6%98%BE%E7%A4%BA,%E8%AE%BE%E7%BD%AE%E5%95%A5%E7%AB%AF%E5%8F%A3%E9%83%BD%E6%B2%A1%E7%94%A8%EF%BC%89">http://t.zoukankan.com/chrischen98-p-10874821.html（上午一直看这个，但是用了iis之后网页一直不显示,设置啥端口都没用）</a></p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -2815,22 +2831,6 @@
       </categories>
       <tags>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web--将web内容上传服务器</title>
-    <url>/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<h4 id="先上总结"><a href="#先上总结" class="headerlink" title="先上总结"></a>先上总结</h4><p>1.先用原始服务器的实例创建一个ubuntu镜像，记住镜像的账号（root）和密码。<br>2.先使用cmd进行root连接：（ssh <a href="mailto:&#x72;&#111;&#x6f;&#116;&#64;&#x31;&#x32;&#x30;&#46;&#x37;&#x37;&#46;&#49;&#x37;&#x2e;&#50;&#49;&#54;">&#x72;&#111;&#x6f;&#116;&#64;&#x31;&#x32;&#x30;&#46;&#x37;&#x37;&#46;&#49;&#x37;&#x2e;&#50;&#49;&#54;</a>）当然使用putty或者Xshell同样可以<br>3.使用Xftp7上传对应的web网页到服务器对应的目录中，目录为var\www\html（其中的var目录是和root同级目录）<br>4.上传之后，在浏览器中使用公网的ip即可看到网页。<br>试了一天TT</p>
-<span id="more"></span>
-
-<h4 id="参考视频，资料"><a href="#参考视频，资料" class="headerlink" title="参考视频，资料"></a>参考视频，资料</h4><p>b站视频：<a href="https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click</a></p>
-<p>博客园日志：<a href="http://t.zoukankan.com/chrischen98-p-10874821.html%EF%BC%88%E4%B8%8A%E5%8D%88%E4%B8%80%E7%9B%B4%E7%9C%8B%E8%BF%99%E4%B8%AA%EF%BC%8C%E4%BD%86%E6%98%AF%E7%94%A8%E4%BA%86iis%E4%B9%8B%E5%90%8E%E7%BD%91%E9%A1%B5%E4%B8%80%E7%9B%B4%E4%B8%8D%E6%98%BE%E7%A4%BA,%E8%AE%BE%E7%BD%AE%E5%95%A5%E7%AB%AF%E5%8F%A3%E9%83%BD%E6%B2%A1%E7%94%A8%EF%BC%89">http://t.zoukankan.com/chrischen98-p-10874821.html（上午一直看这个，但是用了iis之后网页一直不显示,设置啥端口都没用）</a></p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -3178,6 +3178,102 @@
       </tags>
   </entry>
   <entry>
+    <title>数据结构--查找</title>
+    <url>/2022/08/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%9F%A5%E6%89%BE/</url>
+    <content><![CDATA[<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>1.查找表（Search Table）是由同一类型数据元素构成的集合</p>
+<p>2.关键字是数据元素中某个数据项的值</p>
+<p>​    若关键字可以唯一的标识一个记录，那称为主关键字</p>
+<p>​    对于可以识别多个记录的关键字称为次关键字</p>
+<p>3.操作表分为两大类：静态操作表 and 动态操作表</p>
+<p>​    a.静态操作表：只做查找操作的查找</p>
+<p>​    b.动态查找表：在查找的同时可以进行添加，删除等操作</p>
+<h1 id="顺序表查找"><a href="#顺序表查找" class="headerlink" title="顺序表查找"></a>顺序表查找</h1><p>1.按照从第一个到最后一个的顺序挨个查找，若全部没有对应，则查找失败</p>
+<p>2.顺序查找代码</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//a为数组,n为要查找数组长度，key为要查找的关键字</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">Sequental_Search</span><span class="params">(<span class="type">int</span> *a,<span class="type">int</span> n,<span class="type">int</span> key)</span>&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i]==key)</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.优化版顺序查找</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//由哨兵版</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">Sequential_Search_remark</span><span class="params">(<span class="type">int</span> *a,<span class="type">int</span> n,<span class="type">int</span> key)</span>&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    a[<span class="number">0</span>]=key;<span class="comment">//a[0]为哨兵</span></span><br><span class="line">    i=n;<span class="comment">//循环从数组尾部开始</span></span><br><span class="line">    <span class="keyword">while</span>(a[i]!=key)</span><br><span class="line">        i--;</span><br><span class="line">    <span class="keyword">return</span> i;<span class="comment">//返回0说明查找失败</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度为O(n)</p>
+<h1 id="有序表查找"><a href="#有序表查找" class="headerlink" title="有序表查找"></a>有序表查找</h1><p>一、折半查找（Binary Search）</p>
+<p>1.线性表必须用顺序表存储</p>
+<p>2.例：对于数组{0,1,16,24,35,47,59,62,73,88,99},查找是否有62这个数</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">Binary_Search</span><span class="params">(<span class="type">int</span> *a,<span class="type">int</span> n,<span class="type">int</span> key)</span>&#123;</span><br><span class="line">	<span class="type">int</span> low,high,mid;</span><br><span class="line">    low=<span class="number">1</span>;<span class="comment">//首位1</span></span><br><span class="line">    high=n;<span class="comment">//末位n</span></span><br><span class="line">    <span class="keyword">while</span>(low&lt;=high)&#123;</span><br><span class="line">        mid=(high+low)/<span class="number">2</span>;<span class="comment">//折半</span></span><br><span class="line">        <span class="keyword">if</span>(key&lt;a[mid])<span class="comment">//查找值小于中值</span></span><br><span class="line">            high=mid<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(key&gt;a[mid])<span class="comment">//查找值大于中值</span></span><br><span class="line">            low=mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> </span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.折半查找时复杂度O(logn)</p>
+<h1 id="插值查找"><a href="#插值查找" class="headerlink" title="插值查找"></a>插值查找</h1><p>1.在折半查找时，mid=(high+low)/2=low+(high-low)/2</p>
+<p>​    可以改为mid=low+(key-a[low])*(high-low)/(a[high]-a[low])</p>
+<p>2.插值查找的时间复杂度也为O(logn)</p>
+<h1 id="斐波那契查找"><a href="#斐波那契查找" class="headerlink" title="斐波那契查找"></a>斐波那契查找</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">Fibonacci_Search</span><span class="params">(<span class="type">int</span> *a,<span class="type">int</span> n,<span class="type">int</span> key)</span>&#123;</span><br><span class="line">    <span class="type">int</span> low,high,mid,i,k;</span><br><span class="line">    low=<span class="number">1</span>;<span class="comment">//最低位置为1</span></span><br><span class="line">    high=n;<span class="comment">//最高位置为n</span></span><br><span class="line">    k=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(n&gt;F[k]<span class="number">-1</span>)<span class="comment">//计算n在斐波那契数列中的位置</span></span><br><span class="line">        k++;<span class="comment">//此时，k是n在数列中下标</span></span><br><span class="line">    <span class="keyword">for</span>(i=n;i&lt;F[k]<span class="number">-1</span>;i++)</span><br><span class="line">        a[i]=a[n];<span class="comment">//都用最后一个数补全</span></span><br><span class="line">    <span class="keyword">while</span>(low&lt;=high)&#123;</span><br><span class="line">        mid=low+F[k<span class="number">-1</span>]<span class="number">-1</span>;<span class="comment">//当前分隔的下标</span></span><br><span class="line">        <span class="keyword">if</span>(key&lt;a[mid])&#123;</span><br><span class="line">            high=mid<span class="number">-1</span>;<span class="comment">//跟折半一样</span></span><br><span class="line">            --k;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(key&gt;a[mid])&#123;</span><br><span class="line">            low=mid+<span class="number">1</span>;</span><br><span class="line">            k=k<span class="number">-2</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(mid&lt;=n)</span><br><span class="line">                <span class="keyword">return</span> mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> n;<span class="comment">//补全数组，返回n</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="线性索引查找"><a href="#线性索引查找" class="headerlink" title="线性索引查找"></a>线性索引查找</h1><p>一、索引：把一个关键字和它对应的记录相关联</p>
+<p>二、线性索引：把所有变为线性表存储，有三种线性存储方式</p>
+<h2 id="稠密索引"><a href="#稠密索引" class="headerlink" title="稠密索引"></a>稠密索引</h2><p>关键码后面有一个指针用于索引。</p>
+<h2 id="分块索引"><a href="#分块索引" class="headerlink" title="分块索引"></a>分块索引</h2><p>对数据进行分块，再对每一块进行索引</p>
+<p>a.对应“块”有以下两个特点：</p>
+<p>​    <strong>不要求块内有序，因为块内有序所要求的空间时间多</strong></p>
+<p>​    <strong>块间有序，如第二块中所有关键字均大于第一块中所有关键字</strong></p>
+<p>b.对于索引项结构分以下三个数据项</p>
+<p>​    <strong>存储最大关键码，为了对比下一个项中的最小关键码，使得前一项的最大关键码大于后一项的最小关键码</strong></p>
+<p>​    <strong>存储块中的记录个数，便于循环</strong></p>
+<p>​    <strong>用于指向块首数据元素的指针，方便遍历</strong></p>
+<p>c.分块索引的步骤：</p>
+<p>​    <strong>使用折半/插值等方法找到要查找关键的位置</strong></p>
+<p>​    <strong>顺序查找块中的关键码</strong></p>
+<hr>
+<p>设n个记录被分成m份，每份有t条记录,有n=m*t</p>
+<p>设lb为块间平均查找长度，lb=(m+1)/2,设Lw为块内平均查找长度，Lw=(t+1)/2</p>
+<p>所以分块索引查找的平均长度：ASLw=(m+1)/2+(t+1)/2=n/2t+t/2+1</p>
+<p>当m=t时，情况最佳，n=m*t=t^2,此时ASLw=(1/2 *2t)+1=t+1=根号n+1</p>
+<p>时间复杂度为O(根号n) </p>
+<h2 id="倒排索引"><a href="#倒排索引" class="headerlink" title="倒排索引"></a>倒排索引</h2><p>与正向索引的区别：</p>
+<p><strong>正向索引：</strong>  <strong>当用户发起查询时（假设查询为一个关键词），搜索引擎会扫描索引库中的所有文档，找出所有包含关键词的文档，这样依次从文档中去查找是否含有关键词的方法叫做正向索引</strong></p>
+<p>如果说正向索引是由文件索引关键字，那么倒排索引就是从关键字来索引文件</p>
+<h1 id="二叉排序树"><a href="#二叉排序树" class="headerlink" title="二叉排序树"></a>二叉排序树</h1><p>1.二叉排序树(Binary Sort Tree)有四种情况：</p>
+<p><strong>一棵空树</strong></p>
+<p><strong>左子树不空，且左子树中的所有结点均小于根节点</strong></p>
+<p><strong>右子树不空，且右子树中的所有结点均大于根节点</strong></p>
+<p><strong>它的左右子树也分别是二叉排序树</strong></p>
+<p>2.定义二叉树结构</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></span><br><span class="line">	<span class="type">int</span> data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTree</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">&#125;BiTNode,*BiTree;</span><br></pre></td></tr></table></figure>
+
+<p>3.二叉排序树的查找算法</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Status <span class="title function_">SearchBST</span><span class="params">(BiTree T,<span class="type">int</span> key,BiTree f,BiTree *p)</span>&#123;<span class="comment">//f初始化为NULL</span></span><br><span class="line">	<span class="comment">//指针f指向T的双亲，若成功，则p指向该元素结点，未成功访问最后一个结点</span></span><br><span class="line">    <span class="keyword">if</span>(!T)&#123;<span class="comment">//成功</span></span><br><span class="line">    	*p=f;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(key==T-&gt;data)&#123;</span><br><span class="line">        *p=T;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(key&lt;T-&gt;data)<span class="comment">//小于，网左子树找</span></span><br><span class="line">        <span class="keyword">return</span> SearchBST(T-&gt;lchild,key,T,p);<span class="comment">//此时必有f=T\</span></span><br><span class="line"><span class="comment">    else//大于，往右子树找</span></span><br><span class="line">        <span class="keyword">return</span> SearchBST(T-&gt;rchild,key,T,p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4.二叉排序树的插入：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//当树中不存在等于key的元素时插入key，返回TRUE，否则返回FALSE</span></span><br><span class="line">Status <span class="title function_">InsertBST</span><span class="params">(BiTree *T,<span class="type">int</span> key)</span>&#123;</span><br><span class="line">    BiTree p,s;<span class="comment">//s是key的结点</span></span><br><span class="line">    <span class="keyword">if</span>(!SearchBST(*T,key,<span class="literal">NULL</span>,&amp;p))&#123;<span class="comment">//查找失败，要把key加进去</span></span><br><span class="line">    	s=(BiTree)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(BiTree));</span><br><span class="line">        s-&gt;data=key;</span><br><span class="line">        s-&gt;lchild=s-&gt;rchild=<span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">if</span>(!p)<span class="comment">//看前面SearchBST</span></span><br><span class="line">            *T=s;<span class="comment">//s为树的根结点</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(key &lt; p-&gt;data)</span><br><span class="line">            p-&gt;lchild=s;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            p-&gt;rchild=s;</span><br><span class="line">        <span class="keyword">return</span> TRUE;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> FALSE;<span class="comment">//树中已有关键字相同元素</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5.构建二叉排序树</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="type">int</span> a[<span class="number">10</span>] = &#123;<span class="number">62</span>,<span class="number">88</span>,<span class="number">58</span>,<span class="number">47</span>,<span class="number">35</span>,<span class="number">73</span>,<span class="number">51</span>,<span class="number">99</span>,<span class="number">37</span>,<span class="number">93</span>&#125;;</span><br><span class="line">BiTree T=<span class="literal">NULL</span>;<span class="comment">//根是空</span></span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    InsertBST(&amp;T,a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>6.删除二叉树结点</p>
+<p>​    1.用直接前去/直接后继来代替刚刚删除的结点，<strong>先替换，再删除</strong></p>
+<p>​    2.算法代码</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//若二叉排序树中存在等于key的数据元素，将其删除，并返回true、</span></span><br><span class="line"><span class="comment">//其实就是相当于递归，不停的往左子树或者右子树找，直到找到等于key的关键字为止</span></span><br><span class="line">Status <span class="title function_">DeleteBST</span><span class="params">(BiTree *T,<span class="type">int</span> key)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(!*T)<span class="comment">//不存在关键字等于key的元素</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(key==(*T)-&gt;data)</span><br><span class="line">            <span class="keyword">return</span> Delete(T);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (key&lt;(*T)-&gt;data)</span><br><span class="line">            <span class="keyword">return</span> DeleteBST(&amp;(*T)-&gt;lchild,key);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> DeleteBST(&amp;(*T)-&gt;rchild,key);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>7.解释6中提到的Delete代码</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Status <span class="title function_">Delete</span><span class="params">(BiTree *p)</span><span class="comment">//删除p结点，并重接它的左右子树</span></span><br><span class="line">&#123;</span><br><span class="line">    BiTree q,s;</span><br><span class="line">    <span class="keyword">if</span>((*p)-&gt;rchild==<span class="literal">NULL</span>)&#123;<span class="comment">//右子树空，只重接左子树</span></span><br><span class="line">    	q=*p;<span class="comment">//q保存p的内容</span></span><br><span class="line">        *p=(*p)-&gt;lchild;<span class="comment">//p的位置用左孩子代替</span></span><br><span class="line">        <span class="built_in">free</span>(q);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>((*p)-&gt;rchild=<span class="literal">NULL</span>)&#123;<span class="comment">//左子树空，只需要重接右子树</span></span><br><span class="line">    	q=*p;</span><br><span class="line">        *p=(*p)-&gt;rchild;</span><br><span class="line">        <span class="built_in">free</span>(q);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;<span class="comment">//左右子树都不空</span></span><br><span class="line">    	q=*p;</span><br><span class="line">        s=(*p)-&gt;rchild;</span><br><span class="line">        <span class="keyword">while</span>(s-&gt;rchild)&#123;</span><br><span class="line">            q=s;</span><br><span class="line">            s=s-&gt;rchild;<span class="comment">//向右到尽头，找到待删除的结点的前驱</span></span><br><span class="line">        &#125;</span><br><span class="line">        *p-&gt;data=s-&gt;data;<span class="comment">//把s的值传到p的位置</span></span><br><span class="line">        <span class="keyword">if</span>(q!=*p)</span><br><span class="line">            q-&gt;rchild=s-&gt;lchild;<span class="comment">//重接q右子树</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            q-&gt;lchild=s-&gt;lchild;<span class="comment">//重接q左子树</span></span><br><span class="line">        <span class="built_in">free</span>(q)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h1><h2 id="平衡二叉树的定义"><a href="#平衡二叉树的定义" class="headerlink" title="平衡二叉树的定义"></a>平衡二叉树的定义</h2><p>1.其每个结点的左子树和右子树高度至多等于1</p>
+<p>2.将二叉树上的结点的左子树深度减去右子树深度的值称为平衡因子BF(Balance Factor)，平衡因子的是只可能是-1，0，1</p>
+<p>3.最小不平衡子树：找到距离插入结点最近的，第一个不满足左子树深度减右子树深度小于等于1的</p>
+<p>例子：</p>
+<p><img src="/2022/08/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%9F%A5%E6%89%BE/image-20220830153324088.png" alt="image-20220830153324088"></p>
+<p><img src="/2022/08/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%9F%A5%E6%89%BE/image-20220830153407404.png" alt="image-20220830153407404"></p>
+<h2 id="平衡二叉树的存储结构"><a href="#平衡二叉树的存储结构" class="headerlink" title="平衡二叉树的存储结构"></a>平衡二叉树的存储结构</h2><p>用一个bf来存储平衡因子</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//用二叉链表来定义</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="type">int</span> bf;<span class="comment">//平衡因子</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span><span class="comment">//左右孩子结点</span></span><br><span class="line">&#125;BiTNode,*BiTree;</span><br></pre></td></tr></table></figure>
+
+<h2 id="右旋操作"><a href="#右旋操作" class="headerlink" title="右旋操作"></a>右旋操作</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构--栈和队列(DH)</title>
     <url>/2022/07/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97-DH/</url>
     <content><![CDATA[<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p><strong>栈：吃了吐；队列：吃了拉</strong></p>
@@ -3263,83 +3359,6 @@
 
 <p>4.出队（主义：front是在头结点上）</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Status <span class="title function_">DeQueue</span><span class="params">(LinkQueue *Q,QElemType *e)</span>&#123;</span><br><span class="line">    QueuePtr p;<span class="comment">//p结点</span></span><br><span class="line">    <span class="keyword">if</span>(Q-&gt;front==Q-&gt;rear)<span class="comment">//队空</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    *e=Q-&gt;data[Q-&gt;front-&gt;next];<span class="comment">//指向第一个结点</span></span><br><span class="line">    p=Q-&gt;front-&gt;next;<span class="comment">//p保留准备删除的结点</span></span><br><span class="line">    Q-&gt;front-&gt;next</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构--线性表</title>
-    <url>/2022/02/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
-    <content><![CDATA[<h1 id="线性表的基础内容及应用"><a href="#线性表的基础内容及应用" class="headerlink" title="线性表的基础内容及应用"></a>线性表的基础内容及应用</h1><span id="more"></span>
-
-<h2 id="基础知识（重点！！）"><a href="#基础知识（重点！！）" class="headerlink" title="基础知识（重点！！）"></a>基础知识（重点！！）</h2><p>1.ElemType是你<strong>自己定义</strong>的数据类型，想用什么用什么，使用typedef定义，如<strong>typedef int ElemType</strong></p>
-<p>2.数组的静态分配和动态分配：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//静态分配,很好理解</span></span><br><span class="line">ElemType data[MAXSIZE];</span><br><span class="line"></span><br><span class="line"><span class="comment">//静态分配，难理解！</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">ElemType *data;</span><br><span class="line"><span class="type">int</span> length;</span><br><span class="line">&#125;sqList;</span><br><span class="line"><span class="comment">//接着上面的，在动态分配的固定的函数给他分配内存！</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MaxSize 100</span></span><br><span class="line">sqList L;</span><br><span class="line">L.data = (ElemType*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ElemType)*MaxSize);<span class="comment">//其中ElemType*表示强制类型转换，因为在定义的时候是指针类型的！</span></span><br></pre></td></tr></table></figure>
-
-<p>3.接上！内存分配函数</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//下列三个函数都是要在加载头文件&lt;stdlib.h&gt;的前提下</span></span><br><span class="line"><span class="comment">//malloc(m)函数:开辟m字节长度的地址空间，并返回这段空间的首地址！</span></span><br><span class="line"><span class="comment">//sizeof(x)函数:计算变量x的长度</span></span><br><span class="line"><span class="comment">//free(p)函数:释放指针p所指变量的存储空间，即删除一个变量</span></span><br></pre></td></tr></table></figure>
-
-<p>4.C++的动态存储分配：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//创建空间--new</span></span><br><span class="line"><span class="keyword">new</span> 类型名（初值列表）</span><br><span class="line">    功能：</span><br><span class="line">    	申请用于存放T类型对象的内存空间，并赋予初值</span><br><span class="line">    结果值：</span><br><span class="line">    	成功：T类型的指针，指向新分配的内存</span><br><span class="line">    	失败：<span class="number">0</span> </span><br><span class="line"><span class="comment">//如int *p1 = new int;</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//删除空间--delete</span></span><br><span class="line">    <span class="keyword">delete</span> 指针P</span><br><span class="line">    功能：</span><br><span class="line">    	释放指针P所指向的内存，P必须是<span class="keyword">new</span>操作的返回值</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="线性表的定义"><a href="#线性表的定义" class="headerlink" title="线性表的定义"></a>线性表的定义</h3><p>线性表：<strong>零个或多个</strong>数据元素的<strong>有限序列</strong></p>
-<p>线性表中的元素有且只有一个直接前驱和直接后继（除了线性表中的第一个和最后一个元素）</p>
-<p><strong>线性表元素的个数n定义为线性表的长度为n。当n=0时，线性表为空表！</strong></p>
-<p>在比较复杂的线性表当中，一个数据元素可以由若干个数据项组成！</p>
-<h3 id="线性表的抽象数据类型"><a href="#线性表的抽象数据类型" class="headerlink" title="线性表的抽象数据类型"></a>线性表的抽象数据类型</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">ADT 线性表(List)</span><br><span class="line">Data</span><br><span class="line">	线性表的数据对象的集合为&#123;a1,a2,..,an&#125;,每个元素的类型均为DataType，其中，除了第一个元素a1外，每个元素有且只有一个直接前驱元素，除了最后一个元素an外，每个元素有且只有一个直接后继元素。数据元素之间的关系是一对一的关系。</span><br><span class="line">Operation</span><br><span class="line">    <span class="title function_">InitList</span><span class="params">(*L)</span>:初始化操作，建立一个空的线性表L。</span><br><span class="line">    <span class="title function_">DestroyList</span><span class="params">(*L)</span>:销毁一个线性表。</span><br><span class="line">    <span class="title function_">ListEmpty</span><span class="params">(L)</span>:判断线性表是否为空表，若线性表为空，返回<span class="literal">true</span>，否则返回<span class="literal">false</span>。</span><br><span class="line">    <span class="title function_">CleanList</span><span class="params">(*L)</span>:将线性表清空。</span><br><span class="line">    <span class="title function_">GetElem</span><span class="params">(L,i,*e)</span>:将线性表L中的第i个元素值返回给e。</span><br><span class="line">    <span class="title function_">LocateElem</span><span class="params">(L,e)</span>:在线性表L中查找与给定值e相等的元素，如果查找成功，返回该元素在表中序号表示成功；否则返回0表示失败！</span><br><span class="line">    <span class="title function_">priorElem</span><span class="params">(L,cur_e,*pre_e)</span>:如果cur_e不是线性表中的第一个元素，那么返回它的直接前驱，否则操作失败！</span><br><span class="line">    <span class="title function_">NextElem</span><span class="params">(L,cur_e,*next_e)</span>:如果cur_e不是线性表中的最后一个元素，那么返回它的直接后继，否则操作失败！</span><br><span class="line">    <span class="title function_">ListInsert</span><span class="params">(*L,i,e)</span>:在线性表L中的第i个位置插入新元素e。</span><br><span class="line">    <span class="title function_">ListDelete</span><span class="params">(*L,i,*e)</span>:删除在线性表L中第i个位置元素，并用e返回其值。</span><br><span class="line">    <span class="title function_">ListLength</span><span class="params">(L)</span>:返回线性表L的元素个数。</span><br><span class="line">endADT</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="线性表的顺序存储结构"><a href="#线性表的顺序存储结构" class="headerlink" title="线性表的顺序存储结构"></a>线性表的顺序存储结构</h3><p>顺序存储的定义：在逻辑结构上相邻的数据储存在物理位置也相邻的地方</p>
-<h4 id="顺序表中存储位置的计算（重点！）"><a href="#顺序表中存储位置的计算（重点！）" class="headerlink" title="顺序表中存储位置的计算（重点！）"></a>顺序表中存储位置的计算（重点！）</h4><p>如果每个元素占用8个存储单元，已知ai的存储位置是2000，问a（i+1）的存储位置</p>
-<p>答：a(i+1) = ai + 8  = 2008</p>
-<p>假设每个元素占用L个存储单元，已知第一个元素的位置，求第i个元素的位置：</p>
-<p>*<em>LOC(ai) = LOC(a1) + (i-1)<em>L</em></em></p>
-<h4 id="结构体指针"><a href="#结构体指针" class="headerlink" title="结构体指针"></a>结构体指针</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="type">long</span> num;</span><br><span class="line">	<span class="type">char</span> name[<span class="number">10</span>];</span><br><span class="line">	<span class="type">char</span> gender;</span><br><span class="line">	<span class="type">float</span> score;</span><br><span class="line">&#125;stu=&#123;<span class="number">01</span>;<span class="string">&quot;dgz&quot;</span>;<span class="string">&#x27;男&#x27;</span>;<span class="number">90</span>&#125;   <span class="comment">//这里使用了尾随法来给结构体类型赋值</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span> *<span class="title">p</span>;</span>    <span class="comment">//创建一个结构体指针</span></span><br><span class="line">p = &amp;stu;			<span class="comment">//这个结构体指针指向的是结构体变量stu</span></span><br><span class="line"><span class="comment">//现在我们想使用指针调用结构体变量stu中的num变量，有三种方法</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%ld\n&quot;</span>,stu.num);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%ld\n&quot;</span>,*p.num);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%ld\n&quot;</span>,p -&gt; num);</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="顺序结构的代码-very-very-important"><a href="#顺序结构的代码-very-very-important" class="headerlink" title="顺序结构的代码(very very important!!!)"></a>顺序结构的代码(very very important!!!)</h4><p><strong>标准格式(下面所有的代码全部以他为依据！)</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAXSIZE 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType data[MAXSIZE];</span><br><span class="line">    <span class="type">int</span> length;</span><br><span class="line">&#125;sqList;</span><br></pre></td></tr></table></figure>
-
-<p><strong>用e返回线性表L中的第i个元素</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;</span><br><span class="line">Status <span class="title function_">GetElem</span><span class="params">(sqList L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;L-&gt;length<span class="number">-1</span> || i&lt;<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;=<span class="number">1</span> &amp;&amp; i&lt;=L-&gt;length<span class="number">-1</span>)&#123;</span><br><span class="line">        e = L-&gt;data[i<span class="number">-1</span>];</span><br><span class="line">        <span class="keyword">return</span> OK;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="顺序结构的插入（重点！）"><a href="#顺序结构的插入（重点！）" class="headerlink" title="顺序结构的插入（重点！）"></a>顺序结构的插入（重点！）</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//初始条件：L存在，1&lt;=i&lt;=ListLength(L)</span></span><br><span class="line"><span class="comment">//操作结果：在L中第i个位置之前插入新的元素e，L长度加一</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXSIZE 100</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status</span><br><span class="line">Status <span class="title function_">ListInsert</span><span class="params">(SqList *L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">	<span class="type">int</span> k;</span><br><span class="line">	<span class="keyword">if</span>(L-&gt;length==MAXSIZE)		<span class="comment">//如果线性表满了插不进去</span></span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span> || i&gt;L-&gt;length+<span class="number">1</span>)	<span class="comment">//如果元素在线性表外，也插不进去</span></span><br><span class="line">        <span class="keyword">return</span> OK;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;=<span class="number">1</span> &amp;&amp; i&lt;=length+<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(k=L-&gt;length<span class="number">-1</span>;k&gt;=i<span class="number">-1</span>;k--)&#123;</span><br><span class="line">            data[k+<span class="number">1</span>] = data[k];</span><br><span class="line">        &#125;</span><br><span class="line">        L-&gt;length = L-&gt;length+<span class="number">1</span>;</span><br><span class="line">        L-&gt;data[i<span class="number">-1</span>] = e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="顺序结构的删除"><a href="#顺序结构的删除" class="headerlink" title="顺序结构的删除"></a>顺序结构的删除</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//删除i位置的元素，并用</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;		<span class="comment">//Status当作int类型</span></span><br><span class="line">ListDelete(sqList *L,<span class="type">int</span> i,ElemType *e)&#123;</span><br><span class="line">    <span class="type">int</span> k;</span><br><span class="line">    <span class="keyword">if</span>(L-&gt;length==<span class="number">0</span> || i&lt;<span class="number">1</span> || i&gt;L-&gt;length)</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    *e = L-&gt;data[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">if</span>(L-&gt;length&gt;i &amp;&amp; i&gt;<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(k=i;k&lt;=L-&gt;length<span class="number">-1</span>;k++)&#123;</span><br><span class="line">            L-&gt;data[k<span class="number">-1</span>] = L-&gt;data[k];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;length--;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="插入和删除的时间复杂度"><a href="#插入和删除的时间复杂度" class="headerlink" title="插入和删除的时间复杂度"></a>插入和删除的时间复杂度</h5><p>最简单的情况：插在最后一个元素位置，时间复杂度是O（1）</p>
-<p>最复杂的情况：插在第一个元素位置，时间复杂度是O（n）</p>
-<p>平均下来的时间复杂度是：(n+1)/2，即O（n）</p>
-<h4 id="线性表顺序存储的优缺点"><a href="#线性表顺序存储的优缺点" class="headerlink" title="线性表顺序存储的优缺点"></a>线性表顺序存储的优缺点</h4><p>优点：1.无需为表中元素之间的逻辑关系而增加额外的存储空间；</p>
-<p>​            2.可以快速的查找任意元素的位置</p>
-<p>缺点：1.插入和删除操作需要移动大量的元素</p>
-<p>​            2.当线性表长度变化太大时，难以确定存储空间的变化！</p>
-<p>​            3.造成存储空间的“碎片化”。</p>
-<h3 id="线性表的链式存储"><a href="#线性表的链式存储" class="headerlink" title="线性表的链式存储"></a>线性表的链式存储</h3><h4 id="链式存储的定义"><a href="#链式存储的定义" class="headerlink" title="链式存储的定义"></a>链式存储的定义</h4><p>​    为了表示ai和ai+1之间的关系，对于ai来说，除了存储本身的数据，还需要存储一个指向下一个数据元素的指针，我们把ai中存储数据的域叫做<strong>数据域</strong>，把存储指针的域叫做<strong>指针域</strong>，把指针域中的数据叫做<strong>指针或链</strong>，这两部分信息组成数据元素ai的存储映像，称为<strong>结点</strong>。</p>
-<p>​    n个结点链接成一个链表，即为线性表的链式存储，每个结点中值包含一个指针域，称为<strong>单链表</strong>。</p>
-<p>​    链表中第一个结点的存储位置称为<strong>头指针</strong></p>
-<p>​    链表中最后一个结点的存储位置为空，用<strong>NULL或者^</strong>表示</p>
-<p>​    <strong>如a|b -&gt; c|d -&gt; e|f    这个案例中a|b就是头结点，b就是头指针。头节点中的数据域a一般不存放数据</strong></p>
-<p>​    如果线性表为空表，那么头结点的指针为空指针</p>
-<h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><h4 id="链式存储的代码（重点！）"><a href="#链式存储的代码（重点！）" class="headerlink" title="链式存储的代码（重点！）"></a>链式存储的代码（重点！）</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//线性表单链表的存储结构之定义单链表结点类型（一切的基础！）</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span><span class="comment">//定义一个结构体</span></span><br><span class="line">	ElemType data;	<span class="comment">//定义数据域</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">next</span>;</span>	<span class="comment">//指针指向下一个结点</span></span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">LinkList</span>;</span></span><br></pre></td></tr></table></figure>
-
-<p>假设p是指向下一个元素的指针，那么下一个元素的数据域表示为<strong>p-&gt;data</strong>，下一个元素的指针域表示为<strong>p-&gt;next</strong>，那么<strong>p-&gt;next-&gt;data</strong>就指向再下一个元素的数据域！</p>
-<h5 id="查找元素并返回值GetElem"><a href="#查找元素并返回值GetElem" class="headerlink" title="查找元素并返回值GetElem()"></a>查找元素并返回值GetElem()</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//链式存储中的用e返回第i个位置的元素操作！</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;</span><br><span class="line">Status <span class="title function_">GetElem</span> <span class="params">(LinkList L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">    <span class="type">int</span> k;</span><br><span class="line">    LinkList p;			<span class="comment">//声明指针</span></span><br><span class="line">    p = L-&gt;next;		<span class="comment">//p指向线性表的第一个结点</span></span><br><span class="line">    k = <span class="number">1</span>;				<span class="comment">//k为计数器</span></span><br><span class="line">    <span class="keyword">while</span>(p &amp;&amp; k&lt;i)		<span class="comment">//p不为NULL且k没等于i时，循环继续</span></span><br><span class="line">    &#123;</span><br><span class="line">        p = p-&gt;next;	<span class="comment">//p指向下一个结点,在最后一次循环的时候，其实指向的是第i-1个元素</span></span><br><span class="line">        ++k;			<span class="comment">//k递增</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(!p || k&gt;i)&#123;</span><br><span class="line">        <span class="keyword">return</span> ERROR；</span><br><span class="line">    &#125;</span><br><span class="line">    *e = p-&gt;data;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//核心思想是指针的后移，这也是很多算法的实现方法。</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="不知道要循环多少次的循环别使用for，用while"><a href="#不知道要循环多少次的循环别使用for，用while" class="headerlink" title="不知道要循环多少次的循环别使用for，用while"></a>不知道要循环多少次的循环别使用for，用while</h5><h5 id="链式表的插入操作"><a href="#链式表的插入操作" class="headerlink" title="链式表的插入操作"></a>链式表的插入操作</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//先进行元素位置i的查找，找到时候进行插入新的元素e的赋值操作！</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;</span><br><span class="line">Status <span class="title function_">ListInsert</span><span class="params">(LinkList *L,<span class="type">int</span> i,ElemType e)</span>&#123;</span><br><span class="line">    <span class="type">int</span> k;</span><br><span class="line">    LinkList p,s;</span><br><span class="line">    p = *L</span><br><span class="line">    <span class="keyword">while</span>(p &amp;&amp; k&lt;=i)&#123;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">        ++k;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(!p || k&gt;i)&#123;</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    &#125;</span><br><span class="line">    s = (LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node)); <span class="comment">//生成新结点（C标准函数）</span></span><br><span class="line">    s-&gt;data = e;</span><br><span class="line">    s-&gt;next = p-&gt;next;</span><br><span class="line">    p-&gt;next = s;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="链式表的删除操作"><a href="#链式表的删除操作" class="headerlink" title="链式表的删除操作"></a>链式表的删除操作</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Status <span class="title function_">ListDelete</span><span class="params">(LinkList *L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">	<span class="type">int</span> k=<span class="number">1</span>;</span><br><span class="line">	LinkList p,q;</span><br><span class="line">	p = *L;</span><br><span class="line">	<span class="keyword">while</span>(p-&gt;next &amp;&amp; k&lt;i)</span><br><span class="line">	&#123;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">		k++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(!(p-&gt;next) || k&gt;i)</span><br><span class="line">		<span class="keyword">return</span> ERROR;</span><br><span class="line">	q = p-&gt;next;			<span class="comment">//令q为要删除的结点</span></span><br><span class="line">	p-&gt;next = q-&gt;next;</span><br><span class="line">	<span class="built_in">free</span>(q);				<span class="comment">//释放q的空间</span></span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="单链表的整表创建"><a href="#单链表的整表创建" class="headerlink" title="单链表的整表创建"></a>单链表的整表创建</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* 随机产生n个元素的值，建立带表头结点的单链线性表L(头插法) */</span><br><span class="line">void CreateListHead(LinkList *L,int n)</span><br><span class="line">&#123;</span><br><span class="line">	LinkList p;</span><br><span class="line">	int i;</span><br><span class="line">	srand(time(0));				//初始化随机数种子</span><br><span class="line">	*L = (LinkList)malloc(sizeof(Node));</span><br><span class="line">	(*L)-&gt;next = NULL;</span><br><span class="line">	for(i=0;i&lt;n;i++)&#123;</span><br><span class="line">		p=(LinkList)malloc(sizeof(Node));</span><br><span class="line">		p-&gt;data = rand() % 100+1;</span><br><span class="line">		p-&gt;next = (*L)-&gt;next;</span><br><span class="line">		(*L)-&gt;next=p;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -3586,24 +3605,80 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习--K近邻算法</title>
-    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="K近邻算法"><a href="#K近邻算法" class="headerlink" title="K近邻算法"></a>K近邻算法</h3><span id="more"></span>
+    <title>数据结构--线性表</title>
+    <url>/2022/02/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
+    <content><![CDATA[<h1 id="线性表的基础内容及应用"><a href="#线性表的基础内容及应用" class="headerlink" title="线性表的基础内容及应用"></a>线性表的基础内容及应用</h1><span id="more"></span>
 
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#算法</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;葡萄酒.xlsx&#x27;</span>)</span><br><span class="line">X_train = df[[<span class="string">&#x27;酒精含量(%)&#x27;</span>,<span class="string">&#x27;酸含量(%)&#x27;</span>]]</span><br><span class="line">y_train= df[<span class="string">&#x27;分类&#x27;</span>]</span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KN</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = KNeighborsRegressor(n_neighbors=<span class="number">2</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
+<h2 id="基础知识（重点！！）"><a href="#基础知识（重点！！）" class="headerlink" title="基础知识（重点！！）"></a>基础知识（重点！！）</h2><p>1.ElemType是你<strong>自己定义</strong>的数据类型，想用什么用什么，使用typedef定义，如<strong>typedef int ElemType</strong></p>
+<p>2.数组的静态分配和动态分配：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//静态分配,很好理解</span></span><br><span class="line">ElemType data[MAXSIZE];</span><br><span class="line"></span><br><span class="line"><span class="comment">//静态分配，难理解！</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">ElemType *data;</span><br><span class="line"><span class="type">int</span> length;</span><br><span class="line">&#125;sqList;</span><br><span class="line"><span class="comment">//接着上面的，在动态分配的固定的函数给他分配内存！</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MaxSize 100</span></span><br><span class="line">sqList L;</span><br><span class="line">L.data = (ElemType*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ElemType)*MaxSize);<span class="comment">//其中ElemType*表示强制类型转换，因为在定义的时候是指针类型的！</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="手写数字识别模型"><a href="#手写数字识别模型" class="headerlink" title="手写数字识别模型"></a>手写数字识别模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;手写数字识别.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;对应数字&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;对应数字&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neibhors <span class="keyword">import</span> KNeighborsClassifier</span><br><span class="line">model = KNeighborsClassifier(n_neibhors=<span class="number">5</span>)<span class="comment">#记得要加n_neighbors参数</span></span><br><span class="line">model.fit(X_train,y_train)<span class="comment">#训练模型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#开始处理图片</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line">img = Image.<span class="built_in">open</span>(<span class="string">&#x27;图片.jpg&#x27;</span>)<span class="comment">#打开图片文件</span></span><br><span class="line">img = img.resize((<span class="number">32</span>,<span class="number">32</span>))<span class="comment">#重新定义图片大小</span></span><br><span class="line">img = img.convert(<span class="string">&#x27;L&#x27;</span>)<span class="comment">#灰度处理</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">img_new = img.point(<span class="keyword">lambda</span> x:<span class="number">0</span> <span class="keyword">if</span> x&gt;<span class="number">128</span> <span class="keyword">else</span> <span class="number">1</span>)<span class="comment">#这里是如果x的色彩大于128则赋值为0，否则赋值为1</span></span><br><span class="line">arr = np.array(img_new)</span><br><span class="line">arr_new = arr.reshape(<span class="number">1</span>,-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#进行预测</span></span><br><span class="line">answer = model.predict(arr_new)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;图片中的数字为:&quot;</span>+<span class="built_in">str</span>(answer[<span class="number">0</span>]))</span><br></pre></td></tr></table></figure>
+<p>3.接上！内存分配函数</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//下列三个函数都是要在加载头文件&lt;stdlib.h&gt;的前提下</span></span><br><span class="line"><span class="comment">//malloc(m)函数:开辟m字节长度的地址空间，并返回这段空间的首地址！</span></span><br><span class="line"><span class="comment">//sizeof(x)函数:计算变量x的长度</span></span><br><span class="line"><span class="comment">//free(p)函数:释放指针p所指变量的存储空间，即删除一个变量</span></span><br></pre></td></tr></table></figure>
+
+<p>4.C++的动态存储分配：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//创建空间--new</span></span><br><span class="line"><span class="keyword">new</span> 类型名（初值列表）</span><br><span class="line">    功能：</span><br><span class="line">    	申请用于存放T类型对象的内存空间，并赋予初值</span><br><span class="line">    结果值：</span><br><span class="line">    	成功：T类型的指针，指向新分配的内存</span><br><span class="line">    	失败：<span class="number">0</span> </span><br><span class="line"><span class="comment">//如int *p1 = new int;</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//删除空间--delete</span></span><br><span class="line">    <span class="keyword">delete</span> 指针P</span><br><span class="line">    功能：</span><br><span class="line">    	释放指针P所指向的内存，P必须是<span class="keyword">new</span>操作的返回值</span><br></pre></td></tr></table></figure>
 
 
 
+<h3 id="线性表的定义"><a href="#线性表的定义" class="headerlink" title="线性表的定义"></a>线性表的定义</h3><p>线性表：<strong>零个或多个</strong>数据元素的<strong>有限序列</strong></p>
+<p>线性表中的元素有且只有一个直接前驱和直接后继（除了线性表中的第一个和最后一个元素）</p>
+<p><strong>线性表元素的个数n定义为线性表的长度为n。当n=0时，线性表为空表！</strong></p>
+<p>在比较复杂的线性表当中，一个数据元素可以由若干个数据项组成！</p>
+<h3 id="线性表的抽象数据类型"><a href="#线性表的抽象数据类型" class="headerlink" title="线性表的抽象数据类型"></a>线性表的抽象数据类型</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">ADT 线性表(List)</span><br><span class="line">Data</span><br><span class="line">	线性表的数据对象的集合为&#123;a1,a2,..,an&#125;,每个元素的类型均为DataType，其中，除了第一个元素a1外，每个元素有且只有一个直接前驱元素，除了最后一个元素an外，每个元素有且只有一个直接后继元素。数据元素之间的关系是一对一的关系。</span><br><span class="line">Operation</span><br><span class="line">    <span class="title function_">InitList</span><span class="params">(*L)</span>:初始化操作，建立一个空的线性表L。</span><br><span class="line">    <span class="title function_">DestroyList</span><span class="params">(*L)</span>:销毁一个线性表。</span><br><span class="line">    <span class="title function_">ListEmpty</span><span class="params">(L)</span>:判断线性表是否为空表，若线性表为空，返回<span class="literal">true</span>，否则返回<span class="literal">false</span>。</span><br><span class="line">    <span class="title function_">CleanList</span><span class="params">(*L)</span>:将线性表清空。</span><br><span class="line">    <span class="title function_">GetElem</span><span class="params">(L,i,*e)</span>:将线性表L中的第i个元素值返回给e。</span><br><span class="line">    <span class="title function_">LocateElem</span><span class="params">(L,e)</span>:在线性表L中查找与给定值e相等的元素，如果查找成功，返回该元素在表中序号表示成功；否则返回0表示失败！</span><br><span class="line">    <span class="title function_">priorElem</span><span class="params">(L,cur_e,*pre_e)</span>:如果cur_e不是线性表中的第一个元素，那么返回它的直接前驱，否则操作失败！</span><br><span class="line">    <span class="title function_">NextElem</span><span class="params">(L,cur_e,*next_e)</span>:如果cur_e不是线性表中的最后一个元素，那么返回它的直接后继，否则操作失败！</span><br><span class="line">    <span class="title function_">ListInsert</span><span class="params">(*L,i,e)</span>:在线性表L中的第i个位置插入新元素e。</span><br><span class="line">    <span class="title function_">ListDelete</span><span class="params">(*L,i,*e)</span>:删除在线性表L中第i个位置元素，并用e返回其值。</span><br><span class="line">    <span class="title function_">ListLength</span><span class="params">(L)</span>:返回线性表L的元素个数。</span><br><span class="line">endADT</span><br></pre></td></tr></table></figure>
 
+
+
+<h3 id="线性表的顺序存储结构"><a href="#线性表的顺序存储结构" class="headerlink" title="线性表的顺序存储结构"></a>线性表的顺序存储结构</h3><p>顺序存储的定义：在逻辑结构上相邻的数据储存在物理位置也相邻的地方</p>
+<h4 id="顺序表中存储位置的计算（重点！）"><a href="#顺序表中存储位置的计算（重点！）" class="headerlink" title="顺序表中存储位置的计算（重点！）"></a>顺序表中存储位置的计算（重点！）</h4><p>如果每个元素占用8个存储单元，已知ai的存储位置是2000，问a（i+1）的存储位置</p>
+<p>答：a(i+1) = ai + 8  = 2008</p>
+<p>假设每个元素占用L个存储单元，已知第一个元素的位置，求第i个元素的位置：</p>
+<p>*<em>LOC(ai) = LOC(a1) + (i-1)<em>L</em></em></p>
+<h4 id="结构体指针"><a href="#结构体指针" class="headerlink" title="结构体指针"></a>结构体指针</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="type">long</span> num;</span><br><span class="line">	<span class="type">char</span> name[<span class="number">10</span>];</span><br><span class="line">	<span class="type">char</span> gender;</span><br><span class="line">	<span class="type">float</span> score;</span><br><span class="line">&#125;stu=&#123;<span class="number">01</span>;<span class="string">&quot;dgz&quot;</span>;<span class="string">&#x27;男&#x27;</span>;<span class="number">90</span>&#125;   <span class="comment">//这里使用了尾随法来给结构体类型赋值</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span> *<span class="title">p</span>;</span>    <span class="comment">//创建一个结构体指针</span></span><br><span class="line">p = &amp;stu;			<span class="comment">//这个结构体指针指向的是结构体变量stu</span></span><br><span class="line"><span class="comment">//现在我们想使用指针调用结构体变量stu中的num变量，有三种方法</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%ld\n&quot;</span>,stu.num);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%ld\n&quot;</span>,*p.num);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%ld\n&quot;</span>,p -&gt; num);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="顺序结构的代码-very-very-important"><a href="#顺序结构的代码-very-very-important" class="headerlink" title="顺序结构的代码(very very important!!!)"></a>顺序结构的代码(very very important!!!)</h4><p><strong>标准格式(下面所有的代码全部以他为依据！)</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAXSIZE 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType data[MAXSIZE];</span><br><span class="line">    <span class="type">int</span> length;</span><br><span class="line">&#125;sqList;</span><br></pre></td></tr></table></figure>
+
+<p><strong>用e返回线性表L中的第i个元素</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;</span><br><span class="line">Status <span class="title function_">GetElem</span><span class="params">(sqList L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;L-&gt;length<span class="number">-1</span> || i&lt;<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;=<span class="number">1</span> &amp;&amp; i&lt;=L-&gt;length<span class="number">-1</span>)&#123;</span><br><span class="line">        e = L-&gt;data[i<span class="number">-1</span>];</span><br><span class="line">        <span class="keyword">return</span> OK;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="顺序结构的插入（重点！）"><a href="#顺序结构的插入（重点！）" class="headerlink" title="顺序结构的插入（重点！）"></a>顺序结构的插入（重点！）</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//初始条件：L存在，1&lt;=i&lt;=ListLength(L)</span></span><br><span class="line"><span class="comment">//操作结果：在L中第i个位置之前插入新的元素e，L长度加一</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXSIZE 100</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status</span><br><span class="line">Status <span class="title function_">ListInsert</span><span class="params">(SqList *L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">	<span class="type">int</span> k;</span><br><span class="line">	<span class="keyword">if</span>(L-&gt;length==MAXSIZE)		<span class="comment">//如果线性表满了插不进去</span></span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span> || i&gt;L-&gt;length+<span class="number">1</span>)	<span class="comment">//如果元素在线性表外，也插不进去</span></span><br><span class="line">        <span class="keyword">return</span> OK;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;=<span class="number">1</span> &amp;&amp; i&lt;=length+<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(k=L-&gt;length<span class="number">-1</span>;k&gt;=i<span class="number">-1</span>;k--)&#123;</span><br><span class="line">            data[k+<span class="number">1</span>] = data[k];</span><br><span class="line">        &#125;</span><br><span class="line">        L-&gt;length = L-&gt;length+<span class="number">1</span>;</span><br><span class="line">        L-&gt;data[i<span class="number">-1</span>] = e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="顺序结构的删除"><a href="#顺序结构的删除" class="headerlink" title="顺序结构的删除"></a>顺序结构的删除</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//删除i位置的元素，并用</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;		<span class="comment">//Status当作int类型</span></span><br><span class="line">ListDelete(sqList *L,<span class="type">int</span> i,ElemType *e)&#123;</span><br><span class="line">    <span class="type">int</span> k;</span><br><span class="line">    <span class="keyword">if</span>(L-&gt;length==<span class="number">0</span> || i&lt;<span class="number">1</span> || i&gt;L-&gt;length)</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    *e = L-&gt;data[i<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">if</span>(L-&gt;length&gt;i &amp;&amp; i&gt;<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(k=i;k&lt;=L-&gt;length<span class="number">-1</span>;k++)&#123;</span><br><span class="line">            L-&gt;data[k<span class="number">-1</span>] = L-&gt;data[k];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;length--;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="插入和删除的时间复杂度"><a href="#插入和删除的时间复杂度" class="headerlink" title="插入和删除的时间复杂度"></a>插入和删除的时间复杂度</h5><p>最简单的情况：插在最后一个元素位置，时间复杂度是O（1）</p>
+<p>最复杂的情况：插在第一个元素位置，时间复杂度是O（n）</p>
+<p>平均下来的时间复杂度是：(n+1)/2，即O（n）</p>
+<h4 id="线性表顺序存储的优缺点"><a href="#线性表顺序存储的优缺点" class="headerlink" title="线性表顺序存储的优缺点"></a>线性表顺序存储的优缺点</h4><p>优点：1.无需为表中元素之间的逻辑关系而增加额外的存储空间；</p>
+<p>​            2.可以快速的查找任意元素的位置</p>
+<p>缺点：1.插入和删除操作需要移动大量的元素</p>
+<p>​            2.当线性表长度变化太大时，难以确定存储空间的变化！</p>
+<p>​            3.造成存储空间的“碎片化”。</p>
+<h3 id="线性表的链式存储"><a href="#线性表的链式存储" class="headerlink" title="线性表的链式存储"></a>线性表的链式存储</h3><h4 id="链式存储的定义"><a href="#链式存储的定义" class="headerlink" title="链式存储的定义"></a>链式存储的定义</h4><p>​    为了表示ai和ai+1之间的关系，对于ai来说，除了存储本身的数据，还需要存储一个指向下一个数据元素的指针，我们把ai中存储数据的域叫做<strong>数据域</strong>，把存储指针的域叫做<strong>指针域</strong>，把指针域中的数据叫做<strong>指针或链</strong>，这两部分信息组成数据元素ai的存储映像，称为<strong>结点</strong>。</p>
+<p>​    n个结点链接成一个链表，即为线性表的链式存储，每个结点中值包含一个指针域，称为<strong>单链表</strong>。</p>
+<p>​    链表中第一个结点的存储位置称为<strong>头指针</strong></p>
+<p>​    链表中最后一个结点的存储位置为空，用<strong>NULL或者^</strong>表示</p>
+<p>​    <strong>如a|b -&gt; c|d -&gt; e|f    这个案例中a|b就是头结点，b就是头指针。头节点中的数据域a一般不存放数据</strong></p>
+<p>​    如果线性表为空表，那么头结点的指针为空指针</p>
+<h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><h4 id="链式存储的代码（重点！）"><a href="#链式存储的代码（重点！）" class="headerlink" title="链式存储的代码（重点！）"></a>链式存储的代码（重点！）</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//线性表单链表的存储结构之定义单链表结点类型（一切的基础！）</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span><span class="comment">//定义一个结构体</span></span><br><span class="line">	ElemType data;	<span class="comment">//定义数据域</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">next</span>;</span>	<span class="comment">//指针指向下一个结点</span></span><br><span class="line">&#125;Node;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">LinkList</span>;</span></span><br></pre></td></tr></table></figure>
+
+<p>假设p是指向下一个元素的指针，那么下一个元素的数据域表示为<strong>p-&gt;data</strong>，下一个元素的指针域表示为<strong>p-&gt;next</strong>，那么<strong>p-&gt;next-&gt;data</strong>就指向再下一个元素的数据域！</p>
+<h5 id="查找元素并返回值GetElem"><a href="#查找元素并返回值GetElem" class="headerlink" title="查找元素并返回值GetElem()"></a>查找元素并返回值GetElem()</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//链式存储中的用e返回第i个位置的元素操作！</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> OK 1</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;</span><br><span class="line">Status <span class="title function_">GetElem</span> <span class="params">(LinkList L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">    <span class="type">int</span> k;</span><br><span class="line">    LinkList p;			<span class="comment">//声明指针</span></span><br><span class="line">    p = L-&gt;next;		<span class="comment">//p指向线性表的第一个结点</span></span><br><span class="line">    k = <span class="number">1</span>;				<span class="comment">//k为计数器</span></span><br><span class="line">    <span class="keyword">while</span>(p &amp;&amp; k&lt;i)		<span class="comment">//p不为NULL且k没等于i时，循环继续</span></span><br><span class="line">    &#123;</span><br><span class="line">        p = p-&gt;next;	<span class="comment">//p指向下一个结点,在最后一次循环的时候，其实指向的是第i-1个元素</span></span><br><span class="line">        ++k;			<span class="comment">//k递增</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(!p || k&gt;i)&#123;</span><br><span class="line">        <span class="keyword">return</span> ERROR；</span><br><span class="line">    &#125;</span><br><span class="line">    *e = p-&gt;data;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//核心思想是指针的后移，这也是很多算法的实现方法。</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="不知道要循环多少次的循环别使用for，用while"><a href="#不知道要循环多少次的循环别使用for，用while" class="headerlink" title="不知道要循环多少次的循环别使用for，用while"></a>不知道要循环多少次的循环别使用for，用while</h5><h5 id="链式表的插入操作"><a href="#链式表的插入操作" class="headerlink" title="链式表的插入操作"></a>链式表的插入操作</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//先进行元素位置i的查找，找到时候进行插入新的元素e的赋值操作！</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;</span><br><span class="line">Status <span class="title function_">ListInsert</span><span class="params">(LinkList *L,<span class="type">int</span> i,ElemType e)</span>&#123;</span><br><span class="line">    <span class="type">int</span> k;</span><br><span class="line">    LinkList p,s;</span><br><span class="line">    p = *L</span><br><span class="line">    <span class="keyword">while</span>(p &amp;&amp; k&lt;=i)&#123;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">        ++k;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(!p || k&gt;i)&#123;</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    &#125;</span><br><span class="line">    s = (LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node)); <span class="comment">//生成新结点（C标准函数）</span></span><br><span class="line">    s-&gt;data = e;</span><br><span class="line">    s-&gt;next = p-&gt;next;</span><br><span class="line">    p-&gt;next = s;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="链式表的删除操作"><a href="#链式表的删除操作" class="headerlink" title="链式表的删除操作"></a>链式表的删除操作</h5><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Status <span class="title function_">ListDelete</span><span class="params">(LinkList *L,<span class="type">int</span> i,ElemType *e)</span>&#123;</span><br><span class="line">	<span class="type">int</span> k=<span class="number">1</span>;</span><br><span class="line">	LinkList p,q;</span><br><span class="line">	p = *L;</span><br><span class="line">	<span class="keyword">while</span>(p-&gt;next &amp;&amp; k&lt;i)</span><br><span class="line">	&#123;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">		k++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(!(p-&gt;next) || k&gt;i)</span><br><span class="line">		<span class="keyword">return</span> ERROR;</span><br><span class="line">	q = p-&gt;next;			<span class="comment">//令q为要删除的结点</span></span><br><span class="line">	p-&gt;next = q-&gt;next;</span><br><span class="line">	<span class="built_in">free</span>(q);				<span class="comment">//释放q的空间</span></span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="单链表的整表创建"><a href="#单链表的整表创建" class="headerlink" title="单链表的整表创建"></a>单链表的整表创建</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* 随机产生n个元素的值，建立带表头结点的单链线性表L(头插法) */</span><br><span class="line">void CreateListHead(LinkList *L,int n)</span><br><span class="line">&#123;</span><br><span class="line">	LinkList p;</span><br><span class="line">	int i;</span><br><span class="line">	srand(time(0));				//初始化随机数种子</span><br><span class="line">	*L = (LinkList)malloc(sizeof(Node));</span><br><span class="line">	(*L)-&gt;next = NULL;</span><br><span class="line">	for(i=0;i&lt;n;i++)&#123;</span><br><span class="line">		p=(LinkList)malloc(sizeof(Node));</span><br><span class="line">		p-&gt;data = rand() % 100+1;</span><br><span class="line">		p-&gt;next = (*L)-&gt;next;</span><br><span class="line">		(*L)-&gt;next=p;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
-        <category>机器学习</category>
+        <category>数据结构</category>
       </categories>
       <tags>
-        <tag>机器学习</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -3622,6 +3697,27 @@
 <h2 id="GBDT模型"><a href="#GBDT模型" class="headerlink" title="GBDT模型"></a>GBDT模型</h2><h3 id="GBDT分类模型"><a href="#GBDT分类模型" class="headerlink" title="GBDT分类模型"></a>GBDT分类模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> GradientBoostingClassifier</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">model = GradientBoostingClassifier()</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
 
 <h3 id="GBDT回归模型"><a href="#GBDT回归模型" class="headerlink" title="GBDT回归模型"></a>GBDT回归模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> GradientBoostingRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">model = GradientBoostingRegressor(random_state=<span class="number">1</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习--K近邻算法</title>
+    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-K%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="K近邻算法"><a href="#K近邻算法" class="headerlink" title="K近邻算法"></a>K近邻算法</h3><span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#算法</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;葡萄酒.xlsx&#x27;</span>)</span><br><span class="line">X_train = df[[<span class="string">&#x27;酒精含量(%)&#x27;</span>,<span class="string">&#x27;酸含量(%)&#x27;</span>]]</span><br><span class="line">y_train= df[<span class="string">&#x27;分类&#x27;</span>]</span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KN</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsRegressor</span><br><span class="line">X = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>],[<span class="number">9</span>,<span class="number">10</span>]]</span><br><span class="line">y = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">model = KNeighborsRegressor(n_neighbors=<span class="number">2</span>)</span><br><span class="line">model.fit(X,y)</span><br><span class="line"><span class="built_in">print</span>(model.predict([[<span class="number">5</span>,<span class="number">5</span>]]))</span><br></pre></td></tr></table></figure>
+
+<h3 id="手写数字识别模型"><a href="#手写数字识别模型" class="headerlink" title="手写数字识别模型"></a>手写数字识别模型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_excel(<span class="string">&#x27;手写数字识别.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line">X = df.drop(columns=<span class="string">&#x27;对应数字&#x27;</span>)</span><br><span class="line">y = df[<span class="string">&#x27;对应数字&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="number">0.2</span>,random_state=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neibhors <span class="keyword">import</span> KNeighborsClassifier</span><br><span class="line">model = KNeighborsClassifier(n_neibhors=<span class="number">5</span>)<span class="comment">#记得要加n_neighbors参数</span></span><br><span class="line">model.fit(X_train,y_train)<span class="comment">#训练模型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#开始处理图片</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line">img = Image.<span class="built_in">open</span>(<span class="string">&#x27;图片.jpg&#x27;</span>)<span class="comment">#打开图片文件</span></span><br><span class="line">img = img.resize((<span class="number">32</span>,<span class="number">32</span>))<span class="comment">#重新定义图片大小</span></span><br><span class="line">img = img.convert(<span class="string">&#x27;L&#x27;</span>)<span class="comment">#灰度处理</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">img_new = img.point(<span class="keyword">lambda</span> x:<span class="number">0</span> <span class="keyword">if</span> x&gt;<span class="number">128</span> <span class="keyword">else</span> <span class="number">1</span>)<span class="comment">#这里是如果x的色彩大于128则赋值为0，否则赋值为1</span></span><br><span class="line">arr = np.array(img_new)</span><br><span class="line">arr_new = arr.reshape(<span class="number">1</span>,-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#进行预测</span></span><br><span class="line">answer = model.predict(arr_new)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;图片中的数字为:&quot;</span>+<span class="built_in">str</span>(answer[<span class="number">0</span>]))</span><br></pre></td></tr></table></figure>
+
+
+
+
 
 ]]></content>
       <categories>
@@ -3669,6 +3765,48 @@
       </categories>
       <tags>
         <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据采集--数据采集及清洗概念</title>
+    <url>/2022/08/30/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86-%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%8F%8A%E6%B8%85%E6%B4%97%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数据采集</category>
+      </categories>
+      <tags>
+        <tag>数据采集</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习-- numpy库</title>
+    <url>/2022/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-numpy%E5%BA%93/</url>
+    <content><![CDATA[<p>学习numpy库的主要目的是为了后面学习pandas库打下基础</p>
+<span id="more"></span>
+
+<h3 id="python中数组、元组、列表的区别"><a href="#python中数组、元组、列表的区别" class="headerlink" title="python中数组、元组、列表的区别"></a>python中数组、元组、列表的区别</h3><p><strong>首先要知道python中是没有数组的</strong></p>
+<p>列表和元组的区别：列表中可以append元素，可以pop元素，而元组做不到，只能对元组元素进行索引而不能对它赋值！</p>
+<p><strong>创建数组的第一种方式</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]  <span class="comment">#创建一个列表a</span></span><br><span class="line">b = np.array([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>])   <span class="comment">#通过array创建数组</span></span><br><span class="line"><span class="built_in">print</span>(a)	<span class="comment">#[1,2,3]-&gt;这是列表的表现形式</span></span><br><span class="line"><span class="built_in">print</span>(b)	<span class="comment">#[4 5 6]-&gt;这是数组的表现形式</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))	<span class="comment">#class = list</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(b))	<span class="comment">#class = numpy.ndarray</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#数组和列表的切片都遵循左闭右开的元组</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">b = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">0</span>:<span class="number">2</span>]) 	<span class="comment">#因为左闭右开所以是[1,2]</span></span><br><span class="line"><span class="built_in">print</span>(b[<span class="number">0</span>:<span class="number">2</span>])	<span class="comment">#因为左闭右开所以是[1 2],注意和列表的表达形式不一样</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#数组*2</span></span><br><span class="line">a = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])*<span class="number">2</span>		<span class="comment">#[2,4,6]</span></span><br><span class="line">b = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]					<span class="comment">#[1,2,3,1,2,3]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#二维数组</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>]]) <span class="comment">#生成的结构是二维的，即不止一行</span></span><br><span class="line"><span class="comment">#对应的列表中的就是小列表了</span></span><br><span class="line">y = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>]]			  <span class="comment">#就产生一行而已</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>创建数组的第二种方式</strong>（arange通过步长来创建）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用np.arange可以传递1~3个参数</span></span><br><span class="line"><span class="comment">#1个参数,那么这个参数就是终止值，起始值默认是0，步长默认是1</span></span><br><span class="line">x = np.arange(<span class="number">5</span>)	<span class="comment">#相当于np.arange(0,5,1)</span></span><br><span class="line"><span class="comment">#2个参数，第一个参数是初始值，第二个参数是终止值，步长默认为1</span></span><br><span class="line">x = np.arange(<span class="number">5</span>,<span class="number">10</span>)	<span class="comment">#相当于np.arange(5,10,1)</span></span><br><span class="line"><span class="comment">#3个参数，第一个参数是初始值，第二个参数是终止值，第三个参数是步长</span></span><br><span class="line">x = np.arange(<span class="number">5</span>,<span class="number">10</span>,<span class="number">0.5</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>创建数组的第三种方式</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用np.random可以创建随机一维数组</span></span><br><span class="line"><span class="comment">#例如使用np.random.randn(n)可以创建n个服从标准正态分布(均值为0，标准差为1)的随机数</span></span><br><span class="line">np.random.randn(<span class="number">3</span>)	<span class="comment">#创建服从标准正态分布的3个随机数</span></span><br><span class="line"><span class="comment">#如果把randn改成rand（n），即为创建n个处于0~1的随机数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#想要转换成二维随机数，可以用创建一维数组的arange和转变成二维数组的reshape来实现。</span></span><br><span class="line">a = np.arange(<span class="number">20</span>).reshape(<span class="number">4</span>,<span class="number">5</span>)	<span class="comment">#reshape的第一个参数是行数，第二个参数是列数，如这个例子就是创建3行4列的二维数组</span></span><br><span class="line"><span class="comment">#np.random.randint用于创建随机整数（注意是随机）</span></span><br><span class="line">np.random.randint(<span class="number">0</span>,<span class="number">10</span>,(<span class="number">4</span>,<span class="number">4</span>))	<span class="comment">#第一个参数是初始值，第二个参数是终止值，（4，4）则是创建为4X4的二维向量</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>machine leaning</category>
+      </categories>
+      <tags>
+        <tag>machine leaning</tag>
       </tags>
   </entry>
   <entry>
@@ -3730,37 +3868,6 @@
       </categories>
       <tags>
         <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>机器学习-- numpy库</title>
-    <url>/2022/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-numpy%E5%BA%93/</url>
-    <content><![CDATA[<p>学习numpy库的主要目的是为了后面学习pandas库打下基础</p>
-<span id="more"></span>
-
-<h3 id="python中数组、元组、列表的区别"><a href="#python中数组、元组、列表的区别" class="headerlink" title="python中数组、元组、列表的区别"></a>python中数组、元组、列表的区别</h3><p><strong>首先要知道python中是没有数组的</strong></p>
-<p>列表和元组的区别：列表中可以append元素，可以pop元素，而元组做不到，只能对元组元素进行索引而不能对它赋值！</p>
-<p><strong>创建数组的第一种方式</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]  <span class="comment">#创建一个列表a</span></span><br><span class="line">b = np.array([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>])   <span class="comment">#通过array创建数组</span></span><br><span class="line"><span class="built_in">print</span>(a)	<span class="comment">#[1,2,3]-&gt;这是列表的表现形式</span></span><br><span class="line"><span class="built_in">print</span>(b)	<span class="comment">#[4 5 6]-&gt;这是数组的表现形式</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))	<span class="comment">#class = list</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(b))	<span class="comment">#class = numpy.ndarray</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#数组和列表的切片都遵循左闭右开的元组</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">b = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">0</span>:<span class="number">2</span>]) 	<span class="comment">#因为左闭右开所以是[1,2]</span></span><br><span class="line"><span class="built_in">print</span>(b[<span class="number">0</span>:<span class="number">2</span>])	<span class="comment">#因为左闭右开所以是[1 2],注意和列表的表达形式不一样</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#数组*2</span></span><br><span class="line">a = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])*<span class="number">2</span>		<span class="comment">#[2,4,6]</span></span><br><span class="line">b = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]					<span class="comment">#[1,2,3,1,2,3]</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#二维数组</span></span><br><span class="line">x = np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>]]) <span class="comment">#生成的结构是二维的，即不止一行</span></span><br><span class="line"><span class="comment">#对应的列表中的就是小列表了</span></span><br><span class="line">y = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>]]			  <span class="comment">#就产生一行而已</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>创建数组的第二种方式</strong>（arange通过步长来创建）</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用np.arange可以传递1~3个参数</span></span><br><span class="line"><span class="comment">#1个参数,那么这个参数就是终止值，起始值默认是0，步长默认是1</span></span><br><span class="line">x = np.arange(<span class="number">5</span>)	<span class="comment">#相当于np.arange(0,5,1)</span></span><br><span class="line"><span class="comment">#2个参数，第一个参数是初始值，第二个参数是终止值，步长默认为1</span></span><br><span class="line">x = np.arange(<span class="number">5</span>,<span class="number">10</span>)	<span class="comment">#相当于np.arange(5,10,1)</span></span><br><span class="line"><span class="comment">#3个参数，第一个参数是初始值，第二个参数是终止值，第三个参数是步长</span></span><br><span class="line">x = np.arange(<span class="number">5</span>,<span class="number">10</span>,<span class="number">0.5</span>)</span><br></pre></td></tr></table></figure>
-
-<p><strong>创建数组的第三种方式</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用np.random可以创建随机一维数组</span></span><br><span class="line"><span class="comment">#例如使用np.random.randn(n)可以创建n个服从标准正态分布(均值为0，标准差为1)的随机数</span></span><br><span class="line">np.random.randn(<span class="number">3</span>)	<span class="comment">#创建服从标准正态分布的3个随机数</span></span><br><span class="line"><span class="comment">#如果把randn改成rand（n），即为创建n个处于0~1的随机数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#想要转换成二维随机数，可以用创建一维数组的arange和转变成二维数组的reshape来实现。</span></span><br><span class="line">a = np.arange(<span class="number">20</span>).reshape(<span class="number">4</span>,<span class="number">5</span>)	<span class="comment">#reshape的第一个参数是行数，第二个参数是列数，如这个例子就是创建3行4列的二维数组</span></span><br><span class="line"><span class="comment">#np.random.randint用于创建随机整数（注意是随机）</span></span><br><span class="line">np.random.randint(<span class="number">0</span>,<span class="number">10</span>,(<span class="number">4</span>,<span class="number">4</span>))	<span class="comment">#第一个参数是初始值，第二个参数是终止值，（4，4）则是创建为4X4的二维向量</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>machine leaning</category>
-      </categories>
-      <tags>
-        <tag>machine leaning</tag>
       </tags>
   </entry>
   <entry>
@@ -4608,62 +4715,6 @@
       </tags>
   </entry>
   <entry>
-    <title>计算机组成原理--算数逻辑单元ALU</title>
-    <url>/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/</url>
-    <content><![CDATA[<h2 id="ALU实现"><a href="#ALU实现" class="headerlink" title="ALU实现"></a>ALU实现</h2><span id="more"></span>
-
-<p>1.算数运算：加减乘除</p>
-<p>2.逻辑运算：与或非，异或等</p>
-<p>3.辅助功能：移位，求补等</p>
-<p><img src="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/01.png" alt="01"></p>
-<p>右边的S和M是来自控制单元（CU）的，当M=1时逻辑运算，M=0时算数运算 . </p>
-<h2 id="基本的逻辑运算"><a href="#基本的逻辑运算" class="headerlink" title="基本的逻辑运算"></a>基本的逻辑运算</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>1.与 = &amp;&amp; ：Y = A*B</p>
-<p>2.或 = || ：Y = A+B</p>
-<p>3.非=! ：Y = A(ba)</p>
-<p><img src="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/02.png" alt="02"></p>
-<p>注意图中的尖角的是或门，圆角的是与门，后面加上个小圆点的就是非门！</p>
-<p><strong>高电位代表二进制的1，低电位代表二进制的0</strong></p>
-<p><strong>1.与门：当两个输入都为高电位（1）时，输出才会是高电位。</strong></p>
-<p><strong>2.或门：当两个输入都为低电位（0）时，输出才会是低电位。</strong></p>
-<p><strong>3.非门：输入是0输出1，输入是1输出0.</strong></p>
-<h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><p>与&gt;或</p>
-<p>例：AB+CD是先将AB进行<strong>与</strong>运算，再将CD进行<strong>与</strong>运算，最后将两者的结果进行或运算。 </p>
-<h3 id="复合逻辑"><a href="#复合逻辑" class="headerlink" title="复合逻辑"></a>复合逻辑</h3><p>1.与非：先与再非。电路表示是在圆角后面加个小圆点。</p>
-<p>2.或非：先或再非。电路表示是在尖角后面加个小圆点。</p>
-<p>3.异或：不同取1，同取0，异或的电路表达如下图所示 。</p>
-<p><img src="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/03.png" alt="03"></p>
-<p>4.同或：是异或的取反，相同取1，不同取1</p>
-<h3 id="用门电路求偶校验位"><a href="#用门电路求偶校验位" class="headerlink" title="用门电路求偶校验位"></a>用门电路求偶校验位</h3><p>1001101 = 0</p>
-<p>（（1异或0）异或（0异或1）异或（1异或0）异或1） = 0 </p>
-<p>如果输入的有偶数个1，那么结果是0；如果输入的有奇数个1，那么结果就是1</p>
-<p><img src="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/04.png" alt="04"></p>
-<h3 id="一位全加器-（FA：Full-Add）"><a href="#一位全加器-（FA：Full-Add）" class="headerlink" title="一位全加器 （FA：Full Add）"></a>一位全加器 （FA：Full Add）</h3><h4 id="符号表示"><a href="#符号表示" class="headerlink" title="符号表示"></a>符号表示</h4><p>Ai表示被加数，i表示被加数的第i位</p>
-<p>Bi表示加数，i表示加数的第i位</p>
-<p>Ci-1表示进位数，i-1表示第i-1为进位数</p>
-<p>Si表示本位的和。</p>
-<p><strong>综上就是：Ai+Bi=Si，而Ci-1是进位！</strong></p>
-<p>Si：输入中有奇数个1时为1（异或）</p>
-<p>Si = Ai异或Bi异或Ci-1</p>
-<p><strong>Ci是否等于1：Ci = AiBi + (Ai异或Bi)Ci-1</strong></p>
-<p><strong>解释上面：AiBi是两个输入都为1，(Ai异或Bi)Ci-1是输入中有一个为1，进位为1</strong></p>
-<p><img src="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/05.png" alt="05"></p>
-<h3 id="串行加法器"><a href="#串行加法器" class="headerlink" title="串行加法器"></a>串行加法器</h3><p>只有一个加法器，数据逐位送入加法器中运算，进位触发器用来寄存进位信号，以便下一次的运算</p>
-<p>如果操作数长度为n，那么就要分n次进行，每次产生一位和，并且串行逐位的送回寄存器 </p>
-<h3 id="串位进行的并行加法器"><a href="#串位进行的并行加法器" class="headerlink" title="串位进行的并行加法器"></a>串位进行的并行加法器</h3><p>把n个全加器串接起来，可进行两个n位数的相加。</p>
-<p>就是A1和B1进行相加产生了C1这个进位，那么A2和B2的相加又要依靠C1.即每一级进位直接依赖于前一级的进位，即进位信号是逐级形成的。</p>
-<p><strong>效率很低T T</strong></p>
-<p><img src="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/06.png" alt="06"></p>
-<h3 id="并行进位的并行加法器（串行进位的优化版本）"><a href="#并行进位的并行加法器（串行进位的优化版本）" class="headerlink" title="并行进位的并行加法器（串行进位的优化版本）"></a>并行进位的并行加法器（串行进位的优化版本）</h3><p>各级信号同时形成，又称为先行进位，同时进位。</p>
-<p><strong>最多支持4个FA</strong> </p>
-]]></content>
-      <categories>
-        <category>计组</category>
-      </categories>
-      <tags>
-        <tag>计组</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>计算机网络--计算机网络概述</title>
     <url>/2022/08/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/</url>
     <content><![CDATA[<h2 id="计算机网络概述"><a href="#计算机网络概述" class="headerlink" title="计算机网络概述"></a>计算机网络概述</h2><p>1.计算机网络是互联的，自治的计算机系统的集合</p>
@@ -4721,6 +4772,62 @@
       </categories>
       <tags>
         <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机组成原理--算数逻辑单元ALU</title>
+    <url>/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/</url>
+    <content><![CDATA[<h2 id="ALU实现"><a href="#ALU实现" class="headerlink" title="ALU实现"></a>ALU实现</h2><span id="more"></span>
+
+<p>1.算数运算：加减乘除</p>
+<p>2.逻辑运算：与或非，异或等</p>
+<p>3.辅助功能：移位，求补等</p>
+<p><img src="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/01.png" alt="01"></p>
+<p>右边的S和M是来自控制单元（CU）的，当M=1时逻辑运算，M=0时算数运算 . </p>
+<h2 id="基本的逻辑运算"><a href="#基本的逻辑运算" class="headerlink" title="基本的逻辑运算"></a>基本的逻辑运算</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>1.与 = &amp;&amp; ：Y = A*B</p>
+<p>2.或 = || ：Y = A+B</p>
+<p>3.非=! ：Y = A(ba)</p>
+<p><img src="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/02.png" alt="02"></p>
+<p>注意图中的尖角的是或门，圆角的是与门，后面加上个小圆点的就是非门！</p>
+<p><strong>高电位代表二进制的1，低电位代表二进制的0</strong></p>
+<p><strong>1.与门：当两个输入都为高电位（1）时，输出才会是高电位。</strong></p>
+<p><strong>2.或门：当两个输入都为低电位（0）时，输出才会是低电位。</strong></p>
+<p><strong>3.非门：输入是0输出1，输入是1输出0.</strong></p>
+<h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><p>与&gt;或</p>
+<p>例：AB+CD是先将AB进行<strong>与</strong>运算，再将CD进行<strong>与</strong>运算，最后将两者的结果进行或运算。 </p>
+<h3 id="复合逻辑"><a href="#复合逻辑" class="headerlink" title="复合逻辑"></a>复合逻辑</h3><p>1.与非：先与再非。电路表示是在圆角后面加个小圆点。</p>
+<p>2.或非：先或再非。电路表示是在尖角后面加个小圆点。</p>
+<p>3.异或：不同取1，同取0，异或的电路表达如下图所示 。</p>
+<p><img src="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/03.png" alt="03"></p>
+<p>4.同或：是异或的取反，相同取1，不同取1</p>
+<h3 id="用门电路求偶校验位"><a href="#用门电路求偶校验位" class="headerlink" title="用门电路求偶校验位"></a>用门电路求偶校验位</h3><p>1001101 = 0</p>
+<p>（（1异或0）异或（0异或1）异或（1异或0）异或1） = 0 </p>
+<p>如果输入的有偶数个1，那么结果是0；如果输入的有奇数个1，那么结果就是1</p>
+<p><img src="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/04.png" alt="04"></p>
+<h3 id="一位全加器-（FA：Full-Add）"><a href="#一位全加器-（FA：Full-Add）" class="headerlink" title="一位全加器 （FA：Full Add）"></a>一位全加器 （FA：Full Add）</h3><h4 id="符号表示"><a href="#符号表示" class="headerlink" title="符号表示"></a>符号表示</h4><p>Ai表示被加数，i表示被加数的第i位</p>
+<p>Bi表示加数，i表示加数的第i位</p>
+<p>Ci-1表示进位数，i-1表示第i-1为进位数</p>
+<p>Si表示本位的和。</p>
+<p><strong>综上就是：Ai+Bi=Si，而Ci-1是进位！</strong></p>
+<p>Si：输入中有奇数个1时为1（异或）</p>
+<p>Si = Ai异或Bi异或Ci-1</p>
+<p><strong>Ci是否等于1：Ci = AiBi + (Ai异或Bi)Ci-1</strong></p>
+<p><strong>解释上面：AiBi是两个输入都为1，(Ai异或Bi)Ci-1是输入中有一个为1，进位为1</strong></p>
+<p><img src="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/05.png" alt="05"></p>
+<h3 id="串行加法器"><a href="#串行加法器" class="headerlink" title="串行加法器"></a>串行加法器</h3><p>只有一个加法器，数据逐位送入加法器中运算，进位触发器用来寄存进位信号，以便下一次的运算</p>
+<p>如果操作数长度为n，那么就要分n次进行，每次产生一位和，并且串行逐位的送回寄存器 </p>
+<h3 id="串位进行的并行加法器"><a href="#串位进行的并行加法器" class="headerlink" title="串位进行的并行加法器"></a>串位进行的并行加法器</h3><p>把n个全加器串接起来，可进行两个n位数的相加。</p>
+<p>就是A1和B1进行相加产生了C1这个进位，那么A2和B2的相加又要依靠C1.即每一级进位直接依赖于前一级的进位，即进位信号是逐级形成的。</p>
+<p><strong>效率很低T T</strong></p>
+<p><img src="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/06.png" alt="06"></p>
+<h3 id="并行进位的并行加法器（串行进位的优化版本）"><a href="#并行进位的并行加法器（串行进位的优化版本）" class="headerlink" title="并行进位的并行加法器（串行进位的优化版本）"></a>并行进位的并行加法器（串行进位的优化版本）</h3><p>各级信号同时形成，又称为先行进位，同时进位。</p>
+<p><strong>最多支持4个FA</strong> </p>
+]]></content>
+      <categories>
+        <category>计组</category>
+      </categories>
+      <tags>
+        <tag>计组</tag>
       </tags>
   </entry>
 </search>

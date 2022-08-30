@@ -8,10 +8,12 @@
   <link rel="dns-prefetch" href="http://hexo.denggaozheng.top">
   <title>Denggaozheng`s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="We are all in the gutter, but some of us are looking at the stars.">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Denggaozheng&#96;s blog">
 <meta property="og:url" content="http://hexo.denggaozheng.top/page/16/index.html">
 <meta property="og:site_name" content="Denggaozheng&#96;s blog">
+<meta property="og:description" content="We are all in the gutter, but some of us are looking at the stars.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="邓高正">
 <meta name="twitter:card" content="summary">
@@ -58,7 +60,7 @@
 			</ul>
 		</nav>
 		<nav>
-    总文章数 93
+    总文章数 95
 </nav>
 		<nav class="header-smart-menu">
     		
@@ -74,6 +76,9 @@
             
 		</nav>
 		<nav class="header-nav">
+			
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=250 height=52 src="//music.163.com/outchain/player?type=2&id=443070377&auto=1&height=32"></iframe>
+				
 			<div class="social">
 				
 					<a class="github" target="_blank" href="https://github.com/Dopagip00" title="github"><i class="icon-github"></i></a>
@@ -154,6 +159,237 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-JAVA-常用类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/02/09/JAVA-%E5%B8%B8%E7%94%A8%E7%B1%BB/">”JAVA--常用类“</a>
+    </h1>
+  
+
+        
+        <a href="/2022/02/09/JAVA-%E5%B8%B8%E7%94%A8%E7%B1%BB/" class="archive-article-date">
+  	<time datetime="2022-02-09T08:37:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-09</time>
+</a>
+        <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+        <!-- 添加完成 -->
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>介绍两个类：Date和Calendar</p>
+<p><strong>一、Date表示特定的瞬间，精确到毫秒。</strong></p>
+<p>1.创建date对象：</p>
+<p>Date date=new Date();</p>
+<p>2.一些方法：直接打印date：输出当前的时间。</p>
+<p>打印date.getTime输出从1970.1.1到现在所有的毫秒数。</p>
+<p>方法after和before:直接加一天。</p>
+<p>compareTo方法，date1.toString(date2)，是date1-date2.</p>
+<p>当然也可以用equal方法。</p>
+<p><strong>二、Calendar类提供了获取各类日历字段的方法：(就是你代替了date类当中的许多方法)</strong></p>
+<p>因为Calendar的构造方法是protected的，所以不能直接创建对象。要通过</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Calendar calendar = Calendar.getInstance();来设置Calendar对象。</span><br><span class="line">Calendar的方法很多，get最常见，int year = calendar.get(calendar.YEAR);这样输出的就是今年的年份了。</span><br><span class="line">int year = calendar.get(calendar.YEAR);</span><br><span class="line">int month = calendar.get(calendar.MONTH);</span><br><span class="line">int day = calendar.get(calendar.DAY_OF_WEEK);</span><br><span class="line">int hour = calendar.get(calendar.HOUR);</span><br><span class="line">int minute = calendar.get(calendar.MINUTE);</span><br><span class="line">int second = calendar.get(calendar.SECOND);</span><br><span class="line">这样分别定义了年，月，日，小时，分钟，秒。用get()方法!</span><br><span class="line">calendar.getActualMaximum()可以输出括号内的最大值，如calendar.getActualMaximum(Calendar.DAY_OF_MOUTH),可以输出月份的最大值30.</span><br><span class="line">同理calendar.getActualMinimum()</span><br></pre></td></tr></table></figure>
+
+<p><strong>三、SimpleDateFormat类用于格式化解析日期：（import java.text.SimpleDateFormat）</strong></p>
+<p>1.创建SimpleDateFormat对象：(Y：年，M:月，d：日，H：小时，m:分钟，s：秒)</p>
+<p>SimpleDateFormat sim = new SimpleDateFormat(“YYYY年MM月dd日 HH:mm:ss”)</p>
+<p>2.//创建date：</p>
+<p>Date date = new Date();</p>
+<p>//格式化date</p>
+<p>String str = sim.format(date);</p>
+<p>这时候再把str打印出来就可以得到—–2021年11月08日 10:27:08</p>
+<p><strong>四、System类（很重要！）</strong></p>
+<p>私有类，不需要创建对象，并且方法是静态的。</p>
+<p>方法：</p>
+<p><strong>1.arraycopy：用于复制数组</strong></p>
+<p>arraycopy(src,srcPos,dest,destPos,length)有五个参数</p>
+<p>//src:原数组，srcPos：从什么位置开始复制，dest：目标数组，destPos:目标数组的位置</p>
+<p>要注意目标数组长度要大于等于原数组长度。</p>
+<p><strong>2.currentTimeMillis：获取当前系统时间，返回毫秒值。</strong></p>
+<p>可以用来计算程序执行的时间，在程序前面加个start在程序后面加个end。</p>
+<p><strong>3.gc()：建议JVM使用垃圾回收器回收垃圾。</strong></p>
+<p>用来回收不用的对象。</p>
+<p>4.exit(int status)：退出JVM，参数是0表示正常退出，参数是-1表示异常退出。</p>
+<p>在exit后面的语句当然就不执行了！</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JAVA</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JAVA//" class="article-tag-list-link color5">JAVA</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/02/09/JAVA-%E5%B8%B8%E7%94%A8%E7%B1%BB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+<center><p>
+  
+    <h1 itemprop="name">
+      <a class="article-title_code_ant" href="/2022/02/09/JAVA-%E5%B8%B8%E7%94%A8%E7%B1%BB/">”JAVA--常用类“</a>
+    </h1>
+  
+</p></center>
+
+  
+    <article id="post-JAVA-Sring声明" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/02/09/JAVA-Sring%E5%A3%B0%E6%98%8E/">”JAVA--Sring声明“</a>
+    </h1>
+  
+
+        
+        <a href="/2022/02/09/JAVA-Sring%E5%A3%B0%E6%98%8E/" class="archive-article-date">
+  	<time datetime="2022-02-09T08:37:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-09</time>
+</a>
+        <!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+        <!-- 添加完成 -->
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>引用类型的引用在栈里面，对象在堆里面。</p>
+        
+          <a class="article-more-a" href="/2022/02/09/JAVA-Sring%E5%A3%B0%E6%98%8E/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JAVA</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JAVA//" class="article-tag-list-link color5">JAVA</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/02/09/JAVA-Sring%E5%A3%B0%E6%98%8E/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+<center><p>
+  
+    <h1 itemprop="name">
+      <a class="article-title_code_ant" href="/2022/02/09/JAVA-Sring%E5%A3%B0%E6%98%8E/">”JAVA--Sring声明“</a>
+    </h1>
+  
+</p></center>
+
   
     <article id="post-JAVA-Sring方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
 <div class="article-inner">
@@ -467,206 +703,6 @@
 </p></center>
 
   
-    <article id="post-JAVA-方法盘点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E7%9B%98%E7%82%B9/">”JAVA--方法盘点“</a>
-    </h1>
-  
-
-        
-        <a href="/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E7%9B%98%E7%82%B9/" class="archive-article-date">
-  	<time datetime="2022-02-09T08:36:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-09</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>介绍四个方法</p>
-        
-          <a class="article-more-a" href="/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E7%9B%98%E7%82%B9/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JAVA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JAVA//" class="article-tag-list-link color5">JAVA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E7%9B%98%E7%82%B9/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/02/09/JAVA-%E6%96%B9%E6%B3%95%E7%9B%98%E7%82%B9/">”JAVA--方法盘点“</a>
-    </h1>
-  
-</p></center>
-
-  
-    <article id="post-JAVA-捕获异常" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-<div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/">”JAVA--捕获异常“</a>
-    </h1>
-  
-
-        
-        <a href="/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/" class="archive-article-date">
-  	<time datetime="2022-02-09T08:35:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-09</time>
-</a>
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-        <!-- 添加完成 -->
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 捕获异常的知识点</p>
-        
-          <a class="article-more-a" href="/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JAVA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JAVA//" class="article-tag-list-link color5">JAVA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-<center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/">”JAVA--捕获异常“</a>
-    </h1>
-  
-</p></center>
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/15/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/17/">Next &amp;raquo;</a>
@@ -792,14 +828,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">NFT</a>
               </li>
              
@@ -808,11 +836,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -829,6 +865,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据采集</a>
               </li>
              
               <li class="article-tag-list-item">
