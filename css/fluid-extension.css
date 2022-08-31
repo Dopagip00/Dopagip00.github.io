@@ -1,26 +1,104 @@
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+figure.highlight { /* 控制代码框顶栏颜色、宽度、圆角等 */
+    /*
+    background: #21252b;
+    background: rgb(246,248,250);
+    */
+    background: rgb(246,248,250);
+    border-radius: 8px;
+    box-shadow: 1px 2px 22px 1px rgba(0, 0, 0, .3);
+    padding-top: 25px;
+    z-index:998;
 }
 
-::-webkit-scrollbar-track {
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, .1);
+figure.highlight::before { /* 绘制三个小圆点 */
+    background: #fc625d;
+    border-radius: 50%;
+    box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+    content: ' ';
+    height: 12px;
+    left: 12px;
+    margin-top: -15px;
+    position: absolute;
+    width: 12px;
+    z-index:999;
 }
 
-::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: rgba(0, 120, 231, .5);
+/* 此段代码修改了六个等级标题、多行引用、行内代码的样式，在颜色和行高字号上产生区分 */
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em  ;
+    line-height: 1.1;
+    /* border-bottom: 0px solid #eee; */
+    color: #7e3131;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.1;
+    color: RGB(47,85,151);
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+   color: #777;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+code {
+    background-color: #dddddde6;
+    padding: 0 0px 0 0px;
+    border-radius: 5px;
+    text-indent: 0;
+    color: #e17523;
+}
+strong {
+    color: #be0000;
+    font-weight: bold;
 }
 
-::-webkit-scrollbar-thumb:window-inactive {
-    background-color: rgba(0, 120, 231, .3)
+table {
+    padding: 0;
+    word-break: initial;
+    overflow-x: auto;
+    max-height: 22em;
+    overflow-y: auto !important;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 120, 231, .7)
+.col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board.py-5 {
+    width: 123%;
+    left: -23%; 
+}
+@media (max-width: 767px) {
+    .col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board.py-5 {
+        width: 100%;
+        left: 0; 
+    }
+}
+@media (max-width: 424px) {
+    .col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board.py-5 {
+        width: 100%;
+        left: 0; 
+    }
 }
 
-::-webkit-scrollbar-thumb:active {
-    background-color: rgba(0, 120, 231, .9)
+.tocbot-active-link {
+    font-weight: bold;
+    /*color var(--link-hover-color)*/
+    color: #800000;
+    background: #FA807233;
+    border-radius: 5px;
+}
+.toc-list-item::before {
+    background: #800000;
 }

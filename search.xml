@@ -1,41 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>”JAVA--Collec体系集合“</title>
-    <url>/2022/02/09/JAVA-Collecting%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88/</url>
-    <content><![CDATA[<p> Collect接口知识点总结</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/img_convert/5888cfe5738f77ca7a81306dbae10536.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>rt</p>
-<h2 id="Collect父接口"><a href="#Collect父接口" class="headerlink" title="Collect父接口"></a>Collect父接口</h2><p>特点：（有些）对象，无序，无下标，不能重复–&gt;对应着Set接口。</p>
-<p>方法：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/3bf59b036ab708cfc76b85554f643deb.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>常用方法</p>
-<p>iteration迭代器</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/58df797c645cb5fe3e3f7dbd39a89bc0.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>使用next()来用指针不断指向下一行</p>
-<p>iteration要定义对象的：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/79b7331b81bc69966635494f587bc2a0.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>三个常用方法</p>
-<p><strong>注意：</strong>在iteration里面不能使用collection.remove();来删除元素，要使用iteration(这是对象)来删除元素，iteration.remove()。</p>
-<p>collection判断：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/80ec081de26e2bccf885c09c38fe3aba.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>使用contains方法进行判断，返回值是布朗类型的</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--List接口“</title>
     <url>/2022/02/09/JAVA-List%E6%8E%A5%E5%8F%A3/</url>
     <content><![CDATA[<p>List接口的特点：有序，有下标，元素可以重复</p>
@@ -76,6 +41,41 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--Collec体系集合“</title>
+    <url>/2022/02/09/JAVA-Collecting%E4%BD%93%E7%B3%BB%E9%9B%86%E5%90%88/</url>
+    <content><![CDATA[<p> Collect接口知识点总结</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5888cfe5738f77ca7a81306dbae10536.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>rt</p>
+<h2 id="Collect父接口"><a href="#Collect父接口" class="headerlink" title="Collect父接口"></a>Collect父接口</h2><p>特点：（有些）对象，无序，无下标，不能重复–&gt;对应着Set接口。</p>
+<p>方法：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/3bf59b036ab708cfc76b85554f643deb.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>常用方法</p>
+<p>iteration迭代器</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/58df797c645cb5fe3e3f7dbd39a89bc0.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>使用next()来用指针不断指向下一行</p>
+<p>iteration要定义对象的：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/79b7331b81bc69966635494f587bc2a0.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>三个常用方法</p>
+<p><strong>注意：</strong>在iteration里面不能使用collection.remove();来删除元素，要使用iteration(这是对象)来删除元素，iteration.remove()。</p>
+<p>collection判断：</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/80ec081de26e2bccf885c09c38fe3aba.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>使用contains方法进行判断，返回值是布朗类型的</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--JDBC知识点“</title>
     <url>/2022/02/09/JAVA-JDBC%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<p>JDBC相当于一个驱动，让数据库和java打交道。</p>
@@ -105,25 +105,6 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--Sring声明“</title>
-    <url>/2022/02/09/JAVA-Sring%E5%A3%B0%E6%98%8E/</url>
-    <content><![CDATA[<p>引用类型的引用在栈里面，对象在堆里面。</p>
-<span id="more"></span>
-
-<p>字符串的字面值存储在字符串池中，可以实现共享。</p>
-<p>String name = 20;//这里name存储在堆里面，20存储在方法池里面。</p>
-<p>声明string字符串有两种方式：</p>
-<p>1.String name = “Hellp”//产生一个对象，存储在字符串池中</p>
-<p>2.String name = new String(“Hello”)//产生两个对象，在字符串池和堆中各存放一个</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>”JAVA--SringBuffer和StringBudilder“</title>
     <url>/2022/02/09/JAVA-SringBuffer%E5%92%8CStringBudilder/</url>
     <content><![CDATA[<p>这两个都是可变字符串.</p>
@@ -137,6 +118,25 @@
 <p>replace(“0”，“5”，str)把0-5之间的字符替换为str。</p>
 <p>用<strong>delete删除指定位置的字符：</strong></p>
 <p>delete（“0”，“5”）删除0-5之间的字符串。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--Sring声明“</title>
+    <url>/2022/02/09/JAVA-Sring%E5%A3%B0%E6%98%8E/</url>
+    <content><![CDATA[<p>引用类型的引用在栈里面，对象在堆里面。</p>
+<span id="more"></span>
+
+<p>字符串的字面值存储在字符串池中，可以实现共享。</p>
+<p>String name = 20;//这里name存储在堆里面，20存储在方法池里面。</p>
+<p>声明string字符串有两种方式：</p>
+<p>1.String name = “Hellp”//产生一个对象，存储在字符串池中</p>
+<p>2.String name = new String(“Hello”)//产生两个对象，在字符串池和堆中各存放一个</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -320,6 +320,24 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--抽象类“</title>
+    <url>/2022/02/09/JAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
+    <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
+<span id="more"></span>
+
+<p>1.当子类继承的父类当中有抽象的方法时，子类必须要重写抽象方法</p>
+<p>2.java里面的类是单继承的，但是接口时多继承的</p>
+<p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
+<p>4.抽象方法必须在抽象类里面</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--字符流知识点“</title>
     <url>/2022/02/09/JAVA-%E5%AD%97%E7%AC%A6%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<p>在使用read读取字符流的时候，一点要在硬盘里面先创建要读取的文件，否则会报错。</p>
@@ -373,20 +391,25 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA--封装</title>
-    <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
-    <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
+    <title>”JAVA--拆箱和装箱，字符串数字转换“</title>
+    <url>/2022/02/09/JAVA-%E6%8B%86%E7%AE%B1%E5%92%8C%E8%A3%85%E7%AE%B1%EF%BC%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2/</url>
+    <content><![CDATA[<p>数据类型（int，float等等）存放在栈里面。</p>
+<p>引用类型（Integer，Float等等）存放在堆里面 。</p>
 <span id="more"></span>
 
-<p>2.get/set 方法最重要：用get方法获得该值，用set方法给该值赋予数值,因为你的属性被private限制住了，只能通过其他方法输出。</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">AA</span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> a=<span class="hljs-number">20</span>;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> <span class="hljs-title">geta</span>()</span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.a;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">seta</span>(<span class="hljs-params"><span class="hljs-built_in">int</span> a</span>)</span>&#123;<br>        <span class="hljs-keyword">this</span>.a=a;<br>    &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">getset</span> &#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>&#123;<br>        AA aa = <span class="hljs-keyword">new</span> AA();<br>        <span class="hljs-comment">//System.out.println(aa.a);这样写是错的，因为属性a被private限制了，只能在AA类中使用</span><br>        <span class="hljs-comment">//这时候就要使用set和get函数了</span><br>        aa.seta(<span class="hljs-number">50</span>);<span class="hljs-comment">//这一步用来设置a的值</span><br>        System.<span class="hljs-keyword">out</span>.println(aa.geta());<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>封装的作用：</p>
-<p>1.提高程序的安全性，保护程序</p>
-<p>2.统一接口（唯一接口只有get/set）</p>
-<p>3.隐藏代码实现细节</p>
-<p>4.系统的可维护性增加</p>
+<p>装箱就是 Java 将基本类型转换成对应的包装类型，比如将 int 转换成 Integer 对象。反之将 Integer 转换成 int 值，则称为拆箱。</p>
+<p><strong>装箱:</strong></p>
+<p>int num = 20;</p>
+<p>Integer integer1 = num;</p>
+<p>如上这样就可以实现装箱使int成为integer了。</p>
+<p><strong>拆箱：</strong></p>
+<p>int num2=integer;</p>
+<p>这样就可以拆箱。</p>
+<p>integer的范围是-128——127之间，超过这个范围会溢出</p>
+<p><strong>字符串和数字之间的转换：</strong></p>
+<p>int num = 20;</p>
+<p>Integer integer = num;</p>
+<p>String s = integer.tostring(num，10)//这里解释一下，tostring括号里面的num是要转换为字符串的数字，后面的10是转换为10进制的，当然也可以变成8/16转换成八进制十六进制。</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -441,15 +464,41 @@
       </tags>
   </entry>
   <entry>
-    <title>”JAVA--抽象类“</title>
-    <url>/2022/02/09/JAVA-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
-    <content><![CDATA[<p>抽象类的作用：如果我们不想在方法中写内容就用抽象类：abstract;</p>
+    <title>JAVA--封装</title>
+    <url>/2022/02/09/JAVA-%E5%B0%81%E8%A3%85/</url>
+    <content><![CDATA[<p>1.<strong>高内聚，低耦合：</strong>程序内部的操作细节由自己或者内部人员完成，仅仅暴露少量内容给外部人员。</p>
 <span id="more"></span>
 
-<p>1.当子类继承的父类当中有抽象的方法时，子类必须要重写抽象方法</p>
-<p>2.java里面的类是单继承的，但是接口时多继承的</p>
-<p>3.不能new抽象类，只能靠子类去实现它（约束）</p>
-<p>4.抽象方法必须在抽象类里面</p>
+<p>2.get/set 方法最重要：用get方法获得该值，用set方法给该值赋予数值,因为你的属性被private限制住了，只能通过其他方法输出。</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">AA</span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> a=<span class="hljs-number">20</span>;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> <span class="hljs-title">geta</span>()</span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.a;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">seta</span>(<span class="hljs-params"><span class="hljs-built_in">int</span> a</span>)</span>&#123;<br>        <span class="hljs-keyword">this</span>.a=a;<br>    &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">getset</span> &#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>&#123;<br>        AA aa = <span class="hljs-keyword">new</span> AA();<br>        <span class="hljs-comment">//System.out.println(aa.a);这样写是错的，因为属性a被private限制了，只能在AA类中使用</span><br>        <span class="hljs-comment">//这时候就要使用set和get函数了</span><br>        aa.seta(<span class="hljs-number">50</span>);<span class="hljs-comment">//这一步用来设置a的值</span><br>        System.<span class="hljs-keyword">out</span>.println(aa.geta());<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>封装的作用：</p>
+<p>1.提高程序的安全性，保护程序</p>
+<p>2.统一接口（唯一接口只有get/set）</p>
+<p>3.隐藏代码实现细节</p>
+<p>4.系统的可维护性增加</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”JAVA--捕获异常“</title>
+    <url>/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<p> 捕获异常的知识点</p>
+<span id="more"></span>
+
+<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
+<p>假设要捕获多个异常，从大到小。</p>
+<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -474,55 +523,6 @@
 <p>实现了接口中的类就要重写接口中的方法，接口的多继承用逗号连接实现。</p>
 <p>接口的作用</p>
 <p><img src="https://img-blog.csdnimg.cn/9ec1434941764960bada7de63fcf34be.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--拆箱和装箱，字符串数字转换“</title>
-    <url>/2022/02/09/JAVA-%E6%8B%86%E7%AE%B1%E5%92%8C%E8%A3%85%E7%AE%B1%EF%BC%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2/</url>
-    <content><![CDATA[<p>数据类型（int，float等等）存放在栈里面。</p>
-<p>引用类型（Integer，Float等等）存放在堆里面 。</p>
-<span id="more"></span>
-
-<p>装箱就是 Java 将基本类型转换成对应的包装类型，比如将 int 转换成 Integer 对象。反之将 Integer 转换成 int 值，则称为拆箱。</p>
-<p><strong>装箱:</strong></p>
-<p>int num = 20;</p>
-<p>Integer integer1 = num;</p>
-<p>如上这样就可以实现装箱使int成为integer了。</p>
-<p><strong>拆箱：</strong></p>
-<p>int num2=integer;</p>
-<p>这样就可以拆箱。</p>
-<p>integer的范围是-128——127之间，超过这个范围会溢出</p>
-<p><strong>字符串和数字之间的转换：</strong></p>
-<p>int num = 20;</p>
-<p>Integer integer = num;</p>
-<p>String s = integer.tostring(num，10)//这里解释一下，tostring括号里面的num是要转换为字符串的数字，后面的10是转换为10进制的，当然也可以变成8/16转换成八进制十六进制。</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--捕获异常“</title>
-    <url>/2022/02/09/JAVA-%E6%8D%95%E8%8E%B7%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<p> 捕获异常的知识点</p>
-<span id="more"></span>
-
-<p><img src="https://img-blog.csdnimg.cn/img_convert/9e2b02acb699d3e3244694956cb154e7.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这个代码中b等于0，所以会报错，错误类型为ArithmeException，我们使用catch关键字可以捕获这个异常，并且输出语句，最后再用finally处理最后。</p>
-<p>假设要捕获多个异常，从大到小。</p>
-<p>抛出异常：（用throw 关键字抛出new一个新异常）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/29d685470b9578cce9bfcfcd70d0c61f.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -632,6 +632,38 @@
       </tags>
   </entry>
   <entry>
+    <title>JAVA--构造器</title>
+    <url>/2022/02/09/JAVA-%E6%9E%84%E9%80%A0%E5%99%A8/</url>
+    <content><![CDATA[<p> 定义一个构造器：（构造方法必须没有返回值）</p>
+<span id="more"></span>
+
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Person</span>&#123;<br>    <span class="hljs-keyword">public</span> Person()&#123;<br>    &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-symbol">void</span> <span class="hljs-symbol">main</span>(<span class="hljs-symbol">String</span>[] <span class="hljs-symbol">args</span>)&#123;<br>    Person person = new Person();<br>&#125;<br><br><br></code></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>1.在类里面即使你什么都不写，都会存在一个构造器.</p>
+<p>2.当我们在用new关键字创建一个新对象的时候，<strong>对象调用的一定是方法，而不是调用类！！这就是为什么即使什么都不写依然会存在一个构造器的原因，因为要定义一个对象就一定需要构造器！简单理解为使用new创建对象的本质就是在调用构造器。</strong></p>
+<p><strong>举个例子：</strong></p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><code class="hljs arduino"><br><span class="hljs-comment">//还是刚才那个构造器</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>&#123;<br>    <span class="hljs-type">String</span> st;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">()</span></span>&#123;<br>        <span class="hljs-keyword">this</span>.st = <span class="hljs-string">&quot;OK!&quot;</span>;<br>    &#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-type">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">String</span>[] args)</span></span>&#123;<br>    Person person = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Person</span>();<br>    System.out.<span class="hljs-built_in">println</span>(person.st);<br>    <span class="hljs-comment">//这里会输出OK！而不是NULL了，因为对象调用的是方法person而person已经定义了st为&quot;OK!&quot;</span><br>&#125;<br><br><br><br><br></code></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>上面我们说的是无参数的构造器，下面我们来介绍有参数的构造器。</p>
+<p>有参构造，一旦有了有参构造，无参构造就必须显式定义，什么意思呢，下面来解释：</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><code class="hljs csharp"><br><br><span class="hljs-comment">//还是刚才那个构造器</span><br><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>&#123;<br>    String st;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span>()</span>&#123;<br>        <span class="hljs-keyword">this</span>.st = <span class="hljs-string">&quot;不OK!&quot;</span><br>&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span>(<span class="hljs-params"><span class="hljs-built_in">int</span> a</span>)</span>&#123;<br>        <span class="hljs-keyword">this</span>.st = <span class="hljs-string">&quot;OK!&quot;</span><br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>&#123;<br>    Person person1 = <span class="hljs-keyword">new</span> Person();<span class="hljs-comment">//这里调用的是无参构造。</span><br>    Person person2 = <span class="hljs-keyword">new</span> Person(<span class="hljs-number">20</span>);<span class="hljs-comment">//这里调用的是有参构造。</span><br>    <span class="hljs-comment">//当然，你的对象名也不能相同，否则会报错。</span><br>&#125;<br><br><br><br><br><br><br></code></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>无参构造是什么意思：就是在构造器中不加参数的。</p>
+<p>显式定义是什么意思：就是即使方法里面什么东西都没有你也要把该方法写出来。</p>
+<p><strong>其实构造器最大的作用就是初始化值！</strong></p>
+<p><strong>快捷键：在IDEA里面Alt+Insert 快速建立构造器！</strong></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”JAVA--文件file类“</title>
     <url>/2022/02/09/JAVA-%E6%96%87%E4%BB%B6file%E7%B1%BB/</url>
     <content><![CDATA[<p>java.io.File是文件名的抽象表示。</p>
@@ -700,38 +732,6 @@
 <p><strong>有static时，b调用了B类的方法，因为b是用b类定义的</strong></p>
 <p><strong>没有static时，b调用的是对象的方法，而b是用A类new的</strong></p>
 <p><strong>简单来说就是有static调用后面，没有static调用前面。</strong></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA--构造器</title>
-    <url>/2022/02/09/JAVA-%E6%9E%84%E9%80%A0%E5%99%A8/</url>
-    <content><![CDATA[<p> 定义一个构造器：（构造方法必须没有返回值）</p>
-<span id="more"></span>
-
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Person</span>&#123;<br>    <span class="hljs-keyword">public</span> Person()&#123;<br>    &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-symbol">void</span> <span class="hljs-symbol">main</span>(<span class="hljs-symbol">String</span>[] <span class="hljs-symbol">args</span>)&#123;<br>    Person person = new Person();<br>&#125;<br><br><br></code></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>1.在类里面即使你什么都不写，都会存在一个构造器.</p>
-<p>2.当我们在用new关键字创建一个新对象的时候，<strong>对象调用的一定是方法，而不是调用类！！这就是为什么即使什么都不写依然会存在一个构造器的原因，因为要定义一个对象就一定需要构造器！简单理解为使用new创建对象的本质就是在调用构造器。</strong></p>
-<p><strong>举个例子：</strong></p>
-<figure class="highlight arduino"><table><tr><td class="code"><pre><code class="hljs arduino"><br><span class="hljs-comment">//还是刚才那个构造器</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>&#123;<br>    <span class="hljs-type">String</span> st;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">()</span></span>&#123;<br>        <span class="hljs-keyword">this</span>.st = <span class="hljs-string">&quot;OK!&quot;</span>;<br>    &#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-type">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-type">String</span>[] args)</span></span>&#123;<br>    Person person = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Person</span>();<br>    System.out.<span class="hljs-built_in">println</span>(person.st);<br>    <span class="hljs-comment">//这里会输出OK！而不是NULL了，因为对象调用的是方法person而person已经定义了st为&quot;OK!&quot;</span><br>&#125;<br><br><br><br><br></code></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>上面我们说的是无参数的构造器，下面我们来介绍有参数的构造器。</p>
-<p>有参构造，一旦有了有参构造，无参构造就必须显式定义，什么意思呢，下面来解释：</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><code class="hljs csharp"><br><br><span class="hljs-comment">//还是刚才那个构造器</span><br><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>&#123;<br>    String st;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span>()</span>&#123;<br>        <span class="hljs-keyword">this</span>.st = <span class="hljs-string">&quot;不OK!&quot;</span><br>&#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span>(<span class="hljs-params"><span class="hljs-built_in">int</span> a</span>)</span>&#123;<br>        <span class="hljs-keyword">this</span>.st = <span class="hljs-string">&quot;OK!&quot;</span><br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(<span class="hljs-params">String[] args</span>)</span>&#123;<br>    Person person1 = <span class="hljs-keyword">new</span> Person();<span class="hljs-comment">//这里调用的是无参构造。</span><br>    Person person2 = <span class="hljs-keyword">new</span> Person(<span class="hljs-number">20</span>);<span class="hljs-comment">//这里调用的是有参构造。</span><br>    <span class="hljs-comment">//当然，你的对象名也不能相同，否则会报错。</span><br>&#125;<br><br><br><br><br><br><br></code></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>无参构造是什么意思：就是在构造器中不加参数的。</p>
-<p>显式定义是什么意思：就是即使方法里面什么东西都没有你也要把该方法写出来。</p>
-<p><strong>其实构造器最大的作用就是初始化值！</strong></p>
-<p><strong>快捷键：在IDEA里面Alt+Insert 快速建立构造器！</strong></p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -848,6 +848,26 @@
       </tags>
   </entry>
   <entry>
+    <title>”JAVA--转换流知识点“</title>
+    <url>/2022/02/09/JAVA-%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<p>InputStreamReader和OutputStreamWriter:</p>
+<span id="more"></span>
+
+
+<p> <strong>InputStreamReader</strong>:</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/f0b6cfe4735777363bc8e2eeafde2a2b.png" alt="img"></p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这样接下来直接用isr即可</p>
+<p>OutputStreamWriter同理。</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA--继承</title>
     <url>/2022/02/09/JAVA-%E7%BB%A7%E6%89%BF/</url>
     <content><![CDATA[<p>1.extend的意思是’’拓展，扩大’’,子类是对父类的拓展。</p>
@@ -860,26 +880,6 @@
 <p>2.Object！</p>
 <p>在Java中所有的类都默认继承Object类！！！</p>
 <p>例：public class AA /<em>entend Object</em>/{}</p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”JAVA--转换流知识点“</title>
-    <url>/2022/02/09/JAVA-%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
-    <content><![CDATA[<p>InputStreamReader和OutputStreamWriter:</p>
-<span id="more"></span>
-
-
-<p> <strong>InputStreamReader</strong>:</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/f0b6cfe4735777363bc8e2eeafde2a2b.png" alt="img"></p>
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这样接下来直接用isr即可</p>
-<p>OutputStreamWriter同理。</p>
 ]]></content>
       <categories>
         <category>JAVA</category>
@@ -929,6 +929,64 @@
     <content><![CDATA[<p>共同点：xshell和Xftp都需要使用Linux中的ip地址（在linux的cmd中使用ifconfig来查看连接用到的ip）</p>
 <p>不同点：Xftp用于发送文件。</p>
 <p>Xshell可以使用windows来访问Linux，实现远程操控。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”Linux--文件目录指令“</title>
+    <url>/2022/02/09/Linux-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[<p>介绍Linux用于文件的常用指令</p>
+<span id="more"></span>
+
+<p>1.pwd指令：显示当前文件目录的绝对路径</p>
+<p>2.ls指令：显示当前目录下的文件（-a显示隐藏文件，-l以单行形式输出）</p>
+<p>3.cd指令：（1）cd ~ 回到自己的家目录</p>
+<p>​        （2）cd .. 回到上一级目录</p>
+<p>4.mkdir（make dir）指令：mkdir 创建目录，mkdir -p 创建多级目录</p>
+<p>5.rmdir 删除指定目录：（1）删除空目录 rmdir 目录</p>
+<p>​                    (2) 删除非空目录 rm -rf 目录（是rm -f 和rm -r的结合体）</p>
+<p>6.创建空文件：touch 文件名称。如创建一个Hello.txt 文件，使用touch Hello.txt</p>
+<p><strong>7.cp指令：</strong></p>
+<p><strong>(1)比如想把home/a路径下的Hello.txt文件拷贝到home/b路径下，我们要先在home/a路径下执行操作:cp Hello.txt home/b/</strong></p>
+<p><strong>(2)把整个文件夹的内容拷贝到另外一个文件夹：cp -r home/a/ home/b/（其中是把a拷贝到b）</strong></p>
+<p><strong>（3）强制覆盖文件的方法是在cp前面加一个\ 其他的不变</strong></p>
+<p>8.rm指令：rm -r 递归删除整个文件夹</p>
+<p>​         rm -f 强制删除不提示</p>
+<p>9.mv指令：</p>
+<p><img src="https://img-blog.csdnimg.cn/ab9d6a81664b4e97bfbb25e95846b7ba.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>例：若想把/home/目录下面的pig.txt文件移动到/target/目录下面，使用1.cd /home/  2.mv pig.txt /target/</p>
+<p>10.cat指令：显示文件的内容（用cat -n 来显示行数），通常在cat指令后面会加上一个| more来给用户操作，有了more指令不会把你的文件在一行显示完可以有更多的操作。</p>
+<p>11.more指令：也可以使用more指令来显示文件内容：more /home/Hello.java<img src="https://img-blog.csdnimg.cn/77e9b31369dc4d4b82157f2fb77c92fd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> 12.less指令： 跟more指令一样的作用，但是less指令是在文件看到哪里加载到哪里，不看的内容不会加载，这对大型文件很有作用。<img src="https://img-blog.csdnimg.cn/8593ab6174384638beca6a7edf1bb9bc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>13.echo指令：</p>
+<p><img src="https://img-blog.csdnimg.cn/54a6b36c221b419e94f67338cf510d72.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_16,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>14.head指令：<br> <img src="https://img-blog.csdnimg.cn/b7a7a2663dd64d828304850916f30986.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动">​</p>
+<p> 例题答案：head -n 5 /etc/profile</p>
+<p>15.tail指令：（与head指令相反） </p>
+<p><img src="https://img-blog.csdnimg.cn/57c3d4a749ae43fa9a3530cd01a49298.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> 在后面加-f是实时监控、</p>
+<p>比如我要监控Hello.txt文件，那么使用tail -f Hello.txt，然后我在linux的终端使用echo Hello &gt; Hello.txt，这时会在Xshell中显示Hello，因为实时监控了。</p>
+<p>在echo Hello &gt; Hello.txt 中&gt;的作用是覆盖原先文件的内容，而&gt;&gt;的作用是在文件的后面追加内容</p>
+<p><img src="https://img-blog.csdnimg.cn/9c2cbff394d14f77b07a3d72c5631388.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/6abcdc70449d491fa2902b21acffb776.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>16.ln指令：</p>
+<p>ln -s [源文件或者目录] [软链接名] </p>
+<p><img src="https://img-blog.csdnimg.cn/9f1d6f2211584101bd42d61514438c39.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>17.history指令：</p>
+<p>显示出历史指令。</p>
+<p><img src="https://img-blog.csdnimg.cn/a9bd055e7e5b4ecdbd997227dca209b4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_14,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>18.date指令：</p>
+<p>显示当前日期</p>
+<p>（1）date                显示当前时间</p>
+<p>（2）date+%Y         显示当前年份（year）</p>
+<p>（3）date+%m        显示当前月份（month）</p>
+<p>（4）date+%d          显示当前是哪一天</p>
+<p>（5）date“+%Y-%m-%d %H;%M;%S” 显示年月日时分秒</p>
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -1031,6 +1089,37 @@
       </tags>
   </entry>
   <entry>
+    <title>”Linux--用户管理“</title>
+    <url>/2022/02/09/Linux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<p> 一、基本操作：</p>
+<p>添加用户：useradd 用户名</p>
+<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
+<span id="more"></span>
+
+<p>删除用户(不保留家目录)：userdel -r 用户名</p>
+<p>更改用户密码：passwd 用户名</p>
+<p>查询用户信息：id 用户名</p>
+<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
+<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
+<p>想要查看现在的用户是谁：who am i（离谱）</p>
+<p>pwd：查看现在在哪个目录下面</p>
+<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
+<p>添加组：groupadd 组名</p>
+<p>删除组：groupdel 组名</p>
+<p>创建用户的同时分组：useradd -g 组名 用户名</p>
+<p>用户换组：usermod -g 新组名 用户名</p>
+<p><strong>用户和组的相关文件：</strong></p>
+<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”Linux--忘记密码的找回方法“</title>
     <url>/2022/02/09/Linux-%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E7%9A%84%E6%89%BE%E5%9B%9E%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<p>非常详细！保姆级教程！</p>
@@ -1063,92 +1152,61 @@
       </tags>
   </entry>
   <entry>
-    <title>”Linux--文件目录指令“</title>
-    <url>/2022/02/09/Linux-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E6%8C%87%E4%BB%A4/</url>
-    <content><![CDATA[<p>介绍Linux用于文件的常用指令</p>
-<span id="more"></span>
+    <title>NFT--MetaMask的创建</title>
+    <url>/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/</url>
+    <content><![CDATA[<h3 id="Chrome中的MetaMask钱包的创建"><a href="#Chrome中的MetaMask钱包的创建" class="headerlink" title="Chrome中的MetaMask钱包的创建"></a>Chrome中的MetaMask钱包的创建</h3><span id="more"></span>
 
-<p>1.pwd指令：显示当前文件目录的绝对路径</p>
-<p>2.ls指令：显示当前目录下的文件（-a显示隐藏文件，-l以单行形式输出）</p>
-<p>3.cd指令：（1）cd ~ 回到自己的家目录</p>
-<p>​        （2）cd .. 回到上一级目录</p>
-<p>4.mkdir（make dir）指令：mkdir 创建目录，mkdir -p 创建多级目录</p>
-<p>5.rmdir 删除指定目录：（1）删除空目录 rmdir 目录</p>
-<p>​                    (2) 删除非空目录 rm -rf 目录（是rm -f 和rm -r的结合体）</p>
-<p>6.创建空文件：touch 文件名称。如创建一个Hello.txt 文件，使用touch Hello.txt</p>
-<p><strong>7.cp指令：</strong></p>
-<p><strong>(1)比如想把home/a路径下的Hello.txt文件拷贝到home/b路径下，我们要先在home/a路径下执行操作:cp Hello.txt home/b/</strong></p>
-<p><strong>(2)把整个文件夹的内容拷贝到另外一个文件夹：cp -r home/a/ home/b/（其中是把a拷贝到b）</strong></p>
-<p><strong>（3）强制覆盖文件的方法是在cp前面加一个\ 其他的不变</strong></p>
-<p>8.rm指令：rm -r 递归删除整个文件夹</p>
-<p>​         rm -f 强制删除不提示</p>
-<p>9.mv指令：</p>
-<p><img src="https://img-blog.csdnimg.cn/ab9d6a81664b4e97bfbb25e95846b7ba.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>例：若想把/home/目录下面的pig.txt文件移动到/target/目录下面，使用1.cd /home/  2.mv pig.txt /target/</p>
-<p>10.cat指令：显示文件的内容（用cat -n 来显示行数），通常在cat指令后面会加上一个| more来给用户操作，有了more指令不会把你的文件在一行显示完可以有更多的操作。</p>
-<p>11.more指令：也可以使用more指令来显示文件内容：more /home/Hello.java<img src="https://img-blog.csdnimg.cn/77e9b31369dc4d4b82157f2fb77c92fd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> 12.less指令： 跟more指令一样的作用，但是less指令是在文件看到哪里加载到哪里，不看的内容不会加载，这对大型文件很有作用。<img src="https://img-blog.csdnimg.cn/8593ab6174384638beca6a7edf1bb9bc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>13.echo指令：</p>
-<p><img src="https://img-blog.csdnimg.cn/54a6b36c221b419e94f67338cf510d72.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_16,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>14.head指令：<br> <img src="https://img-blog.csdnimg.cn/b7a7a2663dd64d828304850916f30986.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动">​</p>
-<p> 例题答案：head -n 5 /etc/profile</p>
-<p>15.tail指令：（与head指令相反） </p>
-<p><img src="https://img-blog.csdnimg.cn/57c3d4a749ae43fa9a3530cd01a49298.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> 在后面加-f是实时监控、</p>
-<p>比如我要监控Hello.txt文件，那么使用tail -f Hello.txt，然后我在linux的终端使用echo Hello &gt; Hello.txt，这时会在Xshell中显示Hello，因为实时监控了。</p>
-<p>在echo Hello &gt; Hello.txt 中&gt;的作用是覆盖原先文件的内容，而&gt;&gt;的作用是在文件的后面追加内容</p>
-<p><img src="https://img-blog.csdnimg.cn/9c2cbff394d14f77b07a3d72c5631388.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/6abcdc70449d491fa2902b21acffb776.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>16.ln指令：</p>
-<p>ln -s [源文件或者目录] [软链接名] </p>
-<p><img src="https://img-blog.csdnimg.cn/9f1d6f2211584101bd42d61514438c39.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>17.history指令：</p>
-<p>显示出历史指令。</p>
-<p><img src="https://img-blog.csdnimg.cn/a9bd055e7e5b4ecdbd997227dca209b4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_14,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>18.date指令：</p>
-<p>显示当前日期</p>
-<p>（1）date                显示当前时间</p>
-<p>（2）date+%Y         显示当前年份（year）</p>
-<p>（3）date+%m        显示当前月份（month）</p>
-<p>（4）date+%d          显示当前是哪一天</p>
-<p>（5）date“+%Y-%m-%d %H;%M;%S” 显示年月日时分秒</p>
+<p>1.先把MetaMask添加到Chrome插件</p>
+<p>2.按照提示设置密码</p>
+<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164451817.png" alt="image-20220605164451817"></p>
+<p>3.每个账户都会有一个专属的助记词，<strong>请记住你的助记词，很重要</strong></p>
+<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164617756.png" alt="image-20220605164617756"></p>
+<p>4.为了确保你记住会让你确认一遍</p>
+<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605165616940.png" alt="image-20220605165616940"></p>
+<p>5.完成之后就创建好你的MetaMask账户了！</p>
+<p>6.再登陆Mintable.app网站（用于NFT的购买和售卖）创建账户，和你的Meta Mask账户连接即可进行NFT的购买和售卖。</p>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>NFT</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
+        <tag>NFT</tag>
       </tags>
   </entry>
   <entry>
-    <title>”Linux--用户管理“</title>
-    <url>/2022/02/09/Linux-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<p> 一、基本操作：</p>
-<p>添加用户：useradd 用户名</p>
-<p>删除用户(保留家目录）：userdel 用户名(但是需要root权限，自己当然不能删除自己)</p>
-<span id="more"></span>
-
-<p>删除用户(不保留家目录)：userdel -r 用户名</p>
-<p>更改用户密码：passwd 用户名</p>
-<p>查询用户信息：id 用户名</p>
-<p>切换用户：1.低权限用户到高权限用户（root）需要密码，反之不需要。</p>
-<p>​         2.使用su - 用户名来实现，在高权限状态时可以使用exit/logout来换成普通用户。</p>
-<p>想要查看现在的用户是谁：who am i（离谱）</p>
-<p>pwd：查看现在在哪个目录下面</p>
-<p><strong>用户组：（有一定的权限，对一个组的用户进行批量操作）</strong></p>
-<p>添加组：groupadd 组名</p>
-<p>删除组：groupdel 组名</p>
-<p>创建用户的同时分组：useradd -g 组名 用户名</p>
-<p>用户换组：usermod -g 新组名 用户名</p>
-<p><strong>用户和组的相关文件：</strong></p>
-<p>/etc/passwd文件：（其中shell相当于中间商，我们的指令要经过shell才能发送给linux进行识别）<img src="https://img-blog.csdnimg.cn/7157c66835b141c2a79d908aca8b62bd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>/etc/shadow文件：<img src="https://img-blog.csdnimg.cn/112b921605f2469faa7f4c5662f1c333.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+    <title>R-安装R语言</title>
+    <url>/2022/07/03/R-%E5%AE%89%E8%A3%85R%E8%AF%AD%E8%A8%80/</url>
+    <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV1Uv411n76i?spm_id_from=333.337.search-card.all.click&amp;vd_source=acefe4c123e2b73c9e6c4b23e6627fa8">https://www.bilibili.com/video/BV1Uv411n76i?spm_id_from=333.337.search-card.all.click&amp;vd_source=acefe4c123e2b73c9e6c4b23e6627fa8</a></p>
+<p>需要注意的是在linux使用R的时候每次都要先激活R语言：conda activate user_R</p>
+<p>然后使用：R 来访问R语言</p>
+<p>使用：radian 来访问有颜色的R语言</p>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>R语言</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
+        <tag>R语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客的基本操作</title>
+    <url>/2022/02/09/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p>hexo clean 清除缓存</p>
+<p>hexo n “…” 生成博客文章，标题是…</p>
+<span id="more"></span>
+
+<p>hexo s   start博客，默认启动在localhost:4000端口</p>
+<p>hexo d   部署到远端</p>
+<p>当写完博客之后通常使用这三个：（依次输入）</p>
+<p>hexo clean </p>
+<p>hexo g</p>
+<p>hexo d</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -2241,43 +2299,6 @@
       </tags>
   </entry>
   <entry>
-    <title>NFT--MetaMask的创建</title>
-    <url>/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/</url>
-    <content><![CDATA[<h3 id="Chrome中的MetaMask钱包的创建"><a href="#Chrome中的MetaMask钱包的创建" class="headerlink" title="Chrome中的MetaMask钱包的创建"></a>Chrome中的MetaMask钱包的创建</h3><span id="more"></span>
-
-<p>1.先把MetaMask添加到Chrome插件</p>
-<p>2.按照提示设置密码</p>
-<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164451817.png" alt="image-20220605164451817"></p>
-<p>3.每个账户都会有一个专属的助记词，<strong>请记住你的助记词，很重要</strong></p>
-<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605164617756.png" alt="image-20220605164617756"></p>
-<p>4.为了确保你记住会让你确认一遍</p>
-<p><img src="/2022/06/05/NFT-MetaMask%E7%9A%84%E5%88%9B%E5%BB%BA/image-20220605165616940.png" alt="image-20220605165616940"></p>
-<p>5.完成之后就创建好你的MetaMask账户了！</p>
-<p>6.再登陆Mintable.app网站（用于NFT的购买和售卖）创建账户，和你的Meta Mask账户连接即可进行NFT的购买和售卖。</p>
-]]></content>
-      <categories>
-        <category>NFT</category>
-      </categories>
-      <tags>
-        <tag>NFT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>R-安装R语言</title>
-    <url>/2022/07/03/R-%E5%AE%89%E8%A3%85R%E8%AF%AD%E8%A8%80/</url>
-    <content><![CDATA[<p><a href="https://www.bilibili.com/video/BV1Uv411n76i?spm_id_from=333.337.search-card.all.click&amp;vd_source=acefe4c123e2b73c9e6c4b23e6627fa8">https://www.bilibili.com/video/BV1Uv411n76i?spm_id_from=333.337.search-card.all.click&amp;vd_source=acefe4c123e2b73c9e6c4b23e6627fa8</a></p>
-<p>需要注意的是在linux使用R的时候每次都要先激活R语言：conda activate user_R</p>
-<p>然后使用：R 来访问R语言</p>
-<p>使用：radian 来访问有颜色的R语言</p>
-]]></content>
-      <categories>
-        <category>R语言</category>
-      </categories>
-      <tags>
-        <tag>R语言</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo d出错时的解决办法</title>
     <url>/2022/02/09/hexo-d%E5%87%BA%E9%94%99%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     <content><![CDATA[<p>该方法是一次性的，并不能永久解决</p>
@@ -2297,57 +2318,6 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo博客的基本操作</title>
-    <url>/2022/02/09/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<p>hexo clean 清除缓存</p>
-<p>hexo n “…” 生成博客文章，标题是…</p>
-<span id="more"></span>
-
-<p>hexo s   start博客，默认启动在localhost:4000端口</p>
-<p>hexo d   部署到远端</p>
-<p>当写完博客之后通常使用这三个：（依次输入）</p>
-<p>hexo clean </p>
-<p>hexo g</p>
-<p>hexo d</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>html -- 基础</title>
-    <url>/2022/04/14/html-%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!--标准格式--&gt;</span><br><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">mate</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><br>    	标题 <br>    <span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    	<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>标题1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><br>    	<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>标题2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span><br>    	<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><br>        	段落1<br>    	<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br><br></code></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>html</category>
-      </categories>
-      <tags>
-        <tag>html</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>matlab--程序设计</title>
-    <url>/2022/03/21/matlab-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</url>
-    <content><![CDATA[<p>matlab中的程序设计知识</p>
-<span id="more"></span>
-
-<p>使用input函数可以让用户输入想输入的值，可以是任何形式的。</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><code class="hljs matlab">#可以在input函数的括号内加入想说的话，如<br>a = input(<span class="hljs-string">&quot;请输入a的值：&quot;</span>)	#然后这个a的值会赋值给变量a，在后面可以对a进行相应的运算<br>b = a * <span class="hljs-number">2</span>	 #b = <span class="hljs-number">2</span>a<br></code></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>matlab</category>
-      </categories>
-      <tags>
-        <tag>matlab</tag>
       </tags>
   </entry>
   <entry>
@@ -2382,6 +2352,36 @@
       </tags>
   </entry>
   <entry>
+    <title>html -- 基础</title>
+    <url>/2022/04/14/html-%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!--标准格式--&gt;</span><br><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">mate</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><br>    	标题 <br>    <span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    	<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>标题1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><br>    	<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>标题2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span><br>    	<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><br>        	段落1<br>    	<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br><br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>html</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>matlab--程序设计</title>
+    <url>/2022/03/21/matlab-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<p>matlab中的程序设计知识</p>
+<span id="more"></span>
+
+<p>使用input函数可以让用户输入想输入的值，可以是任何形式的。</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><code class="hljs matlab">#可以在input函数的括号内加入想说的话，如<br>a = input(<span class="hljs-string">&quot;请输入a的值：&quot;</span>)	#然后这个a的值会赋值给变量a，在后面可以对a进行相应的运算<br>b = a * <span class="hljs-number">2</span>	 #b = <span class="hljs-number">2</span>a<br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>matlab</category>
+      </categories>
+      <tags>
+        <tag>matlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>”python--random“</title>
     <url>/2022/02/09/python-random/</url>
     <content><![CDATA[<p>随机生产一个取值范围在10~100的整数：random.randint(10,100)</p>
@@ -2395,63 +2395,6 @@
 <p>在后面我们再使用三次</p>
 <p>random.randint(1~10）</p>
 <p>三次生成的数分别是1，3，6，所以可以推断出setstate的作用是把前三次生成的随机数变成一个固定的状态再后面再生成！</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--一些函数“</title>
-    <url>/2022/02/09/python-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<p> bool()：判断括号里面的结果是真还是假。</p>
-<p>真的情况：在括号里面加引号，引号里面有任何值的结果都是真以及直接输入true（不加引号）</p>
-<p>假的情况：在引号里面有引号但是引号里面什么都没有以及直接输入false</p>
-<span id="more"></span>
-
-<p>以下是定义为false的情况：</p>
-<p><img src="https://img-blog.csdnimg.cn/91c7d524a1064e67a99244784f03bcc4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python--name属性</title>
-    <url>/2022/03/10/python-name%E5%B1%9E%E6%80%A7/</url>
-    <content><![CDATA[<p>python中的 __  <em>name</em> _ _属性</p>
-<span id="more"></span>
-
-<p>除了直接运行，python文件还可以直接作为模块导入。通过Python中的__name__属性来判断，分两种情况：<br>1.如果文件作为模块被导入，那么他的__name__值被自动设置为模块名</p>
-<p>2.如果文件直接运行，那么__name__的属性值自动设置为字符串’<strong>main</strong>‘</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>()<br><span class="hljs-keyword">if</span> __name__ = <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;directly run&quot;</span>)<br><span class="hljs-keyword">elif</span> __name__ = <span class="hljs-string">&#x27;hello&#x27;</span>:<br>	<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;import way&quot;</span>)<br>    <br>main()<br></code></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--列表里的函数“</title>
-    <url>/2022/02/09/python-%E5%88%97%E8%A1%A8%E9%87%8C%E7%9A%84%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<p> sort()将数组从小到大排序。</p>
-<p>reverse（）将数组此时的位置进行倒转</p>
-<span id="more"></span>
-
-<p>count（？）问号的内容是数组里面的数据元素，这个函数用于数出这个数据元素在这个数组里面出现了几次</p>
-<p>index（？），问号的内容是数组里面的数据元素，这个函数用于显示这个元素在数组里面出现的位置（如果有多个元素相同，那么显示第一个元素的位置）。<strong>可以在后面再加两个参数分别显示查找开始和结束的位置，index(？，start，end)</strong></p>
-<p>一个数组赋值给另外一个列表，比如nums数组赋值给nums_two数组：nums_two = nums.copy()</p>
-<p><strong>注意：nums这个数组和nums[:]这个数组是表示的同一个</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/9ee34faef1d743f089ab46f13fbc0e56.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdnimg.cn/1918e8c5870c4dcba8d4b42608cde2ad.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_5,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -2496,6 +2439,42 @@
       </tags>
   </entry>
   <entry>
+    <title>python--name属性</title>
+    <url>/2022/03/10/python-name%E5%B1%9E%E6%80%A7/</url>
+    <content><![CDATA[<p>python中的 __  <em>name</em> _ _属性</p>
+<span id="more"></span>
+
+<p>除了直接运行，python文件还可以直接作为模块导入。通过Python中的__name__属性来判断，分两种情况：<br>1.如果文件作为模块被导入，那么他的__name__值被自动设置为模块名</p>
+<p>2.如果文件直接运行，那么__name__的属性值自动设置为字符串’<strong>main</strong>‘</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>()<br><span class="hljs-keyword">if</span> __name__ = <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;directly run&quot;</span>)<br><span class="hljs-keyword">elif</span> __name__ = <span class="hljs-string">&#x27;hello&#x27;</span>:<br>	<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;import way&quot;</span>)<br>    <br>main()<br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--一些函数“</title>
+    <url>/2022/02/09/python-%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p> bool()：判断括号里面的结果是真还是假。</p>
+<p>真的情况：在括号里面加引号，引号里面有任何值的结果都是真以及直接输入true（不加引号）</p>
+<p>假的情况：在引号里面有引号但是引号里面什么都没有以及直接输入false</p>
+<span id="more"></span>
+
+<p>以下是定义为false的情况：</p>
+<p><img src="https://img-blog.csdnimg.cn/91c7d524a1064e67a99244784f03bcc4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python--函数</title>
     <url>/2022/02/19/python-%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<h2 id="函数的基本操作"><a href="#函数的基本操作" class="headerlink" title="函数的基本操作"></a><strong>函数的基本操作</strong></h2><span id="more"></span>
@@ -2520,6 +2499,27 @@
 
 <h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#函数中函数的名称可以做参数</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">avg</span>(<span class="hljs-params">x,y</span>):<br>    <span class="hljs-keyword">return</span> (x+y)/<span class="hljs-number">2</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">f</span>(<span class="hljs-params">函数名,x,y</span>):<br>    函数名(x,y)  <span class="hljs-comment">#我们这里把参数的名字当中函数名</span><br>f(avg,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>) <span class="hljs-comment">#这里实现的就是avg(2,4) = 3</span><br></code></pre></td></tr></table></figure>
 
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--列表里的函数“</title>
+    <url>/2022/02/09/python-%E5%88%97%E8%A1%A8%E9%87%8C%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<p> sort()将数组从小到大排序。</p>
+<p>reverse（）将数组此时的位置进行倒转</p>
+<span id="more"></span>
+
+<p>count（？）问号的内容是数组里面的数据元素，这个函数用于数出这个数据元素在这个数组里面出现了几次</p>
+<p>index（？），问号的内容是数组里面的数据元素，这个函数用于显示这个元素在数组里面出现的位置（如果有多个元素相同，那么显示第一个元素的位置）。<strong>可以在后面再加两个参数分别显示查找开始和结束的位置，index(？，start，end)</strong></p>
+<p>一个数组赋值给另外一个列表，比如nums数组赋值给nums_two数组：nums_two = nums.copy()</p>
+<p><strong>注意：nums这个数组和nums[:]这个数组是表示的同一个</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/9ee34faef1d743f089ab46f13fbc0e56.png" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdnimg.cn/1918e8c5870c4dcba8d4b42608cde2ad.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBARG9wYWdpcA==,size_5,color_FFFFFF,t_70,g_se,x_16" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
 ]]></content>
       <categories>
         <category>python</category>
@@ -2702,141 +2702,6 @@
       </tags>
   </entry>
   <entry>
-    <title>python--考试复习</title>
-    <url>/2022/06/19/python-%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/</url>
-    <content><![CDATA[<h3 id="随机数生成"><a href="#随机数生成" class="headerlink" title="随机数生成"></a>随机数生成</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random<br><span class="hljs-comment"># 产生 1 到 10 的一个整数型随机数</span><br><span class="hljs-built_in">print</span>(random.randint(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>))<br><span class="hljs-comment"># 产生 0 到 1 之间的随机浮点数</span><br><span class="hljs-built_in">print</span>(random.random())<br><span class="hljs-comment"># 产生  1.1 到 5.4 之间的随机浮点数，区间可以不是整数</span><br><span class="hljs-built_in">print</span>(random.uniform(<span class="hljs-number">1.1</span>, <span class="hljs-number">5.4</span>))<br><span class="hljs-comment"># 从序列中随机选取一个元素</span><br><span class="hljs-built_in">print</span>(random.choice([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>]))<br><span class="hljs-comment"># 生成从1到100的间隔为2的随机整数</span><br><span class="hljs-built_in">print</span>(random.randrange(<span class="hljs-number">1</span>, <span class="hljs-number">100</span>, <span class="hljs-number">2</span>))<br><span class="hljs-comment"># 将序列a中的元素顺序打乱</span><br>a = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]<br>random.shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>])<br><span class="hljs-built_in">print</span>(a)<br></code></pre></td></tr></table></figure>
-
-<h3 id="列表排序"><a href="#列表排序" class="headerlink" title="列表排序"></a>列表排序</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#reverse方法</span><br>a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]<br>a.reverse()<br><span class="hljs-built_in">print</span>(a) <span class="hljs-comment">#[4,3,2,1]</span><br><br><span class="hljs-comment">#sort方法:由小到大进行排序</span><br>x = [<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>]<br>x.sort()<br><span class="hljs-built_in">print</span>(x) <span class="hljs-comment">#[1,2,3,4,5]</span><br><span class="hljs-comment">#还可以将根据字符串的长度进行升序排列</span><br>x = [<span class="hljs-string">&#x27;aaaaa&#x27;</span>,<span class="hljs-string">&#x27;aaa&#x27;</span>,<span class="hljs-string">&#x27;aa&#x27;</span>,<span class="hljs-string">&#x27;a&#x27;</span>,<span class="hljs-string">&#x27;aaaa&#x27;</span>]<br>x.sort()<br><span class="hljs-built_in">print</span>(x) <span class="hljs-comment">#[&#x27;a&#x27;,&#x27;aa&#x27;,&#x27;aaa&#x27;,&#x27;aaaa&#x27;,&#x27;aaaaa&#x27;]</span><br><br><span class="hljs-comment">#sort函数会对原列表进行修改，但是sorted函数不会进行修改,因此需要创建一个变量来存放新的列表</span><br>x = [<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]<br>y = <span class="hljs-built_in">sorted</span>(x)<br><span class="hljs-built_in">print</span>(x,end=<span class="hljs-string">&#x27;  &#x27;</span>)<br><span class="hljs-built_in">print</span>(y)<br></code></pre></td></tr></table></figure>
-
-<h3 id="统计字符串中不同类型字符的个数"><a href="#统计字符串中不同类型字符的个数" class="headerlink" title="统计字符串中不同类型字符的个数"></a>统计字符串中不同类型字符的个数</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">character = <span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;请输入任意字符：&#x27;</span>)<br>i = number = space = other = letter = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(character )):<br>    <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;a&#x27;</span> &lt;= character [i] &lt;= <span class="hljs-string">&#x27;z&#x27;</span> <span class="hljs-keyword">or</span> <span class="hljs-string">&#x27;A&#x27;</span> &lt;= character [i] &lt;= <span class="hljs-string">&#x27;Z&#x27;</span>:<br>        letter += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">elif</span> <span class="hljs-string">&#x27;0&#x27;</span> &lt;= character [i] &lt;= <span class="hljs-string">&#x27;9&#x27;</span>:<br>        number += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">elif</span> character [i] == <span class="hljs-string">&#x27; &#x27;</span>:<br>        space += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">else</span>:<br>        other += <span class="hljs-number">1</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;字母个数为：&quot;</span>,letter,<span class="hljs-string">&#x27;\t&#x27;</span>,<span class="hljs-string">&quot;数字个数为：&quot;</span>,number,<span class="hljs-string">&#x27;\t&#x27;</span>,<span class="hljs-string">&quot;空格个数为：&quot;</span>,space,<span class="hljs-string">&#x27;\t&#x27;</span>,<span class="hljs-string">&quot;其他字符个数为：&quot;</span>,other)<br></code></pre></td></tr></table></figure>
-
-<h3 id="字符串加密"><a href="#字符串加密" class="headerlink" title="字符串加密"></a>字符串加密</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">Mes = <span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;请输入一串字符：&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;加密后为:&#x27;</span>,end=<span class="hljs-string">&#x27;&#x27;</span>)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(Mes)):<br>    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">ord</span>(Mes[i])&gt;=<span class="hljs-number">65</span> <span class="hljs-keyword">and</span> <span class="hljs-built_in">ord</span>(Mes[i])&lt;=<span class="hljs-number">87</span>) <span class="hljs-keyword">or</span> (<span class="hljs-built_in">ord</span>(Mes[i])&gt;=<span class="hljs-number">97</span> <span class="hljs-keyword">and</span> <span class="hljs-built_in">ord</span>(Mes[i])&lt;=<span class="hljs-number">119</span>):<br>        m=<span class="hljs-built_in">chr</span>(<span class="hljs-built_in">ord</span>(Mes[i])+<span class="hljs-number">3</span>)<br>    <span class="hljs-keyword">elif</span> (<span class="hljs-built_in">ord</span>(Mes[i])&gt;=<span class="hljs-number">88</span> <span class="hljs-keyword">and</span> <span class="hljs-built_in">ord</span>(Mes[i])&lt;=<span class="hljs-number">90</span>) <span class="hljs-keyword">or</span>(<span class="hljs-built_in">ord</span>(Mes[i])&gt;=<span class="hljs-number">120</span> <span class="hljs-keyword">and</span> <span class="hljs-built_in">ord</span>(Mes[i])&lt;=<span class="hljs-number">122</span>):<br>        m=<span class="hljs-built_in">chr</span>(<span class="hljs-built_in">ord</span>(Mes[i])-<span class="hljs-number">23</span>)<br>    <span class="hljs-keyword">else</span>:<br>        m=Mes[i]<br>    <span class="hljs-built_in">print</span> (m,end=<span class="hljs-string">&#x27;&#x27;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#统计一串字符中的字母，空格，数字，其他字符的数量并且输出</span><br>a = <span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;请输入一个字符串：&#x27;</span>)<br>i = space = alpha = number = other = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> a:<br>    <span class="hljs-keyword">if</span> i.isspace():<br>        space += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">elif</span> i.isalpha():<br>        alpha += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">elif</span> i.isnumeric():<br>		number += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">else</span> :<br>        other += <span class="hljs-number">1</span><br><span class="hljs-built_in">print</span>(space,alpha,number,other)<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#编写程序，生成一个包含20个随机整数的列表，然后对其中偶数下标的元素进行降序排列，奇数下标的元素不变</span><br><span class="hljs-keyword">import</span> random<br><span class="hljs-built_in">list</span> = []<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">20</span>):<br>    i = random.randint(<span class="hljs-number">0</span>,<span class="hljs-number">100</span>)<br>    <span class="hljs-built_in">list</span>.append(i)<br>oushu = []<br>jishu = []<br><span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">list</span>:<br>    <span class="hljs-keyword">if</span> j%<span class="hljs-number">2</span>==<span class="hljs-number">0</span>:<br>        oushu.append[j]<br>    <span class="hljs-keyword">if</span> j%<span class="hljs-number">2</span>==<span class="hljs-number">1</span>:<br>        jishu.append[j]<br>oushu.sort(reverse=<span class="hljs-literal">True</span>)<br><span class="hljs-built_in">print</span>(jishu)<br><span class="hljs-built_in">print</span>(oushu)<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#编写一个程序生成20个随机整数，前十个进行升序排序，后十个进行降序排序</span><br><span class="hljs-keyword">import</span> random<br><span class="hljs-built_in">list</span> = []<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">20</span>):<br>	i = random.randint(<span class="hljs-number">0</span>,<span class="hljs-number">100</span>)<br>    <span class="hljs-built_in">list</span>.append(i)<br>list1 = <span class="hljs-built_in">list</span>[<span class="hljs-number">0</span>:<span class="hljs-number">9</span>]<br>list1.sort()<br>list2 = <span class="hljs-built_in">list</span>[<span class="hljs-number">10</span>:<span class="hljs-number">19</span>]<br>list2.sort(reverse=<span class="hljs-literal">True</span>)<br><span class="hljs-built_in">print</span>(list1)<br></code></pre></td></tr></table></figure>
-
-<p>自己的总结<br>1.导入库时候先from再import<br>2.生成随机小数的函数：random.random() 要先导入random库<br>3.python序列类型：序列类型：字符串，列表，元组，映射类型：字典，集合类型：集合<br>4.元组，列表的区别：<br>a.列表可以进行修改，元组不行<br>b.列表拥有很多元组不具有的方法，如：append()，extend(),remove(),pop()<br>c.列表可以进行切片访问和修改，元组只能进行切片访问<br>d.元组的访问速度比列表快很多<br>e.列表不能作为字典的键，但是元组可以</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#append函数和extend函数的区别</span><br>a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]<br><span class="hljs-built_in">list</span> = []<br><span class="hljs-built_in">list</span>.append(a) <span class="hljs-comment">#list=[[1,2]]可见是整个列表添加上去的</span><br><span class="hljs-built_in">list</span>.extend(a) <span class="hljs-comment">#list=[1,2] 可见是列表拆开之后加上去的</span><br><span class="hljs-comment">#总结：如果extend的是字符串，则字符串会被拆分成字符数组，如果extend的是字典，则字典的key会被加入到List中</span><br></code></pre></td></tr></table></figure>
-<p>5.format函数的作用：”{0,3}”.format(“Hello”,”World”) 其中0是代表调用format括号内的第一个参数，3是当参数的字符串不足3位的时候，自动在后面补上空格<br>6.filter函数返回类型是迭代器，需要和list函数搭配使用，那么返回的就是列表，其功能和map函数类似，就是计算给定参数对应的函数值<br>7.rfind函数查找对应字符串最后一次出现的位置的第一个字符的位置！<br>8.升级pip的命令：pip install pip -U<br>9.一些库：request:http请求工具<br>      pandas:分析结构化数据的工具<br>      jieba:中文分词工具</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>”python--除和地板除“</title>
-    <url>/2022/02/09/python-%E9%99%A4%E5%92%8C%E5%9C%B0%E6%9D%BF%E9%99%A4/</url>
-    <content><![CDATA[<p>3/2=1.5这个谁都懂</p>
-<p>但是3//2=1这个代表3/2的结果向下取整，称之为地板除。</p>
-<span id="more"></span>
-
-<p>如-5//2，先算-5/2=-2.5，再向下取整，得-3。</p>
-<p>我们还可以使用python的内置函数divmod（）</p>
-<p>如divmod(3,2)=(1,1)结果中的第一个1代表着3//2的结果，第二个1代表着3%2的结果。</p>
-<p>内置函数abs，如abs（x）意思是取x的绝对值</p>
-<p>任何数据类型后面加括号加值的结果都是强制转换成该数据类型。</p>
-<p>如：x=2.5</p>
-<p>int（x）的结果就是2，向下取整！</p>
-<p>pow(2,3)代表2的三次方，和2**3的效果一样。</p>
-<p>pow（2,3,4）代表着2**3%4即2的三次方结果除四的余数！</p>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数值分析--Lagrange插值</title>
-    <url>/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Lagrange%E6%8F%92%E5%80%BC/</url>
-    <content><![CDATA[<p>拉格朗日插值法分为一次插值，两次插值直到n次插值，划分的方法是有两个点就有一次插值，有三个点就有两次插值，同理可以推出有n个点就有n-1次插值。</p>
-<span id="more"></span>
-
-<h3 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h3><h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>假设图中有n个点，我们先找一个穿过第一个点的函数，再找穿过第二个点的函数，把这两个函数相加，得到的结果就是同时穿过这两个点的函数。</p>
-<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>当我们知道图中有n个点的时候，要找到同时穿过这n个点的函数，即把分别穿过n个点的函数相加，得到的就是拉格朗日插值。</p>
-<h3 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h3><p>当图中有三个点的时候，L2(x) = [(x-x1)(x-x2)/(x0-x1)(x0-x2)]y0 + [(x-x0)(x-x2)/(x1-x0)(x1-x2)]y1 + [(x-x0)(x-x1)/(x2-x0)(x2-x1)]y2</p>
-<p>当图中有n个点的时候，Ln(x) = n(大派键)i=0且i不等于j (x-xj)/(xi-xj)</p>
-]]></content>
-      <categories>
-        <category>数值分析</category>
-      </categories>
-      <tags>
-        <tag>数值分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web--将web内容上传服务器</title>
-    <url>/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[<h4 id="先上总结"><a href="#先上总结" class="headerlink" title="先上总结"></a>先上总结</h4><p>1.先用原始服务器的实例创建一个ubuntu镜像，记住镜像的账号（root）和密码。<br>2.先使用cmd进行root连接：（ssh <a href="mailto:&#x72;&#x6f;&#x6f;&#x74;&#64;&#x31;&#50;&#x30;&#x2e;&#55;&#x37;&#46;&#49;&#x37;&#46;&#x32;&#49;&#x36;">&#x72;&#x6f;&#x6f;&#x74;&#64;&#x31;&#50;&#x30;&#x2e;&#55;&#x37;&#46;&#49;&#x37;&#46;&#x32;&#49;&#x36;</a>）当然使用putty或者Xshell同样可以<br>3.使用Xftp7上传对应的web网页到服务器对应的目录中，目录为var\www\html（其中的var目录是和root同级目录）<br>4.上传之后，在浏览器中使用公网的ip即可看到网页。<br>试了一天TT</p>
-<span id="more"></span>
-
-<h4 id="参考视频，资料"><a href="#参考视频，资料" class="headerlink" title="参考视频，资料"></a>参考视频，资料</h4><p>b站视频：<a href="https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click</a></p>
-<p>博客园日志：<a href="http://t.zoukankan.com/chrischen98-p-10874821.html%EF%BC%88%E4%B8%8A%E5%8D%88%E4%B8%80%E7%9B%B4%E7%9C%8B%E8%BF%99%E4%B8%AA%EF%BC%8C%E4%BD%86%E6%98%AF%E7%94%A8%E4%BA%86iis%E4%B9%8B%E5%90%8E%E7%BD%91%E9%A1%B5%E4%B8%80%E7%9B%B4%E4%B8%8D%E6%98%BE%E7%A4%BA,%E8%AE%BE%E7%BD%AE%E5%95%A5%E7%AB%AF%E5%8F%A3%E9%83%BD%E6%B2%A1%E7%94%A8%EF%BC%89">http://t.zoukankan.com/chrischen98-p-10874821.html（上午一直看这个，但是用了iis之后网页一直不显示,设置啥端口都没用）</a></p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数值分析--Newton插值</title>
-    <url>/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Newton%E6%8F%92%E5%80%BC/</url>
-    <content><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在拉格朗日插值中解决了Ln(x)的问题，那么要解决L2(x)=L1(x)+？中的？是什么，我们需要引入牛顿插值来解决</p>
-<span id="more"></span>
-
-<h3 id="差商"><a href="#差商" class="headerlink" title="差商"></a>差商</h3><p>要想解决牛顿插值问题先要知道差商的概念。</p>
-<p>C0 = f(x0) = f(x0)</p>
-<p>C1 = f[x0,x1] = [f(x1)-f(x0)]/x1-x0</p>
-<p>C2 = f[x0,x1,x2] = f(x1)-f(x0)/x1-x0 ……</p>
-<h3 id="牛顿插值"><a href="#牛顿插值" class="headerlink" title="牛顿插值"></a>牛顿插值</h3><p>Nn(x) = C0 + C1(x-x0) + C2 (x-x0)(x-x1) + … + Cn(x-x0)(x-x1)..(x-xn)</p>
-]]></content>
-      <categories>
-        <category>数值分析</category>
-      </categories>
-      <tags>
-        <tag>数值分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数值分析-- 误差</title>
-    <url>/2022/03/07/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-%E8%AF%AF%E5%B7%AE/</url>
-    <content><![CDATA[<h3 id="误差和误差限"><a href="#误差和误差限" class="headerlink" title="误差和误差限"></a>误差和误差限</h3><span id="more"></span>
-
-<p>设X* 为X的一个近似值（可大于X也可小于X），有e* =  X-X* ,称e* 为<strong>绝对误差</strong>，简称<strong>误差</strong>。</p>
-<p>易得出结论：当绝对误差大于0时，近似值大于真实值，称为<strong>强近似值</strong>；当绝对误差小于0时，近似值小于真实值，称为<strong>弱近似值</strong>。</p>
-<p>误差的绝对值不超过某个正数E* ，称这个正数E<em>为近似值的*<em>误差限</em></em> </p>
-<h3 id="相对误差和相对误差限"><a href="#相对误差和相对误差限" class="headerlink" title="相对误差和相对误差限"></a>相对误差和相对误差限</h3><p>**相对误差:*<em>指的是近似值e</em> 与真实值X的比值，称为e(r)*（右下角有个小r）</p>
-<p><strong>相对误差限：</strong>相对误差不能超过相对误差限E(r)* ，E(r)* =E* / |x*|</p>
-<h3 id="绝对误差的计算方法"><a href="#绝对误差的计算方法" class="headerlink" title="绝对误差的计算方法"></a>绝对误差的计算方法</h3><p><strong>注意：绝对误差限一定是一个单位的半个单位，如0.5，0.05，0.005，0.0005等等，那么换成科学计数法的形式就可以变成1/2 * 10^-p</strong></p>
-<p><strong>（其中p取正整数！）这时，-p就可以换成另一种表示方法，-p = m-n+1  （其中m是小数点离第一个非0数字的后一位有多远，如123.45的m就是2，而0.00123的m就是-3）（其中n是有几位有效数字如123.45就有5为有效数字，那么n就是5.）通常情况下都是知道了m和n要去求p的！！</strong></p>
-<p>例如“派”取近似值3.14，那么|3.14-“派”| = 0.0015926&lt;=0.005=1/2 * 10^-2，则绝对误差限就是1/2 * 10^-2</p>
-<h3 id="相对误差的计算方法"><a href="#相对误差的计算方法" class="headerlink" title="相对误差的计算方法"></a>相对误差的计算方法</h3><p>若近似值有n为有效数字，其中a是近似值的个位数。</p>
-<p>E(r)*&lt;=1/2a * 10^-(n-1)</p>
-<h3 id="误差估计中的重要公式"><a href="#误差估计中的重要公式" class="headerlink" title="误差估计中的重要公式"></a>误差估计中的重要公式</h3><p>E(x1* +- x2* ) = E(x1* ) +- E(x2*)</p>
-<p><em><em>E(x1</em> * x2</em> ) = |x1*| * E(x2*) + |x2 *| * E(x1 *)**这个公式在平常的运算中常常能用得上。</p>
-<p>E(x1* / x2* ) = |x1*| * E(x2*) + |x2 *| * E(x1 *) / |x2 *|^2    这是上面那一条的除法运算</p>
-<h3 id="误差中的规则"><a href="#误差中的规则" class="headerlink" title="误差中的规则"></a>误差中的规则</h3><p>1.要避免除数的绝对值远远小于被除数绝对值的除法</p>
-<p>2.避免出现有效数字少的相减如x=123.401,  y = 123.412  ，那么y-x =0.011只有两位有效数字。</p>
-<p>3.防止大数吃掉小数</p>
-<p>4.注意简化运算流程，简化运算步骤</p>
-]]></content>
-      <categories>
-        <category>数值分析</category>
-      </categories>
-      <tags>
-        <tag>数值分析</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python--集合</title>
     <url>/2022/02/17/python-%E9%9B%86%E5%90%88/</url>
     <content><![CDATA[<h1 id="一些集合的基本操作"><a href="#一些集合的基本操作" class="headerlink" title="一些集合的基本操作"></a>一些集合的基本操作</h1><span id="more"></span>
@@ -2898,6 +2763,141 @@
       </categories>
       <tags>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>”python--除和地板除“</title>
+    <url>/2022/02/09/python-%E9%99%A4%E5%92%8C%E5%9C%B0%E6%9D%BF%E9%99%A4/</url>
+    <content><![CDATA[<p>3/2=1.5这个谁都懂</p>
+<p>但是3//2=1这个代表3/2的结果向下取整，称之为地板除。</p>
+<span id="more"></span>
+
+<p>如-5//2，先算-5/2=-2.5，再向下取整，得-3。</p>
+<p>我们还可以使用python的内置函数divmod（）</p>
+<p>如divmod(3,2)=(1,1)结果中的第一个1代表着3//2的结果，第二个1代表着3%2的结果。</p>
+<p>内置函数abs，如abs（x）意思是取x的绝对值</p>
+<p>任何数据类型后面加括号加值的结果都是强制转换成该数据类型。</p>
+<p>如：x=2.5</p>
+<p>int（x）的结果就是2，向下取整！</p>
+<p>pow(2,3)代表2的三次方，和2**3的效果一样。</p>
+<p>pow（2,3,4）代表着2**3%4即2的三次方结果除四的余数！</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python--考试复习</title>
+    <url>/2022/06/19/python-%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[<h3 id="随机数生成"><a href="#随机数生成" class="headerlink" title="随机数生成"></a>随机数生成</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random<br><span class="hljs-comment"># 产生 1 到 10 的一个整数型随机数</span><br><span class="hljs-built_in">print</span>(random.randint(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>))<br><span class="hljs-comment"># 产生 0 到 1 之间的随机浮点数</span><br><span class="hljs-built_in">print</span>(random.random())<br><span class="hljs-comment"># 产生  1.1 到 5.4 之间的随机浮点数，区间可以不是整数</span><br><span class="hljs-built_in">print</span>(random.uniform(<span class="hljs-number">1.1</span>, <span class="hljs-number">5.4</span>))<br><span class="hljs-comment"># 从序列中随机选取一个元素</span><br><span class="hljs-built_in">print</span>(random.choice([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>]))<br><span class="hljs-comment"># 生成从1到100的间隔为2的随机整数</span><br><span class="hljs-built_in">print</span>(random.randrange(<span class="hljs-number">1</span>, <span class="hljs-number">100</span>, <span class="hljs-number">2</span>))<br><span class="hljs-comment"># 将序列a中的元素顺序打乱</span><br>a = [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>]<br>random.shuffle([<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>])<br><span class="hljs-built_in">print</span>(a)<br></code></pre></td></tr></table></figure>
+
+<h3 id="列表排序"><a href="#列表排序" class="headerlink" title="列表排序"></a>列表排序</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#reverse方法</span><br>a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]<br>a.reverse()<br><span class="hljs-built_in">print</span>(a) <span class="hljs-comment">#[4,3,2,1]</span><br><br><span class="hljs-comment">#sort方法:由小到大进行排序</span><br>x = [<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>]<br>x.sort()<br><span class="hljs-built_in">print</span>(x) <span class="hljs-comment">#[1,2,3,4,5]</span><br><span class="hljs-comment">#还可以将根据字符串的长度进行升序排列</span><br>x = [<span class="hljs-string">&#x27;aaaaa&#x27;</span>,<span class="hljs-string">&#x27;aaa&#x27;</span>,<span class="hljs-string">&#x27;aa&#x27;</span>,<span class="hljs-string">&#x27;a&#x27;</span>,<span class="hljs-string">&#x27;aaaa&#x27;</span>]<br>x.sort()<br><span class="hljs-built_in">print</span>(x) <span class="hljs-comment">#[&#x27;a&#x27;,&#x27;aa&#x27;,&#x27;aaa&#x27;,&#x27;aaaa&#x27;,&#x27;aaaaa&#x27;]</span><br><br><span class="hljs-comment">#sort函数会对原列表进行修改，但是sorted函数不会进行修改,因此需要创建一个变量来存放新的列表</span><br>x = [<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]<br>y = <span class="hljs-built_in">sorted</span>(x)<br><span class="hljs-built_in">print</span>(x,end=<span class="hljs-string">&#x27;  &#x27;</span>)<br><span class="hljs-built_in">print</span>(y)<br></code></pre></td></tr></table></figure>
+
+<h3 id="统计字符串中不同类型字符的个数"><a href="#统计字符串中不同类型字符的个数" class="headerlink" title="统计字符串中不同类型字符的个数"></a>统计字符串中不同类型字符的个数</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">character = <span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;请输入任意字符：&#x27;</span>)<br>i = number = space = other = letter = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(character )):<br>    <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;a&#x27;</span> &lt;= character [i] &lt;= <span class="hljs-string">&#x27;z&#x27;</span> <span class="hljs-keyword">or</span> <span class="hljs-string">&#x27;A&#x27;</span> &lt;= character [i] &lt;= <span class="hljs-string">&#x27;Z&#x27;</span>:<br>        letter += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">elif</span> <span class="hljs-string">&#x27;0&#x27;</span> &lt;= character [i] &lt;= <span class="hljs-string">&#x27;9&#x27;</span>:<br>        number += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">elif</span> character [i] == <span class="hljs-string">&#x27; &#x27;</span>:<br>        space += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">else</span>:<br>        other += <span class="hljs-number">1</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;字母个数为：&quot;</span>,letter,<span class="hljs-string">&#x27;\t&#x27;</span>,<span class="hljs-string">&quot;数字个数为：&quot;</span>,number,<span class="hljs-string">&#x27;\t&#x27;</span>,<span class="hljs-string">&quot;空格个数为：&quot;</span>,space,<span class="hljs-string">&#x27;\t&#x27;</span>,<span class="hljs-string">&quot;其他字符个数为：&quot;</span>,other)<br></code></pre></td></tr></table></figure>
+
+<h3 id="字符串加密"><a href="#字符串加密" class="headerlink" title="字符串加密"></a>字符串加密</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">Mes = <span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;请输入一串字符：&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;加密后为:&#x27;</span>,end=<span class="hljs-string">&#x27;&#x27;</span>)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(Mes)):<br>    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">ord</span>(Mes[i])&gt;=<span class="hljs-number">65</span> <span class="hljs-keyword">and</span> <span class="hljs-built_in">ord</span>(Mes[i])&lt;=<span class="hljs-number">87</span>) <span class="hljs-keyword">or</span> (<span class="hljs-built_in">ord</span>(Mes[i])&gt;=<span class="hljs-number">97</span> <span class="hljs-keyword">and</span> <span class="hljs-built_in">ord</span>(Mes[i])&lt;=<span class="hljs-number">119</span>):<br>        m=<span class="hljs-built_in">chr</span>(<span class="hljs-built_in">ord</span>(Mes[i])+<span class="hljs-number">3</span>)<br>    <span class="hljs-keyword">elif</span> (<span class="hljs-built_in">ord</span>(Mes[i])&gt;=<span class="hljs-number">88</span> <span class="hljs-keyword">and</span> <span class="hljs-built_in">ord</span>(Mes[i])&lt;=<span class="hljs-number">90</span>) <span class="hljs-keyword">or</span>(<span class="hljs-built_in">ord</span>(Mes[i])&gt;=<span class="hljs-number">120</span> <span class="hljs-keyword">and</span> <span class="hljs-built_in">ord</span>(Mes[i])&lt;=<span class="hljs-number">122</span>):<br>        m=<span class="hljs-built_in">chr</span>(<span class="hljs-built_in">ord</span>(Mes[i])-<span class="hljs-number">23</span>)<br>    <span class="hljs-keyword">else</span>:<br>        m=Mes[i]<br>    <span class="hljs-built_in">print</span> (m,end=<span class="hljs-string">&#x27;&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#统计一串字符中的字母，空格，数字，其他字符的数量并且输出</span><br>a = <span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;请输入一个字符串：&#x27;</span>)<br>i = space = alpha = number = other = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> a:<br>    <span class="hljs-keyword">if</span> i.isspace():<br>        space += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">elif</span> i.isalpha():<br>        alpha += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">elif</span> i.isnumeric():<br>		number += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">else</span> :<br>        other += <span class="hljs-number">1</span><br><span class="hljs-built_in">print</span>(space,alpha,number,other)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#编写程序，生成一个包含20个随机整数的列表，然后对其中偶数下标的元素进行降序排列，奇数下标的元素不变</span><br><span class="hljs-keyword">import</span> random<br><span class="hljs-built_in">list</span> = []<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">20</span>):<br>    i = random.randint(<span class="hljs-number">0</span>,<span class="hljs-number">100</span>)<br>    <span class="hljs-built_in">list</span>.append(i)<br>oushu = []<br>jishu = []<br><span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">list</span>:<br>    <span class="hljs-keyword">if</span> j%<span class="hljs-number">2</span>==<span class="hljs-number">0</span>:<br>        oushu.append[j]<br>    <span class="hljs-keyword">if</span> j%<span class="hljs-number">2</span>==<span class="hljs-number">1</span>:<br>        jishu.append[j]<br>oushu.sort(reverse=<span class="hljs-literal">True</span>)<br><span class="hljs-built_in">print</span>(jishu)<br><span class="hljs-built_in">print</span>(oushu)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#编写一个程序生成20个随机整数，前十个进行升序排序，后十个进行降序排序</span><br><span class="hljs-keyword">import</span> random<br><span class="hljs-built_in">list</span> = []<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">20</span>):<br>	i = random.randint(<span class="hljs-number">0</span>,<span class="hljs-number">100</span>)<br>    <span class="hljs-built_in">list</span>.append(i)<br>list1 = <span class="hljs-built_in">list</span>[<span class="hljs-number">0</span>:<span class="hljs-number">9</span>]<br>list1.sort()<br>list2 = <span class="hljs-built_in">list</span>[<span class="hljs-number">10</span>:<span class="hljs-number">19</span>]<br>list2.sort(reverse=<span class="hljs-literal">True</span>)<br><span class="hljs-built_in">print</span>(list1)<br></code></pre></td></tr></table></figure>
+
+<p>自己的总结<br>1.导入库时候先from再import<br>2.生成随机小数的函数：random.random() 要先导入random库<br>3.python序列类型：序列类型：字符串，列表，元组，映射类型：字典，集合类型：集合<br>4.元组，列表的区别：<br>a.列表可以进行修改，元组不行<br>b.列表拥有很多元组不具有的方法，如：append()，extend(),remove(),pop()<br>c.列表可以进行切片访问和修改，元组只能进行切片访问<br>d.元组的访问速度比列表快很多<br>e.列表不能作为字典的键，但是元组可以</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#append函数和extend函数的区别</span><br>a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]<br><span class="hljs-built_in">list</span> = []<br><span class="hljs-built_in">list</span>.append(a) <span class="hljs-comment">#list=[[1,2]]可见是整个列表添加上去的</span><br><span class="hljs-built_in">list</span>.extend(a) <span class="hljs-comment">#list=[1,2] 可见是列表拆开之后加上去的</span><br><span class="hljs-comment">#总结：如果extend的是字符串，则字符串会被拆分成字符数组，如果extend的是字典，则字典的key会被加入到List中</span><br></code></pre></td></tr></table></figure>
+<p>5.format函数的作用：”{0,3}”.format(“Hello”,”World”) 其中0是代表调用format括号内的第一个参数，3是当参数的字符串不足3位的时候，自动在后面补上空格<br>6.filter函数返回类型是迭代器，需要和list函数搭配使用，那么返回的就是列表，其功能和map函数类似，就是计算给定参数对应的函数值<br>7.rfind函数查找对应字符串最后一次出现的位置的第一个字符的位置！<br>8.升级pip的命令：pip install pip -U<br>9.一些库：request:http请求工具<br>      pandas:分析结构化数据的工具<br>      jieba:中文分词工具</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web--将web内容上传服务器</title>
+    <url>/2022/06/03/web--%E5%B0%86web%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<h4 id="先上总结"><a href="#先上总结" class="headerlink" title="先上总结"></a>先上总结</h4><p>1.先用原始服务器的实例创建一个ubuntu镜像，记住镜像的账号（root）和密码。<br>2.先使用cmd进行root连接：（ssh <a href="mailto:&#x72;&#111;&#111;&#116;&#x40;&#49;&#x32;&#48;&#x2e;&#x37;&#x37;&#x2e;&#49;&#55;&#46;&#x32;&#x31;&#x36;">&#x72;&#111;&#111;&#116;&#x40;&#49;&#x32;&#48;&#x2e;&#x37;&#x37;&#x2e;&#49;&#55;&#46;&#x32;&#x31;&#x36;</a>）当然使用putty或者Xshell同样可以<br>3.使用Xftp7上传对应的web网页到服务器对应的目录中，目录为var\www\html（其中的var目录是和root同级目录）<br>4.上传之后，在浏览器中使用公网的ip即可看到网页。<br>试了一天TT</p>
+<span id="more"></span>
+
+<h4 id="参考视频，资料"><a href="#参考视频，资料" class="headerlink" title="参考视频，资料"></a>参考视频，资料</h4><p>b站视频：<a href="https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV19g4y1b7F5?spm_id_from=333.337.search-card.all.click</a></p>
+<p>博客园日志：<a href="http://t.zoukankan.com/chrischen98-p-10874821.html%EF%BC%88%E4%B8%8A%E5%8D%88%E4%B8%80%E7%9B%B4%E7%9C%8B%E8%BF%99%E4%B8%AA%EF%BC%8C%E4%BD%86%E6%98%AF%E7%94%A8%E4%BA%86iis%E4%B9%8B%E5%90%8E%E7%BD%91%E9%A1%B5%E4%B8%80%E7%9B%B4%E4%B8%8D%E6%98%BE%E7%A4%BA,%E8%AE%BE%E7%BD%AE%E5%95%A5%E7%AB%AF%E5%8F%A3%E9%83%BD%E6%B2%A1%E7%94%A8%EF%BC%89">http://t.zoukankan.com/chrischen98-p-10874821.html（上午一直看这个，但是用了iis之后网页一直不显示,设置啥端口都没用）</a></p>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数值分析--Lagrange插值</title>
+    <url>/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Lagrange%E6%8F%92%E5%80%BC/</url>
+    <content><![CDATA[<p>拉格朗日插值法分为一次插值，两次插值直到n次插值，划分的方法是有两个点就有一次插值，有三个点就有两次插值，同理可以推出有n个点就有n-1次插值。</p>
+<span id="more"></span>
+
+<h3 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h3><h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>假设图中有n个点，我们先找一个穿过第一个点的函数，再找穿过第二个点的函数，把这两个函数相加，得到的结果就是同时穿过这两个点的函数。</p>
+<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>当我们知道图中有n个点的时候，要找到同时穿过这n个点的函数，即把分别穿过n个点的函数相加，得到的就是拉格朗日插值。</p>
+<h3 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h3><p>当图中有三个点的时候，L2(x) = [(x-x1)(x-x2)/(x0-x1)(x0-x2)]y0 + [(x-x0)(x-x2)/(x1-x0)(x1-x2)]y1 + [(x-x0)(x-x1)/(x2-x0)(x2-x1)]y2</p>
+<p>当图中有n个点的时候，Ln(x) = n(大派键)i=0且i不等于j (x-xj)/(xi-xj)</p>
+]]></content>
+      <categories>
+        <category>数值分析</category>
+      </categories>
+      <tags>
+        <tag>数值分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数值分析--Newton插值</title>
+    <url>/2022/03/16/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-Newton%E6%8F%92%E5%80%BC/</url>
+    <content><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在拉格朗日插值中解决了Ln(x)的问题，那么要解决L2(x)=L1(x)+？中的？是什么，我们需要引入牛顿插值来解决</p>
+<span id="more"></span>
+
+<h3 id="差商"><a href="#差商" class="headerlink" title="差商"></a>差商</h3><p>要想解决牛顿插值问题先要知道差商的概念。</p>
+<p>C0 = f(x0) = f(x0)</p>
+<p>C1 = f[x0,x1] = [f(x1)-f(x0)]/x1-x0</p>
+<p>C2 = f[x0,x1,x2] = f(x1)-f(x0)/x1-x0 ……</p>
+<h3 id="牛顿插值"><a href="#牛顿插值" class="headerlink" title="牛顿插值"></a>牛顿插值</h3><p>Nn(x) = C0 + C1(x-x0) + C2 (x-x0)(x-x1) + … + Cn(x-x0)(x-x1)..(x-xn)</p>
+]]></content>
+      <categories>
+        <category>数值分析</category>
+      </categories>
+      <tags>
+        <tag>数值分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数值分析-- 误差</title>
+    <url>/2022/03/07/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90-%E8%AF%AF%E5%B7%AE/</url>
+    <content><![CDATA[<h3 id="误差和误差限"><a href="#误差和误差限" class="headerlink" title="误差和误差限"></a>误差和误差限</h3><span id="more"></span>
+
+<p>设X* 为X的一个近似值（可大于X也可小于X），有e* =  X-X* ,称e* 为<strong>绝对误差</strong>，简称<strong>误差</strong>。</p>
+<p>易得出结论：当绝对误差大于0时，近似值大于真实值，称为<strong>强近似值</strong>；当绝对误差小于0时，近似值小于真实值，称为<strong>弱近似值</strong>。</p>
+<p>误差的绝对值不超过某个正数E* ，称这个正数E<em>为近似值的*<em>误差限</em></em> </p>
+<h3 id="相对误差和相对误差限"><a href="#相对误差和相对误差限" class="headerlink" title="相对误差和相对误差限"></a>相对误差和相对误差限</h3><p>**相对误差:*<em>指的是近似值e</em> 与真实值X的比值，称为e(r)*（右下角有个小r）</p>
+<p><strong>相对误差限：</strong>相对误差不能超过相对误差限E(r)* ，E(r)* =E* / |x*|</p>
+<h3 id="绝对误差的计算方法"><a href="#绝对误差的计算方法" class="headerlink" title="绝对误差的计算方法"></a>绝对误差的计算方法</h3><p><strong>注意：绝对误差限一定是一个单位的半个单位，如0.5，0.05，0.005，0.0005等等，那么换成科学计数法的形式就可以变成1/2 * 10^-p</strong></p>
+<p><strong>（其中p取正整数！）这时，-p就可以换成另一种表示方法，-p = m-n+1  （其中m是小数点离第一个非0数字的后一位有多远，如123.45的m就是2，而0.00123的m就是-3）（其中n是有几位有效数字如123.45就有5为有效数字，那么n就是5.）通常情况下都是知道了m和n要去求p的！！</strong></p>
+<p>例如“派”取近似值3.14，那么|3.14-“派”| = 0.0015926&lt;=0.005=1/2 * 10^-2，则绝对误差限就是1/2 * 10^-2</p>
+<h3 id="相对误差的计算方法"><a href="#相对误差的计算方法" class="headerlink" title="相对误差的计算方法"></a>相对误差的计算方法</h3><p>若近似值有n为有效数字，其中a是近似值的个位数。</p>
+<p>E(r)*&lt;=1/2a * 10^-(n-1)</p>
+<h3 id="误差估计中的重要公式"><a href="#误差估计中的重要公式" class="headerlink" title="误差估计中的重要公式"></a>误差估计中的重要公式</h3><p>E(x1* +- x2* ) = E(x1* ) +- E(x2*)</p>
+<p><em><em>E(x1</em> * x2</em> ) = |x1*| * E(x2*) + |x2 *| * E(x1 *)**这个公式在平常的运算中常常能用得上。</p>
+<p>E(x1* / x2* ) = |x1*| * E(x2*) + |x2 *| * E(x1 *) / |x2 *|^2    这是上面那一条的除法运算</p>
+<h3 id="误差中的规则"><a href="#误差中的规则" class="headerlink" title="误差中的规则"></a>误差中的规则</h3><p>1.要避免除数的绝对值远远小于被除数绝对值的除法</p>
+<p>2.避免出现有效数字少的相减如x=123.401,  y = 123.412  ，那么y-x =0.011只有两位有效数字。</p>
+<p>3.防止大数吃掉小数</p>
+<p>4.注意简化运算流程，简化运算步骤</p>
+]]></content>
+      <categories>
+        <category>数值分析</category>
+      </categories>
+      <tags>
+        <tag>数值分析</tag>
       </tags>
   </entry>
   <entry>
@@ -3178,6 +3178,147 @@
       </tags>
   </entry>
   <entry>
+    <title>数据结构--树</title>
+    <url>/2022/07/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/</url>
+    <content><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>1.树有n个结点，当n大于1时，其余结点可以分为m个互不相交的有限集。</p>
+<p>2.n大于0时，根节点是唯一的；</p>
+<p>   m大于0时，字数个数无限制，但一定是互不相交的。</p>
+<p>3.结点拥有的子叶数称为结点的度degree，度为0称为终端节点，度不为零称为分支节点，树的度是树内各个结点的度的max值</p>
+<p>4.结点的祖先是从根到该结点所经分支上的所有结点，</p>
+<p>​    同理，以某结点为根的子树的任一结点都为该结点的子孙。</p>
+<span id="more"></span>
+
+<p>5.双亲在同一层的结点称为堂兄弟。</p>
+<p>6.森林（forest）是n棵互不相交的树的集合</p>
+<p>7.树的抽象数据结构</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c">ADT Tree<br>Data<br>    树是由一个根节点和若干棵子树构成<br>Operation<br>    <span class="hljs-title function_">InitTree</span><span class="hljs-params">(*T)</span>:构造空树T<br>    <span class="hljs-title function_">DestoryTree</span><span class="hljs-params">(*T)</span>:摧毁树T<br>    <span class="hljs-title function_">CreateTree</span><span class="hljs-params">(*T,definition)</span>:按照definition定义的树来构造树T<br>    <span class="hljs-title function_">ClearTree</span><span class="hljs-params">(*T)</span>:若树T存在，清空树T<br>    <span class="hljs-title function_">TreeEmpty</span><span class="hljs-params">(T)</span>:若树T为空树，返回1，若不为空树，返回0<br>    <span class="hljs-title function_">TreeDepth</span><span class="hljs-params">(T)</span>:返回树的深度<br>    <span class="hljs-title function_">Root</span><span class="hljs-params">(T)</span>:返回T的根结点<br>    <span class="hljs-title function_">Value</span><span class="hljs-params">(T,cur_e)</span>:cur_e是树T的一个结点,返回cur_e值<br>    <span class="hljs-title function_">Assign</span><span class="hljs-params">(T,cur_e,value)</span>:cur_e是树T的一个结点cur_e赋值为value<br>    <span class="hljs-title function_">Parent</span><span class="hljs-params">(T,cur_e)</span>:若cur_e是树T非根结点，返回双亲<br>    <span class="hljs-title function_">LeftChild</span><span class="hljs-params">(T,cur_e)</span>:返回cur_e左孩子<br>    <span class="hljs-title function_">RightSibling</span><span class="hljs-params">(T,cur_e)</span>:返回cur_e的右兄弟<br>    <span class="hljs-title function_">InsertChild</span><span class="hljs-params">(*T,*p,i,c)</span>:插入c为树T中p所指结点第i个子树<br>    <span class="hljs-title function_">DeleteChild</span><span class="hljs-params">(*T,*p,i)</span>:删除T中p所指第i个子树<br>    endADT<br></code></pre></td></tr></table></figure>
+
+<h2 id="树的存储结构"><a href="#树的存储结构" class="headerlink" title="树的存储结构"></a>树的存储结构</h2><h3 id="双亲表示法"><a href="#双亲表示法" class="headerlink" title="双亲表示法"></a>双亲表示法</h3><p>1.每个结点，不一定有孩子，但一定有且仅有一个双亲</p>
+<p>2.定义双亲结点</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> MAXSIZE 200</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-type">int</span> PTElemType;<br><span class="hljs-type">int</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">PTNode</span>&#123;</span><span class="hljs-comment">//PTNode相当于ParentNode</span><br>    PTElemType data;<br>    <span class="hljs-type">int</span> parent;<span class="hljs-comment">//结点，双亲位置</span><br>&#125;PTNode;<br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>&#123;</span><br>    PTNode node[MAXSIZE];<span class="hljs-comment">//结点数组</span><br>    <span class="hljs-type">int</span> r,n;<span class="hljs-comment">//根的位置r和结点数n</span><br>&#125;PTree;<br></code></pre></td></tr></table></figure>
+
+<p><strong>只要双亲相等，那么int parent相等（即同一行的元素的parent结点相等）通常把根节点的parent值设置为-1</strong></p>
+<p>3.长子域：每个结点，若是存在长子（最左边的孩子），那么记录下它的下标，放入firstchild，否则记录-1</p>
+<p>4.右兄弟域：每一个结点如果存在右兄弟，那么记录下右兄弟的下标，没有则记录-1，录进rightsib</p>
+<h3 id="孩子表示法"><a href="#孩子表示法" class="headerlink" title="孩子表示法"></a>孩子表示法</h3><p>1.每个结点有多个指针域，每个指针指向一棵子树的根节点，这种方法叫做多重链表表示法</p>
+<p>2.指针域的个数等于树的度 data child1 child2 child3</p>
+<p>   其中n是树的度，一个结点有几个孩子就有几个指针</p>
+<p>3.孩子表示法：对于每个结点的孩子结点都创建一个链表，则n个结点有n个链表，有孩子结点的放到一列:data firstchild</p>
+<p>​    <strong>没有孩子的结点</strong>放在<strong>有孩子结点</strong>的后面，名为child next ，next指向他的兄弟</p>
+<p>孩子表示法结构定义</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> MAX_Tree_SIZE 200</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">CTNode</span>&#123;</span><br>    <span class="hljs-type">int</span> child;<span class="hljs-comment">//数据域</span><br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">CTNode</span> *<span class="hljs-title">next</span>;</span><span class="hljs-comment">//定义结点</span><br>&#125;*childPtr;<span class="hljs-comment">//表示结点要靠他</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>&#123;</span><br>    TElemType data;\<br>    ChildPtr firstchild;<br>&#125;CTBox;<span class="hljs-comment">//表头</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>&#123;</span><br>    CTBox nodes[MAX_Tree_SIZE];<br>    <span class="hljs-type">int</span> r,n;<span class="hljs-comment">//根位置和结点数</span><br>&#125;CTree;<br></code></pre></td></tr></table></figure>
+
+<p>三、孩子兄弟表示法</p>
+<p>​    因为长子唯一，且右兄弟结点唯一，那么设计两个指针，分别指向该节点的第一个孩子和此结点的兄弟，若有其一不存在，用NULL（^）表示</p>
+<p> data firstchild rightsib</p>
+<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>1.定义：二叉树是n个结点组成的有限集合</p>
+<p>2.特点：每个结点最多有两颗子树，所以Node的度小于等于2</p>
+<p>​             左右子树是有顺序的，不可以颠倒</p>
+<p>3.二叉树有5种基本形态：空二叉树，只有一个根节点，根节点有左子树，根节点有右子树，既有左子树也有右子树。</p>
+<p>4.特殊的二叉树： a 只有左子树的二叉树叫做左斜树</p>
+<p>​                           b 只有右孩子的二叉树的二叉树叫做右斜树</p>
+<p>5 满二叉树的特点：</p>
+<p>​    a.叶子只能出现在最下层，出现在其他层不行</p>
+<p>​    b.非叶子结点的度是2</p>
+<p>​    c.同样深度的二叉树中，满二叉树的节点最多</p>
+<p>6.完全二叉树</p>
+<p>   在满二叉树的条件下，保持所有节点位置不变，只减少数量</p>
+<p>​    满二叉树一定是完全二叉树，完全二叉树不一定是满二叉树，<strong>不能出现编号空档</strong></p>
+<h3 id="二叉树的性质"><a href="#二叉树的性质" class="headerlink" title="二叉树的性质"></a>二叉树的性质</h3><p>1.在二叉树的第i层至多有2的i-1次方个结点（i&gt;1）</p>
+<p>2.深度为k的二叉树至多有2的k-1次方个结点</p>
+<p>3.对于二叉树T，若子叶结点数为n0，度为2的结点数n2，那么n0=n2+1；</p>
+<p>4.具有n个结点的完全二叉树深度为log2n + 1（其中log2n向下取整），</p>
+<p>5.对于一棵有n个结点的完全二叉树（深度为log2n+1（同样log2n向下取整））的结点按顺序编号，对于任一结点i（1&lt;=i&lt;=n都有）：</p>
+<p>​    a.如果i=1，i是二叉树的根，无双亲，若i&gt;1，则双亲是结点i/2（向下取整）</p>
+<p>​    b.如果2i&gt;n，则i无左孩子，i是叶子结点，否则左孩子是2i</p>
+<p>​    c.如果2i+1&gt;n，则i无右孩子，否则右孩子是2i+1</p>
+<p>6.对于n个结点的二叉树，二叉链表中有2n个指针，其中n-1个指针指向孩子结点，同样有n-1个指针指向双亲结点。</p>
+<h3 id="二叉树的存储结构"><a href="#二叉树的存储结构" class="headerlink" title="二叉树的存储结构"></a>二叉树的存储结构</h3><p>一、树的顺序存储结构</p>
+<p>1.用一维数组存储二叉树的结点</p>
+<p><strong>数据</strong> A B C D E F G H </p>
+<p><strong>下标</strong> 1 2 3  4 5 6  7 8</p>
+<p>对于一般的二叉树，下标不用变，只需要把不存在的节点变为^即可</p>
+<p>2.但是这和存储方式在一般的树中会造成很大的空间浪费，所以只适用于完全二叉树</p>
+<p>二、二叉链表</p>
+<p>1.二叉链表是有两个指针的，一个指向左孩子，一个指向右孩子</p>
+<p> lchild data rchild</p>
+<p>2.二叉链表的结构定义</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">BiTNode</span>&#123;</span><br>	TElemType data;<br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">BiTNode</span> *<span class="hljs-title">lchild</span>,*<span class="hljs-title">rchild</span>;</span><span class="hljs-comment">//左右孩子指针</span><br>&#125;BiTNode,BiTree;<br></code></pre></td></tr></table></figure>
+
+<h3 id="遍历二叉树"><a href="#遍历二叉树" class="headerlink" title="遍历二叉树"></a>遍历二叉树</h3><p>一、定义：从根节点出发，按照某种次序依次访问二叉树的所有结点，使得每个结点被访问一次且仅被访问一次。</p>
+<p>二、遍历方法：</p>
+<h4 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h4><p>先前序遍历左子树，再前序遍历后子树</p>
+<p>算法：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">PreOrderTraverse</span><span class="hljs-params">(BiTree T)</span>&#123;<br>    <span class="hljs-keyword">if</span>(T==<span class="hljs-literal">NULL</span>)<br>        <span class="hljs-keyword">return</span> ;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c&quot;</span>,T-&gt;data);<span class="hljs-comment">//显示结点数据</span><br>    PreOrderTraverse(T-&gt;lchild);<span class="hljs-comment">//先遍历左子树</span><br>    PreOrderTraverse(T-&gt;rchild);<span class="hljs-comment">//再遍历右子树</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h4><p>算法:</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">InOrderTraverse</span><span class="hljs-params">(BiTree T)</span>&#123;<br>	<span class="hljs-keyword">if</span>(T==<span class="hljs-literal">NULL</span>)<br>        <span class="hljs-keyword">return</span> ;<span class="hljs-comment">//返回空</span><br>    InOrderTraverse(T-&gt;lchild);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c&quot;</span>,T-&gt;data);<br>    InorderTraverse(T-&gt;rchild);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h4><p>算法：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">TailOrderTraverse</span><span class="hljs-params">(BiTree T)</span>&#123;<br>    <span class="hljs-keyword">if</span>(T==<span class="hljs-literal">NULL</span>)<br>        <span class="hljs-keyword">return</span> ;<br>    TailOrderTraverse(T-&gt;lchild);<br>    TailOrderTraverse(T-&gt;rchild);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c&quot;</span>,T-&gt;data);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>注意：后序遍历在回退的时候，不能直接打印，要看该结点是否有右节点，如果有要先遍历到右节点再打印</p>
+<h4 id="根据已知顺序推导"><a href="#根据已知顺序推导" class="headerlink" title="根据已知顺序推导"></a>根据已知顺序推导</h4><p>已知前序/后序和中序可以推导整棵树</p>
+<p>已知前序和后序无法推导中序</p>
+<h3 id="二叉树的建立"><a href="#二叉树的建立" class="headerlink" title="二叉树的建立"></a>二叉树的建立</h3><p>1.拓展二叉树，对于每个结点的空的孩子都建立一个虚结点#；</p>
+<p>2.生成二叉树算法：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">CreateBiTree</span><span class="hljs-params">(BiTree *T)</span>&#123;<br>    TElemType ch;<span class="hljs-comment">//键盘输入</span><br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%c&quot;</span>,ch);<br>    <span class="hljs-keyword">if</span>(ch==<span class="hljs-string">&#x27;#&#x27;</span>)<span class="hljs-comment">//如果键盘输入为0</span><br>        *T=<span class="hljs-literal">NULL</span>;<br>    <span class="hljs-keyword">else</span>&#123;<br>        *T=(BiTree)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(BiTNode));<span class="hljs-comment">//给T赋予内存</span><br>        <span class="hljs-keyword">if</span>(!*T)<span class="hljs-comment">//即当T等于NULL的时候</span><br>            <span class="hljs-built_in">exit</span>(OVERFLOW);<br>        (*T)-&gt;data=ch;<span class="hljs-comment">//生成结点</span><br>        CreateBiTree(&amp;(*T)-&gt;lchild);<span class="hljs-comment">//递归，生成左孩子</span><br>        CreateBiTree(&amp;(*T)-&gt;rchild);<span class="hljs-comment">//递归，生成右孩子</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="线索二叉树"><a href="#线索二叉树" class="headerlink" title="线索二叉树"></a>线索二叉树</h2><p>1.把指向前去和后继指针称为线索，加上线索的二叉链表称为线索二叉树（Threaded Binary Tree）</p>
+<p>2.增加布尔类型的标志域放在指针中</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c">lchild ltag data rtag rchild<br><span class="hljs-comment">//当ltag=0，指向左孩子，当ltag=1，指向前驱</span><br><span class="hljs-comment">//当rtag=0，指向右孩子，当rtag=1，指向后继</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>注意：是在二叉树中空闲的指针才会用来指向前驱和后继，不能影响正常的左右孩子的表达</strong></p>
+<p>3.线索二叉树的结构实现</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">enum</span>&#123;</span>Link,Thread&#125; PointerTag;<br><span class="hljs-comment">//Link=0表示指向左右孩子结点，Thread==1表示指向前驱后继结点</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">BiThrNode</span>&#123;</span><span class="hljs-comment">//二叉树线索存储结点</span><br>    TElemType data;<br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">BiThrNode</span> *<span class="hljs-title">lchild</span>,*<span class="hljs-title">rchild</span>;</span><br>    PointTag LTag;<br>    PointTag RTag;<br>&#125;BiThrNode,*BiThrTree;<span class="hljs-comment">//线索树</span><br></code></pre></td></tr></table></figure>
+
+<p>4.线索化就是在遍历的过程中，一遍遍历一边修改空指针。</p>
+<p>5.中序遍历线索化</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c">BiThrTree pre;<span class="hljs-comment">//指向刚访问过的节点</span><br><span class="hljs-type">void</span> <span class="hljs-title function_">InThreading</span><span class="hljs-params">(BiTheTree p&#123;</span><br><span class="hljs-params">	<span class="hljs-keyword">if</span>(p)&#123;</span><br><span class="hljs-params">        InThreading(p-&gt;lchild);<span class="hljs-comment">//递归左子树线索化</span></span><br><span class="hljs-params">        <span class="hljs-keyword">if</span>(!p-&gt;lchild)&#123;<span class="hljs-comment">//无左孩子</span></span><br><span class="hljs-params">        	p-&gt;ltag=Thread;<span class="hljs-comment">//前驱线索</span></span><br><span class="hljs-params">            p-&gt;lchild=pre;<span class="hljs-comment">//左孩子指向前驱</span></span><br><span class="hljs-params">        &#125;</span><br><span class="hljs-params">        <span class="hljs-keyword">if</span>(!pre-&gt;rchild)&#123;</span><br><span class="hljs-params">            pre-&gt;rtag=Thread;</span><br><span class="hljs-params">            pre-&gt;rchild=p;</span><br><span class="hljs-params">        &#125;</span><br><span class="hljs-params">        pre=p;</span><br><span class="hljs-params">        InThreading(p-&gt;child);<span class="hljs-comment">//递归右子树线索化</span></span><br><span class="hljs-params">    &#125;   </span><br><span class="hljs-params">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>6.线索树中的头结点</p>
+<p>头结点 的左孩子指针指向树的根节点，右孩子指向中序遍历的最后一个结点。</p>
+<p>然后，令中序的第一个元素和最后一个元素的lchild和rchild结点指向根节点</p>
+<p>7.在6的基础上，代码如下：（中序遍历）</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">InOrderTraverse_Thr</span><span class="hljs-params">(BiThrTree T)</span>&#123;<br>	BiTree p;<span class="hljs-comment">//树中结点</span><br>	p=T-&gt;lchild;<span class="hljs-comment">//树的头结点的左孩子是p，即p指向根节点</span><br>	<span class="hljs-keyword">while</span>(p!=T)&#123;<br>		<span class="hljs-keyword">while</span>(p-&gt;LTag==Link)<span class="hljs-comment">//结束条件p.LTag==Thr</span><br>			p=p-&gt;child;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c&quot;</span>,p-&gt;data);<span class="hljs-comment">//中序的第一个结点</span><br>        <span class="hljs-keyword">while</span>(p-&gt;RTag==Thread&amp;&amp;p-&gt;rchild!=T)&#123;<br>            p=p-&gt;rchild;<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c&quot;</span>,p-&gt;data);<br>        &#125;<br>    &#125;<br>    p=p-&gt;rchild;<span class="hljs-comment">//p进至右子树根</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>8.中序遍历的时间复杂度为O(n)，适用于遍历，查找结点时需要前去或者后继。</p>
+<h2 id="Transform"><a href="#Transform" class="headerlink" title="Transform"></a>Transform</h2><h3 id="树转二叉树"><a href="#树转二叉树" class="headerlink" title="树转二叉树"></a>树转二叉树</h3><p>1.加线，在所有兄弟结点之间加一条连线。</p>
+<p>2.去线，对树中的每一个结点，只保留它与first child 的连线。</p>
+<p>3.调整使得层次分明</p>
+<h3 id="森林转二叉树"><a href="#森林转二叉树" class="headerlink" title="森林转二叉树"></a>森林转二叉树</h3><p>1.把每棵树转化为二叉树。</p>
+<p>2.第一棵树位置不变，第二棵树插入第一棵树根节点的右孩子。</p>
+<h3 id="二叉树转树"><a href="#二叉树转树" class="headerlink" title="二叉树转树"></a>二叉树转树</h3><p>1.X的左孩子的所有右孩子结点都与X相连接。</p>
+<p>2.删除所有左孩子和右孩子的连线</p>
+<p>3.层次调整</p>
+<h3 id="二叉树转森林"><a href="#二叉树转森林" class="headerlink" title="二叉树转森林"></a>二叉树转森林</h3><p><strong>判断：二叉树的根节点是否有右孩子，如果有可变森林，没有不可变森林</strong></p>
+<p>1.删除所有与右孩子的连线！</p>
+<p>2.再将每棵分离后的二叉树转化为树</p>
+<h3 id="树和森林的遍历"><a href="#树和森林的遍历" class="headerlink" title="树和森林的遍历"></a>树和森林的遍历</h3><h4 id="树的遍历"><a href="#树的遍历" class="headerlink" title="树的遍历"></a>树的遍历</h4><p>1.先根遍历：从根出发，一次遍历每个子树</p>
+<p>2.后根遍历：从子树出发，最后遍历根</p>
+<h4 id="森林的遍历"><a href="#森林的遍历" class="headerlink" title="森林的遍历"></a>森林的遍历</h4><p>1.前序遍历：对没棵树从前往后先根遍历</p>
+<p>2.后序遍历：对每棵树从前往后后根遍历</p>
+<h2 id="赫夫曼树及其运用"><a href="#赫夫曼树及其运用" class="headerlink" title="赫夫曼树及其运用"></a>赫夫曼树及其运用</h2><p>1.定义：假设有n个权值{w1,w2,….,wn},构造一棵有n个叶子结点的二叉树，每个叶子结点带权wk，每个叶子结点路径长为lk，带权路径长度WPL=w1* l1+ w2 * l2 + … + wk * lk 最小的二叉树，称为赫夫曼树</p>
+<p>2.寻找最优赫夫曼树</p>
+<p>a.先把有权值的叶子结点从小到大排序成有序序列，A5,E10,B15,D30.</p>
+<p>b.取两个最小权值结点作为新结点N1的两个子结点，小在左，大在右</p>
+<p>c.将N1替换A与E，有N1:15,B:15,D:30,C:40</p>
+<p>d.将N1与B作为新结点N2，……，权值N2=N1+B=30</p>
+<p>…</p>
+<p>最后C：40，N3：60，将C与N3作为T的结点，T就是赫夫曼树的根节点</p>
+<h3 id="赫夫曼编码"><a href="#赫夫曼编码" class="headerlink" title="赫夫曼编码"></a>赫夫曼编码</h3><p>左0右1</p>
+<h2 id="二叉树递归三步"><a href="#二叉树递归三步" class="headerlink" title="二叉树递归三步"></a>二叉树递归三步</h2><p>1.递归函数的参数和返回值</p>
+<p>2.终止条件</p>
+<p>3.单层递归的逻辑</p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构--查找</title>
     <url>/2022/08/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%9F%A5%E6%89%BE/</url>
     <content><![CDATA[<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>1.查找表（Search Table）是由同一类型数据元素构成的集合</p>
@@ -3371,147 +3512,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构--树</title>
-    <url>/2022/07/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91/</url>
-    <content><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>1.树有n个结点，当n大于1时，其余结点可以分为m个互不相交的有限集。</p>
-<p>2.n大于0时，根节点是唯一的；</p>
-<p>   m大于0时，字数个数无限制，但一定是互不相交的。</p>
-<p>3.结点拥有的子叶数称为结点的度degree，度为0称为终端节点，度不为零称为分支节点，树的度是树内各个结点的度的max值</p>
-<p>4.结点的祖先是从根到该结点所经分支上的所有结点，</p>
-<p>​    同理，以某结点为根的子树的任一结点都为该结点的子孙。</p>
-<span id="more"></span>
-
-<p>5.双亲在同一层的结点称为堂兄弟。</p>
-<p>6.森林（forest）是n棵互不相交的树的集合</p>
-<p>7.树的抽象数据结构</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c">ADT Tree<br>Data<br>    树是由一个根节点和若干棵子树构成<br>Operation<br>    <span class="hljs-title function_">InitTree</span><span class="hljs-params">(*T)</span>:构造空树T<br>    <span class="hljs-title function_">DestoryTree</span><span class="hljs-params">(*T)</span>:摧毁树T<br>    <span class="hljs-title function_">CreateTree</span><span class="hljs-params">(*T,definition)</span>:按照definition定义的树来构造树T<br>    <span class="hljs-title function_">ClearTree</span><span class="hljs-params">(*T)</span>:若树T存在，清空树T<br>    <span class="hljs-title function_">TreeEmpty</span><span class="hljs-params">(T)</span>:若树T为空树，返回1，若不为空树，返回0<br>    <span class="hljs-title function_">TreeDepth</span><span class="hljs-params">(T)</span>:返回树的深度<br>    <span class="hljs-title function_">Root</span><span class="hljs-params">(T)</span>:返回T的根结点<br>    <span class="hljs-title function_">Value</span><span class="hljs-params">(T,cur_e)</span>:cur_e是树T的一个结点,返回cur_e值<br>    <span class="hljs-title function_">Assign</span><span class="hljs-params">(T,cur_e,value)</span>:cur_e是树T的一个结点cur_e赋值为value<br>    <span class="hljs-title function_">Parent</span><span class="hljs-params">(T,cur_e)</span>:若cur_e是树T非根结点，返回双亲<br>    <span class="hljs-title function_">LeftChild</span><span class="hljs-params">(T,cur_e)</span>:返回cur_e左孩子<br>    <span class="hljs-title function_">RightSibling</span><span class="hljs-params">(T,cur_e)</span>:返回cur_e的右兄弟<br>    <span class="hljs-title function_">InsertChild</span><span class="hljs-params">(*T,*p,i,c)</span>:插入c为树T中p所指结点第i个子树<br>    <span class="hljs-title function_">DeleteChild</span><span class="hljs-params">(*T,*p,i)</span>:删除T中p所指第i个子树<br>    endADT<br></code></pre></td></tr></table></figure>
-
-<h2 id="树的存储结构"><a href="#树的存储结构" class="headerlink" title="树的存储结构"></a>树的存储结构</h2><h3 id="双亲表示法"><a href="#双亲表示法" class="headerlink" title="双亲表示法"></a>双亲表示法</h3><p>1.每个结点，不一定有孩子，但一定有且仅有一个双亲</p>
-<p>2.定义双亲结点</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> MAXSIZE 200</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-type">int</span> PTElemType;<br><span class="hljs-type">int</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">PTNode</span>&#123;</span><span class="hljs-comment">//PTNode相当于ParentNode</span><br>    PTElemType data;<br>    <span class="hljs-type">int</span> parent;<span class="hljs-comment">//结点，双亲位置</span><br>&#125;PTNode;<br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>&#123;</span><br>    PTNode node[MAXSIZE];<span class="hljs-comment">//结点数组</span><br>    <span class="hljs-type">int</span> r,n;<span class="hljs-comment">//根的位置r和结点数n</span><br>&#125;PTree;<br></code></pre></td></tr></table></figure>
-
-<p><strong>只要双亲相等，那么int parent相等（即同一行的元素的parent结点相等）通常把根节点的parent值设置为-1</strong></p>
-<p>3.长子域：每个结点，若是存在长子（最左边的孩子），那么记录下它的下标，放入firstchild，否则记录-1</p>
-<p>4.右兄弟域：每一个结点如果存在右兄弟，那么记录下右兄弟的下标，没有则记录-1，录进rightsib</p>
-<h3 id="孩子表示法"><a href="#孩子表示法" class="headerlink" title="孩子表示法"></a>孩子表示法</h3><p>1.每个结点有多个指针域，每个指针指向一棵子树的根节点，这种方法叫做多重链表表示法</p>
-<p>2.指针域的个数等于树的度 data child1 child2 child3</p>
-<p>   其中n是树的度，一个结点有几个孩子就有几个指针</p>
-<p>3.孩子表示法：对于每个结点的孩子结点都创建一个链表，则n个结点有n个链表，有孩子结点的放到一列:data firstchild</p>
-<p>​    <strong>没有孩子的结点</strong>放在<strong>有孩子结点</strong>的后面，名为child next ，next指向他的兄弟</p>
-<p>孩子表示法结构定义</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> MAX_Tree_SIZE 200</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">CTNode</span>&#123;</span><br>    <span class="hljs-type">int</span> child;<span class="hljs-comment">//数据域</span><br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">CTNode</span> *<span class="hljs-title">next</span>;</span><span class="hljs-comment">//定义结点</span><br>&#125;*childPtr;<span class="hljs-comment">//表示结点要靠他</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>&#123;</span><br>    TElemType data;\<br>    ChildPtr firstchild;<br>&#125;CTBox;<span class="hljs-comment">//表头</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>&#123;</span><br>    CTBox nodes[MAX_Tree_SIZE];<br>    <span class="hljs-type">int</span> r,n;<span class="hljs-comment">//根位置和结点数</span><br>&#125;CTree;<br></code></pre></td></tr></table></figure>
-
-<p>三、孩子兄弟表示法</p>
-<p>​    因为长子唯一，且右兄弟结点唯一，那么设计两个指针，分别指向该节点的第一个孩子和此结点的兄弟，若有其一不存在，用NULL（^）表示</p>
-<p> data firstchild rightsib</p>
-<h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p>1.定义：二叉树是n个结点组成的有限集合</p>
-<p>2.特点：每个结点最多有两颗子树，所以Node的度小于等于2</p>
-<p>​             左右子树是有顺序的，不可以颠倒</p>
-<p>3.二叉树有5种基本形态：空二叉树，只有一个根节点，根节点有左子树，根节点有右子树，既有左子树也有右子树。</p>
-<p>4.特殊的二叉树： a 只有左子树的二叉树叫做左斜树</p>
-<p>​                           b 只有右孩子的二叉树的二叉树叫做右斜树</p>
-<p>5 满二叉树的特点：</p>
-<p>​    a.叶子只能出现在最下层，出现在其他层不行</p>
-<p>​    b.非叶子结点的度是2</p>
-<p>​    c.同样深度的二叉树中，满二叉树的节点最多</p>
-<p>6.完全二叉树</p>
-<p>   在满二叉树的条件下，保持所有节点位置不变，只减少数量</p>
-<p>​    满二叉树一定是完全二叉树，完全二叉树不一定是满二叉树，<strong>不能出现编号空档</strong></p>
-<h3 id="二叉树的性质"><a href="#二叉树的性质" class="headerlink" title="二叉树的性质"></a>二叉树的性质</h3><p>1.在二叉树的第i层至多有2的i-1次方个结点（i&gt;1）</p>
-<p>2.深度为k的二叉树至多有2的k-1次方个结点</p>
-<p>3.对于二叉树T，若子叶结点数为n0，度为2的结点数n2，那么n0=n2+1；</p>
-<p>4.具有n个结点的完全二叉树深度为log2n + 1（其中log2n向下取整），</p>
-<p>5.对于一棵有n个结点的完全二叉树（深度为log2n+1（同样log2n向下取整））的结点按顺序编号，对于任一结点i（1&lt;=i&lt;=n都有）：</p>
-<p>​    a.如果i=1，i是二叉树的根，无双亲，若i&gt;1，则双亲是结点i/2（向下取整）</p>
-<p>​    b.如果2i&gt;n，则i无左孩子，i是叶子结点，否则左孩子是2i</p>
-<p>​    c.如果2i+1&gt;n，则i无右孩子，否则右孩子是2i+1</p>
-<p>6.对于n个结点的二叉树，二叉链表中有2n个指针，其中n-1个指针指向孩子结点，同样有n-1个指针指向双亲结点。</p>
-<h3 id="二叉树的存储结构"><a href="#二叉树的存储结构" class="headerlink" title="二叉树的存储结构"></a>二叉树的存储结构</h3><p>一、树的顺序存储结构</p>
-<p>1.用一维数组存储二叉树的结点</p>
-<p><strong>数据</strong> A B C D E F G H </p>
-<p><strong>下标</strong> 1 2 3  4 5 6  7 8</p>
-<p>对于一般的二叉树，下标不用变，只需要把不存在的节点变为^即可</p>
-<p>2.但是这和存储方式在一般的树中会造成很大的空间浪费，所以只适用于完全二叉树</p>
-<p>二、二叉链表</p>
-<p>1.二叉链表是有两个指针的，一个指向左孩子，一个指向右孩子</p>
-<p> lchild data rchild</p>
-<p>2.二叉链表的结构定义</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">BiTNode</span>&#123;</span><br>	TElemType data;<br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">BiTNode</span> *<span class="hljs-title">lchild</span>,*<span class="hljs-title">rchild</span>;</span><span class="hljs-comment">//左右孩子指针</span><br>&#125;BiTNode,BiTree;<br></code></pre></td></tr></table></figure>
-
-<h3 id="遍历二叉树"><a href="#遍历二叉树" class="headerlink" title="遍历二叉树"></a>遍历二叉树</h3><p>一、定义：从根节点出发，按照某种次序依次访问二叉树的所有结点，使得每个结点被访问一次且仅被访问一次。</p>
-<p>二、遍历方法：</p>
-<h4 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h4><p>先前序遍历左子树，再前序遍历后子树</p>
-<p>算法：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">PreOrderTraverse</span><span class="hljs-params">(BiTree T)</span>&#123;<br>    <span class="hljs-keyword">if</span>(T==<span class="hljs-literal">NULL</span>)<br>        <span class="hljs-keyword">return</span> ;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c&quot;</span>,T-&gt;data);<span class="hljs-comment">//显示结点数据</span><br>    PreOrderTraverse(T-&gt;lchild);<span class="hljs-comment">//先遍历左子树</span><br>    PreOrderTraverse(T-&gt;rchild);<span class="hljs-comment">//再遍历右子树</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h4 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h4><p>算法:</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">InOrderTraverse</span><span class="hljs-params">(BiTree T)</span>&#123;<br>	<span class="hljs-keyword">if</span>(T==<span class="hljs-literal">NULL</span>)<br>        <span class="hljs-keyword">return</span> ;<span class="hljs-comment">//返回空</span><br>    InOrderTraverse(T-&gt;lchild);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c&quot;</span>,T-&gt;data);<br>    InorderTraverse(T-&gt;rchild);<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h4 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h4><p>算法：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">TailOrderTraverse</span><span class="hljs-params">(BiTree T)</span>&#123;<br>    <span class="hljs-keyword">if</span>(T==<span class="hljs-literal">NULL</span>)<br>        <span class="hljs-keyword">return</span> ;<br>    TailOrderTraverse(T-&gt;lchild);<br>    TailOrderTraverse(T-&gt;rchild);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c&quot;</span>,T-&gt;data);<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>注意：后序遍历在回退的时候，不能直接打印，要看该结点是否有右节点，如果有要先遍历到右节点再打印</p>
-<h4 id="根据已知顺序推导"><a href="#根据已知顺序推导" class="headerlink" title="根据已知顺序推导"></a>根据已知顺序推导</h4><p>已知前序/后序和中序可以推导整棵树</p>
-<p>已知前序和后序无法推导中序</p>
-<h3 id="二叉树的建立"><a href="#二叉树的建立" class="headerlink" title="二叉树的建立"></a>二叉树的建立</h3><p>1.拓展二叉树，对于每个结点的空的孩子都建立一个虚结点#；</p>
-<p>2.生成二叉树算法：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">CreateBiTree</span><span class="hljs-params">(BiTree *T)</span>&#123;<br>    TElemType ch;<span class="hljs-comment">//键盘输入</span><br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%c&quot;</span>,ch);<br>    <span class="hljs-keyword">if</span>(ch==<span class="hljs-string">&#x27;#&#x27;</span>)<span class="hljs-comment">//如果键盘输入为0</span><br>        *T=<span class="hljs-literal">NULL</span>;<br>    <span class="hljs-keyword">else</span>&#123;<br>        *T=(BiTree)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(BiTNode));<span class="hljs-comment">//给T赋予内存</span><br>        <span class="hljs-keyword">if</span>(!*T)<span class="hljs-comment">//即当T等于NULL的时候</span><br>            <span class="hljs-built_in">exit</span>(OVERFLOW);<br>        (*T)-&gt;data=ch;<span class="hljs-comment">//生成结点</span><br>        CreateBiTree(&amp;(*T)-&gt;lchild);<span class="hljs-comment">//递归，生成左孩子</span><br>        CreateBiTree(&amp;(*T)-&gt;rchild);<span class="hljs-comment">//递归，生成右孩子</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h2 id="线索二叉树"><a href="#线索二叉树" class="headerlink" title="线索二叉树"></a>线索二叉树</h2><p>1.把指向前去和后继指针称为线索，加上线索的二叉链表称为线索二叉树（Threaded Binary Tree）</p>
-<p>2.增加布尔类型的标志域放在指针中</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c">lchild ltag data rtag rchild<br><span class="hljs-comment">//当ltag=0，指向左孩子，当ltag=1，指向前驱</span><br><span class="hljs-comment">//当rtag=0，指向右孩子，当rtag=1，指向后继</span><br></code></pre></td></tr></table></figure>
-
-<p><strong>注意：是在二叉树中空闲的指针才会用来指向前驱和后继，不能影响正常的左右孩子的表达</strong></p>
-<p>3.线索二叉树的结构实现</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">enum</span>&#123;</span>Link,Thread&#125; PointerTag;<br><span class="hljs-comment">//Link=0表示指向左右孩子结点，Thread==1表示指向前驱后继结点</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">BiThrNode</span>&#123;</span><span class="hljs-comment">//二叉树线索存储结点</span><br>    TElemType data;<br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">BiThrNode</span> *<span class="hljs-title">lchild</span>,*<span class="hljs-title">rchild</span>;</span><br>    PointTag LTag;<br>    PointTag RTag;<br>&#125;BiThrNode,*BiThrTree;<span class="hljs-comment">//线索树</span><br></code></pre></td></tr></table></figure>
-
-<p>4.线索化就是在遍历的过程中，一遍遍历一边修改空指针。</p>
-<p>5.中序遍历线索化</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c">BiThrTree pre;<span class="hljs-comment">//指向刚访问过的节点</span><br><span class="hljs-type">void</span> <span class="hljs-title function_">InThreading</span><span class="hljs-params">(BiTheTree p&#123;</span><br><span class="hljs-params">	<span class="hljs-keyword">if</span>(p)&#123;</span><br><span class="hljs-params">        InThreading(p-&gt;lchild);<span class="hljs-comment">//递归左子树线索化</span></span><br><span class="hljs-params">        <span class="hljs-keyword">if</span>(!p-&gt;lchild)&#123;<span class="hljs-comment">//无左孩子</span></span><br><span class="hljs-params">        	p-&gt;ltag=Thread;<span class="hljs-comment">//前驱线索</span></span><br><span class="hljs-params">            p-&gt;lchild=pre;<span class="hljs-comment">//左孩子指向前驱</span></span><br><span class="hljs-params">        &#125;</span><br><span class="hljs-params">        <span class="hljs-keyword">if</span>(!pre-&gt;rchild)&#123;</span><br><span class="hljs-params">            pre-&gt;rtag=Thread;</span><br><span class="hljs-params">            pre-&gt;rchild=p;</span><br><span class="hljs-params">        &#125;</span><br><span class="hljs-params">        pre=p;</span><br><span class="hljs-params">        InThreading(p-&gt;child);<span class="hljs-comment">//递归右子树线索化</span></span><br><span class="hljs-params">    &#125;   </span><br><span class="hljs-params">&#125;</span><br></code></pre></td></tr></table></figure>
-
-<p>6.线索树中的头结点</p>
-<p>头结点 的左孩子指针指向树的根节点，右孩子指向中序遍历的最后一个结点。</p>
-<p>然后，令中序的第一个元素和最后一个元素的lchild和rchild结点指向根节点</p>
-<p>7.在6的基础上，代码如下：（中序遍历）</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">InOrderTraverse_Thr</span><span class="hljs-params">(BiThrTree T)</span>&#123;<br>	BiTree p;<span class="hljs-comment">//树中结点</span><br>	p=T-&gt;lchild;<span class="hljs-comment">//树的头结点的左孩子是p，即p指向根节点</span><br>	<span class="hljs-keyword">while</span>(p!=T)&#123;<br>		<span class="hljs-keyword">while</span>(p-&gt;LTag==Link)<span class="hljs-comment">//结束条件p.LTag==Thr</span><br>			p=p-&gt;child;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c&quot;</span>,p-&gt;data);<span class="hljs-comment">//中序的第一个结点</span><br>        <span class="hljs-keyword">while</span>(p-&gt;RTag==Thread&amp;&amp;p-&gt;rchild!=T)&#123;<br>            p=p-&gt;rchild;<br>            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c&quot;</span>,p-&gt;data);<br>        &#125;<br>    &#125;<br>    p=p-&gt;rchild;<span class="hljs-comment">//p进至右子树根</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>8.中序遍历的时间复杂度为O(n)，适用于遍历，查找结点时需要前去或者后继。</p>
-<h2 id="Transform"><a href="#Transform" class="headerlink" title="Transform"></a>Transform</h2><h3 id="树转二叉树"><a href="#树转二叉树" class="headerlink" title="树转二叉树"></a>树转二叉树</h3><p>1.加线，在所有兄弟结点之间加一条连线。</p>
-<p>2.去线，对树中的每一个结点，只保留它与first child 的连线。</p>
-<p>3.调整使得层次分明</p>
-<h3 id="森林转二叉树"><a href="#森林转二叉树" class="headerlink" title="森林转二叉树"></a>森林转二叉树</h3><p>1.把每棵树转化为二叉树。</p>
-<p>2.第一棵树位置不变，第二棵树插入第一棵树根节点的右孩子。</p>
-<h3 id="二叉树转树"><a href="#二叉树转树" class="headerlink" title="二叉树转树"></a>二叉树转树</h3><p>1.X的左孩子的所有右孩子结点都与X相连接。</p>
-<p>2.删除所有左孩子和右孩子的连线</p>
-<p>3.层次调整</p>
-<h3 id="二叉树转森林"><a href="#二叉树转森林" class="headerlink" title="二叉树转森林"></a>二叉树转森林</h3><p><strong>判断：二叉树的根节点是否有右孩子，如果有可变森林，没有不可变森林</strong></p>
-<p>1.删除所有与右孩子的连线！</p>
-<p>2.再将每棵分离后的二叉树转化为树</p>
-<h3 id="树和森林的遍历"><a href="#树和森林的遍历" class="headerlink" title="树和森林的遍历"></a>树和森林的遍历</h3><h4 id="树的遍历"><a href="#树的遍历" class="headerlink" title="树的遍历"></a>树的遍历</h4><p>1.先根遍历：从根出发，一次遍历每个子树</p>
-<p>2.后根遍历：从子树出发，最后遍历根</p>
-<h4 id="森林的遍历"><a href="#森林的遍历" class="headerlink" title="森林的遍历"></a>森林的遍历</h4><p>1.前序遍历：对没棵树从前往后先根遍历</p>
-<p>2.后序遍历：对每棵树从前往后后根遍历</p>
-<h2 id="赫夫曼树及其运用"><a href="#赫夫曼树及其运用" class="headerlink" title="赫夫曼树及其运用"></a>赫夫曼树及其运用</h2><p>1.定义：假设有n个权值{w1,w2,….,wn},构造一棵有n个叶子结点的二叉树，每个叶子结点带权wk，每个叶子结点路径长为lk，带权路径长度WPL=w1* l1+ w2 * l2 + … + wk * lk 最小的二叉树，称为赫夫曼树</p>
-<p>2.寻找最优赫夫曼树</p>
-<p>a.先把有权值的叶子结点从小到大排序成有序序列，A5,E10,B15,D30.</p>
-<p>b.取两个最小权值结点作为新结点N1的两个子结点，小在左，大在右</p>
-<p>c.将N1替换A与E，有N1:15,B:15,D:30,C:40</p>
-<p>d.将N1与B作为新结点N2，……，权值N2=N1+B=30</p>
-<p>…</p>
-<p>最后C：40，N3：60，将C与N3作为T的结点，T就是赫夫曼树的根节点</p>
-<h3 id="赫夫曼编码"><a href="#赫夫曼编码" class="headerlink" title="赫夫曼编码"></a>赫夫曼编码</h3><p>左0右1</p>
-<h2 id="二叉树递归三步"><a href="#二叉树递归三步" class="headerlink" title="二叉树递归三步"></a>二叉树递归三步</h2><p>1.递归函数的参数和返回值</p>
-<p>2.终止条件</p>
-<p>3.单层递归的逻辑</p>
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据结构--线性表</title>
     <url>/2022/02/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
     <content><![CDATA[<h1 id="线性表的基础内容及应用"><a href="#线性表的基础内容及应用" class="headerlink" title="线性表的基础内容及应用"></a>线性表的基础内容及应用</h1><span id="more"></span>
@@ -3684,6 +3684,17 @@
       </tags>
   </entry>
   <entry>
+    <title>数据采集--数据采集及清洗概念</title>
+    <url>/2022/08/30/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86-%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%8F%8A%E6%B8%85%E6%B4%97%E6%A6%82%E5%BF%B5/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数据采集</category>
+      </categories>
+      <tags>
+        <tag>数据采集</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>机器学习--AdaBoost和GBDT</title>
     <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-AdaBoost%E5%92%8CGBDT/</url>
     <content><![CDATA[<h2 id="AdaBoost模型"><a href="#AdaBoost模型" class="headerlink" title="AdaBoost模型"></a>AdaBoost模型</h2><span id="more"></span>
@@ -3730,17 +3741,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数据采集--数据采集及清洗概念</title>
-    <url>/2022/08/30/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86-%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%8F%8A%E6%B8%85%E6%B4%97%E6%A6%82%E5%BF%B5/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>数据采集</category>
-      </categories>
-      <tags>
-        <tag>数据采集</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>机器学习-- Matplotlib库</title>
     <url>/2022/03/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-Matplotlib%E5%BA%93/</url>
     <content><![CDATA[<p>Matplotlib库用来创建图表</p>
@@ -3771,6 +3771,29 @@
 <h4 id="解决中文显示问题ax"><a href="#解决中文显示问题ax" class="headerlink" title="解决中文显示问题ax"></a>解决中文显示问题ax</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> matplotlib.pylot <span class="hljs-keyword">as</span> plt<br>plt.rcParams[fort.sans-serif] = [<span class="hljs-string">&#x27;SimHei&#x27;</span>]	<span class="hljs-comment">#用来正常显示中文标签</span><br>plt.rcParams[<span class="hljs-string">&#x27;axes.unicode_minus&#x27;</span>] = <span class="hljs-literal">False</span>	<span class="hljs-comment">#解决符号显示为方块的问题</span><br></code></pre></td></tr></table></figure>
 
 <h4 id="绘制多图"><a href="#绘制多图" class="headerlink" title="绘制多图"></a>绘制多图</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#Matplotlib库中的figure作为画布，axes作为子图，一个画布中可以有多张子图，绘制多图常用subplot()函数和subplots()函数.</span><br><br><span class="hljs-comment">#subplot函数，他的参数为三位整数，分别表示子图的行数列数和当前子图的序号。</span><br>ax = plot.subplot(<span class="hljs-number">221</span>)<br>plt.plot([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>])	<span class="hljs-comment">#表示这个两行两列的子图绘制折线图。</span><br><br><span class="hljs-comment">#subplots函数，表示生成几行几列的子图</span><br>fig,axes = plt.subplots(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>)	<span class="hljs-comment">#表示生成两行两列的一共四个的子图,fig是画布参数，axes是子图参数</span><br>ax1,ax2,ax3,ax4 = axes.flatten()	<span class="hljs-comment">#这个语句将子图变量赋值给ax1,ax2,ax3,ax4</span><br><span class="hljs-comment">#之后就可以使用subplot在子图中画图</span><br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>机器学习--决策树</title>
+    <url>/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/</url>
+    <content><![CDATA[<h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>父节点和子节点是相对的，子节点的上边是父节点，父节点的下面是子节点</p>
+<p>根节点：没有父节点的节点叫做根节点，即初始节点</p>
+<p>叶子节点：没有子节点的节点叫做叶子节点，即最终节点</p>
+<span id="more"></span>
+
+<h3 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h3><p>可以做<strong>分类分析（分类决策树模型）</strong>，也可以做<strong>回归分析（回归决策树模型）</strong></p>
+<h4 id="分类决策树模型"><a href="#分类决策树模型" class="headerlink" title="分类决策树模型"></a>分类决策树模型</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.tree <span class="hljs-keyword">import</span> DecisionTreeClassifier<br>X = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">8</span>],[<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]]<span class="hljs-comment">#共有5个训练集，每个训练集有2个特征</span><br>y = [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>]<span class="hljs-comment">#这是因变量，分类为1和0</span><br>model = DecisionTreeClassifier(random_state=<span class="hljs-number">0</span>)<span class="hljs-comment">#引入模型并设置随即状态为0，0只是保证运行结果一致</span><br>model.fit(X,y)<span class="hljs-comment">#使用fit训练</span><br><span class="hljs-built_in">print</span>(model.predict([[<span class="hljs-number">5</span>,<span class="hljs-number">5</span>]]))<span class="hljs-comment">#使用predict预测</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="回归决策树模型"><a href="#回归决策树模型" class="headerlink" title="回归决策树模型"></a>回归决策树模型</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.tree <span class="hljs-keyword">import</span> DecisionTreeRegressor<br>X = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">8</span>],[<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]]<br>y = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]<br>model = DecisionTreeRegressor(max_depth=<span class="hljs-number">2</span>,random_state=<span class="hljs-number">0</span>)<br>model.fit(X,y)<br><span class="hljs-built_in">print</span>(model.predict([[<span class="hljs-number">9</span>,<span class="hljs-number">9</span>]]))<br></code></pre></td></tr></table></figure>
+
+<h3 id="总体决策树模型搭建"><a href="#总体决策树模型搭建" class="headerlink" title="总体决策树模型搭建"></a>总体决策树模型搭建</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#1.数据读取与预处理</span><br><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br>df = pd.read_excel(<span class="hljs-string">&#x27;XX.xlsx&#x27;</span>)<br>df = df.replace(&#123;<span class="hljs-string">&#x27;工资&#x27;</span>:&#123;<span class="hljs-string">&#x27;低&#x27;</span>:<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;中&#x27;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;高&#x27;</span>:<span class="hljs-number">2</span>&#125;&#125;)<br><br><span class="hljs-comment">#2.提取特征变量和目标变量</span><br>X = df.drop(columns=<span class="hljs-string">&#x27;离职&#x27;</span>)<br>y = df[<span class="hljs-string">&#x27;离职&#x27;</span>]<br><br><span class="hljs-comment">#3.划分训练集和测试集</span><br><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br>X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="hljs-number">0.2</span>,random_state=<span class="hljs-number">1</span>)<br><br><span class="hljs-comment">#4.训练模型及搭建</span><br><span class="hljs-keyword">from</span> sklearn.tree <span class="hljs-keyword">import</span> DecisionTreeClassifier<br>model = DecisionTreeClassifier(max_depth=<span class="hljs-number">3</span>,random_state=<span class="hljs-number">1</span>)<br>model.fit(X_train,y_train)<br></code></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -3873,13 +3896,10 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习--朴素贝叶斯</title>
-    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/</url>
-    <content><![CDATA[<h3 id="朴素贝叶斯"><a href="#朴素贝叶斯" class="headerlink" title="朴素贝叶斯"></a>朴素贝叶斯</h3><span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.naive_bayes <span class="hljs-keyword">import</span> GaussianNB<br>X = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">8</span>],[<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]]<span class="hljs-comment">#两个特征</span><br>y = [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>]<br>model = GaussianNB<br>model.fit(X,y)<br><span class="hljs-built_in">print</span>(model.predict([[<span class="hljs-number">5</span>,<span class="hljs-number">5</span>]]))<br></code></pre></td></tr></table></figure>
-
-<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#1.读取excel表</span><br><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br>df = pd.read_excel(<span class="hljs-string">&#x27;肿瘤数据.xlsx&#x27;</span>)<br><br><span class="hljs-comment">#2.划分特征变量和目标变量</span><br>X = df.drop(columns=<span class="hljs-string">&#x27;肿瘤性质&#x27;</span>)<br>y = df[<span class="hljs-string">&#x27;肿瘤性质&#x27;</span>]<br><br><span class="hljs-comment">#3.区分训练集和测试集</span><br><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br>X_train,y_train,X_test,y_test = train_test_split(X,y,test_size=<span class="hljs-number">0.2</span>,random_state=<span class="hljs-number">1</span>)<br><br><span class="hljs-comment">#4.模型搭建</span><br><span class="hljs-keyword">from</span> sklearn.navie_bayes <span class="hljs-keyword">import</span> GaussianNB<br>model = GaussianNB()<br>model.fit(X_train,y_train)<br><br><span class="hljs-comment">#5.模型评估</span><br>y_pred = model.predict(X_test)<br>a = pd.DataFrame()<br>a[<span class="hljs-string">&#x27;预测值&#x27;</span>] = <span class="hljs-built_in">list</span>(y_pred)<br>a[<span class="hljs-string">&#x27;实际值&#x27;</span>] = <span class="hljs-built_in">list</span>(y_test)<br><br><span class="hljs-comment">#获得所有数据</span><br>score = model.score(X_test,y_test)<br></code></pre></td></tr></table></figure>
+    <title>机器学习--列表切片</title>
+    <url>/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/</url>
+    <content><![CDATA[<p>只需要列表切片的时候是左闭右开的！</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]<br><span class="hljs-built_in">print</span>(a[<span class="hljs-number">0</span>:<span class="hljs-number">2</span>])<br><span class="hljs-comment">#因为左闭右开，所以打印出来的结果是[1,2]</span><br></code></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -3890,10 +3910,13 @@
       </tags>
   </entry>
   <entry>
-    <title>机器学习--列表切片</title>
-    <url>/2022/06/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%88%97%E8%A1%A8%E5%88%87%E7%89%87/</url>
-    <content><![CDATA[<p>只需要列表切片的时候是左闭右开的！</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>]<br><span class="hljs-built_in">print</span>(a[<span class="hljs-number">0</span>:<span class="hljs-number">2</span>])<br><span class="hljs-comment">#因为左闭右开，所以打印出来的结果是[1,2]</span><br></code></pre></td></tr></table></figure>
+    <title>机器学习--朴素贝叶斯</title>
+    <url>/2022/06/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/</url>
+    <content><![CDATA[<h3 id="朴素贝叶斯"><a href="#朴素贝叶斯" class="headerlink" title="朴素贝叶斯"></a>朴素贝叶斯</h3><span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.naive_bayes <span class="hljs-keyword">import</span> GaussianNB<br>X = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">8</span>],[<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]]<span class="hljs-comment">#两个特征</span><br>y = [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>]<br>model = GaussianNB<br>model.fit(X,y)<br><span class="hljs-built_in">print</span>(model.predict([[<span class="hljs-number">5</span>,<span class="hljs-number">5</span>]]))<br></code></pre></td></tr></table></figure>
+
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#1.读取excel表</span><br><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br>df = pd.read_excel(<span class="hljs-string">&#x27;肿瘤数据.xlsx&#x27;</span>)<br><br><span class="hljs-comment">#2.划分特征变量和目标变量</span><br>X = df.drop(columns=<span class="hljs-string">&#x27;肿瘤性质&#x27;</span>)<br>y = df[<span class="hljs-string">&#x27;肿瘤性质&#x27;</span>]<br><br><span class="hljs-comment">#3.区分训练集和测试集</span><br><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br>X_train,y_train,X_test,y_test = train_test_split(X,y,test_size=<span class="hljs-number">0.2</span>,random_state=<span class="hljs-number">1</span>)<br><br><span class="hljs-comment">#4.模型搭建</span><br><span class="hljs-keyword">from</span> sklearn.navie_bayes <span class="hljs-keyword">import</span> GaussianNB<br>model = GaussianNB()<br>model.fit(X_train,y_train)<br><br><span class="hljs-comment">#5.模型评估</span><br>y_pred = model.predict(X_test)<br>a = pd.DataFrame()<br>a[<span class="hljs-string">&#x27;预测值&#x27;</span>] = <span class="hljs-built_in">list</span>(y_pred)<br>a[<span class="hljs-string">&#x27;实际值&#x27;</span>] = <span class="hljs-built_in">list</span>(y_test)<br><br><span class="hljs-comment">#获得所有数据</span><br>score = model.score(X_test,y_test)<br></code></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -3915,29 +3938,6 @@
 
 
 ]]></content>
-  </entry>
-  <entry>
-    <title>机器学习--决策树</title>
-    <url>/2022/06/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%86%B3%E7%AD%96%E6%A0%91/</url>
-    <content><![CDATA[<h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>父节点和子节点是相对的，子节点的上边是父节点，父节点的下面是子节点</p>
-<p>根节点：没有父节点的节点叫做根节点，即初始节点</p>
-<p>叶子节点：没有子节点的节点叫做叶子节点，即最终节点</p>
-<span id="more"></span>
-
-<h3 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h3><p>可以做<strong>分类分析（分类决策树模型）</strong>，也可以做<strong>回归分析（回归决策树模型）</strong></p>
-<h4 id="分类决策树模型"><a href="#分类决策树模型" class="headerlink" title="分类决策树模型"></a>分类决策树模型</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.tree <span class="hljs-keyword">import</span> DecisionTreeClassifier<br>X = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">8</span>],[<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]]<span class="hljs-comment">#共有5个训练集，每个训练集有2个特征</span><br>y = [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>]<span class="hljs-comment">#这是因变量，分类为1和0</span><br>model = DecisionTreeClassifier(random_state=<span class="hljs-number">0</span>)<span class="hljs-comment">#引入模型并设置随即状态为0，0只是保证运行结果一致</span><br>model.fit(X,y)<span class="hljs-comment">#使用fit训练</span><br><span class="hljs-built_in">print</span>(model.predict([[<span class="hljs-number">5</span>,<span class="hljs-number">5</span>]]))<span class="hljs-comment">#使用predict预测</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="回归决策树模型"><a href="#回归决策树模型" class="headerlink" title="回归决策树模型"></a>回归决策树模型</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.tree <span class="hljs-keyword">import</span> DecisionTreeRegressor<br>X = [[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>],[<span class="hljs-number">5</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">7</span>,<span class="hljs-number">8</span>],[<span class="hljs-number">9</span>,<span class="hljs-number">10</span>]]<br>y = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]<br>model = DecisionTreeRegressor(max_depth=<span class="hljs-number">2</span>,random_state=<span class="hljs-number">0</span>)<br>model.fit(X,y)<br><span class="hljs-built_in">print</span>(model.predict([[<span class="hljs-number">9</span>,<span class="hljs-number">9</span>]]))<br></code></pre></td></tr></table></figure>
-
-<h3 id="总体决策树模型搭建"><a href="#总体决策树模型搭建" class="headerlink" title="总体决策树模型搭建"></a>总体决策树模型搭建</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#1.数据读取与预处理</span><br><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br>df = pd.read_excel(<span class="hljs-string">&#x27;XX.xlsx&#x27;</span>)<br>df = df.replace(&#123;<span class="hljs-string">&#x27;工资&#x27;</span>:&#123;<span class="hljs-string">&#x27;低&#x27;</span>:<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;中&#x27;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;高&#x27;</span>:<span class="hljs-number">2</span>&#125;&#125;)<br><br><span class="hljs-comment">#2.提取特征变量和目标变量</span><br>X = df.drop(columns=<span class="hljs-string">&#x27;离职&#x27;</span>)<br>y = df[<span class="hljs-string">&#x27;离职&#x27;</span>]<br><br><span class="hljs-comment">#3.划分训练集和测试集</span><br><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br>X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="hljs-number">0.2</span>,random_state=<span class="hljs-number">1</span>)<br><br><span class="hljs-comment">#4.训练模型及搭建</span><br><span class="hljs-keyword">from</span> sklearn.tree <span class="hljs-keyword">import</span> DecisionTreeClassifier<br>model = DecisionTreeClassifier(max_depth=<span class="hljs-number">3</span>,random_state=<span class="hljs-number">1</span>)<br>model.fit(X_train,y_train)<br></code></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-      </tags>
   </entry>
   <entry>
     <title>机器学习--线性回归（重点）</title>
@@ -4036,34 +4036,6 @@
       </tags>
   </entry>
   <entry>
-    <title>统计学-- 数据的搜集</title>
-    <url>/2022/03/08/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%90%9C%E9%9B%86/</url>
-    <content><![CDATA[<h3 id="数据的分类"><a href="#数据的分类" class="headerlink" title="数据的分类"></a>数据的分类</h3><span id="more"></span>
-
-<p>1.原始数据：调查，观察实验。</p>
-<p>2.次级数据：已被做好的，统计年鉴，期刊等等。</p>
-<h3 id="概率抽样和非概率抽样"><a href="#概率抽样和非概率抽样" class="headerlink" title="概率抽样和非概率抽样"></a>概率抽样和非概率抽样</h3><p>1.概率抽样（随机抽样）：</p>
-<p>​    （1）简单随机抽样：（需要<strong>抽样框</strong>，<strong>抽样框</strong>通常包括所有总体单位的信息，如小区用户信息，住户门牌号等）从包括总体N个单位的抽样框中一个个的抽取n个单位作为样本，抽中每个样本的概率是相等的。</p>
-<p>​    （2）分层抽样：把总体按照某种特征或某种规则划分成多层，然后从不同的层中抽取样本，然后将这些样本结合起来。</p>
-<p>​    （3）整群抽样：总体中若干个单位合并为<strong>群</strong>，抽样的时候直接抽取群，然后对选中的群全部进行调查，称为<strong>整群抽样</strong>。</p>
-<p>​    （4）系统抽样：将所有单位按一定的顺序排好，在规定的范围内随机抽取一个单位作为初始单位。然后按照一定的规则确定其他的样本单位。</p>
-<p>​    （5）多阶段抽样：先进行整群抽样，然后再从群里面抽取若干个单位进行调查。</p>
-<p>2.非概率抽样：</p>
-<p>​    （1）方便抽样：调查过程中调查员依据方便的原则</p>
-<p>​    （2）判断抽样：研究人员根据经验，判断等，有目标的选择对象进行研究</p>
-<p>​    （3）自愿抽样：自愿者自愿参与</p>
-<p>​    （4）滚雪球抽样：先选择一组样本，然后由这个样本提供其他的样本，故称为滚雪球</p>
-<p>​    （5）配额抽样：类似于概率抽样中的分层抽样</p>
-<p>​    </p>
-]]></content>
-      <categories>
-        <category>统计学</category>
-      </categories>
-      <tags>
-        <tag>统计学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>统计学 -- 导论</title>
     <url>/2022/03/04/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E5%AF%BC%E8%AE%BA/</url>
     <content><![CDATA[<h3 id="统计数据的类型"><a href="#统计数据的类型" class="headerlink" title="统计数据的类型"></a>统计数据的类型</h3><span id="more"></span>
@@ -4104,114 +4076,31 @@
       </tags>
   </entry>
   <entry>
-    <title>计算机组成原理--数据的表示和运算</title>
-    <url>/2022/03/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/</url>
-    <content><![CDATA[<h2 id="进位计数制"><a href="#进位计数制" class="headerlink" title="进位计数制"></a>进位计数制</h2><span id="more"></span>
+    <title>统计学-- 数据的搜集</title>
+    <url>/2022/03/08/%E7%BB%9F%E8%AE%A1%E5%AD%A6-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%90%9C%E9%9B%86/</url>
+    <content><![CDATA[<h3 id="数据的分类"><a href="#数据的分类" class="headerlink" title="数据的分类"></a>数据的分类</h3><span id="more"></span>
 
-<h3 id="不同的进制"><a href="#不同的进制" class="headerlink" title="不同的进制"></a>不同的进制</h3><p>其实进制的实质就是<strong>逢X进一</strong>，如十进制就是逢十进一，八进制逢八进一。</p>
-<p>二进制：0，1</p>
-<p>八进制：0，1，2，3，4，5，6，7</p>
-<p>十进制：0，1，2，3，4，5，6，7，8，9</p>
-<p>十六进制：0，1，2，3，4，5，6，7，8，9，A，B，C，D，E，F</p>
-<h4 id="基数"><a href="#基数" class="headerlink" title="基数"></a>基数</h4><p>不同进制的基数不同，如<strong>r进制的基数就是r</strong>，十进制的基数就是十</p>
-<h4 id="不同进制的加法"><a href="#不同进制的加法" class="headerlink" title="不同进制的加法"></a>不同进制的加法</h4><h5 id="八进制加法"><a href="#八进制加法" class="headerlink" title="八进制加法"></a>八进制加法</h5><p>逢八进一，那么5.4+0.4 = 6.0</p>
-<h5 id="十六进制加法"><a href="#十六进制加法" class="headerlink" title="十六进制加法"></a>十六进制加法</h5><p>逢十六进一，那么5.8+1.8 = 7.0</p>
-<h3 id="十进制计数法"><a href="#十进制计数法" class="headerlink" title="十进制计数法"></a>十进制计数法</h3><p>古印度人发明了阿拉伯数字：1，2，3，4.……</p>
-<h4 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h4><p>例如在十进制数<strong>987</strong>中，9是百位，8是十位，7是个位。也即9*10^2 + 8 * 10^1 + 7 * 10^0这三个分别代表了不同的权重。</p>
-<h4 id="从其他进制转换到十进制"><a href="#从其他进制转换到十进制" class="headerlink" title="从其他进制转换到十进制"></a>从其他进制转换到十进制</h4><p><strong>如二进制数11011要转化成十进制的方式就是从第一位到最后一位分别成对应进制基数的0，1，2，3，4次方。</strong></p>
-<p>在这个例子里面就是 1乘二的0次方 + 1乘二的1次方 + 0乘二的2次方 + 1乘二的3次方 + 1乘二的4次方 = 27</p>
-<h4 id="从十进制转化成其他进制"><a href="#从十进制转化成其他进制" class="headerlink" title="从十进制转化成其他进制"></a>从十进制转化成其他进制</h4><h5 id="十进制转二进制"><a href="#十进制转二进制" class="headerlink" title="十进制转二进制"></a>十进制转二进制</h5><h6 id="整数位置"><a href="#整数位置" class="headerlink" title="整数位置"></a>整数位置</h6><p><strong>除基取余法</strong></p>
-<p>拿十进制的数除2，得到的余数就是二进制的数，直到除到商为0为止，先得到的余数是低位的，后得到的余数是高位的。</p>
-<h6 id="小数位置"><a href="#小数位置" class="headerlink" title="小数位置"></a>小数位置</h6><p><strong>乘基取整法</strong></p>
-<p>拿十进制的小数部分乘2，看乘二之后的整数部分是不是1，是1的话该位的二进制就是1，否则是0。有一些十进制的小数位取不完（如0.3），遇到这种情况就取小数点的后五位</p>
-<h5 id="十进制转八进制和十六进制"><a href="#十进制转八进制和十六进制" class="headerlink" title="十进制转八进制和十六进制"></a>十进制转八进制和十六进制</h5><p>先把十进制转化成为二进制，再把二进制转化成为八进制和十六进制</p>
-<h3 id="二进制转八进制和十六进制"><a href="#二进制转八进制和十六进制" class="headerlink" title="二进制转八进制和十六进制"></a>二进制转八进制和十六进制</h3><h4 id="二进制转八进制"><a href="#二进制转八进制" class="headerlink" title="二进制转八进制"></a>二进制转八进制</h4><p>二进制中的数每三个分成一组，每组对应转换成八进制的数字（0~7）即可，如二进制数100111011001可以分成这样：100<strong>111</strong>011<strong>001</strong>,然后分别看，001转化成八进制是1，011转化成八进制是3，111转化成八进制是7，100转化成八进制是4，所以这个二进制数转化成八进制实际上是4731.</p>
-<p><strong>注意：位数不够的在前面或者后面补0</strong></p>
-<h4 id="二进制转十六进制"><a href="#二进制转十六进制" class="headerlink" title="二进制转十六进制"></a>二进制转十六进制</h4><p>把二进制数看成四个一组即可，要注意的是十六进制中，ABCDEF分别表示10，11，12，13，14，15</p>
-<h4 id="八进制转二进制"><a href="#八进制转二进制" class="headerlink" title="八进制转二进制"></a>八进制转二进制</h4><p>把八进制中<strong>每一个</strong>数都转化成为<strong>三个</strong>二进制数即可</p>
-<h3 id="如何区别不同进制"><a href="#如何区别不同进制" class="headerlink" title="如何区别不同进制"></a>如何区别不同进制</h3><p>一般会在右下角有角标，如八进制会在右下角有八的角标</p>
-<p>如果没有角标的情况下，会在数字的后面加上对应的字母以便区分，二进制的字母是B，十进制的字母是D，十六进制的字母是H。</p>
-<h3 id="真值和机器数"><a href="#真值和机器数" class="headerlink" title="真值和机器数"></a>真值和机器数</h3><p>在计算机中如何表示正负号，通常用0代表负号，用1代表正号。如5436这是个真值，为了表示他是正数，用<strong>1</strong>5436表示他是个正数，15436就是个机器数。在后面的原码，反码，补码，移码中会具体说明。</p>
-<h2 id="BCD码"><a href="#BCD码" class="headerlink" title="BCD码"></a>BCD码</h2><h3 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h3><p>使用二进制来编码的十进制数</p>
-<p>每<strong>四个二进制码（4bit）（一共对应了2^4=16种状态）对应这十进制中的0~9</strong>，那么明显有六种是冗余的</p>
-<h3 id="8421码"><a href="#8421码" class="headerlink" title="8421码"></a>8421码</h3><p>8421码种规定了0~9的二进制状态</p>
-<p><strong>9：1001</strong></p>
-<p><strong>8：1000</strong></p>
-<p><strong>7：0111</strong></p>
-<p><strong>6：0110</strong></p>
-<p><strong>5：0101</strong></p>
-<p><strong>4：0100</strong></p>
-<p><strong>3：0011</strong></p>
-<p><strong>2：0010</strong></p>
-<p><strong>1：0001</strong></p>
-<p><strong>0：0000</strong></p>
-<p>要记熟8421码，考试容易碰到</p>
-<h4 id="8421码中数之间的相加"><a href="#8421码中数之间的相加" class="headerlink" title="8421码中数之间的相加"></a>8421码中数之间的相加</h4><p>可以用二进制直接加（记住逢二进一就可以了），也可以用十进制加好之后再转化成二进制数。</p>
-<p><strong>Q：那么这里有个问题是相加得到的数大于9，不在8421码当中怎么办？</strong></p>
-<p><strong>A：通常把这个大于9的数再加上6即可得到两位数的表示方法</strong></p>
-<h3 id="余3码"><a href="#余3码" class="headerlink" title="余3码"></a>余3码</h3><p>在8421码表示的数值中每一个都加上一个二进制的0011，得到的就是余3码。</p>
-<h3 id="2421码"><a href="#2421码" class="headerlink" title="2421码"></a>2421码</h3><p>与8421码很类似，只是2421码对应的权值分别是2421.</p>
-<p>2421码在0~4的时候前两位的值是0</p>
-<h2 id="字符和字符串"><a href="#字符和字符串" class="headerlink" title="字符和字符串"></a>字符和字符串</h2><h3 id="ASCII码"><a href="#ASCII码" class="headerlink" title="ASCII码"></a>ASCII码</h3><p>在ASCII码中一共有128个字符，而2的7次方正好等于128，所以我们只需要7位二进制的编码就可以表示ASCII码中的数字符号字母，但是计算机为了凑够一个字节，通常使用8个bit来表示，这样正好凑够了一个字节（Byte）</p>
-<h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>已知<strong>A</strong>的ASCII码值是65，<strong>H</strong>存放在M单元中，求M单元中的二进制数</p>
-<p>H在26个字母的第八位，所以计算得M中存放的二进制值是<strong>0</strong>1001000（注意：一定要补一个0凑够八位）</p>
-<p><strong>按字节编址</strong>的意思是每一个地址对应着1B</p>
-<p>一个汉字占两个字节（2B）的大小</p>
-<h2 id="奇偶效验码"><a href="#奇偶效验码" class="headerlink" title="奇偶效验码"></a>奇偶效验码</h2><p>A的编码是00</p>
-<p>B的编码是01</p>
-<p>C的编码是10</p>
-<p>D的编码是11</p>
-<p>当然ABCD都是两个bit的。</p>
-<p><strong>位错误</strong>：0变1，1变0</p>
-<p>由若干位代码组成的一个字叫做<strong>码字</strong></p>
-<h3 id="码距"><a href="#码距" class="headerlink" title="码距"></a>码距</h3><p>将两个码字放在一起一个个字符的逐一进行对比，具有不同位的个数称为两个码字之间的距离，一种编码方案可能有若干个合法码字，各码字之间的<strong>最小距离</strong>称为<strong>码距</strong>。</p>
-<p>当码距=1时，无检错能力</p>
-<p>当码距=2时，具有检错能力</p>
-<p>当码距&gt;=3时，具有检错甚至纠错能力</p>
-<h3 id="奇效验码"><a href="#奇效验码" class="headerlink" title="奇效验码"></a>奇效验码</h3><p><strong>能发现奇数位错误</strong></p>
-<p>保证码中的“1”的个数是<strong>奇数</strong>个，如果是<strong>偶数</strong>，在前面添1；如果是<strong>奇数</strong>，在前面添0</p>
-<h3 id="偶效验码"><a href="#偶效验码" class="headerlink" title="偶效验码"></a>偶效验码</h3><p><strong>能发现偶数位错误</strong></p>
-<p>保证码中的“1”的个数是<strong>偶数</strong>个，如果是<strong>偶数</strong>，在前面添0；如果是<strong>奇数</strong>，在前面添1</p>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>在<strong>奇校验</strong>中有<strong>奇数个bit</strong>发生了错误是无法发现的</p>
-<p>在<strong>偶校验</strong>中有<strong>偶数个bit</strong>发生了错误是无法发现的</p>
-<h3 id="如何实现奇偶校验"><a href="#如何实现奇偶校验" class="headerlink" title="如何实现奇偶校验"></a>如何实现奇偶校验</h3><h4 id="先求校验码"><a href="#先求校验码" class="headerlink" title="先求校验码"></a>先求校验码</h4><p>将码中的每一bit都进行<strong>异或运算</strong>，返回值作为校验位</p>
-<p><strong>异或运算（模二加）：</strong>当两个值相同的时候返回0，当两个值不同的时候返回1</p>
-<h4 id="进行校验"><a href="#进行校验" class="headerlink" title="进行校验"></a>进行校验</h4><p>和求校验码很类似，对每个值都进行<strong>异或处理</strong>。如果结果为1说明出错了！</p>
-<h3 id="海明校验码"><a href="#海明校验码" class="headerlink" title="海明校验码"></a>海明校验码</h3><h4 id="海明码的设计思路"><a href="#海明码的设计思路" class="headerlink" title="海明码的设计思路"></a>海明码的设计思路</h4><p>将信息分组，对各组分别进行偶校验</p>
-<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>设信息位有n位，校验位有k位，那么信息位+校验位一共有n+k位，校验位一共有2^k种状态。</p>
-<p>推出不等式：<strong>2^k&gt;=n+k+1</strong>（n是信息位是给出的，要求的只是k）</p>
-<h4 id="信息位"><a href="#信息位" class="headerlink" title="信息位"></a>信息位</h4><p>使用D加下标来表示，校验位用P加下标来表示。</p>
-<h4 id="校验位放什么位置"><a href="#校验位放什么位置" class="headerlink" title="校验位放什么位置"></a>校验位放什么位置</h4><p>校验位Pi应该放在2^(i-1)的位置上</p>
-<h4 id="求校验位的值"><a href="#求校验位的值" class="headerlink" title="求校验位的值"></a>求校验位的值</h4><p>(用D表示信息位，用P表示效验码位，用H表示所有位置，@代表异或，其实是圈里加号)</p>
-<p>先把信息位所处的位置用二进制方式表示出来，假设有三位，把第三位是1的数提出来进行异或运算（用来异或的值是信息位里面的值）</p>
-<p>P1 = D1 @ D2 @ D4</p>
-<p>P2 = D1 @ D3 @ D4</p>
-<p>P3 = D2 @ D3 @ D4</p>
-<h4 id="纠错"><a href="#纠错" class="headerlink" title="纠错"></a>纠错</h4><p>S1 = P1 @ D1 @ D2 @ D4</p>
-<p>S2 = P2 @ D1 @ D3 @ D4</p>
-<p>S3 = P3 @ D2 @ D3 @ D4</p>
-<p><strong>如果：S1，S2，S3中出现了1（假设在S2出现），那么就是010位置出现了错误</strong></p>
-<h4 id="海明码的能力"><a href="#海明码的能力" class="headerlink" title="海明码的能力"></a>海明码的能力</h4><p>海明码具有一个bit位的纠错能力和两个bit位的检错能力</p>
-<h4 id="全校验"><a href="#全校验" class="headerlink" title="全校验"></a>全校验</h4><p>S1S2S3=0 且全体偶校验成功，说明无错误！</p>
-<p>S1S2S3！=0且全体偶校验失败，说明有1处错误，纠正即可，纠正方法是上面的<strong>纠错</strong>部分</p>
-<p>S1S2S3！=0且全体偶校验成功，说明有两处错误，需要重新上传。</p>
-<h3 id="循环冗余校验码"><a href="#循环冗余校验码" class="headerlink" title="循环冗余校验码"></a>循环冗余校验码</h3><p><strong>循环冗余非常难，多看几次视频：</strong></p>
-<p><strong><a href="https://www.bilibili.com/video/BV1BE411D7ii?p=13&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1BE411D7ii?p=13&amp;spm_id_from=pageDriver</a></strong></p>
-<p>定义：数据的发送方和接收方会先约定一个<strong>除数</strong>，当接收到数据后将要验证的数据除以除数，如果得到的数是0，那么这个数据是正确的，如果得到的数据不是0，那么这个数据是错误的。</p>
-<p>​            若是错误的，使用K个信息位加上R个校验位（R是生成多项式中的最高次幂），再进行除法，如果除数为0，说明OK；如果除数非0，说明有错误需要重新上传。</p>
-<h4 id="怎么求"><a href="#怎么求" class="headerlink" title="怎么求"></a>怎么求</h4><p>题目一般会给生成多项式G（G求出来的就是除数）出来，，例如G(x)=x^3 + x^2 +1，那么可以看成G(x)=1*x^3 + 1 *x^2 +0 * x^1 +1 *x^0,那么除数就是1101.（除数是早已经规定好的）</p>
-<p>在信息位后面补上r个0，，然后再与除数进行余二除。</p>
-<p><strong>余二除：从第一位开始看被除数的第一位如果是1那么商1，结果放原数，对后面的三位进行异或运算。。。得到的余数就是校验位，如果余数为000就是没错</strong></p>
-<h4 id="冗余校验码的检错能力的特点"><a href="#冗余校验码的检错能力的特点" class="headerlink" title="冗余校验码的检错能力的特点"></a>冗余校验码的检错能力的特点</h4><p>（1）可检测出所有奇数个错误</p>
-<p>（2）可检测出所有双bit的错误</p>
-<p>（3）可检测出所有小于等于校验位长度的连续错误</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>K位信息码，R位效验码，若生成多项式选择得当，2^R&gt;=K+R+1,则CRC码可纠一处错，因为(2^R)-1和K+R的所有位置元素是一一对应的！</p>
+<p>1.原始数据：调查，观察实验。</p>
+<p>2.次级数据：已被做好的，统计年鉴，期刊等等。</p>
+<h3 id="概率抽样和非概率抽样"><a href="#概率抽样和非概率抽样" class="headerlink" title="概率抽样和非概率抽样"></a>概率抽样和非概率抽样</h3><p>1.概率抽样（随机抽样）：</p>
+<p>​    （1）简单随机抽样：（需要<strong>抽样框</strong>，<strong>抽样框</strong>通常包括所有总体单位的信息，如小区用户信息，住户门牌号等）从包括总体N个单位的抽样框中一个个的抽取n个单位作为样本，抽中每个样本的概率是相等的。</p>
+<p>​    （2）分层抽样：把总体按照某种特征或某种规则划分成多层，然后从不同的层中抽取样本，然后将这些样本结合起来。</p>
+<p>​    （3）整群抽样：总体中若干个单位合并为<strong>群</strong>，抽样的时候直接抽取群，然后对选中的群全部进行调查，称为<strong>整群抽样</strong>。</p>
+<p>​    （4）系统抽样：将所有单位按一定的顺序排好，在规定的范围内随机抽取一个单位作为初始单位。然后按照一定的规则确定其他的样本单位。</p>
+<p>​    （5）多阶段抽样：先进行整群抽样，然后再从群里面抽取若干个单位进行调查。</p>
+<p>2.非概率抽样：</p>
+<p>​    （1）方便抽样：调查过程中调查员依据方便的原则</p>
+<p>​    （2）判断抽样：研究人员根据经验，判断等，有目标的选择对象进行研究</p>
+<p>​    （3）自愿抽样：自愿者自愿参与</p>
+<p>​    （4）滚雪球抽样：先选择一组样本，然后由这个样本提供其他的样本，故称为滚雪球</p>
+<p>​    （5）配额抽样：类似于概率抽样中的分层抽样</p>
+<p>​    </p>
 ]]></content>
       <categories>
-        <category>计组</category>
+        <category>统计学</category>
       </categories>
       <tags>
-        <tag>计组</tag>
+        <tag>统计学</tag>
       </tags>
   </entry>
   <entry>
@@ -4558,6 +4447,117 @@
 <p>5.原码乘法是：先取操作数绝对值相乘，<strong>符号位单独处理，不参与运算。</strong>。</p>
 <p>6.实现N位补码乘法时，乘积为N+1位</p>
 <p>7.在原码不恢复余数法时，只有当最后一步不够减时候，才要恢复一次余数。</p>
+]]></content>
+      <categories>
+        <category>计组</category>
+      </categories>
+      <tags>
+        <tag>计组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机组成原理--数据的表示和运算</title>
+    <url>/2022/03/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/</url>
+    <content><![CDATA[<h2 id="进位计数制"><a href="#进位计数制" class="headerlink" title="进位计数制"></a>进位计数制</h2><span id="more"></span>
+
+<h3 id="不同的进制"><a href="#不同的进制" class="headerlink" title="不同的进制"></a>不同的进制</h3><p>其实进制的实质就是<strong>逢X进一</strong>，如十进制就是逢十进一，八进制逢八进一。</p>
+<p>二进制：0，1</p>
+<p>八进制：0，1，2，3，4，5，6，7</p>
+<p>十进制：0，1，2，3，4，5，6，7，8，9</p>
+<p>十六进制：0，1，2，3，4，5，6，7，8，9，A，B，C，D，E，F</p>
+<h4 id="基数"><a href="#基数" class="headerlink" title="基数"></a>基数</h4><p>不同进制的基数不同，如<strong>r进制的基数就是r</strong>，十进制的基数就是十</p>
+<h4 id="不同进制的加法"><a href="#不同进制的加法" class="headerlink" title="不同进制的加法"></a>不同进制的加法</h4><h5 id="八进制加法"><a href="#八进制加法" class="headerlink" title="八进制加法"></a>八进制加法</h5><p>逢八进一，那么5.4+0.4 = 6.0</p>
+<h5 id="十六进制加法"><a href="#十六进制加法" class="headerlink" title="十六进制加法"></a>十六进制加法</h5><p>逢十六进一，那么5.8+1.8 = 7.0</p>
+<h3 id="十进制计数法"><a href="#十进制计数法" class="headerlink" title="十进制计数法"></a>十进制计数法</h3><p>古印度人发明了阿拉伯数字：1，2，3，4.……</p>
+<h4 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h4><p>例如在十进制数<strong>987</strong>中，9是百位，8是十位，7是个位。也即9*10^2 + 8 * 10^1 + 7 * 10^0这三个分别代表了不同的权重。</p>
+<h4 id="从其他进制转换到十进制"><a href="#从其他进制转换到十进制" class="headerlink" title="从其他进制转换到十进制"></a>从其他进制转换到十进制</h4><p><strong>如二进制数11011要转化成十进制的方式就是从第一位到最后一位分别成对应进制基数的0，1，2，3，4次方。</strong></p>
+<p>在这个例子里面就是 1乘二的0次方 + 1乘二的1次方 + 0乘二的2次方 + 1乘二的3次方 + 1乘二的4次方 = 27</p>
+<h4 id="从十进制转化成其他进制"><a href="#从十进制转化成其他进制" class="headerlink" title="从十进制转化成其他进制"></a>从十进制转化成其他进制</h4><h5 id="十进制转二进制"><a href="#十进制转二进制" class="headerlink" title="十进制转二进制"></a>十进制转二进制</h5><h6 id="整数位置"><a href="#整数位置" class="headerlink" title="整数位置"></a>整数位置</h6><p><strong>除基取余法</strong></p>
+<p>拿十进制的数除2，得到的余数就是二进制的数，直到除到商为0为止，先得到的余数是低位的，后得到的余数是高位的。</p>
+<h6 id="小数位置"><a href="#小数位置" class="headerlink" title="小数位置"></a>小数位置</h6><p><strong>乘基取整法</strong></p>
+<p>拿十进制的小数部分乘2，看乘二之后的整数部分是不是1，是1的话该位的二进制就是1，否则是0。有一些十进制的小数位取不完（如0.3），遇到这种情况就取小数点的后五位</p>
+<h5 id="十进制转八进制和十六进制"><a href="#十进制转八进制和十六进制" class="headerlink" title="十进制转八进制和十六进制"></a>十进制转八进制和十六进制</h5><p>先把十进制转化成为二进制，再把二进制转化成为八进制和十六进制</p>
+<h3 id="二进制转八进制和十六进制"><a href="#二进制转八进制和十六进制" class="headerlink" title="二进制转八进制和十六进制"></a>二进制转八进制和十六进制</h3><h4 id="二进制转八进制"><a href="#二进制转八进制" class="headerlink" title="二进制转八进制"></a>二进制转八进制</h4><p>二进制中的数每三个分成一组，每组对应转换成八进制的数字（0~7）即可，如二进制数100111011001可以分成这样：100<strong>111</strong>011<strong>001</strong>,然后分别看，001转化成八进制是1，011转化成八进制是3，111转化成八进制是7，100转化成八进制是4，所以这个二进制数转化成八进制实际上是4731.</p>
+<p><strong>注意：位数不够的在前面或者后面补0</strong></p>
+<h4 id="二进制转十六进制"><a href="#二进制转十六进制" class="headerlink" title="二进制转十六进制"></a>二进制转十六进制</h4><p>把二进制数看成四个一组即可，要注意的是十六进制中，ABCDEF分别表示10，11，12，13，14，15</p>
+<h4 id="八进制转二进制"><a href="#八进制转二进制" class="headerlink" title="八进制转二进制"></a>八进制转二进制</h4><p>把八进制中<strong>每一个</strong>数都转化成为<strong>三个</strong>二进制数即可</p>
+<h3 id="如何区别不同进制"><a href="#如何区别不同进制" class="headerlink" title="如何区别不同进制"></a>如何区别不同进制</h3><p>一般会在右下角有角标，如八进制会在右下角有八的角标</p>
+<p>如果没有角标的情况下，会在数字的后面加上对应的字母以便区分，二进制的字母是B，十进制的字母是D，十六进制的字母是H。</p>
+<h3 id="真值和机器数"><a href="#真值和机器数" class="headerlink" title="真值和机器数"></a>真值和机器数</h3><p>在计算机中如何表示正负号，通常用0代表负号，用1代表正号。如5436这是个真值，为了表示他是正数，用<strong>1</strong>5436表示他是个正数，15436就是个机器数。在后面的原码，反码，补码，移码中会具体说明。</p>
+<h2 id="BCD码"><a href="#BCD码" class="headerlink" title="BCD码"></a>BCD码</h2><h3 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h3><p>使用二进制来编码的十进制数</p>
+<p>每<strong>四个二进制码（4bit）（一共对应了2^4=16种状态）对应这十进制中的0~9</strong>，那么明显有六种是冗余的</p>
+<h3 id="8421码"><a href="#8421码" class="headerlink" title="8421码"></a>8421码</h3><p>8421码种规定了0~9的二进制状态</p>
+<p><strong>9：1001</strong></p>
+<p><strong>8：1000</strong></p>
+<p><strong>7：0111</strong></p>
+<p><strong>6：0110</strong></p>
+<p><strong>5：0101</strong></p>
+<p><strong>4：0100</strong></p>
+<p><strong>3：0011</strong></p>
+<p><strong>2：0010</strong></p>
+<p><strong>1：0001</strong></p>
+<p><strong>0：0000</strong></p>
+<p>要记熟8421码，考试容易碰到</p>
+<h4 id="8421码中数之间的相加"><a href="#8421码中数之间的相加" class="headerlink" title="8421码中数之间的相加"></a>8421码中数之间的相加</h4><p>可以用二进制直接加（记住逢二进一就可以了），也可以用十进制加好之后再转化成二进制数。</p>
+<p><strong>Q：那么这里有个问题是相加得到的数大于9，不在8421码当中怎么办？</strong></p>
+<p><strong>A：通常把这个大于9的数再加上6即可得到两位数的表示方法</strong></p>
+<h3 id="余3码"><a href="#余3码" class="headerlink" title="余3码"></a>余3码</h3><p>在8421码表示的数值中每一个都加上一个二进制的0011，得到的就是余3码。</p>
+<h3 id="2421码"><a href="#2421码" class="headerlink" title="2421码"></a>2421码</h3><p>与8421码很类似，只是2421码对应的权值分别是2421.</p>
+<p>2421码在0~4的时候前两位的值是0</p>
+<h2 id="字符和字符串"><a href="#字符和字符串" class="headerlink" title="字符和字符串"></a>字符和字符串</h2><h3 id="ASCII码"><a href="#ASCII码" class="headerlink" title="ASCII码"></a>ASCII码</h3><p>在ASCII码中一共有128个字符，而2的7次方正好等于128，所以我们只需要7位二进制的编码就可以表示ASCII码中的数字符号字母，但是计算机为了凑够一个字节，通常使用8个bit来表示，这样正好凑够了一个字节（Byte）</p>
+<h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>已知<strong>A</strong>的ASCII码值是65，<strong>H</strong>存放在M单元中，求M单元中的二进制数</p>
+<p>H在26个字母的第八位，所以计算得M中存放的二进制值是<strong>0</strong>1001000（注意：一定要补一个0凑够八位）</p>
+<p><strong>按字节编址</strong>的意思是每一个地址对应着1B</p>
+<p>一个汉字占两个字节（2B）的大小</p>
+<h2 id="奇偶效验码"><a href="#奇偶效验码" class="headerlink" title="奇偶效验码"></a>奇偶效验码</h2><p>A的编码是00</p>
+<p>B的编码是01</p>
+<p>C的编码是10</p>
+<p>D的编码是11</p>
+<p>当然ABCD都是两个bit的。</p>
+<p><strong>位错误</strong>：0变1，1变0</p>
+<p>由若干位代码组成的一个字叫做<strong>码字</strong></p>
+<h3 id="码距"><a href="#码距" class="headerlink" title="码距"></a>码距</h3><p>将两个码字放在一起一个个字符的逐一进行对比，具有不同位的个数称为两个码字之间的距离，一种编码方案可能有若干个合法码字，各码字之间的<strong>最小距离</strong>称为<strong>码距</strong>。</p>
+<p>当码距=1时，无检错能力</p>
+<p>当码距=2时，具有检错能力</p>
+<p>当码距&gt;=3时，具有检错甚至纠错能力</p>
+<h3 id="奇效验码"><a href="#奇效验码" class="headerlink" title="奇效验码"></a>奇效验码</h3><p><strong>能发现奇数位错误</strong></p>
+<p>保证码中的“1”的个数是<strong>奇数</strong>个，如果是<strong>偶数</strong>，在前面添1；如果是<strong>奇数</strong>，在前面添0</p>
+<h3 id="偶效验码"><a href="#偶效验码" class="headerlink" title="偶效验码"></a>偶效验码</h3><p><strong>能发现偶数位错误</strong></p>
+<p>保证码中的“1”的个数是<strong>偶数</strong>个，如果是<strong>偶数</strong>，在前面添0；如果是<strong>奇数</strong>，在前面添1</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>在<strong>奇校验</strong>中有<strong>奇数个bit</strong>发生了错误是无法发现的</p>
+<p>在<strong>偶校验</strong>中有<strong>偶数个bit</strong>发生了错误是无法发现的</p>
+<h3 id="如何实现奇偶校验"><a href="#如何实现奇偶校验" class="headerlink" title="如何实现奇偶校验"></a>如何实现奇偶校验</h3><h4 id="先求校验码"><a href="#先求校验码" class="headerlink" title="先求校验码"></a>先求校验码</h4><p>将码中的每一bit都进行<strong>异或运算</strong>，返回值作为校验位</p>
+<p><strong>异或运算（模二加）：</strong>当两个值相同的时候返回0，当两个值不同的时候返回1</p>
+<h4 id="进行校验"><a href="#进行校验" class="headerlink" title="进行校验"></a>进行校验</h4><p>和求校验码很类似，对每个值都进行<strong>异或处理</strong>。如果结果为1说明出错了！</p>
+<h3 id="海明校验码"><a href="#海明校验码" class="headerlink" title="海明校验码"></a>海明校验码</h3><h4 id="海明码的设计思路"><a href="#海明码的设计思路" class="headerlink" title="海明码的设计思路"></a>海明码的设计思路</h4><p>将信息分组，对各组分别进行偶校验</p>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>设信息位有n位，校验位有k位，那么信息位+校验位一共有n+k位，校验位一共有2^k种状态。</p>
+<p>推出不等式：<strong>2^k&gt;=n+k+1</strong>（n是信息位是给出的，要求的只是k）</p>
+<h4 id="信息位"><a href="#信息位" class="headerlink" title="信息位"></a>信息位</h4><p>使用D加下标来表示，校验位用P加下标来表示。</p>
+<h4 id="校验位放什么位置"><a href="#校验位放什么位置" class="headerlink" title="校验位放什么位置"></a>校验位放什么位置</h4><p>校验位Pi应该放在2^(i-1)的位置上</p>
+<h4 id="求校验位的值"><a href="#求校验位的值" class="headerlink" title="求校验位的值"></a>求校验位的值</h4><p>(用D表示信息位，用P表示效验码位，用H表示所有位置，@代表异或，其实是圈里加号)</p>
+<p>先把信息位所处的位置用二进制方式表示出来，假设有三位，把第三位是1的数提出来进行异或运算（用来异或的值是信息位里面的值）</p>
+<p>P1 = D1 @ D2 @ D4</p>
+<p>P2 = D1 @ D3 @ D4</p>
+<p>P3 = D2 @ D3 @ D4</p>
+<h4 id="纠错"><a href="#纠错" class="headerlink" title="纠错"></a>纠错</h4><p>S1 = P1 @ D1 @ D2 @ D4</p>
+<p>S2 = P2 @ D1 @ D3 @ D4</p>
+<p>S3 = P3 @ D2 @ D3 @ D4</p>
+<p><strong>如果：S1，S2，S3中出现了1（假设在S2出现），那么就是010位置出现了错误</strong></p>
+<h4 id="海明码的能力"><a href="#海明码的能力" class="headerlink" title="海明码的能力"></a>海明码的能力</h4><p>海明码具有一个bit位的纠错能力和两个bit位的检错能力</p>
+<h4 id="全校验"><a href="#全校验" class="headerlink" title="全校验"></a>全校验</h4><p>S1S2S3=0 且全体偶校验成功，说明无错误！</p>
+<p>S1S2S3！=0且全体偶校验失败，说明有1处错误，纠正即可，纠正方法是上面的<strong>纠错</strong>部分</p>
+<p>S1S2S3！=0且全体偶校验成功，说明有两处错误，需要重新上传。</p>
+<h3 id="循环冗余校验码"><a href="#循环冗余校验码" class="headerlink" title="循环冗余校验码"></a>循环冗余校验码</h3><p><strong>循环冗余非常难，多看几次视频：</strong></p>
+<p><strong><a href="https://www.bilibili.com/video/BV1BE411D7ii?p=13&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1BE411D7ii?p=13&amp;spm_id_from=pageDriver</a></strong></p>
+<p>定义：数据的发送方和接收方会先约定一个<strong>除数</strong>，当接收到数据后将要验证的数据除以除数，如果得到的数是0，那么这个数据是正确的，如果得到的数据不是0，那么这个数据是错误的。</p>
+<p>​            若是错误的，使用K个信息位加上R个校验位（R是生成多项式中的最高次幂），再进行除法，如果除数为0，说明OK；如果除数非0，说明有错误需要重新上传。</p>
+<h4 id="怎么求"><a href="#怎么求" class="headerlink" title="怎么求"></a>怎么求</h4><p>题目一般会给生成多项式G（G求出来的就是除数）出来，，例如G(x)=x^3 + x^2 +1，那么可以看成G(x)=1*x^3 + 1 *x^2 +0 * x^1 +1 *x^0,那么除数就是1101.（除数是早已经规定好的）</p>
+<p>在信息位后面补上r个0，，然后再与除数进行余二除。</p>
+<p><strong>余二除：从第一位开始看被除数的第一位如果是1那么商1，结果放原数，对后面的三位进行异或运算。。。得到的余数就是校验位，如果余数为000就是没错</strong></p>
+<h4 id="冗余校验码的检错能力的特点"><a href="#冗余校验码的检错能力的特点" class="headerlink" title="冗余校验码的检错能力的特点"></a>冗余校验码的检错能力的特点</h4><p>（1）可检测出所有奇数个错误</p>
+<p>（2）可检测出所有双bit的错误</p>
+<p>（3）可检测出所有小于等于校验位长度的连续错误</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>K位信息码，R位效验码，若生成多项式选择得当，2^R&gt;=K+R+1,则CRC码可纠一处错，因为(2^R)-1和K+R的所有位置元素是一一对应的！</p>
 ]]></content>
       <categories>
         <category>计组</category>
