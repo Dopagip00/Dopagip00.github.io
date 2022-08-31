@@ -1,0 +1,659 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="邓高正">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="第三章(重点)不同行业的工龄与薪水的线性回归模型12345678910111213141516171819import pandas as pddf &#x3D; pd.read_excel(&amp;#x27;IT行业收入表.xlsx&amp;#x27;)df.head()#显示前五行X &#x3D; df[[&amp;#x27;工龄&amp;#x27;]]Y &#x3D; df[&amp;#x27;薪水&amp;#x27;]from sklearn.linear_mod">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习--考试复习">
+<meta property="og:url" content="http://hexo.denggaozheng.top/2022/06/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Denggaozheng&#96;s blog">
+<meta property="og:description" content="第三章(重点)不同行业的工龄与薪水的线性回归模型12345678910111213141516171819import pandas as pddf &#x3D; pd.read_excel(&amp;#x27;IT行业收入表.xlsx&amp;#x27;)df.head()#显示前五行X &#x3D; df[[&amp;#x27;工龄&amp;#x27;]]Y &#x3D; df[&amp;#x27;薪水&amp;#x27;]from sklearn.linear_mod">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-06-11T09:03:30.000Z">
+<meta property="article:modified_time" content="2022-06-24T01:03:26.761Z">
+<meta property="article:author" content="邓高正">
+<meta property="article:tag" content="机器学习">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>机器学习--考试复习 - Denggaozheng`s blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/fluid-extension.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"hexo.denggaozheng.top","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="机器学习--考试复习"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-06-11 17:03" pubdate>
+          2022年6月11日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          63 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">机器学习--考试复习</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="第三章-重点"><a href="#第三章-重点" class="headerlink" title="第三章(重点)"></a>第三章(重点)</h3><h4 id="不同行业的工龄与薪水的线性回归模型"><a href="#不同行业的工龄与薪水的线性回归模型" class="headerlink" title="不同行业的工龄与薪水的线性回归模型"></a>不同行业的工龄与薪水的线性回归模型</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br>df = pd.read_excel(<span class="hljs-string">&#x27;IT行业收入表.xlsx&#x27;</span>)<br>df.head()<span class="hljs-comment">#显示前五行</span><br><br>X = df[[<span class="hljs-string">&#x27;工龄&#x27;</span>]]<br>Y = df[<span class="hljs-string">&#x27;薪水&#x27;</span>]<br><br><span class="hljs-keyword">from</span> sklearn.linear_model <span class="hljs-keyword">import</span> LinearRegression<br>regr = LinearRegression()<br>regr.fit(X,Y)<br><br>plt.scatter(X,Y)<br>plt.plot(X,regr.predict(X),color=<span class="hljs-string">&#x27;red&#x27;</span>)<br>plt.xlabel(<span class="hljs-string">&#x27;工龄&#x27;</span>)<br>plt.ylabel(<span class="hljs-string">&#x27;薪水&#x27;</span>)<br>plt.show()<br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;截距：&#x27;</span>+<span class="hljs-built_in">str</span>(regr.intercept_))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;系数：&#x27;</span>+<span class="hljs-built_in">str</span>(regr.coef_))<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h3><h4 id="模型搭建"><a href="#模型搭建" class="headerlink" title="模型搭建"></a>模型搭建</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br>df = pd.read_excel(<span class="hljs-string">&#x27;员工离职模型.xlsx&#x27;</span>)<br>df = df.replace(&#123;<span class="hljs-string">&#x27;工资&#x27;</span>:&#123;<span class="hljs-string">&#x27;低&#x27;</span>:<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;中&#x27;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;高&#x27;</span>:<span class="hljs-number">2</span>&#125;&#125;)<br>df.head()<span class="hljs-comment">#显示前五行</span><br><br>X = df.drop(columns=<span class="hljs-string">&#x27;离职&#x27;</span>)<br>Y = df[<span class="hljs-string">&#x27;离职&#x27;</span>]<br><br><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br>X_train,X_test,Y_train,Y_test = train_test_split(X,Y,test_size=<span class="hljs-number">0.2</span>,random_state=<span class="hljs-number">1</span>)<br><br><span class="hljs-keyword">from</span> sklearn.tree <span class="hljs-keyword">import</span> DecisionTreeClassifier<br>model = DecisionTreeClassifier()<br>model.fit(X_train,Y_train)<br></code></pre></td></tr></table></figure>
+
+<h4 id="模型预测"><a href="#模型预测" class="headerlink" title="模型预测"></a>模型预测</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs python">y_pred = model.predict(X_test)<br>a = pd.DataFrame()<br>a[<span class="hljs-string">&#x27;预测值&#x27;</span>] = <span class="hljs-built_in">list</span>(y_pred)<br>a[<span class="hljs-string">&#x27;实际值&#x27;</span>] = <span class="hljs-built_in">list</span>(y_test)<br><br><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score<br>score = accuracy_score(y_pred,y_test)<br><span class="hljs-comment">#显示所有分数</span><br>model.score(X_test,y_test)<br><br><span class="hljs-comment">#离职和不离职的概率</span><br>y_pred_proba = model.predict_proba(X_test)<br>b = pd.DataFrame(y_pred_proba,columns=[<span class="hljs-string">&#x27;不离职概率&#x27;</span>,<span class="hljs-string">&#x27;离职概率&#x27;</span>])<br>y_pred_proba[:,<span class="hljs-number">1</span>]<br><br><span class="hljs-comment">#用ROC曲线进行预测</span><br><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> roc_curve<br>fpr,tpr,thres = roc_curve(y_test,y_pred_proba[:,<span class="hljs-number">1</span>])<br>a = pd.DataFrame()<br>a[<span class="hljs-string">&#x27;阈值&#x27;</span>] = <span class="hljs-built_in">list</span>(fpr)<br>a[<span class="hljs-string">&#x27;假报警率&#x27;</span>] = <span class="hljs-built_in">list</span>(tpr)<br>a[<span class="hljs-string">&#x27;命中率&#x27;</span>] = <span class="hljs-built_in">list</span>(thres)<br><br><span class="hljs-comment">#画出来</span><br><span class="hljs-keyword">import</span> matplotlib <span class="hljs-keyword">as</span> plt<br>plt.plot(fpr,tpr) <br>plt.show()<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="第六章-考试的时候可能会把肿瘤改成其他的病"><a href="#第六章-考试的时候可能会把肿瘤改成其他的病" class="headerlink" title="第六章(考试的时候可能会把肿瘤改成其他的病)"></a>第六章(考试的时候可能会把肿瘤改成其他的病)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br>df = pd.read_excel(<span class="hljs-string">&#x27;肿瘤数据.xlsx&#x27;</span>)<br>X = df.drop(columns = <span class="hljs-string">&#x27;肿瘤性质&#x27;</span>)<br>Y = df[<span class="hljs-string">&#x27;肿瘤性质&#x27;</span>]<br><br><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br>X_train,X_test,y_train,y_test = train_test_split(X,Y,test_size=<span class="hljs-number">0.2</span>,random_state=<span class="hljs-number">1</span>)<br><br><span class="hljs-keyword">from</span> sklearn.naive_bayes <span class="hljs-keyword">import</span> GaussianNB<br>model = GaussianNB()<br>model.fit(X_train.y_train)<br><br>y_pred = model.predict(X_test)<br>a = pd.DataFrame()<br>a[<span class="hljs-string">&#x27;预测值&#x27;</span>] = <span class="hljs-built_in">list</span>(y_pred)<br>a[<span class="hljs-string">&#x27;实际值&#x27;</span>] = <span class="hljs-built_in">list</span>(y_test)<br><br><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score<br>score = accuracy_score(y_pred,y_test)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="第七章"><a href="#第七章" class="headerlink" title="第七章"></a>第七章</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br>df = pd.read_excel(<span class="hljs-string">&#x27;手写数字识别.xlsx&#x27;</span>)<br><br>X = df.drop(columns=<span class="hljs-string">&#x27;对应数字&#x27;</span>)<br>y = df[<span class="hljs-string">&#x27;对应数字&#x27;</span>]<br><br><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br>X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="hljs-number">0.2</span>,random_state=<span class="hljs-number">1</span>)<br><br><span class="hljs-keyword">from</span> sklearn.neibhors <span class="hljs-keyword">import</span> KNeighborsClassifier<br>model = KNeighborsClassifier(n_neibhors=<span class="hljs-number">5</span>)<span class="hljs-comment">#记得要加n_neighbors参数</span><br>model.fit(X_train,y_train)<span class="hljs-comment">#训练模型</span><br><br><span class="hljs-comment">#开始处理图片</span><br><span class="hljs-keyword">from</span> PIL <span class="hljs-keyword">import</span> Image<br>img = Image.<span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;图片.jpg&#x27;</span>)<span class="hljs-comment">#打开图片文件</span><br>img = img.resize((<span class="hljs-number">32</span>,<span class="hljs-number">32</span>))<span class="hljs-comment">#重新定义图片大小</span><br>img = img.convert(<span class="hljs-string">&#x27;L&#x27;</span>)<span class="hljs-comment">#灰度处理</span><br><br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br>img_new = img.point(<span class="hljs-keyword">lambda</span> x:<span class="hljs-number">0</span> <span class="hljs-keyword">if</span> x&gt;<span class="hljs-number">128</span> <span class="hljs-keyword">else</span> <span class="hljs-number">1</span>)<span class="hljs-comment">#这里是如果x的色彩大于128则赋值为0，否则赋值为1</span><br>arr = np.array(img_new)<br>arr_new = arr.reshape(<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>)<br><br><span class="hljs-comment">#进行预测</span><br>answer = model.predict(arr_new)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;图片中的数字为:&quot;</span>+<span class="hljs-built_in">str</span>(answer[<span class="hljs-number">0</span>]))<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="第八章"><a href="#第八章" class="headerlink" title="第八章"></a>第八章</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#引入需要用到的库</span><br><span class="hljs-keyword">import</span> tushare <span class="hljs-keyword">as</span> ts<br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><span class="hljs-keyword">import</span> talib<br><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">from</span> sklearn.ensemble <span class="hljs-keyword">import</span> RandomForestClassifier<br><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> accuracy_score<br><br><span class="hljs-comment"># 1.股票基本数据获取</span><br>df = ts.get_k_data(<span class="hljs-string">&#x27;000002&#x27;</span>,start=<span class="hljs-string">&#x27;2015-01-01&#x27;</span>,end=<span class="hljs-string">&#x27;2019-12-31&#x27;</span>)<br>df = df.set_index(<span class="hljs-string">&#x27;date&#x27;</span>)<br><br><span class="hljs-comment">#简单衍生变量构造</span><br>df[<span class="hljs-string">&#x27;close-open&#x27;</span>] = (df[<span class="hljs-string">&#x27;close&#x27;</span>] - df[<span class="hljs-string">&#x27;open&#x27;</span>])/df[<span class="hljs-string">&#x27;open&#x27;</span>]<br>df[<span class="hljs-string">&#x27;high-low&#x27;</span>] = (df[<span class="hljs-string">&#x27;high&#x27;</span>] - df[<span class="hljs-string">&#x27;low&#x27;</span>])/df[<span class="hljs-string">&#x27;low&#x27;</span>]<br>df[<span class="hljs-string">&#x27;pre_close&#x27;</span>] = df[<span class="hljs-string">&#x27;close&#x27;</span>].shift(<span class="hljs-number">1</span>)<br>df[<span class="hljs-string">&#x27;price_change&#x27;</span>] = df[<span class="hljs-string">&#x27;close&#x27;</span>]-df[<span class="hljs-string">&#x27;pre_close&#x27;</span>]<br>df[<span class="hljs-string">&#x27;p_change&#x27;</span>] = (df[<span class="hljs-string">&#x27;close&#x27;</span>]-df[<span class="hljs-string">&#x27;pre_close&#x27;</span>])/df[<span class="hljs-string">&#x27;pre_close&#x27;</span>]*<span class="hljs-number">100</span><br><span class="hljs-comment">#移动平均线相关数据构造</span><br>df[<span class="hljs-string">&#x27;MA5&#x27;</span>] = df[<span class="hljs-string">&#x27;close&#x27;</span>].rolling(<span class="hljs-number">5</span>).mean()<br>df[<span class="hljs-string">&#x27;MA10&#x27;</span>] = df[<span class="hljs-string">&#x27;close&#x27;</span>].rolling(<span class="hljs-number">10</span>).mean()<br>df.dropna(inplace=<span class="hljs-literal">True</span>)  <span class="hljs-comment"># 删除空值</span><br><span class="hljs-comment">#通过Ta_lib库构造衍生变量</span><br>df[<span class="hljs-string">&#x27;RSI&#x27;</span>] = talib.RSI(df[<span class="hljs-string">&#x27;close&#x27;</span>], timeperiod=<span class="hljs-number">12</span>)<br>df[<span class="hljs-string">&#x27;MOM&#x27;</span>] = talib.MOM(df[<span class="hljs-string">&#x27;close&#x27;</span>], timeperiod=<span class="hljs-number">5</span>)<br>df[<span class="hljs-string">&#x27;EMA12&#x27;</span>] = talib.EMA(df[<span class="hljs-string">&#x27;close&#x27;</span>], timeperiod=<span class="hljs-number">12</span>)<br>df[<span class="hljs-string">&#x27;EMA26&#x27;</span>] = talib.EMA(df[<span class="hljs-string">&#x27;close&#x27;</span>], timeperiod=<span class="hljs-number">26</span>)<br>df[<span class="hljs-string">&#x27;MACD&#x27;</span>], df[<span class="hljs-string">&#x27;MACDsignal&#x27;</span>], df[<span class="hljs-string">&#x27;MACDhist&#x27;</span>] = talib.MACD(df[<span class="hljs-string">&#x27;close&#x27;</span>], fastperiod=<span class="hljs-number">12</span>, slowperiod=<span class="hljs-number">26</span>, signalperiod=<span class="hljs-number">9</span>)<br>df.dropna(inplace=<span class="hljs-literal">True</span>)<br>df.tail()<br><span class="hljs-comment">#特征变量和目标变量提取</span><br>X = df[[<span class="hljs-string">&#x27;close&#x27;</span>, <span class="hljs-string">&#x27;volume&#x27;</span>, <span class="hljs-string">&#x27;close-open&#x27;</span>, <span class="hljs-string">&#x27;MA5&#x27;</span>, <span class="hljs-string">&#x27;MA10&#x27;</span>, <span class="hljs-string">&#x27;high-low&#x27;</span>, <span class="hljs-string">&#x27;RSI&#x27;</span>, <span class="hljs-string">&#x27;MOM&#x27;</span>, <span class="hljs-string">&#x27;EMA12&#x27;</span>, <span class="hljs-string">&#x27;MACD&#x27;</span>, <span class="hljs-string">&#x27;MACDsignal&#x27;</span>, <span class="hljs-string">&#x27;MACDhist&#x27;</span>]]<br>y = np.where(df[<span class="hljs-string">&#x27;price_change&#x27;</span>].shift(-<span class="hljs-number">1</span>)&gt; <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>)<br><span class="hljs-comment">#训练集和测试集数据划分</span><br>X_length = X.shape[<span class="hljs-number">0</span>]  <span class="hljs-comment"># shape属性获取X的行数和列数，shape[0]即表示行数</span><br>split = <span class="hljs-built_in">int</span>(X_length * <span class="hljs-number">0.9</span>)<br>X_train, X_test = X[:split], X[split:]<br>y_train, y_test = y[:split], y[split:]<br><span class="hljs-comment">#4.模型搭建</span><br>model = RandomForestClassifier(max_depth=<span class="hljs-number">3</span>, n_estimators=<span class="hljs-number">10</span>, min_samples_leaf=<span class="hljs-number">10</span>, random_state=<span class="hljs-number">1</span>)<br>model.fit(X_train, y_train)<br></code></pre></td></tr></table></figure>
+
+<h3 id="第九章"><a href="#第九章" class="headerlink" title="第九章"></a>第九章</h3><h4 id="9-2"><a href="#9-2" class="headerlink" title="9.2"></a>9.2</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br>df = pd.read_excle(<span class="hljs-string">&#x27;信用卡精准营销模型.xlsx&#x27;</span>)<br><br>X = df.drop(columns=<span class="hljs-string">&#x27;响应&#x27;</span>)<br>y = df[<span class="hljs-string">&#x27;响应&#x27;</span>]<br><br><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br>X_train,X_test,y_train,y_test = train_test_split(X,y,train_test_split=<span class="hljs-number">0.2</span>,random_state=<span class="hljs-number">1</span>)<br><br><span class="hljs-keyword">from</span> sklearn.ensemble <span class="hljs-keyword">import</span> AdaBoostClassifier<br>model = AdaBoostClassifier()<br>model.fit(X_train,y_train)<br><br><span class="hljs-comment">#评估模型</span><br>y_pred = model.predict(X_test)<br>a = pd.DataFrame()<span class="hljs-comment">#创建一个空DateFrame</span><br>a[<span class="hljs-string">&#x27;预测值&#x27;</span>] = <span class="hljs-built_in">list</span>(y_pred)<br>a[<span class="hljs-string">&#x27;实际值&#x27;</span>] = <span class="hljs-built_in">list</span>(y_test)<br><span class="hljs-comment">#获得所有值</span><br>score = model.score(X_train,y_train)<br><span class="hljs-comment">#查看概率(不太懂)</span><br>y_pred_proba = model.predict_proba(X_test)<br><span class="hljs-comment">#用ROC曲线绘制图像</span><br><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> roc_curve<br>fpr,tpr,thres = roc_curve(y_test.values,y_pred_proba[:,<span class="hljs-number">1</span>])<br><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br>plt.plot(fpr,tpr)<br>plt.show()<br></code></pre></td></tr></table></figure>
+
+<h4 id="9-4"><a href="#9-4" class="headerlink" title="9.4"></a>9.4</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br>df = pd.read_excel(<span class="hljs-string">&#x27;产品定价模型.xlsx&#x27;</span>)<br><span class="hljs-comment">#处理纸张</span><br><span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> LabelEncoder<br>le = LabelEncoder()<br>df[<span class="hljs-string">&#x27;类别&#x27;</span>] = le.fit_transform(df[<span class="hljs-string">&#x27;类别&#x27;</span>])<br>df[<span class="hljs-string">&#x27;类别&#x27;</span>].value_counts()<br><span class="hljs-comment">#正常</span><br>X = df.drop(columns = <span class="hljs-string">&#x27;价格&#x27;</span>)<br>Y = df[<span class="hljs-string">&#x27;价格&#x27;</span>]<br><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br>X_train,X_test,Y_train,Y_test = train_test_split(X,Y,test_size=<span class="hljs-number">0.2</span>,random_state=<span class="hljs-number">1</span>)<br><span class="hljs-comment">#训练模型</span><br><span class="hljs-keyword">from</span> sklearn.ensemble <span class="hljs-keyword">import</span> GradientBoostingRegressor<br>model = GradientBoostingRegressor()<br>model.fit(X_train,Y_train)<br><span class="hljs-comment">#预测</span><br>Y_pred = model.prodict(X_test)<br>a = pd.DataFrame()<br>a[<span class="hljs-string">&#x27;预测值&#x27;</span>] = <span class="hljs-built_in">list</span>(Y_pred)<br>a[<span class="hljs-string">&#x27;实际值&#x27;</span>] = <span class="hljs-built_in">list</span>(Y_test)<br>score = model.score(X_test,Y_test)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="第十章"><a href="#第十章" class="headerlink" title="第十章"></a>第十章</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br>df = pd.read_excel(<span class="hljs-string">&#x27;信用卡交易模型.xlsx&#x27;</span>)<br>X = df.drop(columns=<span class="hljs-string">&#x27;欺诈标签&#x27;</span>)<br>y = df[<span class="hljs-string">&#x27;欺诈标签&#x27;</span>]<br><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br>X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=<span class="hljs-number">0.2</span>,random_state=<span class="hljs-number">123</span>)<br><br><span class="hljs-keyword">from</span> xgboost <span class="hljs-keyword">import</span> XGBClassifier<br>model = XGBClassifier(n_estimator=<span class="hljs-number">100</span>,learning_rate=<span class="hljs-number">0.05</span>)<span class="hljs-comment">#重点记住</span><br>model.fit(X_train,y_train)<br><br>y_pred = model.predict(X_test)<br>a = pd.DataFrame()<br>a[<span class="hljs-string">&#x27;预测值&#x27;</span>] = <span class="hljs-built_in">list</span>(y_pred)<br>a[<span class="hljs-string">&#x27;实际值&#x27;</span>] = <span class="hljs-built_in">list</span>(y_test)<br><span class="hljs-comment">#查看所有分数</span><br>score = model.score(X_test,y_test)<br><br>y_pred_proba = model.predict(X_test)<br>y_pred_proba[:,<span class="hljs-number">1</span>]<br><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> roc_curve<br>fpr,tpr,thres = roc_curve(y_test,y_pred_proba[:,<span class="hljs-number">1</span>])<br><span class="hljs-keyword">import</span> matplotlib <span class="hljs-keyword">as</span> plt<br>plt.plot(fpr,tpr)<br>plt.show()<br></code></pre></td></tr></table></figure>
+
+<h3 id="12-2-4-数据降维之PCA-其实就是在K近邻的基础上X-train加上pca"><a href="#12-2-4-数据降维之PCA-其实就是在K近邻的基础上X-train加上pca" class="headerlink" title="12.2.4(数据降维之PCA)其实就是在K近邻的基础上X_train加上pca"></a>12.2.4(数据降维之PCA)其实就是在K近邻的基础上X_train加上pca</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.neighbors <span class="hljs-keyword">import</span> KNeighborsClassifier<br>model = KNeighborsClassifier()<br>model.fit(X_train_pca,y_train)<span class="hljs-comment">#加上pca证明数据降维</span><br><br>y_pred = model.predict(X_test_pca)<span class="hljs-comment">#加上pca证明数据降维</span><br><br><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br>a = pd.DataFrame()<br>a[<span class="hljs-string">&#x27;预测值&#x27;</span>] = y_pred<br>a[<span class="hljs-string">&#x27;实际值&#x27;</span>] = y_test<br><span class="hljs-comment">#查看所有数据</span><br>score = model.score(X_test_pca,y_test)<br></code></pre></td></tr></table></figure>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="category-chain-item">机器学习</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">#机器学习</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>机器学习--考试复习</div>
+      <div>http://hexo.denggaozheng.top/2022/06/11/机器学习-考试复习/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>邓高正</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年6月11日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/06/19/python-%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/" title="python--考试复习">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">python--考试复习</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/06/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" title="机器学习--深度学习">
+                        <span class="hidden-mobile">机器学习--深度学习</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>

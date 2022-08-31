@@ -1,0 +1,713 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="邓高正">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="基本概念">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构--线性表（DH）">
+<meta property="og:url" content="http://hexo.denggaozheng.top/2022/07/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%88DH%EF%BC%89/index.html">
+<meta property="og:site_name" content="Denggaozheng&#96;s blog">
+<meta property="og:description" content="基本概念">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-14T06:59:11.000Z">
+<meta property="article:modified_time" content="2022-08-08T07:18:45.484Z">
+<meta property="article:author" content="邓高正">
+<meta property="article:tag" content="数据结构">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>数据结构--线性表（DH） - Denggaozheng`s blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/fluid-extension.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"hexo.denggaozheng.top","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="数据结构--线性表（DH）"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-07-14 14:59" pubdate>
+          2022年7月14日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          42 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">数据结构--线性表（DH）</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><span id="more"></span>
+
+<p>1.数组和线性表的区别：数组占多少内存就是多少，不能改变；而线性表是可以变化的，只需要线性表在数组当中即可。由此可以推出：length(数组)&gt;=length(线性表)</p>
+<p>2.第i个数据元素ai的location是i-1</p>
+<p>3.定义线性表</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> MAXSIZE 200</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-type">int</span> ElemType;<br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>&#123;</span><br>    ElemType data[MAXSIZE];<br>    <span class="hljs-type">int</span> length;<br>&#125;SqList;<br></code></pre></td></tr></table></figure>
+
+<p>4.头结点和头指针：头结点是不必要的；而头指针是必要的。</p>
+<p>​                                   <strong>头结点</strong>指链表中 第一个结点前面的结点，通常存放着一些重要信息。</p>
+<p>​                                   <strong>头指针</strong>是指向第一个结点的指针</p>
+<h2 id="顺序线性表"><a href="#顺序线性表" class="headerlink" title="顺序线性表"></a>顺序线性表</h2><p>1.顺序表的GetElem（获取元素）代码如下</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> ERROR 0</span><br><span class="hljs-meta">#<span class="hljs-keyword">define</span> OK 1</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-type">int</span> Status;<br>Status <span class="hljs-title function_">GetElem</span><span class="hljs-params">(SqList L,<span class="hljs-type">int</span> i,ElemType *e)</span>&#123;<br>	<span class="hljs-keyword">if</span>(L-&gt;length==<span class="hljs-number">0</span> || i&lt;<span class="hljs-number">1</span> || i&gt;L-&gt;length)<br>		<span class="hljs-keyword">return</span> ERROR;<br>    *e = L.data[i];<br>    <span class="hljs-keyword">return</span> OK;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>2.如果第i个元素是由指针p指向的，那么第i个元素也可以用p来表示，该元素的数据域是p-&gt;data，指针域是p-&gt;next。</p>
+<p>同理，如果第i+1个元素是由指针p-&gt;next指向的，那么第i个元素用p-&gt;next来表示，该元素的数据域是p-&gt;next-&gt;data，指针域是p-&gt;next-&gt;next。</p>
+<h2 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h2><p>1.单链表的结构体定义：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Node</span>&#123;</span><span class="hljs-comment">//和第四行结合，将结构体重命名为Node</span><br>    ElemType data;<span class="hljs-comment">//定义数据域</span><br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Node</span> *<span class="hljs-title">next</span>;</span><span class="hljs-comment">//定义结构体指针，注意类型是struct Node类型，因为这个指针指向的是Node类型的元素</span><br>&#125;Node;<br></code></pre></td></tr></table></figure>
+
+<p>2.获取元素操作GetElem,<strong>运行到了最后，p是i的元素，而不是i的前一个元素，分清楚！</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-type">int</span> Status;<br>Status <span class="hljs-title function_">GetElem</span><span class="hljs-params">(LinkList *L,<span class="hljs-type">int</span> i,ElemType *e)</span>&#123;<br>    LinkList p;<span class="hljs-comment">//定义指针p</span><br>    <span class="hljs-type">int</span> j;<span class="hljs-comment">//定义计数器</span><br>    j = <span class="hljs-number">1</span>;<br>    p = L-&gt;next;<span class="hljs-comment">//p指向L的第一个结点</span><br>    <span class="hljs-keyword">while</span>(p&amp;&amp;j&lt;i)&#123;<span class="hljs-comment">//当指针的指向不为0，即下一个元素不是0的时候</span><br>        p = p-&gt;next;<br>        ++j;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(!p || j&gt;i)<span class="hljs-comment">//当p下一个结点为空或者j大于i的时候</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    *e = p-&gt;data;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>3.单链表的增加结点的操作：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-type">int</span> Status;<br>Status <span class="hljs-title function_">ListInsert</span><span class="hljs-params">(LinkList *L,<span class="hljs-type">int</span> i,ElemType e)</span>&#123;<br>    <span class="hljs-type">int</span> j;<span class="hljs-comment">//计数器</span><br>    j = <span class="hljs-number">1</span>;<br>    LinkList p,s;<span class="hljs-comment">//注意定义s结点。</span><br>    p = *L;<span class="hljs-comment">//指向头结点</span><br>    <span class="hljs-keyword">while</span>(p&amp;&amp;j&lt;i)&#123;<br>        p = p-&gt;next;<br>        ++j;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(!p || j&gt;i)<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    s = (LinkList)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(Node));<span class="hljs-comment">//注意要生成s结点</span><br>    s-&gt;next = p-&gt;next;<br>    p-&gt;next = s;<br>    L-&gt;length++;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>4.单链表的删除结点的操作：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">ListDelete</span><span class="hljs-params">(LinkList *L,<span class="hljs-type">int</span> i,ElemType *e)</span>&#123;<br>    <span class="hljs-type">int</span> j;<br>    j = <span class="hljs-number">1</span>;<br>    LinkList p,q;<span class="hljs-comment">//p是遍历结点，q是p-&gt;next结点</span><br>    p = *L;<span class="hljs-comment">//注意p是指向头结点的</span><br>    <span class="hljs-keyword">while</span>(p-&gt;next&amp;&amp;j&lt;i)&#123; <span class="hljs-comment">//如果p-&gt;next不为0，且j小于i</span><br>        p = p-&gt;next;<br>        ++j;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(!p-&gt;next || j&lt;i)<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    q = p-&gt;next;<br>    p-&gt;next = q-&gt;next;<br>    *e = q-&gt;data;<br>    <span class="hljs-built_in">free</span>(q); <br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>5.单链表的整表创建：(头插法)</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">CreateListHead</span><span class="hljs-params">(LinkList *L,<span class="hljs-type">int</span> n)</span>&#123;<br>    LinkList p;<br>    srand(time(<span class="hljs-number">0</span>));<br>   	*L = (LinkList)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(Node));<br>    (*L)-&gt;next = <span class="hljs-literal">NULL</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>        p = (LinkList)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(Node));<br>        p-&gt;data = rand()%<span class="hljs-number">100</span>+<span class="hljs-number">1</span>;<br>        p-&gt;next = (*L)-&gt;next;<br>        (*L)-&gt;next = p;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>6.单链表的整表创建（尾插法）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">CreateListTail</span><span class="hljs-params">(LinkList *L,<span class="hljs-type">int</span> n)</span>&#123;<br>    <span class="hljs-type">int</span> i;<br>    LinkList r,p;<br>    *L = (LinkList)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(Node));<br>    r = *L;<br>    <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>        p = (LinkList)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(Node));<br>        p-&gt;data = rand()%<span class="hljs-number">100</span>+<span class="hljs-number">1</span>;<br>        r-&gt;next = p;<br>        r = p;<br>        L-&gt;length++;<br>    &#125;<br>    r-&gt;next = <span class="hljs-literal">NULL</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>7.单链表的整表删除：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">ClearList</span><span class="hljs-params">(LinkList *L,<span class="hljs-type">int</span> n)</span>&#123;<br>    LinkList p,q;<br>    p = (*L)-&gt;next;<span class="hljs-comment">//指向第一个结点</span><br>    <span class="hljs-keyword">while</span>(p)&#123;<br>        q = p-&gt;next;<br>        <span class="hljs-built_in">free</span>(q);<br>        p = q;<br>    &#125;<br>    (*L)-&gt;next = <span class="hljs-literal">NULL</span>;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="静态链表-需要结合书本"><a href="#静态链表-需要结合书本" class="headerlink" title="静态链表(需要结合书本)"></a>静态链表(需要结合书本)</h2><p>1.声明静态链表：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> MAXSIZE 200</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>&#123;</span><br>    ElemType data;<br>    <span class="hljs-type">int</span> cur;<br>&#125;Component,StaticLinkList[MAXSIZE];<br></code></pre></td></tr></table></figure>
+
+<p>2.<strong>数组的第一个元素的cur用来存放备用链表第一个结点的下标，</strong></p>
+<p>​    <strong>数组的最后一个元素的cur用来存放第一个插入元素的下标，头结点</strong></p>
+<p>3.备用链表：链表中前面的是已用链表，后面的是未用链表，未用链表也称为备用链表</p>
+<p>4.初始化静态链表（InitStaticList）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">InitList</span><span class="hljs-params">(StaticLinkList space)</span>&#123;<br>	<span class="hljs-type">int</span> i;<br>    <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;MAXSIZE<span class="hljs-number">-1</span>;i++)<span class="hljs-comment">//注意这里i是下标，所以从0开始，到</span><br>        space[i].cur=i+<span class="hljs-number">1</span>;<span class="hljs-comment">//游标永远指向下一个元素</span><br>    space[MAXSIZE<span class="hljs-number">-1</span>].cur = <span class="hljs-number">0</span>;<span class="hljs-comment">//这是最后一个元素</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>5.cur中存放的是下标，在链表中的最后一个有值元素i中，</p>
+<p>LinkList space;</p>
+<p>space[i-1].cur = 0;</p>
+<p>i的游标（指针）指向0</p>
+<p>6.StaticLinkList的Insert操作（大话数据结构P72）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">//Insert Operation</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">Malloc_SSL</span><span class="hljs-params">(StaticLinkList space)</span>&#123;<br>    <span class="hljs-type">int</span> i = space[<span class="hljs-number">0</span>].cur;<span class="hljs-comment">//i暂时为第一个元素指向的值</span><br>    <span class="hljs-keyword">if</span>(space[<span class="hljs-number">0</span>].cur)<br>        space[<span class="hljs-number">0</span>].cur = space[i].cur;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>7.在L中第i个元素前插入新的数据元素e</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs c">Ststus <span class="hljs-title function_">ListInsert</span><span class="hljs-params">(StaticLinkList *L,<span class="hljs-type">int</span> i,ElemType e)</span>&#123;<br>    <span class="hljs-type">int</span> j,k,l;<span class="hljs-comment">//j用来存放第一个空闲元素下标，k用来存放最后一个元素下标，l用来参与for循环遍历</span><br>    k = MAXSIZE - <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">if</span>(i&lt;<span class="hljs-number">1</span> || i&gt;ListLength(L)+<span class="hljs-number">1</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    j = malloc_SSL(L);<span class="hljs-comment">//获得第一个空闲元素的下标</span><br>	<span class="hljs-keyword">if</span>(j)&#123;<br>        L[j].data = e;<br>        <span class="hljs-keyword">for</span>(l=<span class="hljs-number">1</span>;l&lt;i;i++)<br>            k = L[K].cur<span class="hljs-comment">//第一次的k是第一个元素，i-1次是i-1个。此时k是第i-1个元素，j是要插在k后面的元素</span><br>        L[j].cur = L[K].cur;<br>        L[K].cur = j;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>8.在静态链表中，找第i-1个元素的方法固定</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c">k = MAXSIZE<span class="hljs-number">-1</span>;<br><span class="hljs-keyword">for</span>(l=<span class="hljs-number">1</span>;l&lt;i;l++)<br>    k = L[k].cur;<br><span class="hljs-comment">//此时的k就是L中的第i-1个元素</span><br></code></pre></td></tr></table></figure>
+
+<p>9.删除StaticLinkList中的元素</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">DeleteList</span><span class="hljs-params">(StaticLinkList L,<span class="hljs-type">int</span> i)</span>&#123;<br>    <span class="hljs-type">int</span> j,k;<br>    <span class="hljs-keyword">if</span>(i&lt;<span class="hljs-number">1</span> || i&gt;ListLength(L))<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    k = MAXSIZE<span class="hljs-number">-1</span>;<br>    <span class="hljs-keyword">for</span>(j=<span class="hljs-number">1</span>;j&lt;=i<span class="hljs-number">-1</span>;j++)<br>        k = L[k].cur;<br>    j=L[k].cur;<br>    L[k].cur = L[j].cur;<br>    free_SSl(L,j);<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>10.free_SSL代码如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">free_SSL</span><span class="hljs-params">(StaticLinkList space,<span class="hljs-type">int</span> k)</span>&#123;<br>    <span class="hljs-comment">//k是要被删除的元素</span><br>    space[k].cur = space[<span class="hljs-number">0</span>].cur;<span class="hljs-comment">//k指向空表中第一个元素</span><br>    space[<span class="hljs-number">0</span>].cur = k;<span class="hljs-comment">//使得k成为空表第一个元素</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>11.Length方法</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">ListLength</span><span class="hljs-params">(StaticLinkList L)</span>&#123;<br>    <span class="hljs-type">int</span> i,k;<br>    k = L[MAXSIZE<span class="hljs-number">-1</span>].cur;<br>    <span class="hljs-keyword">while</span>(k)&#123;<br>        k = L[k].cur;<br>        ++j;<br>    &#125;<br>    <span class="hljs-keyword">return</span> j;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>12.静态链表：优点：方便插入删除，只需要修改游标；</p>
+<p>​                         缺点：不利于存储操作。</p>
+<h2 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h2><p>1.要把最后一个元素的rear和第一个元素的front连接起来。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">//rear-&gt;next是头节点，而不是第一个结点</span><br>p = rearA-&gt;next;<br>rearA-&gt;next = rearB-&gt;next-&gt;next;<span class="hljs-comment">//把A最后一个结点指向B第一个结点</span><br>q = rearB-&gt;next;<span class="hljs-comment">//q保存B头结点</span><br>rearB-&gt;next = p;<span class="hljs-comment">//B指向A的头结点</span><br><span class="hljs-built_in">free</span>(q);<br></code></pre></td></tr></table></figure>
+
+<h2 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h2><p>1.定义：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">DulNode</span>&#123;</span><br>	ElemType data;<br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">DulNode</span> *<span class="hljs-title">prior</span>;</span><br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">DulNode</span> *<span class="hljs-title">next</span>;</span><br>&#125;DulNode,*DulLinkList;<br></code></pre></td></tr></table></figure>
+
+<p>2.双向链表的插入操作</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c">s-&gt;prior = p;<br>s-&gt;next = p-&gt;next;<br>p-&gt;next-&gt;prior = s;<br>p-&gt;next = s;<br><span class="hljs-comment">//总结：先对s前后操作,再p-&gt;next,再p</span><br></code></pre></td></tr></table></figure>
+
+<p>3.双向链表删除操作</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c">p-&gt;prior-&gt;next = p-&gt;next;<br>p-&gt;next-&gt;prior = p_prior;<br><span class="hljs-built_in">free</span>(p);<br></code></pre></td></tr></table></figure>
+
+<h2 id="顺序表"><a href="#顺序表" class="headerlink" title="顺序表"></a>顺序表</h2><p>1.将顺序表中所有元素逆置</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">Reverse</span><span class="hljs-params">(SqList *L)</span>&#123;<br>    ElemType temp;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;L.length/<span class="hljs-number">2</span>;i++)&#123;<br>        L.data[i] = L.data[L.length-i<span class="hljs-number">-1</span>];<br>        L.data[L.length-i<span class="hljs-number">-1</span>] = temp;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="category-chain-item">数据结构</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>数据结构--线性表（DH）</div>
+      <div>http://hexo.denggaozheng.top/2022/07/14/数据结构-线性表（DH）/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>邓高正</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年7月14日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/07/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97-DH/" title="数据结构--栈和队列(DH)">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">数据结构--栈和队列(DH)</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/03/R-%E5%AE%89%E8%A3%85R%E8%AF%AD%E8%A8%80/" title="R-安装R语言">
+                        <span class="hidden-mobile">R-安装R语言</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>

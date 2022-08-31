@@ -1,0 +1,741 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="邓高正">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="主存简单模型和寻址概念">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机组成原理--存储器">
+<meta property="og:url" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/index.html">
+<meta property="og:site_name" content="Denggaozheng&#96;s blog">
+<meta property="og:description" content="主存简单模型和寻址概念">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg2020.cnblogs.com%2Fblog%2F1936734%2F202008%2F1936734-20200815111656942-1547259356.png&refer=http%3A%2F%2Fimg2020.cnblogs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1658407131&t=4134fe455416c58972756b4d11111ad1">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407203824780.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407205005959.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407205342224.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407205558685.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407210942248.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407211604968.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/Users/me/AppData/Roaming/Typora/typora-user-images/image-20220629200220305.png">
+<meta property="article:published_time" content="2022-04-05T13:21:13.000Z">
+<meta property="article:modified_time" content="2022-07-01T04:13:09.214Z">
+<meta property="article:author" content="邓高正">
+<meta property="article:tag" content="计组">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg2020.cnblogs.com%2Fblog%2F1936734%2F202008%2F1936734-20200815111656942-1547259356.png&refer=http%3A%2F%2Fimg2020.cnblogs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1658407131&t=4134fe455416c58972756b4d11111ad1">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>计算机组成原理--存储器 - Denggaozheng`s blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/fluid-extension.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"hexo.denggaozheng.top","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="计算机组成原理--存储器"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-04-05 21:21" pubdate>
+          2022年4月5日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          29 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">计算机组成原理--存储器</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="主存简单模型和寻址概念"><a href="#主存简单模型和寻址概念" class="headerlink" title="主存简单模型和寻址概念"></a>主存简单模型和寻址概念</h2><span id="more"></span>
+
+<h3 id="主存储器"><a href="#主存储器" class="headerlink" title="主存储器"></a>主存储器</h3><p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg2020.cnblogs.com%2Fblog%2F1936734%2F202008%2F1936734-20200815111656942-1547259356.png&refer=http%3A%2F%2Fimg2020.cnblogs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1658407131&t=4134fe455416c58972756b4d11111ad1" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>包括<strong>存储体</strong>和<strong>MAR</strong>（Address地址存储器），<strong>MDR</strong>（Data数据存储器）-&gt;地址存储器（存储<strong>传入的</strong>地址）-&gt;存储体（寄存二进制位）&lt;-&gt;数据存储器&lt;-&gt;</p>
+<p><strong>存储元</strong>：是存储器中最小的单位，一个存储元包含着一个二进制位（0/1）</p>
+<h4 id="”读“操作"><a href="#”读“操作" class="headerlink" title="”读“操作"></a>”读“操作</h4><p>从地址存储器出发经过开关元件到数据寄存器</p>
+<p>图中的一行就是一个<strong>存储单元</strong>，一个存储单元中有若干个存储元。而一个存储体是由若干个存储单元构成的。</p>
+<p>就像上面的图片一样，读数据是一个bit一个bit的读的，从左边的第一个1开始，经过开关元件到达上面绿色的线，再由绿色的线传到数据寄存器当中，就完成了一次<strong>读</strong>操作。</p>
+<p><strong>图中绿色的数字称为存储字</strong></p>
+<h4 id="”写“操作"><a href="#”写“操作" class="headerlink" title="”写“操作"></a>”写“操作</h4><p>把数据先存在数据寄存器中，经过开关元件到达地址寄存器</p>
+<h4 id="通过地址确定容量"><a href="#通过地址确定容量" class="headerlink" title="通过地址确定容量"></a>通过地址确定容量</h4><p>n条地址线对应着n位地址代表有2^n个存储单元（也是MAR的表达）。*<em>存储单元个数</em>存储字长=**列数 * 行数</p>
+<h4 id="存储器的结构"><a href="#存储器的结构" class="headerlink" title="存储器的结构"></a>存储器的结构</h4><p><strong>片选线</strong>：整个电路的开关，片选线发出1（高电平）时，电路开，发出0（低电平）时，电路关。<strong>可用CS高电平有效控制线</strong></p>
+<p><strong>读写控制线</strong>：说明本次操作是读还是写，以及什么时候读什么时候写！</p>
+<h4 id="8-8位的存储芯片"><a href="#8-8位的存储芯片" class="headerlink" title="8*8位的存储芯片"></a>8*8位的存储芯片</h4><p><strong>K:2^10    M:2^20    G:2^30    T:2^40</strong></p>
+<p>8K * 8位 = 2^13 * 8bit</p>
+<p>64K * 16位 = 2^16 * 16bit</p>
+<h5 id="1KB-2-10-2-3-2-13-bit"><a href="#1KB-2-10-2-3-2-13-bit" class="headerlink" title="1KB = 2^10 * 2^3 = 2^13 bit"></a>1KB = 2^10 * 2^3 = 2^13 bit</h5><h3 id="拓展：位，字节，字"><a href="#拓展：位，字节，字" class="headerlink" title="拓展：位，字节，字"></a>拓展：位，字节，字</h3><p>位、字节、字是计算机数据存储的单位。位是最小的存储单位，每一个位存储一个1位的二进制码，一个字节由8位组成。而字通常为16、32或64个位组成。</p>
+<h3 id="按字节寻址和按字寻址"><a href="#按字节寻址和按字寻址" class="headerlink" title="按字节寻址和按字寻址"></a>按字节寻址和按字寻址</h3><p>总容量为1KB，32位的处理器。</p>
+<p><strong>按字节（Byte）寻址：</strong>1K个单元，每个单元1B</p>
+<p><strong>按字寻址：</strong>把一个存储单元看成一个整体，而一个存储单元是4B，所以有256个单元，每个单元4B。</p>
+<p><strong>按半字寻址：</strong>有512个单元，每个单元2B。</p>
+<p><strong>按双字寻址：</strong>有128个单元，每个单元8B。</p>
+<p><strong>字地址：</strong>每个存储单元开头的数据的地址。</p>
+<h3 id="多字节存放：大小端方式"><a href="#多字节存放：大小端方式" class="headerlink" title="多字节存放：大小端方式"></a>多字节存放：大小端方式</h3><p><strong>来自百度：采用大小模式对数据进行存放的主要区别在于在存放的字节顺序，大端方式将高位存放在低地址，小端方式将高位存放在高地址。采用大端方式进行数据存放符合人类的正常思维，而采用小端方式进行数据存放利于计算机处理。</strong></p>
+<p>大端方式：12 34 56 78 <strong>从高位到低位</strong></p>
+<p>小端方式：78 56 34 12 <strong>从低位到高位</strong></p>
+<h2 id="半导体存储器RAM–易失性"><a href="#半导体存储器RAM–易失性" class="headerlink" title="半导体存储器RAM–易失性"></a>半导体存储器RAM–易失性</h2><h3 id="半导体存储芯片的基本结构"><a href="#半导体存储芯片的基本结构" class="headerlink" title="半导体存储芯片的基本结构"></a>半导体存储芯片的基本结构</h3><p>1.存储矩阵：由大量相同的位存储单元列阵构成</p>
+<p>2.译码驱动：将来自地址总线的<strong>地址信号</strong>翻译成对应存储单元的选通信号，该信号在读写电路的配合下完成对被选中电路的读写操作。</p>
+<p>3.读写电路：包括读出放大器和写入电路，用来完成读写操作</p>
+<p>4.读写控制线：决定芯片进行读写操作。</p>
+<p>5.片选线：<strong>相当于芯片的开关，</strong>确定哪个存储芯片被选中，可以用于容量扩充。</p>
+<p>6.地址线：单向输入，其位数与存储字的个数有关。<strong>一个地址线代表一个二进制位，有n条地址线就有n个存储单元</strong></p>
+<p>7.数据线：是双向的，位数与读出或写入的数据位数有关。<strong>有n条数据线就有n个数据位。</strong> </p>
+<p>8.数据线和地址线数共同反映存储芯片容量的大小。</p>
+<p>​    如地址线10跟，数据线8根，芯片容量=2^10 * 8 = 8K位 </p>
+<h3 id="半导体随机存取存储器"><a href="#半导体随机存取存储器" class="headerlink" title="半导体随机存取存储器"></a>半导体随机存取存储器</h3><h4 id="随机存取存储器"><a href="#随机存取存储器" class="headerlink" title="随机存取存储器"></a>随机存取存储器</h4><p>存取数据的速度之取决于电流流动的速度，与物理元件所在的位置没有关系。</p>
+<h3 id="两种随机存储器"><a href="#两种随机存储器" class="headerlink" title="两种随机存储器"></a>两种随机存储器</h3><p><strong>SRAM（Static Random Access Memory）静态随机存储器</strong></p>
+<p>存储信息使用触发器（能保持两种稳定的状态）</p>
+<p>读：查看触发器状态；写：改变触发器状态</p>
+<p><strong>DRAM（Dynamic Random Access Memory）动态随机存储器</strong></p>
+<p>存储信息使用电容（需要充放电）</p>
+<p>读：连接电容，检测电流变化</p>
+<p>写：给电容充放电。</p>
+<p>电容上的电荷只能维持2ms</p>
+<p>这两个存储器都需要有电，如果断电了就会丢失信息，因此也称其为易失性存储器。</p>
+<h3 id="DRAM的刷新"><a href="#DRAM的刷新" class="headerlink" title="DRAM的刷新"></a>DRAM的刷新</h3><p>2ms刷新一次</p>
+<p>每次刷新一行存储单元</p>
+<p>如何刷新？    有硬件支持，读出一行的信息后重新输入，占用1个读写周期</p>
+<p>在什么时刻进行刷新？    </p>
+<h3 id="DRAM中的行列地址复用"><a href="#DRAM中的行列地址复用" class="headerlink" title="DRAM中的行列地址复用"></a>DRAM中的行列地址复用</h3><p><strong>假设你的存储器容量是16bit，那么可以将这16个比特组织成一个4*4的矩阵，为了找到某个你想要找的bit，比如第1行第2列的那个bit。你先发送二进制的01，表示要找的数据在第1行；接着发送二进制的10，表示要找的数据在第2列。这样一来你就找到了第1行第2列的那个bit。可以发现只要两根地址线就能寻找16个bit了，但是要发送两次地址（一次行地址，一次列地址）‍</strong></p>
+<p>DRAM 普遍采用的是行与列地址分时复用技术进行寻址。在 DRAM 的矩阵存储单元中，地址可以分成行地址和列地址。在寻址时，必须先进行行寻址然后在进行列寻址，这是由 DRAM 的硬件电路所决定的。所以，对行地址线和列地址线进行共用，传送时只需要一半地址，先传送至缓冲区，再传送给译码器即可。既节省了地址线，也不会降低 DRAM 原有的工作速率（因为 DRAM 的行地址和列地址就是要分时传送的）。</p>
+<p>如果是 SRAM 采用这种寻址方式的话，则会大大降低其工作速度。Cache多为SRAM，存储单元是线性排列，不像DRAM那样分行列，所以不适用行列地址线复用方式。不过说到底是因为Cache就是为了快才存在的，容量又小，所以SRAM也用得起。</p>
+<h3 id="SRAM时序"><a href="#SRAM时序" class="headerlink" title="SRAM时序"></a>SRAM时序</h3><p>百度</p>
+<h2 id="半导体存储器ROM（Read-Only-Memory）–非易失性"><a href="#半导体存储器ROM（Read-Only-Memory）–非易失性" class="headerlink" title="半导体存储器ROM（Read-Only Memory）–非易失性"></a>半导体存储器ROM（Read-Only Memory）–非易失性</h2><p>指令和数据会存储在主存储器中，CPU中的运算器和控制器会对指令的指示进行下一步的操作。</p>
+<h3 id="CPU的任务"><a href="#CPU的任务" class="headerlink" title="CPU的任务"></a>CPU的任务</h3><p>到主存中取指令；</p>
+<p>按指令的指示进行下一步操作</p>
+<h3 id="ROM的优势"><a href="#ROM的优势" class="headerlink" title="ROM的优势"></a>ROM的优势</h3><p>断电后不丢失数据。</p>
+<p>因此ROM负责存放一些开机之后的必要信息，不至于丢失；而程序中的信息比较详细的就放在RAM中</p>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><p><strong>掩膜式只读存储器（MROM）</strong>：存储内容由半导体制造厂按用户提出的要求在芯片的生产过程中直接写入，无法修改。</p>
+<p><strong>一次可编程只读存储器（PROM）</strong>：内容由用户通过专门的设备一次性写入，写入后无法修改！</p>
+<p><strong>可擦除可编程只读存储器（EPROM）</strong>：紫外线擦除，电擦除</p>
+<p><strong>闪速存储器（Flash Memory）：</strong>如U盘，写入速度较快</p>
+<p><strong>固态硬盘（Solid State Drives）</strong></p>
+<h2 id="存储器的基本概念"><a href="#存储器的基本概念" class="headerlink" title="存储器的基本概念"></a>存储器的基本概念</h2><h3 id="分类-1"><a href="#分类-1" class="headerlink" title="分类"></a>分类</h3><p><img src="/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407203824780.png" srcset="/img/loading.gif" lazyload alt="image-20220407203824780"></p>
+<p>存储器的功能：存放二进制信息。</p>
+<p><strong>不同的材料：</strong></p>
+<p><strong>1.磁表面存储器：磁盘，磁带</strong></p>
+<p><strong>2.磁芯存储器</strong></p>
+<p><strong>3.半导体存储器（体积小）</strong></p>
+<p><strong>4.光存储器</strong></p>
+<p><img src="/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407205005959.png" srcset="/img/loading.gif" lazyload alt="image-20220407205005959"></p>
+<h3 id="存储器的性能指标"><a href="#存储器的性能指标" class="headerlink" title="存储器的性能指标"></a>存储器的性能指标</h3><p><strong>容量和速度重要，需要掌握计算方法</strong></p>
+<p><img src="/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407205342224.png" srcset="/img/loading.gif" lazyload alt="image-20220407205342224"></p>
+<h3 id="层次结构"><a href="#层次结构" class="headerlink" title="层次结构"></a>层次结构</h3><p><img src="/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407205558685.png" srcset="/img/loading.gif" lazyload alt="image-20220407205558685"></p>
+<h2 id="CPU和存储之间的传递"><a href="#CPU和存储之间的传递" class="headerlink" title="CPU和存储之间的传递"></a>CPU和存储之间的传递</h2><p><img src="/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407210942248.png" srcset="/img/loading.gif" lazyload alt="image-20220407210942248"></p>
+<p>A：地址线</p>
+<p>D：数据线</p>
+<p>通过A0到A15传递地址，通过WE传递</p>
+<p><strong>因为一个芯片只有一个数据端口，要把CPU上的8条数据线全部传到芯片中，则需要同时连接8个芯片！</strong></p>
+<p><img src="/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/image-20220407211604968.png" srcset="/img/loading.gif" lazyload alt="image-20220407211604968"></p>
+<p>当一个CPU同时连接多个芯片的时候，<strong>不能让他们同时工作</strong>，同时工作的话，输出的数据信息使得CPU无法区分。解决方法就是：<strong>让CPU中多出来的地址线控制芯片中的片选线，如A13控制CS1，A14控制CS2等等！</strong></p>
+<p><strong>那么此时在第一个芯片的地址中A14，A13分别是01；第二个芯片中A14，A13分别是10.</strong></p>
+<h2 id="主存和CPU之间"><a href="#主存和CPU之间" class="headerlink" title="主存和CPU之间"></a>主存和CPU之间</h2><h3 id="存储器芯片的结构"><a href="#存储器芯片的结构" class="headerlink" title="存储器芯片的结构"></a>存储器芯片的结构</h3><p><img src="/2022/04/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E5%AD%98%E5%82%A8%E5%99%A8/Users/me/AppData/Roaming/Typora/typora-user-images/image-20220629200220305.png" srcset="/img/loading.gif" lazyload alt="image-20220629200220305"></p>
+<p>1.片选线的作用：当接收到<strong>高电平（1信号）</strong>的时候，整个芯片处于<strong>工作</strong>的状态，同理当接收到<strong>低电平（0）</strong>时候处于<strong>不工作</strong>的状态</p>
+<p>2.读写控制线的作用：来控制整个芯片是读还是写。</p>
+<p>3.数据线：将芯片内的数据和外部的数据进行交流</p>
+<p>4.地址线：外部传输到存储器的地址信号 </p>
+<h3 id="王道书总结"><a href="#王道书总结" class="headerlink" title="王道书总结"></a>王道书总结</h3><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>1.随机存储方式：RAM，ROM；顺序存储方式：磁带；直接存储方式：磁盘，光盘。</p>
+<p>2.存储器的存储周期是：存储器连续进行读或写操作是所允许的最短时间间隔。</p>
+<p>3.半字查找，如字长为32bit即4B，那么半字就是4/2=2B</p>
+<p>4.存储容量 = 字长*存储字数</p>
+<p>5.1s = 10^9 ns = 10^6 微秒 = 10^3 ms</p>
+<p>6.相联存储器：选取存储器中符合条件进行检索，并将其读出或者写入</p>
+<p>7.CPU不能直接读取硬盘中的内容，要把内容写入主存中才可以读取</p>
+<p>8.存储器中读取速度有快到慢为：寄存器，Cache，主存，辅存。</p>
+<p>9.CD-ROM是光盘，属于直接存储器，不属于顺序存储器。</p>
+<hr>
+<p>1.某存储器容量为1024<em>8bit 那么地址线10根，数据线8根，*<em>如果采用地址复用技术，那么地址线的根数减少一半！！！</em></em></p>
+<p>2.RAM中不存在死时间的刷新技术是分散刷新（分两部分，一部分读写一部分刷新），而异步刷新只是缩短了死时间而不是没有死时间。</p>
+<p>3.Cache是SRAM构成的。</p>
+<p>4.U盘属于高速缓存的存储器。</p>
+<p>5.访存冲突的条件是相邻并且地址相同。</p>
+<p>6.EPROM可以多次改写，但是改写的过程繁琐，所以不能作为随机存储器</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%A1%E7%BB%84/" class="category-chain-item">计组</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%AE%A1%E7%BB%84/">#计组</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>计算机组成原理--存储器</div>
+      <div>http://hexo.denggaozheng.top/2022/04/05/计算机组成原理-存储器/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>邓高正</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年4月5日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/04/14/html-%E5%9F%BA%E7%A1%80/" title="html -- 基础">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">html -- 基础</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/" title="计算机组成原理--算数逻辑单元ALU">
+                        <span class="hidden-mobile">计算机组成原理--算数逻辑单元ALU</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>

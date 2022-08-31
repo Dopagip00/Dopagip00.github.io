@@ -1,0 +1,713 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="邓高正">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="区别栈：吃了吐；队列：吃了拉">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构--栈和队列(DH)">
+<meta property="og:url" content="http://hexo.denggaozheng.top/2022/07/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97-DH/index.html">
+<meta property="og:site_name" content="Denggaozheng&#96;s blog">
+<meta property="og:description" content="区别栈：吃了吐；队列：吃了拉">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-23T05:38:15.000Z">
+<meta property="article:modified_time" content="2022-08-08T07:10:11.389Z">
+<meta property="article:author" content="邓高正">
+<meta property="article:tag" content="数据结构">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>数据结构--栈和队列(DH) - Denggaozheng`s blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/fluid-extension.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"hexo.denggaozheng.top","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="数据结构--栈和队列(DH)"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-07-23 13:38" pubdate>
+          2022年7月23日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          36 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">数据结构--栈和队列(DH)</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p><strong>栈：吃了吐；队列：吃了拉</strong></p>
+<span id="more"></span>
+
+<h2 id="栈-Stack"><a href="#栈-Stack" class="headerlink" title="栈-Stack"></a>栈-Stack</h2><p>1.允许插入和删除的一端是栈顶（top），另一端是栈底（bottom）不含任何元素的栈为<strong>空栈</strong>，栈是一种先进后出的数据结构（Last In First Out）称为LIFO.</p>
+<p>2.栈的插入操作称为进栈；栈的删除操作称为出栈。</p>
+<p>3.栈的插入（push），删除（pop）</p>
+<p>4.当栈中存在一个元素的时候，栈顶下标为O(top=0)</p>
+<p>5.栈的结构定义</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-type">int</span> SElemType;<br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>&#123;</span><br>    SElemType data[MAXSIZE];<br>    <span class="hljs-type">int</span> top;<br>&#125;SqStack;<br></code></pre></td></tr></table></figure>
+
+<p>6.栈的push操作</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">push</span><span class="hljs-params">(SqStack *S,SElemType *e)</span>&#123;<br>    <span class="hljs-keyword">if</span>(S-&gt;top==MAXSIZE<span class="hljs-number">-1</span>)<span class="hljs-comment">//记住这个条件</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    S-&gt;top++;<br>    S-&gt;data[S-&gt;top] = e;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>7.栈的pop操作</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"> Status <span class="hljs-title function_">pop</span><span class="hljs-params">(SqStack *S,SElemType *e)</span>&#123; <br>	<span class="hljs-keyword">if</span>(S-&gt;top==<span class="hljs-number">-1</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    *e=s-&gt;data[S-&gt;top];<br>    S-&gt;top--;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>8.两栈共享空间</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">//注意top1是--，top2是++，并且存在StackNumber参数</span><br><span class="hljs-comment">//判断栈满的条件是：top1+1==top2，即两个指针相差为1的时候即栈满</span><br><span class="hljs-comment">//结构体</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>&#123;</span><br>    SElemType data[MAXSIZE];<br>    <span class="hljs-type">int</span> top1;<br>    <span class="hljs-type">int</span> top2;<br>&#125;SqDoubleStack;<br></code></pre></td></tr></table></figure>
+
+<p>9.两栈共享空间的push方法</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">push</span><span class="hljs-params">(SqDoubleStack *S,ElemType e,<span class="hljs-type">int</span> StackNumber)</span>&#123;<br>    <span class="hljs-keyword">if</span>(S-&gt;top1+<span class="hljs-number">1</span>==S-&gt;top2)<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(StackNumber==<span class="hljs-number">1</span>)<br>        S-&gt;data[++S-&gt;top1]=e;<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(StackNumber==<span class="hljs-number">2</span>)<br>        S-&gt;data[++S-&gt;top2]=e;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>10.两栈共享空间的pop方法</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">pop</span><span class="hljs-params">(SqDoubleStack *S,SElemType *e,<span class="hljs-type">int</span> StackNumber)</span><br><span class="hljs-title function_">if</span><span class="hljs-params">(StackNumber==<span class="hljs-number">1</span>)</span>&#123;<br>	<span class="hljs-keyword">if</span>(S-&gt;top1==<span class="hljs-number">-1</span>)<span class="hljs-comment">//到栈底了</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    *e = S-&gt;data[S-&gt;top1];<br>    S-&gt;top1--;<br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(StackNumber==<span class="hljs-number">2</span>)&#123;<br>        <span class="hljs-keyword">if</span>(S-&gt;top2==n)<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        *e=S-&gt;data[S-&gt;top2];<br>        S-&gt;top2++;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>**(important)**11.栈的链式存储的结构定义</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">StackNode</span>&#123;</span><br>	SElemType data;<br>    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">StackNode</span> *<span class="hljs-title">next</span>;</span><br>&#125;StackNode,*LinkStackPtr;<br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">LinkStack</span>&#123;</span><br>    LinkStackPtr top;<br>    <span class="hljs-type">int</span> count;<br>&#125;LinkStack;<br></code></pre></td></tr></table></figure>
+
+<p>12.进栈</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">push</span><span class="hljs-params">(LinkStack *s,SElemType e)</span>&#123;<br>    LinkStackPtr s = (LinkStackPtr)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(Stack));<br>    s-&gt;data = e;<br>    s-&gt;next = S-&gt;top;<br>    s-&gt;top = s;<br>    s-&gt;length++;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>13.出栈</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">pop</span><span class="hljs-params">(LinkStack *S,SElemType *e)</span>&#123;<br>	LinkStackPtr p;<br>	<span class="hljs-keyword">if</span>(StackEmpty(*S))<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    *e = s-&gt;top-&gt;data;<span class="hljs-comment">//e保存顶部结点数据</span><br>    p = s-&gt;top;<span class="hljs-comment">//p表示顶部结点</span><br>    s-&gt;top = s-&gt;next-&gt;top;<span class="hljs-comment">//把尾部变成下一个元素的结点</span><br>    <span class="hljs-built_in">free</span>(p);<br>    s-&gt;length--;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="栈的应用–递归"><a href="#栈的应用–递归" class="headerlink" title="栈的应用–递归"></a>栈的应用–递归</h3><p>1.斐波那契数列：前两项数字相邻之和等于后一项。</p>
+<p>2.把直接调用自己或者间接调用自己本身函数的数列叫做递归数列；一个递归数列必须至少有一个条件使得满足条件之后退出循环；</p>
+<p>3.后缀表达式：a.初始化空栈InitStack；</p>
+<p>​    ·                     b.后缀表达式中的数字进栈（左边的）</p>
+<p>​                          c.符号进栈（在下面的是被加数，在上面的是加数）</p>
+<p>​                          d.再将运算result进栈</p>
+<p>就像这样依次出栈计算即可。</p>
+<p>4.中缀转后缀：是右括号或者优先级低于栈顶元素的先输出，把数字放在一边，把符号放在另一边。</p>
+<h2 id="队列Queue"><a href="#队列Queue" class="headerlink" title="队列Queue"></a>队列Queue</h2><p>1.队列（queue）是只允许在一端进行插入操作，另一端进行删除操作。</p>
+<p>2.队列是先进先出的线性表（First In First Out）FIFO</p>
+<p>3.运行插入元素的称为队尾，允许删除元素的称为队头。</p>
+<p>4.队列的抽象数据类型（ADT）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs c">ADT Queue<br>Data<br>	同线性表，有前驱和后继元素<br>Operation<br><span class="hljs-title function_">InitQueue</span><span class="hljs-params">(*Q)</span>:初始化队列<br><span class="hljs-title function_">DestroyQueue</span><span class="hljs-params">(*Q)</span>:销毁队列<br><span class="hljs-title function_">ClearQueue</span><span class="hljs-params">(*Q)</span>:清空队列<br><span class="hljs-title function_">QueueEmpty</span><span class="hljs-params">(Q)</span>:如果队列是空的返回1，不是返回0<br><span class="hljs-title function_">GetHead</span><span class="hljs-params">(Q,*e)</span>:用e返回Q中的队头元素<br><span class="hljs-title function_">EnQueue</span><span class="hljs-params">(*Q,e)</span>:插入新元素e到Q的队尾<br><span class="hljs-title function_">DeQueue</span><span class="hljs-params">(*Q,*e)</span>:删除队头元素并复制给e<br><span class="hljs-title function_">QueueLength</span><span class="hljs-params">(Q)</span>:返回队列的元素个数<br>endADT<br></code></pre></td></tr></table></figure>
+
+<p>5.队列中的出队要把后面的所有元素向前移动一位，O(n)</p>
+<p>6.队列中有前指针front，有后指针rear</p>
+<p>7.假溢出：如果前面元素Location是空出来的，而在添加元素的时候尾指针指向了数组外面称为假溢出。（见笔记本）</p>
+<h3 id="循环队列"><a href="#循环队列" class="headerlink" title="循环队列"></a>循环队列</h3><p>1.定义：为了reslove假溢出的问题，引出了循环队列的概念</p>
+<p>2.（理论）队空的条件是front==rear，flag=0</p>
+<p>  队满的条件是front==rear，flag=1    </p>
+<p>3.（在实际做题中）队满的条件是（rear+1）%QueueSIZE==front</p>
+<p>​                                  队空的条件是front==rear</p>
+<p>4.当rear&gt;front时，队列长度=rear-front</p>
+<p>   当front&gt;rear时，队列长度=（0+rear）+（QueueSize-front）=rear-front+QueueSize</p>
+<p><strong>所以队列的通用公式是：(rear-front+QueueSize)%QueueSize</strong></p>
+<p>5.循环队列的顺序存储结构体</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> MAXSIZE 200</span><br><span class="hljs-keyword">typedef</span> <span class="hljs-type">int</span> QElemType;<br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>&#123;</span><br>	QElemType data[MAXSIZE];<br>	<span class="hljs-type">int</span> front;<br>	<span class="hljs-type">int</span> rear;<br>&#125;SqQueue;<br></code></pre></td></tr></table></figure>
+
+<p>6.循环队列初始化</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">InitQueue</span><span class="hljs-params">(Squeue *Q)</span>&#123;<br>	Q-&gt;front = <span class="hljs-number">0</span>;<br>	Q-&gt;rear = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>7.循环队列求长度</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">QueueLength</span><span class="hljs-params">(SqQueue Q)</span>&#123;<br>	<span class="hljs-keyword">return</span>(Q-&gt;rear-Q-&gt;front+MAXSIZE)%MAXSIZE;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>8.插入新的元素在队尾：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">EnQueue</span><span class="hljs-params">(SqQueue *Q,QElemType e)</span>&#123;<br>	<span class="hljs-keyword">if</span>((Q-&gt;rear+<span class="hljs-number">1</span>)%MAXSIZE == Q-&gt;front)<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    Q-&gt;data[Q-&gt;rear]=e;<br>    Q-&gt;rear = (Q-&gt;rear+<span class="hljs-number">1</span>)%MAXSIZE;<span class="hljs-comment">//rear后移一位</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>9.删除元素在队头：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">DeQueue</span><span class="hljs-params">(SqQueue *Q,QElemType *e)</span>&#123;<br>	<span class="hljs-keyword">if</span>(Q-&gt;rear==Q-&gt;front)<span class="hljs-comment">//这个是队空的条件，一定记住。</span><br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>	*e = Q-&gt;data[Q-&gt;front];<br>	Q-&gt;front=(Q-&gt;front+<span class="hljs-number">1</span>)%MAXSIZE;<span class="hljs-comment">//front向后移动一位</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="队列的链式存储"><a href="#队列的链式存储" class="headerlink" title="队列的链式存储"></a>队列的链式存储</h3><p>1.有头结点，当空队列的时候，front和rear都指向头结点</p>
+<p>2.先定义结点指针，再定义表</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">typedef</span> <span class="hljs-type">int</span> QElemType;<br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">QNode</span>&#123;</span><br>	QElemType data[MAXSIZE];<br>	<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">QNode</span> *<span class="hljs-title">next</span>;</span><br>&#125;QNode,*QueuePtr;<br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span>&#123;</span><br>    QueuePtr front,rear;<br>&#125;LinkQueue;<br></code></pre></td></tr></table></figure>
+
+<p>3.插入队列元素：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">EnQueue</span><span class="hljs-params">(LinkQueue *Q,QElemType e)</span>&#123;<br>	QueuePtr s = (LinkQueue)<span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(QNode));<br>    <span class="hljs-keyword">if</span>(!s)<br>        <span class="hljs-keyword">return</span> ERROR;<span class="hljs-comment">//或者exit(OVERFLOW)</span><br>    s-&gt;data=e;<br>    s-&gt;next=<span class="hljs-literal">NULL</span>;<br>    Q-&gt;rear-&gt;next=s;<br>    Q-&gt;rear=s;<span class="hljs-comment">//把s作为队尾元素</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>4.出队（主义：front是在头结点上）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c">Status <span class="hljs-title function_">DeQueue</span><span class="hljs-params">(LinkQueue *Q,QElemType *e)</span>&#123;<br>    QueuePtr p;<span class="hljs-comment">//p结点</span><br>    <span class="hljs-keyword">if</span>(Q-&gt;front==Q-&gt;rear)<span class="hljs-comment">//队空</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    *e=Q-&gt;data[Q-&gt;front-&gt;next];<span class="hljs-comment">//指向第一个结点</span><br>    p=Q-&gt;front-&gt;next;<span class="hljs-comment">//p保留准备删除的结点</span><br>    Q-&gt;front-&gt;next<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="category-chain-item">数据结构</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>数据结构--栈和队列(DH)</div>
+      <div>http://hexo.denggaozheng.top/2022/07/23/数据结构-栈和队列-DH/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>邓高正</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年7月23日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/07/27/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%B8%B2/" title="数据结构--串">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">数据结构--串</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%88DH%EF%BC%89/" title="数据结构--线性表（DH）">
+                        <span class="hidden-mobile">数据结构--线性表（DH）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>

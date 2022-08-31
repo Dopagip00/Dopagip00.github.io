@@ -1,0 +1,862 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="邓高正">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="定点数（考试重点）定点数：小数点的位置不变 浮点数：小数点的位置会改变">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机组成原理--数、码">
+<meta property="og:url" content="http://hexo.denggaozheng.top/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/index.html">
+<meta property="og:site_name" content="Denggaozheng&#96;s blog">
+<meta property="og:description" content="定点数（考试重点）定点数：小数点的位置不变 浮点数：小数点的位置会改变">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/image-20220330115915831.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/image-20220331201635487.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/image-20220331203710586.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/image-20220331211346107.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/image-20220331212243385.png">
+<meta property="article:published_time" content="2022-03-24T13:11:46.000Z">
+<meta property="article:modified_time" content="2022-06-07T12:41:38.827Z">
+<meta property="article:author" content="邓高正">
+<meta property="article:tag" content="计组">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://hexo.denggaozheng.top/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/image-20220330115915831.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>计算机组成原理--数、码 - Denggaozheng`s blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/fluid-extension.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"hexo.denggaozheng.top","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="计算机组成原理--数、码"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-03-24 21:11" pubdate>
+          2022年3月24日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          6.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          54 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">计算机组成原理--数、码</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="定点数（考试重点）"><a href="#定点数（考试重点）" class="headerlink" title="定点数（考试重点）"></a>定点数（考试重点）</h2><p>定点数：小数点的位置不变</p>
+<p>浮点数：小数点的位置会改变</p>
+<span id="more"></span>
+
+
+
+<h3 id="无符号数"><a href="#无符号数" class="headerlink" title="无符号数"></a>无符号数</h3><p>定义：整个机器的全部二进制位全部是数值位，没有符号位。相当于数的绝对值。</p>
+<h3 id="有符号数"><a href="#有符号数" class="headerlink" title="有符号数"></a>有符号数</h3><h4 id="定点整数"><a href="#定点整数" class="headerlink" title="定点整数"></a>定点整数</h4><p>小数点在最后</p>
+<h4 id="定点小数"><a href="#定点小数" class="headerlink" title="定点小数"></a>定点小数</h4><p>小数点紧跟在符号位的后面。</p>
+<p><strong>由此我们可以知道，如果要保存一个定点数，需要定点整数和定点小数分开保存</strong></p>
+<p>可以用<strong>原码，反码，补码来表示</strong>定点正数和定点小数，可以用移码表示定点整数</p>
+<p><strong>尾数：用来表示整数或者小数的数值部分的二进制位称为尾数。若机器的字长为n+1,那么尾数占n位</strong></p>
+<h4 id="原码"><a href="#原码" class="headerlink" title="原码"></a>原码</h4><p>用尾数表示真值的绝对值，0表示+，1表示-</p>
+<h5 id="表示定点整数-使用逗号"><a href="#表示定点整数-使用逗号" class="headerlink" title="表示定点整数(使用逗号)"></a>表示定点整数(使用逗号)</h5><p>[x]原：1,10111100</p>
+<p><strong>重点：若机器字长为n+1位，原码整数的表示范围是-(2^n -1)~(2^n - 1)，因为真值0分为+0和-0两种，所以两个不同的二进制位表示一种状态，因此要减一</strong></p>
+<h5 id="表示定点小数（使用小数点）"><a href="#表示定点小数（使用小数点）" class="headerlink" title="表示定点小数（使用小数点）"></a>表示定点小数（使用小数点）</h5><p>容易混淆的定点小数的表示方法：[x]原：1.1100000    实际上这个表示的是 - 0.11，前面的1代表的是负号。</p>
+<p>若计算机字长为n+1位，原码小数的表示范围是-（1-2^-n）~ (1-2^-n)</p>
+<h4 id="反码"><a href="#反码" class="headerlink" title="反码"></a>反码</h4><p>若为正数，则反码与原码相同；</p>
+<p>若为负数，则数值位全部取反。</p>
+<p>例子：<br>[x]原：1,0111000</p>
+<p>[x]反：1,1000111</p>
+<p>反码中小数的取值范围和原码是相同的</p>
+<p>整数范围是-2^n ~ 2^n - 1</p>
+<h4 id="补码"><a href="#补码" class="headerlink" title="补码"></a>补码</h4><p>正数的补码 = 原码</p>
+<p>负数的补码 = 反码末位+1（要考虑到进位问题）</p>
+<p>注意：补码的真值0只有一种表示形式</p>
+<p>定点整数补码，[x]补 = 1，0000000，表示-2^7</p>
+<h5 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h5><p>通过x的补码求-x的补码：符号位全部取反，再在末位加一</p>
+<h4 id="补码转原码"><a href="#补码转原码" class="headerlink" title="补码转原码"></a>补码转原码</h4><p>方法和原码转补码的方法一样，都是<strong>取反之后加一（不是加一后取反）</strong></p>
+<p><strong>即：补码的补码是原码</strong></p>
+<h4 id="移码"><a href="#移码" class="headerlink" title="移码"></a>移码</h4><p>在补码的基础上将符号位取反</p>
+<p><strong>移码只能用于表示整数</strong></p>
+<p>移码可以方便计算机判断哪个值更大</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>综上，我们只有在看到符号位是1的才需要进行反码原码的操作，0的反码和补码都是它本身</p>
+<h2 id="原码补码移码的作用"><a href="#原码补码移码的作用" class="headerlink" title="原码补码移码的作用"></a>原码补码移码的作用</h2><h3 id="补码的作用"><a href="#补码的作用" class="headerlink" title="补码的作用"></a>补码的作用</h3><h4 id="带余除法"><a href="#带余除法" class="headerlink" title="带余除法"></a>带余除法</h4><p>如 x mod m = r .</p>
+<p>实际是x = qm + r（其中q是整数，r是余数）</p>
+<p>mod 12 把所有数分成了12类（余数相同的是一类）同一类数都是等价的，即1+0和1+12和1+24都是等效的！！</p>
+<p>同一类数<strong>（如1和13和25）</strong>之间互为补数，两者的绝对值之和为模数<strong>（12）</strong></p>
+<p><strong>重点公式：模-a的绝对值=a的补数</strong>（如12-|-3| = 9）</p>
+<h5 id="计算机中的应用"><a href="#计算机中的应用" class="headerlink" title="计算机中的应用"></a>计算机中的应用</h5><p>计算机中的模是2的八次方，任何一个数想要求补码就拿2的八次方减去该数绝对值即可，但是有了补码就可以用上面的重点公式来算了，十分方便，因此可以总结出：<br><strong>补码的作用是：让减法操作转变为加法操作，节省计算机硬件的成本！</strong></p>
+<p>使得ALU算术逻辑单元中只需要设计加法相关的电路而不需要设计减法电路，非常的银杏化！</p>
+<p>执行加法操作的时候，符号位会一起参与运算！</p>
+<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><h3 id="移位运算（-）"><a href="#移位运算（-）" class="headerlink" title="移位运算（*）"></a>移位运算（*）</h3><p>移位：通过改变各个数码位和小数点的相对位置，从而改变各个数码位的位权，可以用移位运算实现乘法，除法。</p>
+<h4 id="算术移位（符号位保持不变，数值位移动）"><a href="#算术移位（符号位保持不变，数值位移动）" class="headerlink" title="算术移位（符号位保持不变，数值位移动）"></a>算术移位（符号位保持不变，数值位移动）</h4><p>因为定点数的小数点位置是不变的，那我们可以改变数的位置，各个数的位权发生改变。</p>
+<p>如110011.000向右移一位变成：11001.100。这时，前数除2的一次方即可得到后数。</p>
+<p>110011.000向左移一位变成：1100110.000，这时前数乘以2的一次方即可得到后数。</p>
+<p>110011.000向左移两位变成：11001100.000，这时前数乘以2的二次方即可得到后数。</p>
+<p><strong>右移：高位补零，低位（小数点后的位数）舍弃，如果舍弃的位数等于0，那么除2，如果舍弃的位数不等于0，那么会丢失精度。</strong></p>
+<p><strong>左移：低位补零，高位舍弃，若舍弃位=0，相当于*2，若舍弃位！=0，会出现严重误差（因为最高位只能表示到(2^8)-1）</strong></p>
+<h5 id="反码的算术移位"><a href="#反码的算术移位" class="headerlink" title="反码的算术移位"></a>反码的算术移位</h5><p><strong>正数：</strong>因为正数的反码与原码相同，因此正数反码的算术移位也和原码相同！</p>
+<p><strong>负数：</strong>负数的算术移位与原码相反，左移在低位补1，右移在高位补1.</p>
+<h5 id="补码的算术移位"><a href="#补码的算术移位" class="headerlink" title="补码的算术移位"></a>补码的算术移位</h5><p><strong>正数：算术移位与原码相同</strong></p>
+<p><strong>负数移位的前提：在负数的补码中，补码最右边的1（包括自己）的右边与原码一致，最右边的1的左边与反码一致·</strong></p>
+<p><strong>负数：右移，高位补1，左移，低位补0.</strong></p>
+<h5 id="计算机中的表达"><a href="#计算机中的表达" class="headerlink" title="计算机中的表达"></a>计算机中的表达</h5><p>例如-20*7，我们可以把7看成（2^0 + 2^1 + 2^2）,所以就是-20 * （2^0 + 2^1 + 2^2），计算机就判断把-20的二进制形式左移或者右移几位就行了！</p>
+<h5 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h5><h5 id="正数：全补0；"><a href="#正数：全补0；" class="headerlink" title="正数：全补0；"></a>正数：全补0；</h5><p><strong>负数：原码补0，反码补1，补码左0右1</strong></p>
+<h4 id="逻辑移位"><a href="#逻辑移位" class="headerlink" title="逻辑移位"></a>逻辑移位</h4><p>不需要考虑别的，<strong>相当于对无符号数的算数移位</strong></p>
+<p>逻辑左移：高位补0，低位舍弃</p>
+<p>逻辑右移：低位补0，高位舍弃</p>
+<h4 id="循环移位"><a href="#循环移位" class="headerlink" title="循环移位"></a>循环移位</h4><p>左移时移出来的数放在最后！</p>
+<p>右移时移出来的数放在最前！</p>
+<h4 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h4><p><strong>进位位</strong>：如果我们把两个二进制数相加了结果大于8bit，那么多出来的那一位数就称为<strong>进位位</strong></p>
+<p>进位位的循环移位：左移时会把进位位的数放在原数的最后，把原数最前面的数放在进位位里面！</p>
+<h3 id="加减运算"><a href="#加减运算" class="headerlink" title="加减运算"></a>加减运算</h3><h4 id="原码的加减法"><a href="#原码的加减法" class="headerlink" title="原码的加减法"></a>原码的加减法</h4><h5 id="原码的加法运算"><a href="#原码的加法运算" class="headerlink" title="原码的加法运算"></a>原码的加法运算</h5><p>正+正=绝对值做加法，结果为正！</p>
+<p>负+负=绝对值做减法，结果为负！</p>
+<p>正+负=绝对值大的减绝对值小的，符号同绝对值大的数</p>
+<h5 id="原码的减法运算（减数符号取反变成加法）"><a href="#原码的减法运算（减数符号取反变成加法）" class="headerlink" title="原码的减法运算（减数符号取反变成加法）"></a>原码的减法运算（减数符号取反变成加法）</h5><p>正-负 = 正+正</p>
+<p>正-正 = 正+负</p>
+<p>负-正 = 负+负</p>
+<p>负-负 = 负+正</p>
+<h4 id="补码的加减法（常用）"><a href="#补码的加减法（常用）" class="headerlink" title="补码的加减法（常用）"></a>补码的加减法（常用）</h4><p>[A+B]补 = [A]补+[B]补</p>
+<p>[A-B]补 = [A]补 + [-B]补（其中用B补求-B补是符号位数值位全部取反，然后加一）</p>
+<h4 id="溢出计算"><a href="#溢出计算" class="headerlink" title="溢出计算"></a>溢出计算</h4><h5 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h5><p><strong>只有正数+正数才会上溢</strong></p>
+<p><strong>只有负数+负数才会下溢</strong></p>
+<p>V = ABS(ba) + A(ba)B(ba)S        其中A是第一个数的符号，B是第二个数的符号，S是结果的符号，（ba）是一霸，取反的意思，他们之间用与（&amp;&amp;）连接，加号表示或！</p>
+<p><strong>若V = 0,无溢出</strong></p>
+<p><strong>若V = 1，有溢出</strong> </p>
+<h5 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h5><p><strong>上溢：符号位的进位为0（进位到进位位），最高数值位进位为1（进位到符号位）</strong></p>
+<p><strong>下溢：符号位的进位为1（进位到进位位），最高数值位进位为0（进位到符号位）</strong></p>
+<p>将符号位进位和数值位进位进行异或运算，结果是1说明有溢出，结果是0说明无溢出</p>
+<h5 id="方法3（考点）"><a href="#方法3（考点）" class="headerlink" title="方法3（考点）"></a>方法3（考点）</h5><p>采用双符号位</p>
+<p>正数的符号为00，负数的符号位为11.</p>
+<p>记两个符号位分别为S1，S2，V = S1 异或 S2</p>
+<p>若V=0，则无溢出；若V=1，则有溢出</p>
+<p><strong>双符号位补码称为模4补码</strong></p>
+<p><strong>单符号位补码称为模2补码</strong></p>
+<h4 id="符号拓展"><a href="#符号拓展" class="headerlink" title="符号拓展"></a>符号拓展</h4><h5 id="整数拓展"><a href="#整数拓展" class="headerlink" title="整数拓展"></a>整数拓展</h5><h6 id="正整数"><a href="#正整数" class="headerlink" title="正整数"></a>正整数</h6><p>8bit -&gt; 16bit</p>
+<p>0,1011010 -&gt; 0,000000001011010    即在符号位和数值位之间加上若干个0</p>
+<h6 id="负整数"><a href="#负整数" class="headerlink" title="负整数"></a>负整数</h6><p>原码：0,1011010 -&gt; 0,000000001011010</p>
+<p>反码：0,1011010 -&gt; 0,111111111011010    添1</p>
+<p>补码：0,1011010 -&gt; 0,111111111011011     添1后+1    </p>
+<h5 id="小数拓展"><a href="#小数拓展" class="headerlink" title="小数拓展"></a>小数拓展</h5><h6 id="正小数"><a href="#正小数" class="headerlink" title="正小数"></a>正小数</h6><p>原码反码补码都一样</p>
+<p>0.10010001 -&gt; 0.10010001 00000000    在后面添加0才能保证各个数的位权不变。</p>
+<h6 id="负小数"><a href="#负小数" class="headerlink" title="负小数"></a>负小数</h6><p>原码：0.10010001 -&gt; 0.10010001 00000000    同样在后面添加0</p>
+<p>反码：0.10010001 -&gt; 0.01101110 11111111    把0变成1</p>
+<p>补码：0.10010001 -&gt; 0.01101111 00000000     在反码的基础上+1</p>
+<h3 id="乘法运算"><a href="#乘法运算" class="headerlink" title="乘法运算"></a>乘法运算</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1BE411D7ii?p=18&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1BE411D7ii?p=18&amp;spm_id_from=pageDriver</a></p>
+<h4 id="原码乘法（逻辑右移）"><a href="#原码乘法（逻辑右移）" class="headerlink" title="原码乘法（逻辑右移）"></a>原码乘法（逻辑右移）</h4><h5 id="符号位"><a href="#符号位" class="headerlink" title="符号位"></a>符号位</h5><p>符号位单独处理，两个符号位进行异或操作，符号相同返回0，不同返回1</p>
+<h5 id="数值位"><a href="#数值位" class="headerlink" title="数值位"></a>数值位</h5><h6 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h6><p>ACC存放乘积高位，MQ存放乘积低位和乘数，X存放被乘数</p>
+<h6 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h6><p>先加法再移位，重复n次。</p>
+<p>第一步：</p>
+<p>从MQ中的最低位（最右边）开始：<strong>如果当前位为1，则ACC加上被乘数（通过ALU进行），如果当前位为0，则ACC加上0</strong></p>
+<p>第二步：<br>ACC和MQ看成一条线，将ACC进行逻辑右移（高位补0），则ACC的第一位就移到了MQ的最后一位，那么MQ的第一位就丢掉了。</p>
+<p>第三步：</p>
+<p>算到乘数的符号位（即MQ中的最后一位）是不参与运算的！！</p>
+<p>第四步：</p>
+<p>使用异或处理符号位</p>
+<p>第五步：<br>小数点隐藏在符号位的后面，ACC和MQ中的值放在一起就是最后的结果了</p>
+<h6 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h6><p><img src="/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/image-20220330115915831.png" srcset="/img/loading.gif" lazyload alt="image-20220330115915831"></p>
+<h4 id="补码乘法（算术右移）"><a href="#补码乘法（算术右移）" class="headerlink" title="补码乘法（算术右移）"></a>补码乘法（算术右移）</h4><p>同样进行n轮加法，每次加法内容可能加0，可能加x的补码，也可能加-x的补码</p>
+<p><strong>辅助位-MQ中最低位=1时，（ACC）+[x]补</strong></p>
+<p><strong>辅助位-MQ中最低位=0时，（ACC）+0</strong></p>
+<p><strong>辅助位-MQ中最低位=-1时，（ACC）+[-x]补</strong></p>
+<p><strong>每次位移都是“补码的算数右移”</strong></p>
+<h5 id="辅助位"><a href="#辅助位" class="headerlink" title="辅助位"></a>辅助位</h5><p>所谓辅助位就是在MQ最低位的后面加一位称为辅助位，辅助位初始为0，进行一次乘法操作后MQ最低位的值会移至辅助位。</p>
+<p>最后当MQ的最低位是乘数的符号位时，ACC还要再加一次补码，结果和上一个式子的后半部分（低位）拼接起来即可。 </p>
+<h3 id="除法运算"><a href="#除法运算" class="headerlink" title="除法运算"></a>除法运算</h3><h4 id="原码除法：恢复余数法"><a href="#原码除法：恢复余数法" class="headerlink" title="原码除法：恢复余数法"></a>原码除法：恢复余数法</h4><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1BE411D7ii?p=20">https://www.bilibili.com/video/BV1BE411D7ii?p=20</a></p>
+<p>先明白一个原理：任何<strong>一位</strong>余数乘除数都等于对应的乘积</p>
+<p>符号位单独处理：x和y进行异或</p>
+<p><strong>被除数 / |除数|=新余数</strong></p>
+<p>例题：求x/y</p>
+<p><strong>第一步：</strong><br>将商放在MQ中（默认第一位是1），将被除数和余数放在ACC中，将除数放在X中</p>
+<p><strong>第二步：</strong></p>
+<p>写出x和y的绝对值，y绝对值的补码，y绝对值取负数的补码。</p>
+<p><strong>x中存放的除数是y的绝对值，进行减法操作时加上-y的绝对值，进行加法操作时加上y的绝对值</strong></p>
+<p><strong>第三 步：</strong></p>
+<p><strong>计算机默认商1，商1的结果放在MQ的第一位，执行ACC（被除数）-x（除数）的操作。 但是这时候如果ACC-x的结果的符号位为1，说明MQ商1是错的，会变成商0，并且把ACC中的值恢复原样ACC（被除数）+x（除数）-&gt; ACC！！</strong></p>
+<p><strong>第四步：</strong></p>
+<p>将余数结果和MQ（商）看成一个整体进行逻辑左移（低位补0）</p>
+<p>小数点放在ACC的倒数第一位和第二位之间</p>
+<p><strong>总结：</strong></p>
+<p>直接加（-y的绝对值）看结果是正数还是负数（0还是1），负数商0，然后恢复余数，正数商1，然后逻辑左移一位。</p>
+<p>若余数为负，可以直接商0，并让余数左移一位再<strong>加上除数</strong>（其实加上除数这一步就已经是下一步默认商1之后的加-y的绝对值了）</p>
+<p>最后一次上商逻辑不左移。</p>
+<p>如果最后一次的余数为负，那么还是需要恢复余数的。</p>
+<h4 id="补码除法"><a href="#补码除法" class="headerlink" title="补码除法"></a>补码除法</h4><p><strong>要点：</strong></p>
+<p>符号位参与运算</p>
+<p>被除数，余数，除数采用双符号位（00表示正，11表示负，01 10 表示溢出）</p>
+<p><strong>第一步：</strong></p>
+<p>判断余数是否与除数同号？</p>
+<p>被除数和除数同号：</p>
+<p>商1，左移一位，<strong>被除数 - 除数 = 新余数</strong></p>
+<p>被除数和除数异号：</p>
+<p>商0，先左移一位，<strong>被除数+除数 = 新余数</strong></p>
+<p><strong>第二步：</strong></p>
+<p>末位商恒置为1</p>
+<p><strong>总结：</strong></p>
+<p><strong>加减n+1次，每次加减确定一位商，左移n次（最后一次减完不移位 ）</strong></p>
+<p><img src="/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/image-20220331201635487.png" srcset="/img/loading.gif" lazyload alt="image-20220331201635487"></p>
+<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3><p>C语言中定点整数是用补码存储的</p>
+<p>short ;</p>
+<p>unsigned short y = (unsigned short)x;</p>
+<p><strong>这时y是无符号short，x是有符号short</strong></p>
+<p>假设x的二进制形式为x = 1,110110     其中最后一个1是符号位。</p>
+<p>转化为y后y = 1110110    这时x的符号位变成了y的数值位！</p>
+<h4 id="高转低"><a href="#高转低" class="headerlink" title="高转低"></a>高转低</h4><p>int a = 12345,b = 54321;</p>
+<p>short c = (short)a,d = (short)b</p>
+<p><strong>高转低非常的暴力,直接截断,只保留低位的字节</strong></p>
+<p>这时a = 0x000286a1</p>
+<p>那么c = 0x286a1</p>
+<p>这时b = 0xffff7751</p>
+<p>那么d = 0x7751</p>
+<h4 id="低转高"><a href="#低转高" class="headerlink" title="低转高"></a>低转高</h4><p>因为是补码，所以在符号位和数值位之间补相应的1即可</p>
+<p>无符号数用原码转（添0）</p>
+<h3 id="数据的存储和排列"><a href="#数据的存储和排列" class="headerlink" title="数据的存储和排列"></a>数据的存储和排列</h3><h4 id="大小端模式"><a href="#大小端模式" class="headerlink" title="大小端模式"></a>大小端模式</h4><p>4个字节的int：01 23 45 67    <strong>其中01是最低有效字节MSB，67是最高有效字节（LSB）</strong>这个多字节数据在内存里一定是占连续的几个字节的</p>
+<h5 id="大端模式"><a href="#大端模式" class="headerlink" title="大端模式"></a>大端模式</h5><p>把数据中的各个数据项从小到大排列：01 23 45 67    这样排列，方便人类阅读</p>
+<h5 id="小端模式"><a href="#小端模式" class="headerlink" title="小端模式"></a>小端模式</h5><p>把数据中的各个数据项从大到小排列：67 45 23 01    这样排列，方便机器处理 </p>
+<h4 id="边界对齐"><a href="#边界对齐" class="headerlink" title="边界对齐"></a>边界对齐</h4><p><img src="/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/image-20220331203710586.png" srcset="/img/loading.gif" lazyload alt="image-20220331203710586"></p>
+<p><strong>边界不对齐方式</strong>需要在必要情况下需要读取两次去找一个数据，如short分成了半字1-1和半字1-2两部分，那么就需要读取这两个地址才能找到一个完整的short。</p>
+<h3 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1BE411D7ii?p=24&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1BE411D7ii?p=24&amp;spm_id_from=pageDriver</a></p>
+<h4 id="用科学计数法理解"><a href="#用科学计数法理解" class="headerlink" title="用科学计数法理解"></a>用科学计数法理解</h4><p>科学计数法：3.01*10^11    </p>
+<h5 id="阶码"><a href="#阶码" class="headerlink" title="阶码"></a>阶码</h5><p>其中的11是幂，在浮点数里面我们叫阶码，其中+11的“+”是阶符，11是阶码的数值部分。</p>
+<h5 id="尾数"><a href="#尾数" class="headerlink" title="尾数"></a>尾数</h5><p>3.01是尾数部分，其中+是数符，3.01是尾数的数值部分。</p>
+<h4 id="浮点数的表示"><a href="#浮点数的表示" class="headerlink" title="浮点数的表示"></a>浮点数的表示</h4><p>阶码用<strong>补码或者移码</strong>表示</p>
+<p>尾数用<strong>原码或者补码</strong>表示</p>
+<p>我们令阶码为E，尾数为M，r是底数在二进制中取2。浮点数就可以表示为r^E * M</p>
+<p>在做题中，阶码和尾数都是使用二进制来表示的 </p>
+<p><strong>真值的结果是：2的阶码（十进制）次方 乘 尾数（二进制）</strong></p>
+<h4 id="浮点数的规格化（考点）"><a href="#浮点数的规格化（考点）" class="headerlink" title="浮点数的规格化（考点）"></a>浮点数的规格化（考点）</h4><h5 id="左规"><a href="#左规" class="headerlink" title="左规"></a>左规</h5><p>在有限的内存中尽量减少精度的丢失，方法是把尾数中小数点后面的零尽可能的除去。</p>
+<p><img src="/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/image-20220331211346107.png" srcset="/img/loading.gif" lazyload alt="image-20220331211346107"></p>
+<h5 id="右规"><a href="#右规" class="headerlink" title="右规"></a>右规</h5><p>通常发生在双符号数当中，当进位之后符号位变成了01表示溢出了，那么需要算数右移，使得符号位变为00（负数）。<strong>尾数右移，增大阶码。</strong></p>
+<h5 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h5><p><img src="/2022/03/24/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E3%80%81%E7%A0%81/image-20220331212243385.png" srcset="/img/loading.gif" lazyload alt="image-20220331212243385"></p>
+<p><strong>规格化的原码尾数，最高数值位一定是1</strong></p>
+<p><strong>规格化的补码尾数，符号位与最高数值位一定相反！！</strong></p>
+<h5 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h5><p>1.采用规格化的浮点数是为了：增加数据的表示精度。</p>
+<p>2.两个浮点数相加减时，阶码小的向阶码大的看齐。</p>
+<p>3.在浮点数编码表示中，<strong>基数</strong>在机器数中不出现！</p>
+<h3 id="浮点数标准-IEEE745"><a href="#浮点数标准-IEEE745" class="headerlink" title="浮点数标准 IEEE745"></a>浮点数标准 IEEE745</h3><h4 id="移码-要把移码看成无符号数！"><a href="#移码-要把移码看成无符号数！" class="headerlink" title="移码(要把移码看成无符号数！)"></a>移码(要把移码看成无符号数！)</h4><p>移码的定义：移码=真值+偏置值</p>
+<p><strong>所以真值=移码-偏置值</strong></p>
+<p>8位移码的的偏置值是128D = 10000000B（即2^(n-1)）</p>
+<p><strong>在IEEE754中阶码使用移码来表示的，规定偏置值为127D = 0,1111111(即2^(n-1)-1)</strong></p>
+<p><strong>因为是无符号数，所以在这里直接用减法，不要用加法！！！不够位就升位</strong></p>
+<p>例如：真值是-127D = - 0，1111111</p>
+<p>​            偏置值是127D = 0，1111111</p>
+<p>​            移码=真值+偏置值 = 11，1111111</p>
+<h4 id="IEEE754的规定"><a href="#IEEE754的规定" class="headerlink" title="IEEE754的规定"></a>IEEE754的规定</h4><p>在浮点数表示中，分为数符，阶码和尾数三个部分</p>
+<p>阶码E用移码表示，尾数M用原码表示。</p>
+<p>原码中隐藏了最高位1，表示尾数应该是1.M</p>
+<p>当偏置值为127时，-128的移码表示是全0，-127的移码表示是全1.</p>
+<p>所以真值的取值范围是-126-127. </p>
+<h4 id="不同类型的浮点数表示"><a href="#不同类型的浮点数表示" class="headerlink" title="不同类型的浮点数表示"></a>不同类型的浮点数表示</h4><p><strong>短浮点数：数符1，阶码8，尾数数值23</strong></p>
+<p>长浮点数：数符1，阶码11，尾数数值52</p>
+<p>临时浮点数：数符1，阶码15，尾数数值64 </p>
+<h4 id="特殊情况-1"><a href="#特殊情况-1" class="headerlink" title="特殊情况"></a>特殊情况</h4><p>只有当阶码E在1&lt;=E&lt;=254的条件下，真值 = (-1)^S * 1.M * 2^(E-127)</p>
+<p>当阶码E全为0时，尾数不全为0时，表示非规格化小数：+-（0.xxx）*2^-126</p>
+<h4 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h4><p>1.将十进制数-0.75转换为IEEE754的单精度浮点数格式表示。</p>
+<p><strong>解：</strong></p>
+<p><strong>先将-0.75转换成为二进制形式-0.75D = -0.1100000B</strong></p>
+<p>那么尾数部分就是 - 1.1B</p>
+<p>阶码部分是-1，<strong>这里的-1是真值，要转换成为移码，需要加上偏置值127D（0111,1111）结果是0111,1110</strong></p>
+<hr>
+<p><strong>王道书笔记：</strong></p>
+<p>1.补码和移码的0的表示形式相同；原码和反码的0的表示形式不同，分为-0和+0两种形式。</p>
+<p>2.补码转原码的方式：<strong>先取反后加1</strong></p>
+<p>3.移码就是补码的符号位取反！</p>
+<p>4.移位：算术移位符号位不变，逻辑移位符号位和数值位一起改变</p>
+<p>​               正数移位：全补0；负数移位：原码补0，反码补1，补码左边补0，右边补1</p>
+<p>5.溢出：需要最高算数位和符号位的进位异或结果为1（即一个0一个1）才算溢出，01表示正溢出，10表示负溢出。</p>
+<p>6.原码一位乘法：乘数与被乘数的数值相乘，符号异或处理，不参与运算。相当于符号位和数值位分开计算的！</p>
+<p><strong>题目：</strong></p>
+<p>1.ALU属于：<strong>组合逻辑电路</strong></p>
+<p>2.在串行进位的并行加法器中，影响加法器速度的关键因素是：进位传递延迟。</p>
+<p>3.不属于运算器的是<strong>地址寄存器</strong>。</p>
+<p>4.模4补码：每个模4补码存储时只需要一个符号位。</p>
+<p>5.原码乘法是：先取操作数绝对值相乘，<strong>符号位单独处理，不参与运算。</strong>。</p>
+<p>6.实现N位补码乘法时，乘积为N+1位</p>
+<p>7.在原码不恢复余数法时，只有当最后一步不够减时候，才要恢复一次余数。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%A1%E7%BB%84/" class="category-chain-item">计组</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%AE%A1%E7%BB%84/">#计组</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>计算机组成原理--数、码</div>
+      <div>http://hexo.denggaozheng.top/2022/03/24/计算机组成原理-数、码/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>邓高正</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年3月24日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83ALU/" title="计算机组成原理--算数逻辑单元ALU">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">计算机组成原理--算数逻辑单元ALU</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/03/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86-%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/" title="计算机组成原理--数据的表示和运算">
+                        <span class="hidden-mobile">计算机组成原理--数据的表示和运算</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>
