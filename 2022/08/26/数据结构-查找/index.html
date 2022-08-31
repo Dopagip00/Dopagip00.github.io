@@ -16,17 +16,17 @@
   <meta name="author" content="邓高正">
   <meta name="keywords" content="">
   
-    <meta name="description" content="基本概念1.查找表（Search Table）是由同一类型数据元素构成的集合 2.关键字是数据元素中某个数据项的值 ​    若关键字可以唯一的标识一个记录，那称为主关键字 ​    对于可以识别多个记录的关键字称为次关键字 3.操作表分为两大类：静态操作表 and 动态操作表 ​    a.静态操作表：只做查找操作的查找 ​    b.动态查找表：在查找的同时可以进行添加，删除等操作">
+    <meta name="description" content="其中二叉排序树要重点掌握">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构--查找">
 <meta property="og:url" content="http://hexo.denggaozheng.top/2022/08/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%9F%A5%E6%89%BE/index.html">
 <meta property="og:site_name" content="Denggaozheng&#96;s blog">
-<meta property="og:description" content="基本概念1.查找表（Search Table）是由同一类型数据元素构成的集合 2.关键字是数据元素中某个数据项的值 ​    若关键字可以唯一的标识一个记录，那称为主关键字 ​    对于可以识别多个记录的关键字称为次关键字 3.操作表分为两大类：静态操作表 and 动态操作表 ​    a.静态操作表：只做查找操作的查找 ​    b.动态查找表：在查找的同时可以进行添加，删除等操作">
+<meta property="og:description" content="其中二叉排序树要重点掌握">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://hexo.denggaozheng.top/2022/08/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%9F%A5%E6%89%BE/image-20220830153324088.png">
 <meta property="og:image" content="http://hexo.denggaozheng.top/2022/08/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%9F%A5%E6%89%BE/image-20220830153407404.png">
 <meta property="article:published_time" content="2022-08-26T07:53:19.000Z">
-<meta property="article:modified_time" content="2022-08-31T00:11:00.204Z">
+<meta property="article:modified_time" content="2022-08-31T14:30:35.452Z">
 <meta property="article:author" content="邓高正">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary_large_image">
@@ -294,15 +294,15 @@
             
               <div class="markdown-body">
                 
-                <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>1.查找表（Search Table）是由同一类型数据元素构成的集合</p>
+                <h1 id="其中二叉排序树要重点掌握"><a href="#其中二叉排序树要重点掌握" class="headerlink" title="其中二叉排序树要重点掌握"></a>其中二叉排序树要重点掌握</h1><span id="more"></span>
+
+<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>1.查找表（Search Table）是由同一类型数据元素构成的集合</p>
 <p>2.关键字是数据元素中某个数据项的值</p>
 <p>​    若关键字可以唯一的标识一个记录，那称为主关键字</p>
 <p>​    对于可以识别多个记录的关键字称为次关键字</p>
 <p>3.操作表分为两大类：静态操作表 and 动态操作表</p>
 <p>​    a.静态操作表：只做查找操作的查找</p>
 <p>​    b.动态查找表：在查找的同时可以进行添加，删除等操作</p>
-<span id="more"></span>
-
 <h1 id="顺序表查找"><a href="#顺序表查找" class="headerlink" title="顺序表查找"></a>顺序表查找</h1><p>1.按照从第一个到最后一个的顺序挨个查找，若全部没有对应，则查找失败</p>
 <p>2.顺序查找代码</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">//a为数组,n为要查找数组长度，key为要查找的关键字</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">Sequental_Search</span><span class="hljs-params">(<span class="hljs-type">int</span> *a,<span class="hljs-type">int</span> n,<span class="hljs-type">int</span> key)</span>&#123;<br>    <span class="hljs-type">int</span> i;<br>    <span class="hljs-keyword">for</span>(i=<span class="hljs-number">1</span>;i&lt;=n;i++)&#123;<br>        <span class="hljs-keyword">if</span>(a[i]==key)<br>            <span class="hljs-keyword">return</span> i;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
