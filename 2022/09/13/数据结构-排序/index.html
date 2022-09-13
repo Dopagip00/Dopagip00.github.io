@@ -24,7 +24,7 @@
 <meta property="og:description" content="排序的基本概念与分类假设有n个记录的序列{r1,r2,…,rn}，对应的关键字{k1,k2,…,kn}，确定一种排列p1,p2,…,pn,使其关键字满足Kp1&lt;Kp2&lt;…&lt;Kpn,使得序列成为按关键字有序的序列{rp1,rp2,…,rpn} 排序的稳定性假设ki&#x3D;kj(1&lt;&#x3D;i&lt;&#x3D;n,0,&#x3D;j&lt;&#x3D;n,i!&#x3D;j)，且在排序前ri&lt;rj.若排序后ri&lt;r">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-13T08:38:26.000Z">
-<meta property="article:modified_time" content="2022-09-13T09:40:32.425Z">
+<meta property="article:modified_time" content="2022-09-13T13:24:04.082Z">
 <meta property="article:author" content="邓高正">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary_large_image">
@@ -230,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2k 字
+          2.5k 字
         
       </span>
     
@@ -241,7 +241,7 @@
         
         
         
-          17 分钟
+          22 分钟
         
       </span>
     
@@ -327,6 +327,12 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">InsertSort</span><span class="hljs-params">(SqList *L)</span>&#123;<br>	<span class="hljs-type">int</span> i,j;<br>    <span class="hljs-keyword">for</span>(i=<span class="hljs-number">2</span>;i&lt;L-&gt;Length;i++)&#123;<span class="hljs-comment">//从2开始是假设第一个已经放在表里了</span><br>    	<span class="hljs-keyword">if</span>(L-&gt;r[i]&lt;L-&gt;r[i<span class="hljs-number">-1</span>])&#123;<br>            L-&gt;r[<span class="hljs-number">0</span>]=L-&gt;r[i];<span class="hljs-comment">//哨兵</span><br>            <span class="hljs-keyword">for</span>(j=i<span class="hljs-number">-1</span>;L-&gt;r[j]&gt;L-&gt;r[<span class="hljs-number">0</span>];j--)<br>                L-&gt;r[j+<span class="hljs-number">1</span>]=L-&gt;r[j];<span class="hljs-comment">//后移</span><br>            L-&gt;r[j+<span class="hljs-number">1</span>]=L-&gt;r[<span class="hljs-number">0</span>];<span class="hljs-comment">//插入正确位置</span><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>2.直接插入排序的时间复杂度O(n^2)</p>
+<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><p>1.基本有序：小的基本上在前面，大的基本上在后面，大体上不出问题即可。将相距某个“增量”的记录组成子序列，才能保证直接插入后结果有序</p>
+<p>2.代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">ShellSort</span><span class="hljs-params">(SqList *L)</span>&#123;<br>    <span class="hljs-type">int</span> i,j;<br>    <span class="hljs-type">int</span> increment=L-&gt;Length;<br>    <span class="hljs-keyword">do</span>&#123;<br>        increment=(increment/<span class="hljs-number">3</span>)+<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span>(i=increment+<span class="hljs-number">1</span>;i&lt;L-&gt;Length;i++)&#123;<br>            <span class="hljs-keyword">if</span>(L-&gt;r[i]&lt;L-&gt;i-increment)&#123;<span class="hljs-comment">//把L-&gt;r[i]插入子表</span><br>            	L-&gt;r[<span class="hljs-number">0</span>]=L-&gt;r[i];<br>                <span class="hljs-keyword">for</span>(j=i-increment;j&gt;<span class="hljs-number">0</span>&amp;&amp;L-&gt;r[<span class="hljs-number">0</span>]&lt;L-&gt;r[j];j=j-increment)<br>                    L-&gt;r[j+increment]=L-&gt;r[<span class="hljs-number">0</span>];<span class="hljs-comment">//插入</span><br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">while</span>(increment&gt;<span class="hljs-number">1</span>);<span class="hljs-comment">//increment=1时停止循环</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>3.增量一般在总长度的一半左右</p>
+<p>4.时间复杂度为O(nlogn)</p>
 
                 
               </div>
