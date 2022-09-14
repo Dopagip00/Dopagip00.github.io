@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://hexo.denggaozheng.top/2022/08/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6LaF57qn5aSn6LaF6LaK,size_15,color_FFFFFF,t_70,g_se,x_16">
 <meta property="article:published_time" content="2022-08-25T01:09:31.000Z">
-<meta property="article:modified_time" content="2022-08-31T14:29:33.554Z">
+<meta property="article:modified_time" content="2022-09-14T03:41:33.869Z">
 <meta property="article:author" content="邓高正">
 <meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary_large_image">
@@ -82,7 +82,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"hexo.denggaozheng.top","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":90,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"hexo.denggaozheng.top","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":90,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -92,6 +92,21 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
   
@@ -232,7 +247,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2k 字
+          2.3k 字
         
       </span>
     
@@ -243,7 +258,7 @@
         
         
         
-          17 分钟
+          19 分钟
         
       </span>
     
@@ -305,13 +320,17 @@
 <p>2.工作方式：边缘部分：由所有主机构成</p>
 <p>​                        核心部分：有大量的网络和路由器组成</p>
 <p>3.功能组成：通信子网（设备+网络协议）+资源子网（硬件资源，软件资源）</p>
+<p><strong>通信子网：传输介质，通信设备，网络协议</strong></p>
+<p><strong>资源子网：主要是计算机中的共享软件和硬件（缺一不可）</strong></p>
 <h2 id="计算机网络的分类"><a href="#计算机网络的分类" class="headerlink" title="计算机网络的分类"></a>计算机网络的分类</h2><h3 id="按分布范围分类"><a href="#按分布范围分类" class="headerlink" title="按分布范围分类"></a>按分布范围分类</h3><p>1.广域网（WAN）：长距离通信（最长距离），远程网，因特网的核心，使用交换技术</p>
 <p>2.地域网（MAN）：覆盖街区以及城市，使用以太网技术</p>
 <p>3.局域网（LAN）：用广播技术，覆盖范围小</p>
 <p>4.个人区域网（PAN）：用自己的平板，手机的网络，也称为无线个人区域网（WPAN）</p>
+<p><strong>域网的划分条件：作用范围的不同</strong></p>
+<p><strong>广域网使用的是交换技术（点对点技术），局域网使用的是广播技术。也即域网之间的协议不同</strong></p>
 <p><strong>若中央处理器之间的距离特别近，则一般称为多处理器系统，而不称为计算机网络</strong></p>
-<h3 id="按传输技术分类"><a href="#按传输技术分类" class="headerlink" title="按传输技术分类"></a>按传输技术分类</h3><p>1.广播式技术：所有电脑共享一个公共通道，当一台计算机共享信息时候，其他所有的计算机都可以收到信息</p>
-<p>2.点对点技术：使用中间商来传递信息</p>
+<h3 id="按传输技术分类"><a href="#按传输技术分类" class="headerlink" title="按传输技术分类"></a>按传输技术分类</h3><p>1.广播式技术（一对多）：所有电脑共享一个公共通道，当一台计算机共享信息时候，其他所有的计算机都可以收到信息</p>
+<p>2.点对点技术（一对一）：使用中间商来传递信息</p>
 <h3 id="按拓扑结构分类"><a href="#按拓扑结构分类" class="headerlink" title="按拓扑结构分类"></a>按拓扑结构分类</h3><p>1.网络拓扑结构是指网中结点（路由器，主机等）与通信线路（网线）之间的几何关系（总线形，环形）表示网络结构，主要指通信子网的拓扑结构</p>
 <p><strong>总线形，星形，环形网络多用于局域网，网状网络多用于广域网</strong></p>
 <h4 id="总线形网络"><a href="#总线形网络" class="headerlink" title="总线形网络"></a><strong>总线形网络</strong></h4><p><strong>用单根传输线把计算机连接起来，优点是建网容易，增减节点方便，节省线路，缺点是重负载时通信效率不高，总线任意一处对故障敏感</strong></p>
@@ -343,7 +362,16 @@
 <h4 id="排队时延"><a href="#排队时延" class="headerlink" title="排队时延"></a>排队时延</h4><p>在路由器的输入端口需要排队等待处理，在输出队列中需要排队等到转发。</p>
 <h3 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h3><p>指发送端发送的第一个结点准备到达终点时，发送端已经发送了多少个bit的信息。</p>
 <p><strong>时延带宽积=时延*带宽</strong></p>
-<h3 id="往返带宽"><a href="#往返带宽" class="headerlink" title="往返带宽"></a>往返带宽</h3>
+<h3 id="往返带宽"><a href="#往返带宽" class="headerlink" title="往返带宽"></a>往返带宽</h3><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>1.1986年6月：ARPAnet（阿帕网）是世界上最早的计算机网络</p>
+<p>2.计算机网络包含三个关键点：自治计算机，互联，集合体</p>
+<p>3.计算机网络最基本，最重要的功能：数据通信</p>
+<p>4.计算机网络可以不存在数据库系统</p>
+<p>5.广域网和局域网之间是由<strong>路由器</strong>相连的</p>
+<p>6.计算机网络的拓扑结构取决于通信子网</p>
+<p>7.广域网使用网状结构</p>
+<p>8.分组交换的缺点是开销高昂</p>
+<p>9.带宽=分组大小/延时；B/miu s=MB/s=8Mb/s</p>
+
                 
               </div>
             
@@ -404,6 +432,11 @@
           <div>2022年8月25日</div>
         </div>
       
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年9月14日</div>
+        </div>
       
       <div class="license-meta-item">
         <div>许可协议</div>
