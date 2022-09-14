@@ -911,7 +911,7 @@
   </url>
   
   <url>
-    <loc>http://hexo.denggaozheng.top/lib/bookmark/package.json</loc>
+    <loc>http://hexo.denggaozheng.top/lib/bookmark/renovate.json</loc>
     
     <lastmod>2022-02-10</lastmod>
     
@@ -920,7 +920,7 @@
   </url>
   
   <url>
-    <loc>http://hexo.denggaozheng.top/lib/bookmark/renovate.json</loc>
+    <loc>http://hexo.denggaozheng.top/lib/bookmark/package.json</loc>
     
     <lastmod>2022-02-10</lastmod>
     
@@ -952,7 +952,7 @@
   </url>
   
   <url>
-    <loc>http://hexo.denggaozheng.top/tags/NFT/</loc>
+    <loc>http://hexo.denggaozheng.top/tags/hexo/</loc>
     <lastmod>2022-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -966,7 +966,7 @@
   </url>
   
   <url>
-    <loc>http://hexo.denggaozheng.top/tags/hexo/</loc>
+    <loc>http://hexo.denggaozheng.top/tags/NFT/</loc>
     <lastmod>2022-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1015,14 +1015,14 @@
   </url>
   
   <url>
-    <loc>http://hexo.denggaozheng.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://hexo.denggaozheng.top/tags/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/</loc>
     <lastmod>2022-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://hexo.denggaozheng.top/tags/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/</loc>
+    <loc>http://hexo.denggaozheng.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2022-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1073,7 +1073,7 @@
   </url>
   
   <url>
-    <loc>http://hexo.denggaozheng.top/categories/NFT/</loc>
+    <loc>http://hexo.denggaozheng.top/categories/hexo/</loc>
     <lastmod>2022-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1087,7 +1087,7 @@
   </url>
   
   <url>
-    <loc>http://hexo.denggaozheng.top/categories/hexo/</loc>
+    <loc>http://hexo.denggaozheng.top/categories/NFT/</loc>
     <lastmod>2022-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1136,14 +1136,14 @@
   </url>
   
   <url>
-    <loc>http://hexo.denggaozheng.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://hexo.denggaozheng.top/categories/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/</loc>
     <lastmod>2022-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://hexo.denggaozheng.top/categories/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/</loc>
+    <loc>http://hexo.denggaozheng.top/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2022-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
