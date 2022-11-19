@@ -16,18 +16,45 @@
   <meta name="author" content="邓高正">
   <meta name="keywords" content="">
   
-    <meta name="description" content="大数据的定义指大小超出了典型数据库软件的采集、存储、管理和分析等能力的数据集 为什么是“大”数据判断数据是否为“大数据”，通常遵循业界公认的4V标准： Volume-&gt;体积大 Variety-&gt;形态多 Velocity-&gt;速度快 Value-&gt;价值高，但是密度低 舍恩伯格的三个学术观点1.要分析与某事物相关的所有数据，而非依靠分析少量的数据样本 2.接受数据的纷繁复杂，而不">
+    <meta name="description" content="大数据的定义1数据的定义指大小超出了典型数据库软件的采集、存储、管理和分析等能力的数据集 为什么是“大”数据判断数据是否为“大数据”，通常遵循业界公认的4V标准： Volume-&gt;体积大 Variety-&gt;形态多 Velocity-&gt;速度快 Value-&gt;价值高，但是密度低 舍恩伯格的三个学术观点1.要分析与某事物相关的所有数据，而非依靠分析少量的数据样本 2.接受数据的纷">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大数据导论">
 <meta property="og:url" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/index.html">
 <meta property="og:site_name" content="Denggaozheng&#96;s blog">
-<meta property="og:description" content="大数据的定义指大小超出了典型数据库软件的采集、存储、管理和分析等能力的数据集 为什么是“大”数据判断数据是否为“大数据”，通常遵循业界公认的4V标准： Volume-&gt;体积大 Variety-&gt;形态多 Velocity-&gt;速度快 Value-&gt;价值高，但是密度低 舍恩伯格的三个学术观点1.要分析与某事物相关的所有数据，而非依靠分析少量的数据样本 2.接受数据的纷繁复杂，而不">
+<meta property="og:description" content="大数据的定义1数据的定义指大小超出了典型数据库软件的采集、存储、管理和分析等能力的数据集 为什么是“大”数据判断数据是否为“大数据”，通常遵循业界公认的4V标准： Volume-&gt;体积大 Variety-&gt;形态多 Velocity-&gt;速度快 Value-&gt;价值高，但是密度低 舍恩伯格的三个学术观点1.要分析与某事物相关的所有数据，而非依靠分析少量的数据样本 2.接受数据的纷">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203621315.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203634116.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/Users/me/AppData/Roaming/Typora/typora-user-images/image-20221119203648753.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202800201.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202811873.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203809152.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203821811.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/Users/me/AppData/Roaming/Typora/typora-user-images/image-20221119203835003.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203853174.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/Users/me/AppData/Roaming/Typora/typora-user-images/image-20221119203907915.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203921357.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203933182.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202151897.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202221296.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202243619.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202311634.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202356195.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202410756.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/Users/me/AppData/Roaming/Typora/typora-user-images/image-20221119202423704.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202848871.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202904238.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202916821.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202932404.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202945847.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203000499.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203529593.png">
 <meta property="article:published_time" content="2022-11-19T01:00:55.000Z">
-<meta property="article:modified_time" content="2022-11-19T01:12:33.342Z">
+<meta property="article:modified_time" content="2022-11-19T12:42:02.780Z">
 <meta property="article:author" content="邓高正">
 <meta property="article:tag" content="大数据">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203621315.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -245,7 +272,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          339 字
+          357 字
         
       </span>
     
@@ -307,7 +334,7 @@
             
               <div class="markdown-body">
                 
-                <h2 id="大数据的定义"><a href="#大数据的定义" class="headerlink" title="大数据的定义"></a>大数据的定义</h2><p><strong>指大小超出了典型数据库软件的采集、存储、管理和分析等能力的数据集</strong></p>
+                <h2 id="大数据的定义"><a href="#大数据的定义" class="headerlink" title="大数据的定义"></a>大数据的定义</h2><h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><h2 id="数据的定义"><a href="#数据的定义" class="headerlink" title="数据的定义"></a>数据的定义</h2><p><strong>指大小超出了典型数据库软件的采集、存储、管理和分析等能力的数据集</strong></p>
 <h2 id="为什么是“大”数据"><a href="#为什么是“大”数据" class="headerlink" title="为什么是“大”数据"></a>为什么是“大”数据</h2><p>判断数据是否为“大数据”，通常遵循业界公认的4V标准：</p>
 <p>Volume-&gt;体积大</p>
 <p>Variety-&gt;形态多</p>
@@ -318,6 +345,32 @@
 <p>3.不再追寻难以捉摸的因果，传而关注事物的相关性</p>
 <h2 id="数据科学的第四范式"><a href="#数据科学的第四范式" class="headerlink" title="数据科学的第四范式"></a>数据科学的第四范式</h2><p><strong>数据密集范式</strong>理应从第三范式中分离出来，成为一个独特的科学研究范式，也就是第四范式。</p>
 <h2 id="大数据的价值"><a href="#大数据的价值" class="headerlink" title="大数据的价值"></a>大数据的价值</h2><p>大数据的价值主要体现在它的<strong>驱动效应</strong>上，即通过带动相关的科研和产业发展，提高各行各业通过数据分析解决困难问题和增值的能力。</p>
+<h1 id="2-1"><a href="#2-1" class="headerlink" title="2.1"></a>2.1</h1><p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203621315.png" srcset="/img/loading.gif" lazyload alt="image-20221119203621315"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203634116.png" srcset="/img/loading.gif" lazyload alt="image-20221119203634116"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/Users/me/AppData/Roaming/Typora/typora-user-images/image-20221119203648753.png" srcset="/img/loading.gif" lazyload alt="image-20221119203648753"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202800201.png" srcset="/img/loading.gif" lazyload alt="image-20221119202717491"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202811873.png" srcset="/img/loading.gif" lazyload alt="image-20221119202811873"></p>
+<h1 id="2-2"><a href="#2-2" class="headerlink" title="2.2"></a>2.2</h1><p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203809152.png" srcset="/img/loading.gif" lazyload alt="image-20221119203809152"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203821811.png" srcset="/img/loading.gif" lazyload alt="image-20221119203821811"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/Users/me/AppData/Roaming/Typora/typora-user-images/image-20221119203835003.png" srcset="/img/loading.gif" lazyload alt="image-20221119203835003"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203853174.png" srcset="/img/loading.gif" lazyload alt="image-20221119203853174"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/Users/me/AppData/Roaming/Typora/typora-user-images/image-20221119203907915.png" srcset="/img/loading.gif" lazyload alt="image-20221119203907915"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203921357.png" srcset="/img/loading.gif" lazyload alt="image-20221119203921357"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203933182.png" srcset="/img/loading.gif" lazyload alt="image-20221119203933182"></p>
+<h1 id="2-3"><a href="#2-3" class="headerlink" title="2.3"></a>2.3</h1><p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202151897.png" srcset="/img/loading.gif" lazyload alt="image-20221119202151897"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202221296.png" srcset="/img/loading.gif" lazyload alt="image-20221119202221296"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202243619.png" srcset="/img/loading.gif" lazyload alt="image-20221119202243619"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202311634.png" srcset="/img/loading.gif" lazyload alt="image-20221119202257711"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202356195.png" srcset="/img/loading.gif" lazyload alt="image-20221119202335904"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202410756.png" srcset="/img/loading.gif" lazyload alt="image-20221119202410756"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/Users/me/AppData/Roaming/Typora/typora-user-images/image-20221119202423704.png" srcset="/img/loading.gif" lazyload alt="image-20221119202423704"></p>
+<h1 id="2-4"><a href="#2-4" class="headerlink" title="2.4"></a>2.4</h1><p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202848871.png" srcset="/img/loading.gif" lazyload alt="image-20221119202848871"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202904238.png" srcset="/img/loading.gif" lazyload alt="image-20221119202904238"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202916821.png" srcset="/img/loading.gif" lazyload alt="image-20221119202916821"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202932404.png" srcset="/img/loading.gif" lazyload alt="image-20221119202932404"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202945847.png" srcset="/img/loading.gif" lazyload alt="image-20221119202945847"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203000499.png" srcset="/img/loading.gif" lazyload alt="image-20221119203000499"></p>
+<p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203529593.png" srcset="/img/loading.gif" lazyload alt="image-20221119203529593"></p>
 
                 
               </div>
