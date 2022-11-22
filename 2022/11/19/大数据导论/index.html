@@ -49,8 +49,9 @@
 <meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202945847.png">
 <meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203000499.png">
 <meta property="og:image" content="http://hexo.denggaozheng.top/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203529593.png">
+<meta property="og:image" content="https://tecs-prod-static.obs.cn-north-1.myhuaweicloud.com/9e7684d75c7341cea84556b4d99c2111%2Frichtext%2Fimage%2F20221020%2Fc7616826589b439080f48906a2a41d9d.png">
 <meta property="article:published_time" content="2022-11-19T01:00:55.000Z">
-<meta property="article:modified_time" content="2022-11-21T09:24:02.328Z">
+<meta property="article:modified_time" content="2022-11-22T02:17:53.861Z">
 <meta property="article:author" content="邓高正">
 <meta property="article:tag" content="大数据">
 <meta name="twitter:card" content="summary_large_image">
@@ -255,7 +256,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k 字
+          2.8k 字
         
       </span>
     
@@ -266,7 +267,7 @@
         
         
         
-          9 分钟
+          24 分钟
         
       </span>
     
@@ -379,6 +380,79 @@
 <p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119202945847.png" srcset="/img/loading.gif" lazyload alt="image-20221119202945847"></p>
 <p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203000499.png" srcset="/img/loading.gif" lazyload alt="image-20221119203000499"></p>
 <p><img src="/2022/11/19/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%AE%BA/image-20221119203529593.png" srcset="/img/loading.gif" lazyload alt="image-20221119203529593"></p>
+<h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><p>在使用Shell命令操作HDFS之前，需要先启动Hadoop。</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh"><span class="hljs-literal">start</span>-dfs.sh<br></code></pre></td></tr></table></figure>
+
+<p>HDFS Shell命令的一般格式如下。</p>
+<p><strong>hdfs dfs -cmd 参数</strong></p>
+<p>HDFS常见的Shell命令如下。</p>
+<p><strong>1.put</strong></p>
+<p>（1）put命令可以上传本地（CentOS系统）文件或本地目录到HDFS目录，使用方法如下。</p>
+<p><strong>hdfs dfs -put 本地文件或本地目录 HDFS目录</strong></p>
+<p>（2）通过示例演示其用法，具体如下。</p>
+<p>1）新建本地文件1.txt，并写入内容hello。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">echo</span> hello &gt; <span class="hljs-number">1</span>.txt<br></code></pre></td></tr></table></figure>
+
+<p>2）把本地文件1.txt上传到HDFS的根目录下。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">hdfs</span> dfs -put <span class="hljs-number">1</span>.txt /<br></code></pre></td></tr></table></figure>
+
+<p>3）新建本地目录data，把目录data上传到HDFS的根目录下。</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs haskell"><span class="hljs-title">mkdir</span> <span class="hljs-class"><span class="hljs-keyword">data</span></span><br><span class="hljs-title">hdfs</span> dfs -put <span class="hljs-class"><span class="hljs-keyword">data</span> /</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>2.ls</strong></p>
+<p>（1）ls命令可以列出HDFS文件或目录，使用方法如下。</p>
+<p><strong>hdfs dfs -ls HDFS文件/HDFS目录</strong></p>
+<p>（2）通过示例演示其用法，具体如下。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hdfs dfs -<span class="hljs-built_in">ls</span> /<br></code></pre></td></tr></table></figure>
+
+<p>-rw-r–r– 3 root supergroup     6 2018-07-17 11:50 /1.txt</p>
+<p>drwxr-xr-x - root supergroup     0 2018-07-17 12:00 /data</p>
+<p><strong>3.cat</strong></p>
+<p>（1）cat命令可以查看HDFS文件的内容，使用方法如下。</p>
+<p><strong>hdfs dfs -cat HDFS文件</strong></p>
+<p>（2）通过示例演示其用法，具体如下。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">hdfs</span> dfs -cat /<span class="hljs-number">1</span>.txt<br></code></pre></td></tr></table></figure>
+
+<p>hello</p>
+<p><strong>4.get</strong></p>
+<p>（1）gat命令可以下载HDFS文件或目录到本地，使用方法如下。</p>
+<p><strong>hdfs dfs -get HDFS文件或目录 本地目录</strong></p>
+<p>（2）通过示例演示其用法，具体如下。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">rm</span> -f <span class="hljs-number">1</span>.txt<br><span class="hljs-attribute">hdfs</span> dfs -get /<span class="hljs-number">1</span>.txt ~<br><span class="hljs-attribute">cat</span> <span class="hljs-number">1</span>.txt <br></code></pre></td></tr></table></figure>
+
+<p>hello</p>
+<p><strong>5. moveFromLocal</strong></p>
+<p>（1）使用moveFromLocal命令可以将本地文件移动到HDFS文件系统中，可以一次移动多个文件。与put类似，不同的是，该命令执行后原文件将被删除。使用方法如下。</p>
+<p><strong>hdfs dfs -moveFromLocal本地文件HDFS目录</strong></p>
+<p>（2）通过示例演示其用法，具体如下。</p>
+<p>1）新建本地文件a.txt，并写入内容hello。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> hello &gt; a.txt<br></code></pre></td></tr></table></figure>
+
+<p>2）将本地文件a.txt移动到HDFS文件系统根目录的data文件夹中。</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">hdfs dfs -moveFromLocal a.txt <span class="hljs-regexp">/data/</span><br></code></pre></td></tr></table></figure>
+
+<p>3）新建本地文件b.txt和c.txt，并写入内容。将本地文件b.txt和c.txt移动到HDFS文件系统根目录的data文件夹中。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs stylus">echo nan &gt; <span class="hljs-selector-tag">b</span><span class="hljs-selector-class">.txt</span><br>echo ning &gt; c<span class="hljs-selector-class">.txt</span><br>hdfs dfs -moveFromLocal <span class="hljs-selector-tag">b</span><span class="hljs-selector-class">.txt</span> c<span class="hljs-selector-class">.txt</span> /data/<br>hdfs dfs -ls /data/<br></code></pre></td></tr></table></figure>
+
+<p><strong>6. appendToFile</strong></p>
+<p>（1）使用appendToFile命令可以将单个或多个文件的内容从本地系统追加到HDFS文件系统的文件中。</p>
+<p><strong>hdfs dfs - appendToFile本地文件HDFS文件</strong></p>
+<p>（2）通过示例演示其用法，具体如下。</p>
+<p>1）新建本地文件d.txt，并写入内容guang xi。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> guang xi &gt; d.txt<br></code></pre></td></tr></table></figure>
+
+<p>2）将本地当前目录的文件d.txt的内容追加到HDFS系统中的/data/a.txt文件中。</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">hdfs dfs - appendToFile d.txt <span class="hljs-regexp">/data/</span>a.txt<br></code></pre></td></tr></table></figure>
+
+<p>3）若需要一次追加多个本地系统文件的内容，则需要多个文件用空格隔开。新建本地文件e.txt和f.txt，并写入内容。将本地文件e.txt和f.txt的内容追加到HDFS系统中的/data/a.txt文件中。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs stylus">echo I love you! &gt; e<span class="hljs-selector-class">.txt</span><br>echo Thanks! &gt; f<span class="hljs-selector-class">.txt</span><br>hdfs dfs - appendToFile e<span class="hljs-selector-class">.txt</span> f<span class="hljs-selector-class">.txt</span> /data/<span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.txt</span><br>hdfs dfs -cat /data/<span class="hljs-selector-tag">a</span>.txt<br></code></pre></td></tr></table></figure>
+
+<p>通过以上讲解，可以很容易地理解HDFS Shell命令的操作方式。以下命令进行简要介绍。</p>
+<p><strong>7.其他常用命令</strong></p>
+<p><img src="https://tecs-prod-static.obs.cn-north-1.myhuaweicloud.com/9e7684d75c7341cea84556b4d99c2111%2Frichtext%2Fimage%2F20221020%2Fc7616826589b439080f48906a2a41d9d.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><strong>8. Hadoop命令行的接口如下：</strong></p>
+<p><strong>hadoop fs -命令 文件路径</strong></p>
+<p>输入命令<strong>hadoop fs</strong>或者<strong>hdfs dfs</strong>（不建议使用）可以列出HDFS支持的命令列表。所有命令当中的<strong>hadoop fs</strong> 为操作HDFS系统的命令前缀，不可省略，但是可以使用<strong>hdfs dfs</strong> 代替。</p>
 
                 
               </div>
