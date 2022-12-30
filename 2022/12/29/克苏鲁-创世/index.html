@@ -16,24 +16,26 @@
   <meta name="author" content="邓高正">
   <meta name="keywords" content="">
   
-    <meta name="description" content="​    变量a 本质上代表一个存储单元。CPU通过该存储单元的地址访问该存储单元中的数据。所以a本来代表两个值：存储单元的地址和储单元中的数据。于是就有了二异性。为了消除这种二义性，C语言规定a表示存储单元中的数据，&amp;a表示存储单元的地址。​    a存储单元中的数据可以是一个普通数值，也可以是另一个存储单元的地址，比如：a &#x3D; &amp;b; 语句就是将b的存储单元的地址存入a存储单元中。C语">
+    <meta name="description" content="创世万物本源的主宰、盲目痴愚之神：阿撒托斯 当阿撒托斯沉睡时，世间诞生了各种各样的神，各个神开始寻找自己存在于这个宇宙的原因，于是找到了主宰阿撒托斯，无神知道阿撒托斯的本体为何？于是众神开始寻找伟大主宰的线索，可是尽管如此，阿撒托斯却没有丝毫回应。源于对未知主宰的恐惧，众神们开始叫喊，它们害怕面对阿撒托斯醒来后的世界，无法预料自己在阿撒托斯醒后世界的命运，这样的尖叫使得一些力量弱小的神无法承受，最">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C--*和&amp;的含义和作用">
-<meta property="og:url" content="http://hexo.denggaozheng.top/2022/12/03/C-%E5%92%8C-%E7%9A%84%E5%90%AB%E4%B9%89%E5%92%8C%E4%BD%9C%E7%94%A8/index.html">
+<meta property="og:title" content="克苏鲁">
+<meta property="og:url" content="http://hexo.denggaozheng.top/2022/12/29/%E5%85%8B%E8%8B%8F%E9%B2%81-%E5%88%9B%E4%B8%96/index.html">
 <meta property="og:site_name" content="Denggaozheng&#96;s blog">
-<meta property="og:description" content="​    变量a 本质上代表一个存储单元。CPU通过该存储单元的地址访问该存储单元中的数据。所以a本来代表两个值：存储单元的地址和储单元中的数据。于是就有了二异性。为了消除这种二义性，C语言规定a表示存储单元中的数据，&amp;a表示存储单元的地址。​    a存储单元中的数据可以是一个普通数值，也可以是另一个存储单元的地址，比如：a &#x3D; &amp;b; 语句就是将b的存储单元的地址存入a存储单元中。C语">
+<meta property="og:description" content="创世万物本源的主宰、盲目痴愚之神：阿撒托斯 当阿撒托斯沉睡时，世间诞生了各种各样的神，各个神开始寻找自己存在于这个宇宙的原因，于是找到了主宰阿撒托斯，无神知道阿撒托斯的本体为何？于是众神开始寻找伟大主宰的线索，可是尽管如此，阿撒托斯却没有丝毫回应。源于对未知主宰的恐惧，众神们开始叫喊，它们害怕面对阿撒托斯醒来后的世界，无法预料自己在阿撒托斯醒后世界的命运，这样的尖叫使得一些力量弱小的神无法承受，最">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-12-03T04:36:28.000Z">
-<meta property="article:modified_time" content="2022-12-03T04:38:44.949Z">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2022/12/29/%E5%85%8B%E8%8B%8F%E9%B2%81-%E5%88%9B%E4%B8%96/image-20221230174028927.png">
+<meta property="article:published_time" content="2022-12-29T12:46:41.000Z">
+<meta property="article:modified_time" content="2022-12-30T09:49:26.659Z">
 <meta property="article:author" content="邓高正">
-<meta property="article:tag" content="C语言">
+<meta property="article:tag" content="克苏鲁">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://hexo.denggaozheng.top/2022/12/29/%E5%85%8B%E8%8B%8F%E9%B2%81-%E5%88%9B%E4%B8%96/image-20221230174028927.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>C--*和&amp;的含义和作用 - Denggaozheng`s blog</title>
+  <title>克苏鲁 - Denggaozheng`s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,7 +207,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="C--*和&amp;的含义和作用"></span>
+            <span id="subtitle" data-typed-text="克苏鲁"></span>
           
         </div>
 
@@ -216,8 +218,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-12-03 12:36" pubdate>
-          2022年12月3日 下午
+        <time datetime="2022-12-29 20:46" pubdate>
+          2022年12月29日 晚上
         </time>
       </span>
     
@@ -228,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          622 字
+          2.4k 字
         
       </span>
     
@@ -239,7 +241,7 @@
         
         
         
-          6 分钟
+          20 分钟
         
       </span>
     
@@ -295,19 +297,24 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">C--*和&amp;的含义和作用</h1>
+            <h1 style="display: none">克苏鲁</h1>
             
             
               <div class="markdown-body">
                 
-                <p>​    变量a 本质上代表一个存储单元。CPU通过该存储单元的地址访问该存储单元中的数据。所以a本来代表两个值：存储单元的地址和储单元中的数据。于是就有了二异性。为了消除这种二义性，C语言规定a表示存储单元中的数据，&amp;a表示存储单元的地址。<br>​    a存储单元中的数据可以是一个普通数值，也可以是另一个存储单元的地址，比如：a = &b; 语句就是将b的存储单元的地址存入a存储单元中。C语言规定<em>a代表a中存储的地址对应的存储单元中的数据，也就是访问</em>a就等于访问b，于是*a提供了通过a访问b中的数据的手段。</p>
-<p>​    a表示a对应的存储单元中的数据。<br>​    &amp;a表示a对应的存储单元的地址。</p>
-<ul>
-<li>a 表示：首先，要求a对应的存储单元中的数据一定是另一个存储单元的地址。<br>于是， * a表示另一个存储单元中的数据。<br>当a声明的类型是int时，a中存储的是一个整数数值，通过a可以访问（读取或修改）这个数值。<br>当a声明的类型是int * 时，a中存储的是一个存储单元的地址，而该存储单元中存储的数据是一个整数数值；通过*a可以访问（读取或修改）这个数值。a == &amp; * a 都是该存储单元的地址。<br>当a声明的类型是int<strong>时，a中存储的是一个存储单元的地址，而该存储单元中存储的数据是另外一个存储单元的地址，另外这个存储单元中存储的是一个整数数值；通过</strong>a可以访问（读取或修改）这个数值。<br>…</li>
-</ul>
-<p>最后，在C语言里地址叫指针。还有，在C语言中的数组本质上其实也是指针，即：* a 等同于 a[]。</p>
+                <h3 id="创世"><a href="#创世" class="headerlink" title="创世"></a>创世</h3><p>万物本源的主宰、盲目痴愚之神：<strong>阿撒托斯</strong></p>
+<p>当阿撒托斯沉睡时，世间诞生了各种各样的神，各个神开始寻找自己存在于这个宇宙的原因，于是找到了主宰阿撒托斯，无神知道阿撒托斯的本体为何？于是众神开始寻找伟大主宰的线索，可是尽管如此，阿撒托斯却没有丝毫回应。源于对未知主宰的恐惧，众神们开始叫喊，它们害怕面对阿撒托斯醒来后的世界，无法预料自己在阿撒托斯醒后世界的命运，这样的尖叫使得一些力量弱小的神无法承受，最终这些弱小的神接连死去，经历了一轮又一轮的死亡和淘汰，剩下都是那些无比智慧，无比混乱，无比强大的神。此后它们停止了那无止境的叫喊，它们绝望了，无法了解阿撒托斯，并且由于自己的身体过于强大根本无法杀死也无法自相残杀。</p>
+<p>在一切都陷入混乱和无序之时，从阿撒托斯身上诞生了一个生灵，这就是混沌的阿撒托斯在苏醒前的信使：奈亚拉托提普（奈亚子）。奈亚拉托提普创作以及弹奏混乱的音乐，为的是让阿撒托斯继续沉睡以及让众神明白自己存在的意义。于是众神们也开始追随奈亚拉托提普弹奏起无序混乱的音乐，它们凭空制造出了长笛等各种乐器，更有甚者敲击自己的头颅发出沉闷的无规则的声响，使得阿撒托斯进一步沉睡。这一行为让宇宙发生了诡异的一幕：<strong>杂乱无章的音乐使得死去的神开始分解，重组。那些有纯粹能量的变为恒星；那些有绝对物质的变成行星有着混沌的躯体的神们化身成了虫洞，黑洞等等宇宙景观</strong>。宇宙在这样的规律下伴随着众神的音乐运行着，阿撒托斯苏醒时，诞生了大量的黑雾和黑暗，这些无名之雾与黑暗产生了两位强大的神祇。自无名之雾中诞生的是：<strong>万物归一者尤格索托斯（泡泡），它以光的速度进行行动与思考，泡泡诞生后，时间和空间所有的光都开始了凝聚，时间和空间的源头都来自尤格索托斯，正因为有了尤格索托斯宇宙才有了时间空间的概念，才有了物理数学的本质规律</strong>。自那黑暗中诞生的是：<strong>森之黑山羊纱布尼古拉斯（羊妈），它是生命规则的奠定者它将种子投放到各个星球中去，生命由此诞生</strong>。强大的生命变成了远古的旧日支配者，旧日支配者可以按照纱布尼古拉斯的规则来创造新生命。</p>
+<p><strong>自此，克苏鲁第一世代开始！</strong></p>
+<p>PS：奈亚拉托提普在文明发展到一定程度之时，会出来搞破坏毁灭文明，正如熵增原理一般，当文明发展到一定程度时，由于信息的庞大，逐渐走向了chaos</p>
 <hr>
-<p>转载自CSDN</p>
+<h3 id="格赫罗斯的危机"><a href="#格赫罗斯的危机" class="headerlink" title="格赫罗斯的危机"></a>格赫罗斯的危机</h3><p>在宇宙中的一切趋向于平和之时，阿撒托斯竟然产生了苏醒的想法，这一想法让一个外神诞生了，就是<strong>大闹钟格赫罗斯</strong>，格赫罗斯身上散发着秩序的气息，让外神们混沌的音乐开始走向秩序。此时奈亚拉托提普、尤格索托斯、纱布尼古拉斯一起出现，封锁了格赫罗斯周围的时间空间，想一起把他杀掉。可是由于格赫罗斯没有过去没有未来，所以尤格索托斯无法消除它的时间和空间限制；又由于格赫罗斯诞生于阿撒托斯的意识中，所以纱布尼古拉斯无法限制它的生命。奈亚拉托提普提出了一个想法：将大闹钟格赫罗斯赶出宇宙神殿。被赶出宇宙神殿的格赫罗斯由于身上散发着秩序的气息，使它经过的星体都变得有序起来，这样的有序让旧日支配者们很恐惧，于是旧日支配者纷纷争先恐后的逃离格赫罗斯所在的地方，这样疯狂的逃离，引发了大量的星体破碎。且在格赫罗斯呆过的地方，一切都会变得有序起来，导致这片区域不再适合旧日支配者们统治，在这样有序的发展中，也有一部分的新神在秩序中存活了下来，这种新神虽不如旧日支配者们那般强大，但它们却是有秩序的、团结和善的神，这些新神被称作<strong>古神</strong>。虽然有新的神出现，但是在宇宙中占主导地位的依旧是旧日支配者们。格赫罗斯就像一个病毒一般，不断在混乱的宇宙中传播秩序。</p>
+<p>过了很久，时间空间之神尤格索托斯和生命之神纱布尼古拉斯竟然开始交融起来，得知这一切的奈亚拉托提普开始尖笑起来，这笑声竟把它周围的旧日支配者毁灭了，毁灭后的旧日支配者们的躯体开始向尤格索托斯和纱布尼古拉斯交融的部分涌去。不久，时空的主宰与生命的主宰完成了交融，留下了一颗如同行星大小的物质，这个物质不断地吞噬着涌来的旧日支配者们的尸体，不断的扩张和进化。原来，这一切都是奈亚拉托提普的阴谋，当初，奈亚拉托提普意识到大闹钟格赫罗斯的壮大是因为宇宙中缺少了混乱的法则，于是它鼓舞尤格索托斯和纱布尼古拉斯结合生成混乱的舞台。但让奈亚拉托提普没有想到的是，两位神的力量太过于强大并且吸收的外来旧日支配者过多，本来只能诞生一个行星核的能量分裂开来诞生了两颗行星核。这两个行星核相互的吸引又相互排斥，都想吞噬对方成为唯一又无法靠近，于是宇宙间竟诞生了对立的法则。奈亚拉托提普兴奋不已，之后它将利用这对立的法则不断的搞事。此时，奈亚拉托提普的分身察觉到了大闹钟格赫罗斯正在不断的靠近这一对双生子，一旦让格赫罗斯靠近，那么双生子将灭亡。奈亚拉托提普想到了一招：把这次的祸水引向宇宙中最强大的族群：<strong>夏盖虫族</strong>！</p>
+<hr>
+<h3 id="无辜的夏盖虫族"><a href="#无辜的夏盖虫族" class="headerlink" title="无辜的夏盖虫族"></a>无辜的夏盖虫族</h3><p>夏盖虫是一种完美的生物，夏盖虫族在夏盖行星上繁衍生息。夏盖虫的繁衍能力极其强大，不需要交配，本体就可以诞生数千个个体，它们的脑袋上又三个脑叶片，可以同时在三个维度思考问题，它们的触角可以发出精神力，使整个夏盖虫族共享智慧，当这种力量的共享达到一定程度时，夏盖虫族的精神力量以及趋近与宇宙本源的盲目痴愚之神阿撒托斯了。这时，夏盖虫族也意识到了宇宙文明存在的意义：<strong>崇拜万物的主宰阿撒托斯</strong>，于是夏盖虫族开始不断的提高精神力量并且不断探索宇宙本源阿撒托斯的真相，这一切都在三柱神的默许下进行着。不满足现状的夏盖虫族竟开始召唤阿撒托斯，它们建立了巨大的金字塔，凝聚宇宙间的各种力量来召唤阿撒托斯。奈亚拉托提普好奇于这个种族该如何召唤阿撒托斯，于是把自己的分身送到夏盖行星上了解它们如何召唤阿撒托斯并且帮它们解决问题。同时，阿撒托斯的一部分精神也投影在夏盖行星上。</p>
+<p>分身形似：</p>
+<p><img src="/2022/12/29/%E5%85%8B%E8%8B%8F%E9%B2%81-%E5%88%9B%E4%B8%96/image-20221230174028927.png" srcset="/img/loading.gif" lazyload alt="image-20221230174028927"></p>
+<p>分身由夏盖虫族的精神力组成，夏盖虫族称这个主宰的投影为<strong>萨达赫格拉</strong>，当分身出现时，夏盖虫族会陷入彻底的疯狂和盲目中。</p>
 
                 
               </div>
@@ -326,7 +333,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/C%E8%AF%AD%E8%A8%80/" class="category-chain-item">C语言</a>
+  <a href="/categories/%E5%85%8B%E8%8B%8F%E9%B2%81/" class="category-chain-item">克苏鲁</a>
   
   
 
@@ -341,7 +348,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/C%E8%AF%AD%E8%A8%80/">#C语言</a>
+        <a href="/tags/%E5%85%8B%E8%8B%8F%E9%B2%81/">#克苏鲁</a>
       
     </div>
   
@@ -355,18 +362,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/12/29/%E5%85%8B%E8%8B%8F%E9%B2%81-%E5%88%9B%E4%B8%96/" title="克苏鲁">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">克苏鲁</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/11/25/R-R%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0/" title="R-R语言复习">
-                        <span class="hidden-mobile">R-R语言复习</span>
+                      <a href="/2022/12/03/C-%E5%92%8C-%E7%9A%84%E5%90%AB%E4%B9%89%E5%92%8C%E4%BD%9C%E7%94%A8/" title="C--*和&amp;的含义和作用">
+                        <span class="hidden-mobile">C--*和&amp;的含义和作用</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
