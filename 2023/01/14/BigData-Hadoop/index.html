@@ -1,0 +1,697 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="邓高正">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="主要资料来源：https:&#x2F;&#x2F;github.com&#x2F;heibaiying&#x2F;BigData-Notes#%E4%BA%8Chive 坚持下去，加油！  学习路线1.大数据的处理过程：  1.1数据采集：一般使用Flume，Logstash，Kibana等日志收集工具，可以通过简单的配置实现复杂数据的采集。 1.2数据存储：MySQL等只支持结构化存储，而大多大数据的数据是半结构化数据（日志数据）甚至">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BigData-Hadoop">
+<meta property="og:url" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/index.html">
+<meta property="og:site_name" content="Denggaozheng&#96;s blog">
+<meta property="og:description" content="主要资料来源：https:&#x2F;&#x2F;github.com&#x2F;heibaiying&#x2F;BigData-Notes#%E4%BA%8Chive 坚持下去，加油！  学习路线1.大数据的处理过程：  1.1数据采集：一般使用Flume，Logstash，Kibana等日志收集工具，可以通过简单的配置实现复杂数据的采集。 1.2数据存储：MySQL等只支持结构化存储，而大多大数据的数据是半结构化数据（日志数据）甚至">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230115093128811.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230115201214735.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230115215122870.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230115215134384.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230115215151006.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230115215205344.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230115215221392.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230115215236543.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230115215252650.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230115215308568.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230115215323852.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230116110845754.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230116113237080.png">
+<meta property="og:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230116113215660.png">
+<meta property="article:published_time" content="2023-01-14T13:02:22.000Z">
+<meta property="article:modified_time" content="2023-01-16T14:56:57.169Z">
+<meta property="article:author" content="邓高正">
+<meta property="article:tag" content="BigData">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://hexo.denggaozheng.top/2023/01/14/BigData-Hadoop/image-20230115093128811.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>BigData-Hadoop - Denggaozheng`s blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"hexo.denggaozheng.top","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":90,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Dopagip&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="BigData-Hadoop"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-01-14 21:02" pubdate>
+          2023年1月14日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          24 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">BigData-Hadoop</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>主要资料来源：<a target="_blank" rel="noopener" href="https://github.com/heibaiying/BigData-Notes#%E4%BA%8Chive">https://github.com/heibaiying/BigData-Notes#%E4%BA%8Chive</a></p>
+<p>坚持下去，加油！</p>
+<hr>
+<h1 id="学习路线"><a href="#学习路线" class="headerlink" title="学习路线"></a>学习路线</h1><p>1.大数据的处理过程：</p>
+<p><img src="/2023/01/14/BigData-Hadoop/image-20230115093128811.png" srcset="/img/loading.gif" lazyload alt="image-20230115093128811"></p>
+<p>1.1数据采集：一般使用Flume，Logstash，Kibana等日志收集工具，可以通过简单的配置实现复杂数据的采集。</p>
+<p>1.2数据存储：MySQL等只支持结构化存储，而大多大数据的数据是半结构化数据（日志数据）甚至非结构化数据（视频）。因此需要Hadoop HDFS, KFS, GFS等分布式文件系统，既可以处理结构化数据也可以处理非结构化数据和半结构化数据。分布式文件系统的缺点是无法随机访问，那么既可以处理数据也可以随机访问的就是HBase，MongoDB了。</p>
+<p>1.3数据分析：大数据处理阶段<strong>最重要的环节</strong>就是数据分析，数据分析分为流处理和批处理：</p>
+<p>​                            批处理：对一段时间的海量离线数据进行<strong>统一处理</strong>，对应框架：Hadoop,MapReduce,Spake,Flink.</p>
+<p>​                            流处理：在接受数据时就进行处理，对应框架：Storm，Spake Streaming，Flink Streaming</p>
+<p>1.4其他框架：</p>
+<p>​        1.集群管理工具：Ambari，Cloudear Manager</p>
+<p>​        2.分布式协调服务，保证集群高：Zookeeper</p>
+<p>​        3.调度多个复杂的并且彼此之间存在依赖关系的作业，工作流调度框架：Azkaban，Oozie</p>
+<p>​        4.在大数据流处理过程中常用Kafka，作用是消峰，避免在秒杀等场景下并发数据对流处理程序的干扰</p>
+<p>​        5.Sqoop，解决了数据迁移的问题，可以把数据从关系型数据库（MySQL）中将数据导入HDFS，Hive中，或者从Hive，HDFS中把数据导回关系型数据库。</p>
+<h2 id="框架分类"><a href="#框架分类" class="headerlink" title="框架分类"></a><strong>框架分类</strong></h2><p><strong>数据采集：</strong><br>日志收集框架：Flume 、Logstash、Kibana</p>
+<p><strong>数据存储：</strong><br>分布式文件存储系统：Hadoop HDFS<br>数据库系统：Mongodb、HBase</p>
+<p><strong>数据分析：</strong><br>分布式计算框架：<br>    批处理框架：Hadoop MapReduce<br>    流处理框架：Storm<br>    混合处理框架：Spark、Flink<br>查询分析框架（用SQL）：Hive 、Spark SQL 、Flink SQL、 Pig、Phoenix</p>
+<p><strong>其他框架：</strong><br>集群资源管理器：Hadoop YARN<br>分布式协调服务：Zookeeper<br>数据迁移工具：Sqoop<br>任务调度框架：Azkaban、Oozie<br>集群部署和监控：Ambari、Cloudera Manager</p>
+<hr>
+<h1 id="Hadoop的分布式文件系统–HDFS"><a href="#Hadoop的分布式文件系统–HDFS" class="headerlink" title="Hadoop的分布式文件系统–HDFS"></a>Hadoop的分布式文件系统–HDFS</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>HDFS（High Distributed File System）是Hadoop的分布式文件系统，具有高容错，高吞吐，运行在低廉设备上的特点。</p>
+<h2 id="HDFS框架"><a href="#HDFS框架" class="headerlink" title="HDFS框架"></a>HDFS框架</h2><p>HDFS遵循主从架构，有一个NameNode和多个DataNode构成</p>
+<p>NameNode负责文件系统命名空间的操作，如打开，关闭，重命名文件等。记录着各个位置块的信息。</p>
+<p>DataNode负责文件系统客户端的读写请求</p>
+<h2 id="数据复制"><a href="#数据复制" class="headerlink" title="数据复制"></a>数据复制</h2><p>HDFS提供了数据复制的机制，每个文件被分成多个块，每个块有多个副本控制借此提高容错，块的大小和因子可以自行配置（块的大小一般为128M，默认复制因子为3）</p>
+<p>副本的放置：因为不同机架之间的网络带宽小于同一机架之间的网络带宽，所以副本的放置如下：</p>
+<p><img src="/2023/01/14/BigData-Hadoop/image-20230115201214735.png" srcset="/img/loading.gif" lazyload alt="image-20230115201214735"></p>
+<h2 id="架构的稳定性"><a href="#架构的稳定性" class="headerlink" title="架构的稳定性"></a>架构的稳定性</h2><p>1.心跳机制：每个 DataNode 定期向 NameNode 发送心跳消息，如果NameNode超过指定时间没有收到心跳消息，则将DataNode 标记为死亡。NameNode 不会将任何新的 IO 请求转发给标记为死亡的 DataNode，也不会再使用这些 DataNode 上的数据。</p>
+<p>2.数据的完整性：当客户端创建 HDFS 文件时，它会计算文件的每个块的 校验和，并将 校验和 存储在同一 HDFS 命名空间下的单独的隐藏文件中。当客户端检索文件内容时，它会验证从每个 DataNode 接收的数据是否与存储在关联校验和文件中的 校验和 匹配。如果匹配失败，则证明数据已经损坏，此时客户端会选择从其他 DataNode 获取该块的其他可用副本。</p>
+<p>3.FsImage 和 EditLog 是 HDFS 的核心数据，这些数据的意外丢失可能会导致整个 HDFS 服务不可<br>用。为了避免这个问题，可以配置 NameNode 使其支持 FsImage 和 EditLog 多副本<strong>同步</strong>，这样<br>FsImage 或 EditLog 的任何改变都会引起每个副本 FsImage 和 EditLog 的<strong>同步更新</strong>。</p>
+<p>4.快照：快照支持在特定时刻保存数据副本，在数据出现意外损坏的时候，可以回滚使恢复到健康状态。（相当于自动保存）</p>
+<h2 id="HDFS的特点"><a href="#HDFS的特点" class="headerlink" title="HDFS的特点"></a>HDFS的特点</h2><p>1.高容错</p>
+<p>2.高吞吐</p>
+<p>3.大文件支持：GB~TB量级</p>
+<p>4.简单一致性模型：HDFS适合一次写入多次读取（write-once-read-many），支持将文件追加到末尾，不适合在中间加入文件内容</p>
+<p>5.HDFS具有良好的跨平台性</p>
+<h2 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h2><ol>
+<li>HDFS写数据原理</li>
+</ol>
+<p>  <img src="/2023/01/14/BigData-Hadoop/image-20230115215122870.png" srcset="/img/loading.gif" lazyload alt="image-20230115215122870"></p>
+<p>  <img src="/2023/01/14/BigData-Hadoop/image-20230115215134384.png" srcset="/img/loading.gif" lazyload alt="image-20230115215134384"></p>
+<p>  <img src="/2023/01/14/BigData-Hadoop/image-20230115215151006.png" srcset="/img/loading.gif" lazyload alt="image-20230115215151006"></p>
+<ol start="2">
+<li><p>HDFS读数据原理</p>
+<p><img src="/2023/01/14/BigData-Hadoop/image-20230115215205344.png" srcset="/img/loading.gif" lazyload alt="image-20230115215205344"></p>
+</li>
+<li><p>HDFS故障类型和其检测方法<br> <img src="/2023/01/14/BigData-Hadoop/image-20230115215221392.png" srcset="/img/loading.gif" lazyload alt="image-20230115215221392"></p>
+</li>
+</ol>
+<p>  <img src="/2023/01/14/BigData-Hadoop/image-20230115215236543.png" srcset="/img/loading.gif" lazyload alt="image-20230115215236543"></p>
+<p>  第二部分：读写故障的处理</p>
+<p>  <img src="/2023/01/14/BigData-Hadoop/image-20230115215252650.png" srcset="/img/loading.gif" lazyload alt="image-20230115215252650"></p>
+<p>  第三部分：DataNode 故障处理</p>
+<p>  <img src="/2023/01/14/BigData-Hadoop/image-20230115215308568.png" srcset="/img/loading.gif" lazyload alt="image-20230115215308568">副本布局策略：</p>
+<p>  <img src="/2023/01/14/BigData-Hadoop/image-20230115215323852.png" srcset="/img/loading.gif" lazyload alt="image-20230115215323852"></p>
+<h1 id="分布式计算框架–MapReduce"><a href="#分布式计算框架–MapReduce" class="headerlink" title="分布式计算框架–MapReduce"></a>分布式计算框架–MapReduce</h1><h2 id="MapReduce概念"><a href="#MapReduce概念" class="headerlink" title="MapReduce概念"></a>MapReduce概念</h2><p>MapReduce 是一个分布式计算框架，用于编写批处理应用程序。编写好的程序可以提交到<br>Hadoop 集群上用于并行处理大规模的数据集。</p>
+<p>MapReduce把数据集分为数个独立的块，通过map来处理这些块，处理完的结果作为output输出到reduce中。</p>
+<p>MapReduce擅长处理键值&lt;key , value&gt; ，它把输入的数据都视为&lt;key , value&gt;键，并生成一组&lt;key , value&gt;键作为输出，key和value都必须实现writable接口。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql">(input) <span class="hljs-operator">&lt;</span>k1, v1<span class="hljs-operator">&gt;</span> <span class="hljs-operator">-</span><span class="hljs-operator">&gt;</span> map <span class="hljs-operator">-</span><span class="hljs-operator">&gt;</span> <span class="hljs-operator">&lt;</span>k2, v2<span class="hljs-operator">&gt;</span> <span class="hljs-operator">-</span><span class="hljs-operator">&gt;</span> combine <span class="hljs-operator">-</span><span class="hljs-operator">&gt;</span> <span class="hljs-operator">&lt;</span>k2, v2<span class="hljs-operator">&gt;</span> <span class="hljs-operator">-</span><span class="hljs-operator">&gt;</span> reduce <span class="hljs-operator">-</span><span class="hljs-operator">&gt;</span> <span class="hljs-operator">&lt;</span>k3, v3<span class="hljs-operator">&gt;</span><br>(output)<br></code></pre></td></tr></table></figure>
+
+<p>这里以词频统计为例子，MapReduce的处理流程如下：（其中splitting和shuffling都是框架实现的，需要编程实现的只有mapping和reducing）</p>
+<p><img src="/2023/01/14/BigData-Hadoop/image-20230116110845754.png" srcset="/img/loading.gif" lazyload alt="image-20230116110845754"></p>
+<h2 id="Combine-amp-Partitioner"><a href="#Combine-amp-Partitioner" class="headerlink" title="Combine &amp; Partitioner"></a>Combine &amp; Partitioner</h2><h3 id="InputFromat-amp-RecordReaders"><a href="#InputFromat-amp-RecordReaders" class="headerlink" title="InputFromat &amp; RecordReaders"></a>InputFromat &amp; RecordReaders</h3><p>InputFormat将输入文件分成多个InputSplit，并且由RecordReaders把InputSplit转化成为标准的&lt;key,value&gt;键值模式，以便map的输出</p>
+<h3 id="Combine"><a href="#Combine" class="headerlink" title="Combine"></a>Combine</h3><p>combine词如其名，就是在map操作后一个简单的把相同的键和键值合并的操作。</p>
+<p>不使用combine的情况：<br><img src="/2023/01/14/BigData-Hadoop/image-20230116113237080.png" srcset="/img/loading.gif" lazyload alt="image-20230116113237080"></p>
+<p>使用combine的情况：<br><img src="/2023/01/14/BigData-Hadoop/image-20230116113215660.png" srcset="/img/loading.gif" lazyload alt="image-20230116113215660"></p>
+<h3 id="partitioner"><a href="#partitioner" class="headerlink" title="partitioner"></a>partitioner</h3><p>可以把partitioner理解为分类器，把map输出的相同的键值归为一类，根据键值的不同传给对应的reduce。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/BigData/" class="category-chain-item">BigData</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/BigData/">#BigData</a>
+      
+    </div>
+  
+</div>
+
+
+              
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/01/12/MySQL-orders-and-operator-0/" title="MySQL--orders and operator">
+                        <span class="hidden-mobile">MySQL--orders and operator</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":1},"log":false});</script></body>
+</html>
